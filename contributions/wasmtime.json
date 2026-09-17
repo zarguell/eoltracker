@@ -1,0 +1,107 @@
+{
+  "target": "software",
+  "id": "researched-wasmtime",
+  "name": "Wasmtime",
+  "vendor": "Bytecode Alliance",
+  "category": "framework",
+  "summary": "Standalone runtime and CLI for WebAssembly, WASI and the Component Model",
+  "identifiers": [
+    {
+      "type": "purl",
+      "id": "pkg:cargo/wasmtime"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:bytecodealliance:wasmtime"
+    }
+  ],
+  "links": {
+    "about": "https://wasmtime.dev/",
+    "releaseProcess": "https://docs.wasmtime.dev/stability-release.html",
+    "repository": "https://github.com/bytecodealliance/wasmtime"
+  },
+  "releases": [
+    {
+      "id": "48.0.0",
+      "name": "48.0.0 (LTS)",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      }
+    },
+    {
+      "id": "36.0.0",
+      "name": "36.0.0 (LTS)",
+      "milestones": {
+        "ga": "2025-08-20",
+        "eos": null,
+        "eossec": null,
+        "eol": "2027-08-20"
+      }
+    },
+    {
+      "id": "34.0.0",
+      "name": "34.0.0",
+      "milestones": {
+        "ga": "2025-06-20",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-08-20"
+      }
+    },
+    {
+      "id": "24.0.0",
+      "name": "24.0.0 (LTS)",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-08-20"
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "quote": "Wasmtime's 24.0.0 release has been retroactively classified as a LTS release and will be supported until August 20, 2026.",
+      "source_url": "https://raw.githubusercontent.com/bytecodealliance/bytecodealliance.org/gh-pages/_posts/2025-04-22-wasmtime-lts.md",
+      "retrieved_at": "2026-09-17",
+      "milestones": [
+        "eol"
+      ]
+    },
+    {
+      "quote": "Wasmtime’s upcoming 36.0.0 release on August 20, 2025 will be supported until August 20, 2027, meaning that users will have one year starting in August to upgrade from 24.0.0 to 36.0.0.",
+      "source_url": "https://bytecodealliance.org/articles/wasmtime-lts",
+      "retrieved_at": "2026-09-17",
+      "milestones": [
+        "ga",
+        "eol"
+      ]
+    },
+    {
+      "quote": "Wasmtime 34.0.0, to be released June 20, 2025, will be supported up until the release of Wasmtime 36.0.0 on August 20, 2025.",
+      "source_url": "https://bytecodealliance.org/articles/wasmtime-lts",
+      "retrieved_at": "2026-09-17",
+      "milestones": [
+        "ga",
+        "eol"
+      ]
+    },
+    {
+      "quote": "Each release that is a multiple of 12 is considered an LTS release and is supported for 24 months. Other releases are supported for 2 months.",
+      "source_url": "https://docs.wasmtime.dev/stability-release.html",
+      "retrieved_at": "2026-09-17"
+    },
+    {
+      "quote": "Every 12th version of Wasmtime will now be considered an LTS release and will receive security fixes for 2 years, or 24 months.",
+      "source_url": "https://bytecodealliance.org/articles/wasmtime-lts",
+      "retrieved_at": "2026-09-17"
+    }
+  ],
+  "contributor": "zarguell",
+  "method": "agent",
+  "stale_after": "2027-04-22",
+  "notes": "No deterministic source exists: endoflife.date has no Wasmtime product (475 products, no wasm identity), and the vendor's own lifecycle table at docs.wasmtime.dev/stability-release.html ships an empty static tbody -- every Version/Branch Date/Release Date/EOL Date row is produced in the browser by docs/js/index.js as 2024-04-20 plus (n-20) months, with +24 months for LTS and +2 months for normal releases. That is duration arithmetic, never a published date, so no collector is admissible. Dates here are the vendor's own explicit day-precision statements. Only releases the announcement itself dates are given dates: 24.0.0 (LTS, end of support 2026-08-20), 36.0.0 (LTS, 2025-08-20 to 2027-08-20), and 34.0.0, the one non-LTS line the notice ends explicitly (2025-08-20, at 36.0.0's release). 48.0.0 is the current LTS (released 2026-08-20) and carries no dates: the announcement predates it and publishes no deadline for it, so none is inferred. The remaining non-LTS branches (25-47) are governed only by the 2-month duration policy quoted below; that policy is stored as evidence and is never converted into a date, so those lines are not published with invented ends. ga for 24.0.0 and 48.0.0 stays null because no stored quote states it. Rendering defect: the live article page ends the 24.0.0 sentence at \"until August 20,\" because the following \"2026.\" was consumed as an ordered-list marker, so that one sentence is cited to the vendor's own published source file for the article rather than to the rendered page. Category framework follows the runtime precedent: endoflife.date categorizes the comparable runtimes nodejs, deno and bun as framework."
+}
