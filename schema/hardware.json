@@ -60,7 +60,39 @@
       }
     },
     "status": {
-      "enum": ["supported", "expiring", "eol"]
+      "enum": ["supported", "expiring", "eol", "unknown"]
+    },
+    "catalog": {
+      "description": "Opengear configurator listing evidence: whether the current catalog offers this exact SKU. Listing is not support entitlement, and removal from the catalog is not an end of life.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["listed", "source_url"],
+      "properties": {
+        "listed": {"type": "boolean"},
+        "source_url": {"const": "https://opengear.com/configure/"}
+      }
+    },
+    "lifecycle": {
+      "description": "The lifecycle group/revision records whose published part scope names this exact SKU, and whether any such notice exists now. An unknown state is never invented: an empty match list with listed false means no notice names this SKU.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["listed", "matches"],
+      "properties": {
+        "listed": {"type": "boolean"},
+        "matches": {
+          "type": "array",
+          "items": {"type": "string", "pattern": "^opengear-"}
+        }
+      }
+    },
+    "evidence": {
+      "description": "Set when a committed record is retained although the current source snapshot no longer states it. Its milestones and raw upstream cells stay unchanged; an absent source row is neither a support claim nor an end of life.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["in_source"],
+      "properties": {
+        "in_source": {"type": "boolean"}
+      }
     },
     "provenance": {
       "type": "object",

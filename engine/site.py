@@ -117,12 +117,57 @@ HARDWARE_MILESTONES = (
 )
 MILESTONE_KEYS = tuple(milestone["key"] for milestone in HARDWARE_MILESTONES)
 # eosl.date states lifecycle status through the row class of each model row.
+# Catalog rows have no status of their own — a current catalogue listing says
+# nothing about support — so `unknown` is a first-class, neutral value rather
+# than a default. It is deliberately not in HARDWARE_STATUS_ORDER: neutral
+# records sort last instead of landing between two dated claims.
 HARDWARE_STATUSES = (
     {"key": "supported", "label": "Supported", "detail": "Published in a supported row: no support end has been announced."},
     {"key": "expiring", "label": "Expiring", "detail": "Source warning row, or Opengear's announced support deadline has not yet passed."},
     {"key": "eol", "label": "End of life", "detail": "Source end-of-life row, or Opengear's published support deadline has passed; contract exceptions may apply."},
+    {"key": "unknown", "label": "Status unknown", "detail": "No support deadline and no lifecycle notice published for this record, so it carries no support claim in either direction. A current catalogue listing, or a revision-only notice, does not end support."},
 )
-HARDWARE_STATUS_ORDER = tuple(status["key"] for status in HARDWARE_STATUSES)
+HARDWARE_STATUS_ORDER = tuple(status["key"] for status in HARDWARE_STATUSES if status["key"] != "unknown")
+HARDWARE_UNKNOWN_STATUS = "unknown"
+# ---------------------------------------------------------------------------
+# Exact Opengear catalogue models (vendor configurator).
+#
+# These records are not lifecycle rows: each one is one exact vendor model
+# string, and it stays that record even after a notice names it. It carries no
+# milestone of its own and no support status — the pairs below say only whether
+# it is currently listed by the vendor and whether an exact notice for it
+# exists right now. Everything here is absent rather than guessed for records
+# from other sources.
+CATALOG_FAMILY = "catalog"
+CATALOG_SOURCE_URL = "https://opengear.com/configure/"
+CONFIGURE_SOURCE_URL = "https://opengear.com/configure/"
+CONFIGURE_SOURCE_NAME = "Opengear product configurator"
+END_LIFE_SOURCE_URL = "https://opengear.com/end-life-products"
+OPENGEAR_VERIFIER = "deterministic-opengear"
+CHANGES_ATOM = "v1/changes.atom"
+CHANGES_JSON = "v1/changes.json"
+# One entry per catalog state: the filter key, its label, and the sentence the
+# page prints. `listed` is the catalogue half only — never a support claim.
+CATALOG_LISTING_STATES = (
+    {"key": "listed", "label": "Listed in vendor catalog",
+     "detail": "The vendor configurator currently lists this exact model."},
+    {"key": "absent", "label": "Previously listed; absent from latest catalog",
+     "detail": "This record was listed when it was first captured and is not in the current catalogue. Absence is not an end-of-sale or end-of-support announcement."},
+)
+# The notice half. `noticed` needs a published announcement that names this
+# exact model; a current listing on its own never sets it.
+CATALOG_NOTICE_STATES = (
+    {"key": "noticed", "label": "Notice names this exact model",
+     "detail": "A published lifecycle notice resolves to this exact model string. The notice's own dates and scope are on the linked record."},
+    {"key": "no-notice", "label": "No matching notice",
+     "detail": "No published lifecycle notice resolves to this exact model, so no support end is known for it. The vendor lists it; that is not an entitlement."},
+)
+# One row per possible pair: catalogue listing, then notice state. The filter
+# value is the pair, so a reader can ask for exactly the combination they mean.
+CATALOG_STATES = tuple(
+    {"key": f"{listing['key']}-{notice['key']}", "listing": listing, "notice": notice}
+    for listing in CATALOG_LISTING_STATES for notice in CATALOG_NOTICE_STATES
+)
 # Upstream date fields, in the order they appear in the raw release object, and
 # the label field that qualifies each one.
 UPSTREAM_DATE_FIELDS = (
@@ -334,7 +379,7 @@ def hardware_rows(record):
             "value": cell.get("value"),
             "datetime": cell.get("datetime"),
             "role": cell.get("role"),
-            "links": cell.get("links") or [],
+            "links": merge_links(cell.get("links") or []),
         })
     cells = {}
     for milestone in HARDWARE_MILESTONES:
@@ -351,8 +396,161 @@ def hardware_rows(record):
     }
 
 
-def summarize_hardware(record, rows, today):
+def merge_links(values):
+    """Deduplicated link list, order preserved. Pairs a URL with its label once."""
+    merged, seen = [], set()
+    for value in values:
+        if isinstance(value, dict):
+            url, label = value.get("url"), value.get("label") or value.get("url")
+        else:
+            url, label = value, value
+        if not url or url in seen:
+            continue
+        seen.add(url)
+        merged.append({"url": url, "label": label})
+    return merged
+
+
+def source_order(record):
+    """The record's source pages, with the page it was actually read from first.
+
+    A catalog record is read from the vendor configurator, so the configurator
+    stays its source even after a notice names the exact model — the notice is
+    additional evidence, not a replacement for where the record came from. A
+    lifecycle row keeps its own order, so a notice page never gets promoted
+    ahead of the table the row was parsed from.
+    """
+    urls = list(record["provenance"]["source_urls"])
+    if record.get("family") == CATALOG_FAMILY:
+        urls = [CONFIGURE_SOURCE_URL] + [url for url in urls if url != CONFIGURE_SOURCE_URL]
+    return urls
+
+
+def catalog_identity(record):
+    """The catalogue listing state and the current notice match for one record.
+
+    `record.catalog` and `record.lifecycle` are the collector's optional
+    contract fields, and they are only ever read here — a missing field means
+    "not a catalog record", never "not listed". Nothing in this function infers
+    a support state: a listing is a listing, a missing listing is a missing
+    listing, and a notice match is exact-or-absent.
+    """
+    catalog = record.get("catalog") or None
+    lifecycle = record.get("lifecycle") or None
+    listed = bool(catalog.get("listed")) if catalog else None
+    matched = bool(lifecycle.get("listed")) if lifecycle else False
+    if listed is None:
+        listing = None
+    else:
+        listing = CATALOG_LISTING_STATES[0] if listed else CATALOG_LISTING_STATES[1]
+    notice = CATALOG_NOTICE_STATES[0] if matched else CATALOG_NOTICE_STATES[1]
+    return {
+        "catalog": catalog,
+        "lifecycle": lifecycle,
+        "listed": listed,
+        "listing": listing,
+        "notice": notice,
+        "matched": matched,
+        "matches": list(lifecycle.get("matches") or []) if lifecycle else [],
+        "source_url": (catalog or {}).get("source_url") or None,
+        "state": (f"{listing['key']}-{notice['key']}" if listing else None),
+    }
+
+
+def opengear_index(records):
+    """The Opengear graphs the hardware copy, the filter and the pages need.
+
+    Every Opengear model string is mapped to the records that publish it, using
+    exact equality only: no family prefix, no substring, no fuzzy match. That
+    map is what proves — or refuses to prove — that a notice names an exact
+    catalogue model, so the pages can say which of the two they are doing.
+    """
+    opengear = [record for record in records if record["provenance"]["verifier"] == OPENGEAR_VERIFIER]
+    catalog = [record for record in opengear if record.get("family") == CATALOG_FAMILY]
+    lifecycle = [record for record in opengear if record.get("family") != CATALOG_FAMILY]
+    catalog_by_id = {record["id"]: record for record in catalog}
+    lifecycle_by_id = {record["id"]: record for record in lifecycle}
+    # Exact model string -> the records that publish it. A model string with
+    # several publishers is kept plural instead of resolved to one winner.
+    groups, models = set(), {}
+    for record in lifecycle:
+        groups.add(record.get("family"))
+        candidates = [record.get("name"), record.get("model_number")]
+        cells = record.get("upstream") or {}
+        for column in ("Product", "Part #", "Old Part #"):
+            cell = cells.get(column)
+            if isinstance(cell, dict):
+                candidates.append(cell.get("text"))
+        tokens = set()
+        for candidate in candidates:
+            if isinstance(candidate, str) and candidate.strip():
+                tokens.add(candidate.strip())
+                if candidate.strip() == candidate:
+                    tokens.add(candidate)
+        for token in tokens:
+            models.setdefault(token, []).append(record["id"])
+    backlinks = {}  # lifecycle record id -> catalog record ids claiming it
+    for record in catalog:
+        for group in (record.get("lifecycle") or {}).get("matches") or []:
+            backlinks.setdefault(group, []).append(record["id"])
+    return {
+        "opengear": opengear,
+        "catalog": catalog,
+        "lifecycle": lifecycle,
+        "catalog_by_id": catalog_by_id,
+        "lifecycle_by_id": lifecycle_by_id,
+        "models": {token: sorted(set(ids)) for token, ids in models.items()},
+        "groups": sorted(groups, key=str),
+        "backlinks": {group: sorted(ids) for group, ids in backlinks.items()},
+    }
+
+
+def catalog_stats(records, hardware_index):
+    """Counts for the hardware coverage block, derived from the records read."""
+    catalog, lifecycle = hardware_index["catalog"], hardware_index["lifecycle"]
+    groups = hardware_index["groups"]
+    listed = sum(1 for record in catalog if (record.get("catalog") or {}).get("listed"))
+    matched = sum(1 for record in catalog if (record.get("lifecycle") or {}).get("matches"))
+    known_matches = sum(1 for record in catalog
+                        if set((record.get("lifecycle") or {}).get("matches") or []) <= set(hardware_index["lifecycle_by_id"]))
+    # A model string published by more than one row is reported, never silently
+    # collapsed to one owner: which row's dates apply would then be a judgement.
+    shared = {token: ids for token, ids in hardware_index["models"].items() if len(ids) > 1 and token in
+              {candidate for record in catalog for candidate in
+               [record.get("name"), record.get("model_number"), (record.get("upstream") or {}).get("SKU", {}).get("text")]}}
+    return {
+        "records": len(records),
+        "catalog_records": len(catalog),
+        "lifecycle_records": len(lifecycle),
+        "families": {group: sum(1 for record in lifecycle if record.get("family") == group) for group in groups},
+        "listed": listed,
+        "absent": len(catalog) - listed,
+        "matched": matched,
+        "unmatched": len(catalog) - matched,
+        "matched_known": known_matches,
+        "shared_models": {token: ids for token, ids in sorted(shared.items()) if token},
+    }
+
+
+def summarize_hardware(record, rows, today, hardware_index=None):
     next_events = upcoming_events([rows], today, limit=1, milestones=HARDWARE_MILESTONES)
+    catalog = catalog_identity(record) if hardware_index else {
+        "catalog": None, "lifecycle": None, "listed": None, "listing": None,
+        "notice": None, "matched": False, "matches": [], "source_url": None, "state": None}
+    if hardware_index:
+        matches = [{"id": rid, "name": hardware_index["lifecycle_by_id"][rid]["name"],
+                    "url": site_url(f"hardware/{rid}/")}
+                   for rid in catalog["matches"] if rid in hardware_index["lifecycle_by_id"]]
+    else:
+        matches = []
+    # The name is printed with any catalog state on the page, so it is written
+    # once here rather than rebuilt in three templates.
+    catalog["match_links"] = matches
+    catalog["unresolved_matches"] = [rid for rid in catalog["matches"] if rid not in {row["id"] for row in matches}]
+    search = (f"{record['name']} {record['id']} {record['vendor']} {record['product_line']} "
+              f"{record.get('family') or ''} {record.get('model_number') or ''}")
+    if catalog["catalog"]:
+        search += " " + (catalog["listing"]["label"] if catalog["listing"] else "") + " " + catalog["notice"]["label"]
     return {
         "id": record["id"],
         "name": record["name"],
@@ -361,14 +559,15 @@ def summarize_hardware(record, rows, today):
         "family": record.get("family"),
         "model_number": record.get("model_number"),
         "status": record["status"],
-        "search": f"{record['name']} {record['id']} {record['vendor']} {record['product_line']} "
-                  f"{record.get('family') or ''} {record.get('model_number') or ''}".lower(),
+        "search": search.lower(),
         "coverage": milestone_coverage([rows], HARDWARE_MILESTONES),
         "milestones": {key: record["milestones"][key] for key in MILESTONE_KEYS},
         "next": next_events[0] if next_events else None,
         "json": site_url(f"v1/hardware/{record['id']}.json"),
         "page": site_url(f"hardware/{record['id']}/"),
-        "source": (record["provenance"]["source_urls"] or [None])[0],
+        "source": source_order(record)[0],
+        "source_urls": source_order(record),
+        "catalog": catalog,
     }
 
 
@@ -451,7 +650,8 @@ def build(data_dir=None, out_dir=None):
         shutil.copyfile(data_dir / "products" / f"{record['id']}.json", out / "v1" / "products" / f"{record['id']}.json")
 
     hardware_rows_by_id = {record["id"]: hardware_rows(record) for record in hardware}
-    hardware_summaries = [summarize_hardware(record, hardware_rows_by_id[record["id"]], today)
+    hardware_index = opengear_index(hardware)
+    hardware_summaries = [summarize_hardware(record, hardware_rows_by_id[record["id"]], today, hardware_index)
                           for record in hardware]
     # The JSON index keeps slug order, like the product index. The rendered
     # tables ship in model-name order instead, which is the default sort of the
@@ -467,7 +667,14 @@ def build(data_dir=None, out_dir=None):
     opengear_report = data_dir / "opengear-import.json"
     if opengear_report.exists():
         shutil.copyfile(opengear_report, out / "v1" / "opengear-import.json")
-
+    # The changes ledger and its Atom feed are produced by the changes module
+    # against the previous records; the site only republishes what is on disk.
+    # When no ledger has been recorded yet there is no history to link to, so
+    # the navigation says that instead of pointing at a document nobody wrote.
+    changes_json = data_dir / "opengear-changes.json"
+    changes_available = changes_json.exists()
+    if changes_available:
+        shutil.copyfile(changes_json, out / "v1" / "changes.json")
     # ---- shared assets ---------------------------------------------------
     write(out / "style.css", (TEMPLATES / "style.css").read_text(encoding="utf-8"))
     write(out / "app.js", (TEMPLATES / "app.js").read_text(encoding="utf-8"))
@@ -482,7 +689,25 @@ def build(data_dir=None, out_dir=None):
     hardware_coverage = milestone_coverage([row for row in hardware_rows_by_id.values()])
     hardware_vendor_facets = hardware_vendors(hardware)
     hardware_status_facets = hardware_statuses(hardware)
+    stats = catalog_stats(hardware, hardware_index)
+    # Sort order for the catalog column: the catalog states first — they are
+    # what the column is about — then notice-table rows, which have no catalog
+    # state at all.
+    state_counts, order = {}, {}
+    for state in CATALOG_STATES:
+        order[state["key"]] = len(order)
+        state_counts[state["key"]] = 0
+    order["lifecycle-row"] = len(order)
+    state_counts["lifecycle-row"] = 0
+    for summary in hardware_summaries:
+        key = summary["catalog"]["state"] or "lifecycle-row"
+        state_counts[key] = state_counts.get(key, 0) + 1
+    # The import report is the collector's own account of what it read and what
+    # it dropped; republished verbatim so the hardware page can show coverage
+    # without restating it in prose the reader cannot check.
+    report = json.loads(opengear_report.read_text(encoding="utf-8")) if opengear_report.exists() else None
     common = {
+        "manifest": manifest,
         "product_count": manifest["product_count"],
         "release_count": manifest["release_count"],
         "excluded_count": len(manifest["excluded_hardware"]),
@@ -491,6 +716,20 @@ def build(data_dir=None, out_dir=None):
         "milestone_meta": MILESTONES,
         "hardware_milestone_meta": HARDWARE_MILESTONES,
         "hardware_status_meta": HARDWARE_STATUSES,
+        "hardware_status_order": HARDWARE_STATUS_ORDER,
+        "hardware_unknown_status": HARDWARE_UNKNOWN_STATUS,
+        "catalog_states": CATALOG_STATES,
+        "catalog_state_counts": state_counts,
+        "catalog_state_order": order,
+        "catalog_family": CATALOG_FAMILY,
+        "catalog_source_name": CONFIGURE_SOURCE_NAME,
+        "catalog_source_site": CONFIGURE_SOURCE_URL,
+        "catalog_stats": stats,
+        "catalog_index": hardware_index,
+        "import_report": report,
+        "changes_available": changes_available,
+        "changes_json_url": url_for(CHANGES_JSON),
+        "changes_atom_url": url_for(CHANGES_ATOM),
         "hardware_vendors": hardware_vendor_facets,
         "hardware_statuses": hardware_status_facets,
         "schema_version": SCHEMA_VERSION,
@@ -532,7 +771,29 @@ def build(data_dir=None, out_dir=None):
 
     for record in hardware:
         rows = hardware_rows_by_id[record["id"]]
-        source_urls = record["provenance"]["source_urls"]
+        # A catalog record names the lifecycle groups a notice resolved to, so
+        # every match becomes a link to that group's own page; a lifecycle row
+        # names the exact catalog models whose notices point back at it. Both
+        # directions are exact-id joins, which is why the page can print them as
+        # facts instead of hints.
+        matches = [{"id": rid,
+                    "name": hardware_index["lifecycle_by_id"][rid]["name"],
+                    "family": hardware_index["lifecycle_by_id"][rid].get("family"),
+                    "vendor": hardware_index["lifecycle_by_id"][rid]["vendor"],
+                    "status": hardware_index["lifecycle_by_id"][rid]["status"],
+                    "url": url_for(f"hardware/{rid}/"),
+                    "json": url_for(f"v1/hardware/{rid}.json")}
+                   for rid in (record.get("lifecycle") or {}).get("matches") or []
+                   if rid in hardware_index["lifecycle_by_id"]]
+        unresolved = [rid for rid in (record.get("lifecycle") or {}).get("matches") or []
+                      if rid not in hardware_index["lifecycle_by_id"]]
+        claimed_by = [{"id": cid,
+                       "name": hardware_index["catalog_by_id"][cid]["name"],
+                       "sku": hardware_index["catalog_by_id"][cid].get("model_number"),
+                       "listed": (hardware_index["catalog_by_id"][cid].get("catalog") or {}).get("listed"),
+                       "url": url_for(f"hardware/{cid}/")}
+                      for cid in hardware_index["backlinks"].get(record["id"], [])]
+        source_urls = source_order(record)
         write(out / "hardware" / record["id"] / "index.html", render(
             "hardware.html",
             **common,
@@ -543,14 +804,23 @@ def build(data_dir=None, out_dir=None):
                          f"{record['product_line']} model or product group, with raw source values and provenance."),
             model=record,
             rows=rows,
+            identity=catalog_identity(record),
+            exact_matches=matches,
+            unresolved_matches=unresolved,
+            claimed_by=claimed_by,
+            shared_models=[{"model": token, "ids": ids,
+                            "names": [hardware_index["lifecycle_by_id"][rid]["name"] for rid in ids
+                                      if rid in hardware_index["lifecycle_by_id"]]}
+                           for token, ids in sorted(hardware_index["models"].items())
+                           if record["id"] in ids and len(ids) > 1],
             coverage=milestone_coverage([rows], HARDWARE_MILESTONES),
             json_url=url_for(f"v1/hardware/{record['id']}.json"),
             json_abs=site_url(f"v1/hardware/{record['id']}.json"),
             upstream_urls=source_urls,
-            hardware_source_name="Opengear" if record["provenance"]["verifier"] == "deterministic-opengear" else HARDWARE_SOURCE_NAME,
+            hardware_source_name="Opengear" if record["provenance"]["verifier"] == OPENGEAR_VERIFIER else HARDWARE_SOURCE_NAME,
             hardware_source_site=source_urls[0],
             hardware_source_attribution=("Lifecycle dates published directly by Opengear; grouped parts and contract exceptions are retained below."
-                                         if record["provenance"]["verifier"] == "deterministic-opengear" else HARDWARE_SOURCE_ATTRIBUTION),
+                                         if record["provenance"]["verifier"] == OPENGEAR_VERIFIER else HARDWARE_SOURCE_ATTRIBUTION),
         ))
 
     for record in records:

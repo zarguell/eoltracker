@@ -25,7 +25,7 @@ def main():
             message += f", {len(hardware)} hardware models"
         print(message)
     else:
-        from . import feeds, openeox, site
+        from . import changes, feeds, openeox, site
         site.build()
         openeox.build(validate_data())
         manifest = None
@@ -34,6 +34,10 @@ def main():
             import json
             manifest = json.loads(manifest_path.read_text())
         feeds.build(validate_data(), validate_hardware(), manifest=manifest)
+        history_path = site.ROOT / "data" / "opengear-changes.json"
+        if history_path.exists():
+            import json
+            changes.build(json.loads(history_path.read_text()), site.ROOT / "_site")
         print("Built website, v1 endpoints and feeds in _site/")
 
 

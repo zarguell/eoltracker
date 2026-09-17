@@ -11,19 +11,23 @@
   <p class="eyebrow">Hardware lifecycle catalog</p>
   <h1 class="page-title">Hardware end-of-sale and end-of-support dates</h1>
   <p class="lead">
-    {{ plural(hardware_count, 'hardware record') }} across {{ plural(hardware_vendors|length, 'vendor') }} — each a
-    published model or product group with the end-of-sale and end-of-support dates its source states, plus a release
-    date where the source publishes one. The catalog is normalized from
+    {{ plural(hardware_count, 'hardware record') }} across {{ plural(hardware_vendors|length, 'vendor') }}. Two record
+    kinds are published together and deliberately kept apart: <strong>lifecycle rows</strong>, each one a published row
+    of a vendor notice table carrying the end-of-sale and end-of-support dates its source states, and <strong>catalog
+    records</strong>, each one exact model string the vendor's own product catalogue lists, which carry a listing state
+    rather than a support claim. The catalog is normalized from
     <a href="{{ hardware_source_site }}" rel="noopener">{{ hardware_source_name }}</a>, which aggregates public vendor
     announcements, and from
-    <a href="https://opengear.com/end-life-products" rel="noopener">Opengear's end-of-life product list</a>, which
-    publishes its own lifecycle dates; no date here is estimated.
+    <a href="https://opengear.com/end-life-products" rel="noopener">Opengear's end-of-life product list</a> and
+    <a href="{{ catalog_source_site }}" rel="noopener">{{ catalog_source_name }}</a>; no date here is estimated.
   </p>
   <div class="hero-stats">
     <div class="stat"><span class="stat-num">{{ hardware_count }}</span><span class="stat-label">hardware records</span></div>
+    <div class="stat"><span class="stat-num">{{ catalog_stats.lifecycle_records }}</span><span class="stat-label">lifecycle rows</span></div>
+    <div class="stat"><span class="stat-num">{{ catalog_stats.catalog_records }}</span><span class="stat-label">catalog models</span></div>
     <div class="stat"><span class="stat-num">{{ hardware_vendors|length }}</span><span class="stat-label">vendors</span></div>
     <div class="stat"><span class="stat-num">{{ hardware_coverage|sum(attribute='known') }}</span><span class="stat-label">published milestone dates</span></div>
-    <div class="stat"><span class="stat-num">{{ hardware_statuses|selectattr('key', 'equalto', 'eol')|map(attribute='count')|first }}</span><span class="stat-label">records past end of support</span></div>
+    <div class="stat"><span class="stat-num">{{ hardware_statuses|selectattr('key', 'equalto', 'unknown')|map(attribute='count')|first }}</span><span class="stat-label">records with no support claim</span></div>
   </div>
   <p class="hero-meta">
     Last refresh <time datetime="{{ refresh.iso }}">{{ refresh.human }}</time>.
@@ -36,16 +40,17 @@
   <h2 class="panel-title" id="hw-coverage-title">Milestone coverage</h2>
   <p class="panel-note">
     How many of the {{ hardware_count }} records have each milestone published. A blank milestone means the record's
-    source publishes no such date — not that the vendor supports the model indefinitely.
+    source publishes no such date — not that the vendor supports the model indefinitely. Catalog records publish no
+    dates at all, so they widen the denominator and leave every bar honest about it.
   </p>
   <ul class="bars">
     {% for row in hardware_coverage %}
     <li class="bar">
       <p class="bar-head">
         <span class="bar-label">{{ row.label }}</span>
-        <span class="bar-value">{{ row.known }} / {{ row.total }} models with a date ({{ row.percent }}%)</span>
+        <span class="bar-value">{{ row.known }} / {{ row.total }} records with a date ({{ row.percent }}%)</span>
       </p>
-      <div class="bar-track" role="img" aria-label="{{ row.label }}: {{ row.known }} of {{ row.total }} models have a published date">
+      <div class="bar-track" role="img" aria-label="{{ row.label }}: {{ row.known }} of {{ row.total }} records have a published date">
         <div class="bar-fill" style="width: {{ row.percent }}%"></div>
       </div>
       <p class="bar-detail">{{ row.detail }}</p>
@@ -54,14 +59,126 @@
   </ul>
   <h3 class="sub-title">Status</h3>
   <p class="panel-note">
-    For eosl.date records, status comes from the row the model is published under. For Opengear records it is computed
-    from the published support deadline against the import date, since that source states no row status. Neither is a
-    vendor contract: individual exceptions may still apply.
+    For eosl.date records, status comes from the row the model is published under. For Opengear lifecycle rows it is
+    computed from the published support deadline against the import date, since that source states no row status.
+    <strong>Status unknown</strong> is deliberate and neutral: a record with no deadline and no matching notice is shown
+    as unknown rather than as supported, because a catalogue listing and a revision-only notice both say nothing about
+    support. None of these is a vendor contract: individual exceptions may still apply.
   </p>
   <ul class="chips">
     {% for status in hardware_statuses %}
-    <li><span class="tag{% if status.key == 'eol' %} tag-warn{% elif status.key == 'supported' %} tag-ok{% endif %}">{{ status.label }}</span> <span class="chip-count">{{ status.count }}</span> — {{ status.detail }}</li>
+    <li><span class="tag{% if status.key == 'eol' %} tag-warn{% elif status.key == 'expiring' %} tag-warn{% elif status.key == 'supported' %} tag-ok{% else %} tag-neutral{% endif %}">{{ status.label }}</span> <span class="chip-count">{{ status.count }}</span> — {{ status.detail }}</li>
     {% endfor %}
+  </ul>
+</section>
+
+<section class="panel" aria-labelledby="catalog-status-title">
+  <h2 class="panel-title" id="catalog-status-title">Catalog listing versus support</h2>
+  <p class="panel-note">
+    {{ catalog_stats.catalog_records }} of these records are exact model strings from
+    <a href="{{ catalog_source_site }}" rel="noopener">{{ catalog_source_name }}</a>, published alongside Opengear's
+    lifecycle rows. They exist because a catalogue is not a notice: the same vendor maintains both, but only the notice
+    states a support deadline. Listing is therefore reported on its own, never as support.
+  </p>
+  <ul class="chips">
+    {% for state in catalog_states %}
+    <li>
+      <span class="tag{% if state.listing.key == 'listed' %} tag-listed{% else %} tag-absent{% endif %}">{{ state.listing.label }}</span>
+      <span class="tag{% if state.notice.key == 'noticed' %} tag-listed{% else %} tag-neutral{% endif %}">{{ state.notice.label }}</span>
+      <span class="chip-count">{{ catalog_state_counts[state.key] }}</span>
+      — {{ state.listing.detail }} {{ state.notice.detail }}
+    </li>
+    {% endfor %}
+    <li>
+      <span class="tag tag-neutral">Lifecycle rows</span>
+      <span class="chip-count">{{ catalog_state_counts['lifecycle-row'] }}</span>
+      — records read from a vendor notice table rather than the catalogue. Each is one published row, and Opengear
+      groups several part numbers or revisions into a row, so these are records and not unique devices.
+    </li>
+  </ul>
+  {% if catalog_stats.catalog_records %}
+  <ul class="facts">
+    <div><dt>Currently listed</dt><dd>{{ plural(catalog_stats.listed, 'catalogue model') }} in the catalogue read for this build.</dd></div>
+    <div><dt>Previously listed</dt><dd>{{ plural(catalog_stats.absent, 'catalogue model') }} captured while listed and now absent from the catalogue. Absence is not an end of sale or an end of support.</dd></div>
+    <div><dt>Notice matched</dt><dd>Named by a published lifecycle notice, matched on exact model string against the notice's <code>Part #</code> scope: {{ catalog_stats.matched }}. Not named by any notice, so no support end is known: {{ catalog_stats.unmatched }}.</dd></div>
+  </ul>
+  {% endif %}
+</section>
+
+<section class="panel" aria-labelledby="coverage-report-title">
+  <h2 class="panel-title" id="coverage-report-title">Import report and coverage</h2>
+  <p class="panel-note">
+    What this catalog contains, and what its sources published but did not publish here. The numbers come from the
+    committed records and from the collectors' own import reports — nothing in this section is hand-maintained prose
+    about the data.
+  </p>
+  <ul class="facts">
+    <div><dt>Records published</dt><dd>{{ catalog_stats.records }} total: {{ catalog_stats.lifecycle_records }} lifecycle rows and {{ catalog_stats.catalog_records }} catalogue models.</dd></div>
+    <div>
+      <dt>Lifecycle rows by family</dt>
+      <dd>
+        {% for family, count in catalog_stats.families.items() %}<span class="tag">{{ family }}</span> {{ count }}{% if not loop.last %}, {% endif %}{% endfor %}
+        — the family a row was read from, not a model count. A <code>revision</code> row is one vendor revision line, and
+        a <code>hardware</code> row can cover many part numbers.
+      </dd>
+    </div>
+    {% if import_report %}
+    <div>
+      <dt>Opengear source rows</dt>
+      <dd>
+        {{ import_report.imported_count }} imported and {{ import_report.excluded_count }} excluded, out of
+        {{ import_report.imported_count + import_report.excluded_count }} rows read from
+        <a href="{{ import_report.source_url }}" rel="noopener">{{ import_report.source_url }}</a> on
+        {{ human_datetime(import_report.checked_at) }} by <code>{{ import_report.verifier }}</code>.
+        Scope: {{ import_report.record_scope }}.
+      </dd>
+    </div>
+    <div>
+      <dt>Full report</dt>
+      <dd><a href="{{ url_for('v1/opengear-import.json') }}">v1/opengear-import.json</a> — every excluded row with the reason it was excluded, so a reader can disagree with the exclusions rather than take them on faith.</dd>
+    </div>
+    {% if import_report.excluded %}
+    <div>
+      <dt>Exclusions</dt>
+      <dd>
+        <ul class="events">
+          {% for entry in import_report.excluded %}
+          <li><strong>{{ entry.product }}</strong>{% if entry.parts %} <code>{{ entry.parts }}</code>{% endif %} — {{ entry.reason }}</li>
+          {% endfor %}
+        </ul>
+      </dd>
+    </div>
+    {% endif %}
+    {% else %}
+    <div><dt>Opengear source rows</dt><dd>No import report is committed for this build, so this page makes no claim about how many source rows were read or dropped.</dd></div>
+    {% endif %}
+    {% if manifest and manifest.excluded_hardware %}
+    <div>
+      <dt>Outside this catalog</dt>
+      <dd>
+        {{ plural(manifest.excluded_hardware|length, 'product') }} endoflife.date lists are hardware (phones, tablets,
+        watches) rather than lifecycle-managed infrastructure, and are excluded here by name in the manifest:
+        {% for name in manifest.excluded_hardware %}<code>{{ name }}</code>{% if not loop.last %}, {% endif %}{% endfor %}.
+      </dd>
+    </div>
+    {% endif %}
+    <div>
+      <dt>Changes</dt>
+      <dd>
+        {% if changes_available %}
+        The ledger records what changed between refreshes — an announcement appearing, a date moving, a catalogue model
+        being listed or dropped:
+        <a href="{{ changes_atom_url }}">v1/changes.atom</a> and
+        <a href="{{ changes_json_url }}">v1/changes.json</a>. This is separate from the upcoming-deadline feeds, which
+        syndicate dates rather than catalog differences.
+        {% else %}
+        No changes ledger is committed for this build, so no change history is published and no endpoint is advertised
+        for it. Once a first refresh is recorded the ledger appears here as <code>v1/changes.atom</code> and
+        <code>v1/changes.json</code>: what appeared, what moved, and which catalogue models were listed or dropped. It
+        is separate from the upcoming-deadline feeds.
+        {% endif %}
+      </dd>
+    </div>
   </ul>
 </section>
 
@@ -76,17 +193,21 @@
   <p class="panel-note">
     {{ hardware_source_attribution }} eosl.date states no license for that data, so it is attributed here and on every
     record page rather than relicensed. Opengear lifecycle dates are read from
-    <a href="https://opengear.com/end-life-products" rel="noopener">Opengear's end-of-life product list</a> and credited
-    to Opengear; attribution is not a licence for either source, and no source materials are relicensed here. This
-    project claims no affiliation with eosl.date, Opengear or the vendors whose products appear.
+    <a href="https://opengear.com/end-life-products" rel="noopener">Opengear's end-of-life product list</a> and its
+    catalogue models from
+    <a href="{{ catalog_source_site }}" rel="noopener">{{ catalog_source_site }}</a>, and both are credited to Opengear;
+    attribution is not a licence for either source, and no source materials are relicensed here. This project claims no
+    affiliation with eosl.date, Opengear or the vendors whose products appear.
   </p>
   <dl class="facts">
     <div><dt>Upstream</dt><dd><a href="{{ hardware_source_site }}" rel="noopener">{{ hardware_source_site }}</a> — {{ hardware_source_name }}, by Subash Geetha Krishnan</dd></div>
     <div><dt>Upstream</dt><dd><a href="https://opengear.com/end-life-products" rel="noopener">opengear.com/end-life-products</a> — Opengear's own published end-of-life, end-of-sale and end-of-support dates</dd></div>
+    <div><dt>Upstream</dt><dd><a href="{{ catalog_source_site }}" rel="noopener">{{ catalog_source_site }}</a> — Opengear's own product catalogue, read for the exact model strings it currently lists</dd></div>
     <div><dt>Data origin</dt><dd>eosl.date records aggregate public vendor announcements, as eosl.date states; Opengear records are published by Opengear itself</dd></div>
-    <div><dt>Verifier</dt><dd>Per record: <code>deterministic-eosl-date</code> parsed the eosl.date family tables, <code>deterministic-opengear</code> parsed the Opengear product tables. Each record page names its own.</dd></div>
-    <div><dt>Scope</dt><dd>One record per published source row: a model or model group from eosl.date, or an Opengear product group whose part numbers are grouped rather than expanded into one record each</dd></div>
+    <div><dt>Verifier</dt><dd>Per record: <code>deterministic-eosl-date</code> parsed the eosl.date family tables, <code>deterministic-opengear</code> parsed the Opengear product tables and product catalogue. Each record page names its own.</dd></div>
+    <div><dt>Scope</dt><dd>One record per published source row: a model or model group from eosl.date, an Opengear product group whose part numbers are grouped rather than expanded into one record each, or one exact Opengear catalogue model string. Record counts are not device counts.</dd></div>
     <div><dt>JSON index</dt><dd><a href="{{ hardware_url }}">{{ site_url('v1/hardware.json') }}</a></dd></div>
+    <div><dt>Changes</dt><dd>{% if changes_available %}<a href="{{ changes_json_url }}">{{ site_url('v1/changes.json') }}</a> · <a href="{{ changes_atom_url }}">{{ site_url('v1/changes.atom') }}</a>{% else %}No changes ledger is committed for this build.{% endif %}</dd></div>
     <div><dt>Schema</dt><dd><a href="{{ site_url('v1/schema/hardware.json') }}">v1/schema/hardware.json</a></dd></div>
   </dl>
   <p class="panel-note">

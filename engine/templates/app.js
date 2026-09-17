@@ -96,7 +96,8 @@
 /* Hardware catalog search/filter progressive enhancement.
    Same contract as the software list: the full catalog is server-rendered and
    this only narrows what is shown. The vendor chip row is a second control for
-   the vendor select, kept in sync with it. */
+   the vendor select, and the catalog chip row a second control for the catalog
+   select, each kept in sync with its select. */
 (function () {
   "use strict";
 
@@ -107,11 +108,14 @@
   var query = document.getElementById("hw-filter-q");
   var vendor = document.getElementById("hw-filter-vendor");
   var status = document.getElementById("hw-filter-status");
+  var catalog = document.getElementById("hw-filter-catalog");
   var sort = document.getElementById("hw-filter-sort");
   var count = document.getElementById("hardware-result-count");
   var empty = document.getElementById("hw-no-results");
-  var chips = Array.prototype.slice.call(
+  var vendorChips = Array.prototype.slice.call(
     document.querySelectorAll("#hardware-vendor-chips .chip"));
+  var catalogChips = Array.prototype.slice.call(
+    document.querySelectorAll("#hardware-catalog-chips .chip"));
 
   var rows = Array.prototype.slice.call(body.querySelectorAll(".hardware-row"));
   var total = rows.length;
@@ -123,10 +127,17 @@
     return n + " " + word + (n === 1 ? "" : "s");
   }
 
-  function matches(row, text, vendorValue, statusValue) {
+  function matches(row, text, vendorValue, statusValue, catalogValue) {
     if (text && row.dataset.search.indexOf(text) === -1) return false;
     if (vendorValue && row.dataset.vendor !== vendorValue) return false;
     if (statusValue && row.dataset.status !== statusValue) return false;
+    if (catalogValue === "lifecycle-row") {
+      // A lifecycle row is one with no catalog state of its own: notice-table
+      // records, which carry dates rather than a listing.
+      if (row.dataset.catalog) return false;
+    } else if (catalogValue && row.dataset.catalog !== catalogValue) {
+      return false;
+    }
     return true;
   }
 
@@ -140,8 +151,15 @@
       };
     }
     if (value === "status") {
+      // Records with no status of their own sort last: the unknown key is
+      // deliberately outside the documented status order.
       return function (a, b) {
         return Number(a.dataset.statusOrder) - Number(b.dataset.statusOrder) || byName(a, b);
+      };
+    }
+    if (value === "catalog") {
+      return function (a, b) {
+        return Number(a.dataset.catalogOrder) - Number(b.dataset.catalogOrder) || byName(a, b);
       };
     }
     if (value === "eol") {
@@ -155,9 +173,9 @@
     return byName;
   }
 
-  function syncChips() {
+  function syncChips(chips, control, key) {
     chips.forEach(function (chip) {
-      var active = chip.dataset.vendor === vendor.value;
+      var active = chip.dataset[key] === control.value;
       chip.classList.toggle("is-active", active);
       chip.setAttribute("aria-pressed", active ? "true" : "false");
     });
@@ -171,10 +189,11 @@
     var text = (query.value || "").trim().toLowerCase();
     var vendorValue = vendor.value;
     var statusValue = status.value;
+    var catalogValue = catalog ? catalog.value : "";
     var shown = 0;
 
     rows.forEach(function (row) {
-      var matched = matches(row, text, vendorValue, statusValue);
+      var matched = matches(row, text, vendorValue, statusValue, catalogValue);
       row.hidden = !matched;
       if (matched) shown += 1;
     });
@@ -193,18 +212,26 @@
         : plural(total, "hardware record");
     }
     if (empty) empty.hidden = shown !== 0;
-    syncChips();
+    syncChips(vendorChips, vendor, "vendor");
+    if (catalog) syncChips(catalogChips, catalog, "catalog");
     if (form) {
-      var activeFilters = [query.value, vendorValue, statusValue].filter(Boolean).length;
+      var activeFilters = [query.value, vendorValue, statusValue, catalogValue].filter(Boolean).length;
       form.dataset.filtered = activeFilters ? "true" : "false";
     }
   }
 
   var fragment = document.createDocumentFragment();
 
-  chips.forEach(function (chip) {
+  vendorChips.forEach(function (chip) {
     chip.addEventListener("click", function () {
       vendor.value = vendor.value === chip.dataset.vendor ? "" : chip.dataset.vendor;
+      apply(false);
+    });
+  });
+  catalogChips.forEach(function (chip) {
+    chip.addEventListener("click", function () {
+      if (!catalog) return;
+      catalog.value = catalog.value === chip.dataset.catalog ? "" : chip.dataset.catalog;
       apply(false);
     });
   });

@@ -6,10 +6,12 @@
   <p class="lead">
     General availability, end of sale, end of security support and end of life for
     {{ plural(product_count, 'software product') }} — {{ release_count }} releases — alongside
-    {{ plural(hardware_count, 'hardware record') }} across {{ plural(hardware_vendors|length, 'vendor') }}, each one a
-    published model or product group carrying the milestones its own source states.
-    Software is normalized from endoflife.date; hardware records come from eosl.date and from
-    <a href="https://opengear.com/end-life-products" rel="noopener">Opengear's end-of-life product list</a>.
+    {{ plural(hardware_count, 'hardware record') }} across {{ plural(hardware_vendors|length, 'vendor') }}: vendor
+    lifecycle rows that carry the milestones their source states, and exact vendor catalogue models that carry a
+    listing state instead of a support claim.
+    Software is normalized from endoflife.date; hardware records come from eosl.date, from
+    <a href="https://opengear.com/end-life-products" rel="noopener">Opengear's end-of-life product list</a>, and from
+    <a href="{{ catalog_source_site }}" rel="noopener">Opengear's product catalogue</a>.
     Every date carries the record it came from; nothing here is estimated.
   </p>
   <div class="hero-stats">
@@ -23,7 +25,7 @@
     Last refresh <time datetime="{{ refresh.iso }}">{{ refresh.human }}</time>.
     The {{ plural(excluded_count, 'hardware product') }} endoflife.date lists outside its own software catalog stay
     excluded here and are named in the manifest; the hardware records below are those eosl.date publishes a vendor
-    lifecycle date for, plus Opengear's own product groups.
+    lifecycle date for, plus Opengear's own lifecycle rows and the exact models its product catalogue lists.
   </p>
 </section>
 
@@ -150,10 +152,11 @@
       {% include "_hardware_table.html" %}
       <p class="panel-note">
         These {{ hardware_count }} records are also the whole hardware catalog:
-        <a href="{{ url_for('hardware/') }}">the dedicated hardware page</a> carries the same rows with vendor and
-        status grouping, and <a href="{{ hardware_url }}">v1/hardware.json</a> carries one summary per record. A record
-        is one published source row — for Opengear, a product group whose part numbers are grouped rather than listed
-        separately.
+        <a href="{{ url_for('hardware/') }}">the dedicated hardware page</a> carries the same rows with vendor,
+        status and catalog-state grouping, the milestone coverage and the import report behind it, and
+        <a href="{{ hardware_url }}">v1/hardware.json</a> carries one summary per record. A record is one published
+        source row: for Opengear, either a lifecycle row whose part numbers are grouped rather than listed separately,
+        or one exact model string the vendor's product catalogue lists. Record counts are not device or SKU counts.
       </p>
     </div>
   </div>
@@ -168,7 +171,11 @@
   <ul class="endpoints">
     <li><a href="{{ feed_url }}"><code>v1/feed.json</code></a><span>Full normalized software catalog: every field, every release, one versioned document.</span></li>
     <li><a href="{{ products_url }}"><code>v1/products.json</code></a><span>Software summaries with counts and the absolute URL of each product endpoint.</span></li>
-    <li><a href="{{ hardware_url }}"><code>v1/hardware.json</code></a><span>Hardware summaries: vendor, status, milestone coverage and the absolute URL of each record's endpoint.</span></li>
+    <li><a href="{{ hardware_url }}"><code>v1/hardware.json</code></a><span>Hardware summaries: vendor, status, catalog state, milestone coverage and the absolute URL of each record's endpoint.</span></li>
+    {% if changes_available %}
+    <li><a href="{{ changes_json_url }}"><code>v1/changes.json</code></a><span>Ledger of what changed between refreshes — announcements appearing, dates moving, catalog models added or removed.</span></li>
+    <li><a href="{{ changes_atom_url }}"><code>v1/changes.atom</code></a><span>The same ledger as an Atom feed. The deadline feeds stay separate: they syndicate upcoming dates, not catalog differences.</span></li>
+    {% endif %}
     <li><a href="{{ url_for('v1/schema/product.json') }}"><code>v1/schema/product.json</code></a><span>JSON Schema for a single software product record.</span></li>
     <li><a href="{{ url_for('v1/schema/hardware.json') }}"><code>v1/schema/hardware.json</code></a><span>JSON Schema for a single hardware record — one model or product group.</span></li>
     <li><a href="{{ url_for('api/') }}"><code>api/</code></a><span>Endpoint examples and the exact upstream mapping rules.</span></li>

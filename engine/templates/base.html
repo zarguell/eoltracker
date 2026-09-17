@@ -63,6 +63,10 @@
         <li><a href="{{ url_for('v1/feed.json') }}">Feed (JSON)</a></li>
         <li><a href="{{ url_for('v1/products.json') }}">Product summaries</a></li>
         <li><a href="{{ url_for('v1/hardware.json') }}">Hardware summaries</a></li>
+        {% if changes_available %}
+        <li><a href="{{ changes_atom_url }}">Changes (Atom)</a></li>
+        <li><a href="{{ changes_json_url }}">Changes (JSON)</a></li>
+        {% endif %}
         <li><a href="{{ url_for('hardware/') }}">Hardware catalog</a></li>
         <li><a href="{{ url_for('api/') }}">Endpoints &amp; mapping</a></li>
         <li><a href="{{ url_for('v1/schema/product.json') }}">Record schema</a></li>

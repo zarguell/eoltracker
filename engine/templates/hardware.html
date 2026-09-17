@@ -8,33 +8,137 @@
   </ol>
 </nav>
 
+{% set is_catalog = identity.catalog is not none %}
 <section class="hero product-hero">
-  <p class="eyebrow">{{ model.vendor }} · {{ model.category }}</p>
+  <p class="eyebrow">{{ model.vendor }} · {{ model.category }}{% if is_catalog %} · vendor catalog model{% elif model.family %} · {{ model.family }} row{% endif %}</p>
   <h1 class="page-title">{{ model.name }}</h1>
   <p class="lead">
+    {% if is_catalog %}
+    One exact model string from the
+    <a href="{{ catalog_source_site }}" rel="noopener">{{ catalog_source_name }}</a> — the vendor's own product
+    catalogue, not a lifecycle notice. Identifier for this record: <code>{{ model.id }}</code>, which does not change
+    when a notice later names the model.
+    {% else %}
     Lifecycle dates for this {{ model.product_line }} model or product group, read from
     <a href="{{ hardware_source_site }}" rel="noopener">{{ hardware_source_name }}</a>, with each normalized milestone
     and the raw upstream values behind it. Identifier for this record: <code>{{ model.id }}</code>.
+    {% endif %}
   </p>
   <p class="hero-meta">
-    Status <strong>{{ model.status }}</strong> (source row status, or published support deadline for Opengear).
+    {% if is_catalog %}
+    Catalog state <strong>{{ identity.listing.label }}</strong> · <strong>{{ identity.notice.label }}</strong>.
+    This record carries no support status of its own: the catalogue listing is not an entitlement, and its absence from
+    a later catalogue is not an end-of-sale or end-of-support announcement.
     Verified {{ human_datetime(model.provenance.last_checked) }} by <code>{{ model.provenance.verifier }}</code>.
+    {% else %}
+    Status <strong>{{ model.status }}</strong>{% if model.status == 'unknown' %} (no support deadline and no matching notice, so no support claim is published either way){% else %} (source row status, or published support deadline for Opengear){% endif %}.
+    Verified {{ human_datetime(model.provenance.last_checked) }} by <code>{{ model.provenance.verifier }}</code>.
+    {% endif %}
     Last catalog refresh <time datetime="{{ refresh.iso }}">{{ refresh.human }}</time>.
   </p>
   <p class="product-links">
     <a class="button" href="{{ json_url }}">JSON record</a>
     {% for url in upstream_urls %}
-    <a class="button" href="{{ url }}" rel="noopener">Source on {{ hardware_source_name }}</a>
+    <a class="button" href="{{ url }}" rel="noopener">Source on {{ url.split('/')[2] }}</a>
     {% endfor %}
     <a class="button" href="{{ url_for('hardware/') }}">All hardware</a>
   </p>
 </section>
 
+{% if is_catalog %}
+<section class="panel" aria-labelledby="catalog-title">
+  <h2 class="panel-title" id="catalog-title">Catalog listing and vendor notices</h2>
+  <p class="panel-note">
+    Listing and support are two different facts, so they are stated separately. This record exists because the vendor
+    catalogue published the model string <code>{{ model.model_number }}</code>; the catalogue is read from
+    <a href="{{ catalog_source_site }}" rel="noopener">{{ catalog_source_site }}</a>. Nothing on this page treats a
+    listing as support, and nothing treats a listing's disappearance as an end of support.
+  </p>
+  <dl class="facts">
+    <div>
+      <dt>Catalog state</dt>
+      <dd>
+        <span class="tag{% if identity.listed %} tag-listed{% else %} tag-absent{% endif %}">{{ identity.listing.label }}</span>
+        — {{ identity.listing.detail }}
+      </dd>
+    </div>
+    <div>
+      <dt>Capture history</dt>
+      <dd>
+        {% if identity.listed %}
+        Listed in the catalogue read for this build. This record survives a later disappearance: it is never renamed
+        and never deleted when the catalogue stops listing the model.
+        {% else %}
+        Captured while listed, and not in the current catalogue. Its raw evidence is unchanged; only the listing state
+        moved, and no date was invented to explain the absence.
+        {% endif %}
+      </dd>
+    </div>
+    <div>
+      <dt>Notice match</dt>
+      <dd>
+        <span class="tag{% if identity.matched %} tag-listed{% else %} tag-neutral{% endif %}">{{ identity.notice.label }}</span>
+        — {{ identity.notice.detail }}
+      </dd>
+    </div>
+    <div>
+      <dt>Matching scope</dt>
+      <dd>
+        Matching is exact model-string equality against the <code>Part #</code> scope a notice publishes — never the
+        replacement-product column, never a substring and never a product family. A revision-only notice
+        (<code>Old Part / Rev #</code>) names a revision rather than a whole model, so it never counts as a notice for
+        this record.
+      </dd>
+    </div>
+    {% if model.provenance.source_urls|select('equalto', catalog_source_site)|list %}
+    <div><dt>Catalog source</dt><dd><a href="{{ catalog_source_site }}" rel="noopener">{{ catalog_source_site }}</a></dd></div>
+    {% endif %}
+  </dl>
+
+  <h3 class="sub-title">Lifecycle notices naming this exact model</h3>
+  {% if exact_matches %}
+  <p class="panel-note">
+    Each notice below matched this record's exact model string. The notices' own dates, scope and contract exceptions
+    live on the linked record — this page does not restate them and does not widen them to the whole catalogue.
+  </p>
+  <ul class="events">
+    {% for match in exact_matches %}
+    <li>
+      <a href="{{ match.url }}">{{ match.name }}</a>
+      <span class="tag">{{ match.family }} record</span>
+      <span class="tag{% if match.status == 'eol' %} tag-warn{% elif match.status == 'unknown' %} tag-neutral{% endif %}">{{ match.status }}</span>
+      <span class="muted">linked record <code>{{ match.id }}</code></span>
+      — <a href="{{ match.json }}">JSON</a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% elif unresolved_matches %}
+  <p class="panel-note">
+    The ledger names {{ plural(unresolved_matches|length, 'record') }} that is not published in this build
+    ({% for rid in unresolved_matches %}<code>{{ rid }}</code>{% if not loop.last %}, {% endif %}{% endfor %}). No
+    support claim is derived from a link that cannot be shown.
+  </p>
+  {% else %}
+  <p class="panel-note">
+    No lifecycle notice resolves to this exact model, so no support end is known for it and none is printed. That is an
+    absence of an announcement, not a claim that the model is current or supported: the vendor catalogue listing above
+    says which models the vendor still offers, and it is not an entitlement.
+  </p>
+  {% endif %}
+</section>
+{% endif %}
+
 <section class="panel" aria-labelledby="milestones-title">
   <h2 class="panel-title" id="milestones-title">Milestones</h2>
   <p class="panel-note">
+    {% if is_catalog %}
+    This record is a catalogue listing, so the milestone table below shows the value the record actually carries —
+    nothing. A blank here means no notice for this exact model has been read, never that a date was estimated. Where a
+    notice does name the model, its dates are on the linked record above.
+    {% else %}
     Normalized dates, with the raw upstream value when the two differ. An unknown milestone is an absent upstream
     value, never an inferred one.
+    {% endif %}
   </p>
   <div class="table-scroll">
     <table class="release-table">
@@ -78,7 +182,20 @@
     {% endfor %}
     <div class="legend-row">
       <dt>Unknown date</dt>
-      <dd><p>{{ hardware_source_name }} publishes no value for that milestone. A missing date is an absent announcement, not a claim that support ends or continues.</p></dd>
+      <dd>
+        <p>
+          {% if is_catalog %}
+          No lifecycle notice for this exact model published a value for that milestone. The catalogue listing is not a
+          substitute: it states that the vendor lists the model, not that support continues or ends.
+          {% elif model.status == 'unknown' %}
+          The record's source publishes no value for that milestone, which is why its status is shown as unknown. A
+          missing date is an absent announcement, not a claim that support ends or continues.
+          {% else %}
+          {{ hardware_source_name }} publishes no value for that milestone. A missing date is an absent announcement,
+          not a claim that support ends or continues.
+          {% endif %}
+        </p>
+      </dd>
     </div>
   </dl>
 </section>
@@ -88,14 +205,60 @@
   <dl class="facts">
     <div><dt>Vendor</dt><dd>{{ model.vendor }}</dd></div>
     <div><dt>Product line</dt><dd>{{ model.product_line }}</dd></div>
-    <div><dt>Family</dt><dd>{% if model.family %}{{ model.family }}{% else %}not published{% endif %}</dd></div>
-    <div><dt>Model number</dt><dd>{% if model.model_number %}<code>{{ model.model_number }}</code>{% else %}not published{% endif %}</dd></div>
-    <div><dt>Status</dt><dd>{{ model.status }} — source row status, or Opengear deadline relative to import date; individual contract exceptions may apply.</dd></div>
+    <div><dt>Record type</dt><dd>{% if is_catalog %}Catalog model — one exact vendor model string, one record.{% else %}Lifecycle row — one published row of a vendor notice table, which may group several part numbers or revisions.{% endif %}</dd></div>
+    <div><dt>Family</dt><dd>{% if model.family %}{{ model.family }}{% else %}not published{% endif %}{% if is_catalog %} (a catalogue record, never a lifecycle group){% endif %}</dd></div>
+    <div><dt>Model number</dt><dd>{% if model.model_number %}<code>{{ model.model_number }}</code>{% else %}not published{% endif %}{% if is_catalog %} — the vendor's own model string, reproduced exactly and never split, reordered or title-cased.{% endif %}</dd></div>
+    <div>
+      <dt>Status</dt>
+      <dd>
+        {% if is_catalog %}
+        No support status is published for this record. It is a catalogue listing; the standing of the model is whatever
+        a notice for it says, and none is inferred here.
+        {% elif model.status == 'unknown' %}
+        {{ model.status }} —
+        {% if is_catalog %}no notice for this exact model is published, so no support end is known and none is
+        inferred.{% else %}the source publishes no support deadline for this record, so it is shown as neutral and
+        claims neither support nor its end.{% endif %}
+        {% else %}
+        {{ model.status }} — source row status, or Opengear deadline relative to import date; individual contract
+        exceptions may apply.
+        {% endif %}
+      </dd>
+    </div>
     <div><dt>Verifier</dt><dd><code>{{ model.provenance.verifier }}</code></dd></div>
     <div><dt>Last checked</dt><dd>{{ human_datetime(model.provenance.last_checked) }}</dd></div>
     <div><dt>JSON record</dt><dd><a href="{{ json_abs }}">{{ json_abs }}</a></dd></div>
     <div><dt>Schema</dt><dd><a href="{{ site_url('v1/schema/hardware.json') }}">v1/schema/hardware.json</a></dd></div>
+    {% if is_catalog %}
+    <div><dt>Catalog fields</dt><dd><code>catalog.listed</code>, <code>catalog.source_url</code>, <code>lifecycle.listed</code>, <code>lifecycle.matches</code> — optional fields, present on this record because it is an exact catalogue model.</dd></div>
+    {% endif %}
   </dl>
+
+  {% if claimed_by %}
+  <h3 class="sub-title">Catalog records whose notices resolve to this row</h3>
+  <p class="panel-note">
+    These exact catalogue models matched this row's notice scope. The row keeps its own dates and its own part
+    grouping; a match is a link between records, not a redistribution of dates.
+  </p>
+  <ul class="chips">
+    {% for link in claimed_by %}
+    <li><a href="{{ link.url }}">{{ link.name }}</a> <code>{{ link.sku }}</code>{% if not link.listed %} <span class="tag tag-absent">absent from latest catalog</span>{% endif %}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  {% if shared_models %}
+  <h3 class="sub-title">Model strings published by more than one row</h3>
+  <p class="panel-note">
+    These model strings are published by more than one lifecycle row, so which row's dates would apply is a judgement
+    rather than a reading of the source. Both rows are named and neither is treated as the answer.
+  </p>
+  <ul class="chips">
+    {% for shared in shared_models %}
+    <li><code>{{ shared.model }}</code> — {% for name in shared.names %}{{ name }}{% if not loop.last %}, {% endif %}{% endfor %}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
 
   <h3 class="sub-title">Source pages</h3>
   <ul class="chips">
@@ -117,7 +280,7 @@
     <table class="release-table">
       <caption class="sr-only">Raw upstream cells for {{ model.name }}</caption>
       <thead>
-        <tr><th scope="col">Column</th><th scope="col">Text</th><th scope="col">Date value</th><th scope="col">Role</th></tr>
+        <tr><th scope="col">Column</th><th scope="col">Text</th><th scope="col">Date value</th><th scope="col">Role</th><th scope="col">Links published in the cell</th></tr>
       </thead>
       <tbody>
         {% for entry in rows.raw %}
@@ -128,6 +291,13 @@
             {% if entry.value %}<time datetime="{{ entry.value }}">{{ entry.value }}</time>{% else %}<span class="unknown">none</span>{% endif %}
           </td>
           <td>{% if entry.role %}<span class="tag">{{ entry.role }}</span>{% else %}<span class="muted">not a milestone</span>{% endif %}</td>
+          <td class="milestone-raw">
+            {% if entry.links %}
+            {% for link in entry.links %}<a href="{{ link.url }}" rel="noopener">{{ link.label }}</a>{% if not loop.last %}<br>{% endif %}{% endfor %}
+            {% else %}
+            <span class="muted">none</span>
+            {% endif %}
+          </td>
         </tr>
         {% endfor %}
       </tbody>

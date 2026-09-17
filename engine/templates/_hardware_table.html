@@ -2,24 +2,47 @@
 
    Both pages carry the same element ids on purpose: app.js binds one filter
    script, and only one of these tables is ever on a page. The whole catalog is
-   server-rendered — filtering only narrows what is shown. #}
-{% set status_keys = hardware_status_meta|map(attribute='key')|list %}
+   server-rendered — filtering only narrows what is shown.
+
+   Two record shapes share this table. A lifecycle row is one row of a vendor
+   notice table, often grouping many part numbers into a single record. A
+   catalog record is one exact model string the vendor's configurator lists,
+   and it carries no support claim at all. The Catalog column states the
+   listing and notice facts; the Status column never upgrades a listing into a
+   support claim. #}
+{% set status_keys = hardware_status_order %}
 <div class="catalog-head">
   <h2 class="panel-title" id="{{ heading_id }}">{{ heading }}</h2>
   <p class="catalog-count" id="hardware-result-count" role="status">{{ plural(hardware_count, 'hardware record') }}</p>
 </div>
 <p class="panel-note catalog-note">
-  Each row below is one published record — a model or product group read from
-  <a href="{{ hardware_source_site }}" rel="noopener">{{ hardware_source_name }}</a>'s family tables, or from
-  <a href="https://opengear.com/end-life-products" rel="noopener">Opengear's own end-of-life product list</a>.
-  Vendor, product line and every date are taken from that record and mapped to
+  Each row below is one published record, not one device. Two kinds of record sit here.
+  <strong>Lifecycle rows</strong> come from
+  <a href="{{ hardware_source_site }}" rel="noopener">{{ hardware_source_name }}</a>'s family tables or from
+  <a href="https://opengear.com/end-life-products" rel="noopener">Opengear's end-of-life product list</a>; Opengear
+  groups several part numbers and product revisions into one of those rows, so a row can cover many part numbers.
+  <strong>Catalog records</strong> come from
+  <a href="{{ catalog_source_site }}" rel="noopener">{{ catalog_source_name }}</a> and are one exact vendor model
+  string each; a model's record keeps its identity even when a notice later names it. Counts here are record counts,
+  never a count of unique devices or SKUs.
+</p>
+<p class="panel-note catalog-note">
+  Vendor, product line and every date are taken from the record and mapped to
   {% for milestone in hardware_milestone_meta %}<abbr title="{{ milestone.label }}">{{ milestone.short }}</abbr> {{ milestone.label|lower }}{% if not loop.last %}, {% endif %}{% endfor %};
   the verifier named on each record's page says which pipeline read it.
   Neither source publishes a security-support deadline, so
   <abbr title="End of security support">EoSS</abbr> is unknown throughout, and Opengear publishes no release date, so
   <abbr title="General availability">GA</abbr> is unknown on its records too; a record's terminal support deadline is
-  its end of support. Opengear groups several part numbers into one product-group row and states contract exceptions in
-  its notes, so a row is not always a single model or SKU.
+  its end of support.
+</p>
+<p class="panel-note catalog-note">
+  The <strong>Catalog</strong> column is deliberately separate from support.
+  <em>Listed in vendor catalog</em> means the configurator lists the model today; it is not an entitlement, a support
+  commitment or a sale guarantee. <em>Previously listed; absent from latest catalog</em> means the record was captured
+  while listed and is gone from the current catalog — removal is not an end-of-sale or end-of-support announcement.
+  A <em>notice</em> tag means a published lifecycle notice names this exact model string; notices that only name a
+  revision or part order never appear there. A catalog record with neither a date nor a matching notice shows
+  <em>status unknown</em>, which claims nothing in either direction — it never reads as supported.
 </p>
 
 <form class="filters" id="hardware-filters" role="search" autocomplete="off">
@@ -46,11 +69,22 @@
     </select>
   </p>
   <p class="field">
+    <label for="hw-filter-catalog">Catalog and notice</label>
+    <select id="hw-filter-catalog" name="catalog">
+      <option value="">Any catalog state</option>
+      {% for state in catalog_states %}
+      <option value="{{ state.key }}">{{ state.listing.label }} · {{ state.notice.label }} ({{ catalog_state_counts[state.key] }})</option>
+      {% endfor %}
+      <option value="lifecycle-row">Lifecycle rows only (no catalog record)</option>
+    </select>
+  </p>
+  <p class="field">
     <label for="hw-filter-sort">Sort</label>
     <select id="hw-filter-sort" name="sort">
       <option value="name">Model (A–Z)</option>
       <option value="vendor">Vendor, then model</option>
       <option value="status">Status, then model</option>
+      <option value="catalog">Catalog state, then model</option>
       <option value="eol">End of support soonest</option>
     </select>
   </p>
@@ -70,6 +104,22 @@
   {% endfor %}
 </div>
 
+<div class="chips-filter" id="hardware-catalog-chips" role="group" aria-label="Filter by catalog state">
+  <button type="button" class="chip is-active" data-catalog="" aria-pressed="true">
+    Every catalog state <span class="chip-count">{{ hardware_count }}</span>
+  </button>
+  {% for state in catalog_states %}
+  <button type="button" class="chip" data-catalog="{{ state.key }}" aria-pressed="false"
+          title="{{ state.listing.detail }} {{ state.notice.detail }}">
+    {{ state.listing.label }} · {{ state.notice.label }} <span class="chip-count">{{ catalog_state_counts[state.key] }}</span>
+  </button>
+  {% endfor %}
+  <button type="button" class="chip" data-catalog="lifecycle-row" aria-pressed="false"
+          title="Notice-table records only: models and product groups read from a vendor lifecycle table.">
+    Lifecycle rows only <span class="chip-count">{{ catalog_state_counts['lifecycle-row'] }}</span>
+  </button>
+</div>
+
 <p class="no-results" id="hw-no-results" hidden>
   No hardware records match that search. Try a shorter model, product or vendor name, or clear the filters.
 </p>
@@ -77,15 +127,16 @@
 <div class="table-scroll">
   <table class="release-table hardware-table">
     <caption class="sr-only">
-      Lifecycle dates for each hardware model or product group. Rows marked supported, expiring or end of life follow
-      either the row status eosl.date publishes or, for Opengear records, that source's published support deadline
-      against the import date.
+      Lifecycle dates for each hardware record. A lifecycle row carries the row status its source publishes, or
+      Opengear's published support deadline against the import date. A catalog record carries the vendor
+      configurator's exact model string and states its listing and notice status instead of a support status.
     </caption>
     <thead>
       <tr>
         <th scope="col">Model or product group</th>
         <th scope="col">Vendor</th>
         <th scope="col">Product line</th>
+        <th scope="col">Catalog</th>
         <th scope="col">Status</th>
         {% for milestone in hardware_milestone_meta %}
         <th scope="col">{{ milestone.label }}</th>
@@ -94,11 +145,14 @@
     </thead>
     <tbody id="hardware-list">
       {% for model in hardware %}
-      <tr class="hardware-row"
+      <tr class="hardware-row hardware-row--{{ model.family or 'lifecycle' }}"
           data-search="{{ model.search }}"
           data-vendor="{{ model.vendor }}"
           data-status="{{ model.status }}"
-          data-status-order="{{ status_keys.index(model.status) }}"
+          data-status-order="{{ status_keys.index(model.status) if model.status in status_keys else status_keys|length }}"
+          data-family="{{ model.family or '' }}"
+          data-catalog="{{ model.catalog.state or '' }}"
+          data-catalog-order="{{ catalog_state_order[model.catalog.state] if model.catalog.state else catalog_state_order['lifecycle-row'] }}"
           data-coverage="{{ model.coverage|selectattr('known')|map(attribute='key')|join(' ') }}"
           data-eol="{{ model.milestones.eol or '' }}">
         <th scope="row" class="hardware-name">
@@ -108,10 +162,28 @@
         <td class="hardware-vendor">{{ model.vendor }}</td>
         <td class="hardware-line">
           {{ model.product_line }}
-          {% if model.family and model.family != model.product_line %}<span class="release-raw">{{ model.family }}</span>{% endif %}
+          {% if model.catalog.catalog %}<span class="release-raw">exact vendor model</span>
+          {% elif model.family %}<span class="release-raw">{{ model.family }} row</span>{% endif %}
+        </td>
+        <td class="hardware-catalog">
+          {% if model.catalog.catalog %}
+          {% if model.catalog.listed %}
+          <span class="tag tag-listed">listed in catalog</span>
+          {% else %}
+          <span class="tag tag-absent">absent from latest catalog</span>
+          {% endif %}
+          {% if model.catalog.matched %}
+          <span class="release-raw">notice names this exact model</span>
+          {% else %}
+          <span class="release-raw">no matching notice</span>
+          {% endif %}
+          {% else %}
+          <span class="muted">lifecycle row</span>
+          {% endif %}
         </td>
         <td class="hardware-status">
-          {% if model.status == 'eol' %}<span class="tag tag-warn">end of life</span>
+          {% if model.status == 'unknown' %}<span class="tag tag-neutral">status unknown</span>
+          {% elif model.status == 'eol' %}<span class="tag tag-warn">end of life</span>
           {% elif model.status == 'expiring' %}<span class="tag tag-warn">expiring</span>
           {% else %}<span class="tag tag-ok">supported</span>{% endif %}
         </td>
@@ -120,6 +192,8 @@
         <td class="milestone{% if not value %} is-unknown{% endif %}">
           {% if value %}
           <time datetime="{{ value }}">{{ human_date(value) }}</time>
+          {% elif model.catalog.catalog and milestone.key == 'eol' %}
+          <span class="unknown" title="No published lifecycle notice names this exact model, so no support end is known.">unknown</span>
           {% else %}
           <span class="unknown">unknown</span>
           {% endif %}
