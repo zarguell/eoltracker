@@ -48,6 +48,13 @@ NETSCALER_LEGACY = "https://www.citrix.com/support/product-lifecycle/legacy-prod
 CHECKPOINT_LIFECYCLE = "https://www.checkpoint.com/support-services/support-life-cycle-policy/"
 ODOO_SUPPORT = "https://www.odoo.com/documentation/master/administration/standard_extended_support.html"
 SAMBA_RELEASE_PLANNING = "https://wiki.samba.org/index.php/Samba_Release_Planning"
+CISCO_EOL_INDEX = "https://www.cisco.com/c/en/us/support/eol/index.html"
+CISCO_IOS_RELEASES = "https://www.cisco.com/c/en/us/products/ios-nx-os-software/ios-software-releases-listing.html"
+CISCO_NXOS_LIFECYCLE = "https://www.cisco.com/c/en/us/products/collateral/ios-nx-os-software/nx-os-software/guide_c07-658595.html"
+CISCO_ATTRIBUTION = ("Cisco IOS and NX-OS release-train lifecycle published directly by Cisco's "
+                     "end-of-sale/end-of-life listings and lifecycle support statements; dates carry "
+                     "the day precision Cisco states, and the terminal Last Date of Support is the "
+                     "stored end of life.")
 
 # Attribution is published text (the site and the API docs print it verbatim):
 # eosl.date states no license for the data it republishes, so it is cited;
@@ -287,6 +294,34 @@ SOURCES = (
                     "~-marked future dates are the vendor's own forecasts and never deadlines.",
         validator="engine.samba.validate_record",
         report="samba-import.json",
+    ),
+    Source(
+        id="import-cisco-ios",
+        module="engine.cisco_software",
+        entry="import_ios",
+        verifier="deterministic-cisco-ios",
+        category="software",
+        name="Cisco IOS",
+        url=CISCO_EOL_INDEX,
+        pages=(Page(CISCO_EOL_INDEX, "Cisco end-of-sale and end-of-life product listing"),
+               Page(CISCO_IOS_RELEASES, "Cisco IOS software releases"),
+               Page("https://www.cisco.com/c/en/us/support/ios-nx-os-software/", "Cisco IOS 15 software trains")),
+        attribution=CISCO_ATTRIBUTION,
+        validator="engine.cisco_software.validate_ios_record",
+        report="cisco-ios-import.json",
+    ),
+    Source(
+        id="import-cisco-nx-os",
+        module="engine.cisco_software",
+        entry="import_nx_os",
+        verifier="deterministic-cisco-nx-os",
+        category="software",
+        name="Cisco NX-OS",
+        url=CISCO_NXOS_LIFECYCLE,
+        pages=(Page(CISCO_NXOS_LIFECYCLE, "Cisco NX-OS software lifecycle support statement"),),
+        attribution=CISCO_ATTRIBUTION,
+        validator="engine.cisco_software.validate_nx_os_record",
+        report="cisco-nx-os-import.json",
     ),
 )
 
