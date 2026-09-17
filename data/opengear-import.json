@@ -1,25 +1,20 @@
 {
   "source_url": "https://opengear.com/end-life-products",
   "verifier": "deterministic-opengear",
-  "checked_at": "2026-09-17T16:37:11Z",
+  "checked_at": "2026-09-17T16:42:18Z",
   "record_scope": "Hardware lifecycle rows and part groups, not an exhaustive SKU inventory",
-  "imported_count": 41,
-  "excluded_count": 10,
+  "imported_count": 42,
+  "excluded_count": 9,
   "excluded": [
-    {
-      "product": "CMS6100",
-      "parts": "CMS6100-SAC",
-      "reason": "Software product in hardware table"
-    },
     {
       "product": "VCMS",
       "parts": "VCMS",
-      "reason": "Software product in hardware table"
+      "reason": "Software product (software appliance or utility), not hardware lifecycle scope"
     },
     {
       "product": "PortShare for Windows",
       "parts": "n/a",
-      "reason": "Software product in hardware table"
+      "reason": "Software product (software appliance or utility), not hardware lifecycle scope"
     },
     {
       "product": "IM7200 Infrastructure Manager",

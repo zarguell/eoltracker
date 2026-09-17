@@ -15,7 +15,7 @@ HEADERS = {
     "revision": ["Product", "Old Part / Rev #", "Old Part Sales End", "Old Part Support Ends", "New Part / Rev #", "Note"],
 }
 POLICY = "Published standard support deadline; Opengear honors active support agreements extending beyond End of Support through their contracted term. Grouped parts remain grouped; no individual entitlement is inferred."
-SOFTWARE = {"VCMS", "PortShare for Windows", "CMS6100"}
+SOFTWARE = {"VCMS", "PortShare for Windows"}
 
 
 class Tables(_Tables):
@@ -102,8 +102,11 @@ def parse_page(html, checked):
             parse_date(cells[2]["text"])
             end = parse_date(cells[3]["text"])
             if product in SOFTWARE or end is None:
-                excluded.append({"product": product, "parts": cells[1]["text"],
-                                 "reason": "Software product in hardware table" if product in SOFTWARE else "No explicit support deadline; status unknown"})
+                if product in SOFTWARE:
+                    reason = "Software product (software appliance or utility), not hardware lifecycle scope"
+                else:
+                    reason = "No explicit support deadline; status unknown"
+                excluded.append({"product": product, "parts": cells[1]["text"], "reason": reason})
                 continue
             record = make_record(section, cells, checked)
             if record["id"] in seen:
