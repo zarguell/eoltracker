@@ -3,3 +3,7 @@ __pycache__/
 *.pyc
 _site/
 .DS_Store
+# Reviewed, installable contributions live at the top of contributions/ and are
+# committed; the CLI reads exactly `contributions/*.json`. Work in progress
+# belongs in a subdirectory, which the CLI never reads and git never tracks.
+contributions/drafts/

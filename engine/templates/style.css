@@ -379,6 +379,37 @@ main { padding: 28px 0 56px; }
 .tag-neutral { background: var(--surface-2); border-color: var(--line); color: var(--fg-muted); }
 .tag-listed { background: var(--surface-2); border-color: var(--teal-600); color: var(--link); }
 .tag-absent { background: var(--surface-2); border-color: var(--line); color: var(--fg-muted); }
+/* Researched provenance: a citation, not a health state. It is styled to read
+   as a source note so it can never be mistaken for a deterministic status. */
+.tag-research { background: var(--surface-2); border-color: var(--teal-600); color: var(--link); }
+.research-head { margin: 0 0 14px; font-size: 0.92rem; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.banner {
+  margin: 0 0 16px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--fg-muted);
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+  font-size: 0.92rem;
+  color: var(--fg);
+}
+.banner-warn { border-left-color: var(--warn); background: var(--warn-bg); }
+.research-quote {
+  margin: 0 0 20px;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--teal-600);
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+  font-size: 0.96rem;
+  max-width: 82ch;
+}
+.research-quote p { margin: 0 0 10px; }
+.research-quote footer { font-size: 0.86rem; color: var(--fg-muted); overflow-wrap: anywhere; }
+.research-sources { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.research-sources > li { border-top: 1px solid var(--line-soft); padding-top: 12px; font-size: 0.92rem; }
+.research-sources > li:first-child { border-top: 0; padding-top: 0; }
+.research-sources .research-quote { margin: 8px 0 0; font-size: 0.9rem; }
 .muted { color: var(--fg-muted); font-size: 0.84rem; }
 
 .product-dates { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 14px; }

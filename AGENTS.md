@@ -37,6 +37,20 @@ authoritative technical brief; the [README](README.md) is the public overview.
    website, and feeds end to end before calling the integration complete.
    Explicitly report source limitations; never present partial coverage as
    complete merely because its parser and deployment succeed.
+8. **Deterministic first, researched second, invented never.** For every
+   product ask, in order: (a) does a deterministic pipeline cover it today?
+   If yes, extend that pipeline; a manual copy of what automation can fetch
+   rots silently. (b) If not, can a human or agent find an *authoritative
+   primary source* (vendor notice with an explicit date) whose exact quote
+   can be stored verbatim? A correct, manually contributed date with a
+   verifiable citation beats an absent one: users managing real fleets need
+   stable facts even when no pipeline can re-derive them. (c) Only when both
+   fail does the product stay absent. A researched contribution is never a
+   substitute for an existing deterministic source: it may not overwrite or
+   shadow a deterministic record, and its provenance must carry the verbatim
+   quote, source URL, contributor, and research date so staleness is visible.
+   When implementing any new coverage, name which tier (deterministic,
+   researched, absent) the source supports before writing code.
 
 ## Repository layout
 

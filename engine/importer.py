@@ -136,6 +136,18 @@ def import_data():
             "release_count": sum(len(r["releases"]) for r in records),
             "excluded_hardware": sorted(p["name"] for p in entries if p["category"] == "device"),
         })
+        # Researched records (AGENTS.md rule 8 tier b) are never in the upstream
+        # listing, so this refresh cannot re-derive them — but they are part of
+        # the catalog it must not break. Carrying the committed ones into the
+        # staged snapshot validates what is about to be published and keeps the
+        # refresh complete-or-nothing: an invalid one aborts the whole run
+        # instead of being dropped or silently overwritten.
+        committed = destination / "products"
+        for file in committed.glob("*.json") if committed.exists() else ():
+            if (staged / "products" / file.name).exists():
+                continue
+            if "research" in json.loads(file.read_text())["provenance"]:
+                shutil.copyfile(file, staged / "products" / file.name)
         validate_data(staged)
         destination.mkdir(exist_ok=True)
         products = destination / "products"

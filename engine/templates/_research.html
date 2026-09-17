@@ -1,0 +1,96 @@
+{# Researched provenance block, shared by the product and hardware pages.
+
+   A researched record has no pipeline behind it: the dates were read once from
+   a vendor notice and the sentence they came from is stored verbatim. The
+   block therefore shows the citation before the dates — the quote, the page it
+   was read from and who read it — and says so plainly when the reading has
+   aged past the review window instead of letting an old quote pass as fresh.
+
+   The staleness verdict comes from engine/contribute.py; this file only
+   renders it. #}
+<section class="panel research-panel" aria-labelledby="research-title">
+  <h2 class="panel-title" id="research-title">Research contribution</h2>
+  <p class="panel-note">
+    This record is not produced by a refreshable pipeline: no deterministic source publishes these dates, so they
+    were read once from the vendor notice quoted below and stored with the sentence they came from. The quote is the
+    evidence — every date on this page has to appear in it, or the contribution is rejected. Nothing here re-reads
+    the source, so the reading date below is what the record's freshness rests on.
+  </p>
+
+  <p class="research-head">
+    <span class="tag tag-research">Researched contribution</span>
+    <span>Contributed by <strong>{{ research.contributor }}</strong></span>
+    {% if research.retrieved_human %}<span>read <time datetime="{{ research.retrieved_at }}">{{ research.retrieved_human }}</time></span>{% endif %}
+    <span>{{ research.method }} research{% if research.method == 'manual' %}, transcribed by a person{% else %}, gathered by an agent{% endif %}</span>
+  </p>
+
+  {% if research.stale %}
+  <p class="banner banner-warn" role="status">
+    <strong>This reading may be out of date.</strong>
+    {% if 'stale_after' in research.stale_reasons %}
+    The review window this source states ended {{ research.stale_after_human }}.
+    {% endif %}
+    {% if 'age' in research.stale_reasons %}
+    It was last read {{ research.checked_human }}{% if research.age_days %} ({{ research.age_days }} days ago){% endif %},
+    past the {{ research.stale_days }}-day window this site treats as current.
+    {% endif %}
+    Verify the date against the linked notice before relying on it. The date below is still what the quoted source
+    says; it is the reading, not the date, that has aged.
+  </p>
+  {% endif %}
+
+  {% if not research.verified %}
+  <p class="banner" role="status">
+    The quote below was stored without re-fetching the source page, so it has not been checked against the live notice
+    since it was contributed. Treat the citation as the record of a reading, not as a live check.
+  </p>
+  {% endif %}
+
+  <h3 class="sub-title">Verbatim quote from the source</h3>
+  <blockquote class="research-quote" cite="{{ research.source_url }}">
+    <p>{{ research.quote }}</p>
+    <footer>
+      — <a href="{{ research.source_url }}" rel="noopener">{{ research.source_label or research.source_url }}</a>
+      {% if research.retrieved_human %}<span class="muted">read {{ research.retrieved_human }}</span>{% endif %}
+    </footer>
+  </blockquote>
+
+  <dl class="facts">
+    <div><dt>Contributor</dt><dd>{{ research.contributor }}</dd></div>
+    <div><dt>Research method</dt><dd>{{ research.method }}{% if research.method == 'manual' %} — a person read the notice and transcribed the quote{% else %} — the quote was gathered by an agent and stored verbatim{% endif %}.</dd></div>
+    <div><dt>Source</dt><dd><a href="{{ research.source_url }}" rel="noopener">{{ research.source_url }}</a></dd></div>
+    <div>
+      <dt>Research date</dt>
+      <dd>
+        {% if research.retrieved_human %}<time datetime="{{ research.retrieved_at }}">{{ research.retrieved_human }}</time>{% else %}not recorded{% endif %}
+        {% if research.verified_human %} · verified against the source {{ research.verified_human }}{% else %} · not re-verified against the source at install time{% endif %}
+      </dd>
+    </div>
+    <div>
+      <dt>Review window</dt>
+      <dd>
+        {% if research.stale_after_human %}
+        The source states this reading should be reviewed after <time datetime="{{ research.stale_after }}">{{ research.stale_after_human }}</time>.
+        {% else %}
+        No review window is stated by the source, so this site treats a reading older than {{ research.stale_days }} days
+        as due for review.
+        {% endif %}
+      </dd>
+    </div>
+    <div><dt>Verifier</dt><dd><code>{{ research.verifier }}</code> — researched record, not a deterministic pipeline.</dd></div>
+    <div><dt>Last checked</dt><dd>{{ research.checked_human }}</dd></div>
+  </dl>
+
+  {% if research.sources|length > 1 %}
+  <h3 class="sub-title">Evidence quoted for this record</h3>
+  <ul class="research-sources">
+    {% for source in research.sources %}
+    <li>
+      <a href="{{ source.source_url }}" rel="noopener">{{ source.source_label }}</a>
+      {% if source.retrieved_human %}<span class="muted">read {{ source.retrieved_human }}</span>{% endif %}
+      <blockquote class="research-quote">{{ source.quote }}</blockquote>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</section>

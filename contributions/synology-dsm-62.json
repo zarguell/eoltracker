@@ -1,0 +1,23 @@
+{
+  "target": "software",
+  "id": "researched-synology-dsm-6-2",
+  "name": "Synology DSM 6.2",
+  "vendor": "Synology",
+  "category": "os",
+  "summary": "DiskStation Manager 6.2 operating system for Synology NAS devices",
+  "identifiers": [{"type": "purl", "id": "pkg:generic/synology-dsm@6.2"}],
+  "links": [{"rel": "about", "href": "https://www.synology.com/en-global/dsm/6.2"}],
+  "milestones": {
+    "eol": "2024-10-01"
+  },
+  "evidence": [
+    {
+      "quote": "DSM 6.2 will reach the end of the Extended Life Phase on October 1, 2024. After which, DSM 6.2 and related packages or applications will no longer receive functionality, security, and package updates.",
+      "source_url": "https://www.synology.com/en-ca/products/status/eol-dsm62",
+      "retrieved_at": "2026-09-17",
+      "milestones": ["eol"]
+    }
+  ],
+  "contributor": "zarguell",
+  "notes": "Synology does not publish machine-readable lifecycle data; this one-time research fills a genuine catalog gap. DSM 7.x current versions remain covered upstream."
+}

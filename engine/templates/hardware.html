@@ -10,10 +10,14 @@
 
 {% set is_catalog = identity.is_catalog %}
 <section class="hero product-hero">
-  <p class="eyebrow">{{ model.vendor }} · {{ model.category }}{% if is_catalog %} · vendor catalog model{% elif model.family %} · {{ model.family }} row{% endif %}</p>
+  <p class="eyebrow">{{ model.vendor }} · {{ model.category }}{% if research %} · researched record{% elif is_catalog %} · vendor catalog model{% elif model.family %} · {{ model.family }} row{% endif %}</p>
   <h1 class="page-title">{{ model.name }}</h1>
   <p class="lead">
-    {% if is_catalog %}
+    {% if research %}
+    Lifecycle dates researched from the vendor notice quoted below, because no refreshable catalog publishes this
+    model's lifecycle. The quote is the evidence for every date here and is stored verbatim. Identifier for this
+    record: <code>{{ model.id }}</code>.
+    {% elif is_catalog %}
     One exact model string from the
     <a href="{{ catalog_source_site }}" rel="noopener">{{ catalog_source_name }}</a> — the vendor's own product
     catalogue, not a lifecycle notice. Identifier for this record: <code>{{ model.id }}</code>, which does not change
@@ -25,7 +29,12 @@
     {% endif %}
   </p>
   <p class="hero-meta">
-    {% if is_catalog %}
+    {% if research %}
+    Status <strong>{{ model.status }}</strong> — researched, so the dates rest on the quoted notice rather than on a
+    pipeline that re-reads the vendor. Reading contributed {{ research.retrieved_human }} by
+    <strong>{{ research.contributor }}</strong>, verified in the catalog by
+    <code>{{ model.provenance.verifier }}</code> on {{ research.checked_human }}.
+    {% elif is_catalog %}
     Catalog state <strong>{% if identity.listing %}{{ identity.listing.label }}{% else %}listing not stated{% endif %}</strong>
     · <strong>{{ identity.notice.label }}</strong>.
     This record carries no support status of its own: the catalogue listing is not an entitlement, and its absence from
@@ -39,12 +48,19 @@
   </p>
   <p class="product-links">
     <a class="button" href="{{ json_url }}">JSON record</a>
-    {% for url in upstream_urls %}
-    <a class="button" href="{{ url }}" rel="noopener">Source on {{ url.split('/')[2] }}</a>
+    {% if research %}
+    <a class="button" href="{{ research.source_url }}" rel="noopener">Source: {{ research.source_label }}</a>
+    {% else %}
+    {% for link in upstream_links %}
+    <a class="button" href="{{ link.url }}" rel="noopener">Source: {{ link.label }}</a>
     {% endfor %}
+    {% endif %}
     <a class="button" href="{{ url_for('hardware/') }}">All hardware</a>
   </p>
 </section>
+{% if research %}
+{% include "_research.html" %}
+{% endif %}
 
 {% if is_catalog %}
 <section class="panel" aria-labelledby="catalog-title">
@@ -123,7 +139,8 @@
   </ul>
   {% elif unresolved_matches %}
   <p class="panel-note">
-    The ledger names {{ plural(unresolved_matches|length, 'record') }} that is not published in this build
+    The ledger resolves this record to {{ plural(unresolved_matches|length, 'record') }} that
+    {{ 'is' if unresolved_matches|length == 1 else 'are' }} not published in this build
     ({% for rid in unresolved_matches %}<code>{{ rid }}</code>{% if not loop.last %}, {% endif %}{% endfor %}). No
     support claim is derived from a link that cannot be shown.
   </p>
@@ -172,6 +189,8 @@
             {% set sources = rows.raw|selectattr('role', 'equalto', milestone.key)|list %}
             {% if sources %}
             {% for entry in sources %}<code>{{ entry.column }}</code> {{ entry.text or '—' }}{% endfor %}
+            {% elif research %}
+            <span class="muted">stated in the quoted notice above; no scraped column carries it</span>
             {% else %}
             <span class="muted">no upstream column maps to this milestone</span>
             {% endif %}
@@ -196,6 +215,9 @@
           {% if is_catalog %}
           No lifecycle notice for this exact model published a value for that milestone. The catalogue listing is not a
           substitute: it states that the vendor lists the model, not that support continues or ends.
+          {% elif research %}
+          The quoted notice above states no such date, and no other date was derived from it. A missing date is an
+          absent announcement, not a claim that support ends or continues.
           {% elif model.status == 'unknown' %}
           The record's source publishes no value for that milestone, which is why its status is shown as unknown. A
           missing date is an absent announcement, not a claim that support ends or continues.
@@ -271,7 +293,7 @@
 
   <h3 class="sub-title">Source pages</h3>
   <ul class="chips">
-    {% for url in upstream_urls %}<li><a href="{{ url }}" rel="noopener">{{ url }}</a></li>{% endfor %}
+    {% for link in upstream_links %}<li><a href="{{ link.url }}" rel="noopener">{{ link.label }}</a> <span class="muted">{{ link.url }}</span></li>{% endfor %}
   </ul>
   <p class="panel-note">
     {{ hardware_source_attribution }} Source material is attributed, not relicensed; this page and its JSON record

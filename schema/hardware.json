@@ -2,6 +2,118 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
   "title": "EOL Tracker normalized hardware record (not OpenEoX Core)",
+  "$defs": {
+    "research": {
+      "description": "One-time researched provenance (AGENTS.md rule 8 tier b). Present only on records a human or agent contributed for a model no deterministic source covers; absent on every record an importer owns. The quote is the vendor sentence, stored verbatim with normalized whitespace, that states the dates beside it.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "quote",
+        "source_url",
+        "retrieved_at",
+        "contributor",
+        "method",
+        "verified_at",
+        "stale_after",
+        "evidence"
+      ],
+      "properties": {
+        "quote": {
+          "type": "string",
+          "minLength": 20
+        },
+        "source_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "retrieved_at": {
+          "type": "string",
+          "format": "date"
+        },
+        "contributor": {
+          "type": "string",
+          "minLength": 1
+        },
+        "method": {
+          "enum": [
+            "manual",
+            "agent"
+          ]
+        },
+        "verified_at": {
+          "description": "When the quote was last confirmed against source_url. null means the evidence was admitted from store only and has never been refetched.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "stale_after": {
+          "description": "Explicit review deadline, when the contributor set one. Null falls back to the 180-day freshness horizon on the record's last_checked.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "evidence": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/evidence"
+          }
+        },
+        "vendor": {
+          "type": "string",
+          "minLength": 1
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "evidence": {
+      "description": "One stored verbatim quote and the page it came from. Every milestone the record states must appear, at the same day precision, in a quote that backs it.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "quote",
+        "source_url",
+        "retrieved_at"
+      ],
+      "properties": {
+        "quote": {
+          "type": "string",
+          "minLength": 20
+        },
+        "source_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "retrieved_at": {
+          "type": "string",
+          "format": "date"
+        },
+        "milestones": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "enum": [
+              "ga",
+              "eos",
+              "eossec",
+              "eol"
+            ]
+          }
+        }
+      }
+    }
+  },
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -105,11 +217,26 @@
           "items": {"type": "string", "format": "uri"}
         },
         "verifier": {
-          "enum": ["deterministic-eosl-date", "deterministic-opengear"]
+          "description": "The pipeline that owns this record: a deterministic collector's fixed id, or researched-<contributor-slug> for a one-time researched contribution.",
+          "anyOf": [
+            {
+              "enum": [
+                "deterministic-eosl-date",
+                "deterministic-opengear"
+              ]
+            },
+            {
+              "type": "string",
+              "pattern": "^researched-[a-z0-9]+(?:-[a-z0-9]+)*$"
+            }
+          ]
         },
         "last_checked": {
           "type": "string",
           "format": "date-time"
+        },
+        "research": {
+          "$ref": "#/$defs/research"
         }
       }
     }

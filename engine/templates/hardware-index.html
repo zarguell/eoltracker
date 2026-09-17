@@ -31,8 +31,10 @@
   </div>
   <p class="hero-meta">
     Last refresh <time datetime="{{ refresh.iso }}">{{ refresh.human }}</time>.
-    Verified per record by <code>deterministic-eosl-date</code> or <code>deterministic-opengear</code>. Every record's
-    page links the exact page it was read from.
+    Verified per record by <code>deterministic-eosl-date</code> or <code>deterministic-opengear</code>, or by
+    <code>researched-&lt;contributor&gt;</code> for a record whose dates came from a quoted vendor notice
+    {% if researched_hardware_count %}({{ plural(researched_hardware_count, 'record') }} here){% endif %}.
+    Every record's page links the exact page it was read from.
   </p>
 </section>
 
@@ -143,7 +145,8 @@
       <dd>
         {{ import_report.lifecycle.rows }} notice rows read; {{ import_report.lifecycle.published_records }} became
         records, of which {{ import_report.lifecycle.dated_records }} carry a published support deadline and
-        {{ import_report.lifecycle.unknown_date_records }} are announced retirements with no published deadline.
+        {{ plural(import_report.lifecycle.unknown_date_records, 'record') }} {{ 'is an announced retirement' if import_report.lifecycle.unknown_date_records == 1 else 'are announced retirements' }}
+        with no published deadline.
         {{ import_report.lifecycle.excluded_rows }} rows were excluded.
         {% if import_report.lifecycle.retained_absent %}
         {{ import_report.lifecycle.retained_absent|length }} previously published
@@ -179,9 +182,9 @@
       <dd>
         The configurator was read for {{ import_report.catalog.expected_models }} exact model strings;
         {{ import_report.catalog.listed }} are currently listed.
-        {{ import_report.catalog.matched_lifecycle }} match a published lifecycle notice on exact model string, and
-        {{ import_report.catalog.unmatched_lifecycle }} do not — for those, no support end is published anywhere in the
-        sources read, and none is inferred.
+        {{ import_report.catalog.matched_lifecycle }} name a published lifecycle notice on exact model string, and
+        {{ import_report.catalog.unmatched_lifecycle }} name none — for those, no support end is published anywhere in
+        the sources read, and none is inferred.
         {% if import_report.catalog.retained_unlisted %}
         {{ import_report.catalog.retained_unlisted }} previously listed models are retained with
         <code>catalog.listed: false</code>; removal from a catalogue is not an end of sale or an end of support.
@@ -200,14 +203,15 @@
     </div>
     {% endif %}
     {% endif %}
-    {% if import_report.record_counts %}
+    {% if import_report and import_report.record_counts %}
     <div>
       <dt>Records by family</dt>
       <dd>
-        {% for family, count in import_report.record_counts.items() %}{% if family not in ('added', 'retained', 'status_unknown') %}<span class="tag">{{ family }}</span> {{ count }}{% if not loop.last %}, {% endif %}{% endif %}{% endfor %}.
+        {% for row in report_families %}<span class="tag">{{ row.family }}</span> {{ row.count }}{% if not loop.last %}, {% endif %}{% endfor %}
+        — the family each record was written under, which is not a device count.
         {{ import_report.record_counts.status_unknown }} records carry no support claim in either direction.
         {% if import_report.record_counts.added %}
-        {{ import_report.record_counts.added|length }} were added by the latest refresh{% if import_report.record_counts.retained %}, and {{ import_report.record_counts.retained|length }} retained after disappearing from their source{% endif %}.
+        The latest refresh added {{ import_report.record_counts.added|length }}{% if import_report.record_counts.retained %}; {{ import_report.record_counts.retained|length }} are retained after disappearing from their source{% endif %}.
         {% endif %}
       </dd>
     </div>

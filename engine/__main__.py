@@ -1,4 +1,4 @@
-"""Run with python -m engine {import-data,import-hardware,import-opengear,validate,build}."""
+"""Run with python -m engine {import-data,import-hardware,import-opengear,validate,contribute,build}."""
 import argparse
 
 from .importer import import_data
@@ -7,8 +7,12 @@ from .validation import validate_data, validate_hardware
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("command", choices=["import-data", "import-hardware", "import-opengear", "validate", "build"])
-    args = parser.parse_args()
+    parser.add_argument("command", choices=["import-data", "import-hardware", "import-opengear",
+                                            "validate", "contribute", "build"])
+    args, rest = parser.parse_known_args()
+    # Only `contribute` takes further arguments; every other command stays strict.
+    if rest and args.command != "contribute":
+        parser.error("unrecognized arguments: " + " ".join(rest))
     if args.command == "import-data":
         import_data()
     elif args.command == "import-hardware":
@@ -24,6 +28,9 @@ def main():
         if hardware:
             message += f", {len(hardware)} hardware models"
         print(message)
+    elif args.command == "contribute":
+        from . import contribute
+        raise SystemExit(contribute.main(rest))
     else:
         from . import changes, feeds, openeox, site
         site.build()

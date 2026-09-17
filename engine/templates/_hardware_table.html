@@ -145,12 +145,11 @@
     </thead>
     <tbody id="hardware-list">
       {% for model in hardware %}
-      <tr class="hardware-row hardware-row--{{ 'catalog' if model.catalog.is_catalog else (model.family or 'lifecycle') }}"
+      <tr class="hardware-row hardware-row--{{ 'catalog' if model.catalog.is_catalog else 'lifecycle' }}"
           data-search="{{ model.search }}"
           data-vendor="{{ model.vendor }}"
           data-status="{{ model.status }}"
           data-status-order="{{ status_keys.index(model.status) if model.status in status_keys else status_keys|length }}"
-          data-family="{{ model.family or '' }}"
           data-catalog="{{ model.catalog.state or '' }}"
           data-catalog-order="{{ catalog_state_order[model.catalog.state] if model.catalog.state else catalog_state_order['lifecycle-row'] }}"
           data-coverage="{{ model.coverage|selectattr('known')|map(attribute='key')|join(' ') }}"
@@ -158,6 +157,9 @@
         <th scope="row" class="hardware-name">
           <a href="{{ url_for('hardware/' ~ model.id ~ '/') }}">{{ model.name }}</a>
           <code class="release-raw">{{ model.id }}</code>
+          {% if model.research %}
+          <span class="tag tag-research" title="One-time reading of a vendor notice, quoted verbatim on the record page — not a refreshable pipeline and not a status.">researched</span>
+          {% endif %}
         </th>
         <td class="hardware-vendor">{{ model.vendor }}</td>
         <td class="hardware-line">

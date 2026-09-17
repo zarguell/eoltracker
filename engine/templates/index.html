@@ -14,6 +14,15 @@
     <a href="{{ catalog_source_site }}" rel="noopener">Opengear's product catalogue</a>.
     Every date carries the record it came from; nothing here is estimated.
   </p>
+  {% if researched_count or researched_hardware_count %}
+  <p class="panel-note research-note">
+    {% if researched_count %}{{ plural(researched_count, 'software product') }} here
+    {{ 'has' if researched_count == 1 else 'have' }} no refreshable source at all — the dates came from a one-time
+    reading of a quoted vendor notice.{% endif %}
+    {% if researched_count and researched_hardware_count %} Likewise {{ plural(researched_hardware_count, 'hardware record') }}.{% elif researched_hardware_count %}{{ plural(researched_hardware_count, 'hardware record') }} here {{ 'has' if researched_hardware_count == 1 else 'have' }} no refreshable source at all — the dates came from a one-time reading of a quoted vendor notice.{% endif %}
+    Those records carry the <span class="tag tag-research">researched</span> mark wherever they appear.
+  </p>
+  {% endif %}
   <div class="hero-stats">
     <div class="stat"><span class="stat-num">{{ product_count }}</span><span class="stat-label">software products</span></div>
     <div class="stat"><span class="stat-num">{{ release_count }}</span><span class="stat-label">releases</span></div>
@@ -120,6 +129,7 @@
           <h3 class="product-name"><a href="{{ url_for('products/' ~ product.id ~ '/') }}">{{ product.name }}</a></h3>
           <p class="product-meta">
             <span class="tag">{{ product.upstream_category }}</span>
+            {% if product.research %}<span class="tag tag-research" title="Dates read from a quoted vendor notice, not from a refreshable pipeline.">researched</span>{% endif %}
             <span>{{ plural(product.releases, 'release') }}</span>
             {% if product.latest %}
             <span>newest {{ product.latest.name }}</span>

@@ -23,6 +23,7 @@ from pathlib import Path
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 from .importer import ROOT
+from . import contribute
 from .validation import validate_data, validate_hardware
 
 TEMPLATES = Path(__file__).resolve().parent / "templates"
@@ -128,7 +129,6 @@ HARDWARE_STATUSES = (
     {"key": "unknown", "label": "Status unknown", "detail": "No support deadline and no lifecycle notice published for this record, so it carries no support claim in either direction. A current catalogue listing, or a revision-only notice, does not end support."},
 )
 HARDWARE_STATUS_ORDER = tuple(status["key"] for status in HARDWARE_STATUSES if status["key"] != "unknown")
-HARDWARE_UNKNOWN_STATUS = "unknown"
 # ---------------------------------------------------------------------------
 # Exact Opengear catalogue models (vendor configurator).
 #
@@ -138,8 +138,6 @@ HARDWARE_UNKNOWN_STATUS = "unknown"
 # it is currently listed by the vendor and whether an exact notice for it
 # exists right now. Everything here is absent rather than guessed for records
 # from other sources.
-CATALOG_FAMILY = "catalog"
-CATALOG_SOURCE_URL = "https://opengear.com/configure/"
 CONFIGURE_SOURCE_URL = "https://opengear.com/configure/"
 CONFIGURE_SOURCE_NAME = "Opengear product configurator"
 END_LIFE_SOURCE_URL = "https://opengear.com/end-life-products"
@@ -224,6 +222,18 @@ def human_datetime(value):
     return f"{parsed.strftime('%b')} {parsed.day}, {parsed.year} at {parsed.strftime('%H:%M')} UTC"
 
 
+def human_stamp(value):
+    """A readable stamp for a value that may be a date or a date-time.
+
+    Provenance mixes the two — a reading date is a day, a check timestamp is an
+    instant — and both are shown to readers, so the width is decided by the
+    value rather than by the field it came from.
+    """
+    if not value:
+        return None
+    return human_datetime(value) if "T" in str(value) else human_date(str(value))
+
+
 def plural(count, word):
     return f"{count} {word}" if count == 1 else f"{count} {word}s"
 
@@ -242,6 +252,7 @@ env.globals.update(
     hardware_abs=site_url("v1/hardware.json"),
     human_date=human_date,
     human_datetime=human_datetime,
+    human_stamp=human_stamp,
     plural=plural,
     base_path=BASE_PATH,
     repository_url=REPOSITORY_URL,
@@ -281,10 +292,20 @@ def release_rows(record):
                 notes.append(f"{entry['field']} {entry['value']}" + (f" ({entry['label']})" if entry["label"] else ""))
             cells[key] = {"value": value, "human": human_date(value), "notes": "; ".join(notes) or None}
         latest = upstream.get("latest") or {}
+        # A researched record's release carries the contribution's verbatim
+        # quote as an upstream cell instead of upstream date fields; it is
+        # surfaced as its own field so the table can show the evidence rather
+        # than an empty status column.
+        contribution = upstream.get("Contribution") or None
         rows.append({
             "id": release["id"],
             "name": release["name"] or release["id"],
             "cells": cells,
+            "contribution": contribution,
+            # What the page prints under the record: the upstream release object
+            # for a pipeline-derived record, the stored contribution entry for a
+            # researched one (which has no upstream release object at all).
+            "verbatim": upstream if contribution else raw,
             "lts": bool(upstream.get("isLts")),
             "eol_flag": bool(upstream.get("isEol")),
             "maintained": bool(upstream.get("isMaintained")),
@@ -359,6 +380,10 @@ def summarize(record, rows, today):
         "json": site_url(f"v1/products/{record['id']}.json"),
         "page": site_url(f"products/{record['id']}/"),
         "source": record["provenance"]["source_url"],
+        # A consumer reading the index can tell a researched record apart from a
+        # pipeline-derived one without fetching every record; the record itself
+        # carries the citation and stays linked from here.
+        "research": has_research(record),
     }
 
 
@@ -422,6 +447,22 @@ def is_catalog_record(record):
     return record.get("catalog") is not None or record.get("lifecycle") is not None
 
 
+def source_label(url):
+    """A readable name for one source page.
+
+    A bare host would label the configurator and the end-of-life list
+    identically on the same page, so the two Opengear pages this collector
+    reads are named for what they are and anything else falls back to its host.
+    """
+    if url == CONFIGURE_SOURCE_URL:
+        return CONFIGURE_SOURCE_NAME
+    if url == END_LIFE_SOURCE_URL:
+        return "Opengear end-of-life product list"
+    if url == HARDWARE_SOURCE_SITE:
+        return HARDWARE_SOURCE_NAME
+    return url.split("//")[-1].split("/")[0]
+
+
 def source_order(record):
     """The record's source pages, with the page it was actually read from first.
 
@@ -435,6 +476,77 @@ def source_order(record):
     if is_catalog_record(record):
         urls = [CONFIGURE_SOURCE_URL] + [url for url in urls if url != CONFIGURE_SOURCE_URL]
     return urls
+
+
+# ---------------------------------------------------------------------------
+# Researched provenance (AGENTS.md rule 8, tier b).
+#
+# Some products have no deterministic source at all: their record came from a
+# one-time reading of a vendor notice, with the sentence the date came from
+# stored verbatim beside it. The site does not re-read that notice and cannot,
+# so it prints the reading date, the quote and a warning once the reading has
+# aged. Which records those are, and when a reading counts as stale, is
+# `engine/contribute.py`'s question — the page only renders its answer.
+RESEARCH_STALE_DAYS = contribute.STALE_DAYS
+
+
+def research_view(record, today):
+    """Template-ready researched provenance for one record, or None.
+
+    A researched record carries its citation at record level, so there is at
+    most one view per record. Dates are formatted here because they are markup
+    concerns; the staleness verdict, the quote and the evidence list are the
+    contribution module's.
+    """
+    view = contribute.research_view(record, today)
+    if not view:
+        return None
+    return {
+        **view,
+        "verifier": (record.get("provenance") or {}).get("verifier"),
+        "stale_days": RESEARCH_STALE_DAYS,
+        "source_label": source_label(view["source_url"]) if view["source_url"] else None,
+        "retrieved_human": human_stamp(view["retrieved_at"]),
+        "verified_human": human_stamp(view["verified_at"]),
+        "checked_human": human_stamp(view["last_checked"]),
+        "stale_after_human": human_stamp(view["stale_after"]),
+        "sources": [{**source,
+                     "source_label": source_label(source["source_url"]),
+                     "retrieved_human": human_stamp(source["retrieved_at"])}
+                    for source in view["sources"]],
+    }
+
+
+def has_research(record):
+    """True when a record carries researched provenance.
+
+    The catalog index and the v1 summaries publish this as a flag so a consumer
+    can spot records that came from a one-time reading without fetching each
+    record; the record itself always carries the full citation.
+    """
+    return contribute.is_researched(record)
+
+
+def research_count(records):
+    return sum(1 for record in records if has_research(record))
+
+
+# Collector report keys that sit beside the per-family record counts rather than
+# being family names: two record-id lists and the neutral-status tally.
+NON_FAMILY_KEYS = ("added", "retained", "status_unknown")
+
+
+def report_families(report):
+    """The record families a collector's report counts, as template rows.
+
+    The report also carries lists (`added`, `retained`) and a scalar
+    (`status_unknown`) beside its family counts, so the families are separated
+    here rather than filtered in the template, where the punctuation would have
+    to be recomputed per iteration.
+    """
+    counts = (report or {}).get("record_counts") or {}
+    return [{"family": family, "count": count}
+            for family, count in counts.items() if family not in NON_FAMILY_KEYS]
 
 
 def catalog_identity(record):
@@ -585,7 +697,9 @@ def summarize_hardware(record, rows, today, hardware_index=None):
         "page": site_url(f"hardware/{record['id']}/"),
         "source": source_order(record)[0],
         "source_urls": source_order(record),
+        "source_links": [{"url": url, "label": source_label(url)} for url in source_order(record)],
         "catalog": catalog,
+        "research": has_research(record),
     }
 
 
@@ -633,8 +747,12 @@ def build(data_dir=None, out_dir=None):
     records = validate_data(data_dir)
     hardware = validate_hardware(data_dir)
     manifest = json.loads((data_dir / "manifest.json").read_text(encoding="utf-8"))
-    if manifest["product_count"] != len(records):
-        raise ValueError(f"Manifest advertises {manifest['product_count']} products, found {len(records)}")
+    # The manifest counts the endoflife.date snapshot, which is rewritten from
+    # upstream by import-data and knows nothing about researched records, so it
+    # is compared against the deterministic records alone.
+    deterministic = contribute.deterministic_records(records)
+    if manifest["product_count"] != len(deterministic):
+        raise ValueError(f"Manifest advertises {manifest['product_count']} products, found {len(deterministic)}")
     # The manifest may predate the hardware catalog, so its count is advisory.
     if manifest.get("hardware_count", len(hardware)) != len(hardware):
         raise ValueError(f"Manifest advertises {manifest['hardware_count']} hardware models, found {len(hardware)}")
@@ -658,11 +776,16 @@ def build(data_dir=None, out_dir=None):
     for schema_file in schema_files:
         shutil.copyfile(schema_file, out / "v1" / "schema" / schema_file.name)
 
-    feed = {"schema_version": SCHEMA_VERSION, **manifest, "products": records}
+    feed = {"schema_version": SCHEMA_VERSION, **manifest, "products": records,
+            # `product_count` in the manifest counts the refreshable upstream
+            # snapshot; the array below also carries researched records, so the
+            # difference is stated rather than left for a consumer to guess.
+            "researched_count": research_count(records)}
     write_json(out / "v1" / "feed.json", feed)
     rows_by_id = {record["id"]: release_rows(record) for record in records}
     summaries = [summarize(record, rows_by_id[record["id"]], today) for record in records]
-    write_json(out / "v1" / "products.json", {"schema_version": SCHEMA_VERSION, **manifest, "products": summaries})
+    write_json(out / "v1" / "products.json", {"schema_version": SCHEMA_VERSION, **manifest, "products": summaries,
+                                              "researched_count": research_count(records)})
     (out / "v1" / "products").mkdir(parents=True)
     for record in records:
         shutil.copyfile(data_dir / "products" / f"{record['id']}.json", out / "v1" / "products" / f"{record['id']}.json")
@@ -677,7 +800,8 @@ def build(data_dir=None, out_dir=None):
     hardware_page = sorted(hardware_summaries, key=lambda model: model["name"].lower())
     write_json(out / "v1" / "hardware.json", {
         "schema_version": SCHEMA_VERSION, **manifest,
-        "hardware_count": len(hardware), "hardware": hardware_summaries})
+        "hardware_count": len(hardware), "hardware": hardware_summaries,
+        "researched_count": research_count(hardware)})
     (out / "v1" / "hardware").mkdir(parents=True)
     for record in hardware:
         shutil.copyfile(data_dir / "hardware" / f"{record['id']}.json",
@@ -726,8 +850,12 @@ def build(data_dir=None, out_dir=None):
     report = json.loads(opengear_report.read_text(encoding="utf-8")) if opengear_report.exists() else None
     common = {
         "manifest": manifest,
-        "product_count": manifest["product_count"],
-        "release_count": manifest["release_count"],
+        # The manifest counts the upstream snapshot; these counts are the
+        # catalog the site actually publishes, which also contains researched
+        # records the manifest knows nothing about. The two are meant to differ,
+        # and `researched_count` says by how much.
+        "product_count": len(records),
+        "release_count": sum(len(record.get("releases") or []) for record in records),
         "excluded_count": len(manifest["excluded_hardware"]),
         "hardware_count": len(hardware),
         "refresh": refresh,
@@ -735,16 +863,14 @@ def build(data_dir=None, out_dir=None):
         "hardware_milestone_meta": HARDWARE_MILESTONES,
         "hardware_status_meta": HARDWARE_STATUSES,
         "hardware_status_order": HARDWARE_STATUS_ORDER,
-        "hardware_unknown_status": HARDWARE_UNKNOWN_STATUS,
         "catalog_states": CATALOG_STATES,
         "catalog_state_counts": state_counts,
         "catalog_state_order": order,
-        "catalog_family": CATALOG_FAMILY,
         "catalog_source_name": CONFIGURE_SOURCE_NAME,
         "catalog_source_site": CONFIGURE_SOURCE_URL,
         "catalog_stats": stats,
-        "catalog_index": hardware_index,
         "import_report": report,
+        "report_families": report_families(report),
         "changes_available": changes_available,
         "changes_json_url": url_for(CHANGES_JSON),
         "changes_atom_url": url_for(CHANGES_ATOM),
@@ -753,6 +879,12 @@ def build(data_dir=None, out_dir=None):
         "schema_version": SCHEMA_VERSION,
         "notices": notices,
         "schema_files": [f"v1/schema/{f.name}" for f in schema_files],
+        # Researched provenance is a catalog-level fact, so the window and the
+        # counts are shared with every page that mentions it rather than
+        # recomputed per template.
+        "research_stale_days": RESEARCH_STALE_DAYS,
+        "researched_count": research_count(records),
+        "researched_hardware_count": research_count(hardware),
     }
 
     write(out / "index.html", render(
@@ -762,7 +894,7 @@ def build(data_dir=None, out_dir=None):
         canonical=site_url(),
         title="EOL Tracker — software and hardware lifecycle dates",
         description=(f"Normalized general availability, end-of-sale, security-support and end-of-life dates "
-                     f"for {manifest['product_count']} software products and {len(hardware)} hardware models, "
+                     f"for {len(records)} software products and {len(hardware)} hardware models, "
                      f"republished from community catalogs and vendor notices with per-record provenance."),
         products=summaries,
         coverage=coverage,
@@ -834,11 +966,12 @@ def build(data_dir=None, out_dir=None):
             coverage=milestone_coverage([rows], HARDWARE_MILESTONES),
             json_url=url_for(f"v1/hardware/{record['id']}.json"),
             json_abs=site_url(f"v1/hardware/{record['id']}.json"),
-            upstream_urls=source_urls,
+            upstream_links=[{"url": url, "label": source_label(url)} for url in source_urls],
             hardware_source_name="Opengear" if record["provenance"]["verifier"] == OPENGEAR_VERIFIER else HARDWARE_SOURCE_NAME,
             hardware_source_site=source_urls[0],
             hardware_source_attribution=("Lifecycle dates published directly by Opengear; grouped parts and contract exceptions are retained below."
                                          if record["provenance"]["verifier"] == OPENGEAR_VERIFIER else HARDWARE_SOURCE_ATTRIBUTION),
+            research=research_view(record, today),
         ))
 
     for record in records:
@@ -863,6 +996,7 @@ def build(data_dir=None, out_dir=None):
             json_url=url_for(f"v1/products/{record['id']}.json"),
             json_abs=site_url(f"v1/products/{record['id']}.json"),
             upstream_url=record["provenance"]["source_url"],
+            research=research_view(record, today),
         ))
 
     write(out / "api" / "index.html", render(

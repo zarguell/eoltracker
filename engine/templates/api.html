@@ -184,6 +184,7 @@
     <div><dt><code>releases[].milestones</code></dt><dd>The four normalized dates: <code>ga</code>, <code>eos</code>, <code>eossec</code>, <code>eol</code>. Each is an ISO date or <code>null</code>; <code>null</code> means upstream publishes no date, never a guessed one.</dd></div>
     <div><dt><code>releases[].upstream</code></dt><dd>The entire original upstream release object, so any normalized value can be audited against its source.</dd></div>
     <div><dt><code>provenance</code></dt><dd><code>source_url</code>, <code>verifier</code> (pipeline revision), <code>last_checked</code> (UTC, per record), <code>upstream_modified</code> (or <code>null</code> when upstream publishes none).</dd></div>
+    <div><dt><code>provenance.research</code></dt><dd>Optional, and present only on researched records — a record whose dates came from a one-time reading of a vendor notice because no refreshable catalog publishes them (see <em>Researched records</em> below for the fields and what the quotes must satisfy).</dd></div>
   </dl>
 </section>
 
@@ -201,6 +202,7 @@
     <div><dt><code>upstream</code></dt><dd>Every declared column of the source row, verbatim: <code>text</code> as rendered, <code>datetime</code> and <code>value</code> for a machine-readable date or <code>null</code>, the milestone <code>role</code> the pipeline assigns (or <code>null</code>), and any <code>links</code>. For an Opengear record this also carries the source's own notes: the raw policy or contract-exception text, and the documented grouping semantics of the row. A catalog record's cells are keyed by the configurator's own field names (SKU, Title, Support Series, Families, Datasheet URL, and so on) and carry no milestone role.</dd></div>
     <div><dt><code>catalog</code>, <code>lifecycle</code></dt><dd>Optional, and present only on exact catalog models. <code>catalog</code> is <code>{listed, source_url}</code> and <code>lifecycle</code> is <code>{listed, matches}</code>; see the catalog model entry under Endpoints for exactly what each states and what it deliberately does not.</dd></div>
     <div><dt><code>provenance</code></dt><dd><code>source_urls</code> (every page the record was read from), <code>verifier</code> (<code>deterministic-eosl-date</code> or <code>deterministic-opengear</code>, one per record, naming the pipeline that parsed it) and <code>last_checked</code> (UTC). A catalog record's <code>source_urls</code> lead with <a href="{{ catalog_source_site }}" rel="noopener">{{ catalog_source_site }}</a>, the page it was read from, with any notice page that later named it appended rather than substituted.</dd></div>
+    <div><dt><code>provenance.research</code></dt><dd>Optional, and present only on researched records: <code>verifier</code> is <code>researched-&lt;contributor&gt;</code> instead of a <code>deterministic-*</code> id, and <code>source_urls</code> holds the one notice the dates were read from. The research object itself is the same shape as the software one — see <em>Researched records</em> below.</dd></div>
   </dl>
   <p class="panel-note">
     A hardware record is one published source row, not a family of releases, so there is no <code>releases</code> array:
@@ -208,6 +210,42 @@
     lifecycle row is a product group whose part numbers are grouped rather than expanded into one record per part; a
     catalog record is one exact model string the vendor's product catalogue currently lists or listed. Record counts
     count records, never unique devices or SKUs.
+  </p>
+</section>
+
+<section class="panel" aria-labelledby="research-title">
+  <h2 class="panel-title" id="research-title">Researched records</h2>
+  <p class="panel-note">
+    Some products have no deterministic source: no upstream catalog publishes their lifecycle, so no pipeline can
+    re-derive their dates. Following the project's rule — deterministic first, researched second, invented never — such
+    a product is published from a one-time reading of an authoritative primary source (a vendor notice stating an
+    explicit date), with the sentence the date came from stored verbatim in the record. A researched record is never a
+    substitute for an existing deterministic source: it may not overwrite or shadow a deterministic record.
+  </p>
+  <p class="panel-note">
+    A researched record is marked three ways: <code>provenance.verifier</code> is
+    <code>researched-&lt;contributor-slug&gt;</code> rather than a <code>deterministic-*</code> id,
+    <code>provenance.research</code> carries the citation, and the catalog summaries on
+    <code>v1/products.json</code> and <code>v1/hardware.json</code> carry <code>research: true</code> so a consumer can
+    spot them without fetching every record. The full record — quote included — is always in
+    <code>v1/feed.json</code>, <code>v1/products/{id}.json</code> and <code>v1/hardware/{id}.json</code>.
+  </p>
+  <dl class="facts">
+    <div><dt><code>research.quote</code></dt><dd>The verbatim sentence the milestone dates were read from, whitespace-normalized. A contribution is rejected unless every date it claims appears in this text, so the quote is the evidence rather than a summary of it.</dd></div>
+    <div><dt><code>research.source_url</code></dt><dd>The primary source page the quote was read from.</dd></div>
+    <div><dt><code>research.retrieved_at</code></dt><dd>The date the source was read (ISO date).</dd></div>
+    <div><dt><code>research.contributor</code></dt><dd>Who contributed the reading.</dd></div>
+    <div><dt><code>research.method</code></dt><dd><code>manual</code> or <code>agent</code> — a person or an agent read the source and transcribed the quote.</dd></div>
+    <div><dt><code>research.verified_at</code></dt><dd>When the quote was last checked against the live source, or <code>null</code> when the record was installed without fetching it (offline/stale install). A <code>null</code> here means the citation records a reading, not a live check.</dd></div>
+    <div><dt><code>research.stale_after</code></dt><dd>An ISO date after which the source itself says the reading should be reviewed, or <code>null</code>. When it is <code>null</code> the site applies its own {{ research_stale_days }}-day window from <code>provenance.last_checked</code>. This field is a display/review hint only; it never changes a date and never removes a milestone.</dd></div>
+    <div><dt><code>research.evidence</code></dt><dd>Every quote the contribution supplied: <code>{quote, source_url, retrieved_at, milestones}</code>. The record-level <code>quote</code> is these joined, so a consumer can see which sentence supports which milestone.</dd></div>
+    <div><dt><code>upstream.Contribution</code></dt><dd>The contributed cell, kept verbatim like any other raw upstream value: <code>{text, value: null, datetime: null, role: null, links}</code>. It sits in <code>releases[].upstream</code> for software and in the record's <code>upstream</code> for hardware, so the same audit path works for a researched record as for a scraped one.</dd></div>
+  </dl>
+  <p class="panel-note">
+    Consumers should treat <code>research</code> as provenance, not as a status: a researched record makes no claim
+    beyond what its quote states, and the site shows a stale warning on the record page once the reading ages. Dates
+    marked <code>null</code> remain <code>null</code> here exactly as elsewhere — an absent announcement is never
+    filled from a researched record for a different milestone.
   </p>
 </section>
 

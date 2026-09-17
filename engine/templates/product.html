@@ -8,13 +8,25 @@
 </nav>
 
 <section class="hero product-hero">
-  <p class="eyebrow">{{ product.upstream_category }} · {{ product.category }}</p>
+  <p class="eyebrow">{{ product.upstream_category }} · {{ product.category }}{% if research %} · researched record{% endif %}</p>
   <h1 class="page-title">{{ product.name }}</h1>
   <p class="lead">
+    {% if research %}
+    {{ plural(releases|length, 'release') }} with dates researched from the vendor notice quoted below, because no
+    refreshable catalog publishes this product's lifecycle. The quote is the evidence for every date here and is
+    stored verbatim. Identifier for this record: <code>{{ product.id }}</code>.
+    {% else %}
     {{ plural(releases|length, 'release') }} published by endoflife.date, with each normalized milestone and the raw
     upstream values behind it. Identifier for this record: <code>{{ product.id }}</code>.
+    {% endif %}
   </p>
   <p class="hero-meta">
+    {% if research %}
+    Reading contributed {{ research.retrieved_human }} by <strong>{{ research.contributor }}</strong>, verified in the
+    catalog by <code>{{ product.provenance.verifier }}</code> on {{ research.checked_human }} — a one-time reading, not
+    a pipeline that re-derives these dates. Last catalog refresh
+    <time datetime="{{ refresh.iso }}">{{ refresh.human }}</time>.
+    {% else %}
     Verified {{ human_datetime(product.provenance.last_checked) }} by <code>{{ product.provenance.verifier }}</code>.
     {% if product.provenance.upstream_modified %}
     Upstream modified {{ human_datetime(product.provenance.upstream_modified) }}.
@@ -22,21 +34,34 @@
     Upstream publishes no modification timestamp for this product.
     {% endif %}
     Last catalog refresh <time datetime="{{ refresh.iso }}">{{ refresh.human }}</time>.
+    {% endif %}
   </p>
   <p class="product-links">
     <a class="button" href="{{ json_url }}">JSON record</a>
+    {% if research %}
+    <a class="button" href="{{ research.source_url }}" rel="noopener">Source: {{ research.source_label }}</a>
+    {% else %}
     <a class="button" href="{{ upstream_url }}" rel="noopener">Source on endoflife.date</a>
+    {% endif %}
     {% for link_name, link in links.items() %}
     {% if link %}<a class="button" href="{{ link }}" rel="noopener">{{ link_name }}</a>{% endif %}
     {% endfor %}
   </p>
 </section>
+{% if research %}
+{% include "_research.html" %}
+{% endif %}
 
 <section class="panel" aria-labelledby="coverage-title">
   <h2 class="panel-title" id="coverage-title">Data coverage</h2>
   <p class="panel-note">
+    {% if research %}
+    The quoted notice states only the deadlines it states. Empty cells in the table below are dates this record does
+    not carry, not implied support — nothing was inferred from the notice's silence.
+    {% else %}
     Upstream does not publish every milestone for every release. Empty cells in the table below are unknown dates,
     not implied support.
+    {% endif %}
   </p>
   <ul class="bars">
     {% for row in coverage %}
@@ -55,13 +80,20 @@
 
 <section class="panel" aria-labelledby="legend-title">
   <h2 class="panel-title" id="legend-title">How to read these dates</h2>
+  {% if research %}
+  <p class="panel-note">
+    The milestone meanings below are the catalog's shared vocabulary. The endoflife.date label rules that map raw
+    upstream fields onto them do not apply to this record: its dates were read from the quoted notice, and only the
+    dates the notice states are published.
+  </p>
+  {% endif %}
   <dl class="legend">
     {% for milestone in milestone_meta %}
     <div class="legend-row">
       <dt>{{ milestone.label }}</dt>
       <dd>
         <p>{{ milestone.detail }}</p>
-        {% if milestone.key in ('eossec', 'eol') %}
+        {% if milestone.key in ('eossec', 'eol') and not research %}
         <p>
           {% if milestone.key == 'eossec' %}
           Extended support counts as security support: when upstream publishes an extended-support date, it replaces
@@ -78,7 +110,7 @@
     {% endfor %}
     <div class="legend-row">
       <dt>Blank date</dt>
-      <dd><p>Upstream publishes no value for that milestone. A missing date is an absent announcement, not a claim that support ends or continues.</p></dd>
+      <dd><p>{% if research %}The quoted notice publishes no value for that milestone.{% else %}Upstream publishes no value for that milestone.{% endif %} A missing date is an absent announcement, not a claim that support ends or continues.</p></dd>
     </div>
   </dl>
 </section>
@@ -140,12 +172,17 @@
           </td>
           {% endfor %}
           <td class="upstream-status">
+            {% if release.contribution %}
+            <span class="tag tag-research">researched</span>
+            <span class="release-raw">dates quoted from the source below; no upstream release object exists</span>
+            {% else %}
             {% if release.lts %}<span class="tag">LTS</span>{% endif %}
             {% if release.maintained %}<span class="tag tag-ok">maintained</span>{% endif %}
             {% if release.eol_flag %}<span class="tag tag-warn">upstream marks end of life</span>{% endif %}
             {% if not release.lts and not release.maintained and not release.eol_flag %}<span class="muted">no flags</span>{% endif %}
             {% if release.latest.link %}
             <a class="release-download" href="{{ release.latest.link }}" rel="noopener">latest release</a>
+            {% endif %}
             {% endif %}
           </td>
         </tr>
@@ -158,15 +195,26 @@
 <section class="panel" aria-labelledby="source-title">
   <h2 class="panel-title" id="source-title">Source and upstream values</h2>
   <p class="panel-note">
+    {% if research %}
+    This record is not a normalization of endoflife.date data: no upstream catalog publishes this product, so the
+    dates come from the vendor notice quoted above and the quote is kept verbatim as the record's evidence. The raw
+    contribution text is retained in full below so the mapping can be checked value by value.
+    {% else %}
     This record is a normalization of endoflife.date data, licensed {{ source_license }}. Raw upstream values are
     retained in full so the mapping below can be checked value by value.
+    {% endif %}
   </p>
   <dl class="facts">
+    {% if research %}
+    <div><dt>Researched source</dt><dd><a href="{{ research.source_url }}" rel="noopener">{{ research.source_url }}</a></dd></div>
+    <div><dt>Contributor</dt><dd>{{ research.contributor }} ({{ research.method }} research, read {{ research.retrieved_human }})</dd></div>
+    {% else %}
     <div><dt>Upstream record</dt><dd><a href="{{ upstream_url }}" rel="noopener">{{ upstream_url }}</a></dd></div>
     <div><dt>Source license</dt><dd><a href="{{ source_license_url }}" rel="noopener">{{ source_name }} — {{ source_license }}</a></dd></div>
+    {% endif %}
     <div><dt>Verifier</dt><dd><code>{{ product.provenance.verifier }}</code></dd></div>
-    <div><dt>Last checked</dt><dd>{{ human_datetime(product.provenance.last_checked) }}</dd></div>
-    <div><dt>Upstream modified</dt><dd>{% if product.provenance.upstream_modified %}{{ human_datetime(product.provenance.upstream_modified) }}{% else %}not published upstream{% endif %}</dd></div>
+    <div><dt>Last checked</dt><dd>{{ human_stamp(product.provenance.last_checked) }}</dd></div>
+    <div><dt>Upstream modified</dt><dd>{% if product.provenance.upstream_modified %}{{ human_stamp(product.provenance.upstream_modified) }}{% else %}not published upstream{% endif %}</dd></div>
     <div><dt>JSON record</dt><dd><a href="{{ json_abs }}">{{ json_abs }}</a></dd></div>
     <div><dt>Schema</dt><dd><a href="{{ site_url('v1/schema/product.json') }}">v1/schema/product.json</a></dd></div>
   </dl>
@@ -195,12 +243,12 @@
   {% endif %}
 
   <details class="raw">
-    <summary>Raw upstream release objects ({{ releases|length }})</summary>
-    <p class="panel-note">Verbatim <code>releases[]</code> entries from the upstream record, unmodified.</p>
+    <summary>{% if research %}Contribution evidence as stored ({{ releases|length }}){% else %}Raw upstream release objects ({{ releases|length }}){% endif %}</summary>
+    <p class="panel-note">{% if research %}Verbatim <code>releases[]</code> entries from the contribution, including the quoted evidence the dates were checked against. These are not endoflife.date objects — no upstream catalog publishes this product.{% else %}Verbatim <code>releases[]</code> entries from the upstream record, unmodified.{% endif %}</p>
     {% for release in releases %}
     <details class="raw-release">
       <summary><code>{{ release.id }}</code></summary>
-      <pre><code>{{ release.raw | tojson_pretty }}</code></pre>
+      <pre><code>{{ release.verbatim | tojson_pretty }}</code></pre>
     </details>
     {% endfor %}
   </details>

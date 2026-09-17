@@ -22,6 +22,7 @@ MANIFEST_SCHEMA = {
 
 def validate_hardware(directory=None):
     """Validate committed hardware records; returns records in slug order."""
+    from .contribute import is_researched, validate_research
     directory = Path(directory) if directory is not None else ROOT / "data"
     schema = json.loads((ROOT / "schema/hardware.json").read_text())
     Draft202012Validator.check_schema(schema)
@@ -33,6 +34,10 @@ def validate_hardware(directory=None):
         validator.validate(record)
         if record["id"] != file.stem:
             raise ValueError(f"Hardware record identity mismatch: {file}")
+        if is_researched(record):
+            # A researched record states no upstream row and re-derives nothing
+            # from a collector's published cells; its evidence is checked instead.
+            validate_research(record, "hardware")
         if record["provenance"]["verifier"] == "deterministic-opengear":
             from .opengear import validate_record
             validate_record(record)
@@ -47,6 +52,7 @@ def validate_hardware(directory=None):
 
 
 def validate_data(directory=None):
+    from .contribute import is_researched, validate_research
     directory = Path(directory) if directory is not None else ROOT / "data"
     schema = json.loads((ROOT / "schema/product.json").read_text())
     Draft202012Validator.check_schema(schema)
@@ -55,7 +61,15 @@ def validate_data(directory=None):
     for file in sorted((directory / "products").glob("*.json")):
         record = json.loads(file.read_text())
         validator.validate(record)
-        if record["id"] != file.stem or record["provenance"]["source_url"] != API + record["id"] + "/":
+        if record["id"] != file.stem:
+            raise ValueError(f"Record identity mismatch: {file}")
+        if is_researched(record):
+            # Researched records have no upstream release object to contradict;
+            # their stored quotes are the evidence and are checked against them.
+            validate_research(record, "software")
+            records.append(record)
+            continue
+        if record["provenance"]["source_url"] != API + record["id"] + "/":
             raise ValueError(f"Record identity/provenance mismatch: {file}")
         release_ids = set()
         for release in record["releases"]:
@@ -65,9 +79,13 @@ def validate_data(directory=None):
             if release["milestones"] != milestones(release["upstream"], record["labels"]):
                 raise ValueError(f"Milestones contradict source: {file}: {release['id']}")
         records.append(record)
+    # The manifest describes the endoflife.date snapshot the importer maintains:
+    # researched products are not in that listing, so its counts exclude them.
+    deterministic = [record for record in records if not is_researched(record)]
     manifest = json.loads((directory / "manifest.json").read_text())
     Draft202012Validator(MANIFEST_SCHEMA, format_checker=FormatChecker()).validate(manifest)
-    if len(records) != manifest["product_count"] or sum(len(r["releases"]) for r in records) != manifest["release_count"]:
+    if (len(deterministic) != manifest["product_count"]
+            or sum(len(r["releases"]) for r in deterministic) != manifest["release_count"]):
         raise ValueError("Manifest counts do not match complete catalog")
     if {r["id"] for r in records} & set(manifest["excluded_hardware"]):
         raise ValueError("Hardware included in software catalog")
