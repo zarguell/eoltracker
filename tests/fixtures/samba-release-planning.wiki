@@ -1,0 +1,225 @@
+{{#get_web_data:
+url=https://download.samba.org/pub/samba/samba-versions.json
+|format=json
+|data=
+}}
+<!-- Check, if next is a rc and if it has a separate git branch -->
+{{#if:{{#pos:{{#external_value:next}}|.0rc}}
+ | {{#vardefine:next_git|
+     v{{#sub:{{#external_value:next}}|0|{{#pos:{{#external_value:next}}|.}}}}-{{#sub:
+       {{#external_value:next}}
+       |{{#expr:{{#pos:{{#external_value:next}}|.}}+1}}
+       |{{#expr:
+         {{#pos:{{#external_value:next}}|.0rc}}
+         -{{#pos:{{#external_value:next}}|.}}
+         -1
+       }}
+     }}-test
+   }}
+ | {{#vardefine:next_git|master}}
+}}
+= Samba Release Planning and Supported Release Lifetime=
+
+== Future Development Roadmap ==
+
+As each item, and parts of each item on Samba's [[Roadmap|future development]] is completed, the features are landed in the [http://git.samba.org/?p=samba.git;a=shortlog master branch], for inclusion in the [[Samba_Release_Planning#Upcoming_Release|next stable release]] of Samba.  Development in master is ongoing, in parallel to our stable releases, and new features always land on master first.
+
+== General information ==
+
+The regular Samba release cycle intends a new release series
+*six months fully supported,
+*another six months in the maintenance mode,
+*six months in the security fixes only mode.
+
+In total, each series is maintained for a period of approximately 18 months.
+
+'''Example:'''
+
+If 4.5 is the current release series, then 4.4 would be in maintenance mode and 
+4.3 would be in the security fixes only mode. The support of 4.2 would be
+stopped with the release of 4.5.0.
+
+Each series can have any number of desired minor releases.
+These are usually released every 6 weeks (current stable release series),
+resp. every 9 weeks (maintenance mode).
+
+Any discontinued (EOL) series will not receive any further updates. 
+
+{| class="wikitable"
+|-
+! style="background:#dfdfdf;" | series !! style="background:#dfdfdf;" | [https://git.samba.org/?p=samba.git;a=heads git branch] !! style="background:#dfdfdf;" | status !! style="background:#dfdfdf;" | started !!style="background:#dfdfdf;" |  maintenance !! style="background:#dfdfdf;" | security !! style="background:#dfdfdf;" | discontinued (EOL)
+|-{{#vardefine:version|4.25}}
+| {{#var:version}} ([[Release Planning for Samba {{#var:version}}|details]]) || [https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/{{#var:next_git}} {{#var:next_git}}] || style="background:#87CEFA;" | [[Samba_Release_Planning#Upcoming_Release|next upcoming release series]] || ''~2026-09'' || ''~2027-03'' || ''~2027-09'' || ''~2028-03''
+|-{{#vardefine:version|4.24}}
+| {{#var:version}} ([[Release Planning for Samba {{#var:version}}|details]]) || [https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-24-test v4-24-test] || style="background:#77ff77;" | [[Samba_Release_Planning#Current_Stable_Release|'''current stable release series''']] || ''~2026-03'' || ''~2026-09'' || ''~2027-03'' || ''~2027-09''
+|-
+|-
+| 4.23 ([[Release Planning for Samba 4.23|details]]) || [https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-23-test v4-23-test] || style="background:#ffff77;" | [[Samba_Release_Planning#Maintenance_Mode|'''maintenance mode''']] || ''2025-09-12'' || ''~2026-03'' || ''~2026-09'' || ''~2027-03''
+|-
+|-
+| 4.22 ([[Release Planning for Samba 4.22|details]]) || [https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-22-test v4-22-test] || style="background:#ffab77;" | [[Samba_Release_Planning#Security_Fixes_Only_Mode|'''security fixes only''']] || ''2025-03-06'' || ''2025-09-12'' || ''~2026-03'' || ''~2026-09''
+|-
+|-
+| 4.21 ([[Release Planning for Samba 4.21|details]]) || [https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-21-test v4-21-test] || style="background:#ff7777;" | [[Samba_Release_Planning#Discontinued_.28End_of_Life.29|'''discontinued (EOL)''']] || ''2024-09-02'' || ''2025-03-06'' || ''2025-09-12'' || ''~2026-03''
+|-
+|-
+| 4.20 ([[Release Planning for Samba 4.20|details]]) || [https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-20-test v4-20-test] || style="background:#ff7777;" | [[Samba_Release_Planning#Discontinued_.28End_of_Life.29|'''discontinued (EOL)''']] || ''2024-03-27'' || ''2024-09-02'' || ''2025-03-06'' || ''2025-09-12''
+|-
+|-
+| 4.19 ([[Release Planning for Samba 4.19|details]]) || [https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-19-test v4-19-test] || style="background:#ff7777;" | [[Samba_Release_Planning#Discontinued_.28End_of_Life.29|'''discontinued (EOL)''']] || ''2023-09-04'' || ''2024-03-27'' || ''2024-09-02'' || ''2025-03-06''
+|-
+|-
+| 4.18 ([[Release Planning for Samba 4.18|details]]) || [https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-18-test v4-18-test] || style="background:#ff7777;" | [[Samba_Release_Planning#Discontinued_.28End_of_Life.29|'''discontinued (EOL)''']] || ''2023-03-08'' || ''2023-09-04'' || ''2024-03-27'' || ''2024-09-02''
+|-
+|-
+| 4.17 ([[Release Planning for Samba 4.17|details]]) || [https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-17-test v4-17-test] || style="background:#ff7777;" | [[Samba_Release_Planning#Discontinued_.28End_of_Life.29|'''discontinued (EOL)''']] || ''2022-09-13'' || 2023-03-08'' || ''2023-09-04'' || ''2024-03-27''
+|-
+|-
+| 4.16 ([[Release Planning for Samba 4.16|details]]) || [https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-16-test v4-16-test] || style="background:#ff7777;" | [[Samba_Release_Planning#Discontinued_.28End_of_Life.29|'''discontinued (EOL)''']] || ''2022-03-21'' || 2022-09-13'' || ''2023-03-08'' || ''2023-09-04''
+|-
+|-
+| 4.15 ([[Release Planning for Samba 4.15|details]]) || [https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-15-test v4-15-test] || style="background:#ff7777;" | [[Samba_Release_Planning#Discontinued_.28End_of_Life.29|'''discontinued (EOL)''']]  || ''2021-09-20'' || ''2022-03-21'' || ''2022-09-13'' || ''2023-03-08''
+|-
+|-
+| 4.14 ([[Release Planning for Samba 4.14|details]]) || [https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-14-test v4-14-test] || style="background:#ff7777;" | [[Samba_Release_Planning#Discontinued_.28End_of_Life.29|'''discontinued (EOL)''']] || ''2021-03-09'' || ''2021-09-20'' || ''2022-03-21'' || ''2022-09-13''
+|-
+|-
+| 4.13 ([[Release Planning for Samba 4.13|details]]) || [https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-13-test v4-13-test] || style="background:#ff7777;" | [[Samba_Release_Planning#Discontinued_.28End_of_Life.29|'''discontinued (EOL)''']]  || ''2020-09-22'' || ''2021-03-09'' || ''2021-09-20'' || ''2022-03-21''
+|-
+|-
+| 4.12 ([[Release Planning for Samba 4.12|details]]) || [https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-12-test v4-12-test] || style="background:#ff7777;" | [[Samba_Release_Planning#Discontinued_.28End_of_Life.29|'''discontinued (EOL)''']] || 2020-03-03 || ''2020-09-22''  || ''2021-03-09'' || ''2021-09-20''
+|-
+|-
+| 4.11 ([[Release Planning for Samba 4.11|details]]) || [https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-11-test v4-11-test] || style="background:#ff7777;" | [[Samba_Release_Planning#Discontinued_.28End_of_Life.29|'''discontinued (EOL)''']] || 2019-09-17 || 2020-03-03 || 2020-12-03 || ''2021-03-09''
+|-
+| 4.10 ([[Release Planning for Samba 4.10|details]]) || [https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-10-test v4-10-test] || style="background:#ff7777;" | [[Samba_Release_Planning#Discontinued_.28End_of_Life.29|'''discontinued (EOL)''']] || 2019-03-19 || 2019-09-17 || 2020-03-03 || 2020-09-22
+|-
+| 4.9 ([[Release Planning for Samba 4.9|details]]) || [https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-9-test v4-9-test] || style="background:#ff7777;" | [[Samba_Release_Planning#Discontinued_.28End_of_Life.29|'''discontinued (EOL)''']] || 2018-09-13 || 2019-03-19 || 2019-09-17 || 2020-03-03
+|-
+| 4.8 ([[Release Planning for Samba 4.8|details]]) || [https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-8-test v4-8-test] || style="background:#ff7777;" | [[Samba_Release_Planning#Discontinued_.28End_of_Life.29|'''discontinued (EOL)''']] || 2018-03-13 || 2018-09-13 || 2019-03-19 || 2019-09-17
+|-
+| 4.7 ([[Release Planning for Samba 4.7|details]]) || [https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-7-test v4-7-test] || style="background:#ff7777;" | [[Samba_Release_Planning#Discontinued_.28End_of_Life.29|'''discontinued (EOL)''']] || 2017-09-21 || 2018-03-13 || 2018-09-13 || 2019-03-19
+|-
+| 4.6 ([[Release Planning for Samba 4.6|details]]) || [https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-6-test v4-6-test] || style="background:#ff7777;" | [[Samba_Release_Planning#Discontinued_.28End_of_Life.29|'''discontinued (EOL)''']] || 2017-03-07 || 2017-09-21 || 2018-03-13 || 2018-09-13
+|-
+| 4.5 ([[Release Planning for Samba 4.5|details]]) || [https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-5-test v4-5-test] || style="background:#ff7777;" | [[Samba_Release_Planning#Discontinued_.28End_of_Life.29|'''discontinued (EOL)''']] || 2016-09-07 || 2017-03-07 || 2017-09-21 || 2018-03-13
+|-
+| 4.4 ([[Release Planning for Samba 4.4|details]]) || [https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-4-test v4-4-test] || style="background:#ff7777;" | [[Samba_Release_Planning#Discontinued_.28End_of_Life.29|'''discontinued (EOL)''']] || 2016-03-22 || 2016-09-07 || 2017-03-07 || 2017-09-21
+|-
+| 4.3 ([[Release Planning for Samba 4.3|details]]) || [https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-3-test v4-3-test] || style="background:#ff7777;" | [[Samba_Release_Planning#Discontinued_.28End_of_Life.29|'''discontinued (EOL)''']]|| 2015-09-08 || 2016-03-22 || 2016-09-07 || 2017-03-07
+|-
+| 4.2 ([[Release Planning for Samba 4.2|details]]) || [https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-2-test v4-2-test] || style="background:#ff7777;" | [[Samba_Release_Planning#Discontinued_.28End_of_Life.29|'''discontinued (EOL)''']] ||2015-03-04 || 2015-09-08 || 2016-03-22 || 2016-09-07
+|-
+| 4.1 ([[Release Planning for Samba 4.1|details]]) || [https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-1-test v4-1-test] || style="background:#ff7777;" | [[Samba_Release_Planning#Discontinued_.28End_of_Life.29|'''discontinued (EOL)''']] || 2013-10-11 || 2015-03-04 || 2015-09-08 || 2016-03-22
+|-
+| 4.0 ([[Release Planning for Samba 4.0|details]]) || [https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-0-test v4-0-test] || style="background:#ff7777;" | [[Samba_Release_Planning#Discontinued_.28End_of_Life.29|'''discontinued (EOL)''']] ||  2012-12-11 || 2013-10-11 || 2015-03-04 || 2015-09-08
+|-
+| 3.6 ([[Release Planning for Samba 3.6|details]]) || [https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v3-6-test v3-6-test] || style="background:#ff7777;" | [[Samba_Release_Planning#Discontinued_.28End_of_Life.29|'''discontinued (EOL)''']] || 2011-08-09 || 2012-12-11 || 2013-11-29 || 2015-03-04
+|-
+| 3.5 ([[Release Planning for Samba 3.5|details]]) || [https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v3-5-test v3-5-test] || style="background:#ff7777;" | [[Samba_Release_Planning#Discontinued_.28End_of_Life.29|'''discontinued (EOL)''']] ||  2010-03-01 || 2011-08-09 || ~2012-12-17 || 2013-10-11
+|-
+| 3.4 ([[Release Planning for Samba 3.4|details]]) || [https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v3-4-test v3-4-test] || style="background:#ff7777;" | [[Samba_Release_Planning#Discontinued_.28End_of_Life.29|'''discontinued (EOL)''']] || 2009-07-03 || 2010-03-01 || ~2011-08-23 || 2012-12-11
+|-
+| 3.3 ([[Release Planning for Samba 3.3|details]]) || [https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v3-3-test v3-3-test] || style="background:#ff7777;" | [[Samba_Release_Planning#Discontinued_.28End_of_Life.29|'''discontinued (EOL)''']] || 2009-01-27 || 2009-07-03 ||2010-03-01 || 2011-08-09
+|-
+| 3.2 ([[Release Planning for Samba 3.2|details]]) || [https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v3-2-test v3-2-test] || style="background:#ff7777;" | [[Samba_Release_Planning#Discontinued_.28End_of_Life.29|'''discontinued (EOL)''']] || 2008-07-02 || 2009-01-27 || 2009-08-11 || 2010-03-01
+|-
+| 3.0 ([[Release Planning for Samba 3.0|details]]) || [https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v3-0-test v3-0-test] || style="background:#ff7777;" | [[Samba_Release_Planning#Discontinued_.28End_of_Life.29|'''discontinued (EOL)''']] || 2003-09-24 || 2008-07-02 || 2009-01-27 || 2009-08-05
+|-
+|}
+
+''Dates in the future are marked ~ for approximate and are simple forecasts based on the historical release pattern described above.  The specific details of the release cycle are at the discretion of the release manager in consultation with the Samba Team''
+
+== Modes ==
+
+The mode describes the status of the release series.
+The following modes exist:
+* Upcoming Release
+* Current Stable Release
+* Maintenance Mode
+* Security Fixes Only Mode
+* Discontinued
+
+=== Upcoming Release ===
+
+This is the new upcoming release branch. It's not ready for production.
+The branch is created when the first Release candidate becomes available for testing, otherwise development happens in our master GIT branch.
+
+====[[Blocker bugs]] and time rather than feature based releases====
+Releases are made to a time-fixed schedule, so not all bugs found during testing will cause the release to be held back.  [[Blocker bugs]] are those few that meet the criteria for stopping a release candidate from becoming a release.
+
+=== Current Stable Release ===
+
+This is the current release branch. Available bug fixes will be included in the regular bug fix releases.
+Bug fix releases will be shipped every six weeks usually (and on a as needed basis).
+New features or parameters will be added to major releases only and not within a release cycle (there might be
+rare exceptions).
+
+=== Maintenance Mode ===
+
+Maintenance mode means that there are regular bug fix releases to address major issues and security issues.
+Less patches are backported to this branch than to the current release series.
+
+=== Security Fixes Only Mode ===
+
+Only security issues will be addressed in this release series.
+
+The [[Samba Security Process]] is used in in this and all previous stages to prepare patches and provide them to Samba vendors on an embargoed basis to allow a coordinated release.
+
+=== Discontinued (End of Life) ===
+
+There won't be any other versions of this release series.
+
+== Release Branch Checkin Procedure ==
+
+The '''release branch''' is created at the time of the first '''release candidate.''' 
+
+===Release git branches===
+Note there are two different branches:
+
+* '''v4-X-stable''': This is the last official release (or release candidate). Use this branch for back-porting security bug-fixes.
+* '''v4-X-test''': This is what will eventually become the next official release (excluding security releases). Use this branch for back-porting all other bug-fixes.
+
+===Patch Process===
+
+The release branches are '''closed''' to direct check-in as soon as they are created, so for all branches, only bug fixes are allowed into the branch, according to the following procedure:
+
+* Every bug that is to be patched in a '''release branch''' needs to be associated with a bug report in the [https://bugzilla.samba.org Samba Bugzilla].
+** If the bug is a '''regression''' that qualifies as [[blocker bugs|blocker bug]] to hold back a major release, ensure it marked as a '''regression''' and has the correct '''milestone''' set.
+* The patch for the bug should already be in [http://git.samba.org/?p=samba.git;a=shortlog master], if possible.  
+* Open the bug '''before''' making the commit into master, if it is expected that this patch will need to be backported.
+* Add the following tags to each patch to be backported
+ BUG: <nowiki>https://bugzilla.samba.org/show_bug.cgi?id=XXXXX</nowiki>
+ RN: <high-level description of the bugfix for the release notes (understandable 
+ for admins without code knowledge), can be multi-line, followed by a blank line
+ to mark the end of the RN>
+ 
+* Once '''past autobuild''' and '''in master''' on git.samba.org, it should be cherry-picked from master to the branch using '''git cherry-pick -x''' and '''git format-patch -1'''. The cherry-pick -x adds the '''(cherry picked from commit XXXXX)''' marker, which allows tracing of patch history though the different branches. Example:
+
+ (cherry picked from commit 047b0d8ab534c7a10a8572fd9f21e2456fd30710)
+
+* If the cherry-pick doesn't apply cleanly, change the line '''(cherry picked from commit XXXXX)''' to '''(backported from commit XXXXX)''' and add a terse oneliner that explains the conflict on the next line using the following format: '''[your@mail: reason]'''. Example:
+
+ (backported from commit 62621bd686a91328ae378cd56f9876c66be8eac4)
+ [slow@samba.org: delay_for_oplock() got refactored in 4.12]
+    
+* Add BUG tags to patches that do not already have them
+** The bug should be '''ASSIGNED''', reopen it if the bug is already closed.
+** It is acceptable to file a bug at this stage if one does not already exist.
+* The developer of the patch needs to convince '''two team members''' that the bug is critical enough to be included in a '''release branch'''.
+** This is done by setting the '''review?''' flag on the uploaded patch.
+** If you are a team member uploading the patch, one other team member needs to review the patch
+** If you are not a team member, just ask two team members to review.
+* Once reviewed, '''the reviewer''' should assign the patch to '''samba-release@samba.org'''.
+* The '''Release Manager''' then applies the patch from bugzilla only if the patch has been signed off by two members of the Samba Team.
+** The '''Release Manager''' then closes the bug when the patches have landed in all appropriate branches.
+
+===Late patches===
+
+* Please provide patches for release branches early.  
+* Patches supplied '''too close''' to the release date '''may not make it in.'''
+** Applying patches from bugzilla into a release branch is a manual process, so ''too close'' is entirely at the discretion of the Release Manager.
+** Patches without the full review markers etc will not be considered.
+* Avoid '''last-moment changes''' to release candidates (the [[Samba_Release_Planning#Upcoming Release|Upcoming Release]]).
+** Firstly this goes against the spirit of the name '''release candidate''' if it '''keeps changing'''.
+** Too many changes after the final release candidate [https://lists.samba.org/archive/samba-technical/2018-September/130069.html has delayed releases in the past].

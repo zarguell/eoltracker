@@ -47,6 +47,7 @@ NETSCALER_SOURCE = "https://www.citrix.com/support/product-lifecycle/product-mat
 NETSCALER_LEGACY = "https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html"
 CHECKPOINT_LIFECYCLE = "https://www.checkpoint.com/support-services/support-life-cycle-policy/"
 ODOO_SUPPORT = "https://www.odoo.com/documentation/master/administration/standard_extended_support.html"
+SAMBA_RELEASE_PLANNING = "https://wiki.samba.org/index.php/Samba_Release_Planning"
 
 # Attribution is published text (the site and the API docs print it verbatim):
 # eosl.date states no license for the data it republishes, so it is cited;
@@ -272,6 +273,20 @@ SOURCES = (
         attribution="Odoo release and standard-support calendar; standard support ending is not terminal or security support ending. Planned dates remain vendor text.",
         validator="engine.odoo.validate_record",
         report="odoo-import.json",
+    ),
+    Source(
+        id="import-samba",
+        module="engine.samba",
+        entry="import_samba",
+        verifier="deterministic-samba",
+        category="software",
+        name="Samba Release Planning",
+        url=SAMBA_RELEASE_PLANNING,
+        pages=(Page(SAMBA_RELEASE_PLANNING, "Samba release planning and supported release lifetime"),),
+        attribution="Samba release-series lifecycle published directly by the Samba project; "
+                    "~-marked future dates are the vendor's own forecasts and never deadlines.",
+        validator="engine.samba.validate_record",
+        report="samba-import.json",
     ),
 )
 

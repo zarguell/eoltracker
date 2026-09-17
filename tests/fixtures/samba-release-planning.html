@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html class="client-nojs vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-sticky-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-clientpref-1 vector-feature-main-menu-pinned-disabled vector-feature-limited-width-clientpref-1 vector-feature-limited-width-content-enabled vector-feature-custom-font-size-clientpref-0 vector-feature-appearance-pinned-clientpref-1 vector-feature-night-mode-disabled skin-theme-clientpref-day vector-toc-available" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>Samba Release Planning - SambaWiki</title>
+<script>(function(){var className="client-js vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-sticky-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-clientpref-1 vector-feature-main-menu-pinned-disabled vector-feature-limited-width-clientpref-1 vector-feature-limited-width-content-enabled vector-feature-custom-font-size-clientpref-0 vector-feature-appearance-pinned-clientpref-1 vector-feature-night-mode-disabled skin-theme-clientpref-day vector-toc-available";var cookie=document.cookie.match(/(?:^|; )samba_wikimwclientpreferences=([^;]+)/);if(cookie){cookie[1].split('%2C').forEach(function(pref){className=className.replace(new RegExp('(^| )'+pref.replace(/-clientpref-\w+$|[^\w-]+/g,'')+'-clientpref-\\w+( |$)'),'$1'+pref+'$2');});}document.documentElement.className=className;}());RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"94df16a4069ad343fbb972ac","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Samba_Release_Planning","wgTitle":"Samba Release Planning","wgCurRevisionId":19908,"wgRevisionId":19908,"wgArticleId":1900,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Samba_Release_Planning","wgRelevantArticleId":1900,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.search.codex.styles":"ready","skins.vector.styles":"ready","skins.vector.icons":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.js"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="https://wiki.samba.org/load.php?lang=en&amp;modules=skins.vector.icons%2Cstyles%7Cskins.vector.search.codex.styles&amp;only=styles&amp;skin=vector-2022">
+<script async="" src="https://wiki.samba.org/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector-2022"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="https://wiki.samba.org/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector-2022">
+<meta name="generator" content="MediaWiki 1.43.9">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+<link rel="icon" href="https://www.samba.org/samba/style/2010/grey/favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.samba.org/rest.php/v1/search" title="SambaWiki (en)">
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.samba.org/api.php?action=rsd">
+<link rel="license" href="https://wiki.samba.org/index.php/License">
+<link rel="alternate" type="application/atom+xml" title="SambaWiki Atom feed" href="https://wiki.samba.org/index.php?title=Special:RecentChanges&amp;feed=atom">
+</head>
+<body class="skin--responsive skin-vector skin-vector-search-vue mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Samba_Release_Planning rootpage-Samba_Release_Planning skin-vector-2022 action-view"><a class="mw-jump-link" href="#bodyContent">Jump to content</a>
+<div class="vector-header-container">
+	<header class="vector-header mw-header">
+		<div class="vector-header-start">
+			<nav class="vector-main-menu-landmark" aria-label="Site">
+				
+<div id="vector-main-menu-dropdown" class="vector-dropdown vector-main-menu-dropdown vector-button-flush-left vector-button-flush-right"  >
+	<input type="checkbox" id="vector-main-menu-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-main-menu-dropdown" class="vector-dropdown-checkbox "  aria-label="Main menu"  >
+	<label id="vector-main-menu-dropdown-label" for="vector-main-menu-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-menu mw-ui-icon-wikimedia-menu"></span>
+
+<span class="vector-dropdown-label-text">Main menu</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+				<div id="vector-main-menu-unpinned-container" class="vector-unpinned-container">
+		
+<div id="vector-main-menu" class="vector-main-menu vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-main-menu-pinnable-header vector-pinnable-header-unpinned"
+	data-feature-name="main-menu-pinned"
+	data-pinnable-element-id="vector-main-menu"
+	data-pinned-container-id="vector-main-menu-pinned-container"
+	data-unpinned-container-id="vector-main-menu-unpinned-container"
+>
+	<div class="vector-pinnable-header-label">Main menu</div>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-main-menu.pin">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-main-menu.unpin">hide</button>
+</div>
+
+	
+<div id="p-navigation" class="vector-menu mw-portlet mw-portlet-navigation"  >
+	<div class="vector-menu-heading">
+		Navigation
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-Main-Page" class="mw-list-item"><a href="https://wiki.samba.org/index.php/Main_Page"><span>Main Page</span></a></li><li id="n-User-Documentation" class="mw-list-item"><a href="https://wiki.samba.org/index.php/User_Documentation"><span>User Documentation</span></a></li><li id="n-Developer-Documentation" class="mw-list-item"><a href="https://wiki.samba.org/index.php/Developer_Documentation"><span>Developer Documentation</span></a></li><li id="n-Categories" class="mw-list-item"><a href="https://wiki.samba.org/index.php/Special:Categories"><span>Categories</span></a></li><li id="n-Current-Events" class="mw-list-item"><a href="https://wiki.samba.org/index.php/SambaWiki:Current_events"><span>Current Events</span></a></li><li id="n-Recent-Changes" class="mw-list-item"><a href="https://wiki.samba.org/index.php/Special:RecentChanges"><span>Recent Changes</span></a></li><li id="n-Random-Page" class="mw-list-item"><a href="https://wiki.samba.org/index.php/Special:Random"><span>Random Page</span></a></li><li id="n-Report-Samba-Bug" class="mw-list-item"><a href="https://wiki.samba.org/index.php/Bug_Reporting"><span>Report Samba Bug</span></a></li><li id="n-Report-Doc-Bug" class="mw-list-item"><a href="https://wiki.samba.org/index.php/Reporting_a_Bug_in_the_Samba_Documentation"><span>Report Doc Bug</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+	
+	
+</div>
+
+				</div>
+
+	</div>
+</div>
+
+		</nav>
+			
+<a href="https://wiki.samba.org/index.php/Main_Page" class="mw-logo">
+	<span class="mw-logo-container skin-invert">
+		<strong class="mw-logo-wordmark">SambaWiki</strong>
+	</span>
+</a>
+
+		</div>
+		<div class="vector-header-end">
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-collapses vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<a href="https://wiki.samba.org/index.php/Special:Search" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only search-toggle" title="Search SambaWiki [f]" accesskey="f"><span class="vector-icon mw-ui-icon-search mw-ui-icon-wikimedia-search"></span>
+
+<span>Search</span>
+	</a>
+	<div class="vector-typeahead-search-container">
+		<div class="cdx-typeahead-search cdx-typeahead-search--show-thumbnail cdx-typeahead-search--auto-expand-width">
+			<form action="https://wiki.samba.org/index.php" id="searchform" class="cdx-search-input cdx-search-input--has-end-button">
+				<div id="simpleSearch" class="cdx-search-input__input-wrapper"  data-search-loc="header-moved">
+					<div class="cdx-text-input cdx-text-input--has-start-icon">
+						<input
+							class="cdx-text-input__input"
+							 type="search" name="search" placeholder="Search SambaWiki" aria-label="Search SambaWiki" autocapitalize="sentences" title="Search SambaWiki [f]" accesskey="f" id="searchInput"
+							>
+						<span class="cdx-text-input__icon cdx-text-input__start-icon"></span>
+					</div>
+					<input type="hidden" name="title" value="Special:Search">
+				</div>
+				<button class="cdx-button cdx-search-input__end-button">Search</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+			<nav class="vector-user-links vector-user-links-wide" aria-label="Personal tools">
+	<div class="vector-user-links-main">
+	
+<div id="p-vector-user-menu-preferences" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	
+<div id="p-vector-user-menu-userpage" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	<nav class="vector-appearance-landmark" aria-label="Appearance">
+		
+<div id="vector-appearance-dropdown" class="vector-dropdown "  title="Change the appearance of the page&#039;s font size, width, and color" >
+	<input type="checkbox" id="vector-appearance-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-appearance-dropdown" class="vector-dropdown-checkbox "  aria-label="Appearance"  >
+	<label id="vector-appearance-dropdown-label" for="vector-appearance-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-appearance mw-ui-icon-wikimedia-appearance"></span>
+
+<span class="vector-dropdown-label-text">Appearance</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+			<div id="vector-appearance-unpinned-container" class="vector-unpinned-container">
+				
+			</div>
+		
+	</div>
+</div>
+
+	</nav>
+	
+<div id="p-vector-user-menu-notifications" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	
+<div id="p-vector-user-menu-overflow" class="vector-menu mw-portlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			<li id="pt-createaccount-2" class="user-links-collapsible-item mw-list-item user-links-collapsible-item"><a data-mw="interface" href="https://wiki.samba.org/index.php?title=Special:CreateAccount&amp;returnto=Samba+Release+Planning" title="You are encouraged to create an account and log in; however, it is not mandatory" class=""><span>Create account</span></a>
+</li>
+<li id="pt-login-2" class="user-links-collapsible-item mw-list-item user-links-collapsible-item"><a data-mw="interface" href="https://wiki.samba.org/index.php?title=Special:UserLogin&amp;returnto=Samba+Release+Planning" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class=""><span>Log in</span></a>
+</li>
+
+			
+		</ul>
+		
+	</div>
+</div>
+
+	</div>
+	
+<div id="vector-user-links-dropdown" class="vector-dropdown vector-user-menu vector-button-flush-right vector-user-menu-logged-out user-links-collapsible-item"  title="More options" >
+	<input type="checkbox" id="vector-user-links-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-user-links-dropdown" class="vector-dropdown-checkbox "  aria-label="Personal tools"  >
+	<label id="vector-user-links-dropdown-label" for="vector-user-links-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-ellipsis mw-ui-icon-wikimedia-ellipsis"></span>
+
+<span class="vector-dropdown-label-text">Personal tools</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+		
+<div id="p-personal" class="vector-menu mw-portlet mw-portlet-personal user-links-collapsible-item"  title="User menu" >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="pt-createaccount" class="user-links-collapsible-item mw-list-item"><a href="https://wiki.samba.org/index.php?title=Special:CreateAccount&amp;returnto=Samba+Release+Planning" title="You are encouraged to create an account and log in; however, it is not mandatory"><span class="vector-icon mw-ui-icon-userAdd mw-ui-icon-wikimedia-userAdd"></span> <span>Create account</span></a></li><li id="pt-login" class="user-links-collapsible-item mw-list-item"><a href="https://wiki.samba.org/index.php?title=Special:UserLogin&amp;returnto=Samba+Release+Planning" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span class="vector-icon mw-ui-icon-logIn mw-ui-icon-wikimedia-logIn"></span> <span>Log in</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+	
+	</div>
+</div>
+
+</nav>
+
+		</div>
+	</header>
+</div>
+<div class="mw-page-container">
+	<div class="mw-page-container-inner">
+		<div class="vector-sitenotice-container">
+			<div id="siteNotice"></div>
+		</div>
+		<div class="vector-column-start">
+			<div class="vector-main-menu-container">
+		<div id="mw-navigation">
+			<nav id="mw-panel" class="vector-main-menu-landmark" aria-label="Site">
+				<div id="vector-main-menu-pinned-container" class="vector-pinned-container">
+				
+				</div>
+		</nav>
+		</div>
+	</div>
+	<div class="vector-sticky-pinned-container">
+				<nav id="mw-panel-toc" aria-label="Contents" data-event-name="ui.sidebar-toc" class="mw-table-of-contents-container vector-toc-landmark">
+					<div id="vector-toc-pinned-container" class="vector-pinned-container">
+					<div id="vector-toc" class="vector-toc vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-toc-pinnable-header vector-pinnable-header-pinned"
+	data-feature-name="toc-pinned"
+	data-pinnable-element-id="vector-toc"
+	
+	
+>
+	<h2 class="vector-pinnable-header-label">Contents</h2>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-toc.pin">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-toc.unpin">hide</button>
+</div>
+
+
+	<ul class="vector-toc-contents" id="mw-panel-toc-list">
+		<li id="toc-mw-content-text"
+			class="vector-toc-list-item vector-toc-level-1">
+			<a href="#" class="vector-toc-link">
+				<div class="vector-toc-text">Beginning</div>
+			</a>
+		</li>
+		<li id="toc-Samba_Release_Planning_and_Supported_Release_Lifetime"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Samba_Release_Planning_and_Supported_Release_Lifetime">
+			<div class="vector-toc-text">
+				<span class="vector-toc-numb">1</span>
+				<span>Samba Release Planning and Supported Release Lifetime</span>
+			</div>
+		</a>
+		
+			<button aria-controls="toc-Samba_Release_Planning_and_Supported_Release_Lifetime-sublist" class="cdx-button cdx-button--weight-quiet cdx-button--icon-only vector-toc-toggle">
+				<span class="vector-icon mw-ui-icon-wikimedia-expand"></span>
+				<span>Toggle Samba Release Planning and Supported Release Lifetime subsection</span>
+			</button>
+		
+		<ul id="toc-Samba_Release_Planning_and_Supported_Release_Lifetime-sublist" class="vector-toc-list">
+			<li id="toc-Future_Development_Roadmap"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Future_Development_Roadmap">
+				<div class="vector-toc-text">
+					<span class="vector-toc-numb">1.1</span>
+					<span>Future Development Roadmap</span>
+				</div>
+			</a>
+			
+			<ul id="toc-Future_Development_Roadmap-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-General_information"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#General_information">
+				<div class="vector-toc-text">
+					<span class="vector-toc-numb">1.2</span>
+					<span>General information</span>
+				</div>
+			</a>
+			
+			<ul id="toc-General_information-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Modes"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Modes">
+				<div class="vector-toc-text">
+					<span class="vector-toc-numb">1.3</span>
+					<span>Modes</span>
+				</div>
+			</a>
+			
+			<ul id="toc-Modes-sublist" class="vector-toc-list">
+				<li id="toc-Upcoming_Release"
+			class="vector-toc-list-item vector-toc-level-3">
+			<a class="vector-toc-link" href="#Upcoming_Release">
+				<div class="vector-toc-text">
+					<span class="vector-toc-numb">1.3.1</span>
+					<span>Upcoming Release</span>
+				</div>
+			</a>
+			
+			<ul id="toc-Upcoming_Release-sublist" class="vector-toc-list">
+				<li id="toc-Blocker_bugs_and_time_rather_than_feature_based_releases"
+			class="vector-toc-list-item vector-toc-level-4">
+			<a class="vector-toc-link" href="#Blocker_bugs_and_time_rather_than_feature_based_releases">
+				<div class="vector-toc-text">
+					<span class="vector-toc-numb">1.3.1.1</span>
+					<span>Blocker bugs and time rather than feature based releases</span>
+				</div>
+			</a>
+			
+			<ul id="toc-Blocker_bugs_and_time_rather_than_feature_based_releases-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+	</ul>
+		</li>
+		<li id="toc-Current_Stable_Release"
+			class="vector-toc-list-item vector-toc-level-3">
+			<a class="vector-toc-link" href="#Current_Stable_Release">
+				<div class="vector-toc-text">
+					<span class="vector-toc-numb">1.3.2</span>
+					<span>Current Stable Release</span>
+				</div>
+			</a>
+			
+			<ul id="toc-Current_Stable_Release-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Maintenance_Mode"
+			class="vector-toc-list-item vector-toc-level-3">
+			<a class="vector-toc-link" href="#Maintenance_Mode">
+				<div class="vector-toc-text">
+					<span class="vector-toc-numb">1.3.3</span>
+					<span>Maintenance Mode</span>
+				</div>
+			</a>
+			
+			<ul id="toc-Maintenance_Mode-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Security_Fixes_Only_Mode"
+			class="vector-toc-list-item vector-toc-level-3">
+			<a class="vector-toc-link" href="#Security_Fixes_Only_Mode">
+				<div class="vector-toc-text">
+					<span class="vector-toc-numb">1.3.4</span>
+					<span>Security Fixes Only Mode</span>
+				</div>
+			</a>
+			
+			<ul id="toc-Security_Fixes_Only_Mode-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Discontinued_(End_of_Life)"
+			class="vector-toc-list-item vector-toc-level-3">
+			<a class="vector-toc-link" href="#Discontinued_(End_of_Life)">
+				<div class="vector-toc-text">
+					<span class="vector-toc-numb">1.3.5</span>
+					<span>Discontinued (End of Life)</span>
+				</div>
+			</a>
+			
+			<ul id="toc-Discontinued_(End_of_Life)-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+	</ul>
+		</li>
+		<li id="toc-Release_Branch_Checkin_Procedure"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Release_Branch_Checkin_Procedure">
+				<div class="vector-toc-text">
+					<span class="vector-toc-numb">1.4</span>
+					<span>Release Branch Checkin Procedure</span>
+				</div>
+			</a>
+			
+			<ul id="toc-Release_Branch_Checkin_Procedure-sublist" class="vector-toc-list">
+				<li id="toc-Release_git_branches"
+			class="vector-toc-list-item vector-toc-level-3">
+			<a class="vector-toc-link" href="#Release_git_branches">
+				<div class="vector-toc-text">
+					<span class="vector-toc-numb">1.4.1</span>
+					<span>Release git branches</span>
+				</div>
+			</a>
+			
+			<ul id="toc-Release_git_branches-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Patch_Process"
+			class="vector-toc-list-item vector-toc-level-3">
+			<a class="vector-toc-link" href="#Patch_Process">
+				<div class="vector-toc-text">
+					<span class="vector-toc-numb">1.4.2</span>
+					<span>Patch Process</span>
+				</div>
+			</a>
+			
+			<ul id="toc-Patch_Process-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Late_patches"
+			class="vector-toc-list-item vector-toc-level-3">
+			<a class="vector-toc-link" href="#Late_patches">
+				<div class="vector-toc-text">
+					<span class="vector-toc-numb">1.4.3</span>
+					<span>Late patches</span>
+				</div>
+			</a>
+			
+			<ul id="toc-Late_patches-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+	</ul>
+		</li>
+	</ul>
+	</li>
+</ul>
+</div>
+
+					</div>
+		</nav>
+			</div>
+		</div>
+		<div class="mw-content-container">
+			<main id="content" class="mw-body">
+				<header class="mw-body-header vector-page-titlebar">
+					<nav aria-label="Contents" class="vector-toc-landmark">
+						
+<div id="vector-page-titlebar-toc" class="vector-dropdown vector-page-titlebar-toc vector-button-flush-left"  >
+	<input type="checkbox" id="vector-page-titlebar-toc-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-page-titlebar-toc" class="vector-dropdown-checkbox "  aria-label="Toggle the table of contents"  >
+	<label id="vector-page-titlebar-toc-label" for="vector-page-titlebar-toc-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-listBullet mw-ui-icon-wikimedia-listBullet"></span>
+
+<span class="vector-dropdown-label-text">Toggle the table of contents</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+							<div id="vector-page-titlebar-toc-unpinned-container" class="vector-unpinned-container">
+			</div>
+		
+	</div>
+</div>
+
+					</nav>
+					<h1 id="firstHeading" class="firstHeading mw-first-heading"><span class="mw-page-title-main">Samba Release Planning</span></h1>
+				</header>
+				<div class="vector-page-toolbar">
+					<div class="vector-page-toolbar-container">
+						<div id="left-navigation">
+							<nav aria-label="Namespaces">
+								
+<div id="p-associated-pages" class="vector-menu vector-menu-tabs mw-portlet mw-portlet-associated-pages"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-nstab-main" class="selected vector-tab-noicon mw-list-item"><a href="https://wiki.samba.org/index.php/Samba_Release_Planning" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new vector-tab-noicon mw-list-item"><a href="https://wiki.samba.org/index.php?title=Talk:Samba_Release_Planning&amp;action=edit&amp;redlink=1" rel="discussion" class="new" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+								
+<div id="vector-variants-dropdown" class="vector-dropdown emptyPortlet"  >
+	<input type="checkbox" id="vector-variants-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-variants-dropdown" class="vector-dropdown-checkbox " aria-label="Change language variant"   >
+	<label id="vector-variants-dropdown-label" for="vector-variants-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet" aria-hidden="true"  ><span class="vector-dropdown-label-text">English</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+					
+<div id="p-variants" class="vector-menu mw-portlet mw-portlet-variants emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+				
+	</div>
+</div>
+
+							</nav>
+						</div>
+						<div id="right-navigation" class="vector-collapsible">
+							<nav aria-label="Views">
+								
+<div id="p-views" class="vector-menu vector-menu-tabs mw-portlet mw-portlet-views"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-view" class="selected vector-tab-noicon mw-list-item"><a href="https://wiki.samba.org/index.php/Samba_Release_Planning"><span>Read</span></a></li><li id="ca-viewsource" class="vector-tab-noicon mw-list-item"><a href="https://wiki.samba.org/index.php?title=Samba_Release_Planning&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="vector-tab-noicon mw-list-item"><a href="https://wiki.samba.org/index.php?title=Samba_Release_Planning&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+							</nav>
+				
+							<nav class="vector-page-tools-landmark" aria-label="Page tools">
+								
+<div id="vector-page-tools-dropdown" class="vector-dropdown vector-page-tools-dropdown"  >
+	<input type="checkbox" id="vector-page-tools-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-page-tools-dropdown" class="vector-dropdown-checkbox "  aria-label="Tools"  >
+	<label id="vector-page-tools-dropdown-label" for="vector-page-tools-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet" aria-hidden="true"  ><span class="vector-dropdown-label-text">Tools</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+									<div id="vector-page-tools-unpinned-container" class="vector-unpinned-container">
+						
+<div id="vector-page-tools" class="vector-page-tools vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-page-tools-pinnable-header vector-pinnable-header-unpinned"
+	data-feature-name="page-tools-pinned"
+	data-pinnable-element-id="vector-page-tools"
+	data-pinned-container-id="vector-page-tools-pinned-container"
+	data-unpinned-container-id="vector-page-tools-unpinned-container"
+>
+	<div class="vector-pinnable-header-label">Tools</div>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-page-tools.pin">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-page-tools.unpin">hide</button>
+</div>
+
+	
+<div id="p-cactions" class="vector-menu mw-portlet mw-portlet-cactions emptyPortlet vector-has-collapsible-items"  title="More options" >
+	<div class="vector-menu-heading">
+		Actions
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-more-view" class="selected vector-more-collapsible-item mw-list-item"><a href="https://wiki.samba.org/index.php/Samba_Release_Planning"><span>Read</span></a></li><li id="ca-more-viewsource" class="vector-more-collapsible-item mw-list-item"><a href="https://wiki.samba.org/index.php?title=Samba_Release_Planning&amp;action=edit"><span>View source</span></a></li><li id="ca-more-history" class="vector-more-collapsible-item mw-list-item"><a href="https://wiki.samba.org/index.php?title=Samba_Release_Planning&amp;action=history"><span>View history</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-tb" class="vector-menu mw-portlet mw-portlet-tb"  >
+	<div class="vector-menu-heading">
+		General
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="t-whatlinkshere" class="mw-list-item"><a href="https://wiki.samba.org/index.php/Special:WhatLinksHere/Samba_Release_Planning" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="https://wiki.samba.org/index.php/Special:RecentChangesLinked/Samba_Release_Planning" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="https://wiki.samba.org/index.php/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.samba.org/index.php?title=Samba_Release_Planning&amp;oldid=19908" title="Permanent link to this revision of this page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.samba.org/index.php?title=Samba_Release_Planning&amp;action=info" title="More information about this page"><span>Page information</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+</div>
+
+									</div>
+				
+	</div>
+</div>
+
+							</nav>
+						</div>
+					</div>
+				</div>
+				<div class="vector-column-end">
+					<div class="vector-sticky-pinned-container">
+						<nav class="vector-page-tools-landmark" aria-label="Page tools">
+							<div id="vector-page-tools-pinned-container" class="vector-pinned-container">
+				
+							</div>
+		</nav>
+						<nav class="vector-appearance-landmark" aria-label="Appearance">
+							<div id="vector-appearance-pinned-container" class="vector-pinned-container">
+				<div id="vector-appearance" class="vector-appearance vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-appearance-pinnable-header vector-pinnable-header-pinned"
+	data-feature-name="appearance-pinned"
+	data-pinnable-element-id="vector-appearance"
+	data-pinned-container-id="vector-appearance-pinned-container"
+	data-unpinned-container-id="vector-appearance-unpinned-container"
+>
+	<div class="vector-pinnable-header-label">Appearance</div>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-appearance.pin">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-appearance.unpin">hide</button>
+</div>
+
+
+</div>
+
+							</div>
+		</nav>
+					</div>
+				</div>
+				<div id="bodyContent" class="vector-body" aria-labelledby="firstHeading" data-mw-ve-target-container>
+					<div class="vector-body-before-content">
+							<div class="mw-indicators">
+		</div>
+
+						<div id="siteSub" class="noprint">From SambaWiki</div>
+					</div>
+					<div id="contentSub"><div id="mw-content-subtitle"></div></div>
+					
+					
+					<div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><p><br />
+</p>
+<meta property="mw:PageProp/toc" />
+<h1><span class="mw-headline" id="Samba_Release_Planning_and_Supported_Release_Lifetime">Samba Release Planning and Supported Release Lifetime</span></h1>
+<h2><span class="mw-headline" id="Future_Development_Roadmap">Future Development Roadmap</span></h2>
+<p>As each item, and parts of each item on Samba's <a href="https://wiki.samba.org/index.php/Roadmap" title="Roadmap">future development</a> is completed, the features are landed in the <a rel="nofollow" class="external text" href="http://git.samba.org/?p=samba.git;a=shortlog">master branch</a>, for inclusion in the <a class="mw-selflink-fragment" href="#Upcoming_Release">next stable release</a> of Samba.  Development in master is ongoing, in parallel to our stable releases, and new features always land on master first.
+</p>
+<h2><span class="mw-headline" id="General_information">General information</span></h2>
+<p>The regular Samba release cycle intends a new release series
+</p>
+<ul><li>six months fully supported,</li>
+<li>another six months in the maintenance mode,</li>
+<li>six months in the security fixes only mode.</li></ul>
+<p>In total, each series is maintained for a period of approximately 18 months.
+</p><p><b>Example:</b>
+</p><p>If 4.5 is the current release series, then 4.4 would be in maintenance mode and 
+4.3 would be in the security fixes only mode. The support of 4.2 would be
+stopped with the release of 4.5.0.
+</p><p>Each series can have any number of desired minor releases.
+These are usually released every 6 weeks (current stable release series),
+resp. every 9 weeks (maintenance mode).
+</p><p>Any discontinued (EOL) series will not receive any further updates. 
+</p>
+<table class="wikitable">
+
+<tbody><tr>
+<th style="background:#dfdfdf;">series</th>
+<th style="background:#dfdfdf;"><a rel="nofollow" class="external text" href="https://git.samba.org/?p=samba.git;a=heads">git branch</a></th>
+<th style="background:#dfdfdf;">status</th>
+<th style="background:#dfdfdf;">started</th>
+<th style="background:#dfdfdf;">maintenance</th>
+<th style="background:#dfdfdf;">security</th>
+<th style="background:#dfdfdf;">discontinued (EOL)
+</th></tr>
+<tr>
+<td>4.25 (<a href="https://wiki.samba.org/index.php/Release_Planning_for_Samba_4.25" title="Release Planning for Samba 4.25">details</a>)</td>
+<td><a rel="nofollow" class="external text" href="https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-25-test">v4-25-test</a></td>
+<td style="background:#87CEFA;"><a class="mw-selflink-fragment" href="#Upcoming_Release">next upcoming release series</a></td>
+<td><i>~2026-09</i></td>
+<td><i>~2027-03</i></td>
+<td><i>~2027-09</i></td>
+<td><i>~2028-03</i>
+</td></tr>
+<tr>
+<td>4.24 (<a href="https://wiki.samba.org/index.php/Release_Planning_for_Samba_4.24" title="Release Planning for Samba 4.24">details</a>)</td>
+<td><a rel="nofollow" class="external text" href="https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-24-test">v4-24-test</a></td>
+<td style="background:#77ff77;"><a class="mw-selflink-fragment" href="#Current_Stable_Release"><b>current stable release series</b></a></td>
+<td><i>~2026-03</i></td>
+<td><i>~2026-09</i></td>
+<td><i>~2027-03</i></td>
+<td><i>~2027-09</i>
+</td></tr>
+
+<tr>
+<td>4.23 (<a href="https://wiki.samba.org/index.php/Release_Planning_for_Samba_4.23" title="Release Planning for Samba 4.23">details</a>)</td>
+<td><a rel="nofollow" class="external text" href="https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-23-test">v4-23-test</a></td>
+<td style="background:#ffff77;"><a class="mw-selflink-fragment" href="#Maintenance_Mode"><b>maintenance mode</b></a></td>
+<td><i>2025-09-12</i></td>
+<td><i>~2026-03</i></td>
+<td><i>~2026-09</i></td>
+<td><i>~2027-03</i>
+</td></tr>
+
+<tr>
+<td>4.22 (<a href="https://wiki.samba.org/index.php/Release_Planning_for_Samba_4.22" title="Release Planning for Samba 4.22">details</a>)</td>
+<td><a rel="nofollow" class="external text" href="https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-22-test">v4-22-test</a></td>
+<td style="background:#ffab77;"><a class="mw-selflink-fragment" href="#Security_Fixes_Only_Mode"><b>security fixes only</b></a></td>
+<td><i>2025-03-06</i></td>
+<td><i>2025-09-12</i></td>
+<td><i>~2026-03</i></td>
+<td><i>~2026-09</i>
+</td></tr>
+
+<tr>
+<td>4.21 (<a href="https://wiki.samba.org/index.php/Release_Planning_for_Samba_4.21" title="Release Planning for Samba 4.21">details</a>)</td>
+<td><a rel="nofollow" class="external text" href="https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-21-test">v4-21-test</a></td>
+<td style="background:#ff7777;"><a class="mw-selflink-fragment" href="#Discontinued_.28End_of_Life.29"><b>discontinued (EOL)</b></a></td>
+<td><i>2024-09-02</i></td>
+<td><i>2025-03-06</i></td>
+<td><i>2025-09-12</i></td>
+<td><i>~2026-03</i>
+</td></tr>
+
+<tr>
+<td>4.20 (<a href="https://wiki.samba.org/index.php/Release_Planning_for_Samba_4.20" title="Release Planning for Samba 4.20">details</a>)</td>
+<td><a rel="nofollow" class="external text" href="https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-20-test">v4-20-test</a></td>
+<td style="background:#ff7777;"><a class="mw-selflink-fragment" href="#Discontinued_.28End_of_Life.29"><b>discontinued (EOL)</b></a></td>
+<td><i>2024-03-27</i></td>
+<td><i>2024-09-02</i></td>
+<td><i>2025-03-06</i></td>
+<td><i>2025-09-12</i>
+</td></tr>
+
+<tr>
+<td>4.19 (<a href="https://wiki.samba.org/index.php/Release_Planning_for_Samba_4.19" title="Release Planning for Samba 4.19">details</a>)</td>
+<td><a rel="nofollow" class="external text" href="https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-19-test">v4-19-test</a></td>
+<td style="background:#ff7777;"><a class="mw-selflink-fragment" href="#Discontinued_.28End_of_Life.29"><b>discontinued (EOL)</b></a></td>
+<td><i>2023-09-04</i></td>
+<td><i>2024-03-27</i></td>
+<td><i>2024-09-02</i></td>
+<td><i>2025-03-06</i>
+</td></tr>
+
+<tr>
+<td>4.18 (<a href="https://wiki.samba.org/index.php/Release_Planning_for_Samba_4.18" title="Release Planning for Samba 4.18">details</a>)</td>
+<td><a rel="nofollow" class="external text" href="https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-18-test">v4-18-test</a></td>
+<td style="background:#ff7777;"><a class="mw-selflink-fragment" href="#Discontinued_.28End_of_Life.29"><b>discontinued (EOL)</b></a></td>
+<td><i>2023-03-08</i></td>
+<td><i>2023-09-04</i></td>
+<td><i>2024-03-27</i></td>
+<td><i>2024-09-02</i>
+</td></tr>
+
+<tr>
+<td>4.17 (<a href="https://wiki.samba.org/index.php/Release_Planning_for_Samba_4.17" title="Release Planning for Samba 4.17">details</a>)</td>
+<td><a rel="nofollow" class="external text" href="https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-17-test">v4-17-test</a></td>
+<td style="background:#ff7777;"><a class="mw-selflink-fragment" href="#Discontinued_.28End_of_Life.29"><b>discontinued (EOL)</b></a></td>
+<td><i>2022-09-13</i></td>
+<td>2023-03-08<i></i></td>
+<td><i>2023-09-04</i></td>
+<td><i>2024-03-27</i>
+</td></tr>
+
+<tr>
+<td>4.16 (<a href="https://wiki.samba.org/index.php/Release_Planning_for_Samba_4.16" title="Release Planning for Samba 4.16">details</a>)</td>
+<td><a rel="nofollow" class="external text" href="https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-16-test">v4-16-test</a></td>
+<td style="background:#ff7777;"><a class="mw-selflink-fragment" href="#Discontinued_.28End_of_Life.29"><b>discontinued (EOL)</b></a></td>
+<td><i>2022-03-21</i></td>
+<td>2022-09-13<i></i></td>
+<td><i>2023-03-08</i></td>
+<td><i>2023-09-04</i>
+</td></tr>
+
+<tr>
+<td>4.15 (<a href="https://wiki.samba.org/index.php/Release_Planning_for_Samba_4.15" title="Release Planning for Samba 4.15">details</a>)</td>
+<td><a rel="nofollow" class="external text" href="https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-15-test">v4-15-test</a></td>
+<td style="background:#ff7777;"><a class="mw-selflink-fragment" href="#Discontinued_.28End_of_Life.29"><b>discontinued (EOL)</b></a></td>
+<td><i>2021-09-20</i></td>
+<td><i>2022-03-21</i></td>
+<td><i>2022-09-13</i></td>
+<td><i>2023-03-08</i>
+</td></tr>
+
+<tr>
+<td>4.14 (<a href="https://wiki.samba.org/index.php/Release_Planning_for_Samba_4.14" title="Release Planning for Samba 4.14">details</a>)</td>
+<td><a rel="nofollow" class="external text" href="https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-14-test">v4-14-test</a></td>
+<td style="background:#ff7777;"><a class="mw-selflink-fragment" href="#Discontinued_.28End_of_Life.29"><b>discontinued (EOL)</b></a></td>
+<td><i>2021-03-09</i></td>
+<td><i>2021-09-20</i></td>
+<td><i>2022-03-21</i></td>
+<td><i>2022-09-13</i>
+</td></tr>
+
+<tr>
+<td>4.13 (<a href="https://wiki.samba.org/index.php/Release_Planning_for_Samba_4.13" title="Release Planning for Samba 4.13">details</a>)</td>
+<td><a rel="nofollow" class="external text" href="https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-13-test">v4-13-test</a></td>
+<td style="background:#ff7777;"><a class="mw-selflink-fragment" href="#Discontinued_.28End_of_Life.29"><b>discontinued (EOL)</b></a></td>
+<td><i>2020-09-22</i></td>
+<td><i>2021-03-09</i></td>
+<td><i>2021-09-20</i></td>
+<td><i>2022-03-21</i>
+</td></tr>
+
+<tr>
+<td>4.12 (<a href="https://wiki.samba.org/index.php/Release_Planning_for_Samba_4.12" title="Release Planning for Samba 4.12">details</a>)</td>
+<td><a rel="nofollow" class="external text" href="https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-12-test">v4-12-test</a></td>
+<td style="background:#ff7777;"><a class="mw-selflink-fragment" href="#Discontinued_.28End_of_Life.29"><b>discontinued (EOL)</b></a></td>
+<td>2020-03-03</td>
+<td><i>2020-09-22</i></td>
+<td><i>2021-03-09</i></td>
+<td><i>2021-09-20</i>
+</td></tr>
+
+<tr>
+<td>4.11 (<a href="https://wiki.samba.org/index.php/Release_Planning_for_Samba_4.11" title="Release Planning for Samba 4.11">details</a>)</td>
+<td><a rel="nofollow" class="external text" href="https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-11-test">v4-11-test</a></td>
+<td style="background:#ff7777;"><a class="mw-selflink-fragment" href="#Discontinued_.28End_of_Life.29"><b>discontinued (EOL)</b></a></td>
+<td>2019-09-17</td>
+<td>2020-03-03</td>
+<td>2020-12-03</td>
+<td><i>2021-03-09</i>
+</td></tr>
+<tr>
+<td>4.10 (<a href="https://wiki.samba.org/index.php/Release_Planning_for_Samba_4.10" title="Release Planning for Samba 4.10">details</a>)</td>
+<td><a rel="nofollow" class="external text" href="https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-10-test">v4-10-test</a></td>
+<td style="background:#ff7777;"><a class="mw-selflink-fragment" href="#Discontinued_.28End_of_Life.29"><b>discontinued (EOL)</b></a></td>
+<td>2019-03-19</td>
+<td>2019-09-17</td>
+<td>2020-03-03</td>
+<td>2020-09-22
+</td></tr>
+<tr>
+<td>4.9 (<a href="https://wiki.samba.org/index.php/Release_Planning_for_Samba_4.9" title="Release Planning for Samba 4.9">details</a>)</td>
+<td><a rel="nofollow" class="external text" href="https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-9-test">v4-9-test</a></td>
+<td style="background:#ff7777;"><a class="mw-selflink-fragment" href="#Discontinued_.28End_of_Life.29"><b>discontinued (EOL)</b></a></td>
+<td>2018-09-13</td>
+<td>2019-03-19</td>
+<td>2019-09-17</td>
+<td>2020-03-03
+</td></tr>
+<tr>
+<td>4.8 (<a href="https://wiki.samba.org/index.php/Release_Planning_for_Samba_4.8" title="Release Planning for Samba 4.8">details</a>)</td>
+<td><a rel="nofollow" class="external text" href="https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-8-test">v4-8-test</a></td>
+<td style="background:#ff7777;"><a class="mw-selflink-fragment" href="#Discontinued_.28End_of_Life.29"><b>discontinued (EOL)</b></a></td>
+<td>2018-03-13</td>
+<td>2018-09-13</td>
+<td>2019-03-19</td>
+<td>2019-09-17
+</td></tr>
+<tr>
+<td>4.7 (<a href="https://wiki.samba.org/index.php/Release_Planning_for_Samba_4.7" title="Release Planning for Samba 4.7">details</a>)</td>
+<td><a rel="nofollow" class="external text" href="https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-7-test">v4-7-test</a></td>
+<td style="background:#ff7777;"><a class="mw-selflink-fragment" href="#Discontinued_.28End_of_Life.29"><b>discontinued (EOL)</b></a></td>
+<td>2017-09-21</td>
+<td>2018-03-13</td>
+<td>2018-09-13</td>
+<td>2019-03-19
+</td></tr>
+<tr>
+<td>4.6 (<a href="https://wiki.samba.org/index.php/Release_Planning_for_Samba_4.6" title="Release Planning for Samba 4.6">details</a>)</td>
+<td><a rel="nofollow" class="external text" href="https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-6-test">v4-6-test</a></td>
+<td style="background:#ff7777;"><a class="mw-selflink-fragment" href="#Discontinued_.28End_of_Life.29"><b>discontinued (EOL)</b></a></td>
+<td>2017-03-07</td>
+<td>2017-09-21</td>
+<td>2018-03-13</td>
+<td>2018-09-13
+</td></tr>
+<tr>
+<td>4.5 (<a href="https://wiki.samba.org/index.php/Release_Planning_for_Samba_4.5" title="Release Planning for Samba 4.5">details</a>)</td>
+<td><a rel="nofollow" class="external text" href="https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-5-test">v4-5-test</a></td>
+<td style="background:#ff7777;"><a class="mw-selflink-fragment" href="#Discontinued_.28End_of_Life.29"><b>discontinued (EOL)</b></a></td>
+<td>2016-09-07</td>
+<td>2017-03-07</td>
+<td>2017-09-21</td>
+<td>2018-03-13
+</td></tr>
+<tr>
+<td>4.4 (<a href="https://wiki.samba.org/index.php/Release_Planning_for_Samba_4.4" title="Release Planning for Samba 4.4">details</a>)</td>
+<td><a rel="nofollow" class="external text" href="https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-4-test">v4-4-test</a></td>
+<td style="background:#ff7777;"><a class="mw-selflink-fragment" href="#Discontinued_.28End_of_Life.29"><b>discontinued (EOL)</b></a></td>
+<td>2016-03-22</td>
+<td>2016-09-07</td>
+<td>2017-03-07</td>
+<td>2017-09-21
+</td></tr>
+<tr>
+<td>4.3 (<a href="https://wiki.samba.org/index.php/Release_Planning_for_Samba_4.3" title="Release Planning for Samba 4.3">details</a>)</td>
+<td><a rel="nofollow" class="external text" href="https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-3-test">v4-3-test</a></td>
+<td style="background:#ff7777;"><a class="mw-selflink-fragment" href="#Discontinued_.28End_of_Life.29"><b>discontinued (EOL)</b></a></td>
+<td>2015-09-08</td>
+<td>2016-03-22</td>
+<td>2016-09-07</td>
+<td>2017-03-07
+</td></tr>
+<tr>
+<td>4.2 (<a href="https://wiki.samba.org/index.php/Release_Planning_for_Samba_4.2" title="Release Planning for Samba 4.2">details</a>)</td>
+<td><a rel="nofollow" class="external text" href="https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-2-test">v4-2-test</a></td>
+<td style="background:#ff7777;"><a class="mw-selflink-fragment" href="#Discontinued_.28End_of_Life.29"><b>discontinued (EOL)</b></a></td>
+<td>2015-03-04</td>
+<td>2015-09-08</td>
+<td>2016-03-22</td>
+<td>2016-09-07
+</td></tr>
+<tr>
+<td>4.1 (<a href="https://wiki.samba.org/index.php/Release_Planning_for_Samba_4.1" title="Release Planning for Samba 4.1">details</a>)</td>
+<td><a rel="nofollow" class="external text" href="https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-1-test">v4-1-test</a></td>
+<td style="background:#ff7777;"><a class="mw-selflink-fragment" href="#Discontinued_.28End_of_Life.29"><b>discontinued (EOL)</b></a></td>
+<td>2013-10-11</td>
+<td>2015-03-04</td>
+<td>2015-09-08</td>
+<td>2016-03-22
+</td></tr>
+<tr>
+<td>4.0 (<a href="https://wiki.samba.org/index.php/Release_Planning_for_Samba_4.0" title="Release Planning for Samba 4.0">details</a>)</td>
+<td><a rel="nofollow" class="external text" href="https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v4-0-test">v4-0-test</a></td>
+<td style="background:#ff7777;"><a class="mw-selflink-fragment" href="#Discontinued_.28End_of_Life.29"><b>discontinued (EOL)</b></a></td>
+<td>2012-12-11</td>
+<td>2013-10-11</td>
+<td>2015-03-04</td>
+<td>2015-09-08
+</td></tr>
+<tr>
+<td>3.6 (<a href="https://wiki.samba.org/index.php/Release_Planning_for_Samba_3.6" title="Release Planning for Samba 3.6">details</a>)</td>
+<td><a rel="nofollow" class="external text" href="https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v3-6-test">v3-6-test</a></td>
+<td style="background:#ff7777;"><a class="mw-selflink-fragment" href="#Discontinued_.28End_of_Life.29"><b>discontinued (EOL)</b></a></td>
+<td>2011-08-09</td>
+<td>2012-12-11</td>
+<td>2013-11-29</td>
+<td>2015-03-04
+</td></tr>
+<tr>
+<td>3.5 (<a href="https://wiki.samba.org/index.php/Release_Planning_for_Samba_3.5" title="Release Planning for Samba 3.5">details</a>)</td>
+<td><a rel="nofollow" class="external text" href="https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v3-5-test">v3-5-test</a></td>
+<td style="background:#ff7777;"><a class="mw-selflink-fragment" href="#Discontinued_.28End_of_Life.29"><b>discontinued (EOL)</b></a></td>
+<td>2010-03-01</td>
+<td>2011-08-09</td>
+<td>~2012-12-17</td>
+<td>2013-10-11
+</td></tr>
+<tr>
+<td>3.4 (<a href="https://wiki.samba.org/index.php/Release_Planning_for_Samba_3.4" title="Release Planning for Samba 3.4">details</a>)</td>
+<td><a rel="nofollow" class="external text" href="https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v3-4-test">v3-4-test</a></td>
+<td style="background:#ff7777;"><a class="mw-selflink-fragment" href="#Discontinued_.28End_of_Life.29"><b>discontinued (EOL)</b></a></td>
+<td>2009-07-03</td>
+<td>2010-03-01</td>
+<td>~2011-08-23</td>
+<td>2012-12-11
+</td></tr>
+<tr>
+<td>3.3 (<a href="https://wiki.samba.org/index.php/Release_Planning_for_Samba_3.3" title="Release Planning for Samba 3.3">details</a>)</td>
+<td><a rel="nofollow" class="external text" href="https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v3-3-test">v3-3-test</a></td>
+<td style="background:#ff7777;"><a class="mw-selflink-fragment" href="#Discontinued_.28End_of_Life.29"><b>discontinued (EOL)</b></a></td>
+<td>2009-01-27</td>
+<td>2009-07-03</td>
+<td>2010-03-01</td>
+<td>2011-08-09
+</td></tr>
+<tr>
+<td>3.2 (<a href="https://wiki.samba.org/index.php/Release_Planning_for_Samba_3.2" title="Release Planning for Samba 3.2">details</a>)</td>
+<td><a rel="nofollow" class="external text" href="https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v3-2-test">v3-2-test</a></td>
+<td style="background:#ff7777;"><a class="mw-selflink-fragment" href="#Discontinued_.28End_of_Life.29"><b>discontinued (EOL)</b></a></td>
+<td>2008-07-02</td>
+<td>2009-01-27</td>
+<td>2009-08-11</td>
+<td>2010-03-01
+</td></tr>
+<tr>
+<td>3.0 (<a href="https://wiki.samba.org/index.php/Release_Planning_for_Samba_3.0" title="Release Planning for Samba 3.0">details</a>)</td>
+<td><a rel="nofollow" class="external text" href="https://git.samba.org/?p=samba.git;a=shortlog;h=refs/heads/v3-0-test">v3-0-test</a></td>
+<td style="background:#ff7777;"><a class="mw-selflink-fragment" href="#Discontinued_.28End_of_Life.29"><b>discontinued (EOL)</b></a></td>
+<td>2003-09-24</td>
+<td>2008-07-02</td>
+<td>2009-01-27</td>
+<td>2009-08-05
+</td></tr>
+</tbody></table>
+<p><i>Dates in the future are marked ~ for approximate and are simple forecasts based on the historical release pattern described above.  The specific details of the release cycle are at the discretion of the release manager in consultation with the Samba Team</i>
+</p>
+<h2><span class="mw-headline" id="Modes">Modes</span></h2>
+<p>The mode describes the status of the release series.
+The following modes exist:
+</p>
+<ul><li>Upcoming Release</li>
+<li>Current Stable Release</li>
+<li>Maintenance Mode</li>
+<li>Security Fixes Only Mode</li>
+<li>Discontinued</li></ul>
+<h3><span class="mw-headline" id="Upcoming_Release">Upcoming Release</span></h3>
+<p>This is the new upcoming release branch. It's not ready for production.
+The branch is created when the first Release candidate becomes available for testing, otherwise development happens in our master GIT branch.
+</p>
+<h4><span class="mw-headline" id="Blocker_bugs_and_time_rather_than_feature_based_releases"><a href="https://wiki.samba.org/index.php/Blocker_bugs" title="Blocker bugs">Blocker bugs</a> and time rather than feature based releases</span></h4>
+<p>Releases are made to a time-fixed schedule, so not all bugs found during testing will cause the release to be held back.  <a href="https://wiki.samba.org/index.php/Blocker_bugs" title="Blocker bugs">Blocker bugs</a> are those few that meet the criteria for stopping a release candidate from becoming a release.
+</p>
+<h3><span class="mw-headline" id="Current_Stable_Release">Current Stable Release</span></h3>
+<p>This is the current release branch. Available bug fixes will be included in the regular bug fix releases.
+Bug fix releases will be shipped every six weeks usually (and on a as needed basis).
+New features or parameters will be added to major releases only and not within a release cycle (there might be
+rare exceptions).
+</p>
+<h3><span class="mw-headline" id="Maintenance_Mode">Maintenance Mode</span></h3>
+<p>Maintenance mode means that there are regular bug fix releases to address major issues and security issues.
+Less patches are backported to this branch than to the current release series.
+</p>
+<h3><span class="mw-headline" id="Security_Fixes_Only_Mode">Security Fixes Only Mode</span></h3>
+<p>Only security issues will be addressed in this release series.
+</p><p>The <a href="https://wiki.samba.org/index.php/Samba_Security_Process" title="Samba Security Process">Samba Security Process</a> is used in in this and all previous stages to prepare patches and provide them to Samba vendors on an embargoed basis to allow a coordinated release.
+</p>
+<h3><span id="Discontinued_.28End_of_Life.29"></span><span class="mw-headline" id="Discontinued_(End_of_Life)">Discontinued (End of Life)</span></h3>
+<p>There won't be any other versions of this release series.
+</p>
+<h2><span class="mw-headline" id="Release_Branch_Checkin_Procedure">Release Branch Checkin Procedure</span></h2>
+<p>The <b>release branch</b> is created at the time of the first <b>release candidate.</b> 
+</p>
+<h3><span class="mw-headline" id="Release_git_branches">Release git branches</span></h3>
+<p>Note there are two different branches:
+</p>
+<ul><li><b>v4-X-stable</b>: This is the last official release (or release candidate). Use this branch for back-porting security bug-fixes.</li>
+<li><b>v4-X-test</b>: This is what will eventually become the next official release (excluding security releases). Use this branch for back-porting all other bug-fixes.</li></ul>
+<h3><span class="mw-headline" id="Patch_Process">Patch Process</span></h3>
+<p>The release branches are <b>closed</b> to direct check-in as soon as they are created, so for all branches, only bug fixes are allowed into the branch, according to the following procedure:
+</p>
+<ul><li>Every bug that is to be patched in a <b>release branch</b> needs to be associated with a bug report in the <a rel="nofollow" class="external text" href="https://bugzilla.samba.org">Samba Bugzilla</a>.
+<ul><li>If the bug is a <b>regression</b> that qualifies as <a href="https://wiki.samba.org/index.php/Blocker_bugs" title="Blocker bugs">blocker bug</a> to hold back a major release, ensure it marked as a <b>regression</b> and has the correct <b>milestone</b> set.</li></ul></li>
+<li>The patch for the bug should already be in <a rel="nofollow" class="external text" href="http://git.samba.org/?p=samba.git;a=shortlog">master</a>, if possible.</li>
+<li>Open the bug <b>before</b> making the commit into master, if it is expected that this patch will need to be backported.</li>
+<li>Add the following tags to each patch to be backported</li></ul>
+<pre>BUG: https://bugzilla.samba.org/show_bug.cgi?id=XXXXX
+RN: &lt;high-level description of the bugfix for the release notes (understandable 
+for admins without code knowledge), can be multi-line, followed by a blank line
+to mark the end of the RN&gt;
+
+</pre>
+<ul><li>Once <b>past autobuild</b> and <b>in master</b> on git.samba.org, it should be cherry-picked from master to the branch using <b>git cherry-pick -x</b> and <b>git format-patch -1</b>. The cherry-pick -x adds the <b>(cherry picked from commit XXXXX)</b> marker, which allows tracing of patch history though the different branches. Example:</li></ul>
+<pre>(cherry picked from commit 047b0d8ab534c7a10a8572fd9f21e2456fd30710)
+</pre>
+<ul><li>If the cherry-pick doesn't apply cleanly, change the line <b>(cherry picked from commit XXXXX)</b> to <b>(backported from commit XXXXX)</b> and add a terse oneliner that explains the conflict on the next line using the following format: <b>[your@mail: reason]</b>. Example:</li></ul>
+<pre>(backported from commit 62621bd686a91328ae378cd56f9876c66be8eac4)
+[slow@samba.org: delay_for_oplock() got refactored in 4.12]
+   
+</pre>
+<ul><li>Add BUG tags to patches that do not already have them
+<ul><li>The bug should be <b>ASSIGNED</b>, reopen it if the bug is already closed.</li>
+<li>It is acceptable to file a bug at this stage if one does not already exist.</li></ul></li>
+<li>The developer of the patch needs to convince <b>two team members</b> that the bug is critical enough to be included in a <b>release branch</b>.
+<ul><li>This is done by setting the <b>review?</b> flag on the uploaded patch.</li>
+<li>If you are a team member uploading the patch, one other team member needs to review the patch</li>
+<li>If you are not a team member, just ask two team members to review.</li></ul></li>
+<li>Once reviewed, <b>the reviewer</b> should assign the patch to <b>samba-release@samba.org</b>.</li>
+<li>The <b>Release Manager</b> then applies the patch from bugzilla only if the patch has been signed off by two members of the Samba Team.
+<ul><li>The <b>Release Manager</b> then closes the bug when the patches have landed in all appropriate branches.</li></ul></li></ul>
+<h3><span class="mw-headline" id="Late_patches">Late patches</span></h3>
+<ul><li>Please provide patches for release branches early.</li>
+<li>Patches supplied <b>too close</b> to the release date <b>may not make it in.</b>
+<ul><li>Applying patches from bugzilla into a release branch is a manual process, so <i>too close</i> is entirely at the discretion of the Release Manager.</li>
+<li>Patches without the full review markers etc will not be considered.</li></ul></li>
+<li>Avoid <b>last-moment changes</b> to release candidates (the <a class="mw-selflink-fragment" href="#Upcoming_Release">Upcoming Release</a>).
+<ul><li>Firstly this goes against the spirit of the name <b>release candidate</b> if it <b>keeps changing</b>.</li>
+<li>Too many changes after the final release candidate <a rel="nofollow" class="external text" href="https://lists.samba.org/archive/samba-technical/2018-September/130069.html">has delayed releases in the past</a>.</li></ul></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20260917225057
+Cache expiry: 60
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.056 seconds
+Real time usage: 0.058 seconds
+Preprocessor visited node count: 178/1000000
+Post‐expand include size: 104/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 7/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 48/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key samba_wiki:pcache:idhash:1900-0!canonical and timestamp 20260917225057 and revision id 19908. Rendering was triggered because: page-view
+ -->
+</div>
+<div class="printfooter" data-nosnippet="">Retrieved from "<a dir="ltr" href="https://wiki.samba.org/index.php?title=Samba_Release_Planning&amp;oldid=19908">https://wiki.samba.org/index.php?title=Samba_Release_Planning&amp;oldid=19908</a>"</div></div>
+					<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+				</div>
+			</main>
+			
+		</div>
+		<div class="mw-footer-container">
+			
+<footer id="footer" class="mw-footer" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 16 August 2026, at 22:57.</li>
+	<li id="footer-info-copyright">Content is available under <a href="https://wiki.samba.org/index.php/License" title="License">CC-BY</a> unless otherwise noted.</li>
+	<li id="footer-info-viewcount">This page has been accessed 461,383 times.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="https://wiki.samba.org/index.php/SambaWiki:Privacy_policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="https://wiki.samba.org/index.php/SambaWiki:About">About SambaWiki</a></li>
+	<li id="footer-places-disclaimers"><a href="https://wiki.samba.org/index.php/SambaWiki:General_disclaimer">Disclaimers</a></li>
+</ul>
+
+	<ul id="" class="noprint">
+</ul>
+
+</footer>
+
+		</div>
+	</div> 
+</div> 
+<div class="vector-settings" id="p-dock-bottom">
+	<ul></ul>
+</div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":215,"wgPageParseReport":{"limitreport":{"cputime":"0.056","walltime":"0.058","ppvisitednodes":{"value":178,"limit":1000000},"postexpandincludesize":{"value":104,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":7,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":48,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20260917225057","ttl":60,"transientcontent":false}}});});</script>
+</body>
+</html>
