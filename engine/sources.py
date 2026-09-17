@@ -231,6 +231,20 @@ SOURCES = (
         validator="engine.ceph.validate_record",
         report="ceph-import.json",
     ),
+    Source(
+        id="import-powerdns-authoritative",
+        module="engine.powerdns",
+        entry="import_authoritative",
+        verifier="deterministic-powerdns-authoritative",
+        category="software",
+        name="PowerDNS Authoritative Server",
+        url="https://doc.powerdns.com/authoritative/appendices/EOL.html",
+        pages=(Page("https://doc.powerdns.com/authoritative/appendices/EOL.html",
+                    "PowerDNS Authoritative release lifecycle"),),
+        attribution="PowerDNS Authoritative community lifecycle; approximate dates are not deadlines. Commercial support agreements may differ.",
+        validator="engine.powerdns.validate_record",
+        report="powerdns-authoritative-import.json",
+    ),
 )
 
 # Registry id -> source, and verifier -> source: one source per verifier, which
