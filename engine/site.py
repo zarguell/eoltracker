@@ -94,33 +94,33 @@ HARDWARE_MILESTONES = (
         "key": "ga",
         "short": "GA",
         "label": "General availability",
-        "detail": "First availability, from the eosl.date release date or launch date column.",
+        "detail": "First availability, when the source publishes a release or launch date. Opengear does not publish GA in its lifecycle tables.",
     },
     {
         "key": "eos",
         "short": "EoS",
         "label": "End of sale",
-        "detail": "Last day the model is sold. eosl.date's end-of-life-date column names the end of sales date, not the support end.",
+        "detail": "Last day sold: eosl.date's end-of-life-date column or Opengear's End of Sale / Old Part Sales End.",
     },
     {
         "key": "eossec",
         "short": "EoSS",
         "label": "End of security support",
-        "detail": "eosl.date publishes no security-support column, so this milestone is always unknown for hardware; the terminal support column feeds end of life instead.",
+        "detail": "No separate security-support deadline is normalized from these sources. Opengear contract exceptions remain in raw policy notes.",
     },
     {
         "key": "eol",
         "short": "EoL",
         "label": "End of support",
-        "detail": "The vendor's last supported day for the model (eosl.date's EOSL/LDOS column).",
+        "detail": "Published support end: eosl.date's EOSL/LDOS or Opengear's End of Support / Old Part Support Ends. Individual contract exceptions may apply.",
     },
 )
 MILESTONE_KEYS = tuple(milestone["key"] for milestone in HARDWARE_MILESTONES)
 # eosl.date states lifecycle status through the row class of each model row.
 HARDWARE_STATUSES = (
     {"key": "supported", "label": "Supported", "detail": "Published in a supported row: no support end has been announced."},
-    {"key": "expiring", "label": "Expiring", "detail": "Published in a warning row: the announcement says support ends soon."},
-    {"key": "eol", "label": "End of life", "detail": "Published in an end-of-life row: the vendor's support window has closed."},
+    {"key": "expiring", "label": "Expiring", "detail": "Source warning row, or Opengear's announced support deadline has not yet passed."},
+    {"key": "eol", "label": "End of life", "detail": "Source end-of-life row, or Opengear's published support deadline has passed; contract exceptions may apply."},
 )
 HARDWARE_STATUS_ORDER = tuple(status["key"] for status in HARDWARE_STATUSES)
 # Upstream date fields, in the order they appear in the raw release object, and
@@ -464,6 +464,9 @@ def build(data_dir=None, out_dir=None):
     for record in hardware:
         shutil.copyfile(data_dir / "hardware" / f"{record['id']}.json",
                         out / "v1" / "hardware" / f"{record['id']}.json")
+    opengear_report = data_dir / "opengear-import.json"
+    if opengear_report.exists():
+        shutil.copyfile(opengear_report, out / "v1" / "opengear-import.json")
 
     # ---- shared assets ---------------------------------------------------
     write(out / "style.css", (TEMPLATES / "style.css").read_text(encoding="utf-8"))
@@ -503,7 +506,7 @@ def build(data_dir=None, out_dir=None):
         title="EOL Tracker — software and hardware lifecycle dates",
         description=(f"Normalized general availability, end-of-sale, security-support and end-of-life dates "
                      f"for {manifest['product_count']} software products and {len(hardware)} hardware models, "
-                     f"republished from endoflife.date and eosl.date with per-record provenance."),
+                     f"republished from community catalogs and vendor notices with per-record provenance."),
         products=summaries,
         coverage=coverage,
         categories=categories,
@@ -521,7 +524,7 @@ def build(data_dir=None, out_dir=None):
         canonical=site_url("hardware/"),
         title="Hardware lifecycle dates — EOL Tracker",
         description=(f"General availability, end of sale and end-of-support dates for {len(hardware)} hardware "
-                     f"models from {len(hardware_vendor_facets)} vendors, normalized from eosl.date."),
+                     f"models and product groups from {len(hardware_vendor_facets)} vendors, with source-specific provenance."),
         hardware=hardware_page,
         hardware_coverage=hardware_coverage,
         hardware_url=url_for("v1/hardware.json"),
@@ -537,13 +540,17 @@ def build(data_dir=None, out_dir=None):
             canonical=site_url(f"hardware/{record['id']}/"),
             title=f"{record['name']} lifecycle dates — EOL Tracker",
             description=(f"General availability, end of sale and end-of-support dates for the {record['name']} "
-                         f"{record['product_line']} model, with the raw eosl.date values and provenance."),
+                         f"{record['product_line']} model or product group, with raw source values and provenance."),
             model=record,
             rows=rows,
             coverage=milestone_coverage([rows], HARDWARE_MILESTONES),
             json_url=url_for(f"v1/hardware/{record['id']}.json"),
             json_abs=site_url(f"v1/hardware/{record['id']}.json"),
             upstream_urls=source_urls,
+            hardware_source_name="Opengear" if record["provenance"]["verifier"] == "deterministic-opengear" else HARDWARE_SOURCE_NAME,
+            hardware_source_site=source_urls[0],
+            hardware_source_attribution=("Lifecycle dates published directly by Opengear; grouped parts and contract exceptions are retained below."
+                                         if record["provenance"]["verifier"] == "deterministic-opengear" else HARDWARE_SOURCE_ATTRIBUTION),
         ))
 
     for record in records:

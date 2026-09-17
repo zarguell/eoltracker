@@ -6,20 +6,26 @@
 {% set status_keys = hardware_status_meta|map(attribute='key')|list %}
 <div class="catalog-head">
   <h2 class="panel-title" id="{{ heading_id }}">{{ heading }}</h2>
-  <p class="catalog-count" id="hardware-result-count" role="status">{{ plural(hardware_count, 'hardware model') }}</p>
+  <p class="catalog-count" id="hardware-result-count" role="status">{{ plural(hardware_count, 'hardware record') }}</p>
 </div>
 <p class="panel-note catalog-note">
-  Vendor, product line, model number and every date below are what
-  <a href="{{ hardware_source_site }}" rel="noopener">{{ hardware_source_name }}</a> publishes for that model, mapped to
-  {% for milestone in hardware_milestone_meta %}<abbr title="{{ milestone.label }}">{{ milestone.short }}</abbr> {{ milestone.label|lower }}{% if not loop.last %}, {% endif %}{% endfor %}.
-  eosl.date publishes no security-support column, so <abbr title="End of security support">EoSS</abbr> is unknown for
-  every model; a model's terminal support date is its end of life.
+  Each row below is one published record — a model or product group read from
+  <a href="{{ hardware_source_site }}" rel="noopener">{{ hardware_source_name }}</a>'s family tables, or from
+  <a href="https://opengear.com/end-life-products" rel="noopener">Opengear's own end-of-life product list</a>.
+  Vendor, product line and every date are taken from that record and mapped to
+  {% for milestone in hardware_milestone_meta %}<abbr title="{{ milestone.label }}">{{ milestone.short }}</abbr> {{ milestone.label|lower }}{% if not loop.last %}, {% endif %}{% endfor %};
+  the verifier named on each record's page says which pipeline read it.
+  Neither source publishes a security-support deadline, so
+  <abbr title="End of security support">EoSS</abbr> is unknown throughout, and Opengear publishes no release date, so
+  <abbr title="General availability">GA</abbr> is unknown on its records too; a record's terminal support deadline is
+  its end of support. Opengear groups several part numbers into one product-group row and states contract exceptions in
+  its notes, so a row is not always a single model or SKU.
 </p>
 
 <form class="filters" id="hardware-filters" role="search" autocomplete="off">
   <p class="field field-search">
     <label for="hw-filter-q">Search</label>
-    <input type="search" id="hw-filter-q" name="q" placeholder="Model, id, vendor or product line" spellcheck="false">
+    <input type="search" id="hw-filter-q" name="q" placeholder="Model, product group, id, vendor or product line" spellcheck="false">
   </p>
   <p class="field">
     <label for="hw-filter-vendor">Vendor</label>
@@ -65,18 +71,19 @@
 </div>
 
 <p class="no-results" id="hw-no-results" hidden>
-  No hardware models match that search. Try a shorter model or vendor name, or clear the filters.
+  No hardware records match that search. Try a shorter model, product or vendor name, or clear the filters.
 </p>
 
 <div class="table-scroll">
   <table class="release-table hardware-table">
     <caption class="sr-only">
-      Lifecycle dates for each hardware model. Rows marked supported, expiring or end of life follow the row status
-      eosl.date publishes.
+      Lifecycle dates for each hardware model or product group. Rows marked supported, expiring or end of life follow
+      either the row status eosl.date publishes or, for Opengear records, that source's published support deadline
+      against the import date.
     </caption>
     <thead>
       <tr>
-        <th scope="col">Model</th>
+        <th scope="col">Model or product group</th>
         <th scope="col">Vendor</th>
         <th scope="col">Product line</th>
         <th scope="col">Status</th>

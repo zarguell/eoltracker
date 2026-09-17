@@ -11,28 +11,32 @@
   <p class="eyebrow">Hardware lifecycle catalog</p>
   <h1 class="page-title">Hardware end-of-sale and end-of-support dates</h1>
   <p class="lead">
-    {{ plural(hardware_count, 'hardware model') }} from {{ plural(hardware_vendors|length, 'vendor') }}, each with the
-    vendor's published release date, end of sale and end of support. The catalog is normalized from
+    {{ plural(hardware_count, 'hardware record') }} across {{ plural(hardware_vendors|length, 'vendor') }} — each a
+    published model or product group with the end-of-sale and end-of-support dates its source states, plus a release
+    date where the source publishes one. The catalog is normalized from
     <a href="{{ hardware_source_site }}" rel="noopener">{{ hardware_source_name }}</a>, which aggregates public vendor
-    announcements; no date here is estimated.
+    announcements, and from
+    <a href="https://opengear.com/end-life-products" rel="noopener">Opengear's end-of-life product list</a>, which
+    publishes its own lifecycle dates; no date here is estimated.
   </p>
   <div class="hero-stats">
-    <div class="stat"><span class="stat-num">{{ hardware_count }}</span><span class="stat-label">hardware models</span></div>
+    <div class="stat"><span class="stat-num">{{ hardware_count }}</span><span class="stat-label">hardware records</span></div>
     <div class="stat"><span class="stat-num">{{ hardware_vendors|length }}</span><span class="stat-label">vendors</span></div>
     <div class="stat"><span class="stat-num">{{ hardware_coverage|sum(attribute='known') }}</span><span class="stat-label">published milestone dates</span></div>
-    <div class="stat"><span class="stat-num">{{ hardware_statuses|selectattr('key', 'equalto', 'eol')|map(attribute='count')|first }}</span><span class="stat-label">models past end of support</span></div>
+    <div class="stat"><span class="stat-num">{{ hardware_statuses|selectattr('key', 'equalto', 'eol')|map(attribute='count')|first }}</span><span class="stat-label">records past end of support</span></div>
   </div>
   <p class="hero-meta">
     Last refresh <time datetime="{{ refresh.iso }}">{{ refresh.human }}</time>.
-    Verified by <code>deterministic-eosl-date</code>. Every model's page links the exact family page it was read from.
+    Verified per record by <code>deterministic-eosl-date</code> or <code>deterministic-opengear</code>. Every record's
+    page links the exact page it was read from.
   </p>
 </section>
 
 <section class="panel" aria-labelledby="hw-coverage-title">
   <h2 class="panel-title" id="hw-coverage-title">Milestone coverage</h2>
   <p class="panel-note">
-    How many of the {{ hardware_count }} models have each milestone published. A blank milestone means
-    {{ hardware_source_name }} publishes no such date — not that the vendor supports the model indefinitely.
+    How many of the {{ hardware_count }} records have each milestone published. A blank milestone means the record's
+    source publishes no such date — not that the vendor supports the model indefinitely.
   </p>
   <ul class="bars">
     {% for row in hardware_coverage %}
@@ -50,7 +54,9 @@
   </ul>
   <h3 class="sub-title">Status</h3>
   <p class="panel-note">
-    Status comes from the row {{ hardware_source_name }} publishes each model under, not from a computed threshold.
+    For eosl.date records, status comes from the row the model is published under. For Opengear records it is computed
+    from the published support deadline against the import date, since that source states no row status. Neither is a
+    vendor contract: individual exceptions may still apply.
   </p>
   <ul class="chips">
     {% for status in hardware_statuses %}
@@ -61,7 +67,7 @@
 
 <section class="catalog" aria-labelledby="hardware-title">
   {% set heading_id = 'hardware-title' %}
-  {% set heading = 'All hardware models' %}
+  {% set heading = 'All hardware records' %}
   {% include "_hardware_table.html" %}
 </section>
 
@@ -69,13 +75,17 @@
   <h2 class="panel-title" id="sources-title">Source and attribution</h2>
   <p class="panel-note">
     {{ hardware_source_attribution }} eosl.date states no license for that data, so it is attributed here and on every
-    model page rather than relicensed, and this project claims no affiliation with eosl.date or with the vendors whose
-    products appear.
+    record page rather than relicensed. Opengear lifecycle dates are read from
+    <a href="https://opengear.com/end-life-products" rel="noopener">Opengear's end-of-life product list</a> and credited
+    to Opengear; attribution is not a licence for either source, and no source materials are relicensed here. This
+    project claims no affiliation with eosl.date, Opengear or the vendors whose products appear.
   </p>
   <dl class="facts">
     <div><dt>Upstream</dt><dd><a href="{{ hardware_source_site }}" rel="noopener">{{ hardware_source_site }}</a> — {{ hardware_source_name }}, by Subash Geetha Krishnan</dd></div>
-    <div><dt>Data origin</dt><dd>Aggregated from public vendor announcements, as stated by eosl.date</dd></div>
-    <div><dt>Verifier</dt><dd><code>deterministic-eosl-date</code>, the pipeline revision that parsed the family tables</dd></div>
+    <div><dt>Upstream</dt><dd><a href="https://opengear.com/end-life-products" rel="noopener">opengear.com/end-life-products</a> — Opengear's own published end-of-life, end-of-sale and end-of-support dates</dd></div>
+    <div><dt>Data origin</dt><dd>eosl.date records aggregate public vendor announcements, as eosl.date states; Opengear records are published by Opengear itself</dd></div>
+    <div><dt>Verifier</dt><dd>Per record: <code>deterministic-eosl-date</code> parsed the eosl.date family tables, <code>deterministic-opengear</code> parsed the Opengear product tables. Each record page names its own.</dd></div>
+    <div><dt>Scope</dt><dd>One record per published source row: a model or model group from eosl.date, or an Opengear product group whose part numbers are grouped rather than expanded into one record each</dd></div>
     <div><dt>JSON index</dt><dd><a href="{{ hardware_url }}">{{ site_url('v1/hardware.json') }}</a></dd></div>
     <div><dt>Schema</dt><dd><a href="{{ site_url('v1/schema/hardware.json') }}">v1/schema/hardware.json</a></dd></div>
   </dl>

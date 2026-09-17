@@ -12,12 +12,12 @@
   <p class="eyebrow">{{ model.vendor }} · {{ model.category }}</p>
   <h1 class="page-title">{{ model.name }}</h1>
   <p class="lead">
-    Lifecycle dates for this {{ model.product_line }} model, read from
+    Lifecycle dates for this {{ model.product_line }} model or product group, read from
     <a href="{{ hardware_source_site }}" rel="noopener">{{ hardware_source_name }}</a>, with each normalized milestone
     and the raw upstream values behind it. Identifier for this record: <code>{{ model.id }}</code>.
   </p>
   <p class="hero-meta">
-    Status <strong>{{ model.status }}</strong> as published upstream.
+    Status <strong>{{ model.status }}</strong> (source row status, or published support deadline for Opengear).
     Verified {{ human_datetime(model.provenance.last_checked) }} by <code>{{ model.provenance.verifier }}</code>.
     Last catalog refresh <time datetime="{{ refresh.iso }}">{{ refresh.human }}</time>.
   </p>
@@ -90,7 +90,7 @@
     <div><dt>Product line</dt><dd>{{ model.product_line }}</dd></div>
     <div><dt>Family</dt><dd>{% if model.family %}{{ model.family }}{% else %}not published{% endif %}</dd></div>
     <div><dt>Model number</dt><dd>{% if model.model_number %}<code>{{ model.model_number }}</code>{% else %}not published{% endif %}</dd></div>
-    <div><dt>Status</dt><dd>{{ model.status }} — as published in the source row class</dd></div>
+    <div><dt>Status</dt><dd>{{ model.status }} — source row status, or Opengear deadline relative to import date; individual contract exceptions may apply.</dd></div>
     <div><dt>Verifier</dt><dd><code>{{ model.provenance.verifier }}</code></dd></div>
     <div><dt>Last checked</dt><dd>{{ human_datetime(model.provenance.last_checked) }}</dd></div>
     <div><dt>JSON record</dt><dd><a href="{{ json_abs }}">{{ json_abs }}</a></dd></div>
@@ -102,17 +102,16 @@
     {% for url in upstream_urls %}<li><a href="{{ url }}" rel="noopener">{{ url }}</a></li>{% endfor %}
   </ul>
   <p class="panel-note">
-    {{ hardware_source_attribution }} eosl.date states no license for that data, so it is attributed here rather than
-    relicensed; this page and its JSON record claim no affiliation with eosl.date or {{ model.vendor }}.
+    {{ hardware_source_attribution }} Source material is attributed, not relicensed; this page and its JSON record
+    claim no affiliation with the source or {{ model.vendor }}.
   </p>
 </section>
 
 <section class="panel" aria-labelledby="raw-title">
   <h2 class="panel-title" id="raw-title">Raw upstream values</h2>
   <p class="panel-note">
-    Every column eosl.date publishes for this model, verbatim: the text as rendered, the machine-readable date when
-    there is one, and the milestone role the pipeline assigns that column. Columns with no role are kept exactly as
-    published, so nothing the source states is dropped.
+    Source columns and policy notes for this record: rendered text, parsed dates and the milestone role assigned
+    by the importer. Grouped part numbers remain grouped, not expanded into claims about individual SKUs.
   </p>
   <div class="table-scroll">
     <table class="release-table">

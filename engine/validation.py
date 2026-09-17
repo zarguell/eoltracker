@@ -33,6 +33,9 @@ def validate_hardware(directory=None):
         validator.validate(record)
         if record["id"] != file.stem:
             raise ValueError(f"Hardware record identity mismatch: {file}")
+        if record["provenance"]["verifier"] == "deterministic-opengear":
+            from .opengear import validate_record
+            validate_record(record)
         if record["id"] in seen:
             raise ValueError(f"Duplicate hardware record: {file}")
         seen.add(record["id"])

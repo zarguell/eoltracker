@@ -80,6 +80,10 @@ jobs:
         if: github.ref == 'refs/heads/main' && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch')
         run: python -m engine import-hardware
 
+      - name: Import Opengear hardware lifecycle
+        if: github.ref == 'refs/heads/main' && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch')
+        run: python -m engine import-opengear
+
       - name: Validate catalog data
         run: python -m engine validate
 

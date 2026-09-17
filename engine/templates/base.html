@@ -26,7 +26,7 @@
       <a href="{{ url_for('api/') }}"{% if active == 'api' %} aria-current="page"{% endif %}>API &amp; data</a>
       <a href="{{ source_site }}" rel="noopener">endoflife.date</a>
     </nav>
-    <p class="masthead-meta">{{ plural(product_count, 'product') }} · {{ release_count }} releases · {{ hardware_count }} hardware models</p>
+    <p class="masthead-meta">{{ plural(product_count, 'product') }} · {{ release_count }} releases · {{ hardware_count }} hardware records</p>
   </div>
 </header>
 
@@ -47,9 +47,11 @@
       <p class="footer-note">
         Hardware lifecycle data comes from
         <a href="{{ hardware_source_site }}" rel="noopener">{{ hardware_source_name }}</a> by Subash Geetha Krishnan,
-        aggregated from public vendor announcements; no license is stated, so the data is attributed rather than
-        relicensed. This catalog is an independent normalization, not affiliated with endoflife.date, eosl.date or any
-        vendor listed here.
+        which aggregates public vendor announcements, and from
+        <a href="https://opengear.com/end-life-products" rel="noopener">Opengear's end-of-life product list</a>.
+        Attribution here is credit by name and link, not a licence to the source material: nothing is reproduced as
+        licensed material. This catalog is an independent normalization, not affiliated with endoflife.date, eosl.date,
+        Opengear or any vendor listed here.
       </p>
       <p class="footer-note">
         Last catalog refresh {{ refresh.human }}.

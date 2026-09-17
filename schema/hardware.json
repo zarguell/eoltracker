@@ -73,7 +73,7 @@
           "items": {"type": "string", "format": "uri"}
         },
         "verifier": {
-          "const": "deterministic-eosl-date"
+          "enum": ["deterministic-eosl-date", "deterministic-opengear"]
         },
         "last_checked": {
           "type": "string",

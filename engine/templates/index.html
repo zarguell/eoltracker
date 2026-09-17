@@ -5,23 +5,25 @@
   <h1 class="page-title">When does your software or hardware stop getting support?</h1>
   <p class="lead">
     General availability, end of sale, end of security support and end of life for
-    {{ plural(product_count, 'software product') }} — {{ release_count }} releases — and for
-    {{ plural(hardware_count, 'hardware model') }} from {{ hardware_vendors|length }} vendors.
-    Software is normalized from endoflife.date; hardware comes from eosl.date.
+    {{ plural(product_count, 'software product') }} — {{ release_count }} releases — alongside
+    {{ plural(hardware_count, 'hardware record') }} across {{ plural(hardware_vendors|length, 'vendor') }}, each one a
+    published model or product group carrying the milestones its own source states.
+    Software is normalized from endoflife.date; hardware records come from eosl.date and from
+    <a href="https://opengear.com/end-life-products" rel="noopener">Opengear's end-of-life product list</a>.
     Every date carries the record it came from; nothing here is estimated.
   </p>
   <div class="hero-stats">
     <div class="stat"><span class="stat-num">{{ product_count }}</span><span class="stat-label">software products</span></div>
     <div class="stat"><span class="stat-num">{{ release_count }}</span><span class="stat-label">releases</span></div>
-    <div class="stat"><span class="stat-num">{{ hardware_count }}</span><span class="stat-label">hardware models</span></div>
+    <div class="stat"><span class="stat-num">{{ hardware_count }}</span><span class="stat-label">hardware records</span></div>
     <div class="stat"><span class="stat-num">{{ coverage|sum(attribute='known') + hardware_coverage|sum(attribute='known') }}</span><span class="stat-label">published milestone dates</span></div>
     <div class="stat"><span class="stat-num">{{ categories|length }}</span><span class="stat-label">software categories</span></div>
   </div>
   <p class="hero-meta">
     Last refresh <time datetime="{{ refresh.iso }}">{{ refresh.human }}</time>.
     The {{ plural(excluded_count, 'hardware product') }} endoflife.date lists outside its own software catalog stay
-    excluded here and are named in the manifest; the hardware models below are the ones eosl.date publishes a vendor
-    lifecycle date for.
+    excluded here and are named in the manifest; the hardware records below are those eosl.date publishes a vendor
+    lifecycle date for, plus Opengear's own product groups.
   </p>
 </section>
 
@@ -144,12 +146,14 @@
 
     <div class="tabpanel" id="panel-hardware" role="tabpanel" aria-labelledby="tab-hardware">
       {% set heading_id = 'hardware-title' %}
-      {% set heading = 'Hardware models' %}
+      {% set heading = 'Hardware records' %}
       {% include "_hardware_table.html" %}
       <p class="panel-note">
-        These {{ hardware_count }} models are also the whole hardware catalog:
+        These {{ hardware_count }} records are also the whole hardware catalog:
         <a href="{{ url_for('hardware/') }}">the dedicated hardware page</a> carries the same rows with vendor and
-        status grouping, and <a href="{{ hardware_url }}">v1/hardware.json</a> carries one summary per model.
+        status grouping, and <a href="{{ hardware_url }}">v1/hardware.json</a> carries one summary per record. A record
+        is one published source row — for Opengear, a product group whose part numbers are grouped rather than listed
+        separately.
       </p>
     </div>
   </div>
@@ -164,9 +168,9 @@
   <ul class="endpoints">
     <li><a href="{{ feed_url }}"><code>v1/feed.json</code></a><span>Full normalized software catalog: every field, every release, one versioned document.</span></li>
     <li><a href="{{ products_url }}"><code>v1/products.json</code></a><span>Software summaries with counts and the absolute URL of each product endpoint.</span></li>
-    <li><a href="{{ hardware_url }}"><code>v1/hardware.json</code></a><span>Hardware summaries: vendor, status, milestone coverage and the absolute URL of each model endpoint.</span></li>
+    <li><a href="{{ hardware_url }}"><code>v1/hardware.json</code></a><span>Hardware summaries: vendor, status, milestone coverage and the absolute URL of each record's endpoint.</span></li>
     <li><a href="{{ url_for('v1/schema/product.json') }}"><code>v1/schema/product.json</code></a><span>JSON Schema for a single software product record.</span></li>
-    <li><a href="{{ url_for('v1/schema/hardware.json') }}"><code>v1/schema/hardware.json</code></a><span>JSON Schema for a single hardware model record.</span></li>
+    <li><a href="{{ url_for('v1/schema/hardware.json') }}"><code>v1/schema/hardware.json</code></a><span>JSON Schema for a single hardware record — one model or product group.</span></li>
     <li><a href="{{ url_for('api/') }}"><code>api/</code></a><span>Endpoint examples and the exact upstream mapping rules.</span></li>
   </ul>
 </section>

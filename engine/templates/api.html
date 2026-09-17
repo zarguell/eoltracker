@@ -5,8 +5,8 @@
   <h1 class="page-title">Catalog endpoints and mapping rules</h1>
   <p class="lead">
     Everything on this site is generated from two committed, validated catalogs: software from endoflife.date and
-    hardware from eosl.date. The JSON below is the same data the pages render — no private fields, no server, no API
-    keys.
+    hardware from eosl.date together with Opengear's own end-of-life product list. The JSON below is the same data the
+    pages render — no private fields, no server, no API keys.
   </p>
 </section>
 
@@ -46,7 +46,8 @@
         Index of hardware summaries. Each entry carries <code>id</code>, <code>name</code>, <code>vendor</code>,
         <code>status</code> (<code>supported</code>, <code>expiring</code> or <code>eol</code>), per-milestone
         <code>coverage</code>, the normalized <code>milestones</code>, the next published deadline, and the absolute
-        URL of that model's endpoint. <code>hardware_count</code> in the catalog manifest matches the array length.
+        URL of that record's endpoint. One entry is one published source row: a model or model group from eosl.date, or
+        an Opengear product group. <code>hardware_count</code> in the catalog manifest matches the array length.
       </span>
     </li>
     <li>
@@ -54,6 +55,14 @@
       <span>
         One hardware record, byte-identical to the file committed under <code>data/hardware/</code>. Replace the id in
         the path with any <code>id</code> from the hardware index.
+      </span>
+    </li>
+    <li>
+      <a href="{{ url_for('v1/opengear-import.json') }}"><code>v1/opengear-import.json</code></a>
+      <span>
+        Import report for the Opengear source: the counts parsed, imported and excluded, and every excluded row with
+        its product, table and reason. Rows from Opengear's software tables, and rows whose support state the source
+        does not state, are excluded here rather than published as hardware records.
       </span>
     </li>
   </ul>
@@ -91,10 +100,10 @@
 <pre><code>curl -s {{ site_url('v1/products/' ~ sample_product ~ '.json') }} \
   | jq '{id, name, releases: [.releases[] | {id, ga: .milestones.ga, eol: .milestones.eol}]}'</code></pre>
 
-  <h3 class="sub-title">List hardware models past end of support, by vendor</h3>
+  <h3 class="sub-title">List hardware records past end of support, by vendor</h3>
 <pre><code>curl -s {{ hardware_abs }} \
   | jq '[.hardware[] | select(.status == "eol")] | group_by(.vendor)
-        | map({vendor: .[0].vendor, models: length}) | sort_by(-.models)'</code></pre>
+        | map({vendor: .[0].vendor, records: length}) | sort_by(-.records)'</code></pre>
 
   <h3 class="sub-title">Fetch one hardware record and its raw upstream cells</h3>
 <pre><code>curl -s {{ site_url('v1/hardware/' ~ sample_hardware ~ '.json') }} \
@@ -131,19 +140,20 @@
   <h2 class="panel-title" id="hw-record-title">Hardware record shape</h2>
   <dl class="facts">
     <div><dt><code>id</code></dt><dd>Model slug. Also the filename under <code>data/hardware/</code> and the path segment of its endpoint.</dd></div>
-    <div><dt><code>name</code></dt><dd>The product name {{ hardware_source_name }} publishes for the row.</dd></div>
+    <div><dt><code>name</code></dt><dd>The product name the record's source publishes for the row.</dd></div>
     <div><dt><code>category</code></dt><dd>Always <code>hardware</code>.</dd></div>
-    <div><dt><code>vendor</code></dt><dd>The vendor the family page belongs to, from its URL and breadcrumb.</dd></div>
-    <div><dt><code>product_line</code></dt><dd>The vendor's product line for the model, or the vendor name when the source publishes none.</dd></div>
-    <div><dt><code>family</code>, <code>model_number</code></dt><dd>The source family and model number, verbatim.</dd></div>
-    <div><dt><code>milestones</code></dt><dd>The four normalized dates: <code>ga</code>, <code>eos</code>, <code>eossec</code>, <code>eol</code>. Each is an ISO date or <code>null</code>. <code>eossec</code> is always <code>null</code>: {{ hardware_source_name }} publishes no security-support column.</dd></div>
-    <div><dt><code>status</code></dt><dd><code>supported</code>, <code>expiring</code> or <code>eol</code>, taken from the row class the source publishes the model under.</dd></div>
-    <div><dt><code>upstream</code></dt><dd>Every declared column of the source row, verbatim: <code>text</code> as rendered, <code>datetime</code> and <code>value</code> for a machine-readable date or <code>null</code>, the milestone <code>role</code> the pipeline assigns (or <code>null</code>), and any <code>links</code>.</dd></div>
-    <div><dt><code>provenance</code></dt><dd><code>source_urls</code> (every family page the model was read from), <code>verifier</code> (<code>deterministic-eosl-date</code>) and <code>last_checked</code> (UTC).</dd></div>
+    <div><dt><code>vendor</code></dt><dd>The vendor the source attributes the record to: the family page's vendor from its URL and breadcrumb, or Opengear for its own product table.</dd></div>
+    <div><dt><code>product_line</code></dt><dd>The vendor's product line for the record, or the vendor name when the source publishes none.</dd></div>
+    <div><dt><code>family</code>, <code>model_number</code></dt><dd>The source family and model number, verbatim. An Opengear record groups a whole product's part numbers, so <code>model_number</code> is the first published part number and the full list stays verbatim in <code>upstream</code>.</dd></div>
+    <div><dt><code>milestones</code></dt><dd>The four normalized dates: <code>ga</code>, <code>eos</code>, <code>eossec</code>, <code>eol</code>. Each is an ISO date or <code>null</code>, and <code>null</code> means the record's source publishes no such date. <code>eossec</code> is always <code>null</code>, and <code>ga</code> is <code>null</code> for every Opengear record: neither source publishes a security-support or General-availability column for hardware.</dd></div>
+    <div><dt><code>status</code></dt><dd><code>supported</code>, <code>expiring</code> or <code>eol</code>. For eosl.date records this is the row the source publishes the model under; for Opengear records it is computed from the published support deadline against the import date, because that source states no row status.</dd></div>
+    <div><dt><code>upstream</code></dt><dd>Every declared column of the source row, verbatim: <code>text</code> as rendered, <code>datetime</code> and <code>value</code> for a machine-readable date or <code>null</code>, the milestone <code>role</code> the pipeline assigns (or <code>null</code>), and any <code>links</code>. For an Opengear record this also carries the source's own notes: the raw policy or contract-exception text, and the documented grouping semantics of the row.</dd></div>
+    <div><dt><code>provenance</code></dt><dd><code>source_urls</code> (every page the record was read from), <code>verifier</code> (<code>deterministic-eosl-date</code> or <code>deterministic-opengear</code>, one per record, naming the pipeline that parsed it) and <code>last_checked</code> (UTC).</dd></div>
   </dl>
   <p class="panel-note">
-    A hardware record is one model, not a family of releases, so there is no <code>releases</code> array: its
-    <code>milestones</code> describe the model itself.
+    A hardware record is one published source row, not a family of releases, so there is no <code>releases</code> array:
+    its <code>milestones</code> describe the record itself. An eosl.date row is one model or model group; an Opengear
+    row is a product group whose part numbers are grouped rather than expanded into one record per part.
   </p>
 </section>
 
@@ -189,11 +199,11 @@
     product page, so the earlier published deadline is never hidden.
   </p>
 
-  <h3 class="sub-title">Hardware ({{ hardware_source_name }})</h3>
+  <h3 class="sub-title">Hardware — eosl.date only</h3>
   <p class="panel-note">
-    Hardware columns are read by role, not by position: the source declares every header, and a column is matched to a
-    milestone case- and whitespace-insensitively. Anything that matches no role stays in <code>upstream</code>
-    untouched.
+    The table below describes the eosl.date pipeline (<code>deterministic-eosl-date</code>) alone. Hardware columns are
+    read by role, not by position: the source declares every header, and a column is matched to a milestone case- and
+    whitespace-insensitively. Anything that matches no role stays in <code>upstream</code> untouched.
   </p>
   <div class="table-scroll">
     <table class="release-table mapping-table">
@@ -209,17 +219,17 @@
         <tr>
           <th scope="row">End of sale</th>
           <td><code>End of Sale Date</code>, <code>End of Sales Date</code>, <code>End of Life Date</code></td>
-          <td>{{ hardware_source_name }}'s own glossary defines its end-of-life-date column as the end of sales date, so that column maps here and never to end of support.</td>
+          <td>eosl.date's own glossary defines its end-of-life-date column as the end of sales date, so that column maps here and never to end of support.</td>
         </tr>
         <tr>
           <th scope="row">End of security support</th>
           <td>none</td>
-          <td>The source publishes no security-support column. This milestone is always <code>null</code> for hardware rather than borrowed from another column.</td>
+          <td>eosl.date publishes no security-support column, so this milestone is always <code>null</code> for its records rather than borrowed from another column.</td>
         </tr>
         <tr>
           <th scope="row">End of support</th>
           <td><code>End of Support</code>, <code>End of Support (EOSL)</code>, <code>End of Support Date</code>, <code>End of Service</code>, <code>End of Service Date</code></td>
-          <td>The terminal support column — {{ hardware_source_name }}'s EOSL/LDOS. Relative prose rendered beside the date is stripped; a cell holding no date (a sentinel such as <code>TBD</code>, or a support URL) yields <code>null</code>.</td>
+          <td>The terminal support column — eosl.date's EOSL/LDOS. Relative prose rendered beside the date is stripped; a cell holding no date (a sentinel such as <code>TBD</code>, or a support URL) yields <code>null</code>.</td>
         </tr>
       </tbody>
     </table>
@@ -230,6 +240,60 @@
     <code>upstream</code> and never promoted into a date. A model appearing in several families merges on its
     identity; milestones only ever gain a value, and two sources disagreeing on one date is an error to fix, not a
     tie to break.
+  </p>
+
+  <h3 class="sub-title">Hardware — Opengear only</h3>
+  <p class="panel-note">
+    Opengear records (<code>deterministic-opengear</code>) are read from Opengear's own lifecycle tables. Columns are
+    matched to a milestone by their exact declared header; the two tables below are the only shapes the pipeline
+    accepts, and a missing, renamed or empty table fails the import rather than publishing a partial row.
+  </p>
+  <div class="table-scroll">
+    <table class="release-table mapping-table">
+      <thead>
+        <tr><th scope="col">Source table</th><th scope="col">Milestone</th><th scope="col">Source columns</th><th scope="col">Rule</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row"><code>Hardware Lifecycle</code></th>
+          <td>End of sale</td>
+          <td><code>End of Sale</code></td>
+          <td>Mapped to <code>eos</code>. The row's <code>Product</code>, <code>Part #</code>, <code>Replacement Product</code> and <code>Note</code> columns state no milestone and stay verbatim in <code>upstream</code>.</td>
+        </tr>
+        <tr>
+          <th scope="row"><code>Hardware Lifecycle</code></th>
+          <td>End of support</td>
+          <td><code>End of Support</code></td>
+          <td>Mapped to <code>eol</code>: the published support deadline for the product group.</td>
+        </tr>
+        <tr>
+          <th scope="row"><code>Hardware Revisions</code></th>
+          <td>End of sale</td>
+          <td><code>Old Part Sales End</code></td>
+          <td>Mapped to <code>eos</code> for the old part the revision row names.</td>
+        </tr>
+        <tr>
+          <th scope="row"><code>Hardware Revisions</code></th>
+          <td>End of support</td>
+          <td><code>Old Part Support Ends</code></td>
+          <td>Mapped to <code>eol</code> for that old part. Its <code>Product</code>, <code>Old Part / Rev #</code>, <code>New Part / Rev #</code> and <code>Note</code> columns stay verbatim in <code>upstream</code>.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="panel-note">
+    Two consequences for consumers. No Opengear column feeds <code>ga</code> or <code>eossec</code>: Opengear publishes
+    neither a first-availability nor a security-only deadline, so both are always <code>null</code> on its records —
+    as <code>eossec</code> is on every hardware record. And rows are grouped: one record per published product group
+    (for example a chassis product with all of its SKUs, or an old part with the revision that supersedes it), not one
+    record per part number. The SKU and part lists stay verbatim in <code>upstream</code>. Opengear's own policy and
+    contract-exception text is likewise retained raw in <code>upstream</code> and never converted into a date;
+    the computed <code>status</code> does not override such a contract.
+  </p>
+  <p class="panel-note">
+    Opengear's software and subscription tables are not hardware lifecycle data and are excluded, as are rows whose
+    support state the source does not state. Every excluded row is reported with its product, table and reason in
+    <code>v1/opengear-import.json</code> (listed under Endpoints) rather than being published as a record.
   </p>
 </section>
 
@@ -242,15 +306,19 @@
     This site does not claim affiliation with endoflife.date or with any vendor whose product appears here.
   </p>
   <p class="panel-note">
-    {{ hardware_source_attribution }} That data is aggregated from public vendor announcements, and eosl.date states no
-    license for it, so it is reproduced here with attribution and a link to the source page for every record rather
-    than relied on as licensed material. Model names, vendor names and dates are the vendors' and eosl.date's; the
+    {{ hardware_source_attribution }} That eosl.date data is aggregated from public vendor announcements, and eosl.date
+    states no license for it, so it is reproduced here with attribution and a link to the source page for every record
+    read from it, rather than relied on as licensed material. Opengear records are read from
+    <a href="https://opengear.com/end-life-products" rel="noopener">Opengear's end-of-life product list</a>, published by
+    Opengear; those dates are Opengear's and are credited to Opengear here and on every record page. Attribution is not
+    a licence for either source and does not relicense the source material: nothing on this site is represented as
+    licensed hardware data. Model names, vendor names and dates are the vendors', eosl.date's or Opengear's; the
     normalization, coverage math and presentation are this project's. This project is not affiliated with, endorsed by
-    or sponsored by eosl.date, Subash Geetha Krishnan, or any vendor whose hardware appears in the catalog.
+    or sponsored by eosl.date, Subash Geetha Krishnan, Opengear, or any vendor whose hardware appears in the catalog.
   </p>
   <p class="panel-note">
     Both catalogs are generated offline from committed snapshots, so they can lag upstream between refreshes. Each
-    record carries the timestamp of the last check, and every hardware page links the exact family page it was read
+    record carries the timestamp of the last check, and every hardware record page links the exact page it was read
     from. Verify anything decision-critical against the linked upstream record or the vendor's own lifecycle policy.
   </p>
 </section>

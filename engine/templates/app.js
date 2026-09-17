@@ -189,8 +189,8 @@
     if (count) {
       var filtered = shown !== total;
       count.textContent = filtered
-        ? "Showing " + plural(shown, "hardware model") + " of " + total
-        : plural(total, "hardware model");
+        ? "Showing " + plural(shown, "hardware record") + " of " + total
+        : plural(total, "hardware record");
     }
     if (empty) empty.hidden = shown !== 0;
     syncChips();

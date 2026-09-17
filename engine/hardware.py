@@ -532,26 +532,52 @@ def import_hardware():
             })
     merged = merge_models(models)
 
-    destination = ROOT / "data" / "hardware"
+    records = publish_records([_record({**merged[key], "id": key}, checked)
+                               for key in sorted(merged)], VERIFIER)
+    print(f"Imported {len(records)} hardware models from {len(urls)} product families")
+    return get_records()
+
+
+def publish_records(records, verifier, directory=None):
+    """Validate a complete source snapshot before replacing only its owned records."""
+    from .validation import validate_hardware
+
+    root = Path(directory) if directory is not None else ROOT / "data"
+    destination = root / "hardware"
+    if not records:
+        raise ValueError(f"Empty hardware snapshot from {verifier}")
+    previous = {file.stem: json.loads(file.read_text(encoding="utf-8"))
+                for file in destination.glob("*.json")}
+    seen = set()
     with tempfile.TemporaryDirectory(prefix="eoltracker-hardware-") as temp:
         staged = Path(temp)
-        for key in sorted(merged):
-            record = _record({**merged[key], "id": key}, checked)
-            previous = destination / (key + ".json")
-            if previous.exists():
-                old = json.loads(previous.read_text(encoding="utf-8"))
+        for record in records:
+            key = record["id"]
+            if key in seen or record["provenance"]["verifier"] != verifier:
+                raise ValueError(f"Duplicate or foreign hardware record: {key}")
+            if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", key):
+                raise ValueError(f"Unsafe hardware identity: {key}")
+            seen.add(key)
+            old = previous.get(key)
+            if old:
+                if old["provenance"]["verifier"] != verifier:
+                    raise ValueError(f"Hardware source ownership collision: {key}")
                 unchanged = {**record, "provenance": {**record["provenance"],
                                                       "last_checked": old["provenance"]["last_checked"]}}
                 if old == unchanged:
-                    record["provenance"]["last_checked"] = old["provenance"]["last_checked"]
+                    record = unchanged
             dump(staged / "hardware" / (key + ".json"), record)
-        validate_hardware(staged)
+        validated = validate_hardware(staged)
         destination.mkdir(parents=True, exist_ok=True)
         for file in (staged / "hardware").glob("*.json"):
             shutil.copyfile(file, destination / file.name)
-        for file in destination.glob("*.json"):
-            if not (staged / "hardware" / file.name).exists():
-                file.unlink()
-    records = get_records()
-    print(f"Imported {len(records)} hardware models from {len(urls)} product families")
-    return records
+        for key, old in previous.items():
+            if old["provenance"]["verifier"] == verifier and key not in seen:
+                (destination / (key + ".json")).unlink()
+    manifest_path = root / "manifest.json"
+    if manifest_path.exists():
+        manifest = json.loads(manifest_path.read_text())
+        if "hardware_count" in manifest:
+            manifest["hardware_count"] = len(list(destination.glob("*.json")))
+            dump(manifest_path, manifest)
+    return validated

@@ -1,4 +1,4 @@
-"""Run with python -m engine {import-data,import-hardware,validate,build}."""
+"""Run with python -m engine {import-data,import-hardware,import-opengear,validate,build}."""
 import argparse
 
 from .importer import import_data
@@ -7,13 +7,16 @@ from .validation import validate_data, validate_hardware
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("command", choices=["import-data", "import-hardware", "validate", "build"])
+    parser.add_argument("command", choices=["import-data", "import-hardware", "import-opengear", "validate", "build"])
     args = parser.parse_args()
     if args.command == "import-data":
         import_data()
     elif args.command == "import-hardware":
         from .hardware import import_hardware
         import_hardware()
+    elif args.command == "import-opengear":
+        from .opengear import import_opengear
+        import_opengear()
     elif args.command == "validate":
         records = validate_data()
         message = f"Validated {len(records)} products and {sum(len(p['releases']) for p in records)} releases"

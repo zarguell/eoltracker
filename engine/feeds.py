@@ -56,7 +56,7 @@ TAG_PREFIX = f"tag:{TAGGING_AUTHORITY},{TAGGING_DATE}:"
 FEED_ID = TAG_PREFIX + "upcoming-lifecycle-milestones"
 FEED_TITLE = "EOL Tracker — upcoming lifecycle dates"
 FEED_SUBTITLE = ("General availability, end of sale, end of security support and end of life dates "
-                 "not yet reached, normalized from endoflife.date.")
+                 "not yet reached, normalized from community catalogs and vendor lifecycle notices.")
 FEED_DESCRIPTION = FEED_SUBTITLE + " One item per release or hardware model and milestone."
 AUTHOR = "EOL Tracker"
 PRODID = "-//EOL Tracker//upcoming lifecycle dates//EN"
