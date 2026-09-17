@@ -217,6 +217,11 @@ def _date_pattern(day):
             f"{parsed.day} {month} {parsed.year}", f"{parsed.day:02d} {month} {parsed.year}",
             f"{parsed.day} {short} {parsed.year}", f"{parsed.day:02d} {short} {parsed.year}",
             f"{ordinal} {month} {parsed.year}", f"{ordinal} {short} {parsed.year}",
+            # US numeric spellings, the matrix convention ("All dates in
+            # mm/dd/yyyy format"): leading zeros optional on both fields, and
+            # always both a month and a day -- "06/2020" states no day.
+            f"{parsed.month}/{parsed.day}/{parsed.year}", f"{parsed.month:02d}/{parsed.day:02d}/{parsed.year}",
+            f"{parsed.month}/{parsed.day:02d}/{parsed.year}", f"{parsed.month:02d}/{parsed.day}/{parsed.year}",
         ))
         pattern = re.compile(
             rf"(?<![0-9A-Za-z]){re.escape(day)}(?![0-9])"

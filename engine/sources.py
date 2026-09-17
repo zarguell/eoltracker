@@ -45,6 +45,7 @@ CEPH_RELEASES = "https://docs.ceph.com/en/latest/releases/"
 CEPH_RELEASES_DATA = "https://raw.githubusercontent.com/ceph/ceph/main/doc/releases/releases.yml"
 NETSCALER_SOURCE = "https://www.citrix.com/support/product-lifecycle/product-matrix.html"
 NETSCALER_LEGACY = "https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html"
+CHECKPOINT_LIFECYCLE = "https://www.checkpoint.com/support-services/support-life-cycle-policy/"
 
 # Attribution is published text (the site and the API docs print it verbatim):
 # eosl.date states no license for the data it republishes, so it is cited;
@@ -244,6 +245,19 @@ SOURCES = (
         attribution="PowerDNS Authoritative community lifecycle; approximate dates are not deadlines. Commercial support agreements may differ.",
         validator="engine.powerdns.validate_record",
         report="powerdns-authoritative-import.json",
+    ),
+    Source(
+        id="import-checkpoint",
+        module="engine.checkpoint",
+        entry="import_checkpoint",
+        verifier="deterministic-checkpoint",
+        category="software",
+        name="Check Point Support Life Cycle Policy",
+        url=CHECKPOINT_LIFECYCLE,
+        pages=(Page(CHECKPOINT_LIFECYCLE, "Check Point support life cycle policy"),),
+        attribution="Check Point Security Gateway & Management lifecycle; dates retain the month precision stated by the vendor.",
+        validator="engine.checkpoint.validate_record",
+        report="checkpoint-import.json",
     ),
 )
 

@@ -121,6 +121,34 @@ class ParsingTests(ContributionCase):
         self.assertFalse(date_in_quote("2026-09-09", "Support ends September 2026."))
         self.assertFalse(date_in_quote("2027-02-10", "Support ends February 11th, 2027."))
 
+    def test_us_numeric_day_spelling_backs_the_date_it_states(self):
+        # Adobe's lifecycle matrix states "All dates in mm/dd/yyyy format";
+        # its rows ("Reader 7.x Windows and Macintosh 12/28/2004 12/28/2009 N/A")
+        # are the only source several researched records can cite, so a verbatim
+        # matrix cell must be able to back the day it states. Leading zeros are
+        # optional on both fields; a month-only cell never proves a day.
+        for day, quote in (
+            ("2020-06-01", "Acrobat Pro 2020 2020 6/1/2020 6/1/2025 (extended until 11/30/2025) N/A"),
+            ("2025-11-30", "Acrobat Standard 2020 2020 6/1/2020 6/1/2025 (extended until 11/30/2025) N/A"),
+            ("2024-07-15", "Acrobat Pro 2024 (formerly known as Acrobat Classic) 2024 07/15/2024 07/15/2029 N/A"),
+            ("2004-12-28", "Reader 7.x Windows and Macintosh 12/28/2004 12/28/2009 N/A"),
+            ("2006-11-03", "Acrobat Professional 8.x 11/3/2006 11/3/2011 N/A"),
+            ("2015-11-15", "Acrobat X Pro 10 11/15/2010 11/15/2015 N/A"),
+            ("2020-07-07", "4/7/2020 ( extended until 7/7/2020 )"),
+        ):
+            self.assertTrue(date_in_quote(day, quote), quote)
+        # Nothing coarser than a day matches: no month-only cell, no numeric
+        # run, and one date must not be read inside a different day.
+        for day, quote in (
+            ("2020-06-01", "supported through 06/2020"),
+            ("2020-06-01", "shipped in 6/2020"),
+            ("2020-01-01", "11/1/2020 states a different day"),
+            ("2020-11-01", "1/11/2020 states a different day"),
+            ("2020-06-01", "16/1/2020 carries no such date"),
+            ("2020-06-01", "the row ends 6/1/20201"),
+        ):
+            self.assertFalse(date_in_quote(day, quote), quote)
+
     def test_several_quoted_spans_install_as_one_normalized_quote(self):
         # A vendor notice often needs more than one sentence quoted. The stored
         # research.quote is the spans joined into one whitespace-normalized
