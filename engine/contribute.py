@@ -111,10 +111,15 @@ MIN_QUOTE = 20
 SCHEMAS = {"software": "product.json", "hardware": "hardware.json"}
 CONTRIBUTION_KEYS = frozenset({
     "target", "id", "name", "vendor", "category", "product_line", "summary", "release",
-    "identifiers", "links", "milestones", "evidence", "contributor", "method",
+    "releases", "identifiers", "links", "milestones", "evidence", "contributor", "method",
     "stale_after", "notes",
 })
 EVIDENCE_KEYS = frozenset({"quote", "source_url", "retrieved_at", "milestones"})
+# One release line inside a contribution that covers several. `milestones` states
+# the branch's own dates, so a product whose notice dates more than one line --
+# or dates the current line and leaves an undated one that must not disappear --
+# is one contribution with one release per branch.
+RELEASE_KEYS = frozenset({"id", "name", "milestones"})
 # Contribution fields copied into the research object as kept context. A
 # hardware record already states its own vendor and product line, so only the
 # software target keeps `vendor` there.
@@ -176,18 +181,42 @@ def _truncate(quote, limit=90):
     return text if len(text) <= limit else text[:limit] + "..."
 
 
+def _ordinal(day):
+    """``1st``/``2nd``/``3rd``/``4th``: the suffix a vendor sentence spells.
+
+    The teens are the exception the naive ``day % 10`` mapping gets wrong, and
+    vendors really write them: Helm spells its end-of-life days this way
+    ("February 10th, 2027", "August 13th, 2020").
+    """
+    if 10 <= day % 100 <= 20:
+        suffix = "th"
+    else:
+        suffix = {1: "st", 2: "nd", 3: "rd"}.get(day % 10, "th")
+    return f"{day}{suffix}"
+
+
 def _date_pattern(day):
-    """Match any day-precision spelling of an ISO day, and nothing coarser."""
+    """Match any day-precision spelling of an ISO day, and nothing coarser.
+
+    Ordinal spellings are day precision too -- "February 10th, 2027" states the
+    day exactly as "February 10, 2027" does -- so they are matched here or a
+    vendor sentence quoted verbatim could not back the date it states. Nothing
+    coarser matches: a month-only "February 2027" is never evidence for a day.
+    """
     pattern = _DATE_PATTERNS.get(day)
     if pattern is None:
         parsed = date.fromisoformat(day)
         month, short = parsed.strftime("%B"), parsed.strftime("%b")
+        ordinal = _ordinal(parsed.day)
         spelled = "|".join(re.escape(text) for text in (
             f"{month} {parsed.day}, {parsed.year}", f"{month} {parsed.day:02d}, {parsed.year}",
+            f"{month} {ordinal}, {parsed.year}",
             f"{short} {parsed.day}, {parsed.year}", f"{short}. {parsed.day}, {parsed.year}",
             f"{short} {parsed.day:02d}, {parsed.year}", f"{short}. {parsed.day:02d}, {parsed.year}",
+            f"{short} {ordinal}, {parsed.year}", f"{short}. {ordinal}, {parsed.year}",
             f"{parsed.day} {month} {parsed.year}", f"{parsed.day:02d} {month} {parsed.year}",
             f"{parsed.day} {short} {parsed.year}", f"{parsed.day:02d} {short} {parsed.year}",
+            f"{ordinal} {month} {parsed.year}", f"{ordinal} {short} {parsed.year}",
         ))
         pattern = re.compile(
             rf"(?<![0-9A-Za-z]){re.escape(day)}(?![0-9])"
@@ -216,8 +245,15 @@ def missing_backing(milestones, evidence):
 
 
 def quote_of(evidence):
-    """The display quote: every evidence quote, whitespace-normalized."""
-    return "\n\n".join(entry["quote"] for entry in evidence)
+    """The display quote: every evidence quote, whitespace-normalized.
+
+    Joined with a single space: validation requires the stored quote to equal
+    its own whitespace-normalized form, and a join that introduced any other
+    separator would not survive that folding. A contribution may cite several
+    sentences, so the join is one folded space and nothing here can reopen a
+    line break.
+    """
+    return normalize_space(" ".join(entry["quote"] for entry in evidence))
 
 
 def fetch_text(url):
@@ -257,19 +293,68 @@ def _url(value, where):
     return text
 
 
-def _parse_milestones(value, where):
-    if not isinstance(value, dict) or not value:
+def _parse_milestones(value, where, allow_empty=False):
+    """One milestone set. ``allow_empty`` admits an explicit "no dates" set.
+
+    A release line may legitimately state no dates: a branch the notice covers
+    while it announces nothing about its end. That is a different thing from a
+    contribution that states nothing at all, which the product-level set still
+    refuses, so only release lines pass ``allow_empty``.
+    """
+    if not isinstance(value, dict) or (not value and not allow_empty):
         raise ValueError(f"{where}: milestones must be a non-empty object")
     unknown = sorted(set(value) - set(MILESTONE_KEYS))
     if unknown:
         raise ValueError(f"{where}: unknown milestone keys {unknown}; allowed {list(MILESTONE_KEYS)}")
     milestones = dict.fromkeys(MILESTONE_KEYS)
     for key, day in value.items():
+        # An explicit null states the same thing the missing key does -- no
+        # announced date -- and is how a release line that the notice leaves
+        # undated says so out loud. Only lines admit it; the product-level set
+        # still refuses an empty object because that contribution states nothing.
+        if day is None and allow_empty:
+            continue
         milestones[key] = _day(day, f"{where}: milestones.{key}")
     return milestones
 
 
-def _parse_evidence(value, where, milestones):
+def _parse_releases(value, where):
+    """The release lines of a contribution that covers more than one branch.
+
+    The text is just the quotes: whatever a branch states is quoted verbatim in
+    the document quoted in `quote`, so a verbatim dump per branch would only
+    restate it. The important part is that every branch the notice covers is
+    named, dated branches and undated ones alike -- an undated line is a branch
+    with no announced end, never a line that vanished from its own notice.
+    """
+    if not isinstance(value, list) or not value:
+        raise ValueError(f"{where}: releases must be a non-empty array of release lines")
+    lines, seen = [], set()
+    for index, raw in enumerate(value):
+        at = f"{where}: releases[{index}]"
+        if not isinstance(raw, dict):
+            raise ValueError(f"{at}: release must be an object")
+        unknown = sorted(set(raw) - RELEASE_KEYS)
+        if unknown:
+            raise ValueError(f"{at}: unknown fields {unknown}; allowed {sorted(RELEASE_KEYS)}")
+        release = {"id": _text(raw.get("id"), at, "id")}
+        release["name"] = _text(raw.get("name", release["id"]), at, "name")
+        release["milestones"] = _parse_milestones(raw.get("milestones"), at, allow_empty=True)
+        if release["id"] in seen:
+            raise ValueError(f"{at}: duplicate release id {release['id']!r}")
+        seen.add(release["id"])
+        lines.append(release)
+    return lines
+
+
+def _parse_evidence(value, where, releases):
+    """Validate the stored quotes against every release line they must back.
+
+    An entry that names milestones must name dates some release line actually
+    states -- naming a date no line carries is a claim the contribution does not
+    hold, and catching it here names the branch rather than leaving it to the
+    whole-record check below.
+    """
     if not isinstance(value, list) or not value:
         raise ValueError(f"{where}: evidence must be a non-empty array of stored quotes")
     entries = []
@@ -294,7 +379,7 @@ def _parse_evidence(value, where, milestones):
             if unknown_keys:
                 raise ValueError(f"{at}: unknown milestone keys {unknown_keys}")
             for key in keys:
-                if milestones[key] is None:
+                if not any(release["milestones"][key] for release in releases):
                     raise ValueError(f"{at}: evidence claims {MILESTONE_LABELS[key]} but the "
                                      "contribution states no such date")
             entry["milestones"] = list(dict.fromkeys(keys))
@@ -349,36 +434,56 @@ def parse_contribution(raw, path="<contribution>"):
     target = raw.get("target")
     if target not in TARGETS:
         raise ValueError(f"{where}: target must be one of {list(TARGETS)}")
+    if target == "hardware" and "releases" in raw:
+        raise ValueError(f"{where}: releases are software-only; a hardware record states one "
+                         "milestone set for the model the notice describes")
+    # A contribution states its dates either for the product as a whole
+    # (`milestones`) or per release line (`releases`), never both: a product
+    # whose branches differ in lifecycle has no single truthful milestone set.
+    if "milestones" in raw and "releases" in raw:
+        raise ValueError(f"{where}: state milestones once -- either the product's own `milestones` "
+                         "or one entry per branch under `releases`, not both")
+    name = _text(raw.get("name"), where, "name")
+    if "id" in raw:
+        record_id = _text(raw["id"], where, "id")
+    else:
+        record_id = RESEARCHED_VERIFIER_PREFIX + slugify(name)
+    if not SLUG.fullmatch(record_id):
+        raise ValueError(f"{where}: id {record_id!r} is not a lower-case hyphen slug")
+    if not record_id.startswith(RESEARCHED_VERIFIER_PREFIX):
+        raise ValueError(f"{where}: researched records live in the {RESEARCHED_VERIFIER_PREFIX}<slug> "
+                         f"id namespace; {record_id!r} is not one of them")
+    # The release labels the thing the notice describes. Defaulting to the id's
+    # own slug keeps every release id URL-safe and stable, which the OpenEoX
+    # export and the feed identities both depend on.
+    if "releases" in raw:
+        lines = _parse_releases(raw["releases"], where)
+    else:
+        default_release = record_id[len(RESEARCHED_VERIFIER_PREFIX):]
+        label = _text(raw.get("release", default_release), where, "release")
+        lines = [{"id": label, "name": label,
+                  "milestones": _parse_milestones(raw.get("milestones"), where)}]
     contribution = {
         "target": target,
         "contributor": _text(raw.get("contributor"), where, "contributor"),
-        "milestones": _parse_milestones(raw.get("milestones"), where),
+        # The whole-catalog view of the record's first line, kept where callers
+        # that predate multi-release contributions already look for it.
+        "milestones": lines[0]["milestones"],
+        "releases": lines,
     }
     method = raw.get("method", "manual")
     if method not in METHODS:
         raise ValueError(f"{where}: method must be one of {list(METHODS)}")
     contribution["method"] = method
-    contribution["evidence"] = _parse_evidence(raw.get("evidence"), where, contribution["milestones"])
-    contribution["name"] = _text(raw.get("name"), where, "name")
-    if "id" in raw:
-        contribution["id"] = _text(raw["id"], where, "id")
-    else:
-        contribution["id"] = RESEARCHED_VERIFIER_PREFIX + slugify(contribution["name"])
-    if not SLUG.fullmatch(contribution["id"]):
-        raise ValueError(f"{where}: id {contribution['id']!r} is not a lower-case hyphen slug")
-    if not contribution["id"].startswith(RESEARCHED_VERIFIER_PREFIX):
-        raise ValueError(f"{where}: researched records live in the {RESEARCHED_VERIFIER_PREFIX}<slug> "
-                         f"id namespace; {contribution['id']!r} is not one of them")
+    contribution["evidence"] = _parse_evidence(raw.get("evidence"), where, lines)
+    contribution["name"] = name
+    contribution["id"] = record_id
     if target == "software":
         category = raw.get("category")
         if category not in UPSTREAM_CATEGORIES:
             raise ValueError(f"{where}: category must be one of {list(UPSTREAM_CATEGORIES)}")
         contribution["category"] = category
-        # The release labels the thing the notice describes. Defaulting to the
-        # id's own slug keeps every release id URL-safe and stable, which the
-        # OpenEoX export and the feed identities both depend on.
-        default_release = contribution["id"][len(RESEARCHED_VERIFIER_PREFIX):]
-        contribution["release"] = _text(raw.get("release", default_release), where, "release")
+        contribution["release"] = lines[0]["id"]
         contribution["identifiers"] = _parse_identifiers(raw.get("identifiers"), where)
         contribution["links"] = _parse_links(raw.get("links"), where)
     else:
@@ -398,9 +503,10 @@ def parse_contribution(raw, path="<contribution>"):
     for key in context:
         if raw.get(key) is not None:
             contribution[key] = _text(raw[key], where, key)
-    unbacked = missing_backing(contribution["milestones"], contribution["evidence"])
+    unbacked = [key for line in lines
+                for key in missing_backing(line["milestones"], contribution["evidence"])]
     if unbacked:
-        labels = ", ".join(MILESTONE_LABELS[key] for key in unbacked)
+        labels = ", ".join(dict.fromkeys(MILESTONE_LABELS[key] for key in unbacked))
         raise ValueError(f"{where}: no stored quote states the {labels} date; every milestone must be "
                          "quoted verbatim from the source")
     return contribution
@@ -481,15 +587,15 @@ def build_record(contribution, research, checked, now=None):
     verifier = verifier_for(contribution["contributor"])
     provenance = {"verifier": verifier, "last_checked": checked, "research": research}
     if contribution["target"] == "software":
-        release = contribution["release"]
         provenance.update({"source_url": research["source_url"], "upstream_modified": None})
         return {
             "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
             "id": contribution["id"], "name": contribution["name"], "category": "software",
             "upstream_category": contribution["category"], "identifiers": contribution["identifiers"],
             "labels": {}, "links": contribution["links"],
-            "releases": [{"id": release, "name": release, "milestones": dict(contribution["milestones"]),
-                          "upstream": {"name": release, "Contribution": cell}}],
+            "releases": [{"id": line["id"], "name": line["name"], "milestones": dict(line["milestones"]),
+                          "upstream": {"name": line["name"], "Contribution": cell}}
+                         for line in contribution["releases"]],
             "provenance": provenance,
         }
     provenance["source_urls"] = list(dict.fromkeys(entry["source_url"] for entry in research["evidence"]))
@@ -607,12 +713,17 @@ def validate_research(record, target):
             raise ValueError(f"{where}: the record must carry the researched quote verbatim "
                              "under upstream.Contribution")
         milestone_sets = [record["milestones"]]
+    # An entry's `milestones` says which dates its quote backs; the record may
+    # publish those dates on more than one release line (a notice that dates a
+    # branch is quoted once for it), so the claim is checked against every set
+    # the record carries rather than any one of them.
+    stated = {key for milestones in milestone_sets for key, day in milestones.items() if day}
+    for index, entry in enumerate(evidence):
+        for key in entry.get("milestones") or ():
+            if key not in stated:
+                raise ValueError(f"{where}: research.evidence[{index}] claims "
+                                 f"{MILESTONE_LABELS[key]} but the record states no such date")
     for milestones in milestone_sets:
-        for index, entry in enumerate(evidence):
-            for key in entry.get("milestones") or ():
-                if milestones[key] is None:
-                    raise ValueError(f"{where}: research.evidence[{index}] claims "
-                                     f"{MILESTONE_LABELS[key]} but the record states no such date")
         unbacked = missing_backing(milestones, evidence)
         if unbacked:
             labels = ", ".join(MILESTONE_LABELS[key] for key in unbacked)
@@ -730,11 +841,24 @@ def _prepare(path, root, fetch, allow_stale, now):
 
 
 def _report(path, contribution, record, verified, destination, existing, action, written):
-    milestones = (record["releases"][0]["milestones"] if contribution["target"] == "software"
-                  else record["milestones"])
-    stated = ", ".join(f"{key}={milestones[key]}" for key in MILESTONE_KEYS if milestones[key])
+    """The one-line report of what one contribution states and where it went.
+
+    Every release line is named, undated ones included: a branch the notice
+    covers with no announced end must read as "no dates" here rather than be
+    absent from the report, which is the same honesty the record itself
+    publishes.
+    """
+    lines = (record["releases"] if contribution["target"] == "software"
+             else [{"id": record["id"], "milestones": record["milestones"]}])
+    stated = "; ".join(
+        f"{line['id']}: " + ", ".join(f"{key}={line['milestones'][key]}" for key in MILESTONE_KEYS
+                                      if line["milestones"][key])
+        if any(line["milestones"][key] for key in MILESTONE_KEYS) else f"{line['id']}: no dates"
+        for line in lines)
     return {"path": str(path), "target": contribution["target"], "id": record["id"],
-            "verifier": record["provenance"]["verifier"], "milestones": milestones, "stated": stated,
+            "verifier": record["provenance"]["verifier"], "milestones": lines[0]["milestones"],
+            "releases": [{"id": line["id"], "milestones": dict(line["milestones"])} for line in lines],
+            "stated": stated,
             "sources": [entry["source_url"] for entry in record["provenance"]["research"]["evidence"]],
             "verified": verified, "existing": existing is not None,
             "destination": str(destination), "action": action, "written": written}

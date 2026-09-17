@@ -71,7 +71,8 @@ a contribution that would break the catalog is rolled back and never logged.
 | `target` | yes | `software` or `hardware` — decides the record shape and the schema. |
 | `id` | no | Record id; defaults to `researched-` + the slug of `name`. Must be a lower-case hyphen slug and must keep the `researched-` prefix: researched records never share the id namespace a collector may claim later. |
 | `name` | yes | Published product name. |
-| `milestones` | yes | Non-empty subset of `ga`, `eos`, `eossec`, `eol`; each date is an ISO day (`YYYY-MM-DD`). |
+| `milestones` | yes* | Non-empty subset of `ga`, `eos`, `eossec`, `eol`; each date is an ISO day (`YYYY-MM-DD`). Use this for a product whose notice states one milestone set, or `releases` for a product whose branches differ. |
+| `releases` | yes* | Software only; alternative to `milestones`. One entry per release line: `{id, name?, milestones}`. A line's `milestones` may be `{}` (or all-null) when the notice covers that line but announces no end for it — the line is published with no dates instead of being dropped. Neither `milestones` nor `releases` may be combined with the other. |
 | `evidence` | yes | The stored quotes, each `{quote, source_url, retrieved_at}` plus optional `milestones` naming which dates that quote backs. |
 | `contributor` | yes | Who found it. The record's verifier becomes `researched-<contributor-slug>`, so one contributor's record can never be replaced by another's. |
 | `method` | no | `manual` (default) or `agent`. |
@@ -85,6 +86,14 @@ semantics: `ga` general availability, `eos` end of sale, `eossec` end of
 security support, `eol` the terminal date. A generic "support ends" date never
 fills `eossec`, and a date is quoted verbatim before it is stored — never
 inferred from a release cadence, a newer release, or an upstream flag.
+
+When a vendor's notice distinguishes its release lines, state them under
+`releases` so the record carries one row per branch instead of collapsing them
+into a single milestone set. A branch the notice leaves undated is listed with
+no dates: an absent announcement is a fact worth publishing, and a branch that
+simply vanished from the record would read as if the vendor had never spoken
+about it. A rolling support policy ("only the latest minor branch is
+maintained") is evidence that no end date exists, never a date in itself.
 
 ## What gets checked
 

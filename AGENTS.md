@@ -101,9 +101,15 @@ Software record (`data/products/<slug>.json`):
 - `id` — URL-safe slug, also the filename. Renaming an id breaks every
   permalink and feed identity; treat id changes as destructive migrations.
 - `releases[]` — each has `id`, `milestones` (`ga`/`eos`/`eossec`/`eol`, ISO
-  dates or `null`), `upstream` (the raw upstream release object, kept verbatim
-  for transparency), `provenance` (`source_url`, `verifier`,
-  `last_checked`, `upstream_modified`).
+  dates, month-precision `YYYY-MM`, or `null`), `upstream` (the raw upstream
+  release object, kept verbatim for transparency), `provenance` (`source_url`,
+  `verifier`, `last_checked`, `upstream_modified`).
+- A milestone is a day (`YYYY-MM-DD`) or a month (`YYYY-MM`) when its source
+  states no day; the two widths are distinct values, never padded from one into
+  the other. A source that publishes only a day form still stores days.
+- `upstream` for a vendor collector (a source other than endoflife.date) holds
+  that vendor's own declared columns under `upstream.cells` and the table they
+  came from under `upstream.table`, rather than endoflife.date field names.
 - `labels` — upstream column-label wording, the evidence the mapper matched.
 
 Hardware record (`data/hardware/<id>.json`): `id`, `name`, `vendor`,
@@ -132,9 +138,10 @@ Milestone semantics (shared contract):
 Published endpoints (all under `https://zarguell.github.io/eoltracker/`):
 `/v1/products.json`, `/v1/products/{id}.json`, `/v1/hardware.json`,
 `/v1/hardware/{id}.json`, `/v1/feed.{atom,rss}`, `/v1/calendar.ics`,
-`/v1/openeox/index.json` + `/v1/openeox/{product}/{release}.json`,
-`/v1/schema/*.json`. Feed events carry permanent `tag:eoltracker,2026:...`
-identities (RFC 4151) — never re-mint or reformat them.
+`/v1/feed-exclusions.json`, `/v1/openeox/index.json` +
+`/v1/openeox/{product}/{release}.json`, `/v1/schema/*.json`. Feed events carry
+permanent `tag:eoltracker,2026:...` identities (RFC 4151) — never re-mint or
+reformat them.
 
 ## Workflows
 
@@ -204,9 +211,16 @@ importer or in upstream.
   this; a mismatch fails the build.
 - The OpenEoX export excludes records with unknown required dates and lists
   them in `v1/openeox/index.json` under `excluded`; do not force records into
-  the export by fabricating dates.
+  the export by fabricating dates. A release whose source states a milestone as
+  a month is excluded under `<property>_month_precision` for the same reason:
+  OpenEoX Core carries a stated day, so publishing it would invent one.
 - Feeds include only upcoming events (`today <= date`, UTC). Old events
-  disappearing from the feed is correct behavior, not a bug.
+  disappearing from the feed is correct behavior, not a bug. A month-precision
+  event is upcoming through the last day of its month.
+- Atom, RSS and iCalendar each carry an exact calendar day, so a month-precision
+  event is not syndicated: `v1/feed-exclusions.json` enumerates it with its
+  identity and the stored month, and the document's counts plus the feeds'
+  cover every upcoming event. A consumer wanting every deadline reads both.
 - Templates are base-path aware (`/eoltracker/` prefix on Pages); never
   hardcode absolute `/v1/...` URLs in templates or JS.
 - Classify products from the vendor's own notice, not table position: CMS6100

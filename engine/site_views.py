@@ -91,7 +91,11 @@ def release_rows(record):
             "eol_flag": bool(upstream.get("isEol")),
             "maintained": bool(upstream.get("isMaintained")),
             "latest": {
-                "name": latest.get("name") or upstream.get("name"),
+                # endoflife.date publishes a `latest` object, and its `name` is
+                # returned exactly as it stores it. A vendor collector has no
+                # such object and stores the branch's newest release as the
+                # row's own `name` cell instead, so only that shape falls back.
+                "name": latest.get("name") if not evidence else latest.get("name") or upstream.get("name"),
                 "date": latest.get("date"),
                 "link": latest.get("link"),
             },
