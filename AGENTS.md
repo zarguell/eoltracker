@@ -264,3 +264,21 @@ importer or in upstream.
 - Test quiet refreshes at different timestamps, comparing both product and
   report bytes. Also change only an excluded row: the report revision must
   advance while the unchanged product keeps its revision timestamp.
+- Inspect response types and bodies before parsing: the legacy
+  `endoflife.date/api/all.json` is a list of strings, while the v1 product
+  listing is an object containing `result`. HTTP 200 alone is not source
+  evidence: Odoo's old documentation URLs serve HTML meta-refresh pages.
+  Follow the declared destination and inspect its actual table.
+- Follow the policy page's primary-source links before declaring a no-go.
+  PowerDNS Recursor's dated support grid lives on its support-commitment page,
+  not its prose-only EOL page. A failed URL or empty extraction is not proof
+  that the vendor publishes no lifecycle dates.
+- Contribution installation uses `python -m engine contribute --install FILE`,
+  not an `install` subcommand. Read the parser/help before retrying a CLI error.
+- Publish a new collector's registry entry, implementation and generated data
+  together. Omitting `engine/sources.py` causes `UnknownVerifier` in CI even
+  when the local checkout validates.
+- Coverage-loop counts are deduplicated work items, not issue numbers:
+  investigation and implementation follow-ups count once, corrections do not
+  count again, and refactors do not increase product coverage. Report no-go
+  dispositions separately from published data.

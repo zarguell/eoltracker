@@ -46,6 +46,7 @@ CEPH_RELEASES_DATA = "https://raw.githubusercontent.com/ceph/ceph/main/doc/relea
 NETSCALER_SOURCE = "https://www.citrix.com/support/product-lifecycle/product-matrix.html"
 NETSCALER_LEGACY = "https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html"
 CHECKPOINT_LIFECYCLE = "https://www.checkpoint.com/support-services/support-life-cycle-policy/"
+ODOO_SUPPORT = "https://www.odoo.com/documentation/master/administration/standard_extended_support.html"
 
 # Attribution is published text (the site and the API docs print it verbatim):
 # eosl.date states no license for the data it republishes, so it is cited;
@@ -258,6 +259,19 @@ SOURCES = (
         attribution="Check Point Security Gateway & Management lifecycle; dates retain the month precision stated by the vendor.",
         validator="engine.checkpoint.validate_record",
         report="checkpoint-import.json",
+    ),
+    Source(
+        id="import-odoo",
+        module="engine.odoo",
+        entry="import_odoo",
+        verifier="deterministic-odoo",
+        category="software",
+        name="Odoo",
+        url=ODOO_SUPPORT,
+        pages=(Page(ODOO_SUPPORT, "Odoo standard and extended support"),),
+        attribution="Odoo release and standard-support calendar; standard support ending is not terminal or security support ending. Planned dates remain vendor text.",
+        validator="engine.odoo.validate_record",
+        report="odoo-import.json",
     ),
 )
 

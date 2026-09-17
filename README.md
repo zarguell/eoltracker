@@ -24,6 +24,14 @@ the grouped “4.1 and older” row. Approximate dates remain raw evidence, defi
 months retain month precision, and critical-only updates are not support-end
 milestones. This community lifecycle does not describe commercial agreements.
 
+Odoo's release and standard-support calendar is refreshed with
+`python -m engine import-odoo`. All 14 source rows are retained, including
+SaaS versions and the grouped older versions. Release months stay months;
+planned dates and “Before” bounds stay raw. Standard-support expiry is not a
+terminal or security-support deadline: extended support continues and security
+terms differ by hosting platform. Consequently this calendar adds no retirement
+feed events and does not establish dated Odoo EOL coverage.
+
 ## What differentiates it
 
 - **Hardware and software in one normalized schema.** Community sources are software-shaped or hardware-shaped; this catalog merges both under one milestone model (`ga` / `eos` / `eossec` / `eol`) with provenance on every record (`source_url`, `verifier`, `last_checked`, `upstream_modified`).
