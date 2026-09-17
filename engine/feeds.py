@@ -39,7 +39,7 @@ from urllib.parse import quote
 from xml.sax.saxutils import escape, quoteattr
 
 from .importer import ROOT
-from .site import MILESTONES, SITE_URL, human_date, site_url
+from .site_config import MILESTONES, SITE_URL, human_date, site_url
 
 DEFAULT_DATA = ROOT / "data"
 DEFAULT_OUT = ROOT / "_site"

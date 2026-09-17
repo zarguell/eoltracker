@@ -7,7 +7,7 @@ from pathlib import Path
 
 from engine import changes, feeds
 from engine.opengear import identity
-from engine.site import site_url
+from engine.site_config import site_url
 
 ATOM = "{http://www.w3.org/2005/Atom}"
 CONFIGURE = "https://opengear.com/configure/"

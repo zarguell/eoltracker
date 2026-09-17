@@ -217,19 +217,9 @@
           "items": {"type": "string", "format": "uri"}
         },
         "verifier": {
-          "description": "The pipeline that owns this record: a deterministic collector's fixed id, or researched-<contributor-slug> for a one-time researched contribution.",
-          "anyOf": [
-            {
-              "enum": [
-                "deterministic-eosl-date",
-                "deterministic-opengear"
-              ]
-            },
-            {
-              "type": "string",
-              "pattern": "^researched-[a-z0-9]+(?:-[a-z0-9]+)*$"
-            }
-          ]
+          "description": "The pipeline that owns this record: a deterministic collector's fixed id (deterministic-<source-slug>; the registry in engine/sources.py decides which ones exist and which catalog each owns), or researched-<contributor-slug> for a one-time researched contribution. The pattern admits a new collector; only a registered source is published.",
+          "type": "string",
+          "pattern": "^(?:deterministic|researched)-[a-z0-9]+(?:-[a-z0-9]+)*$"
         },
         "last_checked": {
           "type": "string",

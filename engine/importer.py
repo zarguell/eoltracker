@@ -7,10 +7,14 @@ from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from pathlib import Path
 
-import requests
+from . import net, sources
+from .sources import ENDOFLIFE_DATE_API
 
 ROOT = Path(__file__).resolve().parents[1]
-API = "https://endoflife.date/api/v1/products/"
+API = ENDOFLIFE_DATE_API
+# Declared once, in the registry: a published record's provenance must name a
+# source the registry knows, so the collector reads its own id from there.
+VERIFIER = sources.source("import-data").verifier
 SOFTWARE_CATEGORIES = {"app", "database", "framework", "lang", "os", "server-app", "service", "standard"}
 
 
@@ -20,9 +24,8 @@ def dump(path, value):
 
 
 def fetch(url):
-    response = requests.get(url, timeout=(15, 90), headers={"User-Agent": "eoltracker/1.0 (+https://github.com/zarguell/eoltracker)"})
-    response.raise_for_status()
-    return response.json()
+    """Fetch one upstream JSON document under the shared network policy."""
+    return net.get_json(url)
 
 
 def date_value(value):
@@ -94,12 +97,18 @@ def normalize(payload, checked):
         "id": slug, "name": product["label"], "category": "software",
         "upstream_category": product["category"], "identifiers": product.get("identifiers", []),
         "labels": labels, "links": product.get("links", {}), "releases": releases,
-        "provenance": {"source_url": API + slug + "/", "verifier": "deterministic-endoflife-date-v1",
+        "provenance": {"source_url": API + slug + "/", "verifier": VERIFIER,
                        "last_checked": checked, "upstream_modified": payload.get("last_modified")},
     }
 
 
-def import_data():
+def import_data(directory=None):
+    """Refresh every software product from endoflife.date into ``directory``.
+
+    Complete-or-nothing: the whole upstream catalog is fetched and normalized
+    into a staging directory and validated there before any committed file is
+    replaced. Returns a one-line summary of what was published.
+    """
     from .validation import validate_data
     listing = fetch(API)
     entries = listing["result"]
@@ -113,12 +122,12 @@ def import_data():
     selected = sorted((p for p in entries if p["category"] != "device"), key=lambda p: p["name"])
     checked = datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
     # Fetch and normalize everything before touching the committed data directory.
-    with ThreadPoolExecutor(max_workers=8) as pool:
+    with ThreadPoolExecutor(max_workers=net.workers(API)) as pool:
         payloads = list(pool.map(lambda p: fetch(API + p["name"] + "/"), selected))
     records = [normalize(p, checked) for p in payloads]
     if [r["id"] for r in records] != [p["name"] for p in selected]:
         raise ValueError("Upstream listing/detail identities disagree")
-    destination = ROOT / "data"
+    destination = Path(directory) if directory is not None else ROOT / "data"
     with tempfile.TemporaryDirectory(prefix="eoltracker-") as temp:
         staged = Path(temp)
         for record in records:
@@ -135,6 +144,9 @@ def import_data():
             "generated_at": checked, "source_url": API, "product_count": len(records),
             "release_count": sum(len(r["releases"]) for r in records),
             "excluded_hardware": sorted(p["name"] for p in entries if p["category"] == "device"),
+            # The registered source that produced this snapshot, so validation
+            # can check the manifest describes a pipeline this checkout installs.
+            "source": "import-data",
         })
         # Researched records (AGENTS.md rule 8 tier b) are never in the upstream
         # listing, so this refresh cannot re-derive them — but they are part of
@@ -158,4 +170,5 @@ def import_data():
             if not (staged / "products" / file.name).exists():
                 file.unlink()
         shutil.copyfile(staged / "manifest.json", destination / "manifest.json")
-    print(f"Imported {len(records)} software products; excluded {len(entries) - len(records)} hardware products")
+    return (f"imported {len(records)} software products; excluded {len(entries) - len(records)} "
+            f"hardware products")

@@ -30,6 +30,7 @@ jobs:
         uses: actions/setup-python@v7
         with:
           python-version: '3.14'
+          cache: pip
 
       - name: Install dependencies
         run: python -m pip install -r requirements.txt
@@ -42,3 +43,6 @@ jobs:
 
       - name: Build static site
         run: python -m engine build
+
+      - name: Check published site size budget
+        run: python -m engine.site_budget

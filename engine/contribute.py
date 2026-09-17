@@ -84,6 +84,7 @@ from urllib.parse import urlsplit
 import requests
 from jsonschema import Draft202012Validator, FormatChecker
 
+from . import net, sources
 from .importer import ROOT, dump
 
 CONTRIBUTIONS = "contributions"
@@ -92,7 +93,7 @@ LOG = "contributions-log.json"
 PRODUCTS = "products"
 HARDWARE = "hardware"
 
-RESEARCHED_VERIFIER_PREFIX = "researched-"
+RESEARCHED_VERIFIER_PREFIX = sources.RESEARCHED_PREFIX
 # A researched record is re-reviewed when its evidence has not been refetched
 # for six months; presentation surfaces warn past this age.
 STALE_DAYS = 180
@@ -121,8 +122,6 @@ SOFTWARE_CONTEXT = ("vendor", "summary", "notes")
 HARDWARE_CONTEXT = ("summary", "notes")
 SLUG = re.compile(r"[a-z0-9]+(?:-[a-z0-9]+)*\Z")
 DAY = re.compile(r"\d{4}-\d{2}-\d{2}\Z")
-USER_AGENT = "eoltracker/1.0 (+https://github.com/zarguell/eoltracker)"
-TIMEOUT = (15, 90)
 HTML_SKIP = re.compile(r"(?is)<(script|style)[^>]*>.*?</\1>")
 HTML_TAG = re.compile(r"(?s)<[^>]+>")
 
@@ -223,9 +222,7 @@ def quote_of(evidence):
 
 def fetch_text(url):
     """GET one source page as text, politely identified."""
-    response = requests.get(url, timeout=TIMEOUT, headers={"User-Agent": USER_AGENT})
-    response.raise_for_status()
-    return response.text
+    return net.get_text(url)
 
 
 def page_text(html):

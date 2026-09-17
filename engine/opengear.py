@@ -18,13 +18,17 @@ import json
 import re
 from datetime import datetime, timezone
 from html.parser import HTMLParser
+from pathlib import Path
 from urllib.parse import urljoin
 
+from . import sources
 from .hardware import _Tables, fetch, get_records, publish_records, slugify, RECORD_SCHEMA
 from .importer import ROOT, dump
+from .sources import OPENGEAR_CONFIGURE, OPENGEAR_LIFECYCLE
 
-SOURCE = "https://opengear.com/end-life-products"
-VERIFIER = "deterministic-opengear"
+SOURCE = OPENGEAR_LIFECYCLE
+# The registry owns the id: a record's provenance must name a source it knows.
+VERIFIER = sources.source("import-opengear").verifier
 HEADERS = {
     "hardware": ["Product", "Part #", "End of Sale", "End of Support", "Replacement Product", "Note"],
     "revision": ["Product", "Old Part / Rev #", "Old Part Sales End", "Old Part Support Ends", "New Part / Rev #", "Note"],
@@ -34,7 +38,7 @@ SOFTWARE = {"VCMS", "PortShare for Windows"}
 # The configurator publishes what Opengear currently sells; the lifecycle tables
 # publish retirements. Listing is a catalog fact, never a support claim, and
 # disappearance from the catalog is not an end of life.
-CONFIGURE_SOURCE = "https://opengear.com/configure/"
+CONFIGURE_SOURCE = OPENGEAR_CONFIGURE
 # The configurator dataset this collector is built against. Drift is a source
 # change to review, never something to publish silently.
 CATALOG_MODELS = 46
@@ -51,7 +55,10 @@ CATALOG_CELLS = ("SKU", "Title", "Support Series", "Families", "Datasheet URL", 
 NOTICE_CELLS = ("Product", "Part #", "End of Sale", "End of Support", "Replacement Product", "Note")
 NOTICE_ROLES = {"End of Sale": "eos", "End of Support": "eol"}
 MILESTONES = ("ga", "eos", "eossec", "eol")
+# The accounting sidecar this source publishes, named by the registry beside
+# the rest of its facts; the change ledger sits next to it.
 LEDGER = "opengear-changes.json"
+REPORT = sources.source("import-opengear").report
 
 
 class Tables(_Tables):
@@ -556,7 +563,7 @@ def source_report(report, catalog, unmatched, records, previous):
     return report
 
 
-def import_opengear():
+def import_opengear(directory=None):
     """Fetch both Opengear sources, publish once, then record what changed.
 
     Nothing is written until both sources parse and every record validates: the
@@ -568,7 +575,7 @@ def import_opengear():
     checked = datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
     lifecycle, excluded, announced = parse_page(fetch(SOURCE), checked)
     catalog, unmatched = parse_catalog(fetch(CONFIGURE_SOURCE), checked, lifecycle)
-    destination = ROOT / "data"
+    destination = Path(directory) if directory is not None else ROOT / "data"
     # Only this source's own records: a refresh never reasons about another
     # verifier's snapshot (eosl.date owns the rest of data/hardware/).
     previous = [record for record in get_records(destination)
@@ -596,13 +603,12 @@ def import_opengear():
                             "announcements": announced},
               "imported_count": len(imported), "excluded_count": len(excluded), "excluded": excluded}
     source_report(report, catalog, unmatched, imported, previous)
-    dump(destination / "opengear-import.json", report)
+    dump(destination / REPORT, report)
     counts = report["record_counts"]
-    print(f"Imported {len(imported)} Opengear records ({counts['hardware']} lifecycle hardware, "
-          f"{counts['revision']} revision, {counts['catalog']} catalog SKUs; "
-          f"{report['catalog']['matched_lifecycle']} catalog SKUs named by a lifecycle notice); "
-          f"excluded {len(excluded)} rows (data/opengear-import.json)")
-    return imported
+    return (f"imported {len(imported)} Opengear records ({counts['hardware']} lifecycle hardware, "
+            f"{counts['revision']} revision, {counts['catalog']} catalog SKUs; "
+            f"{report['catalog']['matched_lifecycle']} catalog SKUs named by a lifecycle notice); "
+            f"excluded {len(excluded)} rows (data/{REPORT})")
 
 
 class CatalogData(HTMLParser):

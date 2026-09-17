@@ -99,7 +99,7 @@ from xml.sax.saxutils import escape, quoteattr
 
 from .feeds import TAG_PREFIX, generated_at
 from .importer import ROOT
-from .site import HARDWARE_MILESTONES, SITE_URL, human_date, site_url
+from .site_config import HARDWARE_MILESTONES, SITE_URL, human_date, site_url
 
 DEFAULT_OUT = ROOT / "_site"
 HISTORY_PATH = ROOT / "data" / "opengear-changes.json"

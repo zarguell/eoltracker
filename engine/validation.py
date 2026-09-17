@@ -4,6 +4,7 @@ from pathlib import Path
 
 from jsonschema import Draft202012Validator, FormatChecker
 
+from . import sources
 from .importer import API, ROOT, milestones
 
 HARDWARE_DIR = "hardware"
@@ -16,8 +17,26 @@ MANIFEST_SCHEMA = {
         "release_count": {"type": "integer", "minimum": 1},
         "excluded_hardware": {"type": "array", "uniqueItems": True, "items": {"type": "string"}},
         "hardware_count": {"type": "integer", "minimum": 0},
+        # Added by the refresh so the snapshot names the registered source that
+        # produced it. Optional here so a manifest committed before the registry
+        # still validates; checked against the registry whenever it is present.
+        "source": {"type": "string"},
     },
 }
+
+
+def check_source(record, category):
+    """The registered source owning a deterministic record's verifier.
+
+    Delegates to the registry so the "which verifiers are real, and which
+    catalog does each own" rule lives in exactly one place; this only supplies
+    the record-shaped error message a catalog failure should carry.
+    """
+    verifier = (record.get("provenance") or {}).get("verifier")
+    try:
+        return sources.validate_verifier(verifier, category)
+    except sources.RegistryError as error:
+        raise type(error)(f"{record.get('id')}: {error}") from None
 
 
 def validate_hardware(directory=None):
@@ -29,6 +48,7 @@ def validate_hardware(directory=None):
     validator = Draft202012Validator(schema, format_checker=FormatChecker())
     records = []
     seen = set()
+    owned = {}
     for file in sorted((directory / HARDWARE_DIR).glob("*.json")):
         record = json.loads(file.read_text())
         validator.validate(record)
@@ -38,17 +58,47 @@ def validate_hardware(directory=None):
             # A researched record states no upstream row and re-derives nothing
             # from a collector's published cells; its evidence is checked instead.
             validate_research(record, "hardware")
-        if record["provenance"]["verifier"] == "deterministic-opengear":
-            from .opengear import validate_record
-            validate_record(record)
+        else:
+            # The source that owns this verifier decides how the record is
+            # re-checked, so a new collector adds its own validator to the
+            # registry instead of a branch here.
+            found = check_source(record, "hardware")
+            check = sources.record_validator(found)
+            if check is not None:
+                check(record)
         if record["id"] in seen:
             raise ValueError(f"Duplicate hardware record: {file}")
         seen.add(record["id"])
+        owned.setdefault(record["provenance"]["verifier"], set()).add(record["id"])
         ga, eol = record["milestones"]["ga"], record["milestones"]["eol"]
         if ga and eol and eol < ga:
             raise ValueError(f"Hardware chronology violation: {file}: eol {eol} < ga {ga}")
         records.append(record)
+    check_source_reports(directory, owned)
     return records
+
+
+def check_source_reports(directory, owned):
+    """Every source's sidecar must account for the records it owns.
+
+    A source that publishes a per-row accounting sidecar states how many
+    records its refresh wrote (``total_records``); that number is the one thing
+    a reader of the report can check against the catalog it describes, so a
+    sidecar that disagrees with the committed records fails validation instead
+    of claiming coverage the catalog does not show.
+    """
+    for source in sources.all_sources():
+        if not source.report or not (directory / source.report).exists():
+            continue
+        if source.verifier not in owned:
+            raise ValueError(f"{source.report} exists but no committed record carries "
+                             f"{source.verifier}")
+        report = json.loads((directory / source.report).read_text())
+        if report.get("verifier") != source.verifier:
+            raise ValueError(f"{source.report} does not name the source that published it")
+        if report.get("total_records") != len(owned[source.verifier]):
+            raise ValueError(f"{source.report} reports {report.get('total_records')} records but "
+                             f"{len(owned[source.verifier])} carry {source.verifier}")
 
 
 def validate_data(directory=None):
@@ -69,6 +119,9 @@ def validate_data(directory=None):
             validate_research(record, "software")
             records.append(record)
             continue
+        # A software record must name the registered software source: a
+        # hardware collector's verifier here would publish an unbuildable claim.
+        check_source(record, "software")
         if record["provenance"]["source_url"] != API + record["id"] + "/":
             raise ValueError(f"Record identity/provenance mismatch: {file}")
         release_ids = set()
@@ -89,6 +142,30 @@ def validate_data(directory=None):
         raise ValueError("Manifest counts do not match complete catalog")
     if {r["id"] for r in records} & set(manifest["excluded_hardware"]):
         raise ValueError("Hardware included in software catalog")
+    check_manifest_source(manifest, deterministic)
     if "hardware_count" in manifest and len(validate_hardware(directory)) != manifest["hardware_count"]:
         raise ValueError("Manifest hardware_count does not match committed hardware records")
     return records
+
+
+def check_manifest_source(manifest, records):
+    """The manifest's named source must be the pipeline that owns its records.
+
+    A manifest states which registered source produced the software snapshot it
+    describes; naming a source whose verifier no committed record carries (or a
+    different source's verifier) means the counts describe a snapshot no
+    installed pipeline can reproduce.
+    """
+    verifiers = {record["provenance"]["verifier"] for record in records}
+    named = manifest.get("source")
+    if named is None:
+        # Older snapshots predate the field; the records' own verifiers are
+        # still required to name a registered software source above.
+        return
+    found = sources.source(named)
+    if found.category != "software":
+        raise ValueError(f"Manifest source {named!r} does not own the software catalog")
+    if verifiers and verifiers != {found.verifier}:
+        raise ValueError(f"Manifest source {named!r} does not match record verifiers {sorted(verifiers)}")
+    if API not in found.urls:
+        raise ValueError(f"Manifest source_url is not a page read by {named!r}")

@@ -63,26 +63,18 @@ jobs:
         uses: actions/setup-python@v7
         with:
           python-version: '3.14'
+          cache: pip
 
       - name: Install dependencies
         run: python -m pip install -r requirements.txt
 
-      # Upstream ingestion only where it is wanted: scheduled and manual runs.
-      # A failure here fails the job before anything is committed or published,
-      # so the last successful deployment stays live. Software (endoflife.date
-      # API) and hardware (eosl.date pages, ~240 polite requests) refresh
-      # independently: one source failing does not lose the other's update.
-      - name: Import upstream software catalog
+      # Registry-driven refresh attempts every source independently. Each failed
+      # source rolls back its writes, including reports and ledger; successful
+      # sources can publish. Total upstream failure exits nonzero. Catalog
+      # validation below remains mandatory after any partial success.
+      - name: Refresh registered upstream sources
         if: github.ref == 'refs/heads/main' && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch')
-        run: python -m engine import-data
-
-      - name: Import upstream hardware catalog
-        if: github.ref == 'refs/heads/main' && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch')
-        run: python -m engine import-hardware
-
-      - name: Import Opengear hardware lifecycle
-        if: github.ref == 'refs/heads/main' && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch')
-        run: python -m engine import-opengear
+        run: python -m engine refresh
 
       - name: Validate catalog data
         run: python -m engine validate
@@ -92,6 +84,11 @@ jobs:
 
       - name: Build static site
         run: python -m engine build
+
+      # GitHub Pages serves from a ~1GB artifact budget. Failing here, on the
+      # run that crossed the line, beats discovering it as a deploy failure.
+      - name: Check published site size budget
+        run: python -m engine.site_budget
 
       # Only the normalized catalog is written back; the generated site stays
       # out of main. An unchanged catalog is a success, not a failure.

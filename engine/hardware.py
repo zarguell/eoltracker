@@ -42,19 +42,17 @@ from datetime import date, datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
 
-import requests
-
+from . import net, sources
 from .importer import ROOT, dump
+from .sources import EOSL_DATE, EOSL_DATE_SITEMAP
 
-HARDWARE_SOURCE = "https://eosl.date/"
-SITEMAP = "https://eosl.date/sitemap-coreapp-product-families.xml"
-VERIFIER = "deterministic-eosl-date"
+HARDWARE_SOURCE = EOSL_DATE
+SITEMAP = EOSL_DATE_SITEMAP
+# The registry owns the id: a record's provenance must name a source it knows.
+VERIFIER = sources.source("import-hardware").verifier
 RECORD_SCHEMA = "https://zarguell.github.io/eoltracker/v1/schema/hardware.json"
-USER_AGENT = "eoltracker/1.0 (+https://github.com/zarguell/eoltracker)"
-TIMEOUT = (15, 60)
-WORKERS = 2
-REQUEST_PAUSE = 0.5
-RETRY_DELAY = 5.0
+REQUEST_PAUSE = net.profile(SITEMAP).pause
+WORKERS = net.workers(SITEMAP)
 
 # A family path is a category (which may itself be nested, such as
 # `storage/san-switches`), `/vendor/`, a vendor and a family.
@@ -370,18 +368,7 @@ def iter_family_urls(sitemap=None):
 
 def fetch(url):
     """GET one page politely: identified, bounded, retried once on a network error."""
-    last = None
-    for attempt in range(2):
-        try:
-            response = requests.get(url, timeout=TIMEOUT, headers={"User-Agent": USER_AGENT})
-            response.raise_for_status()
-            response.encoding = "utf-8"
-            return response.text
-        except requests.RequestException as error:
-            last = error
-            if attempt == 0:
-                time.sleep(RETRY_DELAY)
-    raise last
+    return net.get_text(url, encoding="utf-8")
 
 
 def merge_models(models):
@@ -492,7 +479,7 @@ def get_records(directory=None):
             for file in sorted((directory / "hardware").glob("*.json"))]
 
 
-def import_hardware():
+def import_hardware(directory=None):
     """Fetch every family page and write ``data/hardware/{id}.json``.
 
     Complete-or-nothing, like the software import: every page is fetched and
@@ -500,8 +487,7 @@ def import_hardware():
     revision time is preserved while its content is unchanged, so a quiet
     source never looks freshly re-verified.
     """
-    from .validation import validate_hardware
-
+    destination = Path(directory) if directory is not None else ROOT / "data"
     urls = list(iter_family_urls())
     if not urls:
         raise ValueError("No product family URLs in the upstream sitemap")
@@ -533,9 +519,8 @@ def import_hardware():
     merged = merge_models(models)
 
     records = publish_records([_record({**merged[key], "id": key}, checked)
-                               for key in sorted(merged)], VERIFIER)
-    print(f"Imported {len(records)} hardware models from {len(urls)} product families")
-    return get_records()
+                               for key in sorted(merged)], VERIFIER, destination)
+    return f"imported {len(records)} hardware models from {len(urls)} product families"
 
 
 def publish_records(records, verifier, directory=None):
