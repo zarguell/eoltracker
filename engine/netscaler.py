@@ -39,16 +39,13 @@ here as excluded rows with their own dates and left to a hardware scope
 (AGENTS.md rule 7). Every data row the two tables state is accounted:
 published, or excluded with the reason it states no firmware lifecycle.
 """
-import json
 import re
-import shutil
-import tempfile
 from datetime import date, datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
 
-from . import net, sources
-from .importer import ROOT, dump
+from . import net, sources, transaction
+from .importer import ROOT
 
 # The registry owns the ids and the pages: a record's provenance must name a
 # source this checkout installs, and the report must name the pages it read.
@@ -379,15 +376,8 @@ def record_for(releases, checked):
 
 def committed_record(root):
     """The committed ``netscaler-adc`` record, refusing one this source cannot own."""
-    path = root / "products" / (PRODUCT_ID + ".json")
-    if not path.exists():
-        return None
-    record = json.loads(path.read_text(encoding="utf-8"))
-    if record["provenance"]["verifier"] != VERIFIER:
-        raise ValueError(f"NetScaler source ownership collision: {PRODUCT_ID} carries "
-                         f"{record['provenance']['verifier']}, not {VERIFIER}")
-    validate_record(record)
-    return record
+    return transaction.committed_product_record(root, PRODUCT_ID, VERIFIER,
+                                                validate_record, "NetScaler")
 
 
 def combine_releases(fresh, committed):
@@ -435,35 +425,7 @@ def report_for(releases, excluded, kept, checked):
 
 def publish_record(record, report, root):
     """Stage the record beside the committed catalog, validate, then replace it."""
-    from .validation import validate_data
-
-    products = root / "products"
-    if not (root / "manifest.json").exists() or not products.is_dir():
-        raise ValueError(f"Not a catalog directory: {root}")
-    manifest = (root / "manifest.json").read_text(encoding="utf-8")
-    target = products / (record["id"] + ".json")
-    if target.exists():
-        committed_record(root)
-        old = json.loads(target.read_text(encoding="utf-8"))
-        unchanged = {**record, "provenance": {**record["provenance"],
-                                             "last_checked": old["provenance"]["last_checked"]}}
-        if old == unchanged:
-            record = unchanged
-    with tempfile.TemporaryDirectory(prefix="eoltracker-netscaler-") as temp:
-        staged = Path(temp)
-        shutil.copytree(products, staged / "products")
-        dump(staged / "products" / (record["id"] + ".json"), record)
-        (staged / "manifest.json").write_text(manifest, encoding="utf-8")
-        if "hardware_count" in json.loads(manifest):
-            shutil.copytree(root / "hardware", staged / "hardware")
-        for source in sources.all_sources():
-            if source.report and (root / source.report).is_file():
-                shutil.copy2(root / source.report, staged / source.report)
-        dump(staged / REPORT, report)
-        validate_data(staged)
-        dump(target, record)
-        dump(root / REPORT, report)
-    return record
+    return transaction.publish_product_record(record, report, root, REPORT)
 
 
 def import_netscaler(directory=None):

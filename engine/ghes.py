@@ -39,15 +39,12 @@ calendar on the same site (an API version retiring is not the appliance's
 lifecycle), GitHub Enterprise Cloud, hosted runners, and the page's tool-version
 tables (CodeQL CLI, Actions Runner), whose rows state no lifecycle date.
 """
-import json
 import re
-import shutil
-import tempfile
 from datetime import date, datetime, timezone
 from pathlib import Path
 
-from . import net, sources
-from .importer import ROOT, dump
+from . import net, sources, transaction
+from .importer import ROOT
 
 # The registry owns the id and the page: a record's provenance must name a
 # source this checkout installs, and the site links the page a reader opens.
@@ -466,62 +463,14 @@ def report_for(releases, excluded, duplicated, kept, checked):
 
 
 def committed_record(root):
-    """The committed ``github-enterprise-server`` record, refusing one this source cannot own.
-
-    A file under this product's name carrying another source's verifier is an
-    ownership collision: republishing it would overwrite a record this pipeline
-    did not produce. A committed record that no longer re-derives from its own
-    stored cells is equally unpublishable — merging it would carry a claim the
-    vendor's table does not state — so both abort before anything is written.
-    """
-    path = root / "products" / (PRODUCT_ID + ".json")
-    if not path.exists():
-        return None
-    record = json.loads(path.read_text(encoding="utf-8"))
-    if record["provenance"]["verifier"] != VERIFIER:
-        raise ValueError(f"GitHub Enterprise Server source ownership collision: {PRODUCT_ID} "
-                         f"carries {record['provenance']['verifier']}, not {VERIFIER}")
-    validate_record(record)
-    return record
+    """The committed ``github-enterprise-server`` record, refusing a foreign one."""
+    return transaction.committed_product_record(root, PRODUCT_ID, VERIFIER,
+                                                validate_record, "GitHub Enterprise Server")
 
 
 def publish_record(record, report, root):
-    """Stage the record beside the committed catalog, validate, then replace it.
-
-    Only this source's own file is written. Every committed record is copied
-    into the staged catalog and validated there, so a run that would publish an
-    inconsistent catalog writes nothing at all — while a record this source does
-    not own is left byte-for-byte as it was found. A record whose content is
-    unchanged keeps its previous revision time, so a quiet source republishes
-    byte-identical files.
-    """
-    from .validation import validate_data
-
-    products = root / "products"
-    if not (root / "manifest.json").exists() or not products.is_dir():
-        raise ValueError(f"Not a catalog directory: {root}")
-    manifest = (root / "manifest.json").read_text(encoding="utf-8")
-    target = products / (record["id"] + ".json")
-    if target.exists():
-        old = json.loads(target.read_text(encoding="utf-8"))
-        unchanged = {**record, "provenance": {**record["provenance"],
-                                             "last_checked": old["provenance"]["last_checked"]}}
-        if old == unchanged:
-            record = unchanged
-    with tempfile.TemporaryDirectory(prefix="eoltracker-ghes-") as temp:
-        staged = Path(temp)
-        shutil.copytree(products, staged / "products")
-        dump(staged / "products" / (record["id"] + ".json"), record)
-        (staged / "manifest.json").write_text(manifest, encoding="utf-8")
-        if "hardware_count" in json.loads(manifest):
-            # The manifest counts the hardware catalog too, so the staged
-            # catalog carries it rather than claiming an empty one validates.
-            shutil.copytree(root / "hardware", staged / "hardware")
-        dump(staged / REPORT, report)
-        validate_data(staged)
-        dump(target, record)
-        dump(root / REPORT, report)
-    return record
+    """Stage the record beside the committed catalog, validate, then replace it."""
+    return transaction.publish_product_record(record, report, root, REPORT)
 
 
 def import_ghes(directory=None):

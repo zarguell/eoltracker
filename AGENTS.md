@@ -59,6 +59,7 @@ engine/
   importer.py     software catalog: endoflife.date API -> data/products/*.json
   hardware.py     hardware catalog: eosl.date HTML -> data/hardware/*.json
   opengear.py     Opengear hardware: opengear.com tables -> data/hardware/opengear-*.json
+  transaction.py  shared single-product software staging and timestamp preservation
   validation.py   JSON Schema + catalog integrity checks (manifest counts,
                   provenance coherence, duplicate/conflict detection)
   site.py         Jinja2 HTML site (index, per-product, per-hardware pages)
@@ -87,11 +88,11 @@ committed source of truth for the catalog; the built site is derived.
 .venv/bin/python -m engine import-hardware  # refresh hardware (~240 polite requests, 2 workers, 0.5s pause)
 .venv/bin/python -m engine validate         # schema + integrity; nonzero exit on any violation
 .venv/bin/python -m engine build            # rebuild _site/ (site, v1 endpoints, OpenEoX, feeds)
-.venv/bin/python -m unittest discover       # 70+ tests; run before every commit
+.venv/bin/python -m unittest discover       # regression suite; run before every commit
 ```
 
-Full build takes ~5 minutes (hardware crawl dominates). Committing data
-changes alone does not publish anything — publication happens only through
+`build` renders committed data; it does not crawl upstream. Refresh commands
+perform network ingestion. Publication happens through
 `.github/workflows/publish.yml` on `main`.
 
 ## Data model (what agents must not break)
@@ -175,13 +176,22 @@ see the master coverage tracker issue for the current queue):
    header-matched tables with row accounting). Never scrape behind logins;
    respect robots/ToS. Reuse `hardware.publish_records()` with the source's
    own verifier id so one source's refresh can never touch another's records.
+   Single-product software collectors use `engine.transaction` for committed
+   ownership checks and staged publication; do not copy the transaction into
+   another vendor module. Keep vendor parsing and offline re-derivation in the
+   collector. Check committed ownership before fetching upstream.
 4. **Extend the schema deliberately** if the source has semantics the current
    schema cannot represent honestly (e.g. month precision, per-firmware
    milestones). Schema changes are reviewed changes with tests.
 5. **Import → validate → build → verify live output** — check generated JSON
-   against the source values for a sample, run the import twice (second run
-   must be byte-identical: ids never depend on run timestamps), and confirm
-   the import report accounts for every source row (imported + excluded).
+   against the source values for a sample, run the import twice, and compare
+   both product and report bytes. Quiet single-product software refreshes
+   preserve `last_checked` and report `checked_at`; these mark content revisions,
+   not every fetch attempt. Changed report content advances its timestamp.
+   Count source data rows independently of the report's own arithmetic. Define
+   whether `published` includes retained history: NetScaler excludes it, while
+   Ceph includes it. Do not count retained history as newly seen source rows;
+   account separately for duplicate source rows when reconciled.
 6. **Update the tracking issue** with what was done; close only after the
    change is on `main` and the live site shows the new data.
 
@@ -230,3 +240,27 @@ importer or in upstream.
 - Local `yaml.safe_load` is not a workflow validator: a publish.yml missing
   `runs-on` parsed locally and failed only in Actions. After editing
   workflows, diff against origin/main; every job needs `runs-on` and `steps`.
+- A missing date does not justify dropping a firmware line. Test unknown dates,
+  blank/rowspan groups, appliance exclusions, duplicate lines, renamed headers
+  and tampered cells. Use minimal valid tables for refusal paths and saved
+  vendor pages for real inventory; distinguish header rows from data rows.
+- Regression assertions must exercise the intended boundary. To test EOM/EOL
+  ordering, change the EOM source cell; changing normalized EOL only tests
+  re-derivation. Assert exception types rather than incidental Python wording.
+  Do not change production behavior merely to satisfy an invented test claim.
+- After an edit changes line numbers, use its returned anchors or re-read the
+  affected construct. Never apply remembered line ranges. A syntax warning
+  stops further edits until the damaged construct is repaired and checked.
+- Give each file one concurrent editing owner; hand off only after writes stop.
+  A saved runnable collector is the integration checkpoint, not an agent's
+  readiness claim. Run its real CLI before treating coverage as implemented.
+- Verify the `publish.yml` run for the exact pushed commit, not simply the newest
+  Actions run (which may be a dependency job). Close implementation issues only
+  after that deployment succeeds and its live JSON is checked.
+- Stage existing registered source reports alongside product records so sibling
+  report consistency checks are not silently skipped. Validation-before-write
+  is not filesystem atomicity: orchestrated refresh rollback is supplied by
+  `engine.refresh`, while direct collector CLI writes remain sequential.
+- Test quiet refreshes at different timestamps, comparing both product and
+  report bytes. Also change only an excluded row: the report revision must
+  advance while the unchanged product keeps its revision timestamp.
