@@ -40,6 +40,11 @@ EOSL_DATE_SITEMAP = "https://eosl.date/sitemap-coreapp-product-families.xml"
 OPENGEAR_LIFECYCLE = "https://opengear.com/end-life-products"
 OPENGEAR_CONFIGURE = "https://opengear.com/configure/"
 NVIDIA_VGPU_DOCS = "https://docs.nvidia.com/vgpu/index.html"
+GITHUB_GHES_RELEASES = "https://docs.github.com/en/enterprise-server@latest/admin/all-releases"
+CEPH_RELEASES = "https://docs.ceph.com/en/latest/releases/"
+CEPH_RELEASES_DATA = "https://raw.githubusercontent.com/ceph/ceph/main/doc/releases/releases.yml"
+NETSCALER_SOURCE = "https://www.citrix.com/support/product-lifecycle/product-matrix.html"
+NETSCALER_LEGACY = "https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html"
 
 # Attribution is published text (the site and the API docs print it verbatim):
 # eosl.date states no license for the data it republishes, so it is cited;
@@ -50,8 +55,14 @@ OPENGEAR_ATTRIBUTION = ("Lifecycle dates published directly by Opengear; grouped
                         "exceptions are retained below.")
 ENDOFLIFE_DATE_ATTRIBUTION = ("Software lifecycle data comes from endoflife.date, a community catalog of "
                               "public vendor lifecycle statements, used under its MIT license.")
+CEPH_ATTRIBUTION = ("Ceph community release branch lifecycle published directly by the Ceph project's release "
+                    "documentation. A current branch carries only an estimated end of life, which is retained as "
+                    "the vendor's own cell and never normalized into a firm date.")
 NVIDIA_ATTRIBUTION = ("NVIDIA vGPU software branch lifecycle published directly by NVIDIA; "
                       "dates carry the month precision the vendor's table states.")
+NETSCALER_ATTRIBUTION = ("NetScaler ADC firmware lifecycle published directly by Citrix's product "
+                         "matrices; EOM never fills a normalized milestone because the vendor states support "
+                         "continues after it.")
 # A researched record's verifier names a contributor, not a pipeline: the
 # registry leaves those to engine.contribute, which admits them against their
 # own stored citation.
@@ -177,6 +188,48 @@ SOURCES = (
         # and the refresh accounts for every branch row it saw.
         validator="engine.vgpu.validate_record",
         report="vgpu-import.json",
+    ),
+    Source(
+        id="import-ghes",
+        module="engine.ghes",
+        entry="import_ghes",
+        verifier="deterministic-github-ghes",
+        category="software",
+        name="GitHub Enterprise Server",
+        url=GITHUB_GHES_RELEASES,
+        pages=(Page(GITHUB_GHES_RELEASES, "GitHub Enterprise Server releases"),
+               Page(GITHUB_GHES_RELEASES + ".md", "GitHub Enterprise Server release table")),
+        attribution="GitHub Enterprise Server release and support-end dates published directly by GitHub.",
+        validator="engine.ghes.validate_record",
+        report="ghes-import.json",
+    ),
+    Source(
+        id="import-netscaler",
+        module="engine.netscaler",
+        entry="import_netscaler",
+        verifier="deterministic-netscaler",
+        category="software",
+        name="Citrix product lifecycle matrix",
+        url=NETSCALER_SOURCE,
+        pages=(Page(NETSCALER_SOURCE, "Citrix product matrix (NetScaler ADC)"),
+               Page(NETSCALER_LEGACY, "Citrix legacy product matrix (NetScaler ADC)")),
+        attribution=NETSCALER_ATTRIBUTION,
+        validator="engine.netscaler.validate_record",
+        report="netscaler-import.json",
+    ),
+    Source(
+        id="import-ceph",
+        module="engine.ceph",
+        entry="import_ceph",
+        verifier="deterministic-ceph",
+        category="software",
+        name="Ceph releases",
+        url=CEPH_RELEASES,
+        pages=(Page(CEPH_RELEASES, "Ceph release lifecycle"),
+               Page(CEPH_RELEASES_DATA, "Ceph release metadata (releases.yml)")),
+        attribution=CEPH_ATTRIBUTION,
+        validator="engine.ceph.validate_record",
+        report="ceph-import.json",
     ),
 )
 

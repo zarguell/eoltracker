@@ -1,0 +1,411 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "netscaler-adc",
+  "name": "NetScaler ADC",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [],
+  "labels": {},
+  "links": {
+    "html": "https://www.citrix.com/support/product-lifecycle/product-matrix.html"
+  },
+  "releases": [
+    {
+      "id": "14.1",
+      "name": "NetScaler ADC 14.1",
+      "milestones": {
+        "ga": "2023-08-08",
+        "eos": null,
+        "eossec": null,
+        "eol": "2030-08-08"
+      },
+      "upstream": {
+        "name": "14.1 (GA: 08-Aug-23)",
+        "cells": {
+          "Product/Component Name": "NetScaler ADC and Gateway Firmware",
+          "Version / Model": "14.1 (GA: 08-Aug-23)",
+          "Language": "EN",
+          "NSC": "N/A",
+          "EOS": "N/A",
+          "EOM": "08-Aug-29",
+          "EOL": "08-Aug-30"
+        },
+        "table": "NetScaler ADC (formerly Citrix ADC)"
+      }
+    },
+    {
+      "id": "13.1",
+      "name": "NetScaler ADC 13.1",
+      "milestones": {
+        "ga": "2021-09-15",
+        "eos": null,
+        "eossec": null,
+        "eol": "2027-09-15"
+      },
+      "upstream": {
+        "name": "13.1 (GA: 15-Sep-21)",
+        "cells": {
+          "Product/Component Name": "NetScaler ADC and Gateway Firmware",
+          "Version / Model": "13.1 (GA: 15-Sep-21)",
+          "Language": "EN",
+          "NSC": "N/A",
+          "EOS": "N/A",
+          "EOM": "15-Sep-26",
+          "EOL": "15-Sep-27*"
+        },
+        "table": "NetScaler ADC (formerly Citrix ADC)"
+      }
+    },
+    {
+      "id": "13.1-fips",
+      "name": "NetScaler ADC 13.1 FIPS",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2027-09-15"
+      },
+      "upstream": {
+        "name": "13.1 FIPS",
+        "cells": {
+          "Product/Component Name": "NetScaler ADC and Gateway Firmware",
+          "Version / Model": "13.1 FIPS",
+          "Language": "EN",
+          "NSC": "N/A",
+          "EOS": "N/A",
+          "EOM": "15-Sep-26",
+          "EOL": "15-Sep-27"
+        },
+        "table": "NetScaler ADC (formerly Citrix ADC)"
+      }
+    },
+    {
+      "id": "13.0",
+      "name": "NetScaler ADC 13.0",
+      "milestones": {
+        "ga": "2019-05-15",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-07-15"
+      },
+      "upstream": {
+        "name": "13.0 (GA: 15-May-19)",
+        "cells": {
+          "Product/Component Name": "NetScaler ADC and Gateway Firmware",
+          "Version / Model": "13.0 (GA: 15-May-19)",
+          "Language": "EN",
+          "NSC": "N/A",
+          "EOS": "N/A",
+          "EOM": "15-Jul-23",
+          "EOL": "15-Jul-24"
+        },
+        "table": "NetScaler ADC"
+      }
+    },
+    {
+      "id": "12.1",
+      "name": "NetScaler ADC 12.1",
+      "milestones": {
+        "ga": "2018-05-25",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-05-30"
+      },
+      "upstream": {
+        "name": "12.1 (GA: 25-May-18)",
+        "cells": {
+          "Product/Component Name": "NetScaler ADC and Gateway Firmware",
+          "Version / Model": "12.1 (GA: 25-May-18)",
+          "Language": "EN",
+          "NSC": "N/A",
+          "EOS": "N/A",
+          "EOM": "30-May-22",
+          "EOL": "30-May-23"
+        },
+        "table": "NetScaler ADC"
+      }
+    },
+    {
+      "id": "12.1-ndcpp",
+      "name": "NetScaler ADC 12.1 NDcPP",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-12-31"
+      },
+      "upstream": {
+        "name": "12.1 NDcPP",
+        "cells": {
+          "Product/Component Name": "NetScaler ADC and Gateway Firmware",
+          "Version / Model": "12.1 NDcPP",
+          "Language": "EN",
+          "NSC": "N/A",
+          "EOS": "N/A",
+          "EOM": "31-Dec-23",
+          "EOL": "31-Dec-24"
+        },
+        "table": "NetScaler ADC"
+      }
+    },
+    {
+      "id": "12.1-fips",
+      "name": "NetScaler ADC 12.1 FIPS",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-12-31"
+      },
+      "upstream": {
+        "name": "12.1 FIPS",
+        "cells": {
+          "Product/Component Name": "NetScaler ADC and Gateway Firmware",
+          "Version / Model": "12.1 FIPS",
+          "Language": "EN",
+          "NSC": "N/A",
+          "EOS": "N/A",
+          "EOM": "31-Dec-24",
+          "EOL": "31-Dec-25"
+        },
+        "table": "NetScaler ADC"
+      }
+    },
+    {
+      "id": "12.0",
+      "name": "NetScaler ADC 12.0",
+      "milestones": {
+        "ga": "2017-04-25",
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-10-30"
+      },
+      "upstream": {
+        "name": "12.0 (GA: 25-Apr-17)",
+        "cells": {
+          "Product/Component Name": "",
+          "Version / Model": "12.0 (GA: 25-Apr-17)",
+          "Language": "EN",
+          "NSC": "30-Apr-19 CTX253844",
+          "EOS": "N/A",
+          "EOM": "30-Oct-19",
+          "EOL": "30-Oct-20"
+        },
+        "table": "NetScaler ADC"
+      }
+    },
+    {
+      "id": "11.1",
+      "name": "NetScaler ADC 11.1",
+      "milestones": {
+        "ga": "2016-06-30",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-12-31"
+      },
+      "upstream": {
+        "name": "11.1 (GA: 30-Jun-16)",
+        "cells": {
+          "Product/Component Name": "",
+          "Version / Model": "11.1 (GA: 30-Jun-16)",
+          "Language": "EN",
+          "NSC": "N/A",
+          "EOS": "N/A",
+          "EOM": "30-Jun-20",
+          "EOL": "31-Dec-21"
+        },
+        "table": "NetScaler ADC"
+      }
+    },
+    {
+      "id": "11.0",
+      "name": "NetScaler ADC 11.0",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2019-05-30"
+      },
+      "upstream": {
+        "name": "11.0",
+        "cells": {
+          "Product/Component Name": "",
+          "Version / Model": "11.0",
+          "Language": "EN",
+          "NSC": "30-Nov-17 CTX230297",
+          "EOS": "N/A",
+          "EOM": "30-May-18",
+          "EOL": "30-May-19"
+        },
+        "table": "NetScaler ADC"
+      }
+    },
+    {
+      "id": "10.5",
+      "name": "NetScaler ADC 10.5",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-04-30"
+      },
+      "upstream": {
+        "name": "10.5",
+        "cells": {
+          "Product/Component Name": "",
+          "Version / Model": "10.5",
+          "Language": "EN",
+          "NSC": "31-Oct-18 CTX239274",
+          "EOS": "N/A",
+          "EOM": "30-Apr-19",
+          "EOL": "30-Apr-20"
+        },
+        "table": "NetScaler ADC"
+      }
+    },
+    {
+      "id": "10.0.x-10.1.x-10.5.e-admin-partition-and-10.5.e-10.5.x.e-admin-partition",
+      "name": "NetScaler ADC 10.0.x, 10.1.x, 10.5.e Admin Partition, and 10.5.e 10.5.x.e Admin Partition",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2018-04-21"
+      },
+      "upstream": {
+        "name": "10.0.x, 10.1.x, 10.5.e Admin Partition, and 10.5.e 10.5.x.e Admin Partition",
+        "cells": {
+          "Product/Component Name": "",
+          "Version / Model": "10.0.x, 10.1.x, 10.5.e Admin Partition, and 10.5.e 10.5.x.e Admin Partition",
+          "Language": "EN",
+          "NSC": "21-Sep-16 CTX217031 CTX207202",
+          "EOS": "N/A",
+          "EOM": "21-Apr-17",
+          "EOL": "21-Apr-18"
+        },
+        "table": "NetScaler ADC"
+      }
+    },
+    {
+      "id": "9.x",
+      "name": "NetScaler ADC 9.x",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2015-10-30"
+      },
+      "upstream": {
+        "name": "9.x",
+        "cells": {
+          "Product/Component Name": "",
+          "Version / Model": "9.x",
+          "Language": "EN",
+          "NSC": "30-Oct-13 CTX139456",
+          "EOS": "N/A",
+          "EOM": "30-Oct-14",
+          "EOL": "30-Oct-15"
+        },
+        "table": "NetScaler ADC"
+      }
+    },
+    {
+      "id": "8.x",
+      "name": "NetScaler ADC 8.x",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2012-04-15"
+      },
+      "upstream": {
+        "name": "8.x",
+        "cells": {
+          "Product/Component Name": "",
+          "Version / Model": "8.x",
+          "Language": "EN",
+          "NSC": "15-Oct-10",
+          "EOS": "N/A",
+          "EOM": "15-Apr-11",
+          "EOL": "15-Apr-12"
+        },
+        "table": "NetScaler ADC"
+      }
+    },
+    {
+      "id": "7.x",
+      "name": "NetScaler ADC 7.x",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2010-07-05"
+      },
+      "upstream": {
+        "name": "7.x",
+        "cells": {
+          "Product/Component Name": "",
+          "Version / Model": "7.x",
+          "Language": "EN",
+          "NSC": "05-Jul-09 CTX119513",
+          "EOS": "N/A",
+          "EOM": "05-Jul-09",
+          "EOL": "05-Jul-10"
+        },
+        "table": "NetScaler ADC"
+      }
+    },
+    {
+      "id": "6.x",
+      "name": "NetScaler ADC 6.x",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2009-03-20"
+      },
+      "upstream": {
+        "name": "6.x",
+        "cells": {
+          "Product/Component Name": "",
+          "Version / Model": "6.x",
+          "Language": "EN",
+          "NSC": "20-Mar-08 CTX114642",
+          "EOS": "N/A",
+          "EOM": "20-Mar-08",
+          "EOL": "20-Mar-09"
+        },
+        "table": "NetScaler ADC"
+      }
+    },
+    {
+      "id": "5.x",
+      "name": "NetScaler ADC 5.x",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2008-03-01"
+      },
+      "upstream": {
+        "name": "5.x",
+        "cells": {
+          "Product/Component Name": "",
+          "Version / Model": "5.x",
+          "Language": "EN",
+          "NSC": "01-Sep-06",
+          "EOS": "N/A",
+          "EOM": "01-Mar-07",
+          "EOL": "01-Mar-08"
+        },
+        "table": "NetScaler ADC"
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://www.citrix.com/support/product-lifecycle/product-matrix.html",
+    "verifier": "deterministic-netscaler",
+    "last_checked": "2026-09-17T20:43:51Z",
+    "upstream_modified": null
+  }
+}
