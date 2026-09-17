@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-ds-16a",
+  "name": "DS-16A",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Connectrix - ANCOR",
+  "family": "Connectrix - ANCOR",
+  "model_number": "DS-16A",
+  "milestones": {
+    "ga": "2000-09-01",
+    "eos": "2001-06-30",
+    "eossec": null,
+    "eol": "2006-06-30"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "DS-16A",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "DS-16A",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Connectrix - ANCOR",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2001-06-30",
+      "datetime": null,
+      "value": "2001-06-30",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Sep. 01, 2000",
+      "datetime": "2000-09-01",
+      "value": "2000-09-01",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2006-06-30",
+      "datetime": null,
+      "value": "2006-06-30",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/san-switches/vendor/dell-emc/connectrix-ancor/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

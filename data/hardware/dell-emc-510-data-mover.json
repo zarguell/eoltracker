@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-510-data-mover",
+  "name": "510 Data Mover",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Celerra File Server",
+  "family": "Celerra File Server",
+  "model_number": "510 Data Mover",
+  "milestones": {
+    "ga": "2001-02-01",
+    "eos": "2004-07-31",
+    "eossec": null,
+    "eol": "2009-07-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "510 Data Mover",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "510 Data Mover",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Celerra File Server",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2004-07-31",
+      "datetime": null,
+      "value": "2004-07-31",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Feb. 01, 2001",
+      "datetime": "2001-02-01",
+      "value": "2001-02-01",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2009-07-31",
+      "datetime": null,
+      "value": "2009-07-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/nas-storage/vendor/dell-emc/celerra-file-server/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

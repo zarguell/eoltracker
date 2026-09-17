@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-inv-ctl-invista",
+  "name": "INV-CTL (Invista)",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Invista (1.x)",
+  "family": "Invista (1.x)",
+  "model_number": "INV-CTL (Invista)",
+  "milestones": {
+    "ga": "2005-12-16",
+    "eos": "2007-06-30",
+    "eossec": null,
+    "eol": "2009-09-30"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "INV-CTL (Invista)",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "INV-CTL (Invista)",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Invista (1.x)",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2007-06-30",
+      "datetime": null,
+      "value": "2007-06-30",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Dec. 16, 2005",
+      "datetime": "2005-12-16",
+      "value": "2005-12-16",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2009-09-30",
+      "datetime": null,
+      "value": "2009-09-30",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/san-storage/vendor/dell-emc/invista-1x/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

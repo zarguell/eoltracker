@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% block content %}
+<nav class="crumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="{{ url_for() }}">Catalog</a></li>
+    <li aria-current="page">Hardware</li>
+  </ol>
+</nav>
+
+<section class="hero">
+  <p class="eyebrow">Hardware lifecycle catalog</p>
+  <h1 class="page-title">Hardware end-of-sale and end-of-support dates</h1>
+  <p class="lead">
+    {{ plural(hardware_count, 'hardware model') }} from {{ plural(hardware_vendors|length, 'vendor') }}, each with the
+    vendor's published release date, end of sale and end of support. The catalog is normalized from
+    <a href="{{ hardware_source_site }}" rel="noopener">{{ hardware_source_name }}</a>, which aggregates public vendor
+    announcements; no date here is estimated.
+  </p>
+  <div class="hero-stats">
+    <div class="stat"><span class="stat-num">{{ hardware_count }}</span><span class="stat-label">hardware models</span></div>
+    <div class="stat"><span class="stat-num">{{ hardware_vendors|length }}</span><span class="stat-label">vendors</span></div>
+    <div class="stat"><span class="stat-num">{{ hardware_coverage|sum(attribute='known') }}</span><span class="stat-label">published milestone dates</span></div>
+    <div class="stat"><span class="stat-num">{{ hardware_statuses|selectattr('key', 'equalto', 'eol')|map(attribute='count')|first }}</span><span class="stat-label">models past end of support</span></div>
+  </div>
+  <p class="hero-meta">
+    Last refresh <time datetime="{{ refresh.iso }}">{{ refresh.human }}</time>.
+    Verified by <code>deterministic-eosl-date</code>. Every model's page links the exact family page it was read from.
+  </p>
+</section>
+
+<section class="panel" aria-labelledby="hw-coverage-title">
+  <h2 class="panel-title" id="hw-coverage-title">Milestone coverage</h2>
+  <p class="panel-note">
+    How many of the {{ hardware_count }} models have each milestone published. A blank milestone means
+    {{ hardware_source_name }} publishes no such date — not that the vendor supports the model indefinitely.
+  </p>
+  <ul class="bars">
+    {% for row in hardware_coverage %}
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">{{ row.label }}</span>
+        <span class="bar-value">{{ row.known }} / {{ row.total }} models with a date ({{ row.percent }}%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="{{ row.label }}: {{ row.known }} of {{ row.total }} models have a published date">
+        <div class="bar-fill" style="width: {{ row.percent }}%"></div>
+      </div>
+      <p class="bar-detail">{{ row.detail }}</p>
+    </li>
+    {% endfor %}
+  </ul>
+  <h3 class="sub-title">Status</h3>
+  <p class="panel-note">
+    Status comes from the row {{ hardware_source_name }} publishes each model under, not from a computed threshold.
+  </p>
+  <ul class="chips">
+    {% for status in hardware_statuses %}
+    <li><span class="tag{% if status.key == 'eol' %} tag-warn{% elif status.key == 'supported' %} tag-ok{% endif %}">{{ status.label }}</span> <span class="chip-count">{{ status.count }}</span> — {{ status.detail }}</li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="catalog" aria-labelledby="hardware-title">
+  {% set heading_id = 'hardware-title' %}
+  {% set heading = 'All hardware models' %}
+  {% include "_hardware_table.html" %}
+</section>
+
+<section class="panel" aria-labelledby="sources-title">
+  <h2 class="panel-title" id="sources-title">Source and attribution</h2>
+  <p class="panel-note">
+    {{ hardware_source_attribution }} eosl.date states no license for that data, so it is attributed here and on every
+    model page rather than relicensed, and this project claims no affiliation with eosl.date or with the vendors whose
+    products appear.
+  </p>
+  <dl class="facts">
+    <div><dt>Upstream</dt><dd><a href="{{ hardware_source_site }}" rel="noopener">{{ hardware_source_site }}</a> — {{ hardware_source_name }}, by Subash Geetha Krishnan</dd></div>
+    <div><dt>Data origin</dt><dd>Aggregated from public vendor announcements, as stated by eosl.date</dd></div>
+    <div><dt>Verifier</dt><dd><code>deterministic-eosl-date</code>, the pipeline revision that parsed the family tables</dd></div>
+    <div><dt>JSON index</dt><dd><a href="{{ hardware_url }}">{{ site_url('v1/hardware.json') }}</a></dd></div>
+    <div><dt>Schema</dt><dd><a href="{{ site_url('v1/schema/hardware.json') }}">v1/schema/hardware.json</a></dd></div>
+  </dl>
+  <p class="panel-note">
+    Software lifecycle dates live in the
+    <a href="{{ url_for() }}">software catalog</a>, sourced from endoflife.date under the MIT license.
+  </p>
+</section>
+{% endblock %}

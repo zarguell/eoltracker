@@ -394,6 +394,51 @@ main { padding: 28px 0 56px; }
   background: var(--surface-2);
 }
 
+/* ---------- catalog tabs ---------- */
+
+.tabs { margin-top: 20px; }
+.tablist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 20px;
+}
+.tab {
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--fg-muted);
+  background: none;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  padding: 9px 14px;
+  margin-bottom: -1px;
+  cursor: pointer;
+}
+.tab:hover { color: var(--link); }
+.tab[aria-selected="true"] { color: var(--fg); border-bottom-color: var(--teal-600); }
+.tabpanel[hidden] { display: none; }
+.tabpanel > .catalog-head { margin-top: 0; }
+
+/* ---------- vendor chips ---------- */
+
+.chips-filter { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 20px; }
+.chip {
+  font: inherit;
+  font-size: 0.84rem;
+  color: var(--fg);
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 5px 12px;
+  cursor: pointer;
+}
+.chip:hover { border-color: var(--teal-600); }
+.chip.is-active { background: var(--navy-700); border-color: var(--navy-700); color: #fff; }
+.chip-count { color: var(--fg-muted); font-variant-numeric: tabular-nums; }
+.chip.is-active .chip-count { color: #cfe6e4; }
+
 /* ---------- tables ---------- */
 
 .table-scroll { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius-sm); }
@@ -436,6 +481,18 @@ main { padding: 28px 0 56px; }
 .release-download { font-size: 0.82rem; }
 .mapping-table { min-width: 620px; }
 .mapping-table th[scope="row"] { font-weight: 600; white-space: nowrap; }
+
+/* ---------- hardware table ---------- */
+
+.hardware-table { min-width: 900px; }
+.hardware-table .hardware-name { max-width: 320px; }
+.hardware-table .hardware-name a { font-weight: 600; }
+.hardware-table .hardware-vendor { white-space: nowrap; }
+.hardware-table .hardware-line { max-width: 260px; color: var(--fg-muted); font-size: 0.86rem; }
+.hardware-table .hardware-status { white-space: nowrap; }
+.hardware-row[hidden] { display: none; }
+.milestone-raw { font-size: 0.84rem; color: var(--fg-muted); }
+.milestone-raw code { margin-right: 4px; }
 
 /* ---------- detail lists ---------- */
 

@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-vnxe3300",
+  "name": "VNXe3300",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC VNXe",
+  "family": "VNXe",
+  "model_number": "VNXe3300",
+  "milestones": {
+    "ga": "2011-03-07",
+    "eos": "2015-12-31",
+    "eossec": null,
+    "eol": "2020-12-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "VNXe3300",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "VNXe3300",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC VNXe",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2015-12-31",
+      "datetime": null,
+      "value": "2015-12-31",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Mar. 07, 2011",
+      "datetime": "2011-03-07",
+      "value": "2011-03-07",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2020-12-31",
+      "datetime": null,
+      "value": "2020-12-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/san-storage/vendor/dell-emc/vnxe/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

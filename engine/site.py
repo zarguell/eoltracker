@@ -1,11 +1,18 @@
 """Publish the validated catalog: static website, v1 JSON endpoints, schema copies.
 
-`build()` never fetches anything. It validates the committed catalog through
-`engine.validation.validate_data()` (raising on any inconsistency), then writes
-`_site/` from scratch: the catalog pages, the per-product pages, `v1/feed.json`
-(every normalized record), `v1/products.json` (summaries with absolute product
-endpoint URLs), byte-identical `v1/products/{id}.json` records, and copies of
+`build()` never fetches anything. It validates the committed catalogs through
+`engine.validation.validate_data()` and `engine.validation.validate_hardware()`
+(raising on any inconsistency), then writes `_site/` from scratch: the catalog
+pages, the per-product and per-hardware-model pages, `v1/feed.json` (every
+normalized software record), `v1/products.json` (summaries with absolute
+product endpoint URLs), `v1/hardware.json` (hardware summaries), byte-identical
+`v1/products/{id}.json` and `v1/hardware/{id}.json` records, and copies of
 `schema/*.json` at `v1/schema/`.
+
+Two upstream sources are published side by side. Software comes from
+endoflife.date (MIT); hardware comes from eosl.date, which aggregates public
+vendor announcements and publishes no license, so it is attributed by name and
+link rather than relicensed.
 """
 import json
 import re
@@ -16,7 +23,7 @@ from pathlib import Path
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 from .importer import ROOT
-from .validation import validate_data
+from .validation import validate_data, validate_hardware
 
 TEMPLATES = Path(__file__).resolve().parent / "templates"
 SCHEMA_DIR = ROOT / "schema"
@@ -32,6 +39,13 @@ SOURCE_NAME = "endoflife.date"
 SOURCE_SITE = "https://endoflife.date/"
 SOURCE_LICENSE = "MIT"
 SOURCE_LICENSE_URL = "https://github.com/endoflife-date/endoflife.date/blob/master/LICENSE"
+# The hardware catalog is scraped from eosl.date, which republishes vendor
+# announcements and states no license. It is therefore cited, not relicensed:
+# name, link and what the data actually is.
+HARDWARE_SOURCE_NAME = "eosl.date"
+HARDWARE_SOURCE_SITE = "https://eosl.date/"
+HARDWARE_SOURCE_ATTRIBUTION = ("Hardware lifecycle data comes from eosl.date by Subash Geetha Krishnan, "
+                               "aggregated from public vendor announcements.")
 REPOSITORY_URL = "https://github.com/zarguell/eoltracker"
 # Root notice files republished unchanged alongside the catalog when present.
 NOTICE_FILES = ("THIRD-PARTY-NOTICES.txt", "OASIS-NOTICE.txt")
@@ -64,13 +78,51 @@ MILESTONES = (
         "detail": "End of all support. A published extended-support date wins; otherwise eolFrom when its label describes a full support end.",
     },
 )
-MILESTONES_BY_KEY = {m["key"]: m for m in MILESTONES}
 MILESTONE_FIELDS = {
     "ga": ("releaseDate",),
     "eos": ("eoasFrom", "discontinuedFrom"),
     "eossec": ("eolFrom", "eoesFrom"),
     "eol": ("eolFrom", "eoesFrom"),
 }
+# The hardware catalog uses its own vocabulary: eosl.date publishes a release
+# date column, an end-of-sales column and a terminal support column, and no
+# security-support column at all, so the same four keys carry different rules.
+# Keeping them apart means a hardware page never quotes a software mapping rule
+# that does not apply to the source it was built from.
+HARDWARE_MILESTONES = (
+    {
+        "key": "ga",
+        "short": "GA",
+        "label": "General availability",
+        "detail": "First availability, from the eosl.date release date or launch date column.",
+    },
+    {
+        "key": "eos",
+        "short": "EoS",
+        "label": "End of sale",
+        "detail": "Last day the model is sold. eosl.date's end-of-life-date column names the end of sales date, not the support end.",
+    },
+    {
+        "key": "eossec",
+        "short": "EoSS",
+        "label": "End of security support",
+        "detail": "eosl.date publishes no security-support column, so this milestone is always unknown for hardware; the terminal support column feeds end of life instead.",
+    },
+    {
+        "key": "eol",
+        "short": "EoL",
+        "label": "End of support",
+        "detail": "The vendor's last supported day for the model (eosl.date's EOSL/LDOS column).",
+    },
+)
+MILESTONE_KEYS = tuple(milestone["key"] for milestone in HARDWARE_MILESTONES)
+# eosl.date states lifecycle status through the row class of each model row.
+HARDWARE_STATUSES = (
+    {"key": "supported", "label": "Supported", "detail": "Published in a supported row: no support end has been announced."},
+    {"key": "expiring", "label": "Expiring", "detail": "Published in a warning row: the announcement says support ends soon."},
+    {"key": "eol", "label": "End of life", "detail": "Published in an end-of-life row: the vendor's support window has closed."},
+)
+HARDWARE_STATUS_ORDER = tuple(status["key"] for status in HARDWARE_STATUSES)
 # Upstream date fields, in the order they appear in the raw release object, and
 # the label field that qualifies each one.
 UPSTREAM_DATE_FIELDS = (
@@ -140,6 +192,9 @@ def version_key(value):
 env.globals.update(
     url_for=url_for,
     site_url=site_url,
+    feed_abs=site_url("v1/feed.json"),
+    products_abs=site_url("v1/products.json"),
+    hardware_abs=site_url("v1/hardware.json"),
     human_date=human_date,
     human_datetime=human_datetime,
     plural=plural,
@@ -149,6 +204,9 @@ env.globals.update(
     source_site=SOURCE_SITE,
     source_license=SOURCE_LICENSE,
     source_license_url=SOURCE_LICENSE_URL,
+    hardware_source_name=HARDWARE_SOURCE_NAME,
+    hardware_source_site=HARDWARE_SOURCE_SITE,
+    hardware_source_attribution=HARDWARE_SOURCE_ATTRIBUTION,
 )
 
 
@@ -196,10 +254,10 @@ def release_rows(record):
     return rows
 
 
-def milestone_coverage(rows):
+def milestone_coverage(rows, milestones=MILESTONES):
     total = len(rows)
     coverage = []
-    for milestone in MILESTONES:
+    for milestone in milestones:
         known = sum(1 for row in rows if row["cells"][milestone["key"]]["value"])
         coverage.append({
             "key": milestone["key"],
@@ -213,11 +271,11 @@ def milestone_coverage(rows):
     return coverage
 
 
-def upcoming_events(rows, today, limit=None):
+def upcoming_events(rows, today, limit=None, milestones=MILESTONES):
     """Published milestone dates that have not passed yet, soonest first."""
     events = []
     for row in rows:
-        for milestone in MILESTONES:
+        for milestone in milestones:
             if milestone["key"] == "ga":
                 continue
             value = row["cells"][milestone["key"]]["value"]
@@ -259,6 +317,78 @@ def summarize(record, rows, today):
     }
 
 
+def hardware_rows(record):
+    """Template-ready rows for one hardware model: a single row of milestones.
+
+    A hardware record describes one model, not a family of releases, so the
+    shape mirrors a release row instead of repeating one. Every raw upstream
+    cell becomes a note when the normalized date for its role differs from the
+    value it published, so a date set aside by a rule stays visible.
+    """
+    milestones = record["milestones"]
+    raw = []
+    for column, cell in record["upstream"].items():
+        raw.append({
+            "column": column,
+            "text": cell.get("text") or None,
+            "value": cell.get("value"),
+            "datetime": cell.get("datetime"),
+            "role": cell.get("role"),
+            "links": cell.get("links") or [],
+        })
+    cells = {}
+    for milestone in HARDWARE_MILESTONES:
+        key = milestone["key"]
+        value = milestones[key]
+        notes = [f"{entry['column']} {entry['value']}" for entry in raw
+                 if entry["role"] == key and entry["value"] and entry["value"] != value]
+        cells[key] = {"value": value, "human": human_date(value), "notes": "; ".join(notes) or None}
+    return {
+        "id": record["id"],
+        "name": record["name"],
+        "cells": cells,
+        "raw": raw,
+    }
+
+
+def summarize_hardware(record, rows, today):
+    next_events = upcoming_events([rows], today, limit=1, milestones=HARDWARE_MILESTONES)
+    return {
+        "id": record["id"],
+        "name": record["name"],
+        "vendor": record["vendor"],
+        "product_line": record["product_line"],
+        "family": record.get("family"),
+        "model_number": record.get("model_number"),
+        "status": record["status"],
+        "search": f"{record['name']} {record['id']} {record['vendor']} {record['product_line']} "
+                  f"{record.get('family') or ''} {record.get('model_number') or ''}".lower(),
+        "coverage": milestone_coverage([rows], HARDWARE_MILESTONES),
+        "milestones": {key: record["milestones"][key] for key in MILESTONE_KEYS},
+        "next": next_events[0] if next_events else None,
+        "json": site_url(f"v1/hardware/{record['id']}.json"),
+        "page": site_url(f"hardware/{record['id']}/"),
+        "source": (record["provenance"]["source_urls"] or [None])[0],
+    }
+
+
+def hardware_vendors(records):
+    """Vendor facets with their model counts, largest first then alphabetical."""
+    counts = {}
+    for record in records:
+        vendor = record["vendor"]
+        counts[vendor] = counts.get(vendor, 0) + 1
+    return [{"name": name, "count": counts[name]}
+            for name in sorted(counts, key=lambda name: (-counts[name], name))]
+
+
+def hardware_statuses(records):
+    counts = {}
+    for record in records:
+        counts[record["status"]] = counts.get(record["status"], 0) + 1
+    return [{**status, "count": counts.get(status["key"], 0)} for status in HARDWARE_STATUSES]
+
+
 def catalog_categories(records):
     counts = {}
     for record in records:
@@ -284,9 +414,13 @@ def build(data_dir=None, out_dir=None):
     data_dir = Path(data_dir) if data_dir is not None else DEFAULT_DATA
     out = Path(out_dir) if out_dir is not None else DEFAULT_OUT
     records = validate_data(data_dir)
+    hardware = validate_hardware(data_dir)
     manifest = json.loads((data_dir / "manifest.json").read_text(encoding="utf-8"))
     if manifest["product_count"] != len(records):
         raise ValueError(f"Manifest advertises {manifest['product_count']} products, found {len(records)}")
+    # The manifest may predate the hardware catalog, so its count is advisory.
+    if manifest.get("hardware_count", len(hardware)) != len(hardware):
+        raise ValueError(f"Manifest advertises {manifest['hardware_count']} hardware models, found {len(hardware)}")
     today = datetime.now(timezone.utc).date()
 
     if out.exists():
@@ -316,6 +450,21 @@ def build(data_dir=None, out_dir=None):
     for record in records:
         shutil.copyfile(data_dir / "products" / f"{record['id']}.json", out / "v1" / "products" / f"{record['id']}.json")
 
+    hardware_rows_by_id = {record["id"]: hardware_rows(record) for record in hardware}
+    hardware_summaries = [summarize_hardware(record, hardware_rows_by_id[record["id"]], today)
+                          for record in hardware]
+    # The JSON index keeps slug order, like the product index. The rendered
+    # tables ship in model-name order instead, which is the default sort of the
+    # filter script, so a page costs no reordering work when it loads.
+    hardware_page = sorted(hardware_summaries, key=lambda model: model["name"].lower())
+    write_json(out / "v1" / "hardware.json", {
+        "schema_version": SCHEMA_VERSION, **manifest,
+        "hardware_count": len(hardware), "hardware": hardware_summaries})
+    (out / "v1" / "hardware").mkdir(parents=True)
+    for record in hardware:
+        shutil.copyfile(data_dir / "hardware" / f"{record['id']}.json",
+                        out / "v1" / "hardware" / f"{record['id']}.json")
+
     # ---- shared assets ---------------------------------------------------
     write(out / "style.css", (TEMPLATES / "style.css").read_text(encoding="utf-8"))
     write(out / "app.js", (TEMPLATES / "app.js").read_text(encoding="utf-8"))
@@ -327,13 +476,20 @@ def build(data_dir=None, out_dir=None):
     }
     coverage = milestone_coverage([row for rows in rows_by_id.values() for row in rows])
     categories = catalog_categories(records)
+    hardware_coverage = milestone_coverage([row for row in hardware_rows_by_id.values()])
+    hardware_vendor_facets = hardware_vendors(hardware)
+    hardware_status_facets = hardware_statuses(hardware)
     common = {
-        "manifest": manifest,
         "product_count": manifest["product_count"],
         "release_count": manifest["release_count"],
         "excluded_count": len(manifest["excluded_hardware"]),
+        "hardware_count": len(hardware),
         "refresh": refresh,
         "milestone_meta": MILESTONES,
+        "hardware_milestone_meta": HARDWARE_MILESTONES,
+        "hardware_status_meta": HARDWARE_STATUSES,
+        "hardware_vendors": hardware_vendor_facets,
+        "hardware_statuses": hardware_status_facets,
         "schema_version": SCHEMA_VERSION,
         "notices": notices,
         "schema_files": [f"v1/schema/{f.name}" for f in schema_files],
@@ -344,18 +500,51 @@ def build(data_dir=None, out_dir=None):
         **common,
         active="index",
         canonical=site_url(),
-        title="EOL Tracker — software lifecycle dates from endoflife.date",
+        title="EOL Tracker — software and hardware lifecycle dates",
         description=(f"Normalized general availability, end-of-sale, security-support and end-of-life dates "
-                     f"for {manifest['product_count']} software products, republished from endoflife.date with per-record provenance."),
+                     f"for {manifest['product_count']} software products and {len(hardware)} hardware models, "
+                     f"republished from endoflife.date and eosl.date with per-record provenance."),
         products=summaries,
         coverage=coverage,
         categories=categories,
+        hardware=hardware_page,
+        hardware_coverage=hardware_coverage,
         feed_url=url_for("v1/feed.json"),
         products_url=url_for("v1/products.json"),
-        feed_abs=site_url("v1/feed.json"),
-        products_abs=site_url("v1/products.json"),
-        schema_abs=site_url("v1/schema/product.json"),
+        hardware_url=url_for("v1/hardware.json"),
     ))
+
+    write(out / "hardware" / "index.html", render(
+        "hardware-index.html",
+        **common,
+        active="hardware",
+        canonical=site_url("hardware/"),
+        title="Hardware lifecycle dates — EOL Tracker",
+        description=(f"General availability, end of sale and end-of-support dates for {len(hardware)} hardware "
+                     f"models from {len(hardware_vendor_facets)} vendors, normalized from eosl.date."),
+        hardware=hardware_page,
+        hardware_coverage=hardware_coverage,
+        hardware_url=url_for("v1/hardware.json"),
+    ))
+
+    for record in hardware:
+        rows = hardware_rows_by_id[record["id"]]
+        source_urls = record["provenance"]["source_urls"]
+        write(out / "hardware" / record["id"] / "index.html", render(
+            "hardware.html",
+            **common,
+            active="hardware",
+            canonical=site_url(f"hardware/{record['id']}/"),
+            title=f"{record['name']} lifecycle dates — EOL Tracker",
+            description=(f"General availability, end of sale and end-of-support dates for the {record['name']} "
+                         f"{record['product_line']} model, with the raw eosl.date values and provenance."),
+            model=record,
+            rows=rows,
+            coverage=milestone_coverage([rows], HARDWARE_MILESTONES),
+            json_url=url_for(f"v1/hardware/{record['id']}.json"),
+            json_abs=site_url(f"v1/hardware/{record['id']}.json"),
+            upstream_urls=source_urls,
+        ))
 
     for record in records:
         rows = rows_by_id[record["id"]]
@@ -387,10 +576,12 @@ def build(data_dir=None, out_dir=None):
         active="api",
         canonical=site_url("api/"),
         title="API and schema — EOL Tracker",
-        description="JSON endpoints, the normalized record shape, and the conservative upstream mapping rules behind EOL Tracker.",
+        description="JSON endpoints, the normalized record shapes, and the conservative upstream mapping rules behind EOL Tracker.",
         feed_url=url_for("v1/feed.json"),
         products_url=url_for("v1/products.json"),
+        hardware_url=url_for("v1/hardware.json"),
         sample_product=records[0]["id"] if records else None,
+        sample_hardware=hardware[0]["id"] if hardware else None,
         openeox_url=url_for("v1/openeox/index.json"),
     ))
 
@@ -400,6 +591,6 @@ def build(data_dir=None, out_dir=None):
         active=None,
         canonical=site_url("404.html"),
         title="Page not found — EOL Tracker",
-        description="No page at this address. Browse the software lifecycle catalog instead.",
+        description="No page at this address. Browse the software and hardware catalogs instead.",
         products=summaries[:5],
     ))

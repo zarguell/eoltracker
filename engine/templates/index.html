@@ -1,27 +1,32 @@
 {% extends "base.html" %}
 {% block content %}
 <section class="hero">
-  <p class="eyebrow">Software lifecycle catalog</p>
-  <h1 class="page-title">When does your software stop getting support?</h1>
+  <p class="eyebrow">Software and hardware lifecycle catalog</p>
+  <h1 class="page-title">When does your software or hardware stop getting support?</h1>
   <p class="lead">
     General availability, end of sale, end of security support and end of life for
-    {{ plural(product_count, 'product') }} — {{ release_count }} releases in total — normalized from endoflife.date.
+    {{ plural(product_count, 'software product') }} — {{ release_count }} releases — and for
+    {{ plural(hardware_count, 'hardware model') }} from {{ hardware_vendors|length }} vendors.
+    Software is normalized from endoflife.date; hardware comes from eosl.date.
     Every date carries the record it came from; nothing here is estimated.
   </p>
   <div class="hero-stats">
-    <div class="stat"><span class="stat-num">{{ product_count }}</span><span class="stat-label">products</span></div>
+    <div class="stat"><span class="stat-num">{{ product_count }}</span><span class="stat-label">software products</span></div>
     <div class="stat"><span class="stat-num">{{ release_count }}</span><span class="stat-label">releases</span></div>
-    <div class="stat"><span class="stat-num">{{ coverage|sum(attribute='known') }}</span><span class="stat-label">published milestone dates</span></div>
-    <div class="stat"><span class="stat-num">{{ categories|length }}</span><span class="stat-label">upstream categories</span></div>
+    <div class="stat"><span class="stat-num">{{ hardware_count }}</span><span class="stat-label">hardware models</span></div>
+    <div class="stat"><span class="stat-num">{{ coverage|sum(attribute='known') + hardware_coverage|sum(attribute='known') }}</span><span class="stat-label">published milestone dates</span></div>
+    <div class="stat"><span class="stat-num">{{ categories|length }}</span><span class="stat-label">software categories</span></div>
   </div>
   <p class="hero-meta">
     Last refresh <time datetime="{{ refresh.iso }}">{{ refresh.human }}</time>.
-    Hardware products upstream ({{ excluded_count }}) are excluded from this catalog.
+    The {{ plural(excluded_count, 'hardware product') }} endoflife.date lists outside its own software catalog stay
+    excluded here and are named in the manifest; the hardware models below are the ones eosl.date publishes a vendor
+    lifecycle date for.
   </p>
 </section>
 
 <section class="panel" aria-labelledby="coverage-title">
-  <h2 class="panel-title" id="coverage-title">Milestone coverage</h2>
+  <h2 class="panel-title" id="coverage-title">Software milestone coverage</h2>
   <p class="panel-note">
     How many normalized dates exist at all, across every release. A blank date means upstream publishes no date
     for that milestone — usually a vendor policy that has not been announced — not that a product is unsupported.
@@ -42,104 +47,126 @@
   </ul>
 </section>
 
-<section class="catalog" aria-labelledby="catalog-title">
-  <div class="catalog-head">
-    <h2 class="panel-title" id="catalog-title">Products</h2>
-    <p class="catalog-count" id="result-count" role="status">{{ product_count }} products</p>
-  </div>
+<section class="catalog" aria-label="Catalog">
   <p class="panel-note catalog-note">
-    Card counts show how many releases have a published date for each milestone:
+    Two catalogs, one page. The software cards show how many releases have a published date for each milestone:
     {% for milestone in milestone_meta %}<abbr title="{{ milestone.label }}">{{ milestone.short }}</abbr> {{ milestone.label|lower }}{% if not loop.last %}, {% endif %}{% endfor %}.
     A zero means upstream publishes no such date — not that support ends today.
   </p>
 
-  <form class="filters" id="catalog-filters" role="search" autocomplete="off">
-    <p class="field field-search">
-      <label for="filter-q">Search</label>
-      <input type="search" id="filter-q" name="q" placeholder="Name or id, e.g. ubuntu" spellcheck="false">
-    </p>
-    <p class="field">
-      <label for="filter-category">Category</label>
-      <select id="filter-category" name="category">
-        <option value="">All categories</option>
-        {% for category in categories %}
-        <option value="{{ category.name }}">{{ category.name }} ({{ category.count }})</option>
-        {% endfor %}
-      </select>
-    </p>
-    <p class="field">
-      <label for="filter-data">Best data for</label>
-      <select id="filter-data" name="data">
-        <option value="">Any milestone</option>
-        {% for milestone in milestone_meta %}
-        <option value="{{ milestone.key }}">{{ milestone.label }} published</option>
-        {% endfor %}
-      </select>
-    </p>
-    <p class="field">
-      <label for="filter-sort">Sort</label>
-      <select id="filter-sort" name="sort">
-        <option value="name">Name (A–Z)</option>
-        <option value="releases">Most releases</option>
-        <option value="upcoming">Next deadline soonest</option>
-      </select>
-    </p>
-    <p class="filters-actions">
-      <button type="reset" class="button">Clear filters</button>
-    </p>
-  </form>
+  <div class="tabs" id="catalog-tabs">
+    <div class="tablist" id="catalog-tablist" role="tablist" aria-label="Catalog type">
+      <button type="button" class="tab" role="tab" id="tab-software" aria-controls="panel-software" aria-selected="true">Software ({{ product_count }})</button>
+      <button type="button" class="tab" role="tab" id="tab-hardware" aria-controls="panel-hardware" aria-selected="false">Hardware ({{ hardware_count }})</button>
+    </div>
 
-  <p class="no-results" id="no-results" hidden>
-    No products match that search. Try a shorter name, or clear the filters.
-  </p>
+    <div class="tabpanel" id="panel-software" role="tabpanel" aria-labelledby="tab-software">
+      <div class="catalog-head">
+        <h2 class="panel-title" id="software-title">Software products</h2>
+        <p class="catalog-count" id="result-count" role="status">{{ plural(product_count, 'product') }}</p>
+      </div>
+      <form class="filters" id="catalog-filters" role="search" autocomplete="off">
+        <p class="field field-search">
+          <label for="filter-q">Search</label>
+          <input type="search" id="filter-q" name="q" placeholder="Name or id, e.g. ubuntu" spellcheck="false">
+        </p>
+        <p class="field">
+          <label for="filter-category">Category</label>
+          <select id="filter-category" name="category">
+            <option value="">All categories</option>
+            {% for category in categories %}
+            <option value="{{ category.name }}">{{ category.name }} ({{ category.count }})</option>
+            {% endfor %}
+          </select>
+        </p>
+        <p class="field">
+          <label for="filter-data">Best data for</label>
+          <select id="filter-data" name="data">
+            <option value="">Any milestone</option>
+            {% for milestone in milestone_meta %}
+            <option value="{{ milestone.key }}">{{ milestone.label }} published</option>
+            {% endfor %}
+          </select>
+        </p>
+        <p class="field">
+          <label for="filter-sort">Sort</label>
+          <select id="filter-sort" name="sort">
+            <option value="name">Name (A–Z)</option>
+            <option value="releases">Most releases</option>
+            <option value="upcoming">Next deadline soonest</option>
+          </select>
+        </p>
+        <p class="filters-actions">
+          <button type="reset" class="button">Clear filters</button>
+        </p>
+      </form>
 
-  <ul class="product-list" id="product-list">
-    {% for product in products %}
-    <li class="product-card"
-        data-search="{{ product.search }}"
-        data-category="{{ product.upstream_category }}"
-        data-releases="{{ product.releases }}"
-        data-coverage="{{ product.coverage|selectattr('known')|map(attribute='key')|join(' ') }}"
-        data-next-date="{{ product.next.date if product.next else '' }}">
-      <h3 class="product-name"><a href="{{ url_for('products/' ~ product.id ~ '/') }}">{{ product.name }}</a></h3>
-      <p class="product-meta">
-        <span class="tag">{{ product.upstream_category }}</span>
-        <span>{{ plural(product.releases, 'release') }}</span>
-        {% if product.latest %}
-        <span>newest {{ product.latest.name }}</span>
-        {% endif %}
+      <p class="no-results" id="no-results" hidden>
+        No products match that search. Try a shorter name, or clear the filters.
       </p>
-      <ul class="product-dates">
-        {% for row in product.coverage %}
-        <li class="product-date{% if not row.known %} is-empty{% endif %}">
-          <span class="pd-label"><abbr title="{{ row.label }}">{{ row.short }}</abbr></span>
-          <span class="pd-value">{{ row.known }}/{{ product.releases }}</span>
+
+      <ul class="product-list" id="product-list">
+        {% for product in products %}
+        <li class="product-card"
+            data-search="{{ product.search }}"
+            data-category="{{ product.upstream_category }}"
+            data-releases="{{ product.releases }}"
+            data-coverage="{{ product.coverage|selectattr('known')|map(attribute='key')|join(' ') }}"
+            data-next-date="{{ product.next.date if product.next else '' }}">
+          <h3 class="product-name"><a href="{{ url_for('products/' ~ product.id ~ '/') }}">{{ product.name }}</a></h3>
+          <p class="product-meta">
+            <span class="tag">{{ product.upstream_category }}</span>
+            <span>{{ plural(product.releases, 'release') }}</span>
+            {% if product.latest %}
+            <span>newest {{ product.latest.name }}</span>
+            {% endif %}
+          </p>
+          <ul class="product-dates">
+            {% for row in product.coverage %}
+            <li class="product-date{% if not row.known %} is-empty{% endif %}">
+              <span class="pd-label"><abbr title="{{ row.label }}">{{ row.short }}</abbr></span>
+              <span class="pd-value">{{ row.known }}/{{ product.releases }}</span>
+            </li>
+            {% endfor %}
+          </ul>
+          {% if product.next %}
+          <p class="product-next">Next deadline: <strong>{{ product.next.milestone }}</strong> on {{ product.next.human }}</p>
+          {% endif %}
+          <p class="product-links">
+            <a href="{{ url_for('products/' ~ product.id ~ '/') }}">Lifecycle</a>
+            <a href="{{ url_for('v1/products/' ~ product.id ~ '.json') }}">JSON</a>
+            <a href="{{ product.source }}" rel="noopener">Upstream</a>
+          </p>
         </li>
         {% endfor %}
       </ul>
-      {% if product.next %}
-      <p class="product-next">Next deadline: <strong>{{ product.next.milestone }}</strong> on {{ product.next.human }}</p>
-      {% endif %}
-      <p class="product-links">
-        <a href="{{ url_for('products/' ~ product.id ~ '/') }}">Lifecycle</a>
-        <a href="{{ url_for('v1/products/' ~ product.id ~ '.json') }}">JSON</a>
-        <a href="{{ product.source }}" rel="noopener">Upstream</a>
+    </div>
+
+    <div class="tabpanel" id="panel-hardware" role="tabpanel" aria-labelledby="tab-hardware">
+      {% set heading_id = 'hardware-title' %}
+      {% set heading = 'Hardware models' %}
+      {% include "_hardware_table.html" %}
+      <p class="panel-note">
+        These {{ hardware_count }} models are also the whole hardware catalog:
+        <a href="{{ url_for('hardware/') }}">the dedicated hardware page</a> carries the same rows with vendor and
+        status grouping, and <a href="{{ hardware_url }}">v1/hardware.json</a> carries one summary per model.
       </p>
-    </li>
-    {% endfor %}
-  </ul>
+    </div>
+  </div>
 </section>
 
 <section class="panel" aria-labelledby="api-title">
   <h2 class="panel-title" id="api-title">Machine-readable catalog</h2>
   <p class="panel-note">
-    The whole catalog is published as JSON for offline use and tooling. Every record keeps the raw upstream
-    release object alongside the normalized dates, so consumers can re-derive or dispute the mapping.
+    Both catalogs are published as JSON for offline use and tooling. Every record keeps the raw upstream values
+    alongside the normalized dates, so consumers can re-derive or dispute the mapping.
   </p>
   <ul class="endpoints">
-    <li><a href="{{ feed_url }}"><code>v1/feed.json</code></a><span>Full normalized catalog: every field, every release, one versioned document.</span></li>
-    <li><a href="{{ products_url }}"><code>v1/products.json</code></a><span>Summaries with counts and the absolute URL of each product endpoint.</span></li>
-    <li><a href="{{ url_for('v1/schema/product.json') }}"><code>v1/schema/product.json</code></a><span>JSON Schema for a single product record.</span></li>
+    <li><a href="{{ feed_url }}"><code>v1/feed.json</code></a><span>Full normalized software catalog: every field, every release, one versioned document.</span></li>
+    <li><a href="{{ products_url }}"><code>v1/products.json</code></a><span>Software summaries with counts and the absolute URL of each product endpoint.</span></li>
+    <li><a href="{{ hardware_url }}"><code>v1/hardware.json</code></a><span>Hardware summaries: vendor, status, milestone coverage and the absolute URL of each model endpoint.</span></li>
+    <li><a href="{{ url_for('v1/schema/product.json') }}"><code>v1/schema/product.json</code></a><span>JSON Schema for a single software product record.</span></li>
+    <li><a href="{{ url_for('v1/schema/hardware.json') }}"><code>v1/schema/hardware.json</code></a><span>JSON Schema for a single hardware model record.</span></li>
     <li><a href="{{ url_for('api/') }}"><code>api/</code></a><span>Endpoint examples and the exact upstream mapping rules.</span></li>
   </ul>
 </section>

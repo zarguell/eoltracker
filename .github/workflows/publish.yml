@@ -48,8 +48,7 @@ concurrency:
 jobs:
   build:
     name: Refresh, build and publish files
-    runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
     # contents: write - commit refreshed data to main and push the gh-pages branch.
     permissions:
       contents: write
@@ -69,10 +68,16 @@ jobs:
 
       # Upstream ingestion only where it is wanted: scheduled and manual runs.
       # A failure here fails the job before anything is committed or published,
-      # so the last successful deployment stays live.
-      - name: Import upstream data
+      # so the last successful deployment stays live. Software (endoflife.date
+      # API) and hardware (eosl.date pages, ~240 polite requests) refresh
+      # independently: one source failing does not lose the other's update.
+      - name: Import upstream software catalog
         if: github.ref == 'refs/heads/main' && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch')
         run: python -m engine import-data
+
+      - name: Import upstream hardware catalog
+        if: github.ref == 'refs/heads/main' && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch')
+        run: python -m engine import-hardware
 
       - name: Validate catalog data
         run: python -m engine validate

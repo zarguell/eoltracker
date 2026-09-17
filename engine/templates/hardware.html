@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+{% block content %}
+<nav class="crumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="{{ url_for() }}">Catalog</a></li>
+    <li><a href="{{ url_for('hardware/') }}">Hardware</a></li>
+    <li aria-current="page">{{ model.name }}</li>
+  </ol>
+</nav>
+
+<section class="hero product-hero">
+  <p class="eyebrow">{{ model.vendor }} · {{ model.category }}</p>
+  <h1 class="page-title">{{ model.name }}</h1>
+  <p class="lead">
+    Lifecycle dates for this {{ model.product_line }} model, read from
+    <a href="{{ hardware_source_site }}" rel="noopener">{{ hardware_source_name }}</a>, with each normalized milestone
+    and the raw upstream values behind it. Identifier for this record: <code>{{ model.id }}</code>.
+  </p>
+  <p class="hero-meta">
+    Status <strong>{{ model.status }}</strong> as published upstream.
+    Verified {{ human_datetime(model.provenance.last_checked) }} by <code>{{ model.provenance.verifier }}</code>.
+    Last catalog refresh <time datetime="{{ refresh.iso }}">{{ refresh.human }}</time>.
+  </p>
+  <p class="product-links">
+    <a class="button" href="{{ json_url }}">JSON record</a>
+    {% for url in upstream_urls %}
+    <a class="button" href="{{ url }}" rel="noopener">Source on {{ hardware_source_name }}</a>
+    {% endfor %}
+    <a class="button" href="{{ url_for('hardware/') }}">All hardware</a>
+  </p>
+</section>
+
+<section class="panel" aria-labelledby="milestones-title">
+  <h2 class="panel-title" id="milestones-title">Milestones</h2>
+  <p class="panel-note">
+    Normalized dates, with the raw upstream value when the two differ. An unknown milestone is an absent upstream
+    value, never an inferred one.
+  </p>
+  <div class="table-scroll">
+    <table class="release-table">
+      <caption class="sr-only">Normalized lifecycle milestones for {{ model.name }}</caption>
+      <thead>
+        <tr><th scope="col">Milestone</th><th scope="col">Date</th><th scope="col">Raw upstream value</th></tr>
+      </thead>
+      <tbody>
+        {% for milestone in hardware_milestone_meta %}
+        {% set cell = rows.cells[milestone.key] %}
+        <tr>
+          <th scope="row">{{ milestone.label }} <abbr title="{{ milestone.label }}">{{ milestone.short }}</abbr></th>
+          <td class="milestone{% if not cell.value %} is-unknown{% endif %}">
+            {% if cell.value %}
+            <time datetime="{{ cell.value }}">{{ cell.human }}</time>
+            {% else %}
+            <span class="unknown">unknown</span>
+            {% endif %}
+            {% if cell.notes %}<span class="cell-note">{{ cell.notes }}</span>{% endif %}
+          </td>
+          <td class="milestone-raw">
+            {% set sources = rows.raw|selectattr('role', 'equalto', milestone.key)|list %}
+            {% if sources %}
+            {% for entry in sources %}<code>{{ entry.column }}</code> {{ entry.text or '—' }}{% endfor %}
+            {% else %}
+            <span class="muted">no upstream column maps to this milestone</span>
+            {% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <h3 class="sub-title">How each milestone is derived for hardware</h3>
+  <dl class="legend">
+    {% for milestone in hardware_milestone_meta %}
+    <div class="legend-row">
+      <dt>{{ milestone.label }}</dt>
+      <dd><p>{{ milestone.detail }}</p></dd>
+    </div>
+    {% endfor %}
+    <div class="legend-row">
+      <dt>Unknown date</dt>
+      <dd><p>{{ hardware_source_name }} publishes no value for that milestone. A missing date is an absent announcement, not a claim that support ends or continues.</p></dd>
+    </div>
+  </dl>
+</section>
+
+<section class="panel" aria-labelledby="facts-title">
+  <h2 class="panel-title" id="facts-title">Model identity and provenance</h2>
+  <dl class="facts">
+    <div><dt>Vendor</dt><dd>{{ model.vendor }}</dd></div>
+    <div><dt>Product line</dt><dd>{{ model.product_line }}</dd></div>
+    <div><dt>Family</dt><dd>{% if model.family %}{{ model.family }}{% else %}not published{% endif %}</dd></div>
+    <div><dt>Model number</dt><dd>{% if model.model_number %}<code>{{ model.model_number }}</code>{% else %}not published{% endif %}</dd></div>
+    <div><dt>Status</dt><dd>{{ model.status }} — as published in the source row class</dd></div>
+    <div><dt>Verifier</dt><dd><code>{{ model.provenance.verifier }}</code></dd></div>
+    <div><dt>Last checked</dt><dd>{{ human_datetime(model.provenance.last_checked) }}</dd></div>
+    <div><dt>JSON record</dt><dd><a href="{{ json_abs }}">{{ json_abs }}</a></dd></div>
+    <div><dt>Schema</dt><dd><a href="{{ site_url('v1/schema/hardware.json') }}">v1/schema/hardware.json</a></dd></div>
+  </dl>
+
+  <h3 class="sub-title">Source pages</h3>
+  <ul class="chips">
+    {% for url in upstream_urls %}<li><a href="{{ url }}" rel="noopener">{{ url }}</a></li>{% endfor %}
+  </ul>
+  <p class="panel-note">
+    {{ hardware_source_attribution }} eosl.date states no license for that data, so it is attributed here rather than
+    relicensed; this page and its JSON record claim no affiliation with eosl.date or {{ model.vendor }}.
+  </p>
+</section>
+
+<section class="panel" aria-labelledby="raw-title">
+  <h2 class="panel-title" id="raw-title">Raw upstream values</h2>
+  <p class="panel-note">
+    Every column eosl.date publishes for this model, verbatim: the text as rendered, the machine-readable date when
+    there is one, and the milestone role the pipeline assigns that column. Columns with no role are kept exactly as
+    published, so nothing the source states is dropped.
+  </p>
+  <div class="table-scroll">
+    <table class="release-table">
+      <caption class="sr-only">Raw upstream cells for {{ model.name }}</caption>
+      <thead>
+        <tr><th scope="col">Column</th><th scope="col">Text</th><th scope="col">Date value</th><th scope="col">Role</th></tr>
+      </thead>
+      <tbody>
+        {% for entry in rows.raw %}
+        <tr>
+          <th scope="row">{{ entry.column }}</th>
+          <td>{{ entry.text or '—' }}</td>
+          <td class="milestone{% if not entry.value %} is-unknown{% endif %}">
+            {% if entry.value %}<time datetime="{{ entry.value }}">{{ entry.value }}</time>{% else %}<span class="unknown">none</span>{% endif %}
+          </td>
+          <td>{% if entry.role %}<span class="tag">{{ entry.role }}</span>{% else %}<span class="muted">not a milestone</span>{% endif %}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <details class="raw" {% if not model.upstream %}hidden{% endif %}>
+    <summary>Raw upstream object ({{ rows.raw|length }} columns)</summary>
+    <p class="panel-note">Verbatim <code>upstream</code> object from the committed record, unmodified.</p>
+    <pre><code>{{ model.upstream | tojson_pretty }}</code></pre>
+  </details>
+</section>
+{% endblock %}

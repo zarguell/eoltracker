@@ -4,13 +4,15 @@
   <p class="eyebrow">API &amp; data</p>
   <h1 class="page-title">Catalog endpoints and mapping rules</h1>
   <p class="lead">
-    Everything on this site is generated from one committed, validated catalog. The JSON below is the same data the
-    pages render — no private fields, no server, no API keys.
+    Everything on this site is generated from two committed, validated catalogs: software from endoflife.date and
+    hardware from eosl.date. The JSON below is the same data the pages render — no private fields, no server, no API
+    keys.
   </p>
 </section>
 
 <section class="panel" aria-labelledby="endpoints-title">
   <h2 class="panel-title" id="endpoints-title">Endpoints</h2>
+  <h3 class="sub-title">Software catalog</h3>
   <ul class="endpoints">
     <li>
       <a href="{{ feed_url }}"><code>{{ feed_url|replace(base_path, '') }}</code></a>
@@ -34,6 +36,30 @@
         the path with any <code>id</code> from the index.
       </span>
     </li>
+  </ul>
+
+  <h3 class="sub-title">Hardware catalog</h3>
+  <ul class="endpoints">
+    <li>
+      <a href="{{ hardware_url }}"><code>{{ hardware_url|replace(base_path, '') }}</code></a>
+      <span>
+        Index of hardware summaries. Each entry carries <code>id</code>, <code>name</code>, <code>vendor</code>,
+        <code>status</code> (<code>supported</code>, <code>expiring</code> or <code>eol</code>), per-milestone
+        <code>coverage</code>, the normalized <code>milestones</code>, the next published deadline, and the absolute
+        URL of that model's endpoint. <code>hardware_count</code> in the catalog manifest matches the array length.
+      </span>
+    </li>
+    <li>
+      <a href="{{ url_for('v1/hardware/' ~ sample_hardware ~ '.json') }}"><code>v1/hardware/{{ sample_hardware }}.json</code></a>
+      <span>
+        One hardware record, byte-identical to the file committed under <code>data/hardware/</code>. Replace the id in
+        the path with any <code>id</code> from the hardware index.
+      </span>
+    </li>
+  </ul>
+
+  <h3 class="sub-title">Schemas and exports</h3>
+  <ul class="endpoints">
     <li>
       <span><code>v1/schema/</code> — JSON Schema files published alongside the data:</span>
       <span class="endpoint-files">
@@ -44,8 +70,8 @@
     <li>
       <a href="{{ openeox_url }}"><code>v1/openeox/index.json</code></a>
       <span>
-        Per-release OpenEoX Core v1.0 CSD01 export derived from the same catalog. Each published record validates
-        against the pinned official OASIS schema (Draft 2020-12, format-assertion), and the index lists every
+        Per-release OpenEoX Core v1.0 CSD01 export derived from the same software catalog. Each published record
+        validates against the pinned official OASIS schema (Draft 2020-12, format-assertion), and the index lists every
         release excluded with its reason. Not an OASIS Standard, and no endorsement is implied.
       </span>
     </li>
@@ -65,6 +91,15 @@
 <pre><code>curl -s {{ site_url('v1/products/' ~ sample_product ~ '.json') }} \
   | jq '{id, name, releases: [.releases[] | {id, ga: .milestones.ga, eol: .milestones.eol}]}'</code></pre>
 
+  <h3 class="sub-title">List hardware models past end of support, by vendor</h3>
+<pre><code>curl -s {{ hardware_abs }} \
+  | jq '[.hardware[] | select(.status == "eol")] | group_by(.vendor)
+        | map({vendor: .[0].vendor, models: length}) | sort_by(-.models)'</code></pre>
+
+  <h3 class="sub-title">Fetch one hardware record and its raw upstream cells</h3>
+<pre><code>curl -s {{ site_url('v1/hardware/' ~ sample_hardware ~ '.json') }} \
+  | jq '{id, vendor, model: .model_number, milestones, sources: .provenance.source_urls}'</code></pre>
+
   <h3 class="sub-title">Filter the full feed to records with a published end of life</h3>
 <pre><code>curl -s {{ feed_abs }} \
   | jq '[.products[] | select(any(.releases[]; .milestones.eol != null)) | .id]'</code></pre>
@@ -75,11 +110,11 @@
 </section>
 
 <section class="panel" aria-labelledby="record-title">
-  <h2 class="panel-title" id="record-title">Record shape</h2>
+  <h2 class="panel-title" id="record-title">Software record shape</h2>
   <dl class="facts">
     <div><dt><code>id</code></dt><dd>Product slug. Also the filename under <code>data/products/</code> and the path segment of its endpoint.</dd></div>
     <div><dt><code>name</code></dt><dd>Display name from upstream <code>label</code>.</dd></div>
-    <div><dt><code>category</code></dt><dd>Always <code>software</code> in this catalog; hardware products are excluded and listed in the manifest.</dd></div>
+    <div><dt><code>category</code></dt><dd>Always <code>software</code> in this catalog; hardware has its own catalog and endpoint.</dd></div>
     <div><dt><code>upstream_category</code></dt><dd>Upstream endoflife.date category (<code>app</code>, <code>database</code>, <code>framework</code>, <code>lang</code>, <code>os</code>, <code>server-app</code>, <code>service</code>, <code>standard</code>), kept unmodified.</dd></div>
     <div><dt><code>identifiers</code></dt><dd>Upstream identifiers such as CPE values, verbatim.</dd></div>
     <div><dt><code>labels</code></dt><dd>The product's upstream label object, used to interpret the raw date fields.</dd></div>
@@ -92,12 +127,33 @@
   </dl>
 </section>
 
+<section class="panel" aria-labelledby="hw-record-title">
+  <h2 class="panel-title" id="hw-record-title">Hardware record shape</h2>
+  <dl class="facts">
+    <div><dt><code>id</code></dt><dd>Model slug. Also the filename under <code>data/hardware/</code> and the path segment of its endpoint.</dd></div>
+    <div><dt><code>name</code></dt><dd>The product name {{ hardware_source_name }} publishes for the row.</dd></div>
+    <div><dt><code>category</code></dt><dd>Always <code>hardware</code>.</dd></div>
+    <div><dt><code>vendor</code></dt><dd>The vendor the family page belongs to, from its URL and breadcrumb.</dd></div>
+    <div><dt><code>product_line</code></dt><dd>The vendor's product line for the model, or the vendor name when the source publishes none.</dd></div>
+    <div><dt><code>family</code>, <code>model_number</code></dt><dd>The source family and model number, verbatim.</dd></div>
+    <div><dt><code>milestones</code></dt><dd>The four normalized dates: <code>ga</code>, <code>eos</code>, <code>eossec</code>, <code>eol</code>. Each is an ISO date or <code>null</code>. <code>eossec</code> is always <code>null</code>: {{ hardware_source_name }} publishes no security-support column.</dd></div>
+    <div><dt><code>status</code></dt><dd><code>supported</code>, <code>expiring</code> or <code>eol</code>, taken from the row class the source publishes the model under.</dd></div>
+    <div><dt><code>upstream</code></dt><dd>Every declared column of the source row, verbatim: <code>text</code> as rendered, <code>datetime</code> and <code>value</code> for a machine-readable date or <code>null</code>, the milestone <code>role</code> the pipeline assigns (or <code>null</code>), and any <code>links</code>.</dd></div>
+    <div><dt><code>provenance</code></dt><dd><code>source_urls</code> (every family page the model was read from), <code>verifier</code> (<code>deterministic-eosl-date</code>) and <code>last_checked</code> (UTC).</dd></div>
+  </dl>
+  <p class="panel-note">
+    A hardware record is one model, not a family of releases, so there is no <code>releases</code> array: its
+    <code>milestones</code> describe the model itself.
+  </p>
+</section>
+
 <section class="panel" aria-labelledby="mapping-title">
   <h2 class="panel-title" id="mapping-title">Upstream mapping</h2>
   <p class="panel-note">
     The normalization is deliberately conservative. A label that does not qualify a field never turns that field into
     a deadline, and every raw value stays in the record whether or not it was mapped.
   </p>
+  <h3 class="sub-title">Software (endoflife.date)</h3>
   <div class="table-scroll">
     <table class="release-table mapping-table">
       <thead>
@@ -132,20 +188,70 @@
     an announced extension has no published end date. Both cases keep the raw <code>eolFrom</code> value visible on the
     product page, so the earlier published deadline is never hidden.
   </p>
+
+  <h3 class="sub-title">Hardware ({{ hardware_source_name }})</h3>
+  <p class="panel-note">
+    Hardware columns are read by role, not by position: the source declares every header, and a column is matched to a
+    milestone case- and whitespace-insensitively. Anything that matches no role stays in <code>upstream</code>
+    untouched.
+  </p>
+  <div class="table-scroll">
+    <table class="release-table mapping-table">
+      <thead>
+        <tr><th scope="col">Milestone</th><th scope="col">Source columns</th><th scope="col">Rule</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">General availability</th>
+          <td><code>Release Date</code>, <code>Launch Date</code></td>
+          <td>The rendered date, or the <code>&lt;time datetime&gt;</code> value when the cell carries one.</td>
+        </tr>
+        <tr>
+          <th scope="row">End of sale</th>
+          <td><code>End of Sale Date</code>, <code>End of Sales Date</code>, <code>End of Life Date</code></td>
+          <td>{{ hardware_source_name }}'s own glossary defines its end-of-life-date column as the end of sales date, so that column maps here and never to end of support.</td>
+        </tr>
+        <tr>
+          <th scope="row">End of security support</th>
+          <td>none</td>
+          <td>The source publishes no security-support column. This milestone is always <code>null</code> for hardware rather than borrowed from another column.</td>
+        </tr>
+        <tr>
+          <th scope="row">End of support</th>
+          <td><code>End of Support</code>, <code>End of Support (EOSL)</code>, <code>End of Support Date</code>, <code>End of Service</code>, <code>End of Service Date</code></td>
+          <td>The terminal support column — {{ hardware_source_name }}'s EOSL/LDOS. Relative prose rendered beside the date is stripped; a cell holding no date (a sentinel such as <code>TBD</code>, or a support URL) yields <code>null</code>.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="panel-note">
+    Columns such as <code>EOL Announced</code>, the day-support and warranty discontinuance columns, and
+    <code>Version Number</code> state no milestone of their own, so they are published verbatim in
+    <code>upstream</code> and never promoted into a date. A model appearing in several families merges on its
+    identity; milestones only ever gain a value, and two sources disagreeing on one date is an error to fix, not a
+    tie to break.
+  </p>
 </section>
 
 <section class="panel" aria-labelledby="attribution-title">
   <h2 class="panel-title" id="attribution-title">Attribution and accuracy</h2>
   <p class="panel-note">
-    Source data comes from <a href="{{ source_site }}" rel="noopener">endoflife.date</a> and is used under its
+    Software source data comes from <a href="{{ source_site }}" rel="noopener">endoflife.date</a> and is used under its
     {{ source_license }} license (<a href="{{ source_license_url }}" rel="noopener">license text</a>). Product names,
     labels and dates are theirs; the normalization, coverage math and presentation are this project's.
     This site does not claim affiliation with endoflife.date or with any vendor whose product appears here.
   </p>
   <p class="panel-note">
-    The catalog is generated offline from a committed snapshot, so it can lag upstream between refreshes. Each record
-    carries the timestamp of the last check and the upstream modification time when one exists. Verify anything
-    decision-critical against the linked upstream record or the vendor's own lifecycle policy.
+    {{ hardware_source_attribution }} That data is aggregated from public vendor announcements, and eosl.date states no
+    license for it, so it is reproduced here with attribution and a link to the source page for every record rather
+    than relied on as licensed material. Model names, vendor names and dates are the vendors' and eosl.date's; the
+    normalization, coverage math and presentation are this project's. This project is not affiliated with, endorsed by
+    or sponsored by eosl.date, Subash Geetha Krishnan, or any vendor whose hardware appears in the catalog.
+  </p>
+  <p class="panel-note">
+    Both catalogs are generated offline from committed snapshots, so they can lag upstream between refreshes. Each
+    record carries the timestamp of the last check, and every hardware page links the exact family page it was read
+    from. Verify anything decision-critical against the linked upstream record or the vendor's own lifecycle policy.
   </p>
 </section>
 {% endblock %}

@@ -1,0 +1,125 @@
+{# Hardware catalog table, shared by the homepage and the /hardware/ index.
+
+   Both pages carry the same element ids on purpose: app.js binds one filter
+   script, and only one of these tables is ever on a page. The whole catalog is
+   server-rendered — filtering only narrows what is shown. #}
+{% set status_keys = hardware_status_meta|map(attribute='key')|list %}
+<div class="catalog-head">
+  <h2 class="panel-title" id="{{ heading_id }}">{{ heading }}</h2>
+  <p class="catalog-count" id="hardware-result-count" role="status">{{ plural(hardware_count, 'hardware model') }}</p>
+</div>
+<p class="panel-note catalog-note">
+  Vendor, product line, model number and every date below are what
+  <a href="{{ hardware_source_site }}" rel="noopener">{{ hardware_source_name }}</a> publishes for that model, mapped to
+  {% for milestone in hardware_milestone_meta %}<abbr title="{{ milestone.label }}">{{ milestone.short }}</abbr> {{ milestone.label|lower }}{% if not loop.last %}, {% endif %}{% endfor %}.
+  eosl.date publishes no security-support column, so <abbr title="End of security support">EoSS</abbr> is unknown for
+  every model; a model's terminal support date is its end of life.
+</p>
+
+<form class="filters" id="hardware-filters" role="search" autocomplete="off">
+  <p class="field field-search">
+    <label for="hw-filter-q">Search</label>
+    <input type="search" id="hw-filter-q" name="q" placeholder="Model, id, vendor or product line" spellcheck="false">
+  </p>
+  <p class="field">
+    <label for="hw-filter-vendor">Vendor</label>
+    <select id="hw-filter-vendor" name="vendor">
+      <option value="">All vendors</option>
+      {% for vendor in hardware_vendors %}
+      <option value="{{ vendor.name }}">{{ vendor.name }} ({{ vendor.count }})</option>
+      {% endfor %}
+    </select>
+  </p>
+  <p class="field">
+    <label for="hw-filter-status">Status</label>
+    <select id="hw-filter-status" name="status">
+      <option value="">Any status</option>
+      {% for status in hardware_statuses %}
+      <option value="{{ status.key }}">{{ status.label }} ({{ status.count }})</option>
+      {% endfor %}
+    </select>
+  </p>
+  <p class="field">
+    <label for="hw-filter-sort">Sort</label>
+    <select id="hw-filter-sort" name="sort">
+      <option value="name">Model (A–Z)</option>
+      <option value="vendor">Vendor, then model</option>
+      <option value="status">Status, then model</option>
+      <option value="eol">End of support soonest</option>
+    </select>
+  </p>
+  <p class="filters-actions">
+    <button type="reset" class="button">Clear filters</button>
+  </p>
+</form>
+
+<div class="chips-filter" id="hardware-vendor-chips" role="group" aria-label="Filter by vendor">
+  <button type="button" class="chip is-active" data-vendor="" aria-pressed="true">
+    All vendors <span class="chip-count">{{ hardware_count }}</span>
+  </button>
+  {% for vendor in hardware_vendors %}
+  <button type="button" class="chip" data-vendor="{{ vendor.name }}" aria-pressed="false">
+    {{ vendor.name }} <span class="chip-count">{{ vendor.count }}</span>
+  </button>
+  {% endfor %}
+</div>
+
+<p class="no-results" id="hw-no-results" hidden>
+  No hardware models match that search. Try a shorter model or vendor name, or clear the filters.
+</p>
+
+<div class="table-scroll">
+  <table class="release-table hardware-table">
+    <caption class="sr-only">
+      Lifecycle dates for each hardware model. Rows marked supported, expiring or end of life follow the row status
+      eosl.date publishes.
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">Model</th>
+        <th scope="col">Vendor</th>
+        <th scope="col">Product line</th>
+        <th scope="col">Status</th>
+        {% for milestone in hardware_milestone_meta %}
+        <th scope="col">{{ milestone.label }}</th>
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody id="hardware-list">
+      {% for model in hardware %}
+      <tr class="hardware-row"
+          data-search="{{ model.search }}"
+          data-vendor="{{ model.vendor }}"
+          data-status="{{ model.status }}"
+          data-status-order="{{ status_keys.index(model.status) }}"
+          data-coverage="{{ model.coverage|selectattr('known')|map(attribute='key')|join(' ') }}"
+          data-eol="{{ model.milestones.eol or '' }}">
+        <th scope="row" class="hardware-name">
+          <a href="{{ url_for('hardware/' ~ model.id ~ '/') }}">{{ model.name }}</a>
+          <code class="release-raw">{{ model.id }}</code>
+        </th>
+        <td class="hardware-vendor">{{ model.vendor }}</td>
+        <td class="hardware-line">
+          {{ model.product_line }}
+          {% if model.family and model.family != model.product_line %}<span class="release-raw">{{ model.family }}</span>{% endif %}
+        </td>
+        <td class="hardware-status">
+          {% if model.status == 'eol' %}<span class="tag tag-warn">end of life</span>
+          {% elif model.status == 'expiring' %}<span class="tag tag-warn">expiring</span>
+          {% else %}<span class="tag tag-ok">supported</span>{% endif %}
+        </td>
+        {% for milestone in hardware_milestone_meta %}
+        {% set value = model.milestones[milestone.key] %}
+        <td class="milestone{% if not value %} is-unknown{% endif %}">
+          {% if value %}
+          <time datetime="{{ value }}">{{ human_date(value) }}</time>
+          {% else %}
+          <span class="unknown">unknown</span>
+          {% endif %}
+        </td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>

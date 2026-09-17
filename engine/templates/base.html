@@ -21,11 +21,12 @@
   <div class="shell masthead-inner">
     <a class="wordmark" href="{{ url_for() }}">EOL<span>Tracker</span></a>
     <nav class="mainnav" aria-label="Primary">
-      <a href="{{ url_for() }}"{% if active == 'index' %} aria-current="page"{% endif %}>Catalog</a>
+      <a href="{{ url_for() }}"{% if active == 'index' %} aria-current="page"{% endif %}>Software</a>
+      <a href="{{ url_for('hardware/') }}"{% if active == 'hardware' %} aria-current="page"{% endif %}>Hardware</a>
       <a href="{{ url_for('api/') }}"{% if active == 'api' %} aria-current="page"{% endif %}>API &amp; data</a>
       <a href="{{ source_site }}" rel="noopener">endoflife.date</a>
     </nav>
-    <p class="masthead-meta">{{ plural(product_count, 'product') }} · {{ release_count }} releases</p>
+    <p class="masthead-meta">{{ plural(product_count, 'product') }} · {{ release_count }} releases · {{ hardware_count }} hardware models</p>
   </div>
 </header>
 
@@ -38,11 +39,17 @@
     <div class="footer-col">
       <p class="footer-title">EOL Tracker</p>
       <p class="footer-note">
-        Normalized lifecycle dates for software, republished from
+        Software lifecycle dates are republished from
         <a href="{{ source_site }}" rel="noopener">endoflife.date</a>.
         Source data is licensed
         <a href="{{ source_license_url }}" rel="noopener">{{ source_license }}</a>.
-        This catalog is an independent normalization and is not affiliated with endoflife.date.
+      </p>
+      <p class="footer-note">
+        Hardware lifecycle data comes from
+        <a href="{{ hardware_source_site }}" rel="noopener">{{ hardware_source_name }}</a> by Subash Geetha Krishnan,
+        aggregated from public vendor announcements; no license is stated, so the data is attributed rather than
+        relicensed. This catalog is an independent normalization, not affiliated with endoflife.date, eosl.date or any
+        vendor listed here.
       </p>
       <p class="footer-note">
         Last catalog refresh {{ refresh.human }}.
@@ -53,6 +60,8 @@
       <ul class="footer-links">
         <li><a href="{{ url_for('v1/feed.json') }}">Feed (JSON)</a></li>
         <li><a href="{{ url_for('v1/products.json') }}">Product summaries</a></li>
+        <li><a href="{{ url_for('v1/hardware.json') }}">Hardware summaries</a></li>
+        <li><a href="{{ url_for('hardware/') }}">Hardware catalog</a></li>
         <li><a href="{{ url_for('api/') }}">Endpoints &amp; mapping</a></li>
         <li><a href="{{ url_for('v1/schema/product.json') }}">Record schema</a></li>
       </ul>

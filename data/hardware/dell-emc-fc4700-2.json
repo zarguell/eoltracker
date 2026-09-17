@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-fc4700-2",
+  "name": "FC4700-2",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC CLARiiON FC",
+  "family": "CLARiiON FC",
+  "model_number": "FC4700-2",
+  "milestones": {
+    "ga": "2001-11-01",
+    "eos": "2003-09-30",
+    "eossec": null,
+    "eol": "2008-09-30"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "FC4700-2",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "FC4700-2",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC CLARiiON FC",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2003-09-30",
+      "datetime": null,
+      "value": "2003-09-30",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Nov. 01, 2001",
+      "datetime": "2001-11-01",
+      "value": "2001-11-01",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2008-09-30",
+      "datetime": null,
+      "value": "2008-09-30",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/san-storage/vendor/dell-emc/clariion-fc/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

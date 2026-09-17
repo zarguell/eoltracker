@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "title": "EOL Tracker normalized hardware record (not OpenEoX Core)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "id",
+    "name",
+    "category",
+    "vendor",
+    "product_line",
+    "milestones",
+    "status",
+    "upstream",
+    "provenance"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "category": {
+      "const": "hardware"
+    },
+    "vendor": {
+      "type": "string",
+      "minLength": 1
+    },
+    "product_line": {
+      "type": "string",
+      "minLength": 1
+    },
+    "family": {
+      "type": "string"
+    },
+    "model_number": {
+      "type": "string"
+    },
+    "upstream": {
+      "type": "object"
+    },
+    "milestones": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ga", "eos", "eossec", "eol"],
+      "properties": {
+        "ga": {"type": ["string", "null"], "format": "date"},
+        "eos": {"type": ["string", "null"], "format": "date"},
+        "eossec": {"type": ["string", "null"], "format": "date"},
+        "eol": {"type": ["string", "null"], "format": "date"}
+      }
+    },
+    "status": {
+      "enum": ["supported", "expiring", "eol"]
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_urls", "verifier", "last_checked"],
+      "properties": {
+        "source_urls": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string", "format": "uri"}
+        },
+        "verifier": {
+          "const": "deterministic-eosl-date"
+        },
+        "last_checked": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    }
+  }
+}

@@ -6,6 +6,42 @@ from jsonschema import Draft202012Validator, FormatChecker
 
 from .importer import API, ROOT, milestones
 
+HARDWARE_DIR = "hardware"
+MANIFEST_SCHEMA = {
+    "type": "object", "additionalProperties": False,
+    "required": ["generated_at", "source_url", "product_count", "release_count", "excluded_hardware"],
+    "properties": {
+        "generated_at": {"type": "string", "format": "date-time"},
+        "source_url": {"const": API}, "product_count": {"type": "integer", "minimum": 1},
+        "release_count": {"type": "integer", "minimum": 1},
+        "excluded_hardware": {"type": "array", "uniqueItems": True, "items": {"type": "string"}},
+        "hardware_count": {"type": "integer", "minimum": 0},
+    },
+}
+
+
+def validate_hardware(directory=None):
+    """Validate committed hardware records; returns records in slug order."""
+    directory = Path(directory) if directory is not None else ROOT / "data"
+    schema = json.loads((ROOT / "schema/hardware.json").read_text())
+    Draft202012Validator.check_schema(schema)
+    validator = Draft202012Validator(schema, format_checker=FormatChecker())
+    records = []
+    seen = set()
+    for file in sorted((directory / HARDWARE_DIR).glob("*.json")):
+        record = json.loads(file.read_text())
+        validator.validate(record)
+        if record["id"] != file.stem:
+            raise ValueError(f"Hardware record identity mismatch: {file}")
+        if record["id"] in seen:
+            raise ValueError(f"Duplicate hardware record: {file}")
+        seen.add(record["id"])
+        ga, eol = record["milestones"]["ga"], record["milestones"]["eol"]
+        if ga and eol and eol < ga:
+            raise ValueError(f"Hardware chronology violation: {file}: eol {eol} < ga {ga}")
+        records.append(record)
+    return records
+
 
 def validate_data(directory=None):
     directory = Path(directory) if directory is not None else ROOT / "data"
@@ -27,18 +63,11 @@ def validate_data(directory=None):
                 raise ValueError(f"Milestones contradict source: {file}: {release['id']}")
         records.append(record)
     manifest = json.loads((directory / "manifest.json").read_text())
-    Draft202012Validator({
-        "type": "object", "additionalProperties": False,
-        "required": ["generated_at", "source_url", "product_count", "release_count", "excluded_hardware"],
-        "properties": {
-            "generated_at": {"type": "string", "format": "date-time"},
-            "source_url": {"const": API}, "product_count": {"type": "integer", "minimum": 1},
-            "release_count": {"type": "integer", "minimum": 1},
-            "excluded_hardware": {"type": "array", "uniqueItems": True, "items": {"type": "string"}},
-        },
-    }, format_checker=FormatChecker()).validate(manifest)
+    Draft202012Validator(MANIFEST_SCHEMA, format_checker=FormatChecker()).validate(manifest)
     if len(records) != manifest["product_count"] or sum(len(r["releases"]) for r in records) != manifest["release_count"]:
         raise ValueError("Manifest counts do not match complete catalog")
     if {r["id"] for r in records} & set(manifest["excluded_hardware"]):
         raise ValueError("Hardware included in software catalog")
+    if "hardware_count" in manifest and len(validate_hardware(directory)) != manifest["hardware_count"]:
+        raise ValueError("Manifest hardware_count does not match committed hardware records")
     return records

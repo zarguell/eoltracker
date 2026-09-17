@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-scv2000",
+  "name": "SCv2000",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC StorageCenter (compellent)",
+  "family": "StorageCenter (compellent)",
+  "model_number": "SCv2000",
+  "milestones": {
+    "ga": "2015-04-17",
+    "eos": "2018-08-03",
+    "eossec": null,
+    "eol": "2025-08-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "SCv2000",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "SCv2000",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC StorageCenter (compellent)",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2018-08-03",
+      "datetime": null,
+      "value": "2018-08-03",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Apr. 17, 2015",
+      "datetime": "2015-04-17",
+      "value": "2015-04-17",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2025-08-31",
+      "datetime": null,
+      "value": "2025-08-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/san-storage/vendor/dell-emc/storagecenter-compellent/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-powerstore-9000x",
+  "name": "PowerStore 9000X",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC PowerStore",
+  "family": "PowerStore",
+  "model_number": "PowerStore 9000X",
+  "milestones": {
+    "ga": "2020-04-22",
+    "eos": "2023-07-10",
+    "eossec": null,
+    "eol": "2028-08-04"
+  },
+  "status": "supported",
+  "upstream": {
+    "Product": {
+      "text": "PowerStore 9000X",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "PowerStore 9000X",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC PowerStore",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2023-07-10",
+      "datetime": null,
+      "value": "2023-07-10",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Apr. 22, 2020",
+      "datetime": "2020-04-22",
+      "value": "2020-04-22",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2028-08-04",
+      "datetime": null,
+      "value": "2028-08-04",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/san-storage/vendor/dell-emc/powerstore/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

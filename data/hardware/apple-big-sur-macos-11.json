@@ -1,0 +1,70 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "apple-big-sur-macos-11",
+  "name": "Big Sur (macOS 11)",
+  "category": "hardware",
+  "vendor": "Apple",
+  "product_line": "Apple",
+  "family": "macOS",
+  "model_number": "Big Sur (macOS 11)",
+  "milestones": {
+    "ga": "2020-11-12",
+    "eos": null,
+    "eossec": null,
+    "eol": "2023-09-26"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Build Number": {
+      "text": "20G1427",
+      "datetime": null,
+      "value": null,
+      "role": "build",
+      "links": []
+    },
+    "Version Number": {
+      "text": "Big Sur (macOS 11)",
+      "datetime": null,
+      "value": null,
+      "role": "version",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Nov. 12, 2020",
+      "datetime": "2020-11-12",
+      "value": "2020-11-12",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support": {
+      "text": "2023-09-26",
+      "datetime": null,
+      "value": "2023-09-26",
+      "role": "eol",
+      "links": []
+    },
+    "Most Recent Version": {
+      "text": "11.7.11 (February 2, 2026)",
+      "datetime": null,
+      "value": null,
+      "role": null,
+      "links": [
+        "https://developer.apple.com/documentation/macos-release-notes/macos-big-sur-11_0_1-release-notes"
+      ]
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/operating-system/vendor/apple/macos/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}
