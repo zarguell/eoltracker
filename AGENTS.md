@@ -24,6 +24,10 @@ authoritative technical brief; the [README](README.md) is the public overview.
 5. **Tests and validation gate every push.** `python -m unittest discover`
    and `python -m engine validate` must pass before committing. CI runs the
    same gate before publication.
+6. **Exclusions are published data too.** Every source row a collector drops
+   goes into its import report with a truthful, verifiable reason. Verify
+   product classification against the vendor's own notice — never from the
+   table the row sits in or its name.
 
 ## Repository layout
 
@@ -31,17 +35,19 @@ authoritative technical brief; the [README](README.md) is the public overview.
 engine/
   importer.py     software catalog: endoflife.date API -> data/products/*.json
   hardware.py     hardware catalog: eosl.date HTML -> data/hardware/*.json
+  opengear.py     Opengear hardware: opengear.com tables -> data/hardware/opengear-*.json
   validation.py   JSON Schema + catalog integrity checks (manifest counts,
                   provenance coherence, duplicate/conflict detection)
   site.py         Jinja2 HTML site (index, per-product, per-hardware pages)
   openeox.py      OpenEoX Core v1.0 CSD01 export with honest exclusions
   feeds.py        upcoming-milestone Atom (RFC 4287) / RSS 2.0 / iCal (RFC 5545)
   templates/      all markup (Jinja2); no HTML in the python modules
-  __main__.py     CLI: import-data | import-hardware | validate | build
+  __main__.py     CLI: import-data | import-hardware | import-opengear | validate | build
 data/
   products/<id>.json    one normalized record per software product
   hardware/<id>.json    one normalized record per hardware model
   manifest.json         snapshot metadata (counts, generated_at, exclusions)
+  opengear-import.json  per-source import report (excluded rows + reasons)
 schema/                 normalized + vendored OpenEoX JSON Schemas
 tests/                  unittest suite (the CI gate)
 .github/workflows/      publish.yml (build+publish, daily refresh), ci.yml (PR gate)
@@ -58,7 +64,7 @@ committed source of truth for the catalog; the built site is derived.
 .venv/bin/python -m engine import-hardware  # refresh hardware (~240 polite requests, 2 workers, 0.5s pause)
 .venv/bin/python -m engine validate         # schema + integrity; nonzero exit on any violation
 .venv/bin/python -m engine build            # rebuild _site/ (site, v1 endpoints, OpenEoX, feeds)
-.venv/bin/python -m unittest discover       # 60+ tests; run before every commit
+.venv/bin/python -m unittest discover       # 70+ tests; run before every commit
 ```
 
 Full build takes ~5 minutes (hardware crawl dominates). Committing data
@@ -82,6 +88,12 @@ Hardware record (`data/hardware/<id>.json`): `id`, `name`, `vendor`,
 `provenance`. Hardware uses eosl.date's own vocabulary; its `eol` is the
 terminal support end (their "End of Support Date"), not a software-style
 support-contract end. Do not blur the two vocabularies.
+
+Hardware records are source-isolated by `provenance.verifier`
+(`deterministic-eosl-date`, `deterministic-opengear`): a refresh may only
+replace or prune records carrying its own verifier, must validate the
+complete snapshot before writing, and preserves `last_checked` when content
+is unchanged (`hardware.publish_records`).
 
 Milestone semantics (shared contract):
 
@@ -123,17 +135,23 @@ see the master coverage tracker issue for the current queue):
 
 1. **Investigate first** — verify the primary source: exact URL, table shape,
    date semantics (sale vs security vs terminal support), update cadence,
-   access constraints. Record findings in the issue, including blockers.
+   access constraints, and that a live fetch of the URL returns a real page
+   (a 301 with an empty body is not a source). Record findings in the issue,
+   including blockers.
 2. **Get a go/no-go decision recorded on the issue** before writing a parser.
    If no-go, document why (no public dates, login-gated, licensing) and close.
-3. **Implement as a deterministic module** (see `hardware.py` for the pattern:
-   sitemap discovery, polite fetching, heterogeneous-table parsing, raw-cell
-   preservation). Never scrape behind logins; respect robots/ToS.
+3. **Implement as a deterministic module** (patterns: `hardware.py` — sitemap
+   discovery, polite fetching, heterogeneous tables; `opengear.py` — exact
+   header-matched tables with row accounting). Never scrape behind logins;
+   respect robots/ToS. Reuse `hardware.publish_records()` with the source's
+   own verifier id so one source's refresh can never touch another's records.
 4. **Extend the schema deliberately** if the source has semantics the current
    schema cannot represent honestly (e.g. month precision, per-firmware
    milestones). Schema changes are reviewed changes with tests.
 5. **Import → validate → build → verify live output** — check generated JSON
-   against the source values for a sample before committing.
+   against the source values for a sample, run the import twice (second run
+   must be byte-identical: ids never depend on run timestamps), and confirm
+   the import report accounts for every source row (imported + excluded).
 6. **Update the tracking issue** with what was done; close only after the
    change is on `main` and the live site shows the new data.
 
@@ -168,3 +186,10 @@ importer or in upstream.
   disappearing from the feed is correct behavior, not a bug.
 - Templates are base-path aware (`/eoltracker/` prefix on Pages); never
   hardcode absolute `/v1/...` URLs in templates or JS.
+- Classify products from the vendor's own notice, not table position: CMS6100
+  was mislabeled "software" because it sat among software exclusions; its own
+  EoL PDF proves a hardware appliance (sale dates, hardware specs). Check the
+  product's notice before writing an exclusion reason.
+- Local `yaml.safe_load` is not a workflow validator: a publish.yml missing
+  `runs-on` parsed locally and failed only in Actions. After editing
+  workflows, diff against origin/main; every job needs `runs-on` and `steps`.
