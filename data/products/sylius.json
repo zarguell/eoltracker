@@ -1,0 +1,334 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "sylius",
+  "name": "Sylius",
+  "category": "software",
+  "upstream_category": "framework",
+  "identifiers": [
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:sylius:sylius"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:sylius:sylius"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:composer/sylius/sylius"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/sylius/sylius"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/sylius",
+    "releasePolicy": null
+  },
+  "releases": [
+    {
+      "id": "2.2",
+      "name": "2.2",
+      "milestones": {
+        "ga": "2025-12-17",
+        "eos": null,
+        "eossec": "2027-03-31",
+        "eol": "2027-03-31"
+      },
+      "upstream": {
+        "name": "2.2",
+        "codename": null,
+        "label": "2.2",
+        "releaseDate": "2025-12-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": "2026-11-30",
+        "isEol": false,
+        "eolFrom": "2027-03-31",
+        "isMaintained": true,
+        "latest": {
+          "name": "2.2.9",
+          "date": "2026-09-02",
+          "link": "https://github.com/Sylius/Sylius/releases/tag/v2.2.9"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.1",
+      "name": "2.1",
+      "milestones": {
+        "ga": "2025-06-04",
+        "eos": null,
+        "eossec": "2026-09-30",
+        "eol": "2026-09-30"
+      },
+      "upstream": {
+        "name": "2.1",
+        "codename": null,
+        "label": "2.1",
+        "releaseDate": "2025-06-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-03-31",
+        "isEol": false,
+        "eolFrom": "2026-09-30",
+        "isMaintained": true,
+        "latest": {
+          "name": "2.1.16",
+          "date": "2026-09-02",
+          "link": "https://github.com/Sylius/Sylius/releases/tag/v2.1.16"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.0",
+      "name": "2.0",
+      "milestones": {
+        "ga": "2024-11-12",
+        "eos": null,
+        "eossec": "2026-02-28",
+        "eol": "2026-02-28"
+      },
+      "upstream": {
+        "name": "2.0",
+        "codename": null,
+        "label": "2.0",
+        "releaseDate": "2024-11-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-08-31",
+        "isEol": true,
+        "eolFrom": "2026-02-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.0.18",
+          "date": "2026-06-02",
+          "link": "https://github.com/Sylius/Sylius/releases/tag/v2.0.18"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.14",
+      "name": "1.14 (LTS)",
+      "milestones": {
+        "ga": "2024-11-12",
+        "eos": null,
+        "eossec": "2026-12-31",
+        "eol": "2026-12-31"
+      },
+      "upstream": {
+        "name": "1.14",
+        "codename": null,
+        "label": "1.14 (LTS)",
+        "releaseDate": "2024-11-12",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-12-31",
+        "isEol": false,
+        "eolFrom": "2026-12-31",
+        "isMaintained": true,
+        "latest": {
+          "name": "1.14.20",
+          "date": "2026-09-02",
+          "link": "https://github.com/Sylius/Sylius/releases/tag/v1.14.20"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.13",
+      "name": "1.13",
+      "milestones": {
+        "ga": "2024-04-23",
+        "eos": null,
+        "eossec": "2025-04-30",
+        "eol": "2025-04-30"
+      },
+      "upstream": {
+        "name": "1.13",
+        "codename": null,
+        "label": "1.13",
+        "releaseDate": "2024-04-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-01-31",
+        "isEol": true,
+        "eolFrom": "2025-04-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.13.17",
+          "date": "2026-09-02",
+          "link": "https://github.com/Sylius/Sylius/releases/tag/v1.13.17"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.12",
+      "name": "1.12",
+      "milestones": {
+        "ga": "2022-10-31",
+        "eos": null,
+        "eossec": "2024-12-31",
+        "eol": "2024-12-31"
+      },
+      "upstream": {
+        "name": "1.12",
+        "codename": null,
+        "label": "1.12",
+        "releaseDate": "2022-10-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-06-30",
+        "isEol": true,
+        "eolFrom": "2024-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.12.25",
+          "date": "2026-09-02",
+          "link": "https://github.com/Sylius/Sylius/releases/tag/v1.12.25"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.11",
+      "name": "1.11",
+      "milestones": {
+        "ga": "2022-02-14",
+        "eos": null,
+        "eossec": "2023-10-31",
+        "eol": "2023-10-31"
+      },
+      "upstream": {
+        "name": "1.11",
+        "codename": null,
+        "label": "1.11",
+        "releaseDate": "2022-02-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-01-31",
+        "isEol": true,
+        "eolFrom": "2023-10-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.11.18",
+          "date": "2026-03-18",
+          "link": "https://github.com/Sylius/Sylius/releases/tag/v1.11.18"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.10",
+      "name": "1.10",
+      "milestones": {
+        "ga": "2021-06-29",
+        "eos": null,
+        "eossec": "2023-01-14",
+        "eol": "2023-01-14"
+      },
+      "upstream": {
+        "name": "1.10",
+        "codename": null,
+        "label": "1.10",
+        "releaseDate": "2021-06-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-05-14",
+        "isEol": true,
+        "eolFrom": "2023-01-14",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.10.17",
+          "date": "2026-03-18",
+          "link": "https://github.com/Sylius/Sylius/releases/tag/v1.10.17"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.9",
+      "name": "1.9",
+      "milestones": {
+        "ga": "2021-03-01",
+        "eos": null,
+        "eossec": "2022-07-01",
+        "eol": "2022-07-01"
+      },
+      "upstream": {
+        "name": "1.9",
+        "codename": null,
+        "label": "1.9",
+        "releaseDate": "2021-03-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-11-01",
+        "isEol": true,
+        "eolFrom": "2022-07-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.9.13",
+          "date": "2026-03-18",
+          "link": "https://github.com/Sylius/Sylius/releases/tag/v1.9.13"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.8",
+      "name": "1.8",
+      "milestones": {
+        "ga": "2020-09-14",
+        "eos": null,
+        "eossec": "2022-01-14",
+        "eol": "2022-01-14"
+      },
+      "upstream": {
+        "name": "1.8",
+        "codename": null,
+        "label": "1.8",
+        "releaseDate": "2020-09-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-05-14",
+        "isEol": true,
+        "eolFrom": "2022-01-14",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.8.12",
+          "date": "2021-04-22",
+          "link": "https://github.com/Sylius/Sylius/releases/tag/v1.8.12"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/sylius/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-05T14:07:24+00:00"
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "freedesktop-sdk",
+  "name": "Freedesktop SDK",
+  "category": "software",
+  "upstream_category": "framework",
+  "identifiers": [],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/freedesktopdotorg.svg",
+    "html": "https://endoflife.date/freedesktop-sdk",
+    "releasePolicy": "https://freedesktop-sdk.gitlab.io/documentation/updating-sdk/release-notes/"
+  },
+  "releases": [
+    {
+      "id": "26.08",
+      "name": "26.08",
+      "milestones": {
+        "ga": "2026-09-01",
+        "eos": null,
+        "eossec": "2028-09-01",
+        "eol": "2028-09-01"
+      },
+      "upstream": {
+        "name": "26.08",
+        "codename": null,
+        "label": "26.08",
+        "releaseDate": "2026-09-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2028-09-01",
+        "isMaintained": true,
+        "latest": {
+          "name": "26.08.1",
+          "date": "2026-09-15",
+          "link": "https://gitlab.com/freedesktop-sdk/freedesktop-sdk/-/releases/freedesktop-sdk-26.08.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "25.08",
+      "name": "25.08",
+      "milestones": {
+        "ga": "2025-09-01",
+        "eos": null,
+        "eossec": "2027-09-01",
+        "eol": "2027-09-01"
+      },
+      "upstream": {
+        "name": "25.08",
+        "codename": null,
+        "label": "25.08",
+        "releaseDate": "2025-09-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-09-01",
+        "isMaintained": true,
+        "latest": {
+          "name": "25.08.17",
+          "date": "2026-09-15",
+          "link": "https://gitlab.com/freedesktop-sdk/freedesktop-sdk/-/releases/freedesktop-sdk-25.08.17"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "24.08",
+      "name": "24.08",
+      "milestones": {
+        "ga": "2024-09-08",
+        "eos": null,
+        "eossec": "2026-09-08",
+        "eol": "2026-09-08"
+      },
+      "upstream": {
+        "name": "24.08",
+        "codename": null,
+        "label": "24.08",
+        "releaseDate": "2024-09-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-09-08",
+        "isMaintained": false,
+        "latest": {
+          "name": "24.08.36",
+          "date": "2026-08-21",
+          "link": "https://gitlab.com/freedesktop-sdk/freedesktop-sdk/-/releases/freedesktop-sdk-24.08.36"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "23.08",
+      "name": "23.08",
+      "milestones": {
+        "ga": "2023-09-06",
+        "eos": null,
+        "eossec": "2025-09-06",
+        "eol": "2025-09-06"
+      },
+      "upstream": {
+        "name": "23.08",
+        "codename": null,
+        "label": "23.08",
+        "releaseDate": "2023-09-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-09-06",
+        "isMaintained": false,
+        "latest": {
+          "name": "23.08.34",
+          "date": "2025-09-29",
+          "link": "https://gitlab.com/freedesktop-sdk/freedesktop-sdk/-/releases/freedesktop-sdk-23.08.34"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "22.08",
+      "name": "22.08",
+      "milestones": {
+        "ga": "2022-09-01",
+        "eos": null,
+        "eossec": "2024-09-01",
+        "eol": "2024-09-01"
+      },
+      "upstream": {
+        "name": "22.08",
+        "codename": null,
+        "label": "22.08",
+        "releaseDate": "2022-09-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-09-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "22.08.28",
+          "date": "2025-09-08",
+          "link": "https://gitlab.com/freedesktop-sdk/freedesktop-sdk/-/merge_requests/28230"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "21.08",
+      "name": "21.08",
+      "milestones": {
+        "ga": "2021-09-04",
+        "eos": null,
+        "eossec": "2023-09-04",
+        "eol": "2023-09-04"
+      },
+      "upstream": {
+        "name": "21.08",
+        "codename": null,
+        "label": "21.08",
+        "releaseDate": "2021-09-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-09-04",
+        "isMaintained": false,
+        "latest": {
+          "name": "21.08.22",
+          "date": "2023-10-02",
+          "link": "https://gitlab.com/freedesktop-sdk/freedesktop-sdk/-/releases/freedesktop-sdk-21.08.22"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/freedesktop-sdk/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-16T00:07:55+00:00"
+  }
+}

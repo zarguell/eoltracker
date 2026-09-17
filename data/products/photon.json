@@ -1,0 +1,161 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "photon",
+  "name": "VMware Photon",
+  "category": "software",
+  "upstream_category": "os",
+  "identifiers": [
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:o:vmware:photon_os"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/o:vmware:photon_os"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/vmware.svg",
+    "html": "https://endoflife.date/photon",
+    "releasePolicy": "https://blogs.vmware.com/vsphere/2023/05/announcing-photon-os-5-0-general-availability.html"
+  },
+  "releases": [
+    {
+      "id": "5.0",
+      "name": "5.0",
+      "milestones": {
+        "ga": "2023-05-02",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.0",
+        "codename": null,
+        "label": "5.0",
+        "releaseDate": "2023-05-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": null,
+        "custom": {
+          "kernelVersion": "6.1"
+        }
+      }
+    },
+    {
+      "id": "4.0",
+      "name": "4.0",
+      "milestones": {
+        "ga": "2021-02-25",
+        "eos": null,
+        "eossec": "2027-10-11",
+        "eol": "2027-10-11"
+      },
+      "upstream": {
+        "name": "4.0",
+        "codename": null,
+        "label": "4.0",
+        "releaseDate": "2021-02-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-10-11",
+        "isMaintained": true,
+        "latest": null,
+        "custom": {
+          "kernelVersion": "5.10"
+        }
+      }
+    },
+    {
+      "id": "3.0",
+      "name": "3.0",
+      "milestones": {
+        "ga": "2019-02-08",
+        "eos": null,
+        "eossec": "2025-10-02",
+        "eol": "2025-10-02"
+      },
+      "upstream": {
+        "name": "3.0",
+        "codename": null,
+        "label": "3.0",
+        "releaseDate": "2019-02-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-10-02",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "kernelVersion": "4.19"
+        }
+      }
+    },
+    {
+      "id": "2.0",
+      "name": "2.0",
+      "milestones": {
+        "ga": "2017-11-01",
+        "eos": null,
+        "eossec": "2022-12-01",
+        "eol": "2022-12-01"
+      },
+      "upstream": {
+        "name": "2.0",
+        "codename": null,
+        "label": "2.0",
+        "releaseDate": "2017-11-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-12-01",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "kernelVersion": "4.9"
+        }
+      }
+    },
+    {
+      "id": "1.0",
+      "name": "1.0",
+      "milestones": {
+        "ga": "2016-06-11",
+        "eos": null,
+        "eossec": "2022-02-28",
+        "eol": "2022-02-28"
+      },
+      "upstream": {
+        "name": "1.0",
+        "codename": null,
+        "label": "1.0",
+        "releaseDate": "2016-06-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-02-28",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "kernelVersion": "4.4"
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/photon/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-05-01T09:58:42+00:00"
+  }
+}

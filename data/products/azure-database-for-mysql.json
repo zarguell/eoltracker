@@ -1,0 +1,102 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "azure-database-for-mysql",
+  "name": "Azure Database for MySQL",
+  "category": "software",
+  "upstream_category": "service",
+  "identifiers": [],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Standard Support",
+    "eoes": "Extended Support"
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/azure-database-for-mysql",
+    "releasePolicy": "https://learn.microsoft.com/azure/mysql/concepts-version-policy"
+  },
+  "releases": [
+    {
+      "id": "8.4",
+      "name": "8.4",
+      "milestones": {
+        "ga": "2025-09-01",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "8.4",
+        "codename": null,
+        "label": "8.4",
+        "releaseDate": "2025-09-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "8.0",
+      "name": "8.0",
+      "milestones": {
+        "ga": "2019-12-11",
+        "eos": null,
+        "eossec": null,
+        "eol": "2029-05-31"
+      },
+      "upstream": {
+        "name": "8.0",
+        "codename": null,
+        "label": "8.0",
+        "releaseDate": "2019-12-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-01-31",
+        "isEoes": false,
+        "eoesFrom": "2029-05-31",
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "5.7",
+      "name": "5.7",
+      "milestones": {
+        "ga": "2018-03-20",
+        "eos": null,
+        "eossec": null,
+        "eol": "2029-03-31"
+      },
+      "upstream": {
+        "name": "5.7",
+        "codename": null,
+        "label": "5.7",
+        "releaseDate": "2018-03-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2026-09-30",
+        "isEoes": false,
+        "eoesFrom": "2029-03-31",
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/azure-database-for-mysql/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-16T00:07:55+00:00"
+  }
+}

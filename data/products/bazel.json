@@ -1,0 +1,222 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "bazel",
+  "name": "Bazel",
+  "category": "software",
+  "upstream_category": "app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "bazel"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/bazelbuild/bazel"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:oci/bazel?repository_url=cgr.dev/chainguard"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:google:bazel"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:google:bazel"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/bazel.svg",
+    "html": "https://endoflife.date/bazel",
+    "releasePolicy": "https://bazel.build/release"
+  },
+  "releases": [
+    {
+      "id": "9",
+      "name": "9 (LTS)",
+      "milestones": {
+        "ga": "2026-01-20",
+        "eos": null,
+        "eossec": "2028-12-31",
+        "eol": "2028-12-31"
+      },
+      "upstream": {
+        "name": "9",
+        "codename": null,
+        "label": "9 (LTS)",
+        "releaseDate": "2026-01-20",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": "2028-12-31",
+        "isMaintained": true,
+        "latest": {
+          "name": "9.2.0",
+          "date": "2026-07-13",
+          "link": "https://github.com/bazelbuild/bazel/releases/tag/9.2.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8",
+      "name": "8 (LTS)",
+      "milestones": {
+        "ga": "2024-12-09",
+        "eos": null,
+        "eossec": "2027-12-31",
+        "eol": "2027-12-31"
+      },
+      "upstream": {
+        "name": "8",
+        "codename": null,
+        "label": "8 (LTS)",
+        "releaseDate": "2024-12-09",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-01-20",
+        "isEol": false,
+        "eolFrom": "2027-12-31",
+        "isMaintained": true,
+        "latest": {
+          "name": "8.8.0",
+          "date": "2026-08-31",
+          "link": "https://github.com/bazelbuild/bazel/releases/tag/8.8.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7",
+      "name": "7 (LTS)",
+      "milestones": {
+        "ga": "2023-12-11",
+        "eos": null,
+        "eossec": "2026-12-31",
+        "eol": "2026-12-31"
+      },
+      "upstream": {
+        "name": "7",
+        "codename": null,
+        "label": "7 (LTS)",
+        "releaseDate": "2023-12-11",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-12-09",
+        "isEol": false,
+        "eolFrom": "2026-12-31",
+        "isMaintained": true,
+        "latest": {
+          "name": "7.7.1",
+          "date": "2025-11-12",
+          "link": "https://github.com/bazelbuild/bazel/releases/tag/7.7.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6",
+      "name": "6 (LTS)",
+      "milestones": {
+        "ga": "2022-12-19",
+        "eos": null,
+        "eossec": "2025-12-31",
+        "eol": "2025-12-31"
+      },
+      "upstream": {
+        "name": "6",
+        "codename": null,
+        "label": "6 (LTS)",
+        "releaseDate": "2022-12-19",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-12-11",
+        "isEol": true,
+        "eolFrom": "2025-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.6.0",
+          "date": "2026-01-21",
+          "link": "https://github.com/bazelbuild/bazel/releases/tag/6.6.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5",
+      "name": "5 (LTS)",
+      "milestones": {
+        "ga": "2022-01-19",
+        "eos": null,
+        "eossec": "2025-01-31",
+        "eol": "2025-01-31"
+      },
+      "upstream": {
+        "name": "5",
+        "codename": null,
+        "label": "5 (LTS)",
+        "releaseDate": "2022-01-19",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-12-19",
+        "isEol": true,
+        "eolFrom": "2025-01-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.4.1",
+          "date": "2023-04-19",
+          "link": "https://github.com/bazelbuild/bazel/releases/tag/5.4.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4",
+      "name": "4 (LTS)",
+      "milestones": {
+        "ga": "2021-01-21",
+        "eos": null,
+        "eossec": "2024-01-31",
+        "eol": "2024-01-31"
+      },
+      "upstream": {
+        "name": "4",
+        "codename": null,
+        "label": "4 (LTS)",
+        "releaseDate": "2021-01-21",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-01-19",
+        "isEol": true,
+        "eolFrom": "2024-01-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.2.4",
+          "date": "2023-04-20",
+          "link": "https://github.com/bazelbuild/bazel/releases/tag/4.2.4"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/bazel/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-01T00:11:52+00:00"
+  }
+}

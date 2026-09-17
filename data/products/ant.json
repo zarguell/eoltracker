@@ -1,0 +1,141 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "ant",
+  "name": "Apache Ant",
+  "category": "software",
+  "upstream_category": "app",
+  "identifiers": [
+    {
+      "type": "cpe",
+      "id": "cpe:/a:apache:ant"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:apache:ant"
+    },
+    {
+      "type": "repology",
+      "id": "ant"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:deb/debian/ant"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:deb/ubuntu/ant"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/apache/ant"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:maven/org.apache.ant/ant"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:rpm/fedora/ant"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/apacheant.svg",
+    "html": "https://endoflife.date/ant",
+    "releasePolicy": null
+  },
+  "releases": [
+    {
+      "id": "1.10",
+      "name": "1.10",
+      "milestones": {
+        "ga": "2016-12-27",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.10",
+        "codename": null,
+        "label": "1.10",
+        "releaseDate": "2016-12-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "1.10.18",
+          "date": "2026-09-06",
+          "link": "https://ant.apache.org/antnews.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.9",
+      "name": "1.9",
+      "milestones": {
+        "ga": "2013-03-07",
+        "eos": null,
+        "eossec": "2024-06-19",
+        "eol": "2024-06-19"
+      },
+      "upstream": {
+        "name": "1.9",
+        "codename": null,
+        "label": "1.9",
+        "releaseDate": "2013-03-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-06-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.9.16",
+          "date": "2021-07-13",
+          "link": "https://ant.apache.org/antnews.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.8",
+      "name": "1.8",
+      "milestones": {
+        "ga": "2010-02-02",
+        "eos": null,
+        "eossec": "2013-03-07",
+        "eol": "2013-03-07"
+      },
+      "upstream": {
+        "name": "1.8",
+        "codename": null,
+        "label": "1.8",
+        "releaseDate": "2010-02-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2013-03-07",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.8.4",
+          "date": "2012-05-22",
+          "link": "https://ant.apache.org/antnews.html"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/ant/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-07T00:08:47+00:00"
+  }
+}

@@ -1,0 +1,538 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "linuxmint",
+  "name": "Linux Mint",
+  "category": "software",
+  "upstream_category": "os",
+  "identifiers": [
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:o:linuxmint:linuxmint"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/linuxmint.svg",
+    "html": "https://endoflife.date/linuxmint",
+    "releasePolicy": "https://linuxmint.com/download_all.php"
+  },
+  "releases": [
+    {
+      "id": "22.3",
+      "name": "22.3 'Zena' (LTS)",
+      "milestones": {
+        "ga": "2026-01-11",
+        "eos": null,
+        "eossec": "2029-04-30",
+        "eol": "2029-04-30"
+      },
+      "upstream": {
+        "name": "22.3",
+        "codename": "Zena",
+        "label": "22.3 'Zena' (LTS)",
+        "releaseDate": "2026-01-11",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2029-04-30",
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "lmde7",
+      "name": "LMDE 7 'Gigi'",
+      "milestones": {
+        "ga": "2025-10-14",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "lmde7",
+        "codename": "Gigi",
+        "label": "LMDE 7 'Gigi'",
+        "releaseDate": "2025-10-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "22.2",
+      "name": "22.2 'Zara' (LTS)",
+      "milestones": {
+        "ga": "2025-09-04",
+        "eos": null,
+        "eossec": "2029-04-30",
+        "eol": "2029-04-30"
+      },
+      "upstream": {
+        "name": "22.2",
+        "codename": "Zara",
+        "label": "22.2 'Zara' (LTS)",
+        "releaseDate": "2025-09-04",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2029-04-30",
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "22.1",
+      "name": "22.1 'Xia' (LTS)",
+      "milestones": {
+        "ga": "2025-01-16",
+        "eos": null,
+        "eossec": "2029-04-30",
+        "eol": "2029-04-30"
+      },
+      "upstream": {
+        "name": "22.1",
+        "codename": "Xia",
+        "label": "22.1 'Xia' (LTS)",
+        "releaseDate": "2025-01-16",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2029-04-30",
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "22",
+      "name": "22 'Wilma' (LTS)",
+      "milestones": {
+        "ga": "2024-07-25",
+        "eos": null,
+        "eossec": "2029-04-30",
+        "eol": "2029-04-30"
+      },
+      "upstream": {
+        "name": "22",
+        "codename": "Wilma",
+        "label": "22 'Wilma' (LTS)",
+        "releaseDate": "2024-07-25",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2029-04-30",
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "21.3",
+      "name": "21.3 'Virginia' (LTS)",
+      "milestones": {
+        "ga": "2024-01-12",
+        "eos": null,
+        "eossec": "2027-04-30",
+        "eol": "2027-04-30"
+      },
+      "upstream": {
+        "name": "21.3",
+        "codename": "Virginia",
+        "label": "21.3 'Virginia' (LTS)",
+        "releaseDate": "2024-01-12",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-04-30",
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "lmde6",
+      "name": "LMDE 6 'Faye'",
+      "milestones": {
+        "ga": "2023-09-27",
+        "eos": null,
+        "eossec": "2026-01-01",
+        "eol": "2026-01-01"
+      },
+      "upstream": {
+        "name": "lmde6",
+        "codename": "Faye",
+        "label": "LMDE 6 'Faye'",
+        "releaseDate": "2023-09-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-01-01",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "21.2",
+      "name": "21.2 'Victoria' (LTS)",
+      "milestones": {
+        "ga": "2023-07-16",
+        "eos": null,
+        "eossec": "2027-04-30",
+        "eol": "2027-04-30"
+      },
+      "upstream": {
+        "name": "21.2",
+        "codename": "Victoria",
+        "label": "21.2 'Victoria' (LTS)",
+        "releaseDate": "2023-07-16",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-04-30",
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "21.1",
+      "name": "21.1 'Vera' (LTS)",
+      "milestones": {
+        "ga": "2022-12-20",
+        "eos": null,
+        "eossec": "2027-04-30",
+        "eol": "2027-04-30"
+      },
+      "upstream": {
+        "name": "21.1",
+        "codename": "Vera",
+        "label": "21.1 'Vera' (LTS)",
+        "releaseDate": "2022-12-20",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-04-30",
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "21",
+      "name": "21 'Vanessa' (LTS)",
+      "milestones": {
+        "ga": "2022-07-31",
+        "eos": null,
+        "eossec": "2027-04-30",
+        "eol": "2027-04-30"
+      },
+      "upstream": {
+        "name": "21",
+        "codename": "Vanessa",
+        "label": "21 'Vanessa' (LTS)",
+        "releaseDate": "2022-07-31",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-04-30",
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "lmde5",
+      "name": "LMDE 5 'Elsie'",
+      "milestones": {
+        "ga": "2022-03-20",
+        "eos": null,
+        "eossec": "2024-07-01",
+        "eol": "2024-07-01"
+      },
+      "upstream": {
+        "name": "lmde5",
+        "codename": "Elsie",
+        "label": "LMDE 5 'Elsie'",
+        "releaseDate": "2022-03-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-07-01",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "20.3",
+      "name": "20.3 'Una' (LTS)",
+      "milestones": {
+        "ga": "2022-01-07",
+        "eos": null,
+        "eossec": "2025-04-30",
+        "eol": "2025-04-30"
+      },
+      "upstream": {
+        "name": "20.3",
+        "codename": "Una",
+        "label": "20.3 'Una' (LTS)",
+        "releaseDate": "2022-01-07",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-04-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "20.2",
+      "name": "20.2 'Uma' (LTS)",
+      "milestones": {
+        "ga": "2021-07-08",
+        "eos": null,
+        "eossec": "2025-04-30",
+        "eol": "2025-04-30"
+      },
+      "upstream": {
+        "name": "20.2",
+        "codename": "Uma",
+        "label": "20.2 'Uma' (LTS)",
+        "releaseDate": "2021-07-08",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-04-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "20.1",
+      "name": "20.1 'Ulyssa' (LTS)",
+      "milestones": {
+        "ga": "2021-01-08",
+        "eos": null,
+        "eossec": "2025-04-30",
+        "eol": "2025-04-30"
+      },
+      "upstream": {
+        "name": "20.1",
+        "codename": "Ulyssa",
+        "label": "20.1 'Ulyssa' (LTS)",
+        "releaseDate": "2021-01-08",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-04-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "20",
+      "name": "20 'Ulyana' (LTS)",
+      "milestones": {
+        "ga": "2020-06-27",
+        "eos": null,
+        "eossec": "2025-04-30",
+        "eol": "2025-04-30"
+      },
+      "upstream": {
+        "name": "20",
+        "codename": "Ulyana",
+        "label": "20 'Ulyana' (LTS)",
+        "releaseDate": "2020-06-27",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-04-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "lmde4",
+      "name": "LMDE 4 'Debbie'",
+      "milestones": {
+        "ga": "2020-03-20",
+        "eos": null,
+        "eossec": "2022-08-01",
+        "eol": "2022-08-01"
+      },
+      "upstream": {
+        "name": "lmde4",
+        "codename": "Debbie",
+        "label": "LMDE 4 'Debbie'",
+        "releaseDate": "2020-03-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-08-01",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "19.3",
+      "name": "19.3 'Tricia' (LTS)",
+      "milestones": {
+        "ga": "2019-12-18",
+        "eos": null,
+        "eossec": "2023-04-01",
+        "eol": "2023-04-01"
+      },
+      "upstream": {
+        "name": "19.3",
+        "codename": "Tricia",
+        "label": "19.3 'Tricia' (LTS)",
+        "releaseDate": "2019-12-18",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-04-01",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "19.2",
+      "name": "19.2 'Tina' (LTS)",
+      "milestones": {
+        "ga": "2019-08-02",
+        "eos": null,
+        "eossec": "2023-04-01",
+        "eol": "2023-04-01"
+      },
+      "upstream": {
+        "name": "19.2",
+        "codename": "Tina",
+        "label": "19.2 'Tina' (LTS)",
+        "releaseDate": "2019-08-02",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-04-01",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "19.1",
+      "name": "19.1 'Tessa' (LTS)",
+      "milestones": {
+        "ga": "2018-12-19",
+        "eos": null,
+        "eossec": "2023-04-01",
+        "eol": "2023-04-01"
+      },
+      "upstream": {
+        "name": "19.1",
+        "codename": "Tessa",
+        "label": "19.1 'Tessa' (LTS)",
+        "releaseDate": "2018-12-19",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-04-01",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "19",
+      "name": "19 'Tara' (LTS)",
+      "milestones": {
+        "ga": "2018-06-29",
+        "eos": null,
+        "eossec": "2023-04-01",
+        "eol": "2023-04-01"
+      },
+      "upstream": {
+        "name": "19",
+        "codename": "Tara",
+        "label": "19 'Tara' (LTS)",
+        "releaseDate": "2018-06-29",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-04-01",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "18.3",
+      "name": "18.3 'Sylvia' (LTS)",
+      "milestones": {
+        "ga": "2017-11-27",
+        "eos": null,
+        "eossec": "2021-05-03",
+        "eol": "2021-05-03"
+      },
+      "upstream": {
+        "name": "18.3",
+        "codename": "Sylvia",
+        "label": "18.3 'Sylvia' (LTS)",
+        "releaseDate": "2017-11-27",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-05-03",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "18.1",
+      "name": "18.1 'Serena'",
+      "milestones": {
+        "ga": "2017-01-27",
+        "eos": null,
+        "eossec": "2021-04-01",
+        "eol": "2021-04-01"
+      },
+      "upstream": {
+        "name": "18.1",
+        "codename": "Serena",
+        "label": "18.1 'Serena'",
+        "releaseDate": "2017-01-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-04-01",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/linuxmint/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-05-01T09:58:42+00:00"
+  }
+}

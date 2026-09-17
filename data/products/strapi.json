@@ -1,0 +1,123 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "strapi",
+  "name": "Strapi",
+  "category": "software",
+  "upstream_category": "framework",
+  "identifiers": [
+    {
+      "type": "purl",
+      "id": "pkg:github/strapi/strapi"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:npm/%40strapi/strapi"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/strapi.svg",
+    "html": "https://endoflife.date/strapi",
+    "releasePolicy": "https://github.com/strapi/strapi/blob/develop/SECURITY.md"
+  },
+  "releases": [
+    {
+      "id": "5",
+      "name": "5 (LTS)",
+      "milestones": {
+        "ga": "2024-09-18",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5",
+        "codename": null,
+        "label": "5 (LTS)",
+        "releaseDate": "2024-09-18",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "5.54.0",
+          "date": "2026-09-16",
+          "link": "https://github.com/strapi/strapi/releases/tag/v5.54.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4",
+      "name": "4",
+      "milestones": {
+        "ga": "2021-11-30",
+        "eos": null,
+        "eossec": "2026-06-09",
+        "eol": "2026-06-09"
+      },
+      "upstream": {
+        "name": "4",
+        "codename": null,
+        "label": "4",
+        "releaseDate": "2021-11-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-10-01",
+        "isEol": true,
+        "eolFrom": "2026-06-09",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.26.2",
+          "date": "2026-06-09",
+          "link": "https://github.com/strapi/strapi/releases/tag/v4.26.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3",
+      "name": "3",
+      "milestones": {
+        "ga": "2020-05-26",
+        "eos": null,
+        "eossec": "2022-02-16",
+        "eol": "2022-02-16"
+      },
+      "upstream": {
+        "name": "3",
+        "codename": null,
+        "label": "3",
+        "releaseDate": "2020-05-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-02-16",
+        "isEol": true,
+        "eolFrom": "2022-02-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.6.11",
+          "date": "2022-11-22",
+          "link": "https://github.com/strapi/strapi/releases/tag/v3.6.11"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/strapi/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-17T00:08:37+00:00"
+  }
+}

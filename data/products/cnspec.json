@@ -1,0 +1,276 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "cnspec",
+  "name": "cnspec",
+  "category": "software",
+  "upstream_category": "app",
+  "identifiers": [
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:cnspec:cnspec"
+    },
+    {
+      "type": "repology",
+      "id": "cnspec"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/mondoohq/cnspec"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/mondoo/cnspec"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/cnspec",
+    "releasePolicy": "https://mondoo.com/docs/cnspec/cnspec-adv-install/update/"
+  },
+  "releases": [
+    {
+      "id": "13",
+      "name": "13",
+      "milestones": {
+        "ga": "2026-03-10",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "13",
+        "codename": null,
+        "label": "13",
+        "releaseDate": "2026-03-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "13.39.0",
+          "date": "2026-09-15",
+          "link": "https://github.com/mondoohq/cnspec/releases/tag/v13.39.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "12",
+      "name": "12",
+      "milestones": {
+        "ga": "2025-09-05",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "12",
+        "codename": null,
+        "label": "12",
+        "releaseDate": "2025-09-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-03-10",
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "12.23.1",
+          "date": "2026-02-17",
+          "link": "https://github.com/mondoohq/cnspec/releases/tag/v12.23.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "11",
+      "name": "11",
+      "milestones": {
+        "ga": "2024-04-17",
+        "eos": null,
+        "eossec": "2026-03-10",
+        "eol": "2026-03-10"
+      },
+      "upstream": {
+        "name": "11",
+        "codename": null,
+        "label": "11",
+        "releaseDate": "2024-04-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-09-05",
+        "isEol": true,
+        "eolFrom": "2026-03-10",
+        "isMaintained": false,
+        "latest": {
+          "name": "11.69.1",
+          "date": "2025-08-26",
+          "link": "https://github.com/mondoohq/cnspec/releases/tag/v11.69.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "10",
+      "name": "10",
+      "milestones": {
+        "ga": "2024-01-23",
+        "eos": null,
+        "eossec": "2025-09-05",
+        "eol": "2025-09-05"
+      },
+      "upstream": {
+        "name": "10",
+        "codename": null,
+        "label": "10",
+        "releaseDate": "2024-01-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-04-17",
+        "isEol": true,
+        "eolFrom": "2025-09-05",
+        "isMaintained": false,
+        "latest": {
+          "name": "10.12.2",
+          "date": "2024-04-16",
+          "link": "https://github.com/mondoohq/cnspec/releases/tag/v10.12.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9",
+      "name": "9",
+      "milestones": {
+        "ga": "2023-10-05",
+        "eos": null,
+        "eossec": "2024-04-17",
+        "eol": "2024-04-17"
+      },
+      "upstream": {
+        "name": "9",
+        "codename": null,
+        "label": "9",
+        "releaseDate": "2023-10-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-01-23",
+        "isEol": true,
+        "eolFrom": "2024-04-17",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.14.0",
+          "date": "2024-01-09",
+          "link": "https://github.com/mondoohq/cnspec/releases/tag/v9.14.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8",
+      "name": "8",
+      "milestones": {
+        "ga": "2023-03-09",
+        "eos": null,
+        "eossec": "2024-01-23",
+        "eol": "2024-01-23"
+      },
+      "upstream": {
+        "name": "8",
+        "codename": null,
+        "label": "8",
+        "releaseDate": "2023-03-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-10-05",
+        "isEol": true,
+        "eolFrom": "2024-01-23",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.28.4",
+          "date": "2023-09-20",
+          "link": "https://github.com/mondoohq/cnspec/releases/tag/v8.28.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7",
+      "name": "7",
+      "milestones": {
+        "ga": "2022-10-18",
+        "eos": null,
+        "eossec": "2023-10-05",
+        "eol": "2023-10-05"
+      },
+      "upstream": {
+        "name": "7",
+        "codename": null,
+        "label": "7",
+        "releaseDate": "2022-10-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-03-09",
+        "isEol": true,
+        "eolFrom": "2023-10-05",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.19.2",
+          "date": "2023-03-02",
+          "link": "https://github.com/mondoohq/cnspec/releases/tag/v7.19.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6",
+      "name": "6",
+      "milestones": {
+        "ga": "2022-10-11",
+        "eos": null,
+        "eossec": "2023-03-09",
+        "eol": "2023-03-09"
+      },
+      "upstream": {
+        "name": "6",
+        "codename": null,
+        "label": "6",
+        "releaseDate": "2022-10-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-10-18",
+        "isEol": true,
+        "eolFrom": "2023-03-09",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.19.0",
+          "date": "2022-10-11",
+          "link": "https://github.com/mondoohq/cnspec/releases/tag/v6.19.0"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/cnspec/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-16T00:07:55+00:00"
+  }
+}

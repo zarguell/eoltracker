@@ -1,0 +1,361 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "lineageos",
+  "name": "LineageOS",
+  "category": "software",
+  "upstream_category": "os",
+  "identifiers": [
+    {
+      "type": "cpe",
+      "id": "cpe:/o:lineageos:lineageos"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:o:lineageos:lineageos"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/lineageos.svg",
+    "html": "https://endoflife.date/lineageos",
+    "releasePolicy": null
+  },
+  "releases": [
+    {
+      "id": "23.2",
+      "name": "23.2",
+      "milestones": {
+        "ga": "2026-02-08",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "23.2",
+        "codename": null,
+        "label": "23.2",
+        "releaseDate": "2026-02-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": null,
+        "custom": {
+          "androidVersion": "16"
+        }
+      }
+    },
+    {
+      "id": "23.0",
+      "name": "23.0",
+      "milestones": {
+        "ga": "2025-10-11",
+        "eos": null,
+        "eossec": "2026-02-28",
+        "eol": "2026-02-28"
+      },
+      "upstream": {
+        "name": "23.0",
+        "codename": null,
+        "label": "23.0",
+        "releaseDate": "2025-10-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-02-28",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "androidVersion": "16"
+        }
+      }
+    },
+    {
+      "id": "22.2",
+      "name": "22.2",
+      "milestones": {
+        "ga": "2025-04-11",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "22.2",
+        "codename": null,
+        "label": "22.2",
+        "releaseDate": "2025-04-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": null,
+        "custom": {
+          "androidVersion": "15"
+        }
+      }
+    },
+    {
+      "id": "22.1",
+      "name": "22.1",
+      "milestones": {
+        "ga": "2024-12-31",
+        "eos": null,
+        "eossec": "2025-05-13",
+        "eol": "2025-05-13"
+      },
+      "upstream": {
+        "name": "22.1",
+        "codename": null,
+        "label": "22.1",
+        "releaseDate": "2024-12-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-05-13",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "androidVersion": "15"
+        }
+      }
+    },
+    {
+      "id": "21",
+      "name": "21",
+      "milestones": {
+        "ga": "2024-02-14",
+        "eos": null,
+        "eossec": "2025-10-12",
+        "eol": "2025-10-12"
+      },
+      "upstream": {
+        "name": "21",
+        "codename": null,
+        "label": "21",
+        "releaseDate": "2024-02-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-10-12",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "androidVersion": "14"
+        }
+      }
+    },
+    {
+      "id": "20",
+      "name": "20",
+      "milestones": {
+        "ga": "2022-12-31",
+        "eos": null,
+        "eossec": "2024-12-31",
+        "eol": "2024-12-31"
+      },
+      "upstream": {
+        "name": "20",
+        "codename": null,
+        "label": "20",
+        "releaseDate": "2022-12-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-12-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "androidVersion": "13"
+        }
+      }
+    },
+    {
+      "id": "19",
+      "name": "19",
+      "milestones": {
+        "ga": "2022-04-26",
+        "eos": null,
+        "eossec": "2024-02-14",
+        "eol": "2024-02-14"
+      },
+      "upstream": {
+        "name": "19",
+        "codename": null,
+        "label": "19",
+        "releaseDate": "2022-04-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-02-14",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "androidVersion": "12"
+        }
+      }
+    },
+    {
+      "id": "18.1",
+      "name": "18.1",
+      "milestones": {
+        "ga": "2021-04-01",
+        "eos": null,
+        "eossec": "2024-03-05",
+        "eol": "2024-03-05"
+      },
+      "upstream": {
+        "name": "18.1",
+        "codename": null,
+        "label": "18.1",
+        "releaseDate": "2021-04-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-03-05",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "androidVersion": "11"
+        }
+      }
+    },
+    {
+      "id": "17.1",
+      "name": "17.1",
+      "milestones": {
+        "ga": "2020-02-01",
+        "eos": null,
+        "eossec": "2022-04-26",
+        "eol": "2022-04-26"
+      },
+      "upstream": {
+        "name": "17.1",
+        "codename": null,
+        "label": "17.1",
+        "releaseDate": "2020-02-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-04-26",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "androidVersion": "10"
+        }
+      }
+    },
+    {
+      "id": "16.0",
+      "name": "16.0",
+      "milestones": {
+        "ga": "2019-03-01",
+        "eos": null,
+        "eossec": "2021-02-16",
+        "eol": "2021-02-16"
+      },
+      "upstream": {
+        "name": "16.0",
+        "codename": null,
+        "label": "16.0",
+        "releaseDate": "2019-03-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-02-16",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "androidVersion": "9.0"
+        }
+      }
+    },
+    {
+      "id": "15.1",
+      "name": "15.1",
+      "milestones": {
+        "ga": "2018-02-25",
+        "eos": null,
+        "eossec": "2020-02-28",
+        "eol": "2020-02-28"
+      },
+      "upstream": {
+        "name": "15.1",
+        "codename": null,
+        "label": "15.1",
+        "releaseDate": "2018-02-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-02-28",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "androidVersion": "8.1"
+        }
+      }
+    },
+    {
+      "id": "14.1",
+      "name": "14.1",
+      "milestones": {
+        "ga": "2017-01-22",
+        "eos": null,
+        "eossec": "2019-02-25",
+        "eol": "2019-02-25"
+      },
+      "upstream": {
+        "name": "14.1",
+        "codename": null,
+        "label": "14.1",
+        "releaseDate": "2017-01-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-02-25",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "androidVersion": "7.1.2"
+        }
+      }
+    },
+    {
+      "id": "13.0",
+      "name": "13.0",
+      "milestones": {
+        "ga": "2017-01-22",
+        "eos": null,
+        "eossec": "2018-02-12",
+        "eol": "2018-02-12"
+      },
+      "upstream": {
+        "name": "13.0",
+        "codename": null,
+        "label": "13.0",
+        "releaseDate": "2017-01-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-02-12",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "androidVersion": "6.0.1"
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/lineageos/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-08-26T12:24:52+00:00"
+  }
+}

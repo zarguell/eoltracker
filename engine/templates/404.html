@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <p class="eyebrow">404</p>
+  <h1 class="page-title">No page at this address</h1>
+  <p class="lead">
+    The link may be outdated, or a product id may have been renamed upstream. The catalog below is the reliable way back.
+  </p>
+  <p class="product-links">
+    <a class="button" href="{{ url_for() }}">Browse the catalog</a>
+    <a class="button" href="{{ url_for('api/') }}">API &amp; data</a>
+  </p>
+</section>
+
+<section class="panel" aria-labelledby="popular-title">
+  <h2 class="panel-title" id="popular-title">Some products in the catalog</h2>
+  <ul class="product-list compact">
+    {% for product in products %}
+    <li class="product-card">
+      <h3 class="product-name"><a href="{{ url_for('products/' ~ product.id ~ '/') }}">{{ product.name }}</a></h3>
+      <p class="product-meta">
+        <span class="tag">{{ product.upstream_category }}</span>
+        <span>{{ plural(product.releases, 'release') }}</span>
+      </p>
+    </li>
+    {% endfor %}
+  </ul>
+  <p class="panel-note">
+    {{ product_count }} products are published, each with a lifecycle table and a JSON record. If you followed a link
+    from another site, the product id may have changed upstream — searching the catalog by name finds the current id.
+  </p>
+</section>
+{% endblock %}

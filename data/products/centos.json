@@ -1,0 +1,152 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "centos",
+  "name": "CentOS",
+  "category": "software",
+  "upstream_category": "os",
+  "identifiers": [
+    {
+      "type": "cpe",
+      "id": "cpe:/o:centos:centos"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:o:centos:centos"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/centos.svg",
+    "html": "https://endoflife.date/centos",
+    "releasePolicy": "https://wiki.centos.org/About(2f)Product.html"
+  },
+  "releases": [
+    {
+      "id": "8",
+      "name": "8",
+      "milestones": {
+        "ga": "2019-09-24",
+        "eos": null,
+        "eossec": "2021-12-31",
+        "eol": "2021-12-31"
+      },
+      "upstream": {
+        "name": "8",
+        "codename": null,
+        "label": "8",
+        "releaseDate": "2019-09-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-12-31",
+        "isEol": true,
+        "eolFrom": "2021-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "8 (2111)",
+          "date": "2021-11-16",
+          "link": "https://wiki.centos.org/Manuals(2f)ReleaseNotes(2f)CentOS8(2e)2111.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7",
+      "name": "7",
+      "milestones": {
+        "ga": "2014-07-07",
+        "eos": null,
+        "eossec": "2024-06-30",
+        "eol": "2024-06-30"
+      },
+      "upstream": {
+        "name": "7",
+        "codename": null,
+        "label": "7",
+        "releaseDate": "2014-07-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-08-06",
+        "isEol": true,
+        "eolFrom": "2024-06-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "7 (2009)",
+          "date": "2020-11-12",
+          "link": "https://wiki.centos.org/Manuals(2f)ReleaseNotes(2f)CentOS7(2e)2009.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6",
+      "name": "6",
+      "milestones": {
+        "ga": "2011-07-10",
+        "eos": null,
+        "eossec": "2020-11-30",
+        "eol": "2020-11-30"
+      },
+      "upstream": {
+        "name": "6",
+        "codename": null,
+        "label": "6",
+        "releaseDate": "2011-07-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2017-05-10",
+        "isEol": true,
+        "eolFrom": "2020-11-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.10",
+          "date": "2018-07-03",
+          "link": "https://wiki.centos.org/Manuals(2f)ReleaseNotes(2f)CentOS6(2e)10.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5",
+      "name": "5",
+      "milestones": {
+        "ga": "2007-04-12",
+        "eos": null,
+        "eossec": "2017-03-31",
+        "eol": "2017-03-31"
+      },
+      "upstream": {
+        "name": "5",
+        "codename": null,
+        "label": "5",
+        "releaseDate": "2007-04-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2014-01-31",
+        "isEol": true,
+        "eolFrom": "2017-03-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.11",
+          "date": "2014-09-30",
+          "link": "https://wiki.centos.org/Manuals(2f)ReleaseNotes(2f)CentOS5(2e)11.html"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/centos/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-05-01T09:58:42+00:00"
+  }
+}

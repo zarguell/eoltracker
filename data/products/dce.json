@@ -1,0 +1,114 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "dce",
+  "name": "DaoCloud Enterprise",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Standard Support",
+    "eoes": "Support Life"
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/dce",
+    "releasePolicy": "https://docs.daocloud.io/en/dce/support.html"
+  },
+  "releases": [
+    {
+      "id": "5.0",
+      "name": "DCE 5.0",
+      "milestones": {
+        "ga": "2023-06-01",
+        "eos": null,
+        "eossec": null,
+        "eol": "2031-01-31"
+      },
+      "upstream": {
+        "name": "5.0",
+        "codename": null,
+        "label": "DCE 5.0",
+        "releaseDate": "2023-06-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2029-01-31",
+        "isEoes": false,
+        "eoesFrom": "2031-01-31",
+        "isMaintained": true,
+        "latest": {
+          "name": "5.0-20260731",
+          "date": "2026-07-31",
+          "link": "https://docs.daocloud.io/en/dce/dce-rn/20260731/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.0",
+      "name": "DCE 4.0",
+      "milestones": {
+        "ga": "2020-03-31",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-03-31"
+      },
+      "upstream": {
+        "name": "4.0",
+        "codename": null,
+        "label": "DCE 4.0",
+        "releaseDate": "2020-03-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-03-31",
+        "isEoes": true,
+        "eoesFrom": "2025-03-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "2022.12.15.4.0.11",
+          "date": "2022-12-15",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.0",
+      "name": "DCE 3.0",
+      "milestones": {
+        "ga": "2018-07-15",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-07-30"
+      },
+      "upstream": {
+        "name": "3.0",
+        "codename": null,
+        "label": "DCE 3.0",
+        "releaseDate": "2018-07-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-07-30",
+        "isEoes": true,
+        "eoesFrom": "2023-07-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "2021.12.30.3.0.8",
+          "date": "2021-12-30",
+          "link": null
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/dce/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-14T20:12:51+00:00"
+  }
+}

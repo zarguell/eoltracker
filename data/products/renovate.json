@@ -1,0 +1,183 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "renovate",
+  "name": "Renovate CLI",
+  "category": "software",
+  "upstream_category": "app",
+  "identifiers": [
+    {
+      "type": "purl",
+      "id": "pkg:npm/renovate"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/renovate/renovate"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:oci/renovate?repository_url=ghcr.io/renovatebot"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:brew/renovate"
+    },
+    {
+      "type": "repology",
+      "id": "renovate"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/renovate.svg",
+    "html": "https://endoflife.date/renovate",
+    "releasePolicy": "https://docs.renovatebot.com/faq/#which-renovate-versions-are-officially-supported"
+  },
+  "releases": [
+    {
+      "id": "44",
+      "name": "44",
+      "milestones": {
+        "ga": "2026-07-29",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "44",
+        "codename": null,
+        "label": "44",
+        "releaseDate": "2026-07-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "44.95.0",
+          "date": "2026-09-17",
+          "link": "https://github.com/renovatebot/renovate/releases/tag/44.95.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "43",
+      "name": "43",
+      "milestones": {
+        "ga": "2026-01-29",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-07-29"
+      },
+      "upstream": {
+        "name": "43",
+        "codename": null,
+        "label": "43",
+        "releaseDate": "2026-01-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-07-29",
+        "isMaintained": false,
+        "latest": {
+          "name": "43.288.0",
+          "date": "2026-07-29",
+          "link": "https://github.com/renovatebot/renovate/releases/tag/43.288.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "42",
+      "name": "42",
+      "milestones": {
+        "ga": "2025-08-14",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-01-29"
+      },
+      "upstream": {
+        "name": "42",
+        "codename": null,
+        "label": "42",
+        "releaseDate": "2025-08-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-01-29",
+        "isMaintained": false,
+        "latest": {
+          "name": "42.99.0",
+          "date": "2026-02-12",
+          "link": "https://github.com/renovatebot/renovate/releases/tag/42.99.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "41",
+      "name": "41",
+      "milestones": {
+        "ga": "2025-04-30",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-08-14"
+      },
+      "upstream": {
+        "name": "41",
+        "codename": null,
+        "label": "41",
+        "releaseDate": "2025-04-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-08-14",
+        "isMaintained": false,
+        "latest": {
+          "name": "41.173.1",
+          "date": "2025-11-06",
+          "link": "https://github.com/renovatebot/renovate/releases/tag/41.173.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "40",
+      "name": "40",
+      "milestones": {
+        "ga": "2025-02-22",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-08-14"
+      },
+      "upstream": {
+        "name": "40",
+        "codename": null,
+        "label": "40",
+        "releaseDate": "2025-02-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-08-14",
+        "isMaintained": false,
+        "latest": {
+          "name": "40.62.1",
+          "date": "2025-06-19",
+          "link": "https://github.com/renovatebot/renovate/releases/tag/40.62.1"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/renovate/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-17T00:08:37+00:00"
+  }
+}

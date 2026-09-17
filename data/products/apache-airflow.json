@@ -1,0 +1,313 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "apache-airflow",
+  "name": "Apache Airflow",
+  "category": "software",
+  "upstream_category": "framework",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "apache-airflow"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/apache/airflow"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/bitnami/airflow"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:oci/airflow?repository_url=cgr.dev/chainguard"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:pypi/apache-airflow"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:apache:airflow"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Limited Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/apacheairflow.svg",
+    "html": "https://endoflife.date/apache-airflow",
+    "releasePolicy": "https://github.com/apache/airflow#version-life-cycle"
+  },
+  "releases": [
+    {
+      "id": "3.3",
+      "name": "3.3",
+      "milestones": {
+        "ga": "2026-07-06",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.3",
+        "codename": null,
+        "label": "3.3",
+        "releaseDate": "2026-07-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "3.3.1",
+          "date": "2026-08-12",
+          "link": "https://airflow.apache.org/docs/apache-airflow/stable/release_notes.html#airflow-3-3-1-2026-08-12"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.2",
+      "name": "3.2",
+      "milestones": {
+        "ga": "2026-04-07",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.2",
+        "codename": null,
+        "label": "3.2",
+        "releaseDate": "2026-04-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-07-06",
+        "isEol": true,
+        "eolFrom": "2026-07-06",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.2.2",
+          "date": "2026-05-29",
+          "link": "https://airflow.apache.org/docs/apache-airflow/stable/release_notes.html#airflow-3-2-2-2026-05-29"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.1",
+      "name": "3.1",
+      "milestones": {
+        "ga": "2025-09-25",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.1",
+        "codename": null,
+        "label": "3.1",
+        "releaseDate": "2025-09-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-04-07",
+        "isEol": true,
+        "eolFrom": "2026-04-07",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.1.8",
+          "date": "2026-03-11",
+          "link": "https://airflow.apache.org/docs/apache-airflow/stable/release_notes.html#airflow-3-1-8-2026-03-11"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.0",
+      "name": "3.0",
+      "milestones": {
+        "ga": "2025-04-22",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.0",
+        "codename": null,
+        "label": "3.0",
+        "releaseDate": "2025-04-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-09-25",
+        "isEol": true,
+        "eolFrom": "2025-09-25",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.0.6",
+          "date": "2025-08-29",
+          "link": "https://airflow.apache.org/docs/apache-airflow/stable/release_notes.html#airflow-3-0-6-2025-08-29"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2",
+      "name": "2",
+      "milestones": {
+        "ga": "2020-12-17",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2",
+        "codename": null,
+        "label": "2",
+        "releaseDate": "2020-12-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-10-22",
+        "isEol": true,
+        "eolFrom": "2026-04-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.11.2",
+          "date": "2026-03-14",
+          "link": "https://airflow.apache.org/docs/apache-airflow/stable/release_notes.html#airflow-2-11-2-2026-03-14"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.10",
+      "name": "1.10",
+      "milestones": {
+        "ga": "2018-08-27",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.10",
+        "codename": null,
+        "label": "1.10",
+        "releaseDate": "2018-08-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-12-17",
+        "isEol": true,
+        "eolFrom": "2021-06-17",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.10.15",
+          "date": "2021-03-17",
+          "link": "https://airflow.apache.org/docs/apache-airflow/stable/release_notes.html#airflow-1-10-15-2021-03-17"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.9",
+      "name": "1.9",
+      "milestones": {
+        "ga": "2018-01-02",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.9",
+        "codename": null,
+        "label": "1.9",
+        "releaseDate": "2018-01-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2018-08-27",
+        "isEol": true,
+        "eolFrom": "2018-08-27",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.9.0",
+          "date": "2018-01-02",
+          "link": "https://airflow.apache.org/docs/apache-airflow/stable/release_notes.html#airflow-1-9-0-2018-01-02"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.8",
+      "name": "1.8",
+      "milestones": {
+        "ga": "2017-05-09",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.8",
+        "codename": null,
+        "label": "1.8",
+        "releaseDate": "2017-05-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2018-01-03",
+        "isEol": true,
+        "eolFrom": "2018-01-03",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.8.2",
+          "date": "2017-09-04",
+          "link": "https://airflow.apache.org/docs/apache-airflow/stable/release_notes.html#airflow-1-8-2-2017-09-04"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.7",
+      "name": "1.7",
+      "milestones": {
+        "ga": "2016-03-28",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.7",
+        "codename": null,
+        "label": "1.7",
+        "releaseDate": "2016-03-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2017-03-19",
+        "isEol": true,
+        "eolFrom": "2017-03-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.7.1.2",
+          "date": "2017-05-20",
+          "link": "https://airflow.apache.org/docs/apache-airflow/stable/release_notes.html#airflow-1-7-1-2-2017-05-20"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/apache-airflow/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-08-13T00:06:36+00:00"
+  }
+}

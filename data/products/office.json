@@ -1,0 +1,286 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "office",
+  "name": "Microsoft Office",
+  "category": "software",
+  "upstream_category": "app",
+  "identifiers": [
+    {
+      "type": "cpe",
+      "id": "cpe:/a:microsoft:office"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:microsoft:office"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/office",
+    "releasePolicy": "https://learn.microsoft.com/lifecycle/products/?terms=Office"
+  },
+  "releases": [
+    {
+      "id": "2024",
+      "name": "2024",
+      "milestones": {
+        "ga": "2024-10-01",
+        "eos": null,
+        "eossec": "2029-10-09",
+        "eol": "2029-10-09"
+      },
+      "upstream": {
+        "name": "2024",
+        "codename": null,
+        "label": "2024",
+        "releaseDate": "2024-10-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": "2029-10-09",
+        "isEol": false,
+        "eolFrom": "2029-10-09",
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "2024-ltsc",
+      "name": "2024 LTSC (LTS)",
+      "milestones": {
+        "ga": "2024-09-18",
+        "eos": null,
+        "eossec": "2029-10-09",
+        "eol": "2029-10-09"
+      },
+      "upstream": {
+        "name": "2024-ltsc",
+        "codename": null,
+        "label": "2024 LTSC (LTS)",
+        "releaseDate": "2024-09-18",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": "2029-10-09",
+        "isEol": false,
+        "eolFrom": "2029-10-09",
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "2021",
+      "name": "2021",
+      "milestones": {
+        "ga": "2021-10-05",
+        "eos": null,
+        "eossec": "2026-10-13",
+        "eol": "2026-10-13"
+      },
+      "upstream": {
+        "name": "2021",
+        "codename": null,
+        "label": "2021",
+        "releaseDate": "2021-10-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": "2026-10-13",
+        "isEol": false,
+        "eolFrom": "2026-10-13",
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "2019",
+      "name": "2019",
+      "milestones": {
+        "ga": "2018-09-24",
+        "eos": null,
+        "eossec": "2025-10-14",
+        "eol": "2025-10-14"
+      },
+      "upstream": {
+        "name": "2019",
+        "codename": null,
+        "label": "2019",
+        "releaseDate": "2018-09-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-10-10",
+        "isEol": true,
+        "eolFrom": "2025-10-14",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "2016",
+      "name": "2016",
+      "milestones": {
+        "ga": "2015-09-22",
+        "eos": null,
+        "eossec": "2025-10-14",
+        "eol": "2025-10-14"
+      },
+      "upstream": {
+        "name": "2016",
+        "codename": null,
+        "label": "2016",
+        "releaseDate": "2015-09-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-10-13",
+        "isEol": true,
+        "eolFrom": "2025-10-14",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "2013",
+      "name": "2013 SP1",
+      "milestones": {
+        "ga": "2013-01-09",
+        "eos": null,
+        "eossec": "2023-04-11",
+        "eol": "2023-04-11"
+      },
+      "upstream": {
+        "name": "2013",
+        "codename": null,
+        "label": "2013 SP1",
+        "releaseDate": "2013-01-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2018-04-10",
+        "isEol": true,
+        "eolFrom": "2023-04-11",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "2011-for-mac",
+      "name": "2011 for Mac SP3",
+      "milestones": {
+        "ga": "2010-12-09",
+        "eos": null,
+        "eossec": "2017-10-10",
+        "eol": "2017-10-10"
+      },
+      "upstream": {
+        "name": "2011-for-mac",
+        "codename": null,
+        "label": "2011 for Mac SP3",
+        "releaseDate": "2010-12-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2017-10-10",
+        "isEol": true,
+        "eolFrom": "2017-10-10",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "2010",
+      "name": "2010 SP2",
+      "milestones": {
+        "ga": "2010-07-15",
+        "eos": null,
+        "eossec": "2020-10-13",
+        "eol": "2020-10-13"
+      },
+      "upstream": {
+        "name": "2010",
+        "codename": null,
+        "label": "2010 SP2",
+        "releaseDate": "2010-07-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2015-10-13",
+        "isEol": true,
+        "eolFrom": "2020-10-13",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "2008-for-mac",
+      "name": "2008 for Mac SP2",
+      "milestones": {
+        "ga": "2008-01-15",
+        "eos": null,
+        "eossec": "2013-04-09",
+        "eol": "2013-04-09"
+      },
+      "upstream": {
+        "name": "2008-for-mac",
+        "codename": null,
+        "label": "2008 for Mac SP2",
+        "releaseDate": "2008-01-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2013-04-09",
+        "isEol": true,
+        "eolFrom": "2013-04-09",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "2007",
+      "name": "2007 SP3",
+      "milestones": {
+        "ga": "2007-01-27",
+        "eos": null,
+        "eossec": "2017-10-10",
+        "eol": "2017-10-10"
+      },
+      "upstream": {
+        "name": "2007",
+        "codename": null,
+        "label": "2007 SP3",
+        "releaseDate": "2007-01-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2012-10-09",
+        "isEol": true,
+        "eolFrom": "2017-10-10",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/office/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-05-01T09:58:42+00:00"
+  }
+}

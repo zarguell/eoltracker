@@ -1,0 +1,208 @@
+{% extends "base.html" %}
+{% block content %}
+<nav class="crumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="{{ url_for() }}">Catalog</a></li>
+    <li aria-current="page">{{ product.name }}</li>
+  </ol>
+</nav>
+
+<section class="hero product-hero">
+  <p class="eyebrow">{{ product.upstream_category }} · {{ product.category }}</p>
+  <h1 class="page-title">{{ product.name }}</h1>
+  <p class="lead">
+    {{ plural(releases|length, 'release') }} published by endoflife.date, with each normalized milestone and the raw
+    upstream values behind it. Identifier for this record: <code>{{ product.id }}</code>.
+  </p>
+  <p class="hero-meta">
+    Verified {{ human_datetime(product.provenance.last_checked) }} by <code>{{ product.provenance.verifier }}</code>.
+    {% if product.provenance.upstream_modified %}
+    Upstream modified {{ human_datetime(product.provenance.upstream_modified) }}.
+    {% else %}
+    Upstream publishes no modification timestamp for this product.
+    {% endif %}
+    Last catalog refresh <time datetime="{{ refresh.iso }}">{{ refresh.human }}</time>.
+  </p>
+  <p class="product-links">
+    <a class="button" href="{{ json_url }}">JSON record</a>
+    <a class="button" href="{{ upstream_url }}" rel="noopener">Source on endoflife.date</a>
+    {% for link_name, link in links.items() %}
+    {% if link %}<a class="button" href="{{ link }}" rel="noopener">{{ link_name }}</a>{% endif %}
+    {% endfor %}
+  </p>
+</section>
+
+<section class="panel" aria-labelledby="coverage-title">
+  <h2 class="panel-title" id="coverage-title">Data coverage</h2>
+  <p class="panel-note">
+    Upstream does not publish every milestone for every release. Empty cells in the table below are unknown dates,
+    not implied support.
+  </p>
+  <ul class="bars">
+    {% for row in coverage %}
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">{{ row.label }}</span>
+        <span class="bar-value">{{ row.known }} / {{ row.total }} releases ({{ row.percent }}%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="{{ row.label }}: {{ row.known }} of {{ row.total }} releases have a published date">
+        <div class="bar-fill" style="width: {{ row.percent }}%"></div>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="panel" aria-labelledby="legend-title">
+  <h2 class="panel-title" id="legend-title">How to read these dates</h2>
+  <dl class="legend">
+    {% for milestone in milestone_meta %}
+    <div class="legend-row">
+      <dt>{{ milestone.label }}</dt>
+      <dd>
+        <p>{{ milestone.detail }}</p>
+        {% if milestone.key in ('eossec', 'eol') %}
+        <p>
+          {% if milestone.key == 'eossec' %}
+          Extended support counts as security support: when upstream publishes an extended-support date, it replaces
+          the standard security-support deadline here.
+          {% else %}
+          An announced extended-support period with no published end date leaves end of life blank — the earlier
+          <code>eolFrom</code> value stays visible in the table rather than being promoted into a deadline upstream
+          never set.
+          {% endif %}
+        </p>
+        {% endif %}
+      </dd>
+    </div>
+    {% endfor %}
+    <div class="legend-row">
+      <dt>Blank date</dt>
+      <dd><p>Upstream publishes no value for that milestone. A missing date is an absent announcement, not a claim that support ends or continues.</p></dd>
+    </div>
+  </dl>
+</section>
+
+{% if events %}
+<section class="panel" aria-labelledby="next-title">
+  <h2 class="panel-title" id="next-title">Upcoming published deadlines</h2>
+  <ul class="events">
+    {% for event in events %}
+    <li>
+      <span class="event-release">{{ event.release }}</span>
+      <span class="event-milestone">{{ event.milestone }}</span>
+      <span class="event-date"><time datetime="{{ event.date }}">{{ event.human }}</time>
+        <span class="event-days">in {{ plural(event.days, 'day') }}</span></span>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+<section class="releases" aria-labelledby="releases-title">
+  <div class="catalog-head">
+    <h2 class="panel-title" id="releases-title">Release lifecycle</h2>
+    <p class="catalog-count">{{ plural(releases|length, 'release') }}</p>
+  </div>
+  <p class="panel-note">
+    Newest first. Cells show normalized dates; a secondary line shows the raw upstream field and label when the
+    normalized date differs from, or is absent despite, a published value.
+  </p>
+
+  <div class="table-scroll">
+    <table class="release-table">
+      <caption class="sr-only">Lifecycle dates for each {{ product.name }} release</caption>
+      <thead>
+        <tr>
+          <th scope="col">Release</th>
+          {% for milestone in milestone_meta %}
+          <th scope="col">{{ milestone.label }}</th>
+          {% endfor %}
+          <th scope="col">Upstream status</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for release in releases %}
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">{{ release.name }}</span>
+            {% if release.name != release.id %}<code class="release-raw">{{ release.id }}</code>{% endif %}
+          </th>
+          {% for milestone in milestone_meta %}
+          {% set cell = release.cells[milestone.key] %}
+          <td class="milestone{% if not cell.value %} is-unknown{% endif %}">
+            {% if cell.value %}
+            <time datetime="{{ cell.value }}">{{ cell.human }}</time>
+            {% else %}
+            <span class="unknown">unknown</span>
+            {% endif %}
+            {% if cell.notes %}<span class="cell-note">{{ cell.notes }}</span>{% endif %}
+          </td>
+          {% endfor %}
+          <td class="upstream-status">
+            {% if release.lts %}<span class="tag">LTS</span>{% endif %}
+            {% if release.maintained %}<span class="tag tag-ok">maintained</span>{% endif %}
+            {% if release.eol_flag %}<span class="tag tag-warn">upstream marks end of life</span>{% endif %}
+            {% if not release.lts and not release.maintained and not release.eol_flag %}<span class="muted">no flags</span>{% endif %}
+            {% if release.latest.link %}
+            <a class="release-download" href="{{ release.latest.link }}" rel="noopener">latest release</a>
+            {% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="panel" aria-labelledby="source-title">
+  <h2 class="panel-title" id="source-title">Source and upstream values</h2>
+  <p class="panel-note">
+    This record is a normalization of endoflife.date data, licensed {{ source_license }}. Raw upstream values are
+    retained in full so the mapping below can be checked value by value.
+  </p>
+  <dl class="facts">
+    <div><dt>Upstream record</dt><dd><a href="{{ upstream_url }}" rel="noopener">{{ upstream_url }}</a></dd></div>
+    <div><dt>Source license</dt><dd><a href="{{ source_license_url }}" rel="noopener">{{ source_name }} — {{ source_license }}</a></dd></div>
+    <div><dt>Verifier</dt><dd><code>{{ product.provenance.verifier }}</code></dd></div>
+    <div><dt>Last checked</dt><dd>{{ human_datetime(product.provenance.last_checked) }}</dd></div>
+    <div><dt>Upstream modified</dt><dd>{% if product.provenance.upstream_modified %}{{ human_datetime(product.provenance.upstream_modified) }}{% else %}not published upstream{% endif %}</dd></div>
+    <div><dt>JSON record</dt><dd><a href="{{ json_abs }}">{{ json_abs }}</a></dd></div>
+    <div><dt>Schema</dt><dd><a href="{{ site_url('v1/schema/product.json') }}">v1/schema/product.json</a></dd></div>
+  </dl>
+
+  {% if identifiers %}
+  <h3 class="sub-title">Identifiers</h3>
+  <ul class="chips">
+    {% for identifier in identifiers %}<li><span class="tag">{{ identifier.type }}</span> <code>{{ identifier.id }}</code></li>{% endfor %}
+  </ul>
+  {% endif %}
+
+  {% if labels %}
+  <h3 class="sub-title">Upstream label semantics</h3>
+  <p class="panel-note">
+    endoflife.date labels decide which raw date fields become which normalized milestone. These are this product's
+    label texts and the rule each one triggers.
+  </p>
+  <dl class="label-rules">
+    {% for key, rule in label_rules %}
+    <div>
+      <dt><code>{{ key }}</code>{% if labels.get(key) %} = “{{ labels.get(key) }}”{% else %} = not set{% endif %}</dt>
+      <dd>{{ rule }}</dd>
+    </div>
+    {% endfor %}
+  </dl>
+  {% endif %}
+
+  <details class="raw">
+    <summary>Raw upstream release objects ({{ releases|length }})</summary>
+    <p class="panel-note">Verbatim <code>releases[]</code> entries from the upstream record, unmodified.</p>
+    {% for release in releases %}
+    <details class="raw-release">
+      <summary><code>{{ release.id }}</code></summary>
+      <pre><code>{{ release.raw | tojson_pretty }}</code></pre>
+    </details>
+    {% endfor %}
+  </details>
+</section>
+{% endblock %}

@@ -1,0 +1,123 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "foundationdb",
+  "name": "FoundationDB",
+  "category": "software",
+  "upstream_category": "database",
+  "identifiers": [
+    {
+      "type": "purl",
+      "id": "pkg:github/apple/foundationdb"
+    },
+    {
+      "type": "repology",
+      "id": "foundationdb"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/apple.svg",
+    "html": "https://endoflife.date/foundationdb",
+    "releasePolicy": null
+  },
+  "releases": [
+    {
+      "id": "7.3",
+      "name": "7.3",
+      "milestones": {
+        "ga": "2024-05-20",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.3",
+        "codename": null,
+        "label": "7.3",
+        "releaseDate": "2024-05-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "7.3.77",
+          "date": "2026-04-16",
+          "link": "https://apple.github.io/foundationdb/release-notes/release-notes-730.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.1",
+      "name": "7.1",
+      "milestones": {
+        "ga": "2022-09-19",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.1",
+        "codename": null,
+        "label": "7.1",
+        "releaseDate": "2022-09-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-05-20",
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "7.1.61",
+          "date": "2024-05-15",
+          "link": "https://apple.github.io/foundationdb/release-notes/release-notes-710.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.3",
+      "name": "6.3",
+      "milestones": {
+        "ga": "2020-09-23",
+        "eos": null,
+        "eossec": "2022-11-02",
+        "eol": "2022-11-02"
+      },
+      "upstream": {
+        "name": "6.3",
+        "codename": null,
+        "label": "6.3",
+        "releaseDate": "2020-09-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-09-19",
+        "isEol": true,
+        "eolFrom": "2022-11-02",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.3.25",
+          "date": "2022-11-02",
+          "link": "https://apple.github.io/foundationdb/release-notes/release-notes-630.html"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/foundationdb/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-06T21:18:35+00:00"
+  }
+}

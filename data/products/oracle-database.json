@@ -1,0 +1,327 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "oracle-database",
+  "name": "Oracle Database",
+  "category": "software",
+  "upstream_category": "database",
+  "identifiers": [],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Premier Support",
+    "eoes": "Extended Support"
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/oracle.svg",
+    "html": "https://endoflife.date/oracle-database",
+    "releasePolicy": "https://support.oracle.com/knowledge/Oracle%20Database%20Products/742060_1.html"
+  },
+  "releases": [
+    {
+      "id": "23",
+      "name": "26ai (LTR)",
+      "milestones": {
+        "ga": "2023-09-19",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "23",
+        "codename": null,
+        "label": "26ai (LTR)",
+        "releaseDate": "2023-09-19",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2031-12-31",
+        "isEoes": false,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "21",
+      "name": "21c",
+      "milestones": {
+        "ga": "2021-08-13",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "21",
+        "codename": null,
+        "label": "21c",
+        "releaseDate": "2021-08-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-07-31",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "19",
+      "name": "19c (LTR)",
+      "milestones": {
+        "ga": "2019-04-25",
+        "eos": null,
+        "eossec": null,
+        "eol": "2032-12-31"
+      },
+      "upstream": {
+        "name": "19",
+        "codename": null,
+        "label": "19c (LTR)",
+        "releaseDate": "2019-04-25",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2029-12-31",
+        "isEoes": false,
+        "eoesFrom": "2032-12-31",
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "18",
+      "name": "18c",
+      "milestones": {
+        "ga": "2018-07-23",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "18",
+        "codename": null,
+        "label": "18c",
+        "releaseDate": "2018-07-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-06-30",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "12.2",
+      "name": "12c Release 2",
+      "milestones": {
+        "ga": "2017-03-01",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "12.2",
+        "codename": null,
+        "label": "12c Release 2",
+        "releaseDate": "2017-03-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-03-31",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "12.1",
+      "name": "12c Release 1 (LTR)",
+      "milestones": {
+        "ga": "2013-06-25",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-07-31"
+      },
+      "upstream": {
+        "name": "12.1",
+        "codename": null,
+        "label": "12c Release 1 (LTR)",
+        "releaseDate": "2013-06-25",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-07-31",
+        "isEoes": true,
+        "eoesFrom": "2022-07-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "11.2",
+      "name": "11g Release 2 (LTR)",
+      "milestones": {
+        "ga": "2009-09-01",
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-12-31"
+      },
+      "upstream": {
+        "name": "11.2",
+        "codename": null,
+        "label": "11g Release 2 (LTR)",
+        "releaseDate": "2009-09-01",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2015-01-31",
+        "isEoes": true,
+        "eoesFrom": "2020-12-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "11.1",
+      "name": "11g Release 1 (LTR)",
+      "milestones": {
+        "ga": "2007-08-09",
+        "eos": null,
+        "eossec": null,
+        "eol": "2015-08-31"
+      },
+      "upstream": {
+        "name": "11.1",
+        "codename": null,
+        "label": "11g Release 1 (LTR)",
+        "releaseDate": "2007-08-09",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2012-08-31",
+        "isEoes": true,
+        "eoesFrom": "2015-08-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "10.2",
+      "name": "10g Release 2 (LTR)",
+      "milestones": {
+        "ga": "2005-07-11",
+        "eos": null,
+        "eossec": null,
+        "eol": "2015-07-31"
+      },
+      "upstream": {
+        "name": "10.2",
+        "codename": null,
+        "label": "10g Release 2 (LTR)",
+        "releaseDate": "2005-07-11",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2010-07-31",
+        "isEoes": true,
+        "eoesFrom": "2015-07-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "10.1",
+      "name": "10g Release 1 (LTR)",
+      "milestones": {
+        "ga": "2003-09-08",
+        "eos": null,
+        "eossec": null,
+        "eol": "2012-01-01"
+      },
+      "upstream": {
+        "name": "10.1",
+        "codename": null,
+        "label": "10g Release 1 (LTR)",
+        "releaseDate": "2003-09-08",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2009-01-31",
+        "isEoes": true,
+        "eoesFrom": "2012-01-01",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "9.2",
+      "name": "9i Release 2 (LTR)",
+      "milestones": {
+        "ga": "2002-05-01",
+        "eos": null,
+        "eossec": null,
+        "eol": "2010-07-31"
+      },
+      "upstream": {
+        "name": "9.2",
+        "codename": null,
+        "label": "9i Release 2 (LTR)",
+        "releaseDate": "2002-05-01",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2007-07-31",
+        "isEoes": true,
+        "eoesFrom": "2010-07-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "9.0",
+      "name": "9i Release 1",
+      "milestones": {
+        "ga": "2001-06-01",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.0",
+        "codename": null,
+        "label": "9i Release 1",
+        "releaseDate": "2001-06-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2003-12-31",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/oracle-database/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-05-05T06:42:43+00:00"
+  }
+}

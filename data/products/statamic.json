@@ -1,0 +1,200 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "statamic",
+  "name": "Statamic",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "purl",
+      "id": "pkg:composer/statamic/cms"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/statamic/cms"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:statamic:statamic"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/statamic.svg",
+    "html": "https://endoflife.date/statamic",
+    "releasePolicy": "https://statamic.dev/release-schedule-support-policy/"
+  },
+  "releases": [
+    {
+      "id": "6",
+      "name": "6",
+      "milestones": {
+        "ga": "2026-01-28",
+        "eos": null,
+        "eossec": "2027-12-31",
+        "eol": "2027-12-31"
+      },
+      "upstream": {
+        "name": "6",
+        "codename": null,
+        "label": "6",
+        "releaseDate": "2026-01-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": "2027-03-31",
+        "isEol": false,
+        "eolFrom": "2027-12-31",
+        "isMaintained": true,
+        "latest": {
+          "name": "6.33.0",
+          "date": "2026-09-16",
+          "link": "https://github.com/statamic/cms/blob/v6.33.0/CHANGELOG.md"
+        },
+        "custom": {
+          "supportedLaravelVersions": "12-13",
+          "supportedPhpVersions": "8.3-8.5"
+        }
+      }
+    },
+    {
+      "id": "5",
+      "name": "5",
+      "milestones": {
+        "ga": "2024-05-09",
+        "eos": null,
+        "eossec": "2026-12-31",
+        "eol": "2026-12-31"
+      },
+      "upstream": {
+        "name": "5",
+        "codename": null,
+        "label": "5",
+        "releaseDate": "2024-05-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-03-31",
+        "isEol": false,
+        "eolFrom": "2026-12-31",
+        "isMaintained": true,
+        "latest": {
+          "name": "5.74.4",
+          "date": "2026-08-12",
+          "link": "https://github.com/statamic/cms/blob/v5.74.4/CHANGELOG.md"
+        },
+        "custom": {
+          "supportedLaravelVersions": "10-12",
+          "supportedPhpVersions": "8.2-8.4"
+        }
+      }
+    },
+    {
+      "id": "4",
+      "name": "4",
+      "milestones": {
+        "ga": "2023-05-09",
+        "eos": null,
+        "eossec": "2024-09-30",
+        "eol": "2024-09-30"
+      },
+      "upstream": {
+        "name": "4",
+        "codename": null,
+        "label": "4",
+        "releaseDate": "2023-05-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-05-31",
+        "isEol": true,
+        "eolFrom": "2024-09-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.58.3",
+          "date": "2024-09-11",
+          "link": "https://github.com/statamic/cms/blob/v4.58.3/CHANGELOG.md"
+        },
+        "custom": {
+          "supportedLaravelVersions": "9-10",
+          "supportedPhpVersions": "8.0-8.3"
+        }
+      }
+    },
+    {
+      "id": "3.4",
+      "name": "3.4",
+      "milestones": {
+        "ga": "2023-01-27",
+        "eos": null,
+        "eossec": "2024-07-31",
+        "eol": "2024-07-31"
+      },
+      "upstream": {
+        "name": "3.4",
+        "codename": null,
+        "label": "3.4",
+        "releaseDate": "2023-01-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-01-31",
+        "isEol": true,
+        "eolFrom": "2024-07-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.4.17",
+          "date": "2024-01-25",
+          "link": "https://github.com/statamic/cms/blob/v3.4.17/CHANGELOG.md"
+        },
+        "custom": {
+          "supportedLaravelVersions": "8-9",
+          "supportedPhpVersions": "7.4-8.1"
+        }
+      }
+    },
+    {
+      "id": "3.3",
+      "name": "3.3",
+      "milestones": {
+        "ga": "2022-03-14",
+        "eos": null,
+        "eossec": "2023-09-30",
+        "eol": "2023-09-30"
+      },
+      "upstream": {
+        "name": "3.3",
+        "codename": null,
+        "label": "3.3",
+        "releaseDate": "2022-03-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-03-31",
+        "isEol": true,
+        "eolFrom": "2023-09-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.3.68",
+          "date": "2023-02-02",
+          "link": "https://github.com/statamic/cms/blob/v3.3.68/CHANGELOG.md"
+        },
+        "custom": {
+          "supportedLaravelVersions": "8-9",
+          "supportedPhpVersions": "7.4-8.1"
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/statamic/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-17T00:08:37+00:00"
+  }
+}

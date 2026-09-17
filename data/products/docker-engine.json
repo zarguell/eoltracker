@@ -1,0 +1,750 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "docker-engine",
+  "name": "Docker Engine",
+  "category": "software",
+  "upstream_category": "app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "docker-ce"
+    },
+    {
+      "type": "repology",
+      "id": "docker-containers"
+    },
+    {
+      "type": "repology",
+      "id": "moby"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:docker:engine"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:docker:engine"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/docker.svg",
+    "html": "https://endoflife.date/docker-engine",
+    "releasePolicy": "https://github.com/moby/moby/blob/master/project/BRANCHES-AND-TAGS.md"
+  },
+  "releases": [
+    {
+      "id": "29",
+      "name": "29",
+      "milestones": {
+        "ga": "2025-11-10",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "29",
+        "codename": null,
+        "label": "29",
+        "releaseDate": "2025-11-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "29.8.1",
+          "date": "2026-09-15",
+          "link": "https://docs.docker.com/engine/release-notes/29/#2981"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "28",
+      "name": "28",
+      "milestones": {
+        "ga": "2025-02-20",
+        "eos": null,
+        "eossec": "2026-05-13",
+        "eol": "2026-05-13"
+      },
+      "upstream": {
+        "name": "28",
+        "codename": null,
+        "label": "28",
+        "releaseDate": "2025-02-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-05-13",
+        "isMaintained": false,
+        "latest": {
+          "name": "28.5.2",
+          "date": "2025-11-05",
+          "link": "https://docs.docker.com/engine/release-notes/28/#2852"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "27",
+      "name": "27",
+      "milestones": {
+        "ga": "2024-06-25",
+        "eos": null,
+        "eossec": "2025-05-03",
+        "eol": "2025-05-03"
+      },
+      "upstream": {
+        "name": "27",
+        "codename": null,
+        "label": "27",
+        "releaseDate": "2024-06-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-05-03",
+        "isMaintained": false,
+        "latest": {
+          "name": "27.5.1",
+          "date": "2025-01-22",
+          "link": "https://docs.docker.com/engine/release-notes/27/#2751"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "26.1",
+      "name": "26.1",
+      "milestones": {
+        "ga": "2024-04-22",
+        "eos": null,
+        "eossec": "2025-02-17",
+        "eol": "2025-02-17"
+      },
+      "upstream": {
+        "name": "26.1",
+        "codename": null,
+        "label": "26.1",
+        "releaseDate": "2024-04-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-02-17",
+        "isMaintained": false,
+        "latest": {
+          "name": "26.1.5",
+          "date": "2024-07-23",
+          "link": "https://docs.docker.com/engine/release-notes/26.1/#2615"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "26.0",
+      "name": "26.0",
+      "milestones": {
+        "ga": "2024-03-20",
+        "eos": null,
+        "eossec": "2024-06-08",
+        "eol": "2024-06-08"
+      },
+      "upstream": {
+        "name": "26.0",
+        "codename": null,
+        "label": "26.0",
+        "releaseDate": "2024-03-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-06-08",
+        "isMaintained": false,
+        "latest": {
+          "name": "26.0.2",
+          "date": "2024-04-18",
+          "link": "https://docs.docker.com/engine/release-notes/26.0/#2602"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "25.0",
+      "name": "25.0",
+      "milestones": {
+        "ga": "2024-01-19",
+        "eos": null,
+        "eossec": "2026-12-04",
+        "eol": "2026-12-04"
+      },
+      "upstream": {
+        "name": "25.0",
+        "codename": null,
+        "label": "25.0",
+        "releaseDate": "2024-01-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2026-12-04",
+        "isMaintained": true,
+        "latest": {
+          "name": "25.0.17",
+          "date": "2026-07-14",
+          "link": "https://docs.docker.com/engine/release-notes/25.0/#25017"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "24.0",
+      "name": "24.0",
+      "milestones": {
+        "ga": "2023-05-16",
+        "eos": null,
+        "eossec": "2024-06-08",
+        "eol": "2024-06-08"
+      },
+      "upstream": {
+        "name": "24.0",
+        "codename": null,
+        "label": "24.0",
+        "releaseDate": "2023-05-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-06-08",
+        "isMaintained": false,
+        "latest": {
+          "name": "24.0.9",
+          "date": "2024-02-01",
+          "link": "https://docs.docker.com/engine/release-notes/24.0/#2409"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "23.0",
+      "name": "23.0",
+      "milestones": {
+        "ga": "2023-02-02",
+        "eos": null,
+        "eossec": "2025-05-19",
+        "eol": "2025-05-19"
+      },
+      "upstream": {
+        "name": "23.0",
+        "codename": null,
+        "label": "23.0",
+        "releaseDate": "2023-02-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-05-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "23.0.18",
+          "date": "2025-05-15",
+          "link": "https://docs.docker.com/engine/release-notes/23.0/#23018"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "20.10",
+      "name": "20.10",
+      "milestones": {
+        "ga": "2020-12-09",
+        "eos": null,
+        "eossec": "2023-12-10",
+        "eol": "2023-12-10"
+      },
+      "upstream": {
+        "name": "20.10",
+        "codename": null,
+        "label": "20.10",
+        "releaseDate": "2020-12-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-12-10",
+        "isMaintained": false,
+        "latest": {
+          "name": "20.10.27",
+          "date": "2023-12-01",
+          "link": "https://docs.docker.com/engine/release-notes/20.10/#201027"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "19.03",
+      "name": "19.03",
+      "milestones": {
+        "ga": "2019-07-22",
+        "eos": null,
+        "eossec": "2021-01-08",
+        "eol": "2021-01-08"
+      },
+      "upstream": {
+        "name": "19.03",
+        "codename": null,
+        "label": "19.03",
+        "releaseDate": "2019-07-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-01-08",
+        "isMaintained": false,
+        "latest": {
+          "name": "19.03.15",
+          "date": "2021-02-01",
+          "link": "https://docs.docker.com/engine/release-notes/19.03/#190315"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.09",
+      "name": "18.09",
+      "milestones": {
+        "ga": "2018-11-08",
+        "eos": null,
+        "eossec": "2019-08-22",
+        "eol": "2019-08-22"
+      },
+      "upstream": {
+        "name": "18.09",
+        "codename": null,
+        "label": "18.09",
+        "releaseDate": "2018-11-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-08-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.09.9",
+          "date": "2019-09-04",
+          "link": "https://docs.docker.com/engine/release-notes/18.09/#18099"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.06",
+      "name": "18.06",
+      "milestones": {
+        "ga": "2018-07-18",
+        "eos": null,
+        "eossec": "2018-12-08",
+        "eol": "2018-12-08"
+      },
+      "upstream": {
+        "name": "18.06",
+        "codename": null,
+        "label": "18.06",
+        "releaseDate": "2018-07-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-12-08",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.06.3",
+          "date": "2019-02-20",
+          "link": "https://docs.docker.com/engine/release-notes/18.06/#18063"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.05",
+      "name": "18.05",
+      "milestones": {
+        "ga": "2018-04-25",
+        "eos": null,
+        "eossec": "2018-08-18",
+        "eol": "2018-08-18"
+      },
+      "upstream": {
+        "name": "18.05",
+        "codename": null,
+        "label": "18.05",
+        "releaseDate": "2018-04-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-08-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.05.0",
+          "date": "2018-04-25",
+          "link": "https://docs.docker.com/engine/release-notes/18.05/#18050"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.04",
+      "name": "18.04",
+      "milestones": {
+        "ga": "2018-03-27",
+        "eos": null,
+        "eossec": "2018-06-09",
+        "eol": "2018-06-09"
+      },
+      "upstream": {
+        "name": "18.04",
+        "codename": null,
+        "label": "18.04",
+        "releaseDate": "2018-03-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-06-09",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.04.0",
+          "date": "2018-03-27",
+          "link": "https://docs.docker.com/engine/release-notes/18.04/#18040"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.03",
+      "name": "18.03",
+      "milestones": {
+        "ga": "2018-03-14",
+        "eos": null,
+        "eossec": "2018-05-10",
+        "eol": "2018-05-10"
+      },
+      "upstream": {
+        "name": "18.03",
+        "codename": null,
+        "label": "18.03",
+        "releaseDate": "2018-03-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-05-10",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.03.1",
+          "date": "2018-04-25",
+          "link": "https://docs.docker.com/engine/release-notes/18.03/#18031"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.02",
+      "name": "18.02",
+      "milestones": {
+        "ga": "2018-01-26",
+        "eos": null,
+        "eossec": "2018-04-21",
+        "eol": "2018-04-21"
+      },
+      "upstream": {
+        "name": "18.02",
+        "codename": null,
+        "label": "18.02",
+        "releaseDate": "2018-01-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-04-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.02.0",
+          "date": "2018-01-26",
+          "link": "https://docs.docker.com/engine/release-notes/18.02/#18020"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "17.12",
+      "name": "17.12",
+      "milestones": {
+        "ga": "2017-12-15",
+        "eos": null,
+        "eossec": "2018-02-10",
+        "eol": "2018-02-10"
+      },
+      "upstream": {
+        "name": "17.12",
+        "codename": null,
+        "label": "17.12",
+        "releaseDate": "2017-12-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-02-10",
+        "isMaintained": false,
+        "latest": {
+          "name": "17.12.1",
+          "date": "2018-02-07",
+          "link": "https://docs.docker.com/engine/release-notes/17.12/#17121"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.01",
+      "name": "18.01",
+      "milestones": {
+        "ga": "2017-12-12",
+        "eos": null,
+        "eossec": "2018-03-07",
+        "eol": "2018-03-07"
+      },
+      "upstream": {
+        "name": "18.01",
+        "codename": null,
+        "label": "18.01",
+        "releaseDate": "2017-12-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-03-07",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.01.0",
+          "date": "2017-12-12",
+          "link": "https://docs.docker.com/engine/release-notes/18.01/#18010"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "17.11",
+      "name": "17.11",
+      "milestones": {
+        "ga": "2017-11-17",
+        "eos": null,
+        "eossec": "2018-01-27",
+        "eol": "2018-01-27"
+      },
+      "upstream": {
+        "name": "17.11",
+        "codename": null,
+        "label": "17.11",
+        "releaseDate": "2017-11-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-01-27",
+        "isMaintained": false,
+        "latest": {
+          "name": "17.11.0",
+          "date": "2017-11-17",
+          "link": "https://docs.docker.com/engine/release-notes/17.11/#17110"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "17.10",
+      "name": "17.10",
+      "milestones": {
+        "ga": "2017-10-13",
+        "eos": null,
+        "eossec": "2017-12-20",
+        "eol": "2017-12-20"
+      },
+      "upstream": {
+        "name": "17.10",
+        "codename": null,
+        "label": "17.10",
+        "releaseDate": "2017-10-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-12-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "17.10.0",
+          "date": "2017-10-13",
+          "link": "https://docs.docker.com/engine/release-notes/17.10/#17100"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "17.09",
+      "name": "17.09",
+      "milestones": {
+        "ga": "2017-09-22",
+        "eos": null,
+        "eossec": "2017-11-17",
+        "eol": "2017-11-17"
+      },
+      "upstream": {
+        "name": "17.09",
+        "codename": null,
+        "label": "17.09",
+        "releaseDate": "2017-09-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-11-17",
+        "isMaintained": false,
+        "latest": {
+          "name": "17.09.1",
+          "date": "2017-12-07",
+          "link": "https://docs.docker.com/engine/release-notes/17.09/#17091"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "17.07",
+      "name": "17.07",
+      "milestones": {
+        "ga": "2017-08-28",
+        "eos": null,
+        "eossec": "2017-10-26",
+        "eol": "2017-10-26"
+      },
+      "upstream": {
+        "name": "17.07",
+        "codename": null,
+        "label": "17.07",
+        "releaseDate": "2017-08-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-10-26",
+        "isMaintained": false,
+        "latest": {
+          "name": "17.07.0",
+          "date": "2017-08-28",
+          "link": "https://docs.docker.com/engine/release-notes/17.07/#17070"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "17.06",
+      "name": "17.06",
+      "milestones": {
+        "ga": "2017-06-20",
+        "eos": null,
+        "eossec": "2017-09-29",
+        "eol": "2017-09-29"
+      },
+      "upstream": {
+        "name": "17.06",
+        "codename": null,
+        "label": "17.06",
+        "releaseDate": "2017-06-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-09-29",
+        "isMaintained": false,
+        "latest": {
+          "name": "17.06.2",
+          "date": "2017-09-05",
+          "link": "https://docs.docker.com/engine/release-notes/17.06/#17062"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "17.05",
+      "name": "17.05",
+      "milestones": {
+        "ga": "2017-05-04",
+        "eos": null,
+        "eossec": "2017-07-28",
+        "eol": "2017-07-28"
+      },
+      "upstream": {
+        "name": "17.05",
+        "codename": null,
+        "label": "17.05",
+        "releaseDate": "2017-05-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-07-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "17.05.0",
+          "date": "2017-05-04",
+          "link": "https://docs.docker.com/engine/release-notes/17.05/#17050"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "17.04",
+      "name": "17.04",
+      "milestones": {
+        "ga": "2017-04-03",
+        "eos": null,
+        "eossec": "2017-06-04",
+        "eol": "2017-06-04"
+      },
+      "upstream": {
+        "name": "17.04",
+        "codename": null,
+        "label": "17.04",
+        "releaseDate": "2017-04-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-06-04",
+        "isMaintained": false,
+        "latest": {
+          "name": "17.04.0",
+          "date": "2017-04-03",
+          "link": "https://docs.docker.com/engine/release-notes/17.04/#17040"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "17.03",
+      "name": "17.03",
+      "milestones": {
+        "ga": "2017-02-23",
+        "eos": null,
+        "eossec": "2017-05-05",
+        "eol": "2017-05-05"
+      },
+      "upstream": {
+        "name": "17.03",
+        "codename": null,
+        "label": "17.03",
+        "releaseDate": "2017-02-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-05-05",
+        "isMaintained": false,
+        "latest": {
+          "name": "17.03.2",
+          "date": "2017-06-27",
+          "link": "https://docs.docker.com/engine/release-notes/17.03/#17032"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/docker-engine/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-16T00:07:55+00:00"
+  }
+}

@@ -1,0 +1,151 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <p class="eyebrow">API &amp; data</p>
+  <h1 class="page-title">Catalog endpoints and mapping rules</h1>
+  <p class="lead">
+    Everything on this site is generated from one committed, validated catalog. The JSON below is the same data the
+    pages render — no private fields, no server, no API keys.
+  </p>
+</section>
+
+<section class="panel" aria-labelledby="endpoints-title">
+  <h2 class="panel-title" id="endpoints-title">Endpoints</h2>
+  <ul class="endpoints">
+    <li>
+      <a href="{{ feed_url }}"><code>{{ feed_url|replace(base_path, '') }}</code></a>
+      <span>
+        Full normalized catalog. Top-level fields: <code>schema_version</code> (<code>{{ schema_version }}</code>),
+        <code>generated_at</code>, <code>source_url</code>, <code>product_count</code>, <code>release_count</code>,
+        <code>excluded_hardware</code>, and <code>products</code> — every product record, complete.
+      </span>
+    </li>
+    <li>
+      <a href="{{ products_url }}"><code>{{ products_url|replace(base_path, '') }}</code></a>
+      <span>
+        Index of summaries: counts, per-milestone coverage, the newest release, the next published deadline, and the
+        absolute URL of each product endpoint.
+      </span>
+    </li>
+    <li>
+      <a href="{{ url_for('v1/products/' ~ sample_product ~ '.json') }}"><code>v1/products/{{ sample_product }}.json</code></a>
+      <span>
+        One product record, byte-identical to the file committed under <code>data/products/</code>. Replace the id in
+        the path with any <code>id</code> from the index.
+      </span>
+    </li>
+    <li>
+      <span><code>v1/schema/</code> — JSON Schema files published alongside the data:</span>
+      <span class="endpoint-files">
+        {% for file in schema_files %}<a href="{{ url_for(file) }}"><code>{{ file|replace('v1/schema/', '') }}</code></a>{% endfor %}
+      </span>
+    </li>
+    {% if openeox_url %}
+    <li>
+      <a href="{{ openeox_url }}"><code>v1/openeox/index.json</code></a>
+      <span>
+        Per-release OpenEoX Core v1.0 CSD01 export derived from the same catalog. Each published record validates
+        against the pinned official OASIS schema (Draft 2020-12, format-assertion), and the index lists every
+        release excluded with its reason. Not an OASIS Standard, and no endorsement is implied.
+      </span>
+    </li>
+    {% endif %}
+  </ul>
+</section>
+
+<section class="panel" aria-labelledby="examples-title">
+  <h2 class="panel-title" id="examples-title">Examples</h2>
+  <p class="panel-note">No authentication, no parameters. All examples are read-only GET requests.</p>
+
+  <h3 class="sub-title">List products with the soonest published deadline</h3>
+<pre><code>curl -s {{ products_abs }} \
+  | jq '.products | sort_by(.next.date // "9999") | .[:5] | .[] | {id, name, next}'</code></pre>
+
+  <h3 class="sub-title">Fetch one product record</h3>
+<pre><code>curl -s {{ site_url('v1/products/' ~ sample_product ~ '.json') }} \
+  | jq '{id, name, releases: [.releases[] | {id, ga: .milestones.ga, eol: .milestones.eol}]}'</code></pre>
+
+  <h3 class="sub-title">Filter the full feed to records with a published end of life</h3>
+<pre><code>curl -s {{ feed_abs }} \
+  | jq '[.products[] | select(any(.releases[]; .milestones.eol != null)) | .id]'</code></pre>
+
+  <h3 class="sub-title">Check the raw upstream value behind a normalized date</h3>
+<pre><code>curl -s {{ site_url('v1/products/' ~ sample_product ~ '.json') }} \
+  | jq '[.releases[] | {id, normalized: .milestones.eossec, raw: {eolFrom: .upstream.eolFrom, label: null}}][:3]'</code></pre>
+</section>
+
+<section class="panel" aria-labelledby="record-title">
+  <h2 class="panel-title" id="record-title">Record shape</h2>
+  <dl class="facts">
+    <div><dt><code>id</code></dt><dd>Product slug. Also the filename under <code>data/products/</code> and the path segment of its endpoint.</dd></div>
+    <div><dt><code>name</code></dt><dd>Display name from upstream <code>label</code>.</dd></div>
+    <div><dt><code>category</code></dt><dd>Always <code>software</code> in this catalog; hardware products are excluded and listed in the manifest.</dd></div>
+    <div><dt><code>upstream_category</code></dt><dd>Upstream endoflife.date category (<code>app</code>, <code>database</code>, <code>framework</code>, <code>lang</code>, <code>os</code>, <code>server-app</code>, <code>service</code>, <code>standard</code>), kept unmodified.</dd></div>
+    <div><dt><code>identifiers</code></dt><dd>Upstream identifiers such as CPE values, verbatim.</dd></div>
+    <div><dt><code>labels</code></dt><dd>The product's upstream label object, used to interpret the raw date fields.</dd></div>
+    <div><dt><code>links</code></dt><dd>Upstream link object (icon, release policy, and so on), verbatim.</dd></div>
+    <div><dt><code>releases[].id</code></dt><dd>The upstream release <code>name</code>, used as the release key.</dd></div>
+    <div><dt><code>releases[].name</code></dt><dd>Display label for the release.</dd></div>
+    <div><dt><code>releases[].milestones</code></dt><dd>The four normalized dates: <code>ga</code>, <code>eos</code>, <code>eossec</code>, <code>eol</code>. Each is an ISO date or <code>null</code>; <code>null</code> means upstream publishes no date, never a guessed one.</dd></div>
+    <div><dt><code>releases[].upstream</code></dt><dd>The entire original upstream release object, so any normalized value can be audited against its source.</dd></div>
+    <div><dt><code>provenance</code></dt><dd><code>source_url</code>, <code>verifier</code> (pipeline revision), <code>last_checked</code> (UTC, per record), <code>upstream_modified</code> (or <code>null</code> when upstream publishes none).</dd></div>
+  </dl>
+</section>
+
+<section class="panel" aria-labelledby="mapping-title">
+  <h2 class="panel-title" id="mapping-title">Upstream mapping</h2>
+  <p class="panel-note">
+    The normalization is deliberately conservative. A label that does not qualify a field never turns that field into
+    a deadline, and every raw value stays in the record whether or not it was mapped.
+  </p>
+  <div class="table-scroll">
+    <table class="release-table mapping-table">
+      <thead>
+        <tr><th scope="col">Milestone</th><th scope="col">Upstream input</th><th scope="col">Rule</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">General availability</th>
+          <td><code>releaseDate</code></td>
+          <td>Used as is whenever present. A boolean upstream status is never treated as a date.</td>
+        </tr>
+        <tr>
+          <th scope="row">End of sale</th>
+          <td><code>eoasFrom</code>, <code>discontinuedFrom</code></td>
+          <td>Only when the matching label (<code>eoas</code>, <code>discontinued</code>) names an end of sale. <code>discontinued</code> alone implies no end-of-sale date.</td>
+        </tr>
+        <tr>
+          <th scope="row">End of security support</th>
+          <td><code>eolFrom</code>, <code>eoesFrom</code></td>
+          <td><code>eolFrom</code> when its label names security support. When the <code>eoes</code> label names security support, its date supersedes <code>eolFrom</code> even if the date is unknown.</td>
+        </tr>
+        <tr>
+          <th scope="row">End of life</th>
+          <td><code>eoesFrom</code>, else <code>eolFrom</code></td>
+          <td>A published extended-support date wins. Otherwise <code>eolFrom</code> is used only when no extended-support label is set and the <code>eol</code> label describes a full support end. An unknown extension leaves this <code>null</code>.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="panel-note">
+    Consequence for readers: a <code>null</code> end of life can mean either that no support end was published, or that
+    an announced extension has no published end date. Both cases keep the raw <code>eolFrom</code> value visible on the
+    product page, so the earlier published deadline is never hidden.
+  </p>
+</section>
+
+<section class="panel" aria-labelledby="attribution-title">
+  <h2 class="panel-title" id="attribution-title">Attribution and accuracy</h2>
+  <p class="panel-note">
+    Source data comes from <a href="{{ source_site }}" rel="noopener">endoflife.date</a> and is used under its
+    {{ source_license }} license (<a href="{{ source_license_url }}" rel="noopener">license text</a>). Product names,
+    labels and dates are theirs; the normalization, coverage math and presentation are this project's.
+    This site does not claim affiliation with endoflife.date or with any vendor whose product appears here.
+  </p>
+  <p class="panel-note">
+    The catalog is generated offline from a committed snapshot, so it can lag upstream between refreshes. Each record
+    carries the timestamp of the last check and the upstream modification time when one exists. Verify anything
+    decision-critical against the linked upstream record or the vendor's own lifecycle policy.
+  </p>
+</section>
+{% endblock %}

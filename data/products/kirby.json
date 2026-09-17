@@ -1,0 +1,645 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "kirby",
+  "name": "Kirby",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "cpe",
+      "id": "cpe:/a:getkirby:kirby"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:getkirby:kirby"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/kirby.svg",
+    "html": "https://endoflife.date/kirby",
+    "releasePolicy": null
+  },
+  "releases": [
+    {
+      "id": "5",
+      "name": "5",
+      "milestones": {
+        "ga": "2025-06-24",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5",
+        "codename": "",
+        "label": "5",
+        "releaseDate": "2025-06-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "5.6.0",
+          "date": "2026-09-16",
+          "link": "https://github.com/getkirby/kirby/releases/tag/5.6.0"
+        },
+        "custom": {
+          "supportedPhpVersions": "8.2 - 8.4"
+        }
+      }
+    },
+    {
+      "id": "3.10",
+      "name": "3.10",
+      "milestones": {
+        "ga": "2023-12-19",
+        "eos": null,
+        "eossec": "2025-11-27",
+        "eol": "2025-11-27"
+      },
+      "upstream": {
+        "name": "3.10",
+        "codename": "",
+        "label": "3.10",
+        "releaseDate": "2023-12-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-11-27",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.10.1.2",
+          "date": "2025-05-05",
+          "link": "https://github.com/getkirby/kirby/releases/tag/3.10.1.2"
+        },
+        "custom": {
+          "supportedPhpVersions": "8.1 - 8.3"
+        }
+      }
+    },
+    {
+      "id": "4",
+      "name": "4 (A new era)",
+      "milestones": {
+        "ga": "2023-11-28",
+        "eos": null,
+        "eossec": "2026-11-28",
+        "eol": "2026-11-28"
+      },
+      "upstream": {
+        "name": "4",
+        "codename": "A new era",
+        "label": "4 (A new era)",
+        "releaseDate": "2023-11-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2026-11-28",
+        "isMaintained": true,
+        "latest": {
+          "name": "4.9.6",
+          "date": "2026-09-16",
+          "link": "https://github.com/getkirby/kirby/releases/tag/4.9.6"
+        },
+        "custom": {
+          "supportedPhpVersions": "8.1 - 8.4"
+        }
+      }
+    },
+    {
+      "id": "3.9",
+      "name": "3.9 (Brookesia)",
+      "milestones": {
+        "ga": "2023-01-17",
+        "eos": null,
+        "eossec": "2025-11-27",
+        "eol": "2025-11-27"
+      },
+      "upstream": {
+        "name": "3.9",
+        "codename": "Brookesia",
+        "label": "3.9 (Brookesia)",
+        "releaseDate": "2023-01-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-11-27",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.9.8.3",
+          "date": "2025-05-05",
+          "link": "https://github.com/getkirby/kirby/releases/tag/3.9.8.3"
+        },
+        "custom": {
+          "supportedPhpVersions": "8.0 - 8.2"
+        }
+      }
+    },
+    {
+      "id": "3.8",
+      "name": "3.8 (Rhampholeon)",
+      "milestones": {
+        "ga": "2022-10-06",
+        "eos": null,
+        "eossec": "2025-01-16",
+        "eol": "2025-01-16"
+      },
+      "upstream": {
+        "name": "3.8",
+        "codename": "Rhampholeon",
+        "label": "3.8 (Rhampholeon)",
+        "releaseDate": "2022-10-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-01-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.8.4.4",
+          "date": "2024-08-24",
+          "link": "https://github.com/getkirby/kirby/releases/tag/3.8.4.4"
+        },
+        "custom": {
+          "supportedPhpVersions": "8.0 - 8.1"
+        }
+      }
+    },
+    {
+      "id": "3.7",
+      "name": "3.7 (Kinyongia)",
+      "milestones": {
+        "ga": "2022-06-27",
+        "eos": null,
+        "eossec": "2024-10-05",
+        "eol": "2024-10-05"
+      },
+      "upstream": {
+        "name": "3.7",
+        "codename": "Kinyongia",
+        "label": "3.7 (Kinyongia)",
+        "releaseDate": "2022-06-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-10-05",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.7.5.5",
+          "date": "2024-08-24",
+          "link": "https://github.com/getkirby/kirby/releases/tag/3.7.5.5"
+        },
+        "custom": {
+          "supportedPhpVersions": "7.4 - 8.1"
+        }
+      }
+    },
+    {
+      "id": "3.6",
+      "name": "3.6 (Jungle Calumma)",
+      "milestones": {
+        "ga": "2021-11-16",
+        "eos": null,
+        "eossec": "2024-06-26",
+        "eol": "2024-06-26"
+      },
+      "upstream": {
+        "name": "3.6",
+        "codename": "Jungle Calumma",
+        "label": "3.6 (Jungle Calumma)",
+        "releaseDate": "2021-11-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-06-26",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.6.6.6",
+          "date": "2024-08-24",
+          "link": "https://github.com/getkirby/kirby/releases/tag/3.6.6.6"
+        },
+        "custom": {
+          "supportedPhpVersions": "7.4 - 8.1"
+        }
+      }
+    },
+    {
+      "id": "3.5",
+      "name": "3.5 (Calumma)",
+      "milestones": {
+        "ga": "2020-12-15",
+        "eos": null,
+        "eossec": "2023-11-15",
+        "eol": "2023-11-15"
+      },
+      "upstream": {
+        "name": "3.5",
+        "codename": "Calumma",
+        "label": "3.5 (Calumma)",
+        "releaseDate": "2020-12-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-11-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.5.8.4",
+          "date": "2023-08-10",
+          "link": "https://github.com/getkirby/kirby/releases/tag/3.5.8.4"
+        },
+        "custom": {
+          "supportedPhpVersions": "7.3 - 8.0"
+        }
+      }
+    },
+    {
+      "id": "3.4",
+      "name": "3.4 (Furcifer)",
+      "milestones": {
+        "ga": "2020-07-07",
+        "eos": null,
+        "eossec": "2021-11-16",
+        "eol": "2021-11-16"
+      },
+      "upstream": {
+        "name": "3.4",
+        "codename": "Furcifer",
+        "label": "3.4 (Furcifer)",
+        "releaseDate": "2020-07-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-11-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.4.5",
+          "date": "2020-12-01",
+          "link": "https://github.com/getkirby/kirby/releases/tag/3.4.5"
+        },
+        "custom": {
+          "supportedPhpVersions": "7.2 - 7.4"
+        }
+      }
+    },
+    {
+      "id": "3.3",
+      "name": "3.3 (Trioceros)",
+      "milestones": {
+        "ga": "2019-11-05",
+        "eos": null,
+        "eossec": "2021-11-16",
+        "eol": "2021-11-16"
+      },
+      "upstream": {
+        "name": "3.3",
+        "codename": "Trioceros",
+        "label": "3.3 (Trioceros)",
+        "releaseDate": "2019-11-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-11-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.3.6",
+          "date": "2020-04-27",
+          "link": "https://github.com/getkirby/kirby/releases/tag/3.3.6"
+        },
+        "custom": {
+          "supportedPhpVersions": "7.1 - 7.4"
+        }
+      }
+    },
+    {
+      "id": "3.2",
+      "name": "3.2 (Archaius)",
+      "milestones": {
+        "ga": "2019-06-25",
+        "eos": null,
+        "eossec": "2021-11-16",
+        "eol": "2021-11-16"
+      },
+      "upstream": {
+        "name": "3.2",
+        "codename": "Archaius",
+        "label": "3.2 (Archaius)",
+        "releaseDate": "2019-06-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-11-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.2.5",
+          "date": "2019-09-24",
+          "link": "https://github.com/getkirby/kirby/releases/tag/3.2.5"
+        },
+        "custom": {
+          "supportedPhpVersions": "7.1 - 7.3"
+        }
+      }
+    },
+    {
+      "id": "3.1",
+      "name": "3.1 (Chamaeleo)",
+      "milestones": {
+        "ga": "2019-03-19",
+        "eos": null,
+        "eossec": "2021-11-16",
+        "eol": "2021-11-16"
+      },
+      "upstream": {
+        "name": "3.1",
+        "codename": "Chamaeleo",
+        "label": "3.1 (Chamaeleo)",
+        "releaseDate": "2019-03-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-11-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.1.4",
+          "date": "2019-05-21",
+          "link": "https://github.com/getkirby/kirby/releases/tag/3.1.4"
+        },
+        "custom": {
+          "supportedPhpVersions": "7.1 - 7.3"
+        }
+      }
+    },
+    {
+      "id": "3.0",
+      "name": "3.0",
+      "milestones": {
+        "ga": "2019-01-15",
+        "eos": null,
+        "eossec": "2021-11-16",
+        "eol": "2021-11-16"
+      },
+      "upstream": {
+        "name": "3.0",
+        "codename": null,
+        "label": "3.0",
+        "releaseDate": "2019-01-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-11-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.0.3",
+          "date": "2019-03-05",
+          "link": "https://github.com/getkirby/kirby/releases/tag/3.0.3"
+        },
+        "custom": {
+          "supportedPhpVersions": "7.1 - 7.3"
+        }
+      }
+    },
+    {
+      "id": "2.5",
+      "name": "2.5",
+      "milestones": {
+        "ga": "2017-06-20",
+        "eos": null,
+        "eossec": "2021-01-01",
+        "eol": "2021-01-01"
+      },
+      "upstream": {
+        "name": "2.5",
+        "codename": null,
+        "label": "2.5",
+        "releaseDate": "2017-06-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-01-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.5.14",
+          "date": "2020-12-01",
+          "link": null
+        },
+        "custom": {
+          "supportedPhpVersions": null
+        }
+      }
+    },
+    {
+      "id": "2.4",
+      "name": "2.4",
+      "milestones": {
+        "ga": "2016-11-03",
+        "eos": null,
+        "eossec": "2021-01-01",
+        "eol": "2021-01-01"
+      },
+      "upstream": {
+        "name": "2.4",
+        "codename": null,
+        "label": "2.4",
+        "releaseDate": "2016-11-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-01-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.4.2",
+          "date": "2017-10-13",
+          "link": null
+        },
+        "custom": {
+          "supportedPhpVersions": null
+        }
+      }
+    },
+    {
+      "id": "2.3",
+      "name": "2.3",
+      "milestones": {
+        "ga": "2016-05-17",
+        "eos": null,
+        "eossec": "2021-01-01",
+        "eol": "2021-01-01"
+      },
+      "upstream": {
+        "name": "2.3",
+        "codename": null,
+        "label": "2.3",
+        "releaseDate": "2016-05-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-01-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.3.3",
+          "date": "2017-10-31",
+          "link": null
+        },
+        "custom": {
+          "supportedPhpVersions": null
+        }
+      }
+    },
+    {
+      "id": "2.2",
+      "name": "2.2",
+      "milestones": {
+        "ga": "2015-11-17",
+        "eos": null,
+        "eossec": "2021-01-01",
+        "eol": "2021-01-01"
+      },
+      "upstream": {
+        "name": "2.2",
+        "codename": null,
+        "label": "2.2",
+        "releaseDate": "2015-11-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-01-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.2.3",
+          "date": "2015-12-09",
+          "link": null
+        },
+        "custom": {
+          "supportedPhpVersions": null
+        }
+      }
+    },
+    {
+      "id": "2.1",
+      "name": "2.1",
+      "milestones": {
+        "ga": "2015-05-19",
+        "eos": null,
+        "eossec": "2021-01-01",
+        "eol": "2021-01-01"
+      },
+      "upstream": {
+        "name": "2.1",
+        "codename": null,
+        "label": "2.1",
+        "releaseDate": "2015-05-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-01-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.1.1",
+          "date": "2015-08-11",
+          "link": null
+        },
+        "custom": {
+          "supportedPhpVersions": null
+        }
+      }
+    },
+    {
+      "id": "2.0",
+      "name": "2.0",
+      "milestones": {
+        "ga": "2014-10-07",
+        "eos": null,
+        "eossec": "2021-01-01",
+        "eol": "2021-01-01"
+      },
+      "upstream": {
+        "name": "2.0",
+        "codename": null,
+        "label": "2.0",
+        "releaseDate": "2014-10-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-01-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.0.6",
+          "date": "2015-01-15",
+          "link": null
+        },
+        "custom": {
+          "supportedPhpVersions": null
+        }
+      }
+    },
+    {
+      "id": "1.1",
+      "name": "1.1",
+      "milestones": {
+        "ga": "2012-06-19",
+        "eos": null,
+        "eossec": "2016-02-01",
+        "eol": "2016-02-01"
+      },
+      "upstream": {
+        "name": "1.1",
+        "codename": null,
+        "label": "1.1",
+        "releaseDate": "2012-06-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2016-02-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.1.2",
+          "date": "2013-02-04",
+          "link": null
+        },
+        "custom": {
+          "supportedPhpVersions": null
+        }
+      }
+    },
+    {
+      "id": "1.0",
+      "name": "1.0",
+      "milestones": {
+        "ga": "2012-01-09",
+        "eos": null,
+        "eossec": "2016-02-01",
+        "eol": "2016-02-01"
+      },
+      "upstream": {
+        "name": "1.0",
+        "codename": null,
+        "label": "1.0",
+        "releaseDate": "2012-01-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2016-02-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.0.9",
+          "date": "2012-04-20",
+          "link": null
+        },
+        "custom": {
+          "supportedPhpVersions": null
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/kirby/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-17T00:08:37+00:00"
+  }
+}

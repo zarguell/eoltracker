@@ -1,0 +1,117 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "adonisjs",
+  "name": "AdonisJS",
+  "category": "software",
+  "upstream_category": "framework",
+  "identifiers": [
+    {
+      "type": "purl",
+      "id": "pkg:github/adonisjs/core"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:npm/%40adonisjs/core"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/adonisjs.svg",
+    "html": "https://endoflife.date/adonisjs",
+    "releasePolicy": null
+  },
+  "releases": [
+    {
+      "id": "7",
+      "name": "7",
+      "milestones": {
+        "ga": "2026-02-25",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "7",
+        "codename": null,
+        "label": "7",
+        "releaseDate": "2026-02-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "7.5.0",
+          "date": "2026-08-21",
+          "link": "https://github.com/adonisjs/core/releases/tag/v7.5.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6",
+      "name": "6",
+      "milestones": {
+        "ga": "2023-02-20",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6",
+        "codename": null,
+        "label": "6",
+        "releaseDate": "2023-02-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "6.20.0",
+          "date": "2026-02-05",
+          "link": "https://github.com/adonisjs/core/releases/tag/v6.20.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5",
+      "name": "5",
+      "milestones": {
+        "ga": "2020-10-11",
+        "eos": null,
+        "eossec": "2023-02-20",
+        "eol": "2023-02-20"
+      },
+      "upstream": {
+        "name": "5",
+        "codename": null,
+        "label": "5",
+        "releaseDate": "2020-10-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-02-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.9.0",
+          "date": "2022-11-22",
+          "link": "https://github.com/adonisjs/core/releases/tag/v5.9.0"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/adonisjs/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-08-22T00:06:54+00:00"
+  }
+}

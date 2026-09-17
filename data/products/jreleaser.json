@@ -1,0 +1,85 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "jreleaser",
+  "name": "JReleaser",
+  "category": "software",
+  "upstream_category": "app",
+  "identifiers": [],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/jreleaser",
+    "releasePolicy": "https://jreleaser.org/guide/latest/release-history.html"
+  },
+  "releases": [
+    {
+      "id": "1",
+      "name": "1",
+      "milestones": {
+        "ga": "2022-04-10",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1",
+        "codename": null,
+        "label": "1",
+        "releaseDate": "2022-04-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "1.26.0",
+          "date": "2026-08-31",
+          "link": "https://github.com/jreleaser/jreleaser/releases/tag/v1.26.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0",
+      "name": "0",
+      "milestones": {
+        "ga": "2021-04-10",
+        "eos": null,
+        "eossec": "2022-04-10",
+        "eol": "2022-04-10"
+      },
+      "upstream": {
+        "name": "0",
+        "codename": null,
+        "label": "0",
+        "releaseDate": "2021-04-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-04-10",
+        "isEol": true,
+        "eolFrom": "2022-04-10",
+        "isMaintained": false,
+        "latest": {
+          "name": "0.10.0",
+          "date": "2021-12-28",
+          "link": "https://github.com/jreleaser/jreleaser/releases/tag/v0.10.0"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/jreleaser/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-01T00:11:52+00:00"
+  }
+}

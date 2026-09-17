@@ -1,0 +1,195 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "jekyll",
+  "name": "Jekyll",
+  "category": "software",
+  "upstream_category": "app",
+  "identifiers": [
+    {
+      "type": "cpe",
+      "id": "cpe:/a:jekyllrb:jekyll"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:jekyllrb:jekyll"
+    },
+    {
+      "type": "repology",
+      "id": "ruby:jekyll"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Development",
+    "discontinued": null,
+    "eol": "Active Maintenance",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/jekyll.svg",
+    "html": "https://endoflife.date/jekyll",
+    "releasePolicy": "https://jekyllrb.com/docs/security/"
+  },
+  "releases": [
+    {
+      "id": "4",
+      "name": "4",
+      "milestones": {
+        "ga": "2019-08-20",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4",
+        "codename": null,
+        "label": "4",
+        "releaseDate": "2019-08-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "4.4.1",
+          "date": "2025-01-29",
+          "link": "https://github.com/jekyll/jekyll/releases/tag/v4.4.1"
+        },
+        "custom": {
+          "minRubyVersion": "2.5+"
+        }
+      }
+    },
+    {
+      "id": "3",
+      "name": "3",
+      "milestones": {
+        "ga": "2015-10-26",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3",
+        "codename": null,
+        "label": "3",
+        "releaseDate": "2015-10-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "3.10.0",
+          "date": "2024-06-24",
+          "link": "https://github.com/jekyll/jekyll/releases/tag/v3.10.0"
+        },
+        "custom": {
+          "minRubyVersion": "2.0+"
+        }
+      }
+    },
+    {
+      "id": "2",
+      "name": "2",
+      "milestones": {
+        "ga": "2014-05-06",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2",
+        "codename": null,
+        "label": "2",
+        "releaseDate": "2014-05-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": true,
+        "eolFrom": "2015-10-27",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.5.3",
+          "date": "2014-12-22",
+          "link": "https://github.com/jekyll/jekyll/releases/tag/v2.5.3"
+        },
+        "custom": {
+          "minRubyVersion": "1.9.3+"
+        }
+      }
+    },
+    {
+      "id": "1",
+      "name": "1",
+      "milestones": {
+        "ga": "2013-05-06",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1",
+        "codename": null,
+        "label": "1",
+        "releaseDate": "2013-05-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": true,
+        "eolFrom": "2014-05-07",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.5.1",
+          "date": "2014-03-28",
+          "link": "https://github.com/jekyll/jekyll/releases/tag/v1.5.1"
+        },
+        "custom": {
+          "minRubyVersion": "1.8+"
+        }
+      }
+    },
+    {
+      "id": "0",
+      "name": "0",
+      "milestones": {
+        "ga": "2008-10-19",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0",
+        "codename": null,
+        "label": "0",
+        "releaseDate": "2008-10-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": true,
+        "eolFrom": "2014-05-07",
+        "isMaintained": false,
+        "latest": {
+          "name": "0.9.0",
+          "date": "2010-12-15",
+          "link": "https://github.com/jekyll/jekyll/releases/tag/v0.9.0"
+        },
+        "custom": {
+          "minRubyVersion": "1.8+"
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/jekyll/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-08-07T21:21:31+00:00"
+  }
+}

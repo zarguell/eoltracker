@@ -1,0 +1,1086 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "ffmpeg",
+  "name": "FFmpeg",
+  "category": "software",
+  "upstream_category": "framework",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "ffmpeg"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:brew/ffmpeg"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:deb/debian/ffmpeg"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:deb/ubuntu/ffmpeg"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/ffmpeg/ffmpeg"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:rpm/fedora/ffmpeg"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:ffmpeg:ffmpeg"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:ffmpeg:ffmpeg"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Supported",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/ffmpeg.svg",
+    "html": "https://endoflife.date/ffmpeg",
+    "releasePolicy": "https://ffmpeg.org/"
+  },
+  "releases": [
+    {
+      "id": "9.0",
+      "name": "9.0 'Lei'",
+      "milestones": {
+        "ga": "2026-08-04",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.0",
+        "codename": "Lei",
+        "label": "9.0 'Lei'",
+        "releaseDate": "2026-08-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "9.0.1",
+          "date": "2026-08-12",
+          "link": "https://ffmpeg.org/download.html#release_9.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.1",
+      "name": "8.1 'Hoare'",
+      "milestones": {
+        "ga": "2026-03-16",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "8.1",
+        "codename": "Hoare",
+        "label": "8.1 'Hoare'",
+        "releaseDate": "2026-03-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "8.1.2",
+          "date": "2026-06-17",
+          "link": "https://ffmpeg.org/download.html#release_8.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.0",
+      "name": "8.0 'Huffman'",
+      "milestones": {
+        "ga": "2025-08-22",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "8.0",
+        "codename": "Huffman",
+        "label": "8.0 'Huffman'",
+        "releaseDate": "2025-08-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "8.0.3",
+          "date": "2026-06-18",
+          "link": "https://ffmpeg.org/download.html#release_8.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.1",
+      "name": "7.1 'Péter' (LTS)",
+      "milestones": {
+        "ga": "2024-09-30",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.1",
+        "codename": "Péter",
+        "label": "7.1 'Péter' (LTS)",
+        "releaseDate": "2024-09-30",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "7.1.5",
+          "date": "2026-06-20",
+          "link": "https://ffmpeg.org/download.html#release_7.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.0",
+      "name": "7.0 'Dijkstra'",
+      "milestones": {
+        "ga": "2024-04-05",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-06-22"
+      },
+      "upstream": {
+        "name": "7.0",
+        "codename": "Dijkstra",
+        "label": "7.0 'Dijkstra'",
+        "releaseDate": "2024-04-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-06-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.0.3",
+          "date": "2025-08-05",
+          "link": "https://ffmpeg.org/download.html#release_7.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.1",
+      "name": "6.1 'Heaviside'",
+      "milestones": {
+        "ga": "2023-11-11",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.1",
+        "codename": "Heaviside",
+        "label": "6.1 'Heaviside'",
+        "releaseDate": "2023-11-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "6.1.6",
+          "date": "2026-06-20",
+          "link": "https://ffmpeg.org/download.html#release_6.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.0",
+      "name": "6.0 'Von Neumann'",
+      "milestones": {
+        "ga": "2023-02-27",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-07-11"
+      },
+      "upstream": {
+        "name": "6.0",
+        "codename": "Von Neumann",
+        "label": "6.0 'Von Neumann'",
+        "releaseDate": "2023-02-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-07-11",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.0.1",
+          "date": "2023-11-10",
+          "link": "https://ffmpeg.org/download.html#release_6.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.1",
+      "name": "5.1 'Riemann' (LTS)",
+      "milestones": {
+        "ga": "2022-07-22",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.1",
+        "codename": "Riemann",
+        "label": "5.1 'Riemann' (LTS)",
+        "releaseDate": "2022-07-22",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "5.1.10",
+          "date": "2026-06-21",
+          "link": "https://ffmpeg.org/download.html#release_5.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.0",
+      "name": "5.0 'Lorentz'",
+      "milestones": {
+        "ga": "2022-01-14",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-04-02"
+      },
+      "upstream": {
+        "name": "5.0",
+        "codename": "Lorentz",
+        "label": "5.0 'Lorentz'",
+        "releaseDate": "2022-01-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-04-02",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.0.3",
+          "date": "2023-04-02",
+          "link": "https://ffmpeg.org/download.html#release_5.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.4",
+      "name": "4.4 'Rao'",
+      "milestones": {
+        "ga": "2021-04-08",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.4",
+        "codename": "Rao",
+        "label": "4.4 'Rao'",
+        "releaseDate": "2021-04-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "4.4.8",
+          "date": "2026-06-21",
+          "link": "https://ffmpeg.org/download.html#release_4.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.3",
+      "name": "4.3 '4:3'",
+      "milestones": {
+        "ga": "2020-06-15",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-06-21"
+      },
+      "upstream": {
+        "name": "4.3",
+        "codename": "4:3",
+        "label": "4.3 '4:3'",
+        "releaseDate": "2020-06-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-06-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.3.9",
+          "date": "2025-03-12",
+          "link": "https://ffmpeg.org/download.html#release_4.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.2",
+      "name": "4.2 'Ada'",
+      "milestones": {
+        "ga": "2019-08-05",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-06-21"
+      },
+      "upstream": {
+        "name": "4.2",
+        "codename": "Ada",
+        "label": "4.2 'Ada'",
+        "releaseDate": "2019-08-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-06-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.2.11",
+          "date": "2025-05-17",
+          "link": "https://ffmpeg.org/download.html#release_4.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.1",
+      "name": "4.1 'al-Khwarizmi'",
+      "milestones": {
+        "ga": "2018-11-06",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-07-21"
+      },
+      "upstream": {
+        "name": "4.1",
+        "codename": "al-Khwarizmi",
+        "label": "4.1 'al-Khwarizmi'",
+        "releaseDate": "2018-11-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-07-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.1.11",
+          "date": "2023-06-07",
+          "link": "https://ffmpeg.org/download.html#release_4.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.0",
+      "name": "4.0 'Wu'",
+      "milestones": {
+        "ga": "2018-04-20",
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-07-03"
+      },
+      "upstream": {
+        "name": "4.0",
+        "codename": "Wu",
+        "label": "4.0 'Wu'",
+        "releaseDate": "2018-04-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-07-03",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.0.6",
+          "date": "2020-07-03",
+          "link": "https://ffmpeg.org/download.html#release_4.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.4",
+      "name": "3.4 'Cantor'",
+      "milestones": {
+        "ga": "2017-10-15",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-06-21"
+      },
+      "upstream": {
+        "name": "3.4",
+        "codename": "Cantor",
+        "label": "3.4 'Cantor'",
+        "releaseDate": "2017-10-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-06-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.4.14",
+          "date": "2025-03-12",
+          "link": "https://ffmpeg.org/download.html#release_3.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.3",
+      "name": "3.3 'Hilbert'",
+      "milestones": {
+        "ga": "2017-04-13",
+        "eos": null,
+        "eossec": null,
+        "eol": "2018-11-18"
+      },
+      "upstream": {
+        "name": "3.3",
+        "codename": "Hilbert",
+        "label": "3.3 'Hilbert'",
+        "releaseDate": "2017-04-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-11-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.3.9",
+          "date": "2018-11-18",
+          "link": "https://ffmpeg.org/download.html#release_3.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.2",
+      "name": "3.2 'Hypatia'",
+      "milestones": {
+        "ga": "2016-10-27",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-10-28"
+      },
+      "upstream": {
+        "name": "3.2",
+        "codename": "Hypatia",
+        "label": "3.2 'Hypatia'",
+        "releaseDate": "2016-10-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-10-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.2.19",
+          "date": "2022-10-28",
+          "link": "https://ffmpeg.org/download.html#release_3.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.1",
+      "name": "3.1 'Laplace'",
+      "milestones": {
+        "ga": "2016-06-27",
+        "eos": null,
+        "eossec": null,
+        "eol": "2017-09-25"
+      },
+      "upstream": {
+        "name": "3.1",
+        "codename": "Laplace",
+        "label": "3.1 'Laplace'",
+        "releaseDate": "2016-06-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-09-25",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.1.11",
+          "date": "2017-09-25",
+          "link": "https://ffmpeg.org/download.html#release_3.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.0",
+      "name": "3.0 'Einstein'",
+      "milestones": {
+        "ga": "2016-02-15",
+        "eos": null,
+        "eossec": null,
+        "eol": "2018-10-28"
+      },
+      "upstream": {
+        "name": "3.0",
+        "codename": "Einstein",
+        "label": "3.0 'Einstein'",
+        "releaseDate": "2016-02-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-10-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.0.12",
+          "date": "2018-10-28",
+          "link": "https://ffmpeg.org/download.html#release_3.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.8",
+      "name": "2.8 'Feynman'",
+      "milestones": {
+        "ga": "2015-09-09",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-06-21"
+      },
+      "upstream": {
+        "name": "2.8",
+        "codename": "Feynman",
+        "label": "2.8 'Feynman'",
+        "releaseDate": "2015-09-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-06-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.8.22",
+          "date": "2023-10-29",
+          "link": "https://ffmpeg.org/download.html#release_2.8"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.7",
+      "name": "2.7 'Nash'",
+      "milestones": {
+        "ga": "2015-06-10",
+        "eos": null,
+        "eossec": null,
+        "eol": "2016-04-30"
+      },
+      "upstream": {
+        "name": "2.7",
+        "codename": "Nash",
+        "label": "2.7 'Nash'",
+        "releaseDate": "2015-06-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2016-04-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.7.7",
+          "date": "2016-04-30",
+          "link": "https://ffmpeg.org/download.html#release_2.7"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.6",
+      "name": "2.6 'Grothendieck'",
+      "milestones": {
+        "ga": "2015-03-07",
+        "eos": null,
+        "eossec": null,
+        "eol": "2016-05-03"
+      },
+      "upstream": {
+        "name": "2.6",
+        "codename": "Grothendieck",
+        "label": "2.6 'Grothendieck'",
+        "releaseDate": "2015-03-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2016-05-03",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.6.9",
+          "date": "2016-05-03",
+          "link": "https://ffmpeg.org/download.html#release_2.6"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.5",
+      "name": "2.5 'Bohr'",
+      "milestones": {
+        "ga": "2014-12-04",
+        "eos": null,
+        "eossec": null,
+        "eol": "2016-02-02"
+      },
+      "upstream": {
+        "name": "2.5",
+        "codename": "Bohr",
+        "label": "2.5 'Bohr'",
+        "releaseDate": "2014-12-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2016-02-02",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.5.11",
+          "date": "2016-02-02",
+          "link": "https://ffmpeg.org/download.html#release_2.5"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.4",
+      "name": "2.4 'Fresnel'",
+      "milestones": {
+        "ga": "2014-09-14",
+        "eos": null,
+        "eossec": null,
+        "eol": "2017-12-31"
+      },
+      "upstream": {
+        "name": "2.4",
+        "codename": "Fresnel",
+        "label": "2.4 'Fresnel'",
+        "releaseDate": "2014-09-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.4.14",
+          "date": "2017-12-31",
+          "link": "https://ffmpeg.org/download.html#release_2.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.3",
+      "name": "2.3 'Mandelbrot'",
+      "milestones": {
+        "ga": "2014-07-16",
+        "eos": null,
+        "eossec": null,
+        "eol": "2015-01-06"
+      },
+      "upstream": {
+        "name": "2.3",
+        "codename": "Mandelbrot",
+        "label": "2.3 'Mandelbrot'",
+        "releaseDate": "2014-07-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2015-01-06",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.3.6",
+          "date": "2015-01-06",
+          "link": "https://ffmpeg.org/download.html#release_2.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.2",
+      "name": "2.2 'Muybridge'",
+      "milestones": {
+        "ga": "2014-03-23",
+        "eos": null,
+        "eossec": null,
+        "eol": "2015-06-18"
+      },
+      "upstream": {
+        "name": "2.2",
+        "codename": "Muybridge",
+        "label": "2.2 'Muybridge'",
+        "releaseDate": "2014-03-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2015-06-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.2.16",
+          "date": "2015-06-18",
+          "link": "https://ffmpeg.org/download.html#release_2.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.1",
+      "name": "2.1 'Fourier'",
+      "milestones": {
+        "ga": "2013-10-28",
+        "eos": null,
+        "eossec": null,
+        "eol": "2015-04-30"
+      },
+      "upstream": {
+        "name": "2.1",
+        "codename": "Fourier",
+        "label": "2.1 'Fourier'",
+        "releaseDate": "2013-10-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2015-04-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.1.8",
+          "date": "2015-04-30",
+          "link": "https://ffmpeg.org/download.html#release_2.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.0",
+      "name": "2.0 'Nameless'",
+      "milestones": {
+        "ga": "2013-07-10",
+        "eos": null,
+        "eossec": null,
+        "eol": "2015-06-10"
+      },
+      "upstream": {
+        "name": "2.0",
+        "codename": "Nameless",
+        "label": "2.0 'Nameless'",
+        "releaseDate": "2013-07-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2015-06-10",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.0.7",
+          "date": "2015-06-10",
+          "link": "https://ffmpeg.org/download.html#release_2.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.2",
+      "name": "1.2 'Magic'",
+      "milestones": {
+        "ga": "2013-03-15",
+        "eos": null,
+        "eossec": null,
+        "eol": "2015-02-12"
+      },
+      "upstream": {
+        "name": "1.2",
+        "codename": "Magic",
+        "label": "1.2 'Magic'",
+        "releaseDate": "2013-03-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2015-02-12",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.2.12",
+          "date": "2015-02-12",
+          "link": "https://ffmpeg.org/download.html#release_1.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.1",
+      "name": "1.1 'Fire Flower'",
+      "milestones": {
+        "ga": "2013-01-06",
+        "eos": null,
+        "eossec": null,
+        "eol": "2015-03-13"
+      },
+      "upstream": {
+        "name": "1.1",
+        "codename": "Fire Flower",
+        "label": "1.1 'Fire Flower'",
+        "releaseDate": "2013-01-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2015-03-13",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.1.16",
+          "date": "2015-03-13",
+          "link": "https://ffmpeg.org/download.html#release_1.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.0",
+      "name": "1.0 'Angel'",
+      "milestones": {
+        "ga": "2012-09-28",
+        "eos": null,
+        "eossec": null,
+        "eol": "2014-07-20"
+      },
+      "upstream": {
+        "name": "1.0",
+        "codename": "Angel",
+        "label": "1.0 'Angel'",
+        "releaseDate": "2012-09-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2014-07-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.0.10",
+          "date": "2014-07-20",
+          "link": "https://ffmpeg.org/download.html#release_1.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.11",
+      "name": "0.11 'Happiness'",
+      "milestones": {
+        "ga": "2012-05-25",
+        "eos": null,
+        "eossec": null,
+        "eol": "2014-03-10"
+      },
+      "upstream": {
+        "name": "0.11",
+        "codename": "Happiness",
+        "label": "0.11 'Happiness'",
+        "releaseDate": "2012-05-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2014-03-10",
+        "isMaintained": false,
+        "latest": {
+          "name": "0.11.5",
+          "date": "2014-03-10",
+          "link": "https://ffmpeg.org/download.html#release_0.11"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.10",
+      "name": "0.10 'Freedom'",
+      "milestones": {
+        "ga": "2012-01-26",
+        "eos": null,
+        "eossec": null,
+        "eol": "2015-03-12"
+      },
+      "upstream": {
+        "name": "0.10",
+        "codename": "Freedom",
+        "label": "0.10 'Freedom'",
+        "releaseDate": "2012-01-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2015-03-12",
+        "isMaintained": false,
+        "latest": {
+          "name": "0.10.16",
+          "date": "2015-03-12",
+          "link": "https://ffmpeg.org/download.html#release_0.10"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.9",
+      "name": "0.9 'Harmony'",
+      "milestones": {
+        "ga": "2011-12-11",
+        "eos": null,
+        "eossec": null,
+        "eol": "2014-03-21"
+      },
+      "upstream": {
+        "name": "0.9",
+        "codename": "Harmony",
+        "label": "0.9 'Harmony'",
+        "releaseDate": "2011-12-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2014-03-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "0.9.4",
+          "date": "2014-03-21",
+          "link": "https://ffmpeg.org/download.html#release_0.9"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.8",
+      "name": "0.8 'Love'",
+      "milestones": {
+        "ga": "2011-06-21",
+        "eos": null,
+        "eossec": null,
+        "eol": "2013-10-06"
+      },
+      "upstream": {
+        "name": "0.8",
+        "codename": "Love",
+        "label": "0.8 'Love'",
+        "releaseDate": "2011-06-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2013-10-06",
+        "isMaintained": false,
+        "latest": {
+          "name": "0.8.15",
+          "date": "2013-10-06",
+          "link": "https://ffmpeg.org/download.html#release_0.8"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.7",
+      "name": "0.7 'Peace'",
+      "milestones": {
+        "ga": "2011-06-21",
+        "eos": null,
+        "eossec": null,
+        "eol": "2015-03-12"
+      },
+      "upstream": {
+        "name": "0.7",
+        "codename": "Peace",
+        "label": "0.7 'Peace'",
+        "releaseDate": "2011-06-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2015-03-12",
+        "isMaintained": false,
+        "latest": {
+          "name": "0.7.17",
+          "date": "2015-03-12",
+          "link": "https://ffmpeg.org/download.html#release_0.7"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.6",
+      "name": "0.6 'Works with HTML5'",
+      "milestones": {
+        "ga": "2010-05-04",
+        "eos": null,
+        "eossec": null,
+        "eol": "2013-09-23"
+      },
+      "upstream": {
+        "name": "0.6",
+        "codename": "Works with HTML5",
+        "label": "0.6 'Works with HTML5'",
+        "releaseDate": "2010-05-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2013-09-23",
+        "isMaintained": false,
+        "latest": {
+          "name": "0.6.7",
+          "date": "2013-09-23",
+          "link": "https://ffmpeg.org/download.html#release_0.6"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.5",
+      "name": "0.5 'half-way to world domination A.K.A. the belligerent blue bike shed'",
+      "milestones": {
+        "ga": "2009-03-02",
+        "eos": null,
+        "eossec": null,
+        "eol": "2014-11-29"
+      },
+      "upstream": {
+        "name": "0.5",
+        "codename": "half-way to world domination A.K.A. the belligerent blue bike shed",
+        "label": "0.5 'half-way to world domination A.K.A. the belligerent blue bike shed'",
+        "releaseDate": "2009-03-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2014-11-29",
+        "isMaintained": false,
+        "latest": {
+          "name": "0.5.15",
+          "date": "2014-11-29",
+          "link": "https://ffmpeg.org/download.html#release_0.5"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/ffmpeg/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-08-13T00:06:36+00:00"
+  }
+}

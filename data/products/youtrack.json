@@ -1,0 +1,680 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "youtrack",
+  "name": "YouTrack",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "youtrack"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/jetbrains.svg",
+    "html": "https://endoflife.date/youtrack",
+    "releasePolicy": null
+  },
+  "releases": [
+    {
+      "id": "2026.2",
+      "name": "2026.2",
+      "milestones": {
+        "ga": "2026-06-23",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2026.2",
+        "codename": null,
+        "label": "2026.2",
+        "releaseDate": "2026-06-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "2026.2.18991",
+          "date": "2026-09-15",
+          "link": "https://www.jetbrains.com/youtrack/whatsnew/2026-2/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2026.1",
+      "name": "2026.1",
+      "milestones": {
+        "ga": "2026-03-31",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2026.1",
+        "codename": null,
+        "label": "2026.1",
+        "releaseDate": "2026-03-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "2026.1.14055",
+          "date": "2026-09-03",
+          "link": "https://www.jetbrains.com/youtrack/whatsnew/2026-1/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2025.3",
+      "name": "2025.3",
+      "milestones": {
+        "ga": "2025-10-28",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2025.3",
+        "codename": null,
+        "label": "2025.3",
+        "releaseDate": "2025-10-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "2025.3.161254",
+          "date": "2026-09-03",
+          "link": "https://www.jetbrains.com/youtrack/whatsnew/2025-3/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2025.2",
+      "name": "2025.2",
+      "milestones": {
+        "ga": "2025-07-08",
+        "eos": null,
+        "eossec": "2026-06-23",
+        "eol": "2026-06-23"
+      },
+      "upstream": {
+        "name": "2025.2",
+        "codename": null,
+        "label": "2025.2",
+        "releaseDate": "2025-07-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-06-23",
+        "isMaintained": false,
+        "latest": {
+          "name": "2025.2.148048",
+          "date": "2026-06-03",
+          "link": "https://www.jetbrains.com/youtrack/whatsnew/2025-2/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2025.1",
+      "name": "2025.1",
+      "milestones": {
+        "ga": "2025-02-18",
+        "eos": null,
+        "eossec": "2026-03-31",
+        "eol": "2026-03-31"
+      },
+      "upstream": {
+        "name": "2025.1",
+        "codename": null,
+        "label": "2025.1",
+        "releaseDate": "2025-02-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-03-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "2025.1.148120",
+          "date": "2026-06-04",
+          "link": "https://www.jetbrains.com/youtrack/whatsnew/2025-1/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2024.3",
+      "name": "2024.3",
+      "milestones": {
+        "ga": "2024-09-17",
+        "eos": null,
+        "eossec": "2025-10-28",
+        "eol": "2025-10-28"
+      },
+      "upstream": {
+        "name": "2024.3",
+        "codename": null,
+        "label": "2024.3",
+        "releaseDate": "2024-09-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-10-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "2024.3.148430",
+          "date": "2026-06-08",
+          "link": "https://www.jetbrains.com/youtrack/whatsnew/2024-3/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2024.2",
+      "name": "2024.2",
+      "milestones": {
+        "ga": "2024-06-12",
+        "eos": null,
+        "eossec": "2025-07-08",
+        "eol": "2025-07-08"
+      },
+      "upstream": {
+        "name": "2024.2",
+        "codename": null,
+        "label": "2024.2",
+        "releaseDate": "2024-06-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-07-08",
+        "isMaintained": false,
+        "latest": {
+          "name": "2024.2.148429",
+          "date": "2026-06-08",
+          "link": "https://www.jetbrains.com/youtrack/whatsnew/2024-2/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2024.1",
+      "name": "2024.1",
+      "milestones": {
+        "ga": "2024-03-05",
+        "eos": null,
+        "eossec": "2025-02-18",
+        "eol": "2025-02-18"
+      },
+      "upstream": {
+        "name": "2024.1",
+        "codename": null,
+        "label": "2024.1",
+        "releaseDate": "2024-03-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-02-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "2024.1.34109",
+          "date": "2024-06-07",
+          "link": "https://www.jetbrains.com/youtrack/whatsnew/2024-1/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2023.3",
+      "name": "2023.3",
+      "milestones": {
+        "ga": "2023-12-13",
+        "eos": null,
+        "eossec": "2024-09-17",
+        "eol": "2024-09-17"
+      },
+      "upstream": {
+        "name": "2023.3",
+        "codename": null,
+        "label": "2023.3",
+        "releaseDate": "2023-12-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-09-17",
+        "isMaintained": false,
+        "latest": {
+          "name": "2023.3.26285",
+          "date": "2024-03-11",
+          "link": "https://www.jetbrains.com/youtrack/whatsnew/2023-3/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2023.2",
+      "name": "2023.2",
+      "milestones": {
+        "ga": "2023-09-26",
+        "eos": null,
+        "eossec": "2024-06-12",
+        "eol": "2024-06-12"
+      },
+      "upstream": {
+        "name": "2023.2",
+        "codename": null,
+        "label": "2023.2",
+        "releaseDate": "2023-09-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-06-12",
+        "isMaintained": false,
+        "latest": {
+          "name": "2023.2.26286",
+          "date": "2024-03-12",
+          "link": "https://www.jetbrains.com/youtrack/whatsnew/2023-2/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2023.1",
+      "name": "2023.1",
+      "milestones": {
+        "ga": "2023-06-16",
+        "eos": null,
+        "eossec": "2024-03-05",
+        "eol": "2024-03-05"
+      },
+      "upstream": {
+        "name": "2023.1",
+        "codename": null,
+        "label": "2023.1",
+        "releaseDate": "2023-06-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-03-05",
+        "isMaintained": false,
+        "latest": {
+          "name": "2023.1.22653",
+          "date": "2024-01-03",
+          "link": "https://www.jetbrains.com/youtrack/whatsnew/2023-1/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2022.3",
+      "name": "2022.3",
+      "milestones": {
+        "ga": "2022-11-17",
+        "eos": null,
+        "eossec": "2023-12-13",
+        "eol": "2023-12-13"
+      },
+      "upstream": {
+        "name": "2022.3",
+        "codename": null,
+        "label": "2022.3",
+        "releaseDate": "2022-11-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-12-13",
+        "isMaintained": false,
+        "latest": {
+          "name": "2022.3.65379",
+          "date": "2023-03-28",
+          "link": "https://www.jetbrains.com/youtrack/whatsnew/2022-3/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2022.2",
+      "name": "2022.2",
+      "milestones": {
+        "ga": "2022-07-05",
+        "eos": null,
+        "eossec": "2023-09-26",
+        "eol": "2023-09-26"
+      },
+      "upstream": {
+        "name": "2022.2",
+        "codename": null,
+        "label": "2022.2",
+        "releaseDate": "2022-07-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-09-26",
+        "isMaintained": false,
+        "latest": {
+          "name": "2022.2.65377",
+          "date": "2023-03-22",
+          "link": "https://www.jetbrains.com/youtrack/whatsnew/2022-2/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2022.1",
+      "name": "2022.1",
+      "milestones": {
+        "ga": "2022-02-15",
+        "eos": null,
+        "eossec": "2023-06-16",
+        "eol": "2023-06-16"
+      },
+      "upstream": {
+        "name": "2022.1",
+        "codename": null,
+        "label": "2022.1",
+        "releaseDate": "2022-02-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-06-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "2022.1.65378",
+          "date": "2023-03-23",
+          "link": "https://www.jetbrains.com/youtrack/whatsnew/2022-1/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2021.4",
+      "name": "2021.4",
+      "milestones": {
+        "ga": "2021-11-02",
+        "eos": null,
+        "eossec": "2022-11-17",
+        "eol": "2022-11-17"
+      },
+      "upstream": {
+        "name": "2021.4",
+        "codename": null,
+        "label": "2021.4",
+        "releaseDate": "2021-11-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-11-17",
+        "isMaintained": false,
+        "latest": {
+          "name": "2021.4.40676",
+          "date": "2022-02-03",
+          "link": "https://www.jetbrains.com/youtrack/whatsnew/2021-4/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2021.3",
+      "name": "2021.3",
+      "milestones": {
+        "ga": "2021-07-13",
+        "eos": null,
+        "eossec": "2022-07-05",
+        "eol": "2022-07-05"
+      },
+      "upstream": {
+        "name": "2021.3",
+        "codename": null,
+        "label": "2021.3",
+        "releaseDate": "2021-07-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-07-05",
+        "isMaintained": false,
+        "latest": {
+          "name": "2021.3.30245",
+          "date": "2021-10-18",
+          "link": "https://www.jetbrains.com/youtrack/whatsnew/2021-3/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2021.2",
+      "name": "2021.2",
+      "milestones": {
+        "ga": "2021-05-26",
+        "eos": null,
+        "eossec": "2022-02-15",
+        "eol": "2022-02-15"
+      },
+      "upstream": {
+        "name": "2021.2",
+        "codename": null,
+        "label": "2021.2",
+        "releaseDate": "2021-05-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-02-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "2021.2.19690",
+          "date": "2021-06-29",
+          "link": "https://www.jetbrains.com/youtrack/whatsnew/2021-2/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2021.1",
+      "name": "2021.1",
+      "milestones": {
+        "ga": "2021-03-30",
+        "eos": null,
+        "eossec": "2021-11-02",
+        "eol": "2021-11-02"
+      },
+      "upstream": {
+        "name": "2021.1",
+        "codename": null,
+        "label": "2021.1",
+        "releaseDate": "2021-03-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-11-02",
+        "isMaintained": false,
+        "latest": {
+          "name": "2021.1.15276",
+          "date": "2021-05-17",
+          "link": "https://www.jetbrains.com/youtrack/whatsnew/2021-1/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2020.6",
+      "name": "2020.6",
+      "milestones": {
+        "ga": "2020-12-14",
+        "eos": null,
+        "eossec": "2021-07-13",
+        "eol": "2021-07-13"
+      },
+      "upstream": {
+        "name": "2020.6",
+        "codename": null,
+        "label": "2020.6",
+        "releaseDate": "2020-12-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-07-13",
+        "isMaintained": false,
+        "latest": {
+          "name": "2020.6.8801",
+          "date": "2021-03-17",
+          "link": "https://www.jetbrains.com/youtrack/whatsnew/2020-6/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2020.5",
+      "name": "2020.5",
+      "milestones": {
+        "ga": "2020-11-17",
+        "eos": null,
+        "eossec": "2021-05-26",
+        "eol": "2021-05-26"
+      },
+      "upstream": {
+        "name": "2020.5",
+        "codename": null,
+        "label": "2020.5",
+        "releaseDate": "2020-11-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-05-26",
+        "isMaintained": false,
+        "latest": {
+          "name": "2020.5.3123",
+          "date": "2020-12-02",
+          "link": "https://www.jetbrains.com/youtrack/whatsnew/2020-5/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2020.4",
+      "name": "2020.4",
+      "milestones": {
+        "ga": "2020-10-28",
+        "eos": null,
+        "eossec": "2021-03-30",
+        "eol": "2021-03-30"
+      },
+      "upstream": {
+        "name": "2020.4",
+        "codename": null,
+        "label": "2020.4",
+        "releaseDate": "2020-10-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-03-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "2020.4.6808",
+          "date": "2020-11-06",
+          "link": "https://www.jetbrains.com/youtrack/whatsnew/2020-4/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2020.3",
+      "name": "2020.3",
+      "milestones": {
+        "ga": "2020-07-21",
+        "eos": null,
+        "eossec": "2020-12-14",
+        "eol": "2020-12-14"
+      },
+      "upstream": {
+        "name": "2020.3",
+        "codename": null,
+        "label": "2020.3",
+        "releaseDate": "2020-07-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-12-14",
+        "isMaintained": false,
+        "latest": {
+          "name": "2020.3.12000",
+          "date": "2020-10-07",
+          "link": "https://www.jetbrains.com/youtrack/whatsnew/2020-3/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2020.2",
+      "name": "2020.2",
+      "milestones": {
+        "ga": "2020-05-26",
+        "eos": null,
+        "eossec": "2020-11-17",
+        "eol": "2020-11-17"
+      },
+      "upstream": {
+        "name": "2020.2",
+        "codename": null,
+        "label": "2020.2",
+        "releaseDate": "2020-05-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-11-17",
+        "isMaintained": false,
+        "latest": {
+          "name": "2020.2.11008",
+          "date": "2020-08-18",
+          "link": "https://www.jetbrains.com/youtrack/whatsnew/2020-2/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2020.1",
+      "name": "2020.1",
+      "milestones": {
+        "ga": "2020-03-31",
+        "eos": null,
+        "eossec": "2020-10-28",
+        "eol": "2020-10-28"
+      },
+      "upstream": {
+        "name": "2020.1",
+        "codename": null,
+        "label": "2020.1",
+        "releaseDate": "2020-03-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-10-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "2020.1.11011",
+          "date": "2020-08-18",
+          "link": "https://www.jetbrains.com/youtrack/whatsnew/2020-1/"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/youtrack/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-16T00:07:55+00:00"
+  }
+}

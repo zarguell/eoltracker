@@ -1,0 +1,413 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "umbraco",
+  "name": "Umbraco CMS",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "cpe",
+      "id": "cpe:/a:umbraco:umbraco_cms"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:umbraco:umbraco_cms"
+    }
+  ],
+  "labels": {
+    "eoas": "Support",
+    "discontinued": null,
+    "eol": "Security",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/umbraco.svg",
+    "html": "https://endoflife.date/umbraco",
+    "releasePolicy": "https://umbraco.com/products/knowledge-center/long-term-support-and-end-of-life/"
+  },
+  "releases": [
+    {
+      "id": "18",
+      "name": "18",
+      "milestones": {
+        "ga": "2026-06-25",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "18",
+        "codename": null,
+        "label": "18",
+        "releaseDate": "2026-06-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": "2027-03-25",
+        "isEol": false,
+        "eolFrom": "2027-06-25",
+        "isMaintained": true,
+        "latest": {
+          "name": "18.1.1",
+          "date": "2026-08-18",
+          "link": "https://github.com/umbraco/Umbraco-CMS/releases/tag/release-18.1.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "17",
+      "name": "17 (LTS)",
+      "milestones": {
+        "ga": "2025-11-27",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "17",
+        "codename": null,
+        "label": "17 (LTS)",
+        "releaseDate": "2025-11-27",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": "2027-11-27",
+        "isEol": false,
+        "eolFrom": "2028-11-27",
+        "isMaintained": true,
+        "latest": {
+          "name": "17.6.2",
+          "date": "2026-08-18",
+          "link": "https://github.com/umbraco/Umbraco-CMS/releases/tag/release-17.6.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "16",
+      "name": "16",
+      "milestones": {
+        "ga": "2025-06-12",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "16",
+        "codename": null,
+        "label": "16",
+        "releaseDate": "2025-06-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-03-12",
+        "isEol": true,
+        "eolFrom": "2026-06-12",
+        "isMaintained": false,
+        "latest": {
+          "name": "16.5.1",
+          "date": "2026-03-10",
+          "link": "https://github.com/umbraco/Umbraco-CMS/releases/tag/release-16.5.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "15",
+      "name": "15",
+      "milestones": {
+        "ga": "2024-11-14",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "15",
+        "codename": null,
+        "label": "15",
+        "releaseDate": "2024-11-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-08-14",
+        "isEol": true,
+        "eolFrom": "2025-11-14",
+        "isMaintained": false,
+        "latest": {
+          "name": "15.4.4",
+          "date": "2025-07-29",
+          "link": "https://releases.umbraco.com/release/umbraco/Umbraco-CMS/15.4.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "14",
+      "name": "14",
+      "milestones": {
+        "ga": "2024-05-30",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "14",
+        "codename": null,
+        "label": "14",
+        "releaseDate": "2024-05-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-03-02",
+        "isEol": true,
+        "eolFrom": "2025-05-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "14.3.4",
+          "date": "2025-04-08",
+          "link": "https://releases.umbraco.com/release/umbraco/Umbraco-CMS/14.3.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "13",
+      "name": "13 (LTS)",
+      "milestones": {
+        "ga": "2023-12-14",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "13",
+        "codename": null,
+        "label": "13 (LTS)",
+        "releaseDate": "2023-12-14",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-12-14",
+        "isEol": false,
+        "eolFrom": "2026-12-14",
+        "isMaintained": true,
+        "latest": {
+          "name": "13.16.2",
+          "date": "2026-09-14",
+          "link": "https://github.com/umbraco/Umbraco-CMS/releases/tag/release-13.16.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "12",
+      "name": "12",
+      "milestones": {
+        "ga": "2023-06-29",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "12",
+        "codename": null,
+        "label": "12",
+        "releaseDate": "2023-06-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-03-29",
+        "isEol": true,
+        "eolFrom": "2024-06-29",
+        "isMaintained": false,
+        "latest": {
+          "name": "12.3.10",
+          "date": "2024-05-17",
+          "link": "https://releases.umbraco.com/release/umbraco/Umbraco-CMS/12.3.10"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "11",
+      "name": "11",
+      "milestones": {
+        "ga": "2022-12-01",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "11",
+        "codename": null,
+        "label": "11",
+        "releaseDate": "2022-12-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-09-01",
+        "isEol": true,
+        "eolFrom": "2023-12-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "11.5.0",
+          "date": "2023-09-05",
+          "link": "https://releases.umbraco.com/release/umbraco/Umbraco-CMS/11.5.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "10",
+      "name": "10 (LTS)",
+      "milestones": {
+        "ga": "2022-06-16",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "10",
+        "codename": null,
+        "label": "10 (LTS)",
+        "releaseDate": "2022-06-16",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-06-16",
+        "isEol": true,
+        "eolFrom": "2025-06-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "10.8.11",
+          "date": "2025-06-24",
+          "link": "https://releases.umbraco.com/release/umbraco/Umbraco-CMS/10.8.11"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9",
+      "name": "9",
+      "milestones": {
+        "ga": "2021-09-29",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "9",
+        "codename": null,
+        "label": "9",
+        "releaseDate": "2021-09-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-09-16",
+        "isEol": true,
+        "eolFrom": "2022-12-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.5.4",
+          "date": "2022-09-05",
+          "link": "https://releases.umbraco.com/release/umbraco/Umbraco-CMS/9.5.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8",
+      "name": "8 (LTS)",
+      "milestones": {
+        "ga": "2019-02-26",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "8",
+        "codename": null,
+        "label": "8 (LTS)",
+        "releaseDate": "2019-02-26",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-02-24",
+        "isEol": true,
+        "eolFrom": "2025-02-24",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.18.15",
+          "date": "2024-10-21",
+          "link": "https://releases.umbraco.com/release/umbraco/Umbraco-CMS/8.18.15"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7",
+      "name": "7 (LTS)",
+      "milestones": {
+        "ga": "2013-11-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "7",
+        "codename": null,
+        "label": "7 (LTS)",
+        "releaseDate": "2013-11-21",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-07-31",
+        "isEol": true,
+        "eolFrom": "2023-09-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.15.11",
+          "date": "2023-09-05",
+          "link": "https://releases.umbraco.com/release/umbraco/Umbraco-CMS/7.15.11"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6",
+      "name": "6",
+      "milestones": {
+        "ga": "2013-03-27",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6",
+        "codename": null,
+        "label": "6",
+        "releaseDate": "2013-03-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2018-05-01",
+        "isEol": true,
+        "eolFrom": "2018-05-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.2.6",
+          "date": "2016-03-03",
+          "link": "https://umbraco.com/products/knowledge-center/long-term-support-and-end-of-life/umbraco-6-end-of-life-eol/"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/umbraco/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-15T00:08:08+00:00"
+  }
+}

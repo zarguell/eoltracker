@@ -1,0 +1,79 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "amazon-cdk",
+  "name": "Amazon CDK",
+  "category": "software",
+  "upstream_category": "framework",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "aws-cdk"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:npm/aws-cdk"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:golang/github.com/aws/aws-cdk-go/awscdk/v2"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/aws/aws-cdk-go"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:amazon:aws_cloud_development_kit"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:amazon:aws_cloud_development_kit"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/amazonaws.svg",
+    "html": "https://endoflife.date/amazon-cdk",
+    "releasePolicy": null
+  },
+  "releases": [
+    {
+      "id": "2",
+      "name": "2",
+      "milestones": {
+        "ga": "2021-12-01",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2",
+        "codename": null,
+        "label": "2",
+        "releaseDate": "2021-12-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "2.269.0",
+          "date": "2026-09-10",
+          "link": "https://github.com/aws/aws-cdk/releases/tag/v2.269.0"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/amazon-cdk/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-12T00:06:51+00:00"
+  }
+}

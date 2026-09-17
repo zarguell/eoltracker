@@ -1,0 +1,1533 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "metabase",
+  "name": "Metabase",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "metabase"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/metabase/metabase"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/metabase/metabase"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:metabase:metabase"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:metabase:metabase"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/metabase.svg",
+    "html": "https://endoflife.date/metabase",
+    "releasePolicy": "https://www.metabase.com/version-support"
+  },
+  "releases": [
+    {
+      "id": "0.63",
+      "name": "63",
+      "milestones": {
+        "ga": "2026-07-07",
+        "eos": null,
+        "eossec": "2026-11-01",
+        "eol": "2026-11-01"
+      },
+      "upstream": {
+        "name": "0.63",
+        "codename": null,
+        "label": "63",
+        "releaseDate": "2026-07-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2026-11-01",
+        "isMaintained": true,
+        "latest": {
+          "name": "0.63.18",
+          "date": "2026-09-15",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.63.18"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.62",
+      "name": "62",
+      "milestones": {
+        "ga": "2026-06-01",
+        "eos": null,
+        "eossec": "2026-09-01",
+        "eol": "2026-09-01"
+      },
+      "upstream": {
+        "name": "0.62",
+        "codename": null,
+        "label": "62",
+        "releaseDate": "2026-06-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-09-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "0.62.19.5",
+          "date": "2026-09-11",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.62.19.5"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.61",
+      "name": "61",
+      "milestones": {
+        "ga": "2026-04-30",
+        "eos": null,
+        "eossec": "2026-09-01",
+        "eol": "2026-09-01"
+      },
+      "upstream": {
+        "name": "0.61",
+        "codename": null,
+        "label": "61",
+        "releaseDate": "2026-04-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-09-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "0.61.21",
+          "date": "2026-09-01",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.61.21"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.60",
+      "name": "60",
+      "milestones": {
+        "ga": "2026-03-26",
+        "eos": null,
+        "eossec": "2026-09-01",
+        "eol": "2026-09-01"
+      },
+      "upstream": {
+        "name": "0.60",
+        "codename": null,
+        "label": "60",
+        "releaseDate": "2026-03-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-09-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "0.60.27",
+          "date": "2026-09-01",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.60.27"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.59",
+      "name": "59",
+      "milestones": {
+        "ga": "2026-02-12",
+        "eos": null,
+        "eossec": "2026-09-01",
+        "eol": "2026-09-01"
+      },
+      "upstream": {
+        "name": "0.59",
+        "codename": null,
+        "label": "59",
+        "releaseDate": "2026-02-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-09-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "0.59.31",
+          "date": "2026-09-01",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.59.31"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.58",
+      "name": "58 (LTS)",
+      "milestones": {
+        "ga": "2025-12-17",
+        "eos": null,
+        "eossec": "2027-02-17",
+        "eol": "2027-02-17"
+      },
+      "upstream": {
+        "name": "0.58",
+        "codename": null,
+        "label": "58 (LTS)",
+        "releaseDate": "2025-12-17",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-02-17",
+        "isMaintained": true,
+        "latest": {
+          "name": "0.58.34",
+          "date": "2026-09-14",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.58.34"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.57",
+      "name": "57",
+      "milestones": {
+        "ga": "2025-11-01",
+        "eos": null,
+        "eossec": "2026-05-31",
+        "eol": "2026-05-31"
+      },
+      "upstream": {
+        "name": "0.57",
+        "codename": null,
+        "label": "57",
+        "releaseDate": "2025-11-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-05-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "0.57.20",
+          "date": "2026-06-08",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.57.20"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.56",
+      "name": "56",
+      "milestones": {
+        "ga": "2025-08-01",
+        "eos": null,
+        "eossec": "2026-05-31",
+        "eol": "2026-05-31"
+      },
+      "upstream": {
+        "name": "0.56",
+        "codename": null,
+        "label": "56",
+        "releaseDate": "2025-08-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-05-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "0.56.25.1",
+          "date": "2026-05-08",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.56.25.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.55",
+      "name": "55",
+      "milestones": {
+        "ga": "2025-06-02",
+        "eos": null,
+        "eossec": "2026-05-31",
+        "eol": "2026-05-31"
+      },
+      "upstream": {
+        "name": "0.55",
+        "codename": null,
+        "label": "55",
+        "releaseDate": "2025-06-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-05-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "0.55.24.1",
+          "date": "2026-05-08",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.55.24.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.54",
+      "name": "54",
+      "milestones": {
+        "ga": "2025-03-25",
+        "eos": null,
+        "eossec": "2026-05-31",
+        "eol": "2026-05-31"
+      },
+      "upstream": {
+        "name": "0.54",
+        "codename": null,
+        "label": "54",
+        "releaseDate": "2025-03-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-05-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "0.54.24",
+          "date": "2026-05-06",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.54.24"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.53",
+      "name": "53",
+      "milestones": {
+        "ga": "2025-02-07",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.53",
+        "codename": null,
+        "label": "53",
+        "releaseDate": "2025-02-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "0.53.18.1",
+          "date": "2025-10-29",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.53.18.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.52",
+      "name": "52",
+      "milestones": {
+        "ga": "2024-12-05",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.52",
+        "codename": null,
+        "label": "52",
+        "releaseDate": "2024-12-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "0.52.17.1",
+          "date": "2025-04-07",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.52.17.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.51",
+      "name": "51",
+      "milestones": {
+        "ga": "2024-10-23",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.51",
+        "codename": null,
+        "label": "51",
+        "releaseDate": "2024-10-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "0.51.14",
+          "date": "2025-02-18",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.51.14"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.50",
+      "name": "50",
+      "milestones": {
+        "ga": "2024-06-12",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.50",
+        "codename": null,
+        "label": "50",
+        "releaseDate": "2024-06-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "0.50.36",
+          "date": "2025-02-21",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.50.36"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.49",
+      "name": "49",
+      "milestones": {
+        "ga": "2024-03-15",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.49",
+        "codename": null,
+        "label": "49",
+        "releaseDate": "2024-03-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "0.49.25.2",
+          "date": "2024-10-02",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.49.25.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.48",
+      "name": "48",
+      "milestones": {
+        "ga": "2023-12-14",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.48",
+        "codename": null,
+        "label": "48",
+        "releaseDate": "2023-12-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "0.48.13",
+          "date": "2024-04-30",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.48.13"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.47",
+      "name": "47",
+      "milestones": {
+        "ga": "2023-08-16",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.47",
+        "codename": null,
+        "label": "47",
+        "releaseDate": "2023-08-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "0.47.13",
+          "date": "2024-01-25",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.47.13"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.46",
+      "name": "46",
+      "milestones": {
+        "ga": "2023-03-28",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.46",
+        "codename": null,
+        "label": "46",
+        "releaseDate": "2023-03-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "0.46.8",
+          "date": "2023-08-25",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.46.8"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.45",
+      "name": "45",
+      "milestones": {
+        "ga": "2022-12-05",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.45",
+        "codename": null,
+        "label": "45",
+        "releaseDate": "2022-12-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "0.45.4.3",
+          "date": "2023-07-28",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.45.4.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.44",
+      "name": "44",
+      "milestones": {
+        "ga": "2022-08-04",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.44",
+        "codename": null,
+        "label": "44",
+        "releaseDate": "2022-08-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "0.44.7.3",
+          "date": "2023-07-28",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.44.7.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.43",
+      "name": "43",
+      "milestones": {
+        "ga": "2022-05-02",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.43",
+        "codename": null,
+        "label": "43",
+        "releaseDate": "2022-05-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "0.43.7.3",
+          "date": "2023-07-28",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.43.7.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.42",
+      "name": "42",
+      "milestones": {
+        "ga": "2022-02-08",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.42",
+        "codename": null,
+        "label": "42",
+        "releaseDate": "2022-02-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "0.42.6",
+          "date": "2022-10-18",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.42.6"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.41",
+      "name": "41",
+      "milestones": {
+        "ga": "2021-10-06",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.41",
+        "codename": null,
+        "label": "41",
+        "releaseDate": "2021-10-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "0.41.9",
+          "date": "2022-10-18",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.41.9"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.40",
+      "name": "40",
+      "milestones": {
+        "ga": "2021-07-09",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.40",
+        "codename": null,
+        "label": "40",
+        "releaseDate": "2021-07-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "0.40.8",
+          "date": "2022-04-11",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.40.8"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.39",
+      "name": "39",
+      "milestones": {
+        "ga": "2021-04-20",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.39",
+        "codename": null,
+        "label": "39",
+        "releaseDate": "2021-04-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "0.39.7",
+          "date": "2021-12-10",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.39.7"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.38",
+      "name": "38",
+      "milestones": {
+        "ga": "2021-02-17",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.38",
+        "codename": null,
+        "label": "38",
+        "releaseDate": "2021-02-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "0.38.6",
+          "date": "2021-12-10",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.38.6"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.37",
+      "name": "37",
+      "milestones": {
+        "ga": "2020-10-23",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.37",
+        "codename": null,
+        "label": "37",
+        "releaseDate": "2020-10-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "0.37.12",
+          "date": "2021-04-27",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.37.12"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.36",
+      "name": "36",
+      "milestones": {
+        "ga": "2020-07-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.36",
+        "codename": null,
+        "label": "36",
+        "releaseDate": "2020-07-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "0.36.12",
+          "date": "2021-03-03",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.36.12"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.35",
+      "name": "35",
+      "milestones": {
+        "ga": "2020-03-31",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.35",
+        "codename": null,
+        "label": "35",
+        "releaseDate": "2020-03-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "0.35.6",
+          "date": "2021-01-20",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.35.6"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.34",
+      "name": "34",
+      "milestones": {
+        "ga": "2019-12-20",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.34",
+        "codename": null,
+        "label": "34",
+        "releaseDate": "2019-12-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "0.34.3",
+          "date": "2020-02-25",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.34.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.33",
+      "name": "33",
+      "milestones": {
+        "ga": "2019-08-20",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.33",
+        "codename": null,
+        "label": "33",
+        "releaseDate": "2019-08-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "0.33.7.3",
+          "date": "2019-12-16",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.33.7.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.32",
+      "name": "32",
+      "milestones": {
+        "ga": "2019-03-29",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.32",
+        "codename": null,
+        "label": "32",
+        "releaseDate": "2019-03-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "0.32.10",
+          "date": "2019-07-30",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.32.10"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.31",
+      "name": "31",
+      "milestones": {
+        "ga": "2018-11-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.31",
+        "codename": null,
+        "label": "31",
+        "releaseDate": "2018-11-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "0.31.3",
+          "date": "2019-02-22",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.31.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.30",
+      "name": "30",
+      "milestones": {
+        "ga": "2018-08-08",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.30",
+        "codename": null,
+        "label": "30",
+        "releaseDate": "2018-08-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "0.30.4",
+          "date": "2018-09-27",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.30.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.29",
+      "name": "29",
+      "milestones": {
+        "ga": "2018-05-01",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.29",
+        "codename": null,
+        "label": "29",
+        "releaseDate": "2018-05-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "0.29.3",
+          "date": "2018-05-12",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.29.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.28",
+      "name": "28",
+      "milestones": {
+        "ga": "2018-02-08",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.28",
+        "codename": null,
+        "label": "28",
+        "releaseDate": "2018-02-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "0.28.6",
+          "date": "2018-04-12",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.28.6"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.27",
+      "name": "27",
+      "milestones": {
+        "ga": "2017-11-28",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.27",
+        "codename": null,
+        "label": "27",
+        "releaseDate": "2017-11-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "0.27.2",
+          "date": "2017-12-12",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.27.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.26",
+      "name": "26",
+      "milestones": {
+        "ga": "2017-09-26",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.26",
+        "codename": null,
+        "label": "26",
+        "releaseDate": "2017-09-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "0.26.2",
+          "date": "2017-10-20",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.26.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.25",
+      "name": "25",
+      "milestones": {
+        "ga": "2017-07-25",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.25",
+        "codename": null,
+        "label": "25",
+        "releaseDate": "2017-07-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "0.25.2",
+          "date": "2017-08-09",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.25.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.24",
+      "name": "24",
+      "milestones": {
+        "ga": "2017-05-10",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.24",
+        "codename": null,
+        "label": "24",
+        "releaseDate": "2017-05-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "0.24.2",
+          "date": "2017-06-01",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.24.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.23",
+      "name": "23",
+      "milestones": {
+        "ga": "2017-03-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.23",
+        "codename": null,
+        "label": "23",
+        "releaseDate": "2017-03-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "0.23.1",
+          "date": "2017-03-30",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.23.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.22",
+      "name": "22",
+      "milestones": {
+        "ga": "2017-01-10",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.22",
+        "codename": null,
+        "label": "22",
+        "releaseDate": "2017-01-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "0.22.2",
+          "date": "2017-01-26",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.22.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.21",
+      "name": "21",
+      "milestones": {
+        "ga": "2016-12-08",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.21",
+        "codename": null,
+        "label": "21",
+        "releaseDate": "2016-12-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "0.21.1",
+          "date": "2016-12-14",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.21.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.20",
+      "name": "20",
+      "milestones": {
+        "ga": "2016-10-12",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.20",
+        "codename": null,
+        "label": "20",
+        "releaseDate": "2016-10-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "0.20.3",
+          "date": "2016-10-26",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.20.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.19",
+      "name": "19",
+      "milestones": {
+        "ga": "2016-08-01",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.19",
+        "codename": null,
+        "label": "19",
+        "releaseDate": "2016-08-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "0.19.3",
+          "date": "2016-08-12",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.19.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.18",
+      "name": "18",
+      "milestones": {
+        "ga": "2016-06-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.18",
+        "codename": null,
+        "label": "18",
+        "releaseDate": "2016-06-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "0.18.1",
+          "date": "2016-06-27",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.18.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.17",
+      "name": "17",
+      "milestones": {
+        "ga": "2016-05-03",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.17",
+        "codename": null,
+        "label": "17",
+        "releaseDate": "2016-05-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "0.17.1",
+          "date": "2016-05-12",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.17.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.16",
+      "name": "16",
+      "milestones": {
+        "ga": "2016-03-29",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.16",
+        "codename": null,
+        "label": "16",
+        "releaseDate": "2016-03-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "0.16.1",
+          "date": "2016-04-05",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.16.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.15",
+      "name": "15",
+      "milestones": {
+        "ga": "2016-02-29",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.15",
+        "codename": null,
+        "label": "15",
+        "releaseDate": "2016-02-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "0.15.1",
+          "date": "2016-03-08",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.15.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.14",
+      "name": "14",
+      "milestones": {
+        "ga": "2016-01-28",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.14",
+        "codename": null,
+        "label": "14",
+        "releaseDate": "2016-01-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "0.14.1",
+          "date": "2016-02-03",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.14.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.13",
+      "name": "13",
+      "milestones": {
+        "ga": "2015-12-04",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.13",
+        "codename": null,
+        "label": "13",
+        "releaseDate": "2015-12-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "0.13.3",
+          "date": "2016-01-19",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.13.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.12",
+      "name": "12",
+      "milestones": {
+        "ga": "2015-10-20",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.12",
+        "codename": null,
+        "label": "12",
+        "releaseDate": "2015-10-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "0.12.1",
+          "date": "2015-10-22",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.12.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.11",
+      "name": "11",
+      "milestones": {
+        "ga": "2015-08-31",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.11",
+        "codename": null,
+        "label": "11",
+        "releaseDate": "2015-08-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "0.11.3",
+          "date": "2015-10-13",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.11.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.10",
+      "name": "10",
+      "milestones": {
+        "ga": "2015-07-31",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.10",
+        "codename": null,
+        "label": "10",
+        "releaseDate": "2015-07-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "0.10.4.1",
+          "date": "2015-08-27",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.10.4.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.9",
+      "name": "9",
+      "milestones": {
+        "ga": "2015-06-30",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.9",
+        "codename": null,
+        "label": "9",
+        "releaseDate": "2015-06-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "0.9.3",
+          "date": "2015-07-07",
+          "link": "https://github.com/metabase/metabase/releases/tag/v0.9.3"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/metabase/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-16T00:07:55+00:00"
+  }
+}

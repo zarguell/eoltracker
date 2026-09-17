@@ -1,0 +1,438 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "apache-pulsar",
+  "name": "Apache Pulsar",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:apache:pulsar"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Active Support",
+    "eoes": "Security Support"
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/apachepulsar.svg",
+    "html": "https://endoflife.date/apache-pulsar",
+    "releasePolicy": "https://pulsar.apache.org/contribute/release-policy/"
+  },
+  "releases": [
+    {
+      "id": "4.2",
+      "name": "4.2",
+      "milestones": {
+        "ga": "2026-03-24",
+        "eos": null,
+        "eossec": "2026-09-24",
+        "eol": "2026-09-24"
+      },
+      "upstream": {
+        "name": "4.2",
+        "codename": null,
+        "label": "4.2",
+        "releaseDate": "2026-03-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2026-09-24",
+        "isEoes": false,
+        "eoesFrom": "2026-09-24",
+        "isMaintained": true,
+        "latest": {
+          "name": "4.2.4",
+          "date": "2026-08-03",
+          "link": "https://pulsar.apache.org/release-notes/versioned/pulsar-4.2.4/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.1",
+      "name": "4.1",
+      "milestones": {
+        "ga": "2025-09-08",
+        "eos": null,
+        "eossec": "2026-03-08",
+        "eol": "2026-03-08"
+      },
+      "upstream": {
+        "name": "4.1",
+        "codename": null,
+        "label": "4.1",
+        "releaseDate": "2025-09-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-03-08",
+        "isEoes": true,
+        "eoesFrom": "2026-03-08",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.1.3",
+          "date": "2026-02-19",
+          "link": "https://pulsar.apache.org/release-notes/versioned/pulsar-4.1.3/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.0",
+      "name": "4.0 (LTS)",
+      "milestones": {
+        "ga": "2024-10-21",
+        "eos": null,
+        "eossec": "2027-10-21",
+        "eol": "2027-10-21"
+      },
+      "upstream": {
+        "name": "4.0",
+        "codename": null,
+        "label": "4.0 (LTS)",
+        "releaseDate": "2024-10-21",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2026-10-21",
+        "isEoes": false,
+        "eoesFrom": "2027-10-21",
+        "isMaintained": true,
+        "latest": {
+          "name": "4.0.13",
+          "date": "2026-08-03",
+          "link": "https://pulsar.apache.org/release-notes/versioned/pulsar-4.0.13/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.3",
+      "name": "3.3",
+      "milestones": {
+        "ga": "2024-06-05",
+        "eos": null,
+        "eossec": "2024-12-05",
+        "eol": "2024-12-05"
+      },
+      "upstream": {
+        "name": "3.3",
+        "codename": null,
+        "label": "3.3",
+        "releaseDate": "2024-06-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-12-05",
+        "isEoes": true,
+        "eoesFrom": "2024-12-05",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.3.9",
+          "date": "2025-09-27",
+          "link": "https://pulsar.apache.org/release-notes/versioned/pulsar-3.3.9/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.2",
+      "name": "3.2",
+      "milestones": {
+        "ga": "2024-02-05",
+        "eos": null,
+        "eossec": "2024-08-05",
+        "eol": "2024-08-05"
+      },
+      "upstream": {
+        "name": "3.2",
+        "codename": null,
+        "label": "3.2",
+        "releaseDate": "2024-02-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-08-05",
+        "isEoes": true,
+        "eoesFrom": "2024-08-05",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.2.4",
+          "date": "2024-08-01",
+          "link": "https://pulsar.apache.org/release-notes/versioned/pulsar-3.2.4/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.1",
+      "name": "3.1",
+      "milestones": {
+        "ga": "2023-08-10",
+        "eos": null,
+        "eossec": "2024-02-10",
+        "eol": "2024-02-10"
+      },
+      "upstream": {
+        "name": "3.1",
+        "codename": null,
+        "label": "3.1",
+        "releaseDate": "2023-08-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-02-10",
+        "isEoes": true,
+        "eoesFrom": "2024-02-10",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.1.3",
+          "date": "2024-03-08",
+          "link": "https://pulsar.apache.org/release-notes/versioned/pulsar-3.1.3/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.0",
+      "name": "3.0 (LTS)",
+      "milestones": {
+        "ga": "2023-05-02",
+        "eos": null,
+        "eossec": "2026-05-02",
+        "eol": "2026-05-02"
+      },
+      "upstream": {
+        "name": "3.0",
+        "codename": null,
+        "label": "3.0 (LTS)",
+        "releaseDate": "2023-05-02",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-05-02",
+        "isEoes": true,
+        "eoesFrom": "2026-05-02",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.0.17",
+          "date": "2026-04-27",
+          "link": "https://pulsar.apache.org/release-notes/versioned/pulsar-3.0.17/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.11",
+      "name": "2.11",
+      "milestones": {
+        "ga": "2023-01-11",
+        "eos": null,
+        "eossec": "2024-01-11",
+        "eol": "2024-01-11"
+      },
+      "upstream": {
+        "name": "2.11",
+        "codename": null,
+        "label": "2.11",
+        "releaseDate": "2023-01-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-01-11",
+        "isEoes": true,
+        "eoesFrom": "2024-01-11",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.11.4",
+          "date": "2024-03-08",
+          "link": "https://pulsar.apache.org/release-notes/versioned/pulsar-2.11.4/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.10",
+      "name": "2.10",
+      "milestones": {
+        "ga": "2022-04-18",
+        "eos": null,
+        "eossec": "2023-04-18",
+        "eol": "2023-04-18"
+      },
+      "upstream": {
+        "name": "2.10",
+        "codename": null,
+        "label": "2.10",
+        "releaseDate": "2022-04-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-04-18",
+        "isEoes": true,
+        "eoesFrom": "2023-04-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.10.6",
+          "date": "2024-03-08",
+          "link": "https://pulsar.apache.org/release-notes/versioned/pulsar-2.10.6/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.9",
+      "name": "2.9",
+      "milestones": {
+        "ga": "2021-12-20",
+        "eos": null,
+        "eossec": "2022-12-20",
+        "eol": "2022-12-20"
+      },
+      "upstream": {
+        "name": "2.9",
+        "codename": null,
+        "label": "2.9",
+        "releaseDate": "2021-12-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-12-20",
+        "isEoes": true,
+        "eoesFrom": "2022-12-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.9.5",
+          "date": "2023-04-20",
+          "link": "https://pulsar.apache.org/release-notes/versioned/pulsar-2.9.5/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.8",
+      "name": "2.8",
+      "milestones": {
+        "ga": "2021-06-15",
+        "eos": null,
+        "eossec": "2022-06-15",
+        "eol": "2022-06-15"
+      },
+      "upstream": {
+        "name": "2.8",
+        "codename": null,
+        "label": "2.8",
+        "releaseDate": "2021-06-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-06-15",
+        "isEoes": true,
+        "eoesFrom": "2022-06-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.8.4",
+          "date": "2022-10-04",
+          "link": "https://pulsar.apache.org/release-notes/versioned/pulsar-2.8.4/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.7",
+      "name": "2.7",
+      "milestones": {
+        "ga": "2020-12-03",
+        "eos": null,
+        "eossec": "2021-12-03",
+        "eol": "2021-12-03"
+      },
+      "upstream": {
+        "name": "2.7",
+        "codename": null,
+        "label": "2.7",
+        "releaseDate": "2020-12-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-12-03",
+        "isEoes": true,
+        "eoesFrom": "2021-12-03",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.7.5",
+          "date": "2022-09-06",
+          "link": "https://pulsar.apache.org/release-notes/versioned/pulsar-2.7.5/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.6",
+      "name": "2.6",
+      "milestones": {
+        "ga": "2020-06-17",
+        "eos": null,
+        "eossec": "2021-06-17",
+        "eol": "2021-06-17"
+      },
+      "upstream": {
+        "name": "2.6",
+        "codename": null,
+        "label": "2.6",
+        "releaseDate": "2020-06-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-06-17",
+        "isEoes": true,
+        "eoesFrom": "2021-06-17",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.6.4",
+          "date": "2021-06-02",
+          "link": "https://pulsar.apache.org/release-notes/versioned/pulsar-2.6.4/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.5",
+      "name": "2.5",
+      "milestones": {
+        "ga": "2020-01-15",
+        "eos": null,
+        "eossec": "2021-01-15",
+        "eol": "2021-01-15"
+      },
+      "upstream": {
+        "name": "2.5",
+        "codename": null,
+        "label": "2.5",
+        "releaseDate": "2020-01-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-01-15",
+        "isEoes": true,
+        "eoesFrom": "2021-01-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.5.2",
+          "date": "2020-05-19",
+          "link": "https://pulsar.apache.org/release-notes/versioned/pulsar-2.5.2/"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/apache-pulsar/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-08-04T00:06:36+00:00"
+  }
+}

@@ -1,0 +1,526 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "postfix",
+  "name": "Postfix",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "postfix"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:postfix:postfix"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:postfix:postfix"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/postfix",
+    "releasePolicy": "https://www.postfix.org/announcements.html"
+  },
+  "releases": [
+    {
+      "id": "3.11",
+      "name": "3.11",
+      "milestones": {
+        "ga": "2026-03-06",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.11",
+        "codename": null,
+        "label": "3.11",
+        "releaseDate": "2026-03-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "3.11.7",
+          "date": "2026-09-08",
+          "link": "https://www.postfix.org/announcements/postfix-3.11.0.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.10",
+      "name": "3.10",
+      "milestones": {
+        "ga": "2025-02-16",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.10",
+        "codename": null,
+        "label": "3.10",
+        "releaseDate": "2025-02-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "3.10.14",
+          "date": "2026-09-08",
+          "link": "https://www.postfix.org/announcements/postfix-3.10.0.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.9",
+      "name": "3.9",
+      "milestones": {
+        "ga": "2024-03-06",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.9",
+        "codename": null,
+        "label": "3.9",
+        "releaseDate": "2024-03-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "3.9.15",
+          "date": "2026-09-08",
+          "link": "https://www.postfix.org/announcements/postfix-3.9.2.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.8",
+      "name": "3.8",
+      "milestones": {
+        "ga": "2023-04-17",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.8",
+        "codename": null,
+        "label": "3.8",
+        "releaseDate": "2023-04-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "3.8.21",
+          "date": "2026-09-08",
+          "link": "https://www.postfix.org/announcements/postfix-3.9.2.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.7",
+      "name": "3.7",
+      "milestones": {
+        "ga": "2022-02-06",
+        "eos": null,
+        "eossec": "2026-03-06",
+        "eol": "2026-03-06"
+      },
+      "upstream": {
+        "name": "3.7",
+        "codename": null,
+        "label": "3.7",
+        "releaseDate": "2022-02-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-03-06",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.7.23",
+          "date": "2026-09-08",
+          "link": "https://www.postfix.org/announcements/postfix-3.9.2.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.6",
+      "name": "3.6",
+      "milestones": {
+        "ga": "2021-04-29",
+        "eos": null,
+        "eossec": "2025-02-16",
+        "eol": "2025-02-16"
+      },
+      "upstream": {
+        "name": "3.6",
+        "codename": null,
+        "label": "3.6",
+        "releaseDate": "2021-04-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-02-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.6.21",
+          "date": "2026-09-08",
+          "link": "https://www.postfix.org/announcements/postfix-3.9.2.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.5",
+      "name": "3.5",
+      "milestones": {
+        "ga": "2020-03-15",
+        "eos": null,
+        "eossec": "2024-03-06",
+        "eol": "2024-03-06"
+      },
+      "upstream": {
+        "name": "3.5",
+        "codename": null,
+        "label": "3.5",
+        "releaseDate": "2020-03-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-03-06",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.5.28",
+          "date": "2026-09-08",
+          "link": "https://www.postfix.org/announcements/postfix-3.8.6.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.4",
+      "name": "3.4",
+      "milestones": {
+        "ga": "2019-02-27",
+        "eos": null,
+        "eossec": "2023-04-17",
+        "eol": "2023-04-17"
+      },
+      "upstream": {
+        "name": "3.4",
+        "codename": null,
+        "label": "3.4",
+        "releaseDate": "2019-02-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-04-17",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.4.29",
+          "date": "2023-04-19",
+          "link": "https://www.postfix.org/announcements/postfix-3.7.5.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.3",
+      "name": "3.3",
+      "milestones": {
+        "ga": "2018-02-22",
+        "eos": null,
+        "eossec": "2022-02-05",
+        "eol": "2022-02-05"
+      },
+      "upstream": {
+        "name": "3.3",
+        "codename": null,
+        "label": "3.3",
+        "releaseDate": "2018-02-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-02-05",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.3.22",
+          "date": "2022-02-06",
+          "link": "https://www.postfix.org/announcements/postfix-3.6.5.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.2",
+      "name": "3.2",
+      "milestones": {
+        "ga": "2017-02-28",
+        "eos": null,
+        "eossec": "2021-04-29",
+        "eol": "2021-04-29"
+      },
+      "upstream": {
+        "name": "3.2",
+        "codename": null,
+        "label": "3.2",
+        "releaseDate": "2017-02-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-04-29",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.2.22",
+          "date": "2021-04-12",
+          "link": "https://www.postfix.org/announcements/postfix-3.5.10.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.1",
+      "name": "3.1",
+      "milestones": {
+        "ga": "2016-02-24",
+        "eos": null,
+        "eossec": "2020-03-15",
+        "eol": "2020-03-15"
+      },
+      "upstream": {
+        "name": "3.1",
+        "codename": null,
+        "label": "3.1",
+        "releaseDate": "2016-02-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-03-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.1.15",
+          "date": "2020-02-03",
+          "link": "https://www.postfix.org/announcements/postfix-3.4.9.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.0",
+      "name": "3.0",
+      "milestones": {
+        "ga": "2015-02-08",
+        "eos": null,
+        "eossec": "2019-02-27",
+        "eol": "2019-02-27"
+      },
+      "upstream": {
+        "name": "3.0",
+        "codename": null,
+        "label": "3.0",
+        "releaseDate": "2015-02-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-02-27",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.0.15",
+          "date": "2019-02-26",
+          "link": "https://www.postfix.org/announcements/postfix-3.3.3.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.11",
+      "name": "2.11",
+      "milestones": {
+        "ga": "2014-01-15",
+        "eos": null,
+        "eossec": "2018-02-21",
+        "eol": "2018-02-21"
+      },
+      "upstream": {
+        "name": "2.11",
+        "codename": null,
+        "label": "2.11",
+        "releaseDate": "2014-01-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-02-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.11.11",
+          "date": "2018-01-28",
+          "link": "https://www.postfix.org/announcements/postfix-3.2.5.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.10",
+      "name": "2.10",
+      "milestones": {
+        "ga": "2013-02-11",
+        "eos": null,
+        "eossec": "2017-02-28",
+        "eol": "2017-02-28"
+      },
+      "upstream": {
+        "name": "2.10",
+        "codename": null,
+        "label": "2.10",
+        "releaseDate": "2013-02-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-02-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.10.10",
+          "date": "2016-05-15",
+          "link": "https://www.postfix.org/announcements/postfix-3.1.1.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.9",
+      "name": "2.9",
+      "milestones": {
+        "ga": "2012-02-01",
+        "eos": null,
+        "eossec": "2016-02-24",
+        "eol": "2016-02-24"
+      },
+      "upstream": {
+        "name": "2.9",
+        "codename": null,
+        "label": "2.9",
+        "releaseDate": "2012-02-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2016-02-24",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.9.15",
+          "date": "2015-10-10",
+          "link": "https://www.postfix.org/announcements/postfix-3.0.3.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.8",
+      "name": "2.8",
+      "milestones": {
+        "ga": "2011-01-20",
+        "eos": null,
+        "eossec": "2015-02-08",
+        "eol": "2015-02-08"
+      },
+      "upstream": {
+        "name": "2.8",
+        "codename": null,
+        "label": "2.8",
+        "releaseDate": "2011-01-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2015-02-08",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.8.20",
+          "date": "2015-02-08",
+          "link": "https://www.postfix.org/announcements/postfix-2.11.4.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.6",
+      "name": "2.6",
+      "milestones": {
+        "ga": "2009-05-12",
+        "eos": null,
+        "eossec": "2013-02-11",
+        "eol": "2013-02-11"
+      },
+      "upstream": {
+        "name": "2.6",
+        "codename": null,
+        "label": "2.6",
+        "releaseDate": "2009-05-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2013-02-11",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.6.19",
+          "date": "2013-02-04",
+          "link": "https://www.postfix.org/announcements/postfix-2.9.6.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.5",
+      "name": "2.5",
+      "milestones": {
+        "ga": "2008-01-24",
+        "eos": null,
+        "eossec": "2012-02-06",
+        "eol": "2012-02-06"
+      },
+      "upstream": {
+        "name": "2.5",
+        "codename": null,
+        "label": "2.5",
+        "releaseDate": "2008-01-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2012-02-06",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.5.17",
+          "date": "2012-02-06",
+          "link": "https://www.postfix.org/announcements/postfix-2.7.8.html"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/postfix/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-09T00:07:20+00:00"
+  }
+}

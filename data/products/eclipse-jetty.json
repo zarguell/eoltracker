@@ -1,0 +1,429 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "eclipse-jetty",
+  "name": "Eclipse Jetty",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "jetty"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:maven/org.eclipse.jetty/jetty-server"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:eclipse:jetty"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:eclipse:jetty"
+    }
+  ],
+  "labels": {
+    "eoas": "Open Source Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": "Extended Support"
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/eclipsejetty.svg",
+    "html": "https://endoflife.date/eclipse-jetty",
+    "releasePolicy": "https://jetty.org/download.html"
+  },
+  "releases": [
+    {
+      "id": "12.1",
+      "name": "12.1",
+      "milestones": {
+        "ga": "2025-08-18",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "12.1",
+        "codename": null,
+        "label": "12.1",
+        "releaseDate": "2025-08-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isEoes": false,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "12.1.13",
+          "date": "2026-09-07",
+          "link": "https://github.com/jetty/jetty.project/releases/tag/jetty-12.1.13"
+        },
+        "custom": {
+          "minJvmVersion": "17",
+          "servletVersion": "3.1 - 6.1",
+          "jspVersion": "2.3 - 3.1"
+        }
+      }
+    },
+    {
+      "id": "12.0",
+      "name": "12.0",
+      "milestones": {
+        "ga": "2023-08-07",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "12.0",
+        "codename": null,
+        "label": "12.0",
+        "releaseDate": "2023-08-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isEoes": false,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "12.0.39",
+          "date": "2026-09-07",
+          "link": "https://github.com/jetty/jetty.project/releases/tag/jetty-12.0.39"
+        },
+        "custom": {
+          "minJvmVersion": "17",
+          "servletVersion": "3.1 - 6.0",
+          "jspVersion": "2.3 - 3.1"
+        }
+      }
+    },
+    {
+      "id": "11",
+      "name": "11",
+      "milestones": {
+        "ga": "2020-12-02",
+        "eos": null,
+        "eossec": "2025-01-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "11",
+        "codename": null,
+        "label": "11",
+        "releaseDate": "2020-12-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-01-01",
+        "isEol": true,
+        "eolFrom": "2025-01-01",
+        "isEoes": false,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "11.0.26",
+          "date": "2025-08-18",
+          "link": "https://github.com/jetty/jetty.project/releases/tag/jetty-11.0.26"
+        },
+        "custom": {
+          "minJvmVersion": "11",
+          "servletVersion": "5.0",
+          "jspVersion": "3.0"
+        }
+      }
+    },
+    {
+      "id": "10",
+      "name": "10",
+      "milestones": {
+        "ga": "2020-12-02",
+        "eos": null,
+        "eossec": "2025-01-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "10",
+        "codename": null,
+        "label": "10",
+        "releaseDate": "2020-12-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-01-01",
+        "isEol": true,
+        "eolFrom": "2025-01-01",
+        "isEoes": false,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "10.0.26",
+          "date": "2025-08-18",
+          "link": "https://github.com/jetty/jetty.project/releases/tag/jetty-10.0.26"
+        },
+        "custom": {
+          "minJvmVersion": "11",
+          "servletVersion": "4.0",
+          "jspVersion": "2.3"
+        }
+      }
+    },
+    {
+      "id": "9.4",
+      "name": "9.4",
+      "milestones": {
+        "ga": "2016-12-07",
+        "eos": null,
+        "eossec": "2025-08-14",
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.4",
+        "codename": null,
+        "label": "9.4",
+        "releaseDate": "2016-12-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-06-01",
+        "isEol": true,
+        "eolFrom": "2025-08-14",
+        "isEoes": false,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "9.4.58.v20250814",
+          "date": "2025-08-14",
+          "link": "https://github.com/jetty/jetty.project/releases/tag/jetty-9.4.58.v20250814"
+        },
+        "custom": {
+          "minJvmVersion": "1.8",
+          "servletVersion": "3.1",
+          "jspVersion": "2.3"
+        }
+      }
+    },
+    {
+      "id": "9.3",
+      "name": "9.3",
+      "milestones": {
+        "ga": "2015-06-01",
+        "eos": null,
+        "eossec": "2020-12-07",
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.3",
+        "codename": null,
+        "label": "9.3",
+        "releaseDate": "2015-06-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-12-07",
+        "isEol": true,
+        "eolFrom": "2020-12-07",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "9.3.30.v20211001",
+          "date": "2021-10-01",
+          "link": "https://github.com/jetty/jetty.project/releases/tag/jetty-9.3.30.v20211001"
+        },
+        "custom": {
+          "minJvmVersion": "1.8",
+          "servletVersion": "3.1",
+          "jspVersion": "2.3"
+        }
+      }
+    },
+    {
+      "id": "9.2",
+      "name": "9.2",
+      "milestones": {
+        "ga": "2014-05-23",
+        "eos": null,
+        "eossec": "2018-03-08",
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.2",
+        "codename": null,
+        "label": "9.2",
+        "releaseDate": "2014-05-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2018-03-08",
+        "isEol": true,
+        "eolFrom": "2018-03-08",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "9.2.30.v20200428",
+          "date": "2020-04-28",
+          "link": "https://github.com/jetty/jetty.project/releases/tag/jetty-9.2.30.v20200428"
+        },
+        "custom": {
+          "minJvmVersion": "1.7",
+          "servletVersion": "3.1",
+          "jspVersion": "2.3"
+        }
+      }
+    },
+    {
+      "id": "9.1",
+      "name": "9.1",
+      "milestones": {
+        "ga": "2013-11-15",
+        "eos": null,
+        "eossec": "2014-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.1",
+        "codename": null,
+        "label": "9.1",
+        "releaseDate": "2013-11-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2014-12-31",
+        "isEol": true,
+        "eolFrom": "2014-12-31",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "9.1.6.v20160112",
+          "date": "2016-01-12",
+          "link": "https://github.com/jetty/jetty.project/releases/tag/jetty-9.1.6.v20160112"
+        },
+        "custom": {
+          "minJvmVersion": "1.7",
+          "servletVersion": "3.1",
+          "jspVersion": "2.3"
+        }
+      }
+    },
+    {
+      "id": "9.0",
+      "name": "9.0",
+      "milestones": {
+        "ga": "2013-03-08",
+        "eos": null,
+        "eossec": "2013-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.0",
+        "codename": null,
+        "label": "9.0",
+        "releaseDate": "2013-03-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2013-12-31",
+        "isEol": true,
+        "eolFrom": "2013-12-31",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "9.0.7.v20131107",
+          "date": "2013-11-07",
+          "link": "https://github.com/jetty/jetty.project/releases/tag/jetty-9.0.7.v20131107"
+        },
+        "custom": {
+          "minJvmVersion": "1.7",
+          "servletVersion": "3.1-beta",
+          "jspVersion": "2.3"
+        }
+      }
+    },
+    {
+      "id": "8",
+      "name": "8",
+      "milestones": {
+        "ga": "2011-09-01",
+        "eos": null,
+        "eossec": "2014-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "8",
+        "codename": null,
+        "label": "8",
+        "releaseDate": "2011-09-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2014-12-31",
+        "isEol": true,
+        "eolFrom": "2014-12-31",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "8.2.0.v20160908",
+          "date": "2016-09-08",
+          "link": "https://github.com/jetty/jetty.project/releases/tag/jetty-8.2.0.v20160908"
+        },
+        "custom": {
+          "minJvmVersion": "1.6",
+          "servletVersion": "3.0",
+          "jspVersion": "2.2"
+        }
+      }
+    },
+    {
+      "id": "7",
+      "name": "7",
+      "milestones": {
+        "ga": "2009-10-05",
+        "eos": null,
+        "eossec": "2014-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7",
+        "codename": null,
+        "label": "7",
+        "releaseDate": "2009-10-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2014-12-31",
+        "isEol": true,
+        "eolFrom": "2014-12-31",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "7.6.21.v20160908",
+          "date": "2016-09-08",
+          "link": "https://github.com/jetty/jetty.project/releases/tag/jetty-7.6.21.v20160908"
+        },
+        "custom": {
+          "minJvmVersion": "1.5",
+          "servletVersion": "2.5",
+          "jspVersion": "2.1"
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/eclipse-jetty/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-08T00:07:27+00:00"
+  }
+}

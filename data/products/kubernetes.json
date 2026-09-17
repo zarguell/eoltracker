@@ -1,0 +1,678 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "kubernetes",
+  "name": "Kubernetes",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "purl",
+      "id": "pkg:github/kubernetes/kubernetes"
+    },
+    {
+      "type": "repology",
+      "id": "kubernetes"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:kubernetes:kubernetes"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Maintenance Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/kubernetes.svg",
+    "html": "https://endoflife.date/kubernetes",
+    "releasePolicy": "https://kubernetes.io/releases/patch-releases/"
+  },
+  "releases": [
+    {
+      "id": "1.37",
+      "name": "1.37",
+      "milestones": {
+        "ga": "2026-08-26",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.37",
+        "codename": null,
+        "label": "1.37",
+        "releaseDate": "2026-08-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": "2027-08-28",
+        "isEol": false,
+        "eolFrom": "2027-10-28",
+        "isMaintained": true,
+        "latest": {
+          "name": "1.37.0",
+          "date": "2026-08-26",
+          "link": "https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.37.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.36",
+      "name": "1.36",
+      "milestones": {
+        "ga": "2026-04-22",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.36",
+        "codename": null,
+        "label": "1.36",
+        "releaseDate": "2026-04-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": "2027-04-28",
+        "isEol": false,
+        "eolFrom": "2027-06-28",
+        "isMaintained": true,
+        "latest": {
+          "name": "1.36.4",
+          "date": "2026-08-20",
+          "link": "https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.36.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.35",
+      "name": "1.35",
+      "milestones": {
+        "ga": "2025-12-17",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.35",
+        "codename": null,
+        "label": "1.35",
+        "releaseDate": "2025-12-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": "2026-12-28",
+        "isEol": false,
+        "eolFrom": "2027-02-28",
+        "isMaintained": true,
+        "latest": {
+          "name": "1.35.8",
+          "date": "2026-08-20",
+          "link": "https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.35.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.34",
+      "name": "1.34",
+      "milestones": {
+        "ga": "2025-08-27",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.34",
+        "codename": null,
+        "label": "1.34",
+        "releaseDate": "2025-08-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-08-27",
+        "isEol": false,
+        "eolFrom": "2026-10-27",
+        "isMaintained": true,
+        "latest": {
+          "name": "1.34.11",
+          "date": "2026-08-20",
+          "link": "https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.34.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.33",
+      "name": "1.33",
+      "milestones": {
+        "ga": "2025-04-23",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.33",
+        "codename": null,
+        "label": "1.33",
+        "releaseDate": "2025-04-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-04-28",
+        "isEol": true,
+        "eolFrom": "2026-06-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.33.13",
+          "date": "2026-06-11",
+          "link": "https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.33.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.32",
+      "name": "1.32",
+      "milestones": {
+        "ga": "2024-12-11",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.32",
+        "codename": null,
+        "label": "1.32",
+        "releaseDate": "2024-12-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-12-28",
+        "isEol": true,
+        "eolFrom": "2026-02-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.32.13",
+          "date": "2026-02-26",
+          "link": "https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.32.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.31",
+      "name": "1.31",
+      "milestones": {
+        "ga": "2024-08-13",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.31",
+        "codename": null,
+        "label": "1.31",
+        "releaseDate": "2024-08-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-08-28",
+        "isEol": true,
+        "eolFrom": "2025-11-11",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.31.14",
+          "date": "2025-11-11",
+          "link": "https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.31.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.30",
+      "name": "1.30",
+      "milestones": {
+        "ga": "2024-04-17",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.30",
+        "codename": null,
+        "label": "1.30",
+        "releaseDate": "2024-04-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-04-28",
+        "isEol": true,
+        "eolFrom": "2025-07-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.30.14",
+          "date": "2025-06-17",
+          "link": "https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.30.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.29",
+      "name": "1.29",
+      "milestones": {
+        "ga": "2023-12-13",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.29",
+        "codename": null,
+        "label": "1.29",
+        "releaseDate": "2023-12-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-12-28",
+        "isEol": true,
+        "eolFrom": "2025-02-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.29.15",
+          "date": "2025-03-11",
+          "link": "https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.29.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.28",
+      "name": "1.28",
+      "milestones": {
+        "ga": "2023-08-15",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.28",
+        "codename": null,
+        "label": "1.28",
+        "releaseDate": "2023-08-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-08-28",
+        "isEol": true,
+        "eolFrom": "2024-10-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.28.15",
+          "date": "2024-10-22",
+          "link": "https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.27",
+      "name": "1.27",
+      "milestones": {
+        "ga": "2023-04-11",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.27",
+        "codename": null,
+        "label": "1.27",
+        "releaseDate": "2023-04-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-04-28",
+        "isEol": true,
+        "eolFrom": "2024-06-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.27.16",
+          "date": "2024-07-17",
+          "link": "https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.27.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.26",
+      "name": "1.26",
+      "milestones": {
+        "ga": "2022-12-08",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.26",
+        "codename": null,
+        "label": "1.26",
+        "releaseDate": "2022-12-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-12-28",
+        "isEol": true,
+        "eolFrom": "2024-02-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.26.15",
+          "date": "2024-03-14",
+          "link": "https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.26.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.25",
+      "name": "1.25",
+      "milestones": {
+        "ga": "2022-08-23",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.25",
+        "codename": null,
+        "label": "1.25",
+        "releaseDate": "2022-08-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-08-27",
+        "isEol": true,
+        "eolFrom": "2023-10-27",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.25.16",
+          "date": "2023-11-15",
+          "link": "https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.24",
+      "name": "1.24",
+      "milestones": {
+        "ga": "2022-05-03",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.24",
+        "codename": null,
+        "label": "1.24",
+        "releaseDate": "2022-05-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-05-28",
+        "isEol": true,
+        "eolFrom": "2023-07-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.24.17",
+          "date": "2023-08-23",
+          "link": "https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.24.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.23",
+      "name": "1.23",
+      "milestones": {
+        "ga": "2021-12-07",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.23",
+        "codename": null,
+        "label": "1.23",
+        "releaseDate": "2021-12-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-12-28",
+        "isEol": true,
+        "eolFrom": "2023-02-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.23.17",
+          "date": "2023-02-22",
+          "link": "https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.23.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.22",
+      "name": "1.22",
+      "milestones": {
+        "ga": "2021-08-04",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.22",
+        "codename": null,
+        "label": "1.22",
+        "releaseDate": "2021-08-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-08-28",
+        "isEol": true,
+        "eolFrom": "2022-10-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.22.17",
+          "date": "2022-12-08",
+          "link": "https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.22.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.21",
+      "name": "1.21",
+      "milestones": {
+        "ga": "2021-04-08",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.21",
+        "codename": null,
+        "label": "1.21",
+        "releaseDate": "2021-04-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-04-28",
+        "isEol": true,
+        "eolFrom": "2022-06-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.21.14",
+          "date": "2022-06-15",
+          "link": "https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.21.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.20",
+      "name": "1.20",
+      "milestones": {
+        "ga": "2020-12-08",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.20",
+        "codename": null,
+        "label": "1.20",
+        "releaseDate": "2020-12-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-12-28",
+        "isEol": true,
+        "eolFrom": "2022-02-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.20.15",
+          "date": "2022-01-19",
+          "link": "https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.20.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.19",
+      "name": "1.19",
+      "milestones": {
+        "ga": "2020-08-26",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.19",
+        "codename": null,
+        "label": "1.19",
+        "releaseDate": "2020-08-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-08-28",
+        "isEol": true,
+        "eolFrom": "2021-10-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.19.16",
+          "date": "2021-10-27",
+          "link": "https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.19.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.18",
+      "name": "1.18",
+      "milestones": {
+        "ga": "2020-03-25",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.18",
+        "codename": null,
+        "label": "1.18",
+        "releaseDate": "2020-03-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-04-28",
+        "isEol": true,
+        "eolFrom": "2021-06-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.18.20",
+          "date": "2021-06-16",
+          "link": "https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.18.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.17",
+      "name": "1.17",
+      "milestones": {
+        "ga": "2019-12-07",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.17",
+        "codename": null,
+        "label": "1.17",
+        "releaseDate": "2019-12-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-12-25",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.17.17",
+          "date": "2021-01-13",
+          "link": "https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.17.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.16",
+      "name": "1.16",
+      "milestones": {
+        "ga": "2019-09-18",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.16",
+        "codename": null,
+        "label": "1.16",
+        "releaseDate": "2019-09-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-08-04",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.16.15",
+          "date": "2020-09-02",
+          "link": "https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.16.md"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/kubernetes/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-08-29T09:47:48+00:00"
+  }
+}

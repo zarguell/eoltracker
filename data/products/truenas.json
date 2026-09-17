@@ -1,0 +1,162 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "truenas",
+  "name": "TrueNAS",
+  "category": "software",
+  "upstream_category": "os",
+  "identifiers": [],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/truenas.svg",
+    "html": "https://endoflife.date/truenas",
+    "releasePolicy": "https://www.truenas.com/docs/softwarestatus/"
+  },
+  "releases": [
+    {
+      "id": "25.10",
+      "name": "25.10 (Goldeye)",
+      "milestones": {
+        "ga": "2025-10-28",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "25.10",
+        "codename": "Goldeye",
+        "label": "25.10 (Goldeye)",
+        "releaseDate": "2025-10-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "25.10.6",
+          "date": "2026-08-12",
+          "link": "https://www.truenas.com/docs/scale/25.10/gettingstarted/versionnotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "25.04",
+      "name": "25.04 (Fangtooth)",
+      "milestones": {
+        "ga": "2025-04-15",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "25.04",
+        "codename": "Fangtooth",
+        "label": "25.04 (Fangtooth)",
+        "releaseDate": "2025-04-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "25.04.2.6",
+          "date": "2025-10-30",
+          "link": "https://www.truenas.com/docs/scale/25.04/gettingstarted/scalereleasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "24.10",
+      "name": "24.10 (Electric Eel)",
+      "milestones": {
+        "ga": "2024-10-29",
+        "eos": null,
+        "eossec": "2025-08-07",
+        "eol": "2025-08-07"
+      },
+      "upstream": {
+        "name": "24.10",
+        "codename": "Electric Eel",
+        "label": "24.10 (Electric Eel)",
+        "releaseDate": "2024-10-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-08-07",
+        "isMaintained": false,
+        "latest": {
+          "name": "24.10.2.4",
+          "date": "2025-08-07",
+          "link": "https://www.truenas.com/docs/scale/24.10/gettingstarted/scalereleasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "24.04",
+      "name": "24.04 (Dragonfish)",
+      "milestones": {
+        "ga": "2024-04-23",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "24.04",
+        "codename": "Dragonfish",
+        "label": "24.04 (Dragonfish)",
+        "releaseDate": "2024-04-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "24.04.2.5",
+          "date": "2024-11-08",
+          "link": "https://www.truenas.com/docs/scale/24.04/gettingstarted/scalereleasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "23.10",
+      "name": "23.10 (Cobia)",
+      "milestones": {
+        "ga": "2023-10-24",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "23.10",
+        "codename": "Cobia",
+        "label": "23.10 (Cobia)",
+        "releaseDate": "2023-10-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "23.10.2",
+          "date": "2024-02-22",
+          "link": "https://www.truenas.com/docs/scale/23.10/gettingstarted/scalereleasenotes/"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/truenas/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-08-23T15:37:25+00:00"
+  }
+}

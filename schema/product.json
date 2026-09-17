@@ -1,0 +1,186 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "title": "EOL Tracker normalized software record (not OpenEoX Core)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "id",
+    "name",
+    "category",
+    "upstream_category",
+    "identifiers",
+    "labels",
+    "links",
+    "releases",
+    "provenance"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://zarguell.github.io/eoltracker/v1/schema/product.json"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "category": {
+      "const": "software"
+    },
+    "upstream_category": {
+      "enum": [
+        "app",
+        "database",
+        "framework",
+        "lang",
+        "os",
+        "server-app",
+        "service",
+        "standard"
+      ]
+    },
+    "identifiers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "type",
+          "id"
+        ],
+        "properties": {
+          "type": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "labels": {
+      "type": "object",
+      "additionalProperties": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "links": {
+      "type": "object",
+      "additionalProperties": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "releases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "milestones",
+          "upstream"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string"
+          },
+          "milestones": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "ga",
+              "eos",
+              "eossec",
+              "eol"
+            ],
+            "properties": {
+              "ga": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date"
+              },
+              "eos": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date"
+              },
+              "eossec": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date"
+              },
+              "eol": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date"
+              }
+            }
+          },
+          "upstream": {
+            "type": "object",
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "name": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_url",
+        "verifier",
+        "last_checked",
+        "upstream_modified"
+      ],
+      "properties": {
+        "source_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "verifier": {
+          "const": "deterministic-endoflife-date-v1"
+        },
+        "last_checked": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "upstream_modified": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
+    }
+  }
+}

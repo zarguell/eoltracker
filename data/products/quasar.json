@@ -1,0 +1,90 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "quasar",
+  "name": "Quasar",
+  "category": "software",
+  "upstream_category": "framework",
+  "identifiers": [
+    {
+      "type": "purl",
+      "id": "pkg:npm/quasar"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "LTS support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/quasar.svg",
+    "html": "https://endoflife.date/quasar",
+    "releasePolicy": "https://github.com/quasarframework/quasar/blob/dev/ROADMAP.md#support-policy-and-schedule"
+  },
+  "releases": [
+    {
+      "id": "2",
+      "name": "2",
+      "milestones": {
+        "ga": "2021-06-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2",
+        "codename": null,
+        "label": "2",
+        "releaseDate": "2021-06-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "2.32.3",
+          "date": "2026-09-14",
+          "link": "https://github.com/quasarframework/quasar/releases/tag/quasar-v2.32.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1",
+      "name": "1",
+      "milestones": {
+        "ga": "2019-03-07",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1",
+        "codename": null,
+        "label": "1",
+        "releaseDate": "2019-03-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-04-01",
+        "isEol": true,
+        "eolFrom": "2023-06-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.22.10",
+          "date": "2023-05-05",
+          "link": "https://github.com/quasarframework/quasar/releases/tag/quasar-v1.22.10"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/quasar/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-15T00:08:08+00:00"
+  }
+}

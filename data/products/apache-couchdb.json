@@ -1,0 +1,164 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "apache-couchdb",
+  "name": "Apache CouchDB",
+  "category": "software",
+  "upstream_category": "database",
+  "identifiers": [
+    {
+      "type": "purl",
+      "id": "pkg:github/apache/couchdb"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/apache/couchdb"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/library/couchdb"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/bitnami/couchdb"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/rapidfort/couchdb-official"
+    },
+    {
+      "type": "repology",
+      "id": "couchdb"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:apache:couchdb"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/apachecouchdb.svg",
+    "html": "https://endoflife.date/apache-couchdb",
+    "releasePolicy": "https://docs.couchdb.org/en/stable/cve/index.html"
+  },
+  "releases": [
+    {
+      "id": "3.5",
+      "name": "3.5",
+      "milestones": {
+        "ga": "2025-05-05",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.5",
+        "codename": null,
+        "label": "3.5",
+        "releaseDate": "2025-05-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "3.5.2",
+          "date": "2026-05-14",
+          "link": "https://docs.couchdb.org/en/stable/whatsnew/3.5.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.4",
+      "name": "3.4",
+      "milestones": {
+        "ga": "2024-09-20",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.4",
+        "codename": null,
+        "label": "3.4",
+        "releaseDate": "2024-09-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "3.4.3",
+          "date": "2025-03-17",
+          "link": "https://docs.couchdb.org/en/stable/whatsnew/3.4.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.3",
+      "name": "3.3",
+      "milestones": {
+        "ga": "2022-12-28",
+        "eos": null,
+        "eossec": "2025-05-05",
+        "eol": "2025-05-05"
+      },
+      "upstream": {
+        "name": "3.3",
+        "codename": null,
+        "label": "3.3",
+        "releaseDate": "2022-12-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-05-05",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.3.3",
+          "date": "2023-12-04",
+          "link": "https://docs.couchdb.org/en/stable/whatsnew/3.3.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.2",
+      "name": "3.2",
+      "milestones": {
+        "ga": "2021-10-08",
+        "eos": null,
+        "eossec": "2024-09-20",
+        "eol": "2024-09-20"
+      },
+      "upstream": {
+        "name": "3.2",
+        "codename": null,
+        "label": "3.2",
+        "releaseDate": "2021-10-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-09-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.2.3",
+          "date": "2023-04-24",
+          "link": "https://docs.couchdb.org/en/stable/whatsnew/3.2.html"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/apache-couchdb/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-08-02T22:19:53+00:00"
+  }
+}
