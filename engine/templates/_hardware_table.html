@@ -145,7 +145,7 @@
     </thead>
     <tbody id="hardware-list">
       {% for model in hardware %}
-      <tr class="hardware-row hardware-row--{{ model.family or 'lifecycle' }}"
+      <tr class="hardware-row hardware-row--{{ 'catalog' if model.catalog.is_catalog else (model.family or 'lifecycle') }}"
           data-search="{{ model.search }}"
           data-vendor="{{ model.vendor }}"
           data-status="{{ model.status }}"
@@ -162,11 +162,11 @@
         <td class="hardware-vendor">{{ model.vendor }}</td>
         <td class="hardware-line">
           {{ model.product_line }}
-          {% if model.catalog.catalog %}<span class="release-raw">exact vendor model</span>
+          {% if model.catalog.is_catalog %}<span class="release-raw">exact vendor model</span>
           {% elif model.family %}<span class="release-raw">{{ model.family }} row</span>{% endif %}
         </td>
         <td class="hardware-catalog">
-          {% if model.catalog.catalog %}
+          {% if model.catalog.is_catalog %}
           {% if model.catalog.listed %}
           <span class="tag tag-listed">listed in catalog</span>
           {% else %}
@@ -192,7 +192,7 @@
         <td class="milestone{% if not value %} is-unknown{% endif %}">
           {% if value %}
           <time datetime="{{ value }}">{{ human_date(value) }}</time>
-          {% elif model.catalog.catalog and milestone.key == 'eol' %}
+          {% elif model.catalog.is_catalog and milestone.key == 'eol' %}
           <span class="unknown" title="No published lifecycle notice names this exact model, so no support end is known.">unknown</span>
           {% else %}
           <span class="unknown">unknown</span>

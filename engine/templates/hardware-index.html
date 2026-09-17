@@ -124,23 +124,110 @@
     </div>
     {% if import_report %}
     <div>
-      <dt>Opengear source rows</dt>
+      <dt>Collector accounting</dt>
       <dd>
-        {{ import_report.imported_count }} imported and {{ import_report.excluded_count }} excluded, out of
-        {{ import_report.imported_count + import_report.excluded_count }} rows read from
-        <a href="{{ import_report.source_url }}" rel="noopener">{{ import_report.source_url }}</a> on
-        {{ human_datetime(import_report.checked_at) }} by <code>{{ import_report.verifier }}</code>.
-        Scope: {{ import_report.record_scope }}.
+        The Opengear refresh published {{ import_report.imported_count }} records and excluded
+        {{ import_report.excluded_count }} source rows; the per-source breakdown is below. Its lifecycle tables were
+        read from <a href="{{ import_report.source_url }}" rel="noopener">{{ import_report.source_url }}</a> by
+        <code>{{ import_report.verifier }}</code> on {{ human_datetime(import_report.checked_at) }}, with the scope
+        it states: “{{ import_report.record_scope }}”
       </dd>
     </div>
     <div>
       <dt>Full report</dt>
-      <dd><a href="{{ url_for('v1/opengear-import.json') }}">v1/opengear-import.json</a> — every excluded row with the reason it was excluded, so a reader can disagree with the exclusions rather than take them on faith.</dd>
+      <dd><a href="{{ url_for('v1/opengear-import.json') }}">v1/opengear-import.json</a> — every excluded row with the reason it was excluded, and the counts below in machine-readable form, so a reader can disagree with the exclusions rather than take them on faith.</dd>
     </div>
+    {% if import_report.lifecycle %}
+    <div>
+      <dt>Lifecycle notices</dt>
+      <dd>
+        {{ import_report.lifecycle.rows }} notice rows read; {{ import_report.lifecycle.published_records }} became
+        records, of which {{ import_report.lifecycle.dated_records }} carry a published support deadline and
+        {{ import_report.lifecycle.unknown_date_records }} are announced retirements with no published deadline.
+        {{ import_report.lifecycle.excluded_rows }} rows were excluded.
+        {% if import_report.lifecycle.retained_absent %}
+        {{ import_report.lifecycle.retained_absent|length }} previously published
+        {{ 'record' if import_report.lifecycle.retained_absent|length == 1 else 'records' }} no longer appear in the
+        source and are retained rather than deleted; they stay in this catalog with their last published values.
+        {% endif %}
+        {% if import_report.lifecycle.announcements %}
+        {{ plural(import_report.lifecycle.announcements|length, 'announced retirement') }} states a retirement but
+        publishes no deadline; those dates are unknown here and none is inferred:
+        {% endif %}
+      </dd>
+    </div>
+    {% if import_report.lifecycle.announcements %}
+    <div>
+      <dt>Undated announcements</dt>
+      <dd>
+        <ul class="events">
+          {% for entry in import_report.lifecycle.announcements %}
+          <li>
+            <strong>{{ entry.name }}</strong>{% if entry.part_scope %} <code>{{ entry.part_scope }}</code>{% endif %} —
+            {{ entry.reason }}.
+            {% if entry.source_url %}<a href="{{ entry.source_url }}" rel="noopener">Notice</a>{% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </dd>
+    </div>
+    {% endif %}
+    {% endif %}
+    {% if import_report.catalog %}
+    <div>
+      <dt>Catalog readings</dt>
+      <dd>
+        The configurator was read for {{ import_report.catalog.expected_models }} exact model strings;
+        {{ import_report.catalog.listed }} are currently listed.
+        {{ import_report.catalog.matched_lifecycle }} match a published lifecycle notice on exact model string, and
+        {{ import_report.catalog.unmatched_lifecycle }} do not — for those, no support end is published anywhere in the
+        sources read, and none is inferred.
+        {% if import_report.catalog.retained_unlisted %}
+        {{ import_report.catalog.retained_unlisted }} previously listed models are retained with
+        <code>catalog.listed: false</code>; removal from a catalogue is not an end of sale or an end of support.
+        {% endif %}
+      </dd>
+    </div>
+    {% if import_report.catalog.unmatched_skus %}
+    <div>
+      <dt>Catalog models with no published support date</dt>
+      <dd>
+        These exact model strings are listed by the vendor and have no matching notice, so this catalog publishes no
+        support deadline for them:
+        {% for sku in import_report.catalog.unmatched_skus %}<code>{{ sku }}</code>{% if not loop.last %}, {% endif %}{% endfor %}.
+        The list comes from the collector's report, not from this page.
+      </dd>
+    </div>
+    {% endif %}
+    {% endif %}
+    {% if import_report.record_counts %}
+    <div>
+      <dt>Records by family</dt>
+      <dd>
+        {% for family, count in import_report.record_counts.items() %}{% if family not in ('added', 'retained', 'status_unknown') %}<span class="tag">{{ family }}</span> {{ count }}{% if not loop.last %}, {% endif %}{% endif %}{% endfor %}.
+        {{ import_report.record_counts.status_unknown }} records carry no support claim in either direction.
+        {% if import_report.record_counts.added %}
+        {{ import_report.record_counts.added|length }} were added by the latest refresh{% if import_report.record_counts.retained %}, and {{ import_report.record_counts.retained|length }} retained after disappearing from their source{% endif %}.
+        {% endif %}
+      </dd>
+    </div>
+    {% endif %}
+    {% if import_report.limitations %}
+    <div>
+      <dt>Stated limitations</dt>
+      <dd>
+        The collector records what this source cannot tell us, so the gaps are published rather than papered over:
+        <ul class="events">
+          {% for limitation in import_report.limitations %}<li>{{ limitation }}</li>{% endfor %}
+        </ul>
+      </dd>
+    </div>
+    {% endif %}
     {% if import_report.excluded %}
     <div>
       <dt>Exclusions</dt>
       <dd>
+        Source rows that are not published here, each with the collector's reason:
         <ul class="events">
           {% for entry in import_report.excluded %}
           <li><strong>{{ entry.product }}</strong>{% if entry.parts %} <code>{{ entry.parts }}</code>{% endif %} — {{ entry.reason }}</li>

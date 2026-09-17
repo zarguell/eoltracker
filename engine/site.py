@@ -411,6 +411,17 @@ def merge_links(values):
     return merged
 
 
+def is_catalog_record(record):
+    """True for an exact catalogue model.
+
+    The contract's marker is the presence of the optional `catalog` /
+    `lifecycle` fields — `family` naming the record `catalog` is the same fact
+    stated for readers. Presence decides, so a record is never treated as a
+    lifecycle row merely because its family is spelled differently.
+    """
+    return record.get("catalog") is not None or record.get("lifecycle") is not None
+
+
 def source_order(record):
     """The record's source pages, with the page it was actually read from first.
 
@@ -421,7 +432,7 @@ def source_order(record):
     ahead of the table the row was parsed from.
     """
     urls = list(record["provenance"]["source_urls"])
-    if record.get("family") == CATALOG_FAMILY:
+    if is_catalog_record(record):
         urls = [CONFIGURE_SOURCE_URL] + [url for url in urls if url != CONFIGURE_SOURCE_URL]
     return urls
 
@@ -445,6 +456,10 @@ def catalog_identity(record):
         listing = CATALOG_LISTING_STATES[0] if listed else CATALOG_LISTING_STATES[1]
     notice = CATALOG_NOTICE_STATES[0] if matched else CATALOG_NOTICE_STATES[1]
     return {
+        # `is_catalog` is false when the record carries neither optional field,
+        # which is how the pages tell a catalogue model apart from a lifecycle
+        # row without defaulting the fields to a listing state nobody stated.
+        "is_catalog": catalog is not None or lifecycle is not None,
         "catalog": catalog,
         "lifecycle": lifecycle,
         "listed": listed,
@@ -466,8 +481,9 @@ def opengear_index(records):
     catalogue model, so the pages can say which of the two they are doing.
     """
     opengear = [record for record in records if record["provenance"]["verifier"] == OPENGEAR_VERIFIER]
-    catalog = [record for record in opengear if record.get("family") == CATALOG_FAMILY]
-    lifecycle = [record for record in opengear if record.get("family") != CATALOG_FAMILY]
+    catalog = [record for record in opengear if is_catalog_record(record)]
+    catalog_ids = {record["id"] for record in catalog}
+    lifecycle = [record for record in opengear if record["id"] not in catalog_ids]
     catalog_by_id = {record["id"]: record for record in catalog}
     lifecycle_by_id = {record["id"]: record for record in lifecycle}
     # Exact model string -> the records that publish it. A model string with
@@ -535,8 +551,10 @@ def catalog_stats(records, hardware_index):
 def summarize_hardware(record, rows, today, hardware_index=None):
     next_events = upcoming_events([rows], today, limit=1, milestones=HARDWARE_MILESTONES)
     catalog = catalog_identity(record) if hardware_index else {
-        "catalog": None, "lifecycle": None, "listed": None, "listing": None,
-        "notice": None, "matched": False, "matches": [], "source_url": None, "state": None}
+        "is_catalog": is_catalog_record(record),
+        "catalog": record.get("catalog") or None, "lifecycle": record.get("lifecycle") or None,
+        "listed": None, "listing": None, "notice": None, "matched": False, "matches": [],
+        "source_url": None, "state": None}
     if hardware_index:
         matches = [{"id": rid, "name": hardware_index["lifecycle_by_id"][rid]["name"],
                     "url": site_url(f"hardware/{rid}/")}
@@ -549,7 +567,7 @@ def summarize_hardware(record, rows, today, hardware_index=None):
     catalog["unresolved_matches"] = [rid for rid in catalog["matches"] if rid not in {row["id"] for row in matches}]
     search = (f"{record['name']} {record['id']} {record['vendor']} {record['product_line']} "
               f"{record.get('family') or ''} {record.get('model_number') or ''}")
-    if catalog["catalog"]:
+    if catalog["is_catalog"]:
         search += " " + (catalog["listing"]["label"] if catalog["listing"] else "") + " " + catalog["notice"]["label"]
     return {
         "id": record["id"],

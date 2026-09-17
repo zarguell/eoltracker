@@ -28,6 +28,15 @@ authoritative technical brief; the [README](README.md) is the public overview.
    goes into its import report with a truthful, verifiable reason. Verify
    product classification against the vendor's own notice — never from the
    table the row sits in or its name.
+7. **Completion means the full picture, not a convenient subset.** For a
+   vendor lifecycle integration, cover the current product catalog, announced
+   retirements, and historical lifecycle records together. Reconcile their
+   model/part/revision scopes and account for every source row. Unknown dates
+   remain unknown; catalog presence is not support entitlement, and catalog
+   disappearance is not EOL. Verify discovery, refresh, transitions, API,
+   website, and feeds end to end before calling the integration complete.
+   Explicitly report source limitations; never present partial coverage as
+   complete merely because its parser and deployment succeed.
 
 ## Repository layout
 

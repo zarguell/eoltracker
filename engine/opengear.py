@@ -513,12 +513,16 @@ def source_report(report, catalog, unmatched, records, previous):
                                 and not record["catalog"]["listed"]), key=lambda entry: entry["id"])
     report["catalog"] = {
         "source_url": CONFIGURE_SOURCE, "models": len(catalog), "expected_models": CATALOG_MODELS,
+        # Every fresh configurator entry is listed and is either named by a
+        # lifecycle notice or not: listed == matched_lifecycle + unmatched_lifecycle.
         "listed": len([record for record in catalog if record["catalog"]["listed"]]),
-        "matched_lifecycle": sum(1 for record in catalog if record["lifecycle"]["matches"]),
+        "matched_lifecycle": len(catalog) - len(unmatched),
         "unmatched_lifecycle": len(unmatched),
         "unmatched_skus": unmatched,
-        "retained_unlisted": len(retained_unlisted),
-        "retained_unlisted_records": retained_unlisted,
+        # Records retained from earlier snapshots, no longer in the configurator:
+        # each is still published, with catalog.listed false.
+        "unlisted": len(retained_unlisted),
+        "retained_unlisted": retained_unlisted,
     }
     report["lifecycle"]["retained_absent"] = sorted(
         ({"id": record["id"], "name": record["name"], "family": record["family"]}

@@ -8,7 +8,7 @@
   </ol>
 </nav>
 
-{% set is_catalog = identity.catalog is not none %}
+{% set is_catalog = identity.is_catalog %}
 <section class="hero product-hero">
   <p class="eyebrow">{{ model.vendor }} · {{ model.category }}{% if is_catalog %} · vendor catalog model{% elif model.family %} · {{ model.family }} row{% endif %}</p>
   <h1 class="page-title">{{ model.name }}</h1>
@@ -26,7 +26,8 @@
   </p>
   <p class="hero-meta">
     {% if is_catalog %}
-    Catalog state <strong>{{ identity.listing.label }}</strong> · <strong>{{ identity.notice.label }}</strong>.
+    Catalog state <strong>{% if identity.listing %}{{ identity.listing.label }}{% else %}listing not stated{% endif %}</strong>
+    · <strong>{{ identity.notice.label }}</strong>.
     This record carries no support status of its own: the catalogue listing is not an entitlement, and its absence from
     a later catalogue is not an end-of-sale or end-of-support announcement.
     Verified {{ human_datetime(model.provenance.last_checked) }} by <code>{{ model.provenance.verifier }}</code>.
@@ -58,14 +59,22 @@
     <div>
       <dt>Catalog state</dt>
       <dd>
+        {% if identity.listing %}
         <span class="tag{% if identity.listed %} tag-listed{% else %} tag-absent{% endif %}">{{ identity.listing.label }}</span>
         — {{ identity.listing.detail }}
+        {% else %}
+        <span class="tag tag-neutral">Listing not stated</span>
+        — this record carries a notice state but no <code>catalog.listed</code> value, so which catalogue listed it is
+        unknown rather than assumed.
+        {% endif %}
       </dd>
     </div>
     <div>
       <dt>Capture history</dt>
       <dd>
-        {% if identity.listed %}
+        {% if not identity.listing %}
+        This record carries no listing state, so nothing is claimed about which catalogue lists it.
+        {% elif identity.listed %}
         Listed in the catalogue read for this build. This record survives a later disappearance: it is never renamed
         and never deleted when the catalogue stops listing the model.
         {% else %}
