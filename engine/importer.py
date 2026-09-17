@@ -39,15 +39,22 @@ def date_value(value):
 def milestones(release, labels):
     """Map only semantically explicit labels; retain all other dates upstream."""
     result = {"ga": date_value(release.get("releaseDate")), "eos": None, "eossec": None, "eol": None}
+    # Labels are vendor wording, compared in normalized form (case, hyphen and
+    # punctuation folded) so "End-of-life Date" and "End Of Life" match.
     mapping = {
         "security support": "eossec",
         "end of security support": "eossec",
         "end of sales": "eos",
         "end of sale": "eos",
         "end of life": "eol",
+        "end of life date": "eol",
+        "end of technical support": "eol",
+        "end of general support": "eol",
+        "end of support life": "eol",
+        "security and technical support": "eol",
     }
     for field in ("eoas", "discontinued", "eol", "eoes"):
-        label = (labels.get(field) or "").strip().lower()
+        label = re.sub(r"[^a-z0-9]+", " ", (labels.get(field) or "").strip().lower()).strip()
         target = mapping.get(label)
         if target:
             result[target] = date_value(release.get(field + "From"))
