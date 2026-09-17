@@ -1,0 +1,1146 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="types.html">
+      
+      
+        <link rel="next" href="../common/license.html">
+      
+      
+      <link rel="icon" href="../_static/favicon.ico">
+    
+    
+      
+        <title>End of life statements - PowerDNS Authoritative Server  documentation</title>
+      
+    
+    
+      
+        
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+        <link rel="stylesheet" type="text/css" href="../_static/sphinx_immaterial_theme.74c816e3f9967dd6e.min.css?v=6cfe2491" />
+        <link rel="stylesheet" type="text/css" href="../_static/changelog.css" />
+        <link rel="stylesheet" type="text/css" href="../_static/extra.css?v=ac4824b0" />
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="powerdns" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../indexTOC.html" title="PowerDNS Authoritative Server  documentation" class="md-header__button md-logo" aria-label="PowerDNS Authoritative Server  documentation" data-md-component="logo">
+      <img src="../_static/powerdns_logo_white_orange_rgb.png" alt="logo">
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PowerDNS Authoritative Server  documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              End of life statements
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../index.html" class="md-tabs__link">
+        
+  
+    
+  
+  <span>Overview</span>
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../operating.html" class="md-tabs__link">
+        
+  
+    
+  
+  <span>Getting Started</span>
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../features.html" class="md-tabs__link">
+        
+  
+    
+  
+  <span>Features</span>
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../guides/index.html" class="md-tabs__link">
+        
+  
+    
+  
+  <span>Guides and How Tos</span>
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../backends/index.html" class="md-tabs__link">
+        
+  
+    
+  
+  <span>Backends</span>
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../http-api/index.html" class="md-tabs__link">
+        
+  
+    
+  
+  <span>HTTP API</span>
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../settings.html" class="md-tabs__link">
+        
+  
+    
+  
+  <span>Configuration</span>
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../security.html" class="md-tabs__link">
+        
+  
+    
+  
+  <span>Security of Power<wbr>DNS</span>
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../changelog/index.html" class="md-tabs__link">
+        
+  
+    
+  
+  <span>Changelogs</span>
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="index.html" class="md-tabs__link">
+        
+  
+    
+  
+  <span>Appendices</span>
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../indexTOC.html" title="PowerDNS Authoritative Server  documentation" class="md-nav__button md-logo" aria-label="PowerDNS Authoritative Server  documentation" data-md-component="logo">
+      <img src="../_static/powerdns_logo_white_orange_rgb.png" alt="logo">
+    </a>
+    PowerDNS Authoritative Server  documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span>Overview</span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../operating.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span>Getting Started</span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../features.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span>Features</span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span>Guides and How Tos</span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../backends/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span>Backends</span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../http-api/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span>HTTP API</span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../settings.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span>Configuration</span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span>Security of Power<wbr>DNS</span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span>Changelogs</span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    <span>Appendices</span>
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_10" id="__nav_10_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            <span>Appendices</span>
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="internals.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span>Internals</span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="compiling.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span>Compiling Power<wbr>DNS</span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="backend-writers-guide.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span>Backend writers’ guide</span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="crypto-export.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span>Cryptographic software and export control</span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="FAQ.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span>Frequently Asked Questions</span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span>Supported Record Types</span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    <span>End of life statements</span>
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="#" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span>End of life statements</span>
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#powerdns-authoritative-server-3-x" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>Power<wbr>DNS Authoritative Server 3.<wbr>x</span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#powerdns-authoritative-server-2-x" class="md-nav__link">
+    
+    <span class="md-ellipsis">
+      <span>Power<wbr>DNS Authoritative Server 2.<wbr>x</span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../common/license.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span>Power<wbr>DNS/dnsdist license</span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manpages/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span>Manual Pages</span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security-advisories/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <span>Security Advisories</span>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset" role="main">
+                
+                
+                  
+
+
+<h1 id="end-of-life-statements">End of life statements<a class="headerlink" href="#end-of-life-statements" title="Link to this heading">¶</a></h1>
+<p>We aim to have a major release every six months.
+The latest major release train receives correctness, stability and security updates by the way of minor releases.
+PowerDNS Authoritative Server 4.9 and 5.0 continue to follow the existing release lifecycle described in the table below.
+Starting with PowerDNS Authoritative Server 5.1, release trains will receive critical updates for one year after the subsequent major release.</p>
+<p>Older releases are marked end of life and receive no updates at all.
+Pre-releases do not receive immediate security updates.</p>
+<p>The currently supported release train of PowerDNS Authoritative Server is 5.1.</p>
+<p>PowerDNS Authoritative Server 5.0 will only receive critical updates; it will be end of life after PowerDNS Authoritative Server 5.3 is released.</p>
+<p>PowerDNS Authoritative Server 4.9 will only receive critical updates; it will be end of life after PowerDNS Authoritative Server 5.2 is released.</p>
+<p>PowerDNS Authoritative Server 4.0 through 4.8, 3.x, and 2.x are End of Life.</p>
+<p>Please refer to the support <a class="reference external" href="https://www.powerdns.com/support-commitment">commitment</a> for details on which versions are supported.</p>
+<p>Note: Users with a commercial agreement with PowerDNS.com B.V. or Open-Xchange
+can receive support for releases which are End Of Life. If you are
+such a user, these EOL statements do not apply to you.</p>
+<p>Note that for the Open Source support channels, we only support the latest minor release of a release train.
+That means that we ask you to reproduce potential issues on the latest minor release first.</p>
+<table class="docutils data align-default" id="id1">
+<caption><span class="caption-text">PowerDNS Authoritative Server Release Life Cycle</span><a class="headerlink" href="#id1" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Version</p></th>
+<th class="head"><p>Release date</p></th>
+<th class="head"><p>Critical-Only updates</p></th>
+<th class="head"><p>End of Life</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>5.1</p></td>
+<td><p>3rd of June 2026</p></td>
+<td><p>~ January 2027</p></td>
+<td><p>~ January 2028</p></td>
+</tr>
+<tr class="row-odd"><td><p>5.0</p></td>
+<td><p>22nd of August 2025</p></td>
+<td><p>3rd of June 2026</p></td>
+<td><p>~ March 2027</p></td>
+</tr>
+<tr class="row-even"><td><p>4.9</p></td>
+<td><p>15th of March 2024</p></td>
+<td><p>22nd of August 2025</p></td>
+<td><p>~ September 2026</p></td>
+</tr>
+<tr class="row-odd"><td><p>4.8</p></td>
+<td><p>1st of June 2023</p></td>
+<td><p>15th of March 2024</p></td>
+<td><p>EOL June 2026</p></td>
+</tr>
+<tr class="row-even"><td><p>4.7</p></td>
+<td><p>20th of October 2022</p></td>
+<td><p>1st of June 2023</p></td>
+<td><p>EOL August 2025</p></td>
+</tr>
+<tr class="row-odd"><td><p>4.6</p></td>
+<td><p>January 2022</p></td>
+<td><p>October 2022</p></td>
+<td><p>EOL March 2024</p></td>
+</tr>
+<tr class="row-even"><td><p>4.5</p></td>
+<td><p>July 2021</p></td>
+<td><p>January 2022</p></td>
+<td><p>EOL June 2023</p></td>
+</tr>
+<tr class="row-odd"><td><p>4.4</p></td>
+<td><p>December 2020</p></td>
+<td><p>January 2022</p></td>
+<td><p>EOL October 2022</p></td>
+</tr>
+<tr class="row-even"><td><p>4.3</p></td>
+<td><p>April 2020</p></td>
+<td><p>April 2021</p></td>
+<td><p>EOL January 2022</p></td>
+</tr>
+<tr class="row-odd"><td><p>4.2</p></td>
+<td><p>August 2019</p></td>
+<td><p>December 2020</p></td>
+<td><p>EOL July 2021</p></td>
+</tr>
+<tr class="row-even"><td><p>4.1 and older</p></td>
+<td><p>EOL</p></td>
+<td><p>EOL</p></td>
+<td><p>EOL</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="powerdns-authoritative-server-3-x">PowerDNS Authoritative Server 3.x<a class="headerlink" href="#powerdns-authoritative-server-3-x" title="Link to this heading">¶</a></h2>
+<p>1st of December 2017</p>
+<p>The PowerDNS Authoritative Server 3.x releases are no longer supported, and
+will not receive any further updates, not even for security purposes.</p>
+<p>All users are urged to upgrade to the latest version.  To upgrade from 3.x or 4.x to 5.x,
+<a class="reference internal" href="../upgrading.html"><span class="doc">follow these instructions</span></a></p>
+<p>If you need help with upgrading, we provide <a class="reference external" href="https://www.powerdns.com/support-services-consulting.html">migration
+services</a>
+to our supported users. If you are currently running 3.x and need
+help to tide you over, we can also provide that as part of a <a class="reference external" href="https://www.powerdns.com/support-services-consulting.html">support
+agreement</a>.</p>
+<h2 id="powerdns-authoritative-server-2-x">PowerDNS Authoritative Server 2.x<a class="headerlink" href="#powerdns-authoritative-server-2-x" title="Link to this heading">¶</a></h2>
+<p>21st of May 2015 (updated January 2017)</p>
+<p>PowerDNS Authoritative Server 2.9.22 was released in January 2009.
+Because of its immense and durable popularity, some patch releases have
+been provided, the last one of which (2.9.22.6) was made available in
+January 2012.</p>
+<p>The 2.9.22.x series contains a number of probable and actual violations
+of the DNS standards. In addition, some behaviours of 2.9.22.x are
+standards conforming but cause interoperability problems today. Finally,
+2.9.22.4 and earlier are impacted by <a class="reference internal" href="../security-advisories/powerdns-advisory-2012-01.html"><span class="doc">PowerDNS Security Advisory 2012-01</span></a>,
+which means PowerDNS can be used in a Denial of Service attack.</p>
+<p>Although we have long been telling users that we can no longer support
+the use of 2.x, and urging upgrading, with this statement we formally
+declare 2.x end of life.</p>
+<p>This means that any 2.x issues will not be addressed. This has been the
+case for a long time, but with this statement we make it formal.</p>
+<p>To upgrade to 3.x, please consult the <a class="reference external" href="https://doc.powerdns.com/3/authoritative/upgrading/#29x-to-30">instructions on how to upgrade
+the database</a>.
+To upgrade from 3.x or 4.x to 5.x, <a class="reference internal" href="../upgrading.html"><span class="doc">follow these instructions</span></a>.
+If you need help with upgrading, we provide <a class="reference external" href="https://www.powerdns.com/support-services-consulting.html">migration
+services</a>
+to our supported users. If you are currently running 2.9.22 and need
+help to tide you over, we can also provide that as part of a <a class="reference external" href="https://www.powerdns.com/support-services-consulting.html">support
+agreement</a>.</p>
+<p>But we urge everyone to move on to PowerDNS Authoritative Server 5.x - it is a faster, more standards conforming and more powerful
+nameserver!</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  
+  
+  <div class="md-footer-meta md-typeset">
+    
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-footer-copyright__highlight">
+        &#169; Copyright PowerDNS.COM BV.
+        
+    </div>
+  
+    Created using
+    <a href="https://www.sphinx-doc.org/" target="_blank" rel="noopener">Sphinx</a>
+    8.2.3.
+     and
+    <a href="https://github.com/jbms/sphinx-immaterial/" target="_blank" rel="noopener">Sphinx-Immaterial</a>
+  
+</div>
+      
+    </div>
+    
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.tabs.link", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow", "toc.integrate"], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+      
+        <script src="../_static/sphinx_immaterial_theme.32136f45f91ae6956.min.js?v=a7a9472a"></script>
+    
+  </body>
+</html>

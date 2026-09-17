@@ -18,6 +18,12 @@ EOL Tracker ingests community lifecycle catalogs, normalizes their vendor-specif
 
 Everything is rebuilt and published by a scheduled GitHub Actions workflow; there is no server, no database, no cost. Git history is the audit trail: every milestone revision of every record is attributable and revertible.
 
+PowerDNS Authoritative lifecycle is refreshed with
+`python -m engine import-powerdns-authoritative`. Its 11 source scopes include
+the grouped “4.1 and older” row. Approximate dates remain raw evidence, definite
+months retain month precision, and critical-only updates are not support-end
+milestones. This community lifecycle does not describe commercial agreements.
+
 ## What differentiates it
 
 - **Hardware and software in one normalized schema.** Community sources are software-shaped or hardware-shaped; this catalog merges both under one milestone model (`ga` / `eos` / `eossec` / `eol`) with provenance on every record (`source_url`, `verifier`, `last_checked`, `upstream_modified`).
