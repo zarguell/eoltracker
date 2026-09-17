@@ -39,6 +39,7 @@ EOSL_DATE = "https://eosl.date/"
 EOSL_DATE_SITEMAP = "https://eosl.date/sitemap-coreapp-product-families.xml"
 OPENGEAR_LIFECYCLE = "https://opengear.com/end-life-products"
 OPENGEAR_CONFIGURE = "https://opengear.com/configure/"
+NVIDIA_VGPU_DOCS = "https://docs.nvidia.com/vgpu/index.html"
 
 # Attribution is published text (the site and the API docs print it verbatim):
 # eosl.date states no license for the data it republishes, so it is cited;
@@ -49,6 +50,8 @@ OPENGEAR_ATTRIBUTION = ("Lifecycle dates published directly by Opengear; grouped
                         "exceptions are retained below.")
 ENDOFLIFE_DATE_ATTRIBUTION = ("Software lifecycle data comes from endoflife.date, a community catalog of "
                               "public vendor lifecycle statements, used under its MIT license.")
+NVIDIA_ATTRIBUTION = ("NVIDIA vGPU software branch lifecycle published directly by NVIDIA; "
+                      "dates carry the month precision the vendor's table states.")
 # A researched record's verifier names a contributor, not a pipeline: the
 # registry leaves those to engine.contribute, which admits them against their
 # own stored citation.
@@ -159,6 +162,21 @@ SOURCES = (
         # refresh also publishes the per-row accounting sidecar below.
         validator="engine.opengear.validate_record",
         report="opengear-import.json",
+    ),
+    Source(
+        id="import-vgpu",
+        module="engine.vgpu",
+        entry="import_vgpu",
+        verifier="deterministic-nvidia-vgpu",
+        category="software",
+        name="NVIDIA vGPU docs",
+        url=NVIDIA_VGPU_DOCS,
+        pages=(Page(NVIDIA_VGPU_DOCS, "NVIDIA vGPU software lifecycle"),),
+        attribution=NVIDIA_ATTRIBUTION,
+        # Every stored milestone re-derives from the record's own stored cells,
+        # and the refresh accounts for every branch row it saw.
+        validator="engine.vgpu.validate_record",
+        report="vgpu-import.json",
     ),
 )
 

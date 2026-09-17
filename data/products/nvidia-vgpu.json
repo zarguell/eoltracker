@@ -1,0 +1,416 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "nvidia-vgpu",
+  "name": "NVIDIA vGPU",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [],
+  "labels": {},
+  "links": {
+    "html": "https://docs.nvidia.com/vgpu/index.html"
+  },
+  "releases": [
+    {
+      "id": "19",
+      "name": "NVIDIA vGPU 19",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2028-07"
+      },
+      "upstream": {
+        "name": "19.1",
+        "cells": {
+          "vGPU Software Release": "NVIDIA vGPU 19",
+          "Driver Branch": "R580",
+          "vGPU Branch Type": "Long-Term Support",
+          "Latest Release in Branch": "19.1",
+          "Release Date": "September 2025",
+          "EOL Date": "July 2028"
+        },
+        "table": "Active vGPU Software Releases"
+      }
+    },
+    {
+      "id": "18",
+      "name": "NVIDIA vGPU 18",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-03"
+      },
+      "upstream": {
+        "name": "18.4",
+        "cells": {
+          "vGPU Software Release": "NVIDIA vGPU 18",
+          "Driver Branch": "R570",
+          "vGPU Branch Type": "Production",
+          "Latest Release in Branch": "18.4",
+          "Release Date": "July 2025",
+          "EOL Date": "March 2026"
+        },
+        "table": "Active vGPU Software Releases"
+      }
+    },
+    {
+      "id": "17",
+      "name": "NVIDIA vGPU 17",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-06"
+      },
+      "upstream": {
+        "name": "17.6",
+        "cells": {
+          "vGPU Software Release": "NVIDIA vGPU 17",
+          "Driver Branch": "R550",
+          "vGPU Branch Type": "EOL Production",
+          "Latest Release in Branch": "17.6",
+          "Release Date": "April 2025",
+          "EOL Date": "June 2025"
+        },
+        "table": "Older vGPU Software Releases"
+      }
+    },
+    {
+      "id": "16",
+      "name": "NVIDIA vGPU 16",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-07"
+      },
+      "upstream": {
+        "name": "16.11",
+        "cells": {
+          "vGPU Software Release": "NVIDIA vGPU 16",
+          "Driver Branch": "R535",
+          "vGPU Branch Type": "Long-Term Support",
+          "Latest Release in Branch": "16.11",
+          "Release Date": "July 2025",
+          "EOL Date": "July 2026"
+        },
+        "table": "Active vGPU Software Releases"
+      }
+    },
+    {
+      "id": "15",
+      "name": "NVIDIA vGPU 15",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-12"
+      },
+      "upstream": {
+        "name": "15.4",
+        "cells": {
+          "vGPU Software Release": "NVIDIA vGPU 15",
+          "Driver Branch": "R525",
+          "vGPU Branch Type": "EOL Production",
+          "Latest Release in Branch": "15.4",
+          "Release Date": "October 2023",
+          "EOL Date": "December 2023"
+        },
+        "table": "Older vGPU Software Releases"
+      }
+    },
+    {
+      "id": "14",
+      "name": "NVIDIA vGPU 14",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-02"
+      },
+      "upstream": {
+        "name": "14.4",
+        "cells": {
+          "vGPU Software Release": "NVIDIA vGPU 14",
+          "Driver Branch": "R510",
+          "vGPU Branch Type": "EOL Production",
+          "Latest Release in Branch": "14.4",
+          "Release Date": "December 2022",
+          "EOL Date": "February 2023"
+        },
+        "table": "Older vGPU Software Releases"
+      }
+    },
+    {
+      "id": "13",
+      "name": "NVIDIA vGPU 13",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-08"
+      },
+      "upstream": {
+        "name": "13.12",
+        "cells": {
+          "vGPU Software Release": "NVIDIA vGPU 13",
+          "Driver Branch": "R470",
+          "vGPU Branch Type": "EOL Long-Term Support",
+          "Latest Release in Branch": "13.12",
+          "Release Date": "July 2024",
+          "EOL Date": "August 2024"
+        },
+        "table": "Older vGPU Software Releases"
+      }
+    },
+    {
+      "id": "12",
+      "name": "NVIDIA vGPU 12",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-01"
+      },
+      "upstream": {
+        "name": "12.4",
+        "cells": {
+          "vGPU Software Release": "NVIDIA vGPU 12",
+          "Driver Branch": "R460",
+          "vGPU Branch Type": "EOL Production",
+          "Latest Release in Branch": "12.4",
+          "Release Date": "October 2021",
+          "EOL Date": "January 2022"
+        },
+        "table": "Older vGPU Software Releases"
+      }
+    },
+    {
+      "id": "11",
+      "name": "NVIDIA vGPU 11",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-07"
+      },
+      "upstream": {
+        "name": "11.13",
+        "cells": {
+          "vGPU Software Release": "NVIDIA vGPU 11",
+          "Driver Branch": "R450",
+          "vGPU Branch Type": "EOL Long-Term Support",
+          "Latest Release in Branch": "11.13",
+          "Release Date": "June 2023",
+          "EOL Date": "July 2023"
+        },
+        "table": "Older vGPU Software Releases"
+      }
+    },
+    {
+      "id": "10",
+      "name": "NVIDIA vGPU 10",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-12"
+      },
+      "upstream": {
+        "name": "10.4",
+        "cells": {
+          "vGPU Software Release": "NVIDIA vGPU 10",
+          "Driver Branch": "R440",
+          "vGPU Branch Type": "EOL Production",
+          "Latest Release in Branch": "10.4",
+          "Release Date": "September 2020",
+          "EOL Date": "December 2020"
+        },
+        "table": "Older vGPU Software Releases"
+      }
+    },
+    {
+      "id": "9",
+      "name": "NVIDIA vGPU 9",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-06"
+      },
+      "upstream": {
+        "name": "9.4",
+        "cells": {
+          "vGPU Software Release": "NVIDIA vGPU 9",
+          "Driver Branch": "R430",
+          "vGPU Branch Type": "EOL Production",
+          "Latest Release in Branch": "9.4",
+          "Release Date": "June 2020",
+          "EOL Date": "June 2020"
+        },
+        "table": "Older vGPU Software Releases"
+      }
+    },
+    {
+      "id": "8",
+      "name": "NVIDIA vGPU 8",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-04"
+      },
+      "upstream": {
+        "name": "8.10",
+        "cells": {
+          "vGPU Software Release": "NVIDIA vGPU 8",
+          "Driver Branch": "R418",
+          "vGPU Branch Type": "EOL Long-Term Support",
+          "Latest Release in Branch": "8.10",
+          "Release Date": "January 2022",
+          "EOL Date": "April 2022"
+        },
+        "table": "Older vGPU Software Releases"
+      }
+    },
+    {
+      "id": "7",
+      "name": "NVIDIA vGPU 7",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2019-10"
+      },
+      "upstream": {
+        "name": "7.5",
+        "cells": {
+          "vGPU Software Release": "NVIDIA vGPU 7",
+          "Driver Branch": "R410",
+          "vGPU Branch Type": "EOL Production",
+          "Latest Release in Branch": "7.5",
+          "Release Date": "October 2019",
+          "EOL Date": "October 2019"
+        },
+        "table": "Older vGPU Software Releases"
+      }
+    },
+    {
+      "id": "6",
+      "name": "NVIDIA vGPU 6",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2019-03"
+      },
+      "upstream": {
+        "name": "6.4",
+        "cells": {
+          "vGPU Software Release": "NVIDIA vGPU 6",
+          "Driver Branch": "R390",
+          "vGPU Branch Type": "EOL",
+          "Latest Release in Branch": "6.4",
+          "Release Date": "February 2019",
+          "EOL Date": "March 2019"
+        },
+        "table": "Older vGPU Software Releases"
+      }
+    },
+    {
+      "id": "5",
+      "name": "NVIDIA vGPU 5",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2018-08"
+      },
+      "upstream": {
+        "name": "5.4",
+        "cells": {
+          "vGPU Software Release": "NVIDIA vGPU 5",
+          "Driver Branch": "R384",
+          "vGPU Branch Type": "EOL",
+          "Latest Release in Branch": "5.4",
+          "Release Date": "August 2018",
+          "EOL Date": "August 2018"
+        },
+        "table": "Older vGPU Software Releases"
+      }
+    },
+    {
+      "id": "4",
+      "name": "NVIDIA GRID 4",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-01"
+      },
+      "upstream": {
+        "name": "4.10",
+        "cells": {
+          "vGPU Software Release": "NVIDIA GRID 4",
+          "Driver Branch": "R367",
+          "vGPU Branch Type": "EOL",
+          "Latest Release in Branch": "4.10",
+          "Release Date": "January 2020",
+          "EOL Date": "January 2020"
+        },
+        "table": "Older vGPU Software Releases"
+      }
+    },
+    {
+      "id": "3",
+      "name": "NVIDIA GRID 3",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2019-04"
+      },
+      "upstream": {
+        "name": "3.4",
+        "cells": {
+          "vGPU Software Release": "NVIDIA GRID 3",
+          "Driver Branch": "R361",
+          "vGPU Branch Type": "EOL",
+          "Latest Release in Branch": "3.4",
+          "Release Date": "March 2017",
+          "EOL Date": "April 2019"
+        },
+        "table": "Older vGPU Software Releases"
+      }
+    },
+    {
+      "id": "2",
+      "name": "NVIDIA GRID 2",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2018-08"
+      },
+      "upstream": {
+        "name": "2.5",
+        "cells": {
+          "vGPU Software Release": "NVIDIA GRID 2",
+          "Driver Branch": "R352",
+          "vGPU Branch Type": "EOL",
+          "Latest Release in Branch": "2.5",
+          "Release Date": "March 2017",
+          "EOL Date": "August 2018"
+        },
+        "table": "Older vGPU Software Releases"
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://docs.nvidia.com/vgpu/index.html",
+    "verifier": "deterministic-nvidia-vgpu",
+    "last_checked": "2026-09-17T19:11:35Z",
+    "upstream_modified": null
+  }
+}

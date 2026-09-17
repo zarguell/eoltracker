@@ -10,6 +10,17 @@ them by date, and writes three equivalent representations below `_site`:
 * `v1/feed.rss`      RSS 2.0, one `item` per event.
 * `v1/calendar.ics`  RFC 5545, one all-day `VEVENT` per event.
 
+All three formats carry an *exact calendar day*: Atom and RSS stamp each item
+with an RFC 3339/RFC 822 date-time and iCalendar with a `VALUE=DATE` day. A
+milestone whose source states only a month (``YYYY-MM``) therefore cannot be
+represented without inventing a day (AGENTS.md rule 4), so those events are
+left out of the three documents and published instead, in full, in
+`v1/feed-exclusions.json`: every excluded event with its stable identity, its
+product, release, milestone and the month the source states, plus the reason
+its width is not representable. Nothing is silently dropped and no day is
+padded in. The two sets are disjoint halves of one upcoming window, so a
+consumer that wants every upcoming deadline reads the feed *and* that document.
+
 Identifiers are permanent. An event is named by a `tag:` URI (RFC 4151) and
 that same string is the iCalendar `UID`. The tagging entity is the project's
 own authority name and the year it was assigned it; per RFC 4151 the tagging
@@ -39,7 +50,8 @@ from urllib.parse import quote
 from xml.sax.saxutils import escape, quoteattr
 
 from .importer import ROOT
-from .site_config import MILESTONES, SITE_URL, human_date, site_url
+from .site_config import (MILESTONES, SCHEMA_VERSION, SITE_URL, human_date, is_month,
+                          published_period, site_url)
 
 DEFAULT_DATA = ROOT / "data"
 DEFAULT_OUT = ROOT / "_site"
@@ -68,6 +80,16 @@ FEED_PATHS = {
     "rss": Path("v1/feed.rss"),
     "ics": Path("v1/calendar.ics"),
 }
+EXCLUSIONS_PATH = Path("v1/feed-exclusions.json")
+# The published reason an upcoming event is not in the three documents. It is a
+# statement about the event's *width*, not about its validity: the milestone is
+# real and upcoming, and it is listed in full next to this sentence.
+MONTH_EXCLUSION_CODE = "month_precision_not_representable"
+MONTH_EXCLUSION_REASON = (
+    "The source states this milestone's month only (YYYY-MM), and Atom, RSS and iCalendar each "
+    "carry an exact calendar day. The event is published here with the month the source states "
+    "rather than padding it with a day the source never published."
+)
 
 # The milestone vocabulary is the published one: same keys, same labels as the
 # site, so a feed never renames what a page shows.
@@ -96,12 +118,22 @@ def _specific(value):
     return quote(str(value), safe="")
 
 
-def _event(product_id, product_name, release_id, release_name, milestone, value, url):
-    """One upcoming milestone as a stable id plus the text every format prints."""
+def _event(kind, product_id, product_name, release_id, release_name, milestone, value, url):
+    """One upcoming milestone as a stable id plus the text every format prints.
+
+    `kind` is the namespace half of the event's identity — `software` or
+    `hardware` — and is carried on the event because the exclusion document
+    names each excluded event by the same fields its identifier encodes.
+    """
     name = _clean(product_name)
     release = _clean(release_name) if release_name else None
     label = MILESTONE_LABELS[milestone]
     title = " ".join(part for part in (name, None if release == name else release, label) if part)
+    # A month-precision value is stated as the month it is ("July 2028") rather
+    # than dressed as a day; the parenthesized ISO value keeps the stored width
+    # legible either way.
+    human = human_date(value)
+    stated = f"{human} (month precision)" if is_month(value) else f"{human} ({value})"
     # Product id, release or model id, milestone key and the full milestone
     # date, hyphen joined:
     #   tag:eoltracker,2026:python-3.14-eol-2030-10-31
@@ -109,11 +141,17 @@ def _event(product_id, product_name, release_id, release_name, milestone, value,
     return {
         "id": TAG_PREFIX + specific,
         "date": value,
+        "month": is_month(value),
         "milestone": milestone,
         "label": label,
+        "kind": kind,
+        "product_id": product_id,
+        "product": name,
+        "release_id": release_id,
+        "release": release or name,
         "title": title,
         "url": url,
-        "summary": f"{title} on {human_date(value)} ({value}). Full lifecycle: {url}",
+        "summary": f"{title} on {stated}. Full lifecycle: {url}",
     }
 
 
@@ -129,7 +167,7 @@ def software_events(products):
                 if not value:
                     continue
                 events.append(_event(
-                    record["id"], record["name"], release["id"],
+                    "software", record["id"], record["name"], release["id"],
                     release.get("name") or release["id"], milestone, value, url,
                 ))
     return events
@@ -150,7 +188,7 @@ def hardware_events(hardware):
             value = record["milestones"].get(milestone)
             if not value:
                 continue
-            events.append(_event(record["id"], record["name"], model, model, milestone, value, url))
+            events.append(_event("hardware", record["id"], record["name"], model, model, milestone, value, url))
     return events
 
 
@@ -159,12 +197,16 @@ def upcoming_events(products, hardware=None, today=None):
 
     Raises `ValueError` if two events would mint one identifier: duplicate
     Atom `id`s, RSS `guid`s and iCalendar `UID`s would make the calendar merge
-    two different deadlines into one event.
+    two different deadlines into one event. The uniqueness check covers the
+    month-precision events too — they share the identifier space even though
+    only the exclusion document publishes them.
+
+    A month-precision event is upcoming for the whole month it covers, so it
+    drops out of the window only once that month has passed.
     """
     today = today or datetime.now(timezone.utc).date()
-    cutoff = today.isoformat()
     events = [event for event in software_events(products) + hardware_events(hardware)
-              if event["date"] >= cutoff]
+              if published_period(event["date"]) >= today]
     seen = {}
     for event in events:
         if event["id"] in seen:
@@ -173,6 +215,63 @@ def upcoming_events(products, hardware=None, today=None):
         seen[event["id"]] = event["title"]
     events.sort(key=lambda event: (event["date"], event["title"], event["id"]))
     return events
+
+
+def representable(events):
+    """Split upcoming events into ``(day_events, month_events)``, order preserved.
+
+    The three syndication formats carry an exact calendar day each; only the
+    day-precision events can be written to them without inventing a day. The
+    month-precision events are not dropped — they are what the exclusion
+    document publishes, so the two lists are disjoint and together cover every
+    upcoming event.
+    """
+    days = [event for event in events if not event["month"]]
+    months = [event for event in events if event["month"]]
+    return days, months
+
+
+def exclusions_document(months, day_count, updated):
+    """The machine-readable account of the upcoming events no feed can carry.
+
+    Written next to the three documents so a consumer reading `v1/feed.atom`
+    can discover, without guessing, which upcoming deadlines it does not
+    contain: the counts, the reason code and sentence, and every excluded event
+    with its stable identity, product, release, milestone and stored month.
+    """
+    return {
+        "schema_version": SCHEMA_VERSION,
+        "generated_at": _atom_stamp(updated),
+        "feeds": [str(path) for path in FEED_PATHS.values()],
+        "reason": {
+            "code": MONTH_EXCLUSION_CODE,
+            "statement": MONTH_EXCLUSION_REASON,
+            "precision": "month",
+        },
+        "counts": {
+            "upcoming_events": day_count + len(months),
+            "feeds": day_count,
+            "excluded": len(months),
+        },
+        "excluded": [
+            {
+                "id": event["id"],
+                "kind": event["kind"],
+                "product": event["product_id"],
+                "product_name": event["product"],
+                "release": event["release_id"],
+                "release_name": event["release"],
+                "milestone": event["milestone"],
+                "milestone_label": event["label"],
+                "month": event["date"],
+                "human": human_date(event["date"]),
+                "url": event["url"],
+                "code": MONTH_EXCLUSION_CODE,
+                "reason": MONTH_EXCLUSION_REASON,
+            }
+            for event in months
+        ],
+    }
 
 
 def generated_at(manifest=None):
@@ -199,12 +298,25 @@ def _ics_stamp(moment):
     return moment.strftime("%Y%m%dT%H%M%SZ")
 
 
+def _day_only(value, where):
+    """Refuse a month-precision value at a day-precision formatter.
+
+    The three syndication formats carry days; a caller that hands one a month
+    has already lost the information a day would need, so this fails loudly
+    rather than padding `-01` or raising a bare `ValueError` from `fromisoformat`.
+    """
+    if is_month(value):
+        raise ValueError(f"{where}: {value!r} is month precision; it has no calendar day to format")
+    return value
+
+
 def _ics_date(value):
-    return date.fromisoformat(value).strftime("%Y%m%d")
+    return date.fromisoformat(_day_only(value, "iCalendar DTSTART")).strftime("%Y%m%d")
 
 
 def _rfc822(value):
-    return format_datetime(datetime.fromisoformat(value).replace(tzinfo=timezone.utc), usegmt=True)
+    day = _day_only(value, "RSS pubDate")
+    return format_datetime(datetime.fromisoformat(day).replace(tzinfo=timezone.utc), usegmt=True)
 
 
 def _ics_text(value):
@@ -339,20 +451,29 @@ def build(products, hardware=None, out_dir=None, manifest=None):
     hardware records (`validate_hardware()`); both may be empty. `manifest` is
     the catalog manifest supplying `generated_at` for every feed timestamp;
     when omitted it is read from `data/manifest.json`, and failing that the
-    current UTC time is used. Returns the event count, the update timestamp as
-    Atom prints it, and the written paths.
+    current UTC time is used.
+
+    Only day-precision events reach the three documents; month-precision events
+    are written to `v1/feed-exclusions.json` instead, so the return value's
+    counts are split rather than a single total. Returns the day-event count as
+    `events`, the excluded month-event count as `excluded`, the update timestamp
+    as Atom prints it, and every written path.
     """
     out = Path(out_dir) if out_dir is not None else DEFAULT_OUT
     updated = generated_at(manifest)
-    events = upcoming_events(products, hardware)
+    days, months = representable(upcoming_events(products, hardware))
     documents = {
-        "atom": atom_feed(events, updated),
-        "rss": rss_feed(events, updated),
-        "ics": calendar_feed(events, updated),
+        "atom": atom_feed(days, updated),
+        "rss": rss_feed(days, updated),
+        "ics": calendar_feed(days, updated),
     }
     written = []
     for name, document in documents.items():
         path = out / FEED_PATHS[name]
         _write(path, document)
         written.append(str(path))
-    return {"events": len(events), "updated": _atom_stamp(updated), "files": written}
+    exclusions = out / EXCLUSIONS_PATH
+    _write(exclusions, json.dumps(exclusions_document(months, len(days), updated),
+                                  ensure_ascii=False, indent=2) + "\n")
+    written.append(str(exclusions))
+    return {"events": len(days), "excluded": len(months), "updated": _atom_stamp(updated), "files": written}

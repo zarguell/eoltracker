@@ -221,32 +221,33 @@
             ],
             "properties": {
               "ga": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "format": "date"
+                "description": "Calendar day (YYYY-MM-DD) or month precision (YYYY-MM) when the source publishes no day. A month is never padded to a day.",
+                "oneOf": [
+                  {"type": "null"},
+                  {"type": "string", "pattern": "^\\d{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12]\\d|3[01])$", "format": "date"},
+                  {"type": "string", "pattern": "^\\d{4}-(?:0[1-9]|1[0-2])$"}
+                ]
               },
               "eos": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "format": "date"
+                "oneOf": [
+                  {"type": "null"},
+                  {"type": "string", "pattern": "^\\d{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12]\\d|3[01])$", "format": "date"},
+                  {"type": "string", "pattern": "^\\d{4}-(?:0[1-9]|1[0-2])$"}
+                ]
               },
               "eossec": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "format": "date"
+                "oneOf": [
+                  {"type": "null"},
+                  {"type": "string", "pattern": "^\\d{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12]\\d|3[01])$", "format": "date"},
+                  {"type": "string", "pattern": "^\\d{4}-(?:0[1-9]|1[0-2])$"}
+                ]
               },
               "eol": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "format": "date"
+                "oneOf": [
+                  {"type": "null"},
+                  {"type": "string", "pattern": "^\\d{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12]\\d|3[01])$", "format": "date"},
+                  {"type": "string", "pattern": "^\\d{4}-(?:0[1-9]|1[0-2])$"}
+                ]
               }
             }
           },

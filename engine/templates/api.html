@@ -86,6 +86,41 @@
     </li>
   </ul>
 
+  <h3 class="sub-title">Upcoming deadlines and precision exclusions</h3>
+  <p class="panel-note">
+    The deadline feeds syndicate upcoming milestones only (<code>today &lt;= date</code>, UTC), as an Atom document, an
+    RSS document and an iCalendar file. All three carry an exact calendar day: Atom and RSS stamp each item with a
+    date-time and iCalendar with a <code>VALUE=DATE</code> day. A milestone whose source states only a month
+    (<code>YYYY-MM</code>) has no day to carry, and this catalog never invents one, so those events are not in the
+    three documents — they are enumerated, with their identity and the month the source states, in the exclusion
+    document below. Its entries are disjoint from the feeds' and together they cover every upcoming milestone.
+  </p>
+  <ul class="endpoints">
+    <li>
+      <a href="{{ url_for('v1/feed.atom') }}"><code>v1/feed.atom</code></a>
+      <span>RFC 4287. One <code>entry</code> per upcoming day-precision milestone.</span>
+    </li>
+    <li>
+      <a href="{{ url_for('v1/feed.rss') }}"><code>v1/feed.rss</code></a>
+      <span>RSS 2.0. The same events, each <code>guid</code> the event's permanent <code>tag:</code> identity.</span>
+    </li>
+    <li>
+      <a href="{{ url_for('v1/calendar.ics') }}"><code>v1/calendar.ics</code></a>
+      <span>RFC 5545. One all-day <code>VEVENT</code> per event, <code>UID</code> equal to the Atom id.</span>
+    </li>
+    <li>
+      <a href="{{ url_for('v1/feed-exclusions.json') }}"><code>v1/feed-exclusions.json</code></a>
+      <span>
+        Machine-readable accounting of the upcoming events the three documents do not carry:
+        <code>{counts: {upcoming_events, feeds, excluded}, reason: {code, statement, precision}, excluded: [...]}</code>.
+        Each excluded entry carries the event's stable <code>id</code>, its <code>kind</code> (software or hardware),
+        <code>product</code>, <code>release</code>, <code>milestone</code>, the stored <code>month</code> and the
+        <code>code</code> <code>month_precision_not_representable</code> with its reason. Nothing is dropped silently;
+        a consumer that wants every deadline reads the feeds and this document.
+      </span>
+    </li>
+  </ul>
+
   <h3 class="sub-title">Changes</h3>
   <p class="panel-note">
     {% if changes_available %}
@@ -181,8 +216,8 @@
     <div><dt><code>links</code></dt><dd>Upstream link object (icon, release policy, and so on), verbatim.</dd></div>
     <div><dt><code>releases[].id</code></dt><dd>The upstream release <code>name</code>, used as the release key.</dd></div>
     <div><dt><code>releases[].name</code></dt><dd>Display label for the release.</dd></div>
-    <div><dt><code>releases[].milestones</code></dt><dd>The four normalized dates: <code>ga</code>, <code>eos</code>, <code>eossec</code>, <code>eol</code>. Each is an ISO date or <code>null</code>; <code>null</code> means upstream publishes no date, never a guessed one.</dd></div>
-    <div><dt><code>releases[].upstream</code></dt><dd>The entire original upstream release object, so any normalized value can be audited against its source.</dd></div>
+    <div><dt><code>releases[].milestones</code></dt><dd>The four normalized dates: <code>ga</code>, <code>eos</code>, <code>eossec</code>, <code>eol</code>. Each is an ISO date (<code>YYYY-MM-DD</code>), a month (<code>YYYY-MM</code>) when the source states no day, or <code>null</code>; <code>null</code> means the source publishes no date, never a guessed one, and a month is never padded into a day.</dd></div>
+    <div><dt><code>releases[].upstream</code></dt><dd>The entire original upstream release object, so any normalized value can be audited against its source. A vendor collector stores that vendor's own declared columns under <code>upstream.cells</code> and the table they came from under <code>upstream.table</code>, so its record shows the source's wording rather than a mapping that does not apply to it.</dd></div>
     <div><dt><code>provenance</code></dt><dd><code>source_url</code>, <code>verifier</code> (pipeline revision), <code>last_checked</code> (UTC, per record), <code>upstream_modified</code> (or <code>null</code> when upstream publishes none).</dd></div>
     <div><dt><code>provenance.research</code></dt><dd>Optional, and present only on researched records — a record whose dates came from a one-time reading of a vendor notice because no refreshable catalog publishes them (see <em>Researched records</em> below for the fields and what the quotes must satisfy).</dd></div>
   </dl>
@@ -256,6 +291,12 @@
     a deadline, and every raw value stays in the record whether or not it was mapped.
   </p>
   <h3 class="sub-title">Software (endoflife.date)</h3>
+  <p class="panel-note">
+    The rules below describe the endoflife.date pipeline (<code>deterministic-endoflife-date-v1</code>) alone. A
+    software record published by a vendor collector carries that source's own <code>verifier</code> and states its
+    rows verbatim under <code>upstream.cells</code>; the label mapping below does not apply to it, and its product page
+    says so.
+  </p>
   <div class="table-scroll">
     <table class="release-table mapping-table">
       <thead>

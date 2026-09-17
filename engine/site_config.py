@@ -20,6 +20,7 @@ called and what a page prints for it, never what a date means.
 import json
 import re
 from datetime import date, datetime, timezone
+from calendar import monthrange
 from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
@@ -217,11 +218,92 @@ def site_url(path=""):
     return SITE_URL + str(path).lstrip("/")
 
 
+MONTH_NAMES = ("January", "February", "March", "April", "May", "June", "July",
+               "August", "September", "October", "November", "December")
+
+
+def month_value(value):
+    """The ``YYYY-MM`` of a month-precision value, else None.
+
+    Month precision is a published shape of its own (AGENTS.md rule 4): a
+    source that states "July 2028" states no day, so the value stays a month
+    everywhere rather than growing an invented one.
+    """
+    match = re.fullmatch(r"(\d{4})-(0[1-9]|1[0-2])", str(value)) if value else None
+    return (int(match.group(1)), int(match.group(2))) if match else None
+
+
+def is_month(value):
+    """True for a month-precision ``YYYY-MM`` value."""
+    return month_value(value) is not None
+
+
+def month_end(value):
+    """The last calendar day of a month-precision ``YYYY-MM`` value, else None.
+
+    A month covers every day it contains, so a comparison against "today" has
+    to use its own width — the month's end — rather than a day the source never
+    stated. `monthrange` also keeps February and leap years honest.
+    """
+    month = month_value(value)
+    if not month:
+        return None
+    year, number = month
+    return date(year, number, monthrange(year, number)[1])
+
+
 def human_date(value):
+    """A reader-facing date: ``Jul 15, 2028``, or ``July 2028`` at month precision.
+
+    The month form states no day because there is none to state — it is the
+    whole width of the value, not a truncation of a day that upstream published.
+    """
     if not value:
         return None
+    month = month_value(value)
+    if month:
+        year, number = month
+        return f"{MONTH_NAMES[number - 1]} {year}"
     parsed = date.fromisoformat(value)
     return f"{parsed.strftime('%b')} {parsed.day}, {parsed.year}"
+
+
+def published_period(value):
+    """The last day a published milestone covers: its day, or a month's own end."""
+    return month_end(value) or date.fromisoformat(value)
+
+
+def source_name_for(verifier):
+    """The published name of the registered source behind a record's verifier, else None.
+
+    Read from the registry rather than restated here, so a renamed or added
+    collector reaches the pages without a second list. A `researched-*` verifier
+    names a contributor, not a pipeline, so it resolves to None and is never
+    credited to a source that did not read the record.
+    """
+    found = sources.sources_for(verifier)
+    return found[0].name if found else None
+
+
+def source_attribution_for(verifier):
+    """The credit sentence published for a record's source, or an empty string."""
+    found = sources.sources_for(verifier)
+    return found[0].attribution if found else ""
+
+
+def endoflife_date_record(verifier):
+    """True when a software record's dates come from the endoflife.date label mapping.
+
+    The label rules and the extended-support legend describe that one pipeline,
+    so a vendor collector's own record must not claim them. Read from the
+    registry, so a renamed or added software source needs no change here.
+    """
+    return verifier == SOFTWARE_SOURCE.verifier
+
+
+def source_link(url):
+    """A source page as `{url, label}`, labelled by the registry when it knows it."""
+    return {"url": url, "label": sources.source_label(url)} if url else None
 
 
 def human_datetime(value):
@@ -264,6 +346,15 @@ env.globals.update(
     human_datetime=human_datetime,
     human_stamp=human_stamp,
     plural=plural,
+    # Month-precision helpers (AGENTS.md rule 4): a value that states a month is
+    # never padded to a day, so the width of a published date is a template fact.
+    is_month=is_month,
+    month_end=month_end,
+    published_period=published_period,
+    source_link=source_link,
+    source_name_for=source_name_for,
+    source_attribution_for=source_attribution_for,
+    endoflife_date_record=endoflife_date_record,
     base_path=BASE_PATH,
     repository_url=REPOSITORY_URL,
     source_name=SOFTWARE_SOURCE.name,

@@ -6,6 +6,13 @@ chronological mandatory tests 7.1.1 and 7.1.3 of the specification hold. Every
 other release is listed in the index with a machine-readable reason, so nothing
 is guessed, invented as ``tba``, or dropped silently.
 
+Month precision is one of those reasons. OpenEoX Core properties are RFC 3339
+date-times of a stated day, so a release whose source states only a month
+(``YYYY-MM``) has no day to publish; it is excluded under
+``<property>_month_precision`` rather than padded, and the unknown month is
+never widened into a deadline. That is a different claim from an absent date:
+the source *did* announce a deadline, at a width this format cannot carry.
+
 The records carry no product identity: OpenEoX Core deliberately has no product,
 vendor or version properties, so the product and release are bound through the
 record's URL and through ``index.json`` next to it.
@@ -26,6 +33,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from jsonschema import Draft202012Validator, FormatChecker
+
+from .site_config import is_month
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE_BASE = "https://zarguell.github.io/eoltracker"
@@ -156,7 +165,17 @@ def _chronology_errors(record):
 
 
 def _milestones(product_id, release_id, milestones):
-    """Map catalog milestones to catalog dates, rejecting anything not a day."""
+    """Map catalog milestones to catalog dates, or report why they are unusable.
+
+    Returns ``(days, exclusion)``. ``days`` maps OpenEoX property names to
+    calendar days; ``exclusion`` is the machine-readable reason the release has
+    no usable milestone set at all, or None. A month-precision milestone is
+    *not* a day: OpenEoX Core's ``general_availability`` and end-of-* properties
+    are RFC 3339 date-times of a stated day, so publishing "July 2028" would
+    mean inventing the day AGENTS.md rule 4 forbids. Such a release is excluded
+    with its own code — never padded, never silently dropped, and never given
+    the ``tba`` value.
+    """
     if not isinstance(milestones, dict):
         raise ValueError(f"Release {product_id}/{release_id} has no milestones object")
     days = dict.fromkeys(FIELDS)
@@ -164,11 +183,22 @@ def _milestones(product_id, release_id, milestones):
         value = milestones.get(key)
         if value is None:
             continue
-        if not isinstance(value, str) or not DATE.fullmatch(value):
+        if not isinstance(value, str):
+            raise ValueError(f"Release {product_id}/{release_id} milestone {key} is not a date: {value!r}")
+        if is_month(value):
+            return None, {
+                "product": product_id,
+                "release": release_id,
+                "code": f"{field}_month_precision",
+                "reason": f"The source states {field} as the month {value}, not a day. OpenEoX Core "
+                "requires a date-time of a stated day, so this release is not exported rather than "
+                "having a day invented for it.",
+            }
+        if not DATE.fullmatch(value):
             raise ValueError(f"Release {product_id}/{release_id} milestone {key} is not a date: {value!r}")
         datetime.strptime(value, "%Y-%m-%d")
         days[field] = value
-    return days
+    return days, None
 
 
 def _last_updated(product_id, provenance):
@@ -195,7 +225,12 @@ def _last_updated(product_id, provenance):
 def _record(product_id, release, last_updated):
     """Return (record, None) for a publishable release or (None, exclusion)."""
     release_id = release["id"]
-    days = _milestones(product_id, release_id, release.get("milestones"))
+    days, month = _milestones(product_id, release_id, release.get("milestones"))
+    if month:
+        # The exclusion is built before the release's name so the index entry
+        # carries the same identity fields as every other exclusion row.
+        return None, {"product": product_id, "release": release_id,
+                      "release_name": release.get("name") or release_id, **month}
     unknown = [field for field in REQUIRED if days[field] is None]
     if unknown:
         field = unknown[0]
@@ -314,6 +349,10 @@ def _index(entries, exclusions, counts):
             "unknown_values": "The value 'tba' is never emitted. A milestone the source does not state is omitted "
             "when OpenEoX makes it optional, and the release is excluded with its reason when OpenEoX requires it "
             "(end_of_security_support, end_of_life).",
+            "month_precision": "OpenEoX Core properties are date-times of a stated calendar day. A release whose "
+            "source states a milestone as a month (YYYY-MM) is excluded under the code "
+            "'<property>_month_precision' rather than having a day invented for it, so no record here carries a "
+            "day the source never published.",
             "last_updated": "Taken from the upstream revision timestamp of the source record, falling back to its "
             "last checked time; unchanged source content keeps the same value across builds.",
             "excluded": "Releases without a record are listed under 'excluded' with a machine-readable code and a "

@@ -148,17 +148,20 @@ def import_data(directory=None):
             # can check the manifest describes a pipeline this checkout installs.
             "source": "import-data",
         })
-        # Researched records (AGENTS.md rule 8 tier b) are never in the upstream
-        # listing, so this refresh cannot re-derive them — but they are part of
-        # the catalog it must not break. Carrying the committed ones into the
-        # staged snapshot validates what is about to be published and keeps the
-        # refresh complete-or-nothing: an invalid one aborts the whole run
-        # instead of being dropped or silently overwritten.
+        # Records this refresh does not own — another registered source's own
+        # shard of the software catalog (a vendor collector's branches) and
+        # researched contributions (AGENTS.md rule 8 tier b) — are not in the
+        # upstream listing, so this refresh cannot re-derive them. Every
+        # committed record whose verifier is not this source's is carried into
+        # the staged snapshot verbatim: validate_data then checks what is about
+        # to be published, keeping the refresh complete-or-nothing, while the
+        # bytes and revision time of a record this source does not own survive
+        # untouched instead of being dropped or rewritten.
         committed = destination / "products"
-        for file in committed.glob("*.json") if committed.exists() else ():
+        for file in sorted(committed.glob("*.json")) if committed.exists() else ():
             if (staged / "products" / file.name).exists():
                 continue
-            if "research" in json.loads(file.read_text())["provenance"]:
+            if json.loads(file.read_text())["provenance"]["verifier"] != VERIFIER:
                 shutil.copyfile(file, staged / "products" / file.name)
         validate_data(staged)
         destination.mkdir(exist_ok=True)

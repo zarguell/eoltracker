@@ -30,7 +30,7 @@ from .site_views import (catalog_categories, catalog_identity, catalog_stats, ha
                          research_count, research_view, RESEARCH_STALE_DAYS, summarize,
                          summarize_hardware, upcoming_events)
 from .importer import ROOT
-from . import contribute
+from . import contribute, sources
 from .validation import validate_data, validate_hardware
 def render(template, **context):
     return env.get_template(template).render(**context)
@@ -52,12 +52,8 @@ def build(data_dir=None, out_dir=None):
     records = validate_data(data_dir)
     hardware = validate_hardware(data_dir)
     manifest = json.loads((data_dir / "manifest.json").read_text(encoding="utf-8"))
-    # The manifest counts the endoflife.date snapshot, which is rewritten from
-    # upstream by import-data and knows nothing about researched records, so it
-    # is compared against the deterministic records alone.
-    deterministic = contribute.deterministic_records(records)
-    if manifest["product_count"] != len(deterministic):
-        raise ValueError(f"Manifest advertises {manifest['product_count']} products, found {len(deterministic)}")
+    # validate_data checks the manifest against its owning source only;
+    # other deterministic sources and researched records are additive.
     # The manifest may predate the hardware catalog, so its count is advisory.
     if manifest.get("hardware_count", len(hardware)) != len(hardware):
         raise ValueError(f"Manifest advertises {manifest['hardware_count']} hardware models, found {len(hardware)}")
@@ -81,16 +77,17 @@ def build(data_dir=None, out_dir=None):
     for schema_file in schema_files:
         shutil.copyfile(schema_file, out / "v1" / "schema" / schema_file.name)
 
-    feed = {"schema_version": SCHEMA_VERSION, **manifest, "products": records,
-            # `product_count` in the manifest counts the refreshable upstream
-            # snapshot; the array below also carries researched records, so the
-            # difference is stated rather than left for a consumer to guess.
-            "researched_count": research_count(records)}
+    catalog_counts = {
+        "product_count": len(records),
+        "release_count": sum(len(record["releases"]) for record in records),
+        "researched_count": research_count(records),
+    }
+    feed = {"schema_version": SCHEMA_VERSION, **manifest, **catalog_counts, "products": records}
     write_json(out / "v1" / "feed.json", feed)
     rows_by_id = {record["id"]: release_rows(record) for record in records}
     summaries = [summarize(record, rows_by_id[record["id"]], today) for record in records]
-    write_json(out / "v1" / "products.json", {"schema_version": SCHEMA_VERSION, **manifest, "products": summaries,
-                                              "researched_count": research_count(records)})
+    write_json(out / "v1" / "products.json", {
+        "schema_version": SCHEMA_VERSION, **manifest, **catalog_counts, "products": summaries})
     (out / "v1" / "products").mkdir(parents=True)
     for record in records:
         shutil.copyfile(data_dir / "products" / f"{record['id']}.json", out / "v1" / "products" / f"{record['id']}.json")
@@ -144,9 +141,9 @@ def build(data_dir=None, out_dir=None):
         "vendor_count": len(vendor_shards),
         "vendors": [{key: shard[key] for key in ("vendor", "slug", "count", "shard", "url")}
                     for shard in vendor_shards]})
-    opengear_report = data_dir / "opengear-import.json"
-    if opengear_report.exists():
-        shutil.copyfile(opengear_report, out / "v1" / "opengear-import.json")
+    for source in sources.all_sources():
+        if source.report and (data_dir / source.report).exists():
+            shutil.copyfile(data_dir / source.report, out / "v1" / source.report)
     # The changes ledger and its Atom feed are produced by the changes module
     # against the previous records; the site only republishes what is on disk.
     # When no ledger has been recorded yet there is no history to link to, so
@@ -184,6 +181,7 @@ def build(data_dir=None, out_dir=None):
     # The import report is the collector's own account of what it read and what
     # it dropped; republished verbatim so the hardware page can show coverage
     # without restating it in prose the reader cannot check.
+    opengear_report = data_dir / "opengear-import.json"
     report = json.loads(opengear_report.read_text(encoding="utf-8")) if opengear_report.exists() else None
     common = {
         "manifest": manifest,
@@ -325,7 +323,7 @@ def build(data_dir=None, out_dir=None):
             canonical=site_url(f"products/{record['id']}/"),
             title=f"{record['name']} lifecycle dates — EOL Tracker",
             description=(f"General availability, end-of-sale, security-support and end-of-life dates for every "
-                         f"{record['name']} release, with raw endoflife.date values and provenance."),
+                         f"{record['name']} release, with raw source values and provenance."),
             product=record,
             releases=rows,
             coverage=milestone_coverage(rows),
@@ -337,6 +335,10 @@ def build(data_dir=None, out_dir=None):
             json_url=url_for(f"v1/products/{record['id']}.json"),
             json_abs=site_url(f"v1/products/{record['id']}.json"),
             upstream_url=record["provenance"]["source_url"],
+            software_source_name=source_name(record["provenance"]["verifier"]),
+            software_source_attribution=source_attribution(record["provenance"]["verifier"]),
+            software_source_links=source_links([record["provenance"]["source_url"]]),
+            software_pipeline=(record["provenance"]["verifier"] == sources.source("import-data").verifier),
             research=research_view(record, today),
         ))
 

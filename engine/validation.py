@@ -74,20 +74,24 @@ def validate_hardware(directory=None):
         if ga and eol and eol < ga:
             raise ValueError(f"Hardware chronology violation: {file}: eol {eol} < ga {ga}")
         records.append(record)
-    check_source_reports(directory, owned)
+    check_source_reports(directory, owned, "hardware")
     return records
 
 
-def check_source_reports(directory, owned):
+def check_source_reports(directory, owned, category):
     """Every source's sidecar must account for the records it owns.
 
     A source that publishes a per-row accounting sidecar states how many
     records its refresh wrote (``total_records``); that number is the one thing
     a reader of the report can check against the catalog it describes, so a
     sidecar that disagrees with the committed records fails validation instead
-    of claiming coverage the catalog does not show.
+    of claiming coverage the catalog does not show. Only the sources of
+    ``category`` are checked: each catalog directory holds both catalogs'
+    records at once, and neither validation pass owns the other's sidecars.
     """
     for source in sources.all_sources():
+        if source.category != category:
+            continue
         if not source.report or not (directory / source.report).exists():
             continue
         if source.verifier not in owned:
@@ -108,6 +112,7 @@ def validate_data(directory=None):
     Draft202012Validator.check_schema(schema)
     validator = Draft202012Validator(schema, format_checker=FormatChecker())
     records = []
+    owned = {}
     for file in sorted((directory / "products").glob("*.json")):
         record = json.loads(file.read_text())
         validator.validate(record)
@@ -121,28 +126,45 @@ def validate_data(directory=None):
             continue
         # A software record must name the registered software source: a
         # hardware collector's verifier here would publish an unbuildable claim.
-        check_source(record, "software")
-        if record["provenance"]["source_url"] != API + record["id"] + "/":
-            raise ValueError(f"Record identity/provenance mismatch: {file}")
-        release_ids = set()
-        for release in record["releases"]:
-            if release["id"] in release_ids or release["id"] != release["upstream"]["name"]:
-                raise ValueError(f"Duplicate/mismatched release: {file}: {release['id']}")
-            release_ids.add(release["id"])
-            if release["milestones"] != milestones(release["upstream"], record["labels"]):
-                raise ValueError(f"Milestones contradict source: {file}: {release['id']}")
+        found = check_source(record, "software")
+        owned.setdefault(record["provenance"]["verifier"], set()).add(record["id"])
+        if found.id != "import-data":
+            # The source that owns this verifier decides how its records are
+            # re-checked, so a new collector adds its own validator to the
+            # registry instead of a branch here. A software source that
+            # re-derives nothing offline cannot be published: no installed
+            # pipeline could reproduce what it wrote.
+            check = sources.record_validator(found)
+            if check is None:
+                raise ValueError(f"{file}: source {found.id!r} re-derives no record offline")
+            check(record)
+        else:
+            if record["provenance"]["source_url"] != API + record["id"] + "/":
+                raise ValueError(f"Record identity/provenance mismatch: {file}")
+            release_ids = set()
+            for release in record["releases"]:
+                if release["id"] in release_ids or release["id"] != release["upstream"]["name"]:
+                    raise ValueError(f"Duplicate/mismatched release: {file}: {release['id']}")
+                release_ids.add(release["id"])
+                if release["milestones"] != milestones(release["upstream"], record["labels"]):
+                    raise ValueError(f"Milestones contradict source: {file}: {release['id']}")
         records.append(record)
     # The manifest describes the endoflife.date snapshot the importer maintains:
-    # researched products are not in that listing, so its counts exclude them.
+    # a software record another registered source owns is a separate shard of
+    # the catalog, carried additively, so its records and releases are reported
+    # on their own sidecar and are never counted into this source's totals.
     deterministic = [record for record in records if not is_researched(record)]
     manifest = json.loads((directory / "manifest.json").read_text())
     Draft202012Validator(MANIFEST_SCHEMA, format_checker=FormatChecker()).validate(manifest)
-    if (len(deterministic) != manifest["product_count"]
-            or sum(len(r["releases"]) for r in deterministic) != manifest["release_count"]):
+    counted = [record for record in deterministic
+               if record["provenance"]["verifier"] == sources.source("import-data").verifier]
+    if (len(counted) != manifest["product_count"]
+            or sum(len(r["releases"]) for r in counted) != manifest["release_count"]):
         raise ValueError("Manifest counts do not match complete catalog")
     if {r["id"] for r in records} & set(manifest["excluded_hardware"]):
         raise ValueError("Hardware included in software catalog")
-    check_manifest_source(manifest, deterministic)
+    check_source_reports(directory, owned, "software")
+    check_manifest_source(manifest, counted)
     if "hardware_count" in manifest and len(validate_hardware(directory)) != manifest["hardware_count"]:
         raise ValueError("Manifest hardware_count does not match committed hardware records")
     return records

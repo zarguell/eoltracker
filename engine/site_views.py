@@ -19,15 +19,28 @@ them:
   vendor one slug and refuses a collision instead of letting two vendors share
   a published file.
 """
-from datetime import date
-
 from .hardware import slugify
 from . import contribute
 from .site_sources import is_catalog_record, source_links, source_label, source_order
 from .site_config import (CATALOG_LISTING_STATES, CATALOG_NOTICE_STATES,
                           HARDWARE_MILESTONES, HARDWARE_STATUSES, MILESTONE_FIELDS, MILESTONE_KEYS,
                           MILESTONES, OPENGEAR_VERIFIER, UPSTREAM_DATE_FIELDS, human_date, human_stamp,
-                          site_url, version_key)
+                          is_month, published_period, site_url, version_key)
+
+def vendor_cells(upstream):
+    """A vendor collector's own raw row cells, as evidence rows, or an empty list.
+
+    A vendor collector stores the source row's declared columns verbatim under
+    ``upstream.cells`` instead of restating endoflife.date's field names. Those
+    columns are the record's evidence — the page prints the vendor's own wording
+    beside the normalized date — so they are surfaced as their own list rather
+    than left to a mapping that does not apply to this pipeline.
+    """
+    cells = upstream.get("cells") if isinstance(upstream, dict) else None
+    if not isinstance(cells, dict):
+        return []
+    return [{"column": column, "value": value} for column, value in cells.items()]
+
 
 def release_rows(record):
     """Template-ready rows for one product, newest release first."""
@@ -53,27 +66,32 @@ def release_rows(record):
                 if value and entry["value"] == value:
                     continue
                 notes.append(f"{entry['field']} {entry['value']}" + (f" ({entry['label']})" if entry["label"] else ""))
-            cells[key] = {"value": value, "human": human_date(value), "notes": "; ".join(notes) or None}
+            cells[key] = {"value": value, "human": human_date(value), "month": is_month(value),
+                          "notes": "; ".join(notes) or None}
         latest = upstream.get("latest") or {}
         # A researched record's release carries the contribution's verbatim
         # quote as an upstream cell instead of upstream date fields; it is
         # surfaced as its own field so the table can show the evidence rather
         # than an empty status column.
         contribution = upstream.get("Contribution") or None
+        evidence = vendor_cells(upstream)
         rows.append({
             "id": release["id"],
             "name": release["name"] or release["id"],
             "cells": cells,
             "contribution": contribution,
+            "evidence": evidence,
             # What the page prints under the record: the upstream release object
             # for a pipeline-derived record, the stored contribution entry for a
-            # researched one (which has no upstream release object at all).
-            "verbatim": upstream if contribution else raw,
+            # researched one (which has no upstream release object at all), or
+            # the vendor's own cells, which are the whole evidence for a vendor
+            # record and so are shown verbatim rather than reduced to date fields.
+            "verbatim": upstream if contribution or evidence else raw,
             "lts": bool(upstream.get("isLts")),
             "eol_flag": bool(upstream.get("isEol")),
             "maintained": bool(upstream.get("isMaintained")),
             "latest": {
-                "name": latest.get("name"),
+                "name": latest.get("name") or upstream.get("name"),
                 "date": latest.get("date"),
                 "link": latest.get("link"),
             },
@@ -101,14 +119,24 @@ def milestone_coverage(rows, milestones=MILESTONES):
 
 
 def upcoming_events(rows, today, limit=None, milestones=MILESTONES):
-    """Published milestone dates that have not passed yet, soonest first."""
+    """Published milestone dates that have not passed yet, soonest first.
+
+    A month-precision value covers its whole month, so the window uses the last
+    day the source's value covers (see `site_config.published_period`) and the
+    countdown is to that day. Ordering still compares the stored strings, which
+    sorts YYYY-MM before YYYY-MM-DD inside the same month, the conservative
+    direction: an undated deadline is announced before the month is over.
+    """
     events = []
     for row in rows:
         for milestone in milestones:
             if milestone["key"] == "ga":
                 continue
             value = row["cells"][milestone["key"]]["value"]
-            if not value or value < today.isoformat():
+            if not value:
+                continue
+            covers = published_period(value)
+            if covers < today:
                 continue
             events.append({
                 "release": row["name"],
@@ -116,8 +144,9 @@ def upcoming_events(rows, today, limit=None, milestones=MILESTONES):
                 "milestone": milestone["label"],
                 "key": milestone["key"],
                 "date": value,
+                "month": is_month(value),
                 "human": human_date(value),
-                "days": (date.fromisoformat(value) - today).days,
+                "days": (covers - today).days,
             })
     events.sort(key=lambda event: (event["date"], event["release"]))
     return events[:limit] if limit else events

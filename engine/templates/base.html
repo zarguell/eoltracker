@@ -61,6 +61,8 @@
       <p class="footer-title">Data</p>
       <ul class="footer-links">
         <li><a href="{{ url_for('v1/feed.json') }}">Feed (JSON)</a></li>
+        <li><a href="{{ url_for('v1/feed.atom') }}">Deadlines (Atom)</a></li>
+        <li><a href="{{ url_for('v1/calendar.ics') }}">Deadlines (iCal)</a></li>
         <li><a href="{{ url_for('v1/products.json') }}">Product summaries</a></li>
         <li><a href="{{ url_for('v1/hardware.json') }}">Hardware summaries</a></li>
         {% if changes_available %}
