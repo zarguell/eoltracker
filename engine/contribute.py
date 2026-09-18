@@ -127,6 +127,7 @@ SOFTWARE_CONTEXT = ("vendor", "summary", "notes")
 HARDWARE_CONTEXT = ("summary", "notes")
 SLUG = re.compile(r"[a-z0-9]+(?:-[a-z0-9]+)*\Z")
 DAY = re.compile(r"\d{4}-\d{2}-\d{2}\Z")
+MONTH = re.compile(r"\d{4}-\d{2}\Z")
 HTML_SKIP = re.compile(r"(?is)<(script|style)[^>]*>.*?</\1>")
 HTML_TAG = re.compile(r"(?s)<[^>]+>")
 
@@ -235,6 +236,41 @@ def date_in_quote(day, quote):
     return bool(_date_pattern(day).search(quote))
 
 
+def _month_pattern(month):
+    """Match the spelled/spoken forms of an ISO month `YYYY-MM`, and its ISO form.
+
+       A month-precision source like Ghost's "Jan 2019" is evidence for a month
+       and nothing finer; the match admits the ISO form and the short/long
+       month spellings the vendor wrote, at the precision the source states.
+    """
+    pattern = _DATE_PATTERNS.get(month)
+    if pattern is None:
+        parsed = date.fromisoformat(month + "-01")
+        long_name, short = parsed.strftime("%B"), parsed.strftime("%b")
+        spelled = "|".join(re.escape(text) for text in (
+            f"{long_name} {parsed.year}", f"{short} {parsed.year}",
+            f"{short}. {parsed.year}", f"{parsed.year} {long_name}", f"{parsed.year} {short}",
+        ))
+        pattern = re.compile(
+            rf"(?<![0-9A-Za-z]){re.escape(month)}(?![0-9])"
+            rf"|(?<![0-9A-Za-z])(?:{spelled})(?![0-9A-Za-z])", re.IGNORECASE)
+        _DATE_PATTERNS[month] = pattern
+    return pattern
+
+
+def date_in_quote(value, quote):
+    """True when the stored milestone date appears in ``quote`` at its precision.
+
+    A day-precision value matches day spellings; a month-precision value matches
+    month spellings only, so a coarser source cannot back a finer stored date.
+    """
+    if DAY.fullmatch(value):
+        return bool(_date_pattern(value).search(quote))
+    if MONTH.fullmatch(value):
+        return bool(_month_pattern(value).search(quote))
+    return False
+
+
 def missing_backing(milestones, evidence):
     """The milestone keys whose stored date no stored quote states.
 
@@ -290,6 +326,34 @@ def _day(value, where):
     return value
 
 
+def _milestone(value, where):
+    """A milestone date the source publishes as a day or a month.
+
+    The published product schema admits both `YYYY-MM` and `YYYY-MM-DD`; a
+    contribution states whatever the source states, at the precision the source
+    actually gives. A month is never padded to a day here, so a vendor table
+    that names only "Jan 2019" records a month precision that stays a month on
+    the live catalog and is excluded from the day-precision OpenEoX export.
+    """
+    if not isinstance(value, str):
+        raise ValueError(f"{where}: {value!r} is not an ISO date string")
+    if DAY.fullmatch(value):
+        try:
+            date.fromisoformat(value)
+        except ValueError as error:
+            raise ValueError(f"{where}: {value!r} is not a real calendar day") from error
+        return value
+    if MONTH.fullmatch(value):
+        try:
+            date.fromisoformat(value + "-01")
+        except ValueError as error:
+            raise ValueError(f"{where}: {value!r} is not a real calendar month") from error
+        return value
+    raise ValueError(f"{where}: {value!r} is not an ISO day (YYYY-MM-DD) or month "
+                     "(YYYY-MM); finer precision is never inferred from a coarser source")
+    return value
+
+
 def _url(value, where):
     text = _text(value, where, "source_url")
     parsed = urlsplit(text)
@@ -319,7 +383,7 @@ def _parse_milestones(value, where, allow_empty=False):
         # still refuses an empty object because that contribution states nothing.
         if day is None and allow_empty:
             continue
-        milestones[key] = _day(day, f"{where}: milestones.{key}")
+        milestones[key] = _milestone(day, f"{where}: milestones.{key}")
     return milestones
 
 

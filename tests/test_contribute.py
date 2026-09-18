@@ -176,6 +176,42 @@ class ParsingTests(ContributionCase):
         with self.assertRaisesRegex(ValueError, "no stored quote states the end of life date"):
             parse_contribution(payload)
 
+    def test_month_precision_milestone_is_accepted_when_backed(self):
+        # A vendor notice that states a month and no day -- e.g. Ghost's EOL
+        # table ("Jan 2019") -- records a month-precision milestone that the
+        # published schema admits verbatim. The stored month must be backed by a
+        # quote at the same precision: a month-only spelling backs a month, not
+        # a finer day.
+        for month, quote in (
+            ("2019-01", "Ghost 0.x 2013 Jan 2019"),
+            ("2020-01", "Ghost 1.x 2017 January 2020"),
+            ("2026-01", "Ghost 5.x 2022 Jan 2026"),
+        ):
+            self.assertTrue(date_in_quote(month, quote), quote)
+            payload = {
+                "target": "software", "id": "researched-ghost", "name": "Ghost",
+                "vendor": "Ghost Foundation", "category": "app", "release": "0.x",
+                "links": {"html": "https://docs.ghost.org/faq/major-versions-lts/"},
+                "identifiers": [],
+                "releases": [{"id": "0.x", "name": "Ghost 0.x",
+                              "milestones": {"ga": None, "eos": None, "eossec": None, "eol": month}}],
+                "evidence": [{"quote": quote, "source_url": "https://docs.ghost.org/faq/major-versions-lts/",
+                              "retrieved_at": "2026-09-17", "milestones": ["eol"]}],
+                "stale_after": "2026-09-17", "contributor": "zarguell",
+            }
+            contribution = parse_contribution(payload)
+            self.assertEqual(contribution["releases"][0]["milestones"]["eol"], month)
+            research = research_object(contribution, contribution["evidence"], CHECKED)
+            record = build_record(contribution, research, CHECKED)
+            validate_research(record, "software")
+            self.assertEqual(record["releases"][0]["milestones"]["eol"], month)
+        # A month-only quote must not back a finer day -- the source's precision
+        # is never inferred upward, only honored at its own width.
+        self.assertFalse(date_in_quote("2019-01-01", "Ghost 0.x 2013 Jan 2019"))
+        self.assertFalse(date_in_quote("2019-01-01", "supported through January 2019"))
+        # A finer day quote does not back a coarser month, either.
+        self.assertFalse(date_in_quote("2019-01", "Ghost 0.x EOL January 15th, 2019"))
+
     def test_a_product_may_state_one_milestone_set_per_release_line(self):
         # A product dates two lines and covers a third with no announced end. One
         # contribution must be able to say so: the dated lines carry their dates

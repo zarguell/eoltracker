@@ -1,0 +1,107 @@
+{
+  "target": "software",
+  "id": "researched-ghost",
+  "name": "Ghost",
+  "vendor": "Ghost Foundation",
+  "category": "app",
+  "release": "6.x",
+  "summary": "Ghost is a Node.js-based headless CMS and publishing platform. The vendor publishes a single page documenting end-of-life per major version; there is no API or structured feed.",
+  "identifiers": [],
+  "links": {
+    "html": "https://docs.ghost.org/faq/major-versions-lts/"
+  },
+  "releases": [
+    {
+      "id": "0.x",
+      "name": "Ghost 0.x",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2019-01"
+      }
+    },
+    {
+      "id": "1.x",
+      "name": "Ghost 1.x",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-01"
+      }
+    },
+    {
+      "id": "2.x",
+      "name": "Ghost 2.x",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-01"
+      }
+    },
+    {
+      "id": "3.x",
+      "name": "Ghost 3.x",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-01"
+      }
+    },
+    {
+      "id": "4.x",
+      "name": "Ghost 4.x",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-01"
+      }
+    },
+    {
+      "id": "5.x",
+      "name": "Ghost 5.x",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-01"
+      }
+    },
+    {
+      "id": "6.x",
+      "name": "Ghost 6.x (Current)",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "quote": "Ghost 0.x 2013 Jan 2019 Ghost 1.x 2017 Jan 2020 Ghost 2.x 2018 Jan 2021 Ghost 3.x 2019 Jan 2022 Ghost 4.x 2021 Jan 2023 Ghost 5.x 2022 Jan 2026 Ghost 6.x (Current) 2025 TBC",
+      "source_url": "https://docs.ghost.org/faq/major-versions-lts/",
+      "retrieved_at": "2026-09-17",
+      "milestones": ["eol"]
+    },
+    {
+      "quote": "Major version release dates and end of life support for Ghost.",
+      "source_url": "https://docs.ghost.org/faq/major-versions-lts/",
+      "retrieved_at": "2026-09-17"
+    },
+    {
+      "quote": "At any one time the current major version of Ghost is under active development, whilst the previous version is maintained as the Long Term Support version (LTS).",
+      "source_url": "https://docs.ghost.org/faq/major-versions-lts/",
+      "retrieved_at": "2026-09-17"
+    }
+  ],
+  "stale_after": "2026-09-17",
+  "method": "manual",
+  "contributor": "eoltracker-agent",
+  "notes": "The vendor's End of Life column is month-precision (e.g. Jan 2019); no day is published, so eol is stored as YYYY-MM and never padded. Ghost 6.x EOL is TBC (null). Released years are year-only, so ga stays null. Month-precision EOL excludes these records from the day-precision OpenEoX export, where they are enumerated under v1/openeox/index.json exclusions."
+}
