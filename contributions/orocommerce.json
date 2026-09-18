@@ -1,0 +1,113 @@
+{
+  "target": "software",
+  "id": "researched-orocommerce",
+  "name": "OroCommerce",
+  "vendor": "Oro Inc.",
+  "category": "server-app",
+  "release": "7.1",
+  "summary": "OroCommerce is an open-source B2B e-commerce platform. Oro Inc. publishes an explicit lifecycle table for Enterprise Edition LTS releases with Release Date (GA), Support Ends, and Extended Coverage Up To dates.",
+  "identifiers": [],
+  "links": {
+    "html": "https://doc.oroinc.com/community/release-process/"
+  },
+  "releases": [
+    {
+      "id": "7.1",
+      "name": "OroCommerce 7.1 LTS",
+      "milestones": {
+        "ga": "2027-03",
+        "eos": null,
+        "eossec": null,
+        "eol": "2031-03"
+      }
+    },
+    {
+      "id": "7.0",
+      "name": "OroCommerce 7.0 LTS",
+      "milestones": {
+        "ga": "2026-03",
+        "eos": null,
+        "eossec": null,
+        "eol": "2030-03"
+      }
+    },
+    {
+      "id": "6.1",
+      "name": "OroCommerce 6.1 LTS",
+      "milestones": {
+        "ga": "2025-03",
+        "eos": null,
+        "eossec": null,
+        "eol": "2029-03"
+      }
+    },
+    {
+      "id": "6.0",
+      "name": "OroCommerce 6.0 LTS",
+      "milestones": {
+        "ga": "2024-03",
+        "eos": null,
+        "eossec": null,
+        "eol": "2028-03"
+      }
+    },
+    {
+      "id": "5.1",
+      "name": "OroCommerce 5.1 LTS",
+      "milestones": {
+        "ga": "2023-03",
+        "eos": null,
+        "eossec": null,
+        "eol": "2027-03"
+      }
+    },
+    {
+      "id": "5.0",
+      "name": "OroCommerce 5.0 LTS",
+      "milestones": {
+        "ga": "2022-01",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-01"
+      }
+    },
+    {
+      "id": "4.2",
+      "name": "OroCommerce 4.2 LTS",
+      "milestones": {
+        "ga": "2021-01",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-01"
+      }
+    },
+    {
+      "id": "4.1",
+      "name": "OroCommerce 4.1 LTS",
+      "milestones": {
+        "ga": "2020-01",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-01"
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "quote": "4.1 LTS January 2020 January 2023 N/A 4.2 LTS January 2021 January 2024 December 2026 5.0 LTS January 2022 January 2025 January 2028 5.1 LTS March 2023 March 2027 March 2029 6.0 LTS March 2024 March 2028 March 2030 6.1 LTS March 2025 March 2029 March 2031 7.0 LTS March 2026 March 2030 March 2032 7.1 LTS March 2027 March 2031 March 2033",
+      "source_url": "https://doc.oroinc.com/community/release-process/",
+      "retrieved_at": "2026-09-17",
+      "milestones": ["ga", "eol"]
+    },
+    {
+      "quote": "LTS versions of OroCommerce Enterprise Edition are supported for 48 months from the release date.",
+      "source_url": "https://doc.oroinc.com/community/release-process/",
+      "retrieved_at": "2026-09-17",
+      "milestones": ["eol"]
+    }
+  ],
+  "contributor": "eoltracker-agent",
+  "method": "agent",
+  "stale_after": "2027-09-17",
+  "notes": "Tier: researched (AGENTS.md rule 8b). endoflife.date has no orocommerce slug (checked https://endoflife.date/api/all.json 2026-09-17: no orocommerce id) and data/products/ holds no orocommerce record. Oro Inc. publishes an explicit lifecycle table at https://doc.oroinc.com/community/release-process/ with Release Date (GA), Support Ends (standard support end = eol), and Extended Coverage Up To columns for 8 LTS releases (4.1 through 7.1). Extended Coverage is an optional paid service; the vendor's 'Support Ends' date is the standard support end and is mapped to eol. Extended Coverage Up To dates are not mapped to any milestone (optional extension, not a terminal date). All dates are month-precision as published by the vendor. No GA date for Community Edition only versions; eos/eossec not separately published by the vendor, remain null. Month-precision eol dates are excluded from the day-precision OpenEoX export under '<property>_month_precision' exclusions. No eoltracker issue backlinks."
+}

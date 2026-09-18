@@ -149,6 +149,25 @@ class ParsingTests(ContributionCase):
         ):
             self.assertFalse(date_in_quote(day, quote), quote)
 
+    def test_dd_mon_yyyy_day_spelling_backs_the_date_it_states(self):
+        # Parallels' KB table uses "DD-Mon-YYYY" (e.g. "25-Aug-2028"): a
+        # day-precision spelling that must back the day it states.
+        for day, quote in (
+            ("2028-08-25", "Parallels Desktop 27 for Mac – End of Life 25-Aug-2028"),
+            ("2027-08-26", "Parallels Desktop 26 for Mac – 26-Aug-2027"),
+            ("2028-08-25", "Parallels Desktop 27 for Mac – End of Life 25-Aug-2028"),
+            ("2027-08-26", "Parallels Desktop 26 for Mac – 26-Aug-2027"),
+            ("2026-09-10", "Parallels Desktop 20 for Mac – 10-Sep-2026"),
+            ("2022-08-09", "Parallels Desktop 15 for Mac 9-Aug-2022 13-Aug-2021 9-Aug-2022"),
+        ):
+            self.assertTrue(date_in_quote(day, quote), quote)
+        # Nothing coarser than a day matches: month-only or wrong day.
+        for day, quote in (
+            ("2028-08-25", "supported through Aug-2028"),
+            ("2028-08-25", "End of Life 24-Aug-2028 states a different day"),
+        ):
+            self.assertFalse(date_in_quote(day, quote), quote)
+
     def test_several_quoted_spans_install_as_one_normalized_quote(self):
         # A vendor notice often needs more than one sentence quoted. The stored
         # research.quote is the spans joined into one whitespace-normalized

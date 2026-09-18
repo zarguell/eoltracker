@@ -222,7 +222,11 @@ def _date_pattern(day):
             # mm/dd/yyyy format"): leading zeros optional on both fields, and
             # always both a month and a day -- "06/2020" states no day.
             f"{parsed.month}/{parsed.day}/{parsed.year}", f"{parsed.month:02d}/{parsed.day:02d}/{parsed.year}",
+            f"{parsed.month}/{parsed.day}/{parsed.year}", f"{parsed.month:02d}/{parsed.day:02d}/{parsed.year}",
             f"{parsed.month}/{parsed.day:02d}/{parsed.year}", f"{parsed.month:02d}/{parsed.day}/{parsed.year}",
+            # DD-Mon-YYYY vendor format, e.g. "25-Aug-2028" or "9-Aug-2022":
+            # day is written without a leading zero, so match both widths.
+            f"{parsed.day}-{short}-{parsed.year}", f"{parsed.day:02d}-{short}-{parsed.year}",
         ))
         pattern = re.compile(
             rf"(?<![0-9A-Za-z]){re.escape(day)}(?![0-9])"
