@@ -1,0 +1,67 @@
+{
+  "target": "software",
+  "id": "researched-cpanel",
+  "name": "cPanel & WHM",
+  "vendor": "cPanel, Inc.",
+  "category": "server-app",
+  "release": "110",
+  "summary": "cPanel & WHM is a commercial Linux server automation and hosting management platform. The vendor documents current version lifecycle dates on a knowledge-base page; an optional deterministic TIERS.json feed provides LTS expiry timestamps, but only for LTS branches.",
+  "identifiers": [],
+  "links": {
+    "html": "https://docs.cpanel.net/knowledge-base/cpanel-product/product-versions-and-the-release-process/"
+  },
+  "releases": [
+    {
+      "id": "110",
+      "name": "cPanel & WHM 110 (LTS)",
+      "milestones": {
+        "ga": "2023-03",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-12"
+      }
+    },
+    {
+      "id": "134",
+      "name": "cPanel & WHM 134 (LTS)",
+      "milestones": {
+        "ga": "2026-01",
+        "eos": null,
+        "eossec": null,
+        "eol": "2027-06"
+      }
+    },
+    {
+      "id": "136",
+      "name": "cPanel & WHM 136",
+      "milestones": {
+        "ga": "2026-04",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-08"
+      }
+    },
+    {
+      "id": "138",
+      "name": "cPanel & WHM 138",
+      "milestones": {
+        "ga": "2026-07",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-11"
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "quote": "cPanel & WHM Version Approximate Release Date Approximate End of Life Date 110 (LTS) March 2023 December 2026 134 (LTS) January 2026 June 2027 136 April 2026 August 2026 138 July 2026 November 2026",
+      "source_url": "https://docs.cpanel.net/knowledge-base/cpanel-product/product-versions-and-the-release-process/",
+      "retrieved_at": "2026-09-17",
+      "milestones": ["ga", "eol"]
+    }
+  ],
+  "stale_after": "2027-03-17",
+  "method": "manual",
+  "contributor": "eoltracker-agent",
+  "notes": "The cPanel documentation page states \"Approximate Release Date\" and \"Approximate End of Life Date\" with month-precision values (e.g. 'March 2023', 'December 2026'). These are month-precision and stored as YYYY-MM without padding to a day, per AGENTS.md rule 4. The docs page only shows the four most recent release versions (110 LTS, 134 LTS, 136, 138); older versions' EOL dates are not on this page. A deterministic TSERS.json feed (https://httpupdate.cpanel.net/cpanelsync/TIERS.json) provides exact LTS expiry timestamps as Unix epoch values, but implementing a deterministic collector is a future enhancement; this contribution uses the docs page as the primary evidence source. Month-precision dates exclude these releases from the day-precision OpenEoX export, where they are enumerated under v1/openeox/index.json exclusions."
+}

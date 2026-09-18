@@ -1,0 +1,116 @@
+{
+  "target": "software",
+  "id": "researched-suse-enterprise-storage",
+  "name": "SUSE Enterprise Storage",
+  "vendor": "SUSE",
+  "category": "server-app",
+  "release": "5.5",
+  "summary": "SUSE Enterprise Storage is a distributed, Ceph-based software-defined storage solution. SUSE publishes an explicit lifecycle table with per-version GA and End of Life dates.",
+  "identifiers": [],
+  "links": {
+    "html": "https://www.suse.com/lifecycle/"
+  },
+  "releases": [
+    {
+      "id": "5.5",
+      "name": "SUSE Enterprise Storage 5.5.x",
+      "milestones": {
+        "ga": "2026-03-19",
+        "eos": null,
+        "eossec": null,
+        "eol": "2027-09-19"
+      }
+    },
+    {
+      "id": "5.4",
+      "name": "SUSE Enterprise Storage 5.4.x",
+      "milestones": {
+        "ga": "2024-09-18",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-10-31"
+      }
+    },
+    {
+      "id": "5.3",
+      "name": "SUSE Enterprise Storage 5.3.x",
+      "milestones": {
+        "ga": "2024-02-01",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-02-01"
+      }
+    },
+    {
+      "id": "5.2",
+      "name": "SUSE Enterprise Storage 5.2.x",
+      "milestones": {
+        "ga": "2023-07-07",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-07-06"
+      }
+    },
+    {
+      "id": "5.1",
+      "name": "SUSE Enterprise Storage 5.1.x",
+      "milestones": {
+        "ga": "2022-12-16",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-12-15"
+      }
+    },
+    {
+      "id": "5.0",
+      "name": "SUSE Enterprise Storage 5.0.x",
+      "milestones": {
+        "ga": "2022-05-17",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-05-17"
+      }
+    },
+    {
+      "id": "4.4",
+      "name": "SUSE Enterprise Storage 4.4.x",
+      "milestones": {
+        "ga": "2021-12",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-12-31"
+      }
+    },
+    {
+      "id": "4.3",
+      "name": "SUSE Enterprise Storage 4.3.x",
+      "milestones": {
+        "ga": "2021-07",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-07-30"
+      }
+    },
+    {
+      "id": "4.2",
+      "name": "SUSE Enterprise Storage 4.2.x and earlier",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-05"
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "quote": "5.5.x March 19, 2026 September 19, 2027 5.4.x September 18, 2024 October 31, 2026 5.3.x February 1, 2024 February 1, 2026 5.2.x July 7, 2023 July 6, 2025 5.1.x December 16, 2022 December 15, 2024 5.0.x May 17, 2022 May 17, 2024 4.4.x December 2021 December 31, 2023 4.3.x July 2021 July 30, 2023 4.2.x and earlier March 2021 (last) May 2022 Support Policy: A minimum of 2 years from date of release of major (e.g. 5.0) or minor versions (e.g. 5.1). If releases occur less frequently than every 18 months for major releases, or 12 months for minor releases, the support timeframe may be extended beyond 2 years at the discretion of SUSE.",
+      "source_url": "https://www.suse.com/lifecycle/",
+      "retrieved_at": "2026-09-17"
+    }
+  ],
+  "contributor": "eoltracker-agent",
+  "method": "agent",
+  "stale_after": "2027-03-17",
+  "notes": "Tier: researched (AGENTS.md rule 8b). endoflife.date has no suse-enterprise-storage slug (checked https://endoflife.date/api/all.json 2026-09-17) and data/products/ holds no suse-enterprise-storage record. SUSE publishes an explicit lifecycle table at https://www.suse.com/lifecycle/ with per-version GA and End of Life dates. Month-precision GA entries (December 2021, July 2021) are stored as months where the source gives no day; day-precision dates are stored as days. The 4.2.x and earlier row gives 'March 2021 (last)' as GA and 'May 2022' as EOL — GA is not a single release date but the last release of that line, so ga stays null; eol is stored as month 2022-05. The EOL quote is day-precision and the month-precision EOL for 4.2.x is excluded from the day-precision OpenEoX export, enumerated under v1/openeox/index.json exclusions. eos/eossec not stated by vendor, remain null. A minimum of 2 years from date of release is the stated support policy."
+}

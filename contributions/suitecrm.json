@@ -1,0 +1,163 @@
+{
+  "target": "software",
+  "id": "researched-suitecrm",
+  "name": "SuiteCRM",
+  "vendor": "SalesAgility Ltd.",
+  "category": "app",
+  "release": "8.10",
+  "summary": "SuiteCRM is an open-source CRM application. The vendor documents a supported-versions page with two tables: 'Currently Supported Versions' and 'End of Life Versions', with month-precision dates for Initial Release, Active Support Until, and Security Support Until columns. There is no API or structured EOL feed.",
+  "identifiers": [],
+  "links": {
+    "html": "https://docs.suitecrm.com/community/supported-versions/"
+  },
+  "releases": [
+    {
+      "id": "7.15",
+      "name": "SuiteCRM 7.15 ESR",
+      "milestones": {
+        "ga": "2025-12",
+        "eos": null,
+        "eossec": null,
+        "eol": "2028-03"
+      }
+    },
+    {
+      "id": "8.10",
+      "name": "SuiteCRM 8.10",
+      "milestones": {
+        "ga": "2026-04",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      }
+    },
+    {
+      "id": "8.9",
+      "name": "SuiteCRM 8.9",
+      "milestones": {
+        "ga": "2025-09",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-04"
+      }
+    },
+    {
+      "id": "8.8",
+      "name": "SuiteCRM 8.8",
+      "milestones": {
+        "ga": "2025-01",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-09"
+      }
+    },
+    {
+      "id": "8.7",
+      "name": "SuiteCRM 8.7",
+      "milestones": {
+        "ga": "2024-10",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-01"
+      }
+    },
+    {
+      "id": "8.6",
+      "name": "SuiteCRM 8.6",
+      "milestones": {
+        "ga": "2024-04",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-10"
+      }
+    },
+    {
+      "id": "8.5",
+      "name": "SuiteCRM 8.5",
+      "milestones": {
+        "ga": "2023-12",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-04"
+      }
+    },
+    {
+      "id": "8.4",
+      "name": "SuiteCRM 8.4",
+      "milestones": {
+        "ga": "2023-08",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-12"
+      }
+    },
+    {
+      "id": "8.3",
+      "name": "SuiteCRM 8.3",
+      "milestones": {
+        "ga": "2023-05",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-08"
+      }
+    },
+    {
+      "id": "8.2",
+      "name": "SuiteCRM 8.2",
+      "milestones": {
+        "ga": "2022-10",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-05"
+      }
+    },
+    {
+      "id": "7.14",
+      "name": "SuiteCRM 7.14 ESR",
+      "milestones": {
+        "ga": "2023-08",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-03"
+      }
+    },
+    {
+      "id": "7.13",
+      "name": "SuiteCRM 7.13",
+      "milestones": {
+        "ga": "2022-12",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-08"
+      }
+    },
+    {
+      "id": "7.12",
+      "name": "SuiteCRM 7.12 ESR",
+      "milestones": {
+        "ga": "2021-10",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-11"
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "quote": "After active support ends, they receive security-only fixes on an as-needed basis. Non-ESR releases do not have a security-only period. Currently Supported Versions Version Initial Release Active Support Until Security Support Until 7.15 ESR December 2025 December 2027 March 2028 8.10 April 2026 - -",
+      "source_url": "https://docs.suitecrm.com/community/supported-versions/",
+      "retrieved_at": "2026-09-17",
+      "milestones": ["ga", "eol"]
+    },
+    {
+      "quote": "End of Life Versions Versions listed here no longer receive bug fixes or security updates. If you are running an end-of-life version, we strongly recommend upgrading to a currently supported release. Version Initial Release Active Support Until Security Support Until 8.9 September 2025 April 2026 - 8.8 January 2025 September 2025 - 8.7 October 2024 January 2025 - 8.6 April 2024 October 2024 - 8.5 December 2023 April 2024 - 8.4 August 2023 December 2023 - 8.3 May 2023 August 2023 - 8.2 October 2022 May 2023 - 7.14 ESR August 2023 October 2025 March 2026 7.13 December 2022 August 2023 - 7.12 ESR October 2021 August 2023 November 2023",
+      "source_url": "https://docs.suitecrm.com/community/supported-versions/",
+      "retrieved_at": "2026-09-17",
+      "milestones": ["ga", "eol"]
+    }
+  ],
+  "stale_after": "2028-03-01",
+  "method": "manual",
+  "contributor": "eoltracker-agent",
+  "notes": "The vendor documents two tables on its supported-versions page. 'Currently Supported Versions' covers 7.15 ESR and 8.10 (both active support). 7.15 ESR has Initial Release (December 2025), Active Support Until (December 2027), and Security Support Until (March 2028). For ESR versions, Security Support Until is the terminal EOL date (the page states 'After active support ends, they receive security-only fixes on an as-needed basis' and 'Non-ESR releases do not have a security-only period'). For non-ESR versions (8.x), Active Support Until is the terminal EOL date because they have no security-only period. The 'End of Life Versions' table lists versions 8.9 through 7.12 ESR that are already past EOL. All dates are month-precision and stored as YYYY-MM per AGENTS.md rule 4."
+}
