@@ -1,0 +1,85 @@
+{
+  "target": "software",
+  "id": "researched-tyk",
+  "name": "Tyk Gateway",
+  "vendor": "Tyk Technologies",
+  "category": "server-app",
+  "release": "5.13",
+  "summary": "Tyk Gateway is a Go-based open-source API gateway. The vendor publishes an explicit LTS release timeline with per-version support windows and end-of-life dates on its documentation site; there is no API or structured EOL feed.",
+  "identifiers": [],
+  "links": {
+    "html": "https://tyk.io/docs/developer-support/release-types/long-term-support"
+  },
+  "releases": [
+    {
+      "id": "5.3",
+      "name": "Tyk Gateway 5.3 LTS",
+      "milestones": {
+        "ga": "2024-04-05",
+        "eos": null,
+        "eossec": "2026-07",
+        "eol": "2026-08"
+      }
+    },
+    {
+      "id": "5.8",
+      "name": "Tyk Gateway 5.8 LTS",
+      "milestones": {
+        "ga": "2025-03-28",
+        "eos": null,
+        "eossec": "2027-06",
+        "eol": "2027-07"
+      }
+    },
+    {
+      "id": "5.13",
+      "name": "Tyk Gateway 5.13 LTS",
+      "milestones": {
+        "ga": "2026-05-19",
+        "eos": null,
+        "eossec": "2028-06",
+        "eol": "2028-07"
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "quote": "Version Full Support Window Maintenance Support Window Completely Unsupported From 5.3 Maintenance LTS May 2024 - May 2025 June 2025 - July 2026 August 2026 5.8 Maintenance LTS May 2025 - June 2026 July 2026 - June 2027 July 2027 5.13 LTS July 2026 - June 2027 July 2027 - June 2028 July 2028",
+      "source_url": "https://tyk.io/docs/developer-support/release-types/long-term-support",
+      "retrieved_at": "2026-09-17",
+      "milestones": ["eossec", "eol"]
+    },
+    {
+      "quote": "5.3.0 Release Notes Release Date 5 April 2024",
+      "source_url": "https://tyk.io/docs/developer-support/release-notes/gateway",
+      "retrieved_at": "2026-09-17",
+      "milestones": ["ga"]
+    },
+    {
+      "quote": "5.8.0 Release Notes Release Date 28 March 2025",
+      "source_url": "https://tyk.io/docs/developer-support/release-notes/gateway",
+      "retrieved_at": "2026-09-17",
+      "milestones": ["ga"]
+    },
+    {
+      "quote": "5.13.0 Release Notes Release Date 19 May 2026",
+      "source_url": "https://tyk.io/docs/developer-support/release-notes/gateway",
+      "retrieved_at": "2026-09-17",
+      "milestones": ["ga"]
+    },
+    {
+      "quote": "Our current long term support release is 5.13 LTS. This is in full support from June 2026 to July 2027. This release will enter maintenance support from July 2027 to June 2028. Our next long term support release will be announced end of June 2027.",
+      "source_url": "https://tyk.io/docs/developer-support/release-types/long-term-support",
+      "retrieved_at": "2026-09-17"
+    },
+    {
+      "quote": "A non-LTS minor version reaches its End-of-Life (EOL) as soon as the next minor version is released. For example: Tyk v5.1.x is fully supported until v5.2.0 is released. Once v5.2.0 is available, v5.1.x is considered End-of-Life and will no longer receive patches or security fixes.",
+      "source_url": "https://tyk.io/docs/developer-support/release-types/long-term-support",
+      "retrieved_at": "2026-09-17"
+    }
+  ],
+  "stale_after": "2026-11-17",
+  "method": "manual",
+  "contributor": "eoltracker-agent",
+  "notes": "The vendor's LTS timeline table publishes month-precision support windows and EOL dates. The 'Completely Unsupported From' column states the EOL month (e.g. 'August 2026'); the end of the Maintenance Support Window (which still provides critical security fixes) marks eossec. GA dates are day-precision from the release notes page (e.g. '5 April 2024'). Month-precision eossec/eol dates are stored as YYYY-MM and never padded to day; they exclude these releases from the day-precision OpenEoX export, where they are enumerated under v1/openeox/index.json exclusions. Non-LTS minor versions reach EOL when the next minor is released (per the EOL policy); these are not enumerated here as the source gives no explicit per-version EOL dates for them."
+}
