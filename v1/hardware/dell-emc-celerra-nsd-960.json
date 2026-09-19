@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-celerra-nsd-960",
+  "name": "Celerra NSD-960",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Celerra NS",
+  "family": "Celerra NS",
+  "model_number": "Celerra NSD-960",
+  "milestones": {
+    "ga": "2009-03-02",
+    "eos": "2011-12-31",
+    "eossec": null,
+    "eol": "2016-12-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "Celerra NSD-960",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "Celerra NSD-960",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Celerra NS",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2011-12-31",
+      "datetime": null,
+      "value": "2011-12-31",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Mar. 02, 2009",
+      "datetime": "2009-03-02",
+      "value": "2009-03-02",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2016-12-31",
+      "datetime": null,
+      "value": "2016-12-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/nas-storage/vendor/dell-emc/celerra-ns/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

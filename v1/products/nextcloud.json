@@ -1,0 +1,734 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "nextcloud",
+  "name": "Nextcloud",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:nextcloud:nextcloud_server"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/nextcloud.svg",
+    "html": "https://endoflife.date/nextcloud",
+    "releasePolicy": "https://github.com/nextcloud/server/wiki/Maintenance-and-Release-Schedule"
+  },
+  "releases": [
+    {
+      "id": "34",
+      "name": "34",
+      "milestones": {
+        "ga": "2026-06-09",
+        "eos": null,
+        "eossec": "2027-06-30",
+        "eol": "2027-06-30"
+      },
+      "upstream": {
+        "name": "34",
+        "codename": null,
+        "label": "34",
+        "releaseDate": "2026-06-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-06-30",
+        "isMaintained": true,
+        "latest": {
+          "name": "34.0.4",
+          "date": "2026-09-10",
+          "link": "https://nextcloud.com/changelog/#latest34"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "33",
+      "name": "33",
+      "milestones": {
+        "ga": "2026-02-18",
+        "eos": null,
+        "eossec": "2027-02-28",
+        "eol": "2027-02-28"
+      },
+      "upstream": {
+        "name": "33",
+        "codename": null,
+        "label": "33",
+        "releaseDate": "2026-02-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-02-28",
+        "isMaintained": true,
+        "latest": {
+          "name": "33.0.9",
+          "date": "2026-09-10",
+          "link": "https://nextcloud.com/changelog/#latest33"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "32",
+      "name": "32",
+      "milestones": {
+        "ga": "2025-09-27",
+        "eos": null,
+        "eossec": "2026-09-30",
+        "eol": "2026-09-30"
+      },
+      "upstream": {
+        "name": "32",
+        "codename": null,
+        "label": "32",
+        "releaseDate": "2025-09-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2026-09-30",
+        "isMaintained": true,
+        "latest": {
+          "name": "32.0.15",
+          "date": "2026-09-10",
+          "link": "https://nextcloud.com/changelog/#latest32"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "31",
+      "name": "31",
+      "milestones": {
+        "ga": "2025-02-25",
+        "eos": null,
+        "eossec": "2026-02-28",
+        "eol": "2026-02-28"
+      },
+      "upstream": {
+        "name": "31",
+        "codename": null,
+        "label": "31",
+        "releaseDate": "2025-02-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-02-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "31.0.14",
+          "date": "2026-02-12",
+          "link": "https://nextcloud.com/changelog/#latest31"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "30",
+      "name": "30",
+      "milestones": {
+        "ga": "2024-09-11",
+        "eos": null,
+        "eossec": "2025-10-31",
+        "eol": "2025-10-31"
+      },
+      "upstream": {
+        "name": "30",
+        "codename": null,
+        "label": "30",
+        "releaseDate": "2024-09-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-10-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "30.0.17",
+          "date": "2025-10-23",
+          "link": "https://nextcloud.com/changelog/#latest30"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "29",
+      "name": "29",
+      "milestones": {
+        "ga": "2024-04-24",
+        "eos": null,
+        "eossec": "2025-04-30",
+        "eol": "2025-04-30"
+      },
+      "upstream": {
+        "name": "29",
+        "codename": null,
+        "label": "29",
+        "releaseDate": "2024-04-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-04-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "29.0.16",
+          "date": "2025-04-17",
+          "link": "https://nextcloud.com/changelog/#latest29"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "28",
+      "name": "28",
+      "milestones": {
+        "ga": "2023-12-12",
+        "eos": null,
+        "eossec": "2024-12-31",
+        "eol": "2024-12-31"
+      },
+      "upstream": {
+        "name": "28",
+        "codename": null,
+        "label": "28",
+        "releaseDate": "2023-12-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "28.0.14",
+          "date": "2024-12-12",
+          "link": "https://nextcloud.com/changelog/#latest28"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "27",
+      "name": "27",
+      "milestones": {
+        "ga": "2023-06-13",
+        "eos": null,
+        "eossec": "2024-06-30",
+        "eol": "2024-06-30"
+      },
+      "upstream": {
+        "name": "27",
+        "codename": null,
+        "label": "27",
+        "releaseDate": "2023-06-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-06-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "27.1.11",
+          "date": "2024-06-25",
+          "link": "https://nextcloud.com/changelog/#latest27"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "26",
+      "name": "26",
+      "milestones": {
+        "ga": "2023-03-21",
+        "eos": null,
+        "eossec": "2024-03-31",
+        "eol": "2024-03-31"
+      },
+      "upstream": {
+        "name": "26",
+        "codename": null,
+        "label": "26",
+        "releaseDate": "2023-03-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-03-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "26.0.13",
+          "date": "2024-03-28",
+          "link": "https://nextcloud.com/changelog/#latest26"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "25",
+      "name": "25",
+      "milestones": {
+        "ga": "2022-10-19",
+        "eos": null,
+        "eossec": "2023-10-31",
+        "eol": "2023-10-31"
+      },
+      "upstream": {
+        "name": "25",
+        "codename": null,
+        "label": "25",
+        "releaseDate": "2022-10-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-10-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "25.0.13",
+          "date": "2023-10-26",
+          "link": "https://nextcloud.com/changelog/#latest25"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "24",
+      "name": "24",
+      "milestones": {
+        "ga": "2022-05-03",
+        "eos": null,
+        "eossec": "2023-04-30",
+        "eol": "2023-04-30"
+      },
+      "upstream": {
+        "name": "24",
+        "codename": null,
+        "label": "24",
+        "releaseDate": "2022-05-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-04-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "24.0.12",
+          "date": "2023-04-19",
+          "link": "https://nextcloud.com/changelog/#latest24"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "23",
+      "name": "23",
+      "milestones": {
+        "ga": "2021-11-30",
+        "eos": null,
+        "eossec": "2022-12-31",
+        "eol": "2022-12-31"
+      },
+      "upstream": {
+        "name": "23",
+        "codename": null,
+        "label": "23",
+        "releaseDate": "2021-11-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "23.0.12",
+          "date": "2022-12-08",
+          "link": "https://nextcloud.com/changelog/#latest23"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "22",
+      "name": "22",
+      "milestones": {
+        "ga": "2021-07-06",
+        "eos": null,
+        "eossec": "2022-07-31",
+        "eol": "2022-07-31"
+      },
+      "upstream": {
+        "name": "22",
+        "codename": null,
+        "label": "22",
+        "releaseDate": "2021-07-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-07-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "22.2.10",
+          "date": "2022-07-18",
+          "link": "https://nextcloud.com/changelog/#latest22"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "21",
+      "name": "21",
+      "milestones": {
+        "ga": "2021-02-22",
+        "eos": null,
+        "eossec": "2022-02-28",
+        "eol": "2022-02-28"
+      },
+      "upstream": {
+        "name": "21",
+        "codename": null,
+        "label": "21",
+        "releaseDate": "2021-02-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-02-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "21.0.9",
+          "date": "2022-02-15",
+          "link": "https://nextcloud.com/changelog/#latest21"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "20",
+      "name": "20",
+      "milestones": {
+        "ga": "2020-10-03",
+        "eos": null,
+        "eossec": "2021-11-30",
+        "eol": "2021-11-30"
+      },
+      "upstream": {
+        "name": "20",
+        "codename": null,
+        "label": "20",
+        "releaseDate": "2020-10-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-11-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "20.0.14",
+          "date": "2021-11-11",
+          "link": "https://nextcloud.com/changelog/#latest20"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "19",
+      "name": "19",
+      "milestones": {
+        "ga": "2020-06-03",
+        "eos": null,
+        "eossec": "2021-06-30",
+        "eol": "2021-06-30"
+      },
+      "upstream": {
+        "name": "19",
+        "codename": null,
+        "label": "19",
+        "releaseDate": "2020-06-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-06-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "19.0.13",
+          "date": "2021-07-01",
+          "link": "https://nextcloud.com/changelog/#latest19"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18",
+      "name": "18",
+      "milestones": {
+        "ga": "2020-01-16",
+        "eos": null,
+        "eossec": "2021-01-31",
+        "eol": "2021-01-31"
+      },
+      "upstream": {
+        "name": "18",
+        "codename": null,
+        "label": "18",
+        "releaseDate": "2020-01-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-01-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.0.14",
+          "date": "2021-01-25",
+          "link": "https://nextcloud.com/changelog/#latest18"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "17",
+      "name": "17",
+      "milestones": {
+        "ga": "2019-09-30",
+        "eos": null,
+        "eossec": "2020-10-31",
+        "eol": "2020-10-31"
+      },
+      "upstream": {
+        "name": "17",
+        "codename": null,
+        "label": "17",
+        "releaseDate": "2019-09-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-10-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "17.0.10",
+          "date": "2020-10-08",
+          "link": "https://nextcloud.com/changelog/#latest17"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "16",
+      "name": "16",
+      "milestones": {
+        "ga": "2019-04-25",
+        "eos": null,
+        "eossec": "2020-06-30",
+        "eol": "2020-06-30"
+      },
+      "upstream": {
+        "name": "16",
+        "codename": null,
+        "label": "16",
+        "releaseDate": "2019-04-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-06-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "16.0.11",
+          "date": "2020-06-04",
+          "link": "https://nextcloud.com/changelog/#latest16"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "15",
+      "name": "15",
+      "milestones": {
+        "ga": "2018-12-10",
+        "eos": null,
+        "eossec": "2019-12-31",
+        "eol": "2019-12-31"
+      },
+      "upstream": {
+        "name": "15",
+        "codename": null,
+        "label": "15",
+        "releaseDate": "2018-12-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "15.0.14",
+          "date": "2019-12-19",
+          "link": "https://nextcloud.com/changelog/#latest15"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "14",
+      "name": "14",
+      "milestones": {
+        "ga": "2018-09-10",
+        "eos": null,
+        "eossec": "2019-09-30",
+        "eol": "2019-09-30"
+      },
+      "upstream": {
+        "name": "14",
+        "codename": null,
+        "label": "14",
+        "releaseDate": "2018-09-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-09-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "14.0.14",
+          "date": "2019-08-14",
+          "link": "https://nextcloud.com/changelog/#latest14"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "13",
+      "name": "13",
+      "milestones": {
+        "ga": "2018-02-06",
+        "eos": null,
+        "eossec": "2019-02-28",
+        "eol": "2019-02-28"
+      },
+      "upstream": {
+        "name": "13",
+        "codename": null,
+        "label": "13",
+        "releaseDate": "2018-02-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-02-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "13.0.12",
+          "date": "2019-02-27",
+          "link": "https://nextcloud.com/changelog/#latest13"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "12",
+      "name": "12",
+      "milestones": {
+        "ga": "2017-05-22",
+        "eos": null,
+        "eossec": "2018-11-30",
+        "eol": "2018-11-30"
+      },
+      "upstream": {
+        "name": "12",
+        "codename": null,
+        "label": "12",
+        "releaseDate": "2017-05-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-11-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "12.0.13",
+          "date": "2018-11-22",
+          "link": "https://nextcloud.com/changelog/#latest12"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "11",
+      "name": "11",
+      "milestones": {
+        "ga": "2016-12-13",
+        "eos": null,
+        "eossec": "2018-03-31",
+        "eol": "2018-03-31"
+      },
+      "upstream": {
+        "name": "11",
+        "codename": null,
+        "label": "11",
+        "releaseDate": "2016-12-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-03-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "11.0.8",
+          "date": "2018-03-13",
+          "link": "https://nextcloud.com/changelog/#latest11"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "10",
+      "name": "10",
+      "milestones": {
+        "ga": "2016-08-25",
+        "eos": null,
+        "eossec": "2017-08-31",
+        "eol": "2017-08-31"
+      },
+      "upstream": {
+        "name": "10",
+        "codename": null,
+        "label": "10",
+        "releaseDate": "2016-08-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-08-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "10.0.6",
+          "date": "2017-08-06",
+          "link": "https://nextcloud.com/changelog/#latest10"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9",
+      "name": "9",
+      "milestones": {
+        "ga": "2016-08-03",
+        "eos": null,
+        "eossec": "2017-08-31",
+        "eol": "2017-08-31"
+      },
+      "upstream": {
+        "name": "9",
+        "codename": null,
+        "label": "9",
+        "releaseDate": "2016-08-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-08-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.1.3",
+          "date": "2016-12-12",
+          "link": "https://nextcloud.com/changelog/#latest9"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/nextcloud/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-11T00:07:31+00:00"
+  }
+}

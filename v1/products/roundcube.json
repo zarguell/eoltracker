@@ -1,0 +1,268 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "roundcube",
+  "name": "Roundcube Webmail",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "roundcube"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:roundcube:webmail"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/roundcube.svg",
+    "html": "https://endoflife.date/roundcube",
+    "releasePolicy": "https://roundcube.net/download/"
+  },
+  "releases": [
+    {
+      "id": "1.7",
+      "name": "1.7",
+      "milestones": {
+        "ga": "2026-05-10",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.7",
+        "codename": null,
+        "label": "1.7",
+        "releaseDate": "2026-05-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "1.7.4",
+          "date": "2026-09-06",
+          "link": "https://github.com/roundcube/roundcubemail/releases/tag/1.7.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.6",
+      "name": "1.6 (LTS)",
+      "milestones": {
+        "ga": "2022-07-25",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.6",
+        "codename": null,
+        "label": "1.6 (LTS)",
+        "releaseDate": "2022-07-25",
+        "isLts": true,
+        "ltsFrom": "2026-05-10",
+        "isEoas": true,
+        "eoasFrom": "2026-05-10",
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "1.6.19",
+          "date": "2026-09-06",
+          "link": "https://github.com/roundcube/roundcubemail/releases/tag/1.6.19"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.5",
+      "name": "1.5 (LTS)",
+      "milestones": {
+        "ga": "2021-10-18",
+        "eos": null,
+        "eossec": "2026-05-10",
+        "eol": "2026-05-10"
+      },
+      "upstream": {
+        "name": "1.5",
+        "codename": null,
+        "label": "1.5 (LTS)",
+        "releaseDate": "2021-10-18",
+        "isLts": true,
+        "ltsFrom": "2022-07-25",
+        "isEoas": true,
+        "eoasFrom": "2022-07-25",
+        "isEol": true,
+        "eolFrom": "2026-05-10",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.5.15",
+          "date": "2026-03-29",
+          "link": "https://github.com/roundcube/roundcubemail/releases/tag/1.5.15"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.4",
+      "name": "1.4",
+      "milestones": {
+        "ga": "2019-11-09",
+        "eos": null,
+        "eossec": "2023-12-10",
+        "eol": "2023-12-10"
+      },
+      "upstream": {
+        "name": "1.4",
+        "codename": null,
+        "label": "1.4",
+        "releaseDate": "2019-11-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-12-10",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.4.16",
+          "date": "2023-12-10",
+          "link": "https://github.com/roundcube/roundcubemail/releases/tag/1.4.16"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.3",
+      "name": "1.3",
+      "milestones": {
+        "ga": "2017-06-26",
+        "eos": null,
+        "eossec": "2022-07-28",
+        "eol": "2022-07-28"
+      },
+      "upstream": {
+        "name": "1.3",
+        "codename": null,
+        "label": "1.3",
+        "releaseDate": "2017-06-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-07-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.3.17",
+          "date": "2021-11-12",
+          "link": "https://github.com/roundcube/roundcubemail/releases/tag/1.3.17"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.2",
+      "name": "1.2",
+      "milestones": {
+        "ga": "2016-05-21",
+        "eos": null,
+        "eossec": "2021-10-18",
+        "eol": "2021-10-18"
+      },
+      "upstream": {
+        "name": "1.2",
+        "codename": null,
+        "label": "1.2",
+        "releaseDate": "2016-05-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-10-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.2.13",
+          "date": "2020-12-27",
+          "link": "https://github.com/roundcube/roundcubemail/releases/tag/1.2.13"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.1",
+      "name": "1.1",
+      "milestones": {
+        "ga": "2015-02-07",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.1",
+        "codename": null,
+        "label": "1.1",
+        "releaseDate": "2015-02-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "1.1.12",
+          "date": "2018-04-29",
+          "link": "https://github.com/roundcube/roundcubemail/releases/tag/1.1.12"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.0",
+      "name": "1.0",
+      "milestones": {
+        "ga": "2014-04-05",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.0",
+        "codename": null,
+        "label": "1.0",
+        "releaseDate": "2014-04-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "1.0.12",
+          "date": "2017-11-08",
+          "link": "https://github.com/roundcube/roundcubemail/releases/tag/1.0.12"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/roundcube/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-07T00:08:47+00:00"
+  }
+}

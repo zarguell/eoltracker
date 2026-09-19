@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-vplex-vs2",
+  "name": "VPLEX VS2",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC VPLEX",
+  "family": "VPLEX",
+  "model_number": "VPLEX VS2",
+  "milestones": {
+    "ga": "2011-06-15",
+    "eos": "2022-01-28",
+    "eossec": null,
+    "eol": "2027-01-31"
+  },
+  "status": "expiring",
+  "upstream": {
+    "Product": {
+      "text": "VPLEX VS2",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "VPLEX VS2",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC VPLEX",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2022-01-28",
+      "datetime": null,
+      "value": "2022-01-28",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Jun. 15, 2011",
+      "datetime": "2011-06-15",
+      "value": "2011-06-15",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2027-01-31",
+      "datetime": null,
+      "value": "2027-01-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/san-storage/vendor/dell-emc/vplex/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

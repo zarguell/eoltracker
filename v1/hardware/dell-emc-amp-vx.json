@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-amp-vx",
+  "name": "AMP-VX",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC VxBlock",
+  "family": "VxBlock",
+  "model_number": "AMP-VX",
+  "milestones": {
+    "ga": null,
+    "eos": "2019-12-04",
+    "eossec": null,
+    "eol": "2022-12-04"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "AMP-VX",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "AMP-VX",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC VxBlock",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2019-12-04",
+      "datetime": null,
+      "value": "2019-12-04",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Not Announced",
+      "datetime": "TBD",
+      "value": null,
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2022-12-04",
+      "datetime": null,
+      "value": "2022-12-04",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/san-storage/vendor/dell-emc/vxblock/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

@@ -1,0 +1,4823 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Google Chrome lifecycle dates — EOL Tracker</title>
+<meta name="description" content="General availability, end-of-sale, security-support and end-of-life dates for every Google Chrome release, with raw source values and provenance.">
+<link rel="canonical" href="https://zarguell.github.io/eoltracker/products/chrome/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EOL Tracker">
+<meta property="og:title" content="Google Chrome lifecycle dates — EOL Tracker">
+<meta property="og:description" content="General availability, end-of-sale, security-support and end-of-life dates for every Google Chrome release, with raw source values and provenance.">
+<meta property="og:url" content="https://zarguell.github.io/eoltracker/products/chrome/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d1b2a'/%3E%3Cpath d='M7 20.5l5-6 4 4.5 4-6.5 5 8' fill='none' stroke='%234fd1c5' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/eoltracker/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="shell masthead-inner">
+    <a class="wordmark" href="/eoltracker/">EOL<span>Tracker</span></a>
+    <nav class="mainnav" aria-label="Primary">
+      <a href="/eoltracker/">Software</a>
+      <a href="/eoltracker/hardware/">Hardware</a>
+      <a href="/eoltracker/api/">API &amp; data</a>
+      <a href="https://endoflife.date/" rel="noopener">endoflife.date</a>
+    </nav>
+    <p class="masthead-meta">483 products · 7814 releases · 6999 hardware records</p>
+  </div>
+</header>
+
+<main class="shell" id="main">
+<nav class="crumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/eoltracker/">Catalog</a></li>
+    <li aria-current="page">Google Chrome</li>
+  </ol>
+</nav>
+
+<section class="hero product-hero">
+  <p class="eyebrow">app · software</p>
+  <h1 class="page-title">Google Chrome</h1>
+  <p class="lead">
+    146 releases published by endoflife.date, with each normalized milestone and the raw
+    upstream values behind it. Identifier for this record: <code>chrome</code>.
+  </p>
+  <p class="hero-meta">
+    Verified Sep 17, 2026 at 11:51 UTC by <code>deterministic-endoflife-date-v1</code>.
+Source: endoflife.date.    Upstream modified Sep 8, 2026 at 19:17 UTC.
+    Last catalog refresh <time datetime="2026-09-17T18:35:21Z">Sep 17, 2026 at 18:35 UTC</time>.
+  </p>
+  <p class="product-links">
+    <a class="button" href="/eoltracker/v1/products/chrome.json">JSON record</a>
+    <a class="button" href="https://endoflife.date/api/v1/products/chrome/" rel="noopener">Source on endoflife.date</a>
+<a class="button" href="https://cdn.jsdelivr.net/npm/simple-icons/icons/googlechrome.svg" rel="noopener">icon</a><a class="button" href="https://endoflife.date/chrome" rel="noopener">html</a><a class="button" href="https://developer.chrome.com/docs/web-platform/chrome-release-channels" rel="noopener">releasePolicy</a>  </p>
+</section>
+
+<section class="panel" aria-labelledby="coverage-title">
+  <h2 class="panel-title" id="coverage-title">Data coverage</h2>
+  <p class="panel-note">
+    Upstream does not publish every milestone for every release. Empty cells in the table below are unknown dates,
+    not implied support.
+  </p>
+  <ul class="bars">
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">General availability</span>
+        <span class="bar-value">146 / 146 releases (100%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="General availability: 146 of 146 releases have a published date">
+        <div class="bar-fill" style="width: 100%"></div>
+      </div>
+    </li>
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">End of sale</span>
+        <span class="bar-value">0 / 146 releases (0%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="End of sale: 0 of 146 releases have a published date">
+        <div class="bar-fill" style="width: 0%"></div>
+      </div>
+    </li>
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">End of security support</span>
+        <span class="bar-value">146 / 146 releases (100%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="End of security support: 146 of 146 releases have a published date">
+        <div class="bar-fill" style="width: 100%"></div>
+      </div>
+    </li>
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">End of life</span>
+        <span class="bar-value">146 / 146 releases (100%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="End of life: 146 of 146 releases have a published date">
+        <div class="bar-fill" style="width: 100%"></div>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section class="panel" aria-labelledby="legend-title">
+  <h2 class="panel-title" id="legend-title">How to read these dates</h2>
+  <dl class="legend">
+    <div class="legend-row">
+      <dt>General availability</dt>
+      <dd>
+        <p>First public release. Taken from the upstream releaseDate.</p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>End of sale</dt>
+      <dd>
+        <p>Last day new licenses or units are sold. Only mapped from an upstream field whose label names an end of sale.</p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>End of security support</dt>
+      <dd>
+        <p>Last day security fixes are published. Mapped from eolFrom or eoesFrom only when the label names security support.</p>
+        <p>
+          Extended support counts as security support: when upstream publishes an extended-support date, it replaces
+          the standard security-support deadline here.
+        </p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>End of life</dt>
+      <dd>
+        <p>End of all support. A published extended-support date wins; otherwise eolFrom when its label describes a full support end.</p>
+        <p>
+          An announced extended-support period with no published end date leaves end of life blank — the earlier
+          <code>eolFrom</code> value stays visible in the table rather than being promoted into a deadline upstream
+          never set.
+        </p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>Blank date</dt>
+      <dd><p>The source publishes no value for that milestone. A missing date is an absent announcement, not a claim that support ends or continues.</p></dd>
+    </div>
+  </dl>
+</section>
+
+<section class="panel" aria-labelledby="next-title">
+  <h2 class="panel-title" id="next-title">Upcoming published deadlines</h2>
+  <ul class="events">
+    <li>
+      <span class="event-release">153</span>
+      <span class="event-milestone">End of security support</span>
+      <span class="event-date"><time datetime="2026-09-22">Sep 22, 2026</time>        <span class="event-days">in 3 days</span></span>
+    </li>
+    <li>
+      <span class="event-release">153</span>
+      <span class="event-milestone">End of life</span>
+      <span class="event-date"><time datetime="2026-09-22">Sep 22, 2026</time>        <span class="event-days">in 3 days</span></span>
+    </li>
+  </ul>
+</section>
+
+<section class="releases" aria-labelledby="releases-title">
+  <div class="catalog-head">
+    <h2 class="panel-title" id="releases-title">Release lifecycle</h2>
+    <p class="catalog-count">146 releases</p>
+  </div>
+  <p class="panel-note">
+    Newest first. Cells show normalized dates; a secondary line shows the raw upstream field and label when the
+    normalized date differs from, or is absent despite, a published value.
+  </p>
+
+  <div class="table-scroll">
+    <table class="release-table">
+      <caption class="sr-only">Lifecycle dates for each Google Chrome release</caption>
+      <thead>
+        <tr>
+          <th scope="col">Release</th>
+          <th scope="col">General availability</th>
+          <th scope="col">End of sale</th>
+          <th scope="col">End of security support</th>
+          <th scope="col">End of life</th>
+          <th scope="col">Upstream status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">153</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2026-09-08">Sep 8, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2026-09-22">Sep 22, 2026</time>          </td>
+          <td class="milestone">
+            <time datetime="2026-09-22">Sep 22, 2026</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">152</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2026-08-25">Aug 25, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2026-09-08">Sep 8, 2026</time>          </td>
+          <td class="milestone">
+            <time datetime="2026-09-08">Sep 8, 2026</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">151</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2026-07-28">Jul 28, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2026-08-25">Aug 25, 2026</time>          </td>
+          <td class="milestone">
+            <time datetime="2026-08-25">Aug 25, 2026</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">150</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2026-06-30">Jun 30, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2026-07-28">Jul 28, 2026</time>          </td>
+          <td class="milestone">
+            <time datetime="2026-07-28">Jul 28, 2026</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">149</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2026-06-02">Jun 2, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2026-06-30">Jun 30, 2026</time>          </td>
+          <td class="milestone">
+            <time datetime="2026-06-30">Jun 30, 2026</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">148</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2026-05-05">May 5, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2026-06-02">Jun 2, 2026</time>          </td>
+          <td class="milestone">
+            <time datetime="2026-06-02">Jun 2, 2026</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">147</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2026-04-07">Apr 7, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2026-05-05">May 5, 2026</time>          </td>
+          <td class="milestone">
+            <time datetime="2026-05-05">May 5, 2026</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">146</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2026-03-10">Mar 10, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2026-04-07">Apr 7, 2026</time>          </td>
+          <td class="milestone">
+            <time datetime="2026-04-07">Apr 7, 2026</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">145</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2026-02-10">Feb 10, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2026-03-10">Mar 10, 2026</time>          </td>
+          <td class="milestone">
+            <time datetime="2026-03-10">Mar 10, 2026</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">144</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2026-01-13">Jan 13, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2026-02-10">Feb 10, 2026</time>          </td>
+          <td class="milestone">
+            <time datetime="2026-02-10">Feb 10, 2026</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">143</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2025-12-02">Dec 2, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2026-01-13">Jan 13, 2026</time>          </td>
+          <td class="milestone">
+            <time datetime="2026-01-13">Jan 13, 2026</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">142</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2025-10-28">Oct 28, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2025-12-02">Dec 2, 2025</time>          </td>
+          <td class="milestone">
+            <time datetime="2025-12-02">Dec 2, 2025</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">141</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2025-09-30">Sep 30, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2025-10-28">Oct 28, 2025</time>          </td>
+          <td class="milestone">
+            <time datetime="2025-10-28">Oct 28, 2025</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">140</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2025-09-02">Sep 2, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2025-09-30">Sep 30, 2025</time>          </td>
+          <td class="milestone">
+            <time datetime="2025-09-30">Sep 30, 2025</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">139</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2025-08-05">Aug 5, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2025-09-02">Sep 2, 2025</time>          </td>
+          <td class="milestone">
+            <time datetime="2025-09-02">Sep 2, 2025</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">138</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2025-06-24">Jun 24, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2025-08-05">Aug 5, 2025</time>          </td>
+          <td class="milestone">
+            <time datetime="2025-08-05">Aug 5, 2025</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">137</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2025-05-27">May 27, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2025-06-24">Jun 24, 2025</time>          </td>
+          <td class="milestone">
+            <time datetime="2025-06-24">Jun 24, 2025</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">136</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2025-04-29">Apr 29, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2025-05-27">May 27, 2025</time>          </td>
+          <td class="milestone">
+            <time datetime="2025-05-27">May 27, 2025</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">135</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2025-04-01">Apr 1, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2025-04-29">Apr 29, 2025</time>          </td>
+          <td class="milestone">
+            <time datetime="2025-04-29">Apr 29, 2025</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">134</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2025-03-04">Mar 4, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2025-04-01">Apr 1, 2025</time>          </td>
+          <td class="milestone">
+            <time datetime="2025-04-01">Apr 1, 2025</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">133</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2025-02-04">Feb 4, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2025-03-04">Mar 4, 2025</time>          </td>
+          <td class="milestone">
+            <time datetime="2025-03-04">Mar 4, 2025</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">132</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2025-01-14">Jan 14, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2025-02-04">Feb 4, 2025</time>          </td>
+          <td class="milestone">
+            <time datetime="2025-02-04">Feb 4, 2025</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">131</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2024-11-12">Nov 12, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2025-01-14">Jan 14, 2025</time>          </td>
+          <td class="milestone">
+            <time datetime="2025-01-14">Jan 14, 2025</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">130</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2024-10-15">Oct 15, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2024-11-12">Nov 12, 2024</time>          </td>
+          <td class="milestone">
+            <time datetime="2024-11-12">Nov 12, 2024</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">129</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2024-09-17">Sep 17, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2024-10-15">Oct 15, 2024</time>          </td>
+          <td class="milestone">
+            <time datetime="2024-10-15">Oct 15, 2024</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">128</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2024-08-20">Aug 20, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2024-09-17">Sep 17, 2024</time>          </td>
+          <td class="milestone">
+            <time datetime="2024-09-17">Sep 17, 2024</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">127</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2024-07-23">Jul 23, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2024-08-20">Aug 20, 2024</time>          </td>
+          <td class="milestone">
+            <time datetime="2024-08-20">Aug 20, 2024</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">126</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2024-06-11">Jun 11, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2024-07-23">Jul 23, 2024</time>          </td>
+          <td class="milestone">
+            <time datetime="2024-07-23">Jul 23, 2024</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">125</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2024-05-14">May 14, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2024-06-11">Jun 11, 2024</time>          </td>
+          <td class="milestone">
+            <time datetime="2024-06-11">Jun 11, 2024</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">124</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2024-04-16">Apr 16, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2024-05-14">May 14, 2024</time>          </td>
+          <td class="milestone">
+            <time datetime="2024-05-14">May 14, 2024</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">123</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2024-03-19">Mar 19, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2024-04-16">Apr 16, 2024</time>          </td>
+          <td class="milestone">
+            <time datetime="2024-04-16">Apr 16, 2024</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">122</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2024-02-20">Feb 20, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2024-03-19">Mar 19, 2024</time>          </td>
+          <td class="milestone">
+            <time datetime="2024-03-19">Mar 19, 2024</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">121</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2024-01-23">Jan 23, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2024-02-20">Feb 20, 2024</time>          </td>
+          <td class="milestone">
+            <time datetime="2024-02-20">Feb 20, 2024</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">120</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2023-12-05">Dec 5, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2024-01-23">Jan 23, 2024</time>          </td>
+          <td class="milestone">
+            <time datetime="2024-01-23">Jan 23, 2024</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">119</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2023-10-31">Oct 31, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2023-12-05">Dec 5, 2023</time>          </td>
+          <td class="milestone">
+            <time datetime="2023-12-05">Dec 5, 2023</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">118</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2023-10-10">Oct 10, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2023-10-31">Oct 31, 2023</time>          </td>
+          <td class="milestone">
+            <time datetime="2023-10-31">Oct 31, 2023</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">117</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2023-09-12">Sep 12, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2023-10-10">Oct 10, 2023</time>          </td>
+          <td class="milestone">
+            <time datetime="2023-10-10">Oct 10, 2023</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">116</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2023-08-15">Aug 15, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2023-09-12">Sep 12, 2023</time>          </td>
+          <td class="milestone">
+            <time datetime="2023-09-12">Sep 12, 2023</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">115</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2023-07-18">Jul 18, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2023-08-15">Aug 15, 2023</time>          </td>
+          <td class="milestone">
+            <time datetime="2023-08-15">Aug 15, 2023</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">114</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2023-05-30">May 30, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2023-07-18">Jul 18, 2023</time>          </td>
+          <td class="milestone">
+            <time datetime="2023-07-18">Jul 18, 2023</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">113</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2023-05-02">May 2, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2023-05-30">May 30, 2023</time>          </td>
+          <td class="milestone">
+            <time datetime="2023-05-30">May 30, 2023</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">112</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2023-04-04">Apr 4, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2023-05-02">May 2, 2023</time>          </td>
+          <td class="milestone">
+            <time datetime="2023-05-02">May 2, 2023</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">111</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2023-03-07">Mar 7, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2023-04-04">Apr 4, 2023</time>          </td>
+          <td class="milestone">
+            <time datetime="2023-04-04">Apr 4, 2023</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">110</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2023-02-07">Feb 7, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2023-03-07">Mar 7, 2023</time>          </td>
+          <td class="milestone">
+            <time datetime="2023-03-07">Mar 7, 2023</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">109</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2023-01-10">Jan 10, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2023-02-07">Feb 7, 2023</time>          </td>
+          <td class="milestone">
+            <time datetime="2023-02-07">Feb 7, 2023</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">108</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2022-11-29">Nov 29, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2023-01-10">Jan 10, 2023</time>          </td>
+          <td class="milestone">
+            <time datetime="2023-01-10">Jan 10, 2023</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">107</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2022-10-25">Oct 25, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2022-11-29">Nov 29, 2022</time>          </td>
+          <td class="milestone">
+            <time datetime="2022-11-29">Nov 29, 2022</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">106</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2022-09-27">Sep 27, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2022-10-25">Oct 25, 2022</time>          </td>
+          <td class="milestone">
+            <time datetime="2022-10-25">Oct 25, 2022</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">105</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2022-08-30">Aug 30, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2022-09-27">Sep 27, 2022</time>          </td>
+          <td class="milestone">
+            <time datetime="2022-09-27">Sep 27, 2022</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">104</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2022-08-02">Aug 2, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2022-08-30">Aug 30, 2022</time>          </td>
+          <td class="milestone">
+            <time datetime="2022-08-30">Aug 30, 2022</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">103</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2022-06-21">Jun 21, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2022-08-02">Aug 2, 2022</time>          </td>
+          <td class="milestone">
+            <time datetime="2022-08-02">Aug 2, 2022</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">102</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2022-05-24">May 24, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2022-06-21">Jun 21, 2022</time>          </td>
+          <td class="milestone">
+            <time datetime="2022-06-21">Jun 21, 2022</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">101</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2022-04-26">Apr 26, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2022-05-24">May 24, 2022</time>          </td>
+          <td class="milestone">
+            <time datetime="2022-05-24">May 24, 2022</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">100</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2022-03-29">Mar 29, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2022-04-26">Apr 26, 2022</time>          </td>
+          <td class="milestone">
+            <time datetime="2022-04-26">Apr 26, 2022</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">99</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2022-03-01">Mar 1, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2022-03-29">Mar 29, 2022</time>          </td>
+          <td class="milestone">
+            <time datetime="2022-03-29">Mar 29, 2022</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">98</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2022-02-01">Feb 1, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2022-03-01">Mar 1, 2022</time>          </td>
+          <td class="milestone">
+            <time datetime="2022-03-01">Mar 1, 2022</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">97</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2022-01-04">Jan 4, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2022-02-01">Feb 1, 2022</time>          </td>
+          <td class="milestone">
+            <time datetime="2022-02-01">Feb 1, 2022</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">96</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2021-11-16">Nov 16, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2022-01-04">Jan 4, 2022</time>          </td>
+          <td class="milestone">
+            <time datetime="2022-01-04">Jan 4, 2022</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">95</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2021-10-19">Oct 19, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2021-11-16">Nov 16, 2021</time>          </td>
+          <td class="milestone">
+            <time datetime="2021-11-16">Nov 16, 2021</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">94</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2021-09-21">Sep 21, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2021-10-19">Oct 19, 2021</time>          </td>
+          <td class="milestone">
+            <time datetime="2021-10-19">Oct 19, 2021</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">93</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2021-08-31">Aug 31, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2021-09-21">Sep 21, 2021</time>          </td>
+          <td class="milestone">
+            <time datetime="2021-09-21">Sep 21, 2021</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">92</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2021-07-20">Jul 20, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2021-08-31">Aug 31, 2021</time>          </td>
+          <td class="milestone">
+            <time datetime="2021-08-31">Aug 31, 2021</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">91</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2021-05-25">May 25, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2021-07-20">Jul 20, 2021</time>          </td>
+          <td class="milestone">
+            <time datetime="2021-07-20">Jul 20, 2021</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">90</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2021-04-13">Apr 13, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2021-05-25">May 25, 2021</time>          </td>
+          <td class="milestone">
+            <time datetime="2021-05-25">May 25, 2021</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">89</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2021-03-02">Mar 2, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2021-04-13">Apr 13, 2021</time>          </td>
+          <td class="milestone">
+            <time datetime="2021-04-13">Apr 13, 2021</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">88</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2021-01-19">Jan 19, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2021-03-02">Mar 2, 2021</time>          </td>
+          <td class="milestone">
+            <time datetime="2021-03-02">Mar 2, 2021</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">87</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2020-11-17">Nov 17, 2020</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2021-01-19">Jan 19, 2021</time>          </td>
+          <td class="milestone">
+            <time datetime="2021-01-19">Jan 19, 2021</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">86</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2020-10-06">Oct 6, 2020</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2020-11-17">Nov 17, 2020</time>          </td>
+          <td class="milestone">
+            <time datetime="2020-11-17">Nov 17, 2020</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">85</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2020-08-25">Aug 25, 2020</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2020-10-06">Oct 6, 2020</time>          </td>
+          <td class="milestone">
+            <time datetime="2020-10-06">Oct 6, 2020</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">84</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2020-07-14">Jul 14, 2020</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2020-08-25">Aug 25, 2020</time>          </td>
+          <td class="milestone">
+            <time datetime="2020-08-25">Aug 25, 2020</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">83</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2020-05-19">May 19, 2020</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2020-07-14">Jul 14, 2020</time>          </td>
+          <td class="milestone">
+            <time datetime="2020-07-14">Jul 14, 2020</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">81</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2020-04-07">Apr 7, 2020</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2020-05-19">May 19, 2020</time>          </td>
+          <td class="milestone">
+            <time datetime="2020-05-19">May 19, 2020</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">80</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2020-02-04">Feb 4, 2020</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2020-04-07">Apr 7, 2020</time>          </td>
+          <td class="milestone">
+            <time datetime="2020-04-07">Apr 7, 2020</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">79</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2019-12-10">Dec 10, 2019</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2020-02-04">Feb 4, 2020</time>          </td>
+          <td class="milestone">
+            <time datetime="2020-02-04">Feb 4, 2020</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">78</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2019-10-22">Oct 22, 2019</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2019-12-10">Dec 10, 2019</time>          </td>
+          <td class="milestone">
+            <time datetime="2019-12-10">Dec 10, 2019</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">77</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2019-09-10">Sep 10, 2019</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2019-10-22">Oct 22, 2019</time>          </td>
+          <td class="milestone">
+            <time datetime="2019-10-22">Oct 22, 2019</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">76</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2019-07-30">Jul 30, 2019</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2019-09-10">Sep 10, 2019</time>          </td>
+          <td class="milestone">
+            <time datetime="2019-09-10">Sep 10, 2019</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">75</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2019-06-04">Jun 4, 2019</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2019-07-30">Jul 30, 2019</time>          </td>
+          <td class="milestone">
+            <time datetime="2019-07-30">Jul 30, 2019</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">74</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2019-04-23">Apr 23, 2019</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2019-06-04">Jun 4, 2019</time>          </td>
+          <td class="milestone">
+            <time datetime="2019-06-04">Jun 4, 2019</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">73</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2019-03-12">Mar 12, 2019</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2019-04-23">Apr 23, 2019</time>          </td>
+          <td class="milestone">
+            <time datetime="2019-04-23">Apr 23, 2019</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">72</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2019-01-29">Jan 29, 2019</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2019-03-12">Mar 12, 2019</time>          </td>
+          <td class="milestone">
+            <time datetime="2019-03-12">Mar 12, 2019</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">71</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2018-12-04">Dec 4, 2018</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2019-01-29">Jan 29, 2019</time>          </td>
+          <td class="milestone">
+            <time datetime="2019-01-29">Jan 29, 2019</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">70</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2018-10-16">Oct 16, 2018</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2018-12-04">Dec 4, 2018</time>          </td>
+          <td class="milestone">
+            <time datetime="2018-12-04">Dec 4, 2018</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">69</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2018-09-04">Sep 4, 2018</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2018-10-16">Oct 16, 2018</time>          </td>
+          <td class="milestone">
+            <time datetime="2018-10-16">Oct 16, 2018</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">68</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2018-07-24">Jul 24, 2018</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2018-09-04">Sep 4, 2018</time>          </td>
+          <td class="milestone">
+            <time datetime="2018-09-04">Sep 4, 2018</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">67</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2018-05-29">May 29, 2018</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2018-07-24">Jul 24, 2018</time>          </td>
+          <td class="milestone">
+            <time datetime="2018-07-24">Jul 24, 2018</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">66</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2018-04-17">Apr 17, 2018</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2018-05-29">May 29, 2018</time>          </td>
+          <td class="milestone">
+            <time datetime="2018-05-29">May 29, 2018</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">65</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2018-03-06">Mar 6, 2018</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2018-04-17">Apr 17, 2018</time>          </td>
+          <td class="milestone">
+            <time datetime="2018-04-17">Apr 17, 2018</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">64</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2018-01-23">Jan 23, 2018</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2018-03-06">Mar 6, 2018</time>          </td>
+          <td class="milestone">
+            <time datetime="2018-03-06">Mar 6, 2018</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">63</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2017-12-05">Dec 5, 2017</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2018-01-23">Jan 23, 2018</time>          </td>
+          <td class="milestone">
+            <time datetime="2018-01-23">Jan 23, 2018</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">62</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2017-10-17">Oct 17, 2017</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2017-12-05">Dec 5, 2017</time>          </td>
+          <td class="milestone">
+            <time datetime="2017-12-05">Dec 5, 2017</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">61</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2017-09-05">Sep 5, 2017</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2017-10-17">Oct 17, 2017</time>          </td>
+          <td class="milestone">
+            <time datetime="2017-10-17">Oct 17, 2017</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">60</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2017-07-25">Jul 25, 2017</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2017-09-05">Sep 5, 2017</time>          </td>
+          <td class="milestone">
+            <time datetime="2017-09-05">Sep 5, 2017</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">59</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2017-05-30">May 30, 2017</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2017-07-25">Jul 25, 2017</time>          </td>
+          <td class="milestone">
+            <time datetime="2017-07-25">Jul 25, 2017</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">58</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2017-04-18">Apr 18, 2017</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2017-05-30">May 30, 2017</time>          </td>
+          <td class="milestone">
+            <time datetime="2017-05-30">May 30, 2017</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">57</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2017-03-07">Mar 7, 2017</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2017-04-18">Apr 18, 2017</time>          </td>
+          <td class="milestone">
+            <time datetime="2017-04-18">Apr 18, 2017</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">56</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2017-01-24">Jan 24, 2017</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2017-03-07">Mar 7, 2017</time>          </td>
+          <td class="milestone">
+            <time datetime="2017-03-07">Mar 7, 2017</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">55</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2016-11-29">Nov 29, 2016</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2017-01-24">Jan 24, 2017</time>          </td>
+          <td class="milestone">
+            <time datetime="2017-01-24">Jan 24, 2017</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">54</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2016-10-11">Oct 11, 2016</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2016-11-29">Nov 29, 2016</time>          </td>
+          <td class="milestone">
+            <time datetime="2016-11-29">Nov 29, 2016</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">53</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2016-08-30">Aug 30, 2016</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2016-10-11">Oct 11, 2016</time>          </td>
+          <td class="milestone">
+            <time datetime="2016-10-11">Oct 11, 2016</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">52</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2016-07-19">Jul 19, 2016</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2016-08-30">Aug 30, 2016</time>          </td>
+          <td class="milestone">
+            <time datetime="2016-08-30">Aug 30, 2016</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">51</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2016-05-24">May 24, 2016</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2016-07-19">Jul 19, 2016</time>          </td>
+          <td class="milestone">
+            <time datetime="2016-07-19">Jul 19, 2016</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">50</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2016-04-12">Apr 12, 2016</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2016-05-24">May 24, 2016</time>          </td>
+          <td class="milestone">
+            <time datetime="2016-05-24">May 24, 2016</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">49</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2016-03-01">Mar 1, 2016</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2016-04-12">Apr 12, 2016</time>          </td>
+          <td class="milestone">
+            <time datetime="2016-04-12">Apr 12, 2016</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">48</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2016-01-19">Jan 19, 2016</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2016-03-01">Mar 1, 2016</time>          </td>
+          <td class="milestone">
+            <time datetime="2016-03-01">Mar 1, 2016</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">47</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2015-11-17">Nov 17, 2015</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2016-01-19">Jan 19, 2016</time>          </td>
+          <td class="milestone">
+            <time datetime="2016-01-19">Jan 19, 2016</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">46</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2015-10-06">Oct 6, 2015</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2015-11-17">Nov 17, 2015</time>          </td>
+          <td class="milestone">
+            <time datetime="2015-11-17">Nov 17, 2015</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">45</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2015-08-25">Aug 25, 2015</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2015-10-06">Oct 6, 2015</time>          </td>
+          <td class="milestone">
+            <time datetime="2015-10-06">Oct 6, 2015</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">44</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2015-07-14">Jul 14, 2015</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2015-08-25">Aug 25, 2015</time>          </td>
+          <td class="milestone">
+            <time datetime="2015-08-25">Aug 25, 2015</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">43</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2015-05-19">May 19, 2015</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2015-07-14">Jul 14, 2015</time>          </td>
+          <td class="milestone">
+            <time datetime="2015-07-14">Jul 14, 2015</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">42</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2015-04-07">Apr 7, 2015</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2015-05-19">May 19, 2015</time>          </td>
+          <td class="milestone">
+            <time datetime="2015-05-19">May 19, 2015</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">41</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2015-02-24">Feb 24, 2015</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2015-04-07">Apr 7, 2015</time>          </td>
+          <td class="milestone">
+            <time datetime="2015-04-07">Apr 7, 2015</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">40</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2015-01-13">Jan 13, 2015</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2015-02-24">Feb 24, 2015</time>          </td>
+          <td class="milestone">
+            <time datetime="2015-02-24">Feb 24, 2015</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">39</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2014-11-11">Nov 11, 2014</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2015-01-13">Jan 13, 2015</time>          </td>
+          <td class="milestone">
+            <time datetime="2015-01-13">Jan 13, 2015</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">38</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2014-09-30">Sep 30, 2014</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2014-11-11">Nov 11, 2014</time>          </td>
+          <td class="milestone">
+            <time datetime="2014-11-11">Nov 11, 2014</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">37</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2014-08-19">Aug 19, 2014</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2014-09-30">Sep 30, 2014</time>          </td>
+          <td class="milestone">
+            <time datetime="2014-09-30">Sep 30, 2014</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">36</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2014-06-24">Jun 24, 2014</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2014-08-19">Aug 19, 2014</time>          </td>
+          <td class="milestone">
+            <time datetime="2014-08-19">Aug 19, 2014</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">35</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2014-05-13">May 13, 2014</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2014-06-24">Jun 24, 2014</time>          </td>
+          <td class="milestone">
+            <time datetime="2014-06-24">Jun 24, 2014</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">34</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2014-04-01">Apr 1, 2014</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2014-05-13">May 13, 2014</time>          </td>
+          <td class="milestone">
+            <time datetime="2014-05-13">May 13, 2014</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">33</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2014-02-18">Feb 18, 2014</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2014-04-01">Apr 1, 2014</time>          </td>
+          <td class="milestone">
+            <time datetime="2014-04-01">Apr 1, 2014</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">32</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2014-01-07">Jan 7, 2014</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2014-02-18">Feb 18, 2014</time>          </td>
+          <td class="milestone">
+            <time datetime="2014-02-18">Feb 18, 2014</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">31</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2013-11-05">Nov 5, 2013</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2014-01-07">Jan 7, 2014</time>          </td>
+          <td class="milestone">
+            <time datetime="2014-01-07">Jan 7, 2014</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">30</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2013-09-24">Sep 24, 2013</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2013-11-05">Nov 5, 2013</time>          </td>
+          <td class="milestone">
+            <time datetime="2013-11-05">Nov 5, 2013</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">29</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2013-08-13">Aug 13, 2013</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2013-09-24">Sep 24, 2013</time>          </td>
+          <td class="milestone">
+            <time datetime="2013-09-24">Sep 24, 2013</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">28</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2013-06-25">Jun 25, 2013</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2013-08-13">Aug 13, 2013</time>          </td>
+          <td class="milestone">
+            <time datetime="2013-08-13">Aug 13, 2013</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">27</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2013-05-07">May 7, 2013</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2013-06-25">Jun 25, 2013</time>          </td>
+          <td class="milestone">
+            <time datetime="2013-06-25">Jun 25, 2013</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">26</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2013-03-26">Mar 26, 2013</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2013-05-07">May 7, 2013</time>          </td>
+          <td class="milestone">
+            <time datetime="2013-05-07">May 7, 2013</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">25</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2013-02-12">Feb 12, 2013</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2013-03-26">Mar 26, 2013</time>          </td>
+          <td class="milestone">
+            <time datetime="2013-03-26">Mar 26, 2013</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">24</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2012-12-18">Dec 18, 2012</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2013-02-12">Feb 12, 2013</time>          </td>
+          <td class="milestone">
+            <time datetime="2013-02-12">Feb 12, 2013</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">23</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2012-10-30">Oct 30, 2012</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2012-12-18">Dec 18, 2012</time>          </td>
+          <td class="milestone">
+            <time datetime="2012-12-18">Dec 18, 2012</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">22</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2012-09-18">Sep 18, 2012</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2012-10-30">Oct 30, 2012</time>          </td>
+          <td class="milestone">
+            <time datetime="2012-10-30">Oct 30, 2012</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">21</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2012-08-07">Aug 7, 2012</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2012-09-18">Sep 18, 2012</time>          </td>
+          <td class="milestone">
+            <time datetime="2012-09-18">Sep 18, 2012</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">20</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2012-06-19">Jun 19, 2012</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2012-08-07">Aug 7, 2012</time>          </td>
+          <td class="milestone">
+            <time datetime="2012-08-07">Aug 7, 2012</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">19</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2012-04-24">Apr 24, 2012</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2012-06-19">Jun 19, 2012</time>          </td>
+          <td class="milestone">
+            <time datetime="2012-06-19">Jun 19, 2012</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">18</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2012-03-13">Mar 13, 2012</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2012-04-24">Apr 24, 2012</time>          </td>
+          <td class="milestone">
+            <time datetime="2012-04-24">Apr 24, 2012</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">17</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2012-01-31">Jan 31, 2012</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2012-03-13">Mar 13, 2012</time>          </td>
+          <td class="milestone">
+            <time datetime="2012-03-13">Mar 13, 2012</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">16</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2011-12-06">Dec 6, 2011</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2012-01-31">Jan 31, 2012</time>          </td>
+          <td class="milestone">
+            <time datetime="2012-01-31">Jan 31, 2012</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">15</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2011-10-18">Oct 18, 2011</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2011-12-06">Dec 6, 2011</time>          </td>
+          <td class="milestone">
+            <time datetime="2011-12-06">Dec 6, 2011</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">14</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2011-09-06">Sep 6, 2011</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2011-10-18">Oct 18, 2011</time>          </td>
+          <td class="milestone">
+            <time datetime="2011-10-18">Oct 18, 2011</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">13</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2011-07-26">Jul 26, 2011</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2011-09-06">Sep 6, 2011</time>          </td>
+          <td class="milestone">
+            <time datetime="2011-09-06">Sep 6, 2011</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">12</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2011-05-31">May 31, 2011</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2011-07-26">Jul 26, 2011</time>          </td>
+          <td class="milestone">
+            <time datetime="2011-07-26">Jul 26, 2011</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">11</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2011-04-19">Apr 19, 2011</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2011-05-31">May 31, 2011</time>          </td>
+          <td class="milestone">
+            <time datetime="2011-05-31">May 31, 2011</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">10</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2011-03-08">Mar 8, 2011</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2011-04-19">Apr 19, 2011</time>          </td>
+          <td class="milestone">
+            <time datetime="2011-04-19">Apr 19, 2011</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">9</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2011-01-25">Jan 25, 2011</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2011-03-08">Mar 8, 2011</time>          </td>
+          <td class="milestone">
+            <time datetime="2011-03-08">Mar 8, 2011</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">8</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2010-11-30">Nov 30, 2010</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2011-01-25">Jan 25, 2011</time>          </td>
+          <td class="milestone">
+            <time datetime="2011-01-25">Jan 25, 2011</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">7</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2010-10-12">Oct 12, 2010</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2010-11-30">Nov 30, 2010</time>          </td>
+          <td class="milestone">
+            <time datetime="2010-11-30">Nov 30, 2010</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="panel" aria-labelledby="source-title">
+  <h2 class="panel-title" id="source-title">Source and upstream values</h2>
+  <p class="panel-note">
+    This record is a normalization of endoflife.date data, licensed MIT. Raw upstream values are
+    retained in full so the mapping below can be checked value by value.
+  </p>
+  <dl class="facts">
+    <div><dt>Upstream record</dt><dd><a href="https://endoflife.date/api/v1/products/chrome/" rel="noopener">https://endoflife.date/api/v1/products/chrome/</a></dd></div>
+    <div><dt>Source license</dt><dd><a href="https://github.com/endoflife-date/endoflife.date/blob/master/LICENSE" rel="noopener">endoflife.date — MIT</a></dd></div>
+    <div><dt>Verifier</dt><dd><code>deterministic-endoflife-date-v1</code></dd></div>
+    <div><dt>Last checked</dt><dd>Sep 17, 2026 at 11:51 UTC</dd></div>
+    <div><dt>Upstream modified</dt><dd>Sep 8, 2026 at 19:17 UTC</dd></div>
+    <div><dt>JSON record</dt><dd><a href="https://zarguell.github.io/eoltracker/v1/products/chrome.json">https://zarguell.github.io/eoltracker/v1/products/chrome.json</a></dd></div>
+    <div><dt>Schema</dt><dd><a href="https://zarguell.github.io/eoltracker/v1/schema/product.json">v1/schema/product.json</a></dd></div>
+  </dl>
+
+  <h3 class="sub-title">Identifiers</h3>
+  <ul class="chips">
+<li><span class="tag">repology</span> <code>google-chrome</code></li><li><span class="tag">cpe</span> <code>cpe:2.3:a:google:chrome</code></li>  </ul>
+
+  <h3 class="sub-title">Upstream label semantics</h3>
+  <p class="panel-note">
+    endoflife.date labels decide which raw date fields become which normalized milestone. These are this product's
+    label texts and the rule each one triggers.
+  </p>
+  <dl class="label-rules">
+    <div>
+      <dt><code>eoas</code> = not set</dt>
+      <dd>End-of-sale date when the text names an end of sale.</dd>
+    </div>
+    <div>
+      <dt><code>discontinued</code> = not set</dt>
+      <dd>End-of-sale date when the text names an end of sale; otherwise recorded only, never turned into a date.</dd>
+    </div>
+    <div>
+      <dt><code>eol</code> = “Security Support”</dt>
+      <dd>End of security support when the text names security support; end of life only when no extended-support label is set and the text describes a full support end.</dd>
+    </div>
+    <div>
+      <dt><code>eoes</code> = not set</dt>
+      <dd>Extended support. A published date also sets end of life, and a security-support text supersedes end of security support.</dd>
+    </div>
+  </dl>
+
+
+  <details class="raw">
+    <summary>Raw upstream release objects (146)</summary>
+    <p class="panel-note">Verbatim <code>releases[]</code> entries from the upstream record, unmodified.</p>
+    <details class="raw-release">
+      <summary><code>153</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2026-09-08&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2026-09-22&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>152</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2026-08-25&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2026-09-08&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>151</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2026-07-28&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2026-08-25&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>150</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2026-06-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2026-07-28&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>149</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2026-06-02&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2026-06-30&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>148</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2026-05-05&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2026-06-02&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>147</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2026-04-07&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2026-05-05&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>146</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2026-03-10&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2026-04-07&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>145</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2026-02-10&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2026-03-10&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>144</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2026-01-13&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2026-02-10&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>143</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-12-02&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2026-01-13&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>142</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-10-28&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2025-12-02&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>141</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-09-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2025-10-28&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>140</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-09-02&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2025-09-30&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>139</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-08-05&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2025-09-02&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>138</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-06-24&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2025-08-05&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>137</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-05-27&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2025-06-24&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>136</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-04-29&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2025-05-27&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>135</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-04-01&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2025-04-29&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>134</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-03-04&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2025-04-01&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>133</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-02-04&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2025-03-04&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>132</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-01-14&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2025-02-04&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>131</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-11-12&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2025-01-14&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>130</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-10-15&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2024-11-12&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>129</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-09-17&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2024-10-15&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>128</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-08-20&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2024-09-17&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>127</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-07-23&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2024-08-20&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>126</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-06-11&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2024-07-23&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>125</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-05-14&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2024-06-11&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>124</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-04-16&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2024-05-14&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>123</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-03-19&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2024-04-16&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>122</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-02-20&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2024-03-19&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>121</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-01-23&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2024-02-20&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>120</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-12-05&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2024-01-23&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>119</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-10-31&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2023-12-05&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>118</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-10-10&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2023-10-31&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>117</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-09-12&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2023-10-10&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>116</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-08-15&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2023-09-12&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>115</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-07-18&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2023-08-15&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>114</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-05-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2023-07-18&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>113</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-05-02&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2023-05-30&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>112</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-04-04&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2023-05-02&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>111</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-03-07&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2023-04-04&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>110</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-02-07&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2023-03-07&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>109</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-01-10&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2023-02-07&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>108</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-11-29&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2023-01-10&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>107</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-10-25&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2022-11-29&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>106</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-09-27&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2022-10-25&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>105</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-08-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2022-09-27&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>104</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-08-02&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2022-08-30&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>103</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-06-21&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2022-08-02&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>102</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-05-24&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2022-06-21&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>101</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-04-26&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2022-05-24&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>100</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-03-29&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2022-04-26&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>99</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-03-01&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2022-03-29&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>98</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-02-01&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2022-03-01&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>97</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-01-04&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2022-02-01&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>96</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2021-11-16&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2022-01-04&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>95</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2021-10-19&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2021-11-16&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>94</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2021-09-21&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2021-10-19&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>93</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2021-08-31&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2021-09-21&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>92</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2021-07-20&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2021-08-31&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>91</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2021-05-25&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2021-07-20&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>90</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2021-04-13&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2021-05-25&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>89</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2021-03-02&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2021-04-13&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>88</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2021-01-19&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2021-03-02&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>87</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2020-11-17&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2021-01-19&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>86</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2020-10-06&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2020-11-17&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>85</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2020-08-25&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2020-10-06&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>84</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2020-07-14&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2020-08-25&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>83</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2020-05-19&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2020-07-14&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>81</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2020-04-07&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2020-05-19&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>80</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2020-02-04&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2020-04-07&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>79</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2019-12-10&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2020-02-04&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>78</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2019-10-22&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2019-12-10&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>77</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2019-09-10&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2019-10-22&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>76</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2019-07-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2019-09-10&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>75</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2019-06-04&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2019-07-30&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>74</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2019-04-23&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2019-06-04&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>73</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2019-03-12&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2019-04-23&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>72</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2019-01-29&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2019-03-12&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>71</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2018-12-04&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2019-01-29&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>70</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2018-10-16&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2018-12-04&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>69</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2018-09-04&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2018-10-16&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>68</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2018-07-24&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2018-09-04&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>67</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2018-05-29&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2018-07-24&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>66</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2018-04-17&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2018-05-29&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>65</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2018-03-06&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2018-04-17&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>64</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2018-01-23&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2018-03-06&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>63</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2017-12-05&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2018-01-23&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>62</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2017-10-17&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2017-12-05&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>61</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2017-09-05&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2017-10-17&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>60</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2017-07-25&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2017-09-05&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>59</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2017-05-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2017-07-25&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>58</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2017-04-18&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2017-05-30&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>57</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2017-03-07&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2017-04-18&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>56</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2017-01-24&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2017-03-07&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>55</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2016-11-29&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2017-01-24&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>54</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2016-10-11&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2016-11-29&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>53</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2016-08-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2016-10-11&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>52</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2016-07-19&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2016-08-30&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>51</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2016-05-24&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2016-07-19&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>50</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2016-04-12&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2016-05-24&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>49</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2016-03-01&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2016-04-12&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>48</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2016-01-19&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2016-03-01&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>47</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2015-11-17&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2016-01-19&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>46</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2015-10-06&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2015-11-17&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>45</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2015-08-25&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2015-10-06&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>44</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2015-07-14&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2015-08-25&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>43</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2015-05-19&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2015-07-14&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>42</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2015-04-07&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2015-05-19&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>41</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2015-02-24&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2015-04-07&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>40</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2015-01-13&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2015-02-24&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>39</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2014-11-11&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2015-01-13&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>38</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2014-09-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2014-11-11&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>37</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2014-08-19&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2014-09-30&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>36</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2014-06-24&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2014-08-19&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>35</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2014-05-13&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2014-06-24&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>34</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2014-04-01&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2014-05-13&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>33</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2014-02-18&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2014-04-01&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>32</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2014-01-07&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2014-02-18&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>31</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2013-11-05&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2014-01-07&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>30</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2013-09-24&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2013-11-05&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>29</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2013-08-13&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2013-09-24&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>28</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2013-06-25&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2013-08-13&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>27</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2013-05-07&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2013-06-25&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>26</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2013-03-26&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2013-05-07&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>25</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2013-02-12&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2013-03-26&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>24</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2012-12-18&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2013-02-12&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>23</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2012-10-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2012-12-18&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>22</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2012-09-18&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2012-10-30&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>21</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2012-08-07&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2012-09-18&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>20</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2012-06-19&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2012-08-07&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>19</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2012-04-24&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2012-06-19&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>18</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2012-03-13&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2012-04-24&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>17</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2012-01-31&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2012-03-13&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>16</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2011-12-06&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2012-01-31&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>15</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2011-10-18&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2011-12-06&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>14</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2011-09-06&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2011-10-18&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>13</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2011-07-26&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2011-09-06&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>12</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2011-05-31&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2011-07-26&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>11</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2011-04-19&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2011-05-31&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>10</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2011-03-08&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2011-04-19&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>9</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2011-01-25&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2011-03-08&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>8</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2010-11-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2011-01-25&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>7</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2010-10-12&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2010-11-30&#34;
+  }
+]</code></pre>
+    </details>
+  </details>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="shell footer-inner">
+    <div class="footer-col">
+      <p class="footer-title">EOL Tracker</p>
+      <p class="footer-note">
+        Software lifecycle dates are republished from
+        <a href="https://endoflife.date/" rel="noopener">endoflife.date</a>.
+        Source data is licensed
+        <a href="https://github.com/endoflife-date/endoflife.date/blob/master/LICENSE" rel="noopener">MIT</a>.
+      </p>
+      <p class="footer-note">
+        Hardware lifecycle data comes from
+        <a href="https://eosl.date/" rel="noopener">eosl.date</a> by Subash Geetha Krishnan,
+        which aggregates public vendor announcements, and from
+        <a href="https://opengear.com/end-life-products" rel="noopener">Opengear's end-of-life product list</a>.
+        Attribution here is credit by name and link, not a licence to the source material: nothing is reproduced as
+        licensed material. This catalog is an independent normalization, not affiliated with endoflife.date, eosl.date,
+        Opengear or any vendor listed here.
+      </p>
+      <p class="footer-note">
+        Last catalog refresh Sep 17, 2026 at 18:35 UTC.
+      </p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-title">Data</p>
+      <ul class="footer-links">
+        <li><a href="/eoltracker/v1/feed.json">Feed (JSON)</a></li>
+        <li><a href="/eoltracker/v1/feed.atom">Deadlines (Atom)</a></li>
+        <li><a href="/eoltracker/v1/calendar.ics">Deadlines (iCal)</a></li>
+        <li><a href="/eoltracker/v1/products.json">Product summaries</a></li>
+        <li><a href="/eoltracker/v1/hardware.json">Hardware summaries</a></li>
+        <li><a href="/eoltracker/v1/changes.atom">Changes (Atom)</a></li>
+        <li><a href="/eoltracker/v1/changes.json">Changes (JSON)</a></li>
+        <li><a href="/eoltracker/hardware/">Hardware catalog</a></li>
+        <li><a href="/eoltracker/api/">Endpoints &amp; mapping</a></li>
+        <li><a href="/eoltracker/v1/schema/product.json">Record schema</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <p class="footer-title">Project</p>
+      <ul class="footer-links">
+        <li><a href="https://github.com/zarguell/eoltracker" rel="noopener">Source on GitHub</a></li>
+        <li><a href="https://endoflife.date/" rel="noopener">Upstream source</a></li>
+        <li><a href="/eoltracker/THIRD-PARTY-NOTICES.txt">THIRD-PARTY-NOTICES.txt</a></li>
+        <li><a href="/eoltracker/OASIS-NOTICE.txt">OASIS-NOTICE.txt</a></li>
+        <li><a href="/eoltracker/404.html">Not found page</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script src="/eoltracker/app.js" defer></script>
+</body>
+</html>

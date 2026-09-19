@@ -1,0 +1,25 @@
+{
+  "source_url": "https://docs.nvidia.com/vgpu/index.html",
+  "markdown_url": "https://docs.nvidia.com/vgpu/index.html.md",
+  "verifier": "deterministic-nvidia-vgpu",
+  "checked_at": "2026-09-17T19:15:22Z",
+  "record_scope": "NVIDIA vGPU software driver branches: one software record with one release per branch major, from the vendor's active and older branch tables, at the month precision those tables state",
+  "rows": {
+    "seen": 18,
+    "published": 18,
+    "active": 3,
+    "older": 15,
+    "retained": 0,
+    "excluded": 0
+  },
+  "excluded": [],
+  "retained": [],
+  "total_records": 1,
+  "limitations": [
+    "Month precision only: the vendor's tables state months, so every milestone is stored as YYYY-MM and no day is ever invented.",
+    "ga is absent: a table's Release Date belongs to the latest release in the branch, not to the branch's first release, so it is kept as a cell and never mapped to GA.",
+    "No date is derived from the published branch policy (Production 1 year, LTS 3 years); stored milestones are the vendor's own row values.",
+    "A branch the current tables no longer state is retained from the committed snapshot and marked upstream.in_source false; a dropped row is not an end of life.",
+    "Branch type and the latest release in branch are carried as the vendor's cells; neither is a support claim of its own."
+  ]
+}

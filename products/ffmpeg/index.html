@@ -1,0 +1,1508 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FFmpeg lifecycle dates — EOL Tracker</title>
+<meta name="description" content="General availability, end-of-sale, security-support and end-of-life dates for every FFmpeg release, with raw source values and provenance.">
+<link rel="canonical" href="https://zarguell.github.io/eoltracker/products/ffmpeg/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EOL Tracker">
+<meta property="og:title" content="FFmpeg lifecycle dates — EOL Tracker">
+<meta property="og:description" content="General availability, end-of-sale, security-support and end-of-life dates for every FFmpeg release, with raw source values and provenance.">
+<meta property="og:url" content="https://zarguell.github.io/eoltracker/products/ffmpeg/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d1b2a'/%3E%3Cpath d='M7 20.5l5-6 4 4.5 4-6.5 5 8' fill='none' stroke='%234fd1c5' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/eoltracker/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="shell masthead-inner">
+    <a class="wordmark" href="/eoltracker/">EOL<span>Tracker</span></a>
+    <nav class="mainnav" aria-label="Primary">
+      <a href="/eoltracker/">Software</a>
+      <a href="/eoltracker/hardware/">Hardware</a>
+      <a href="/eoltracker/api/">API &amp; data</a>
+      <a href="https://endoflife.date/" rel="noopener">endoflife.date</a>
+    </nav>
+    <p class="masthead-meta">483 products · 7814 releases · 6999 hardware records</p>
+  </div>
+</header>
+
+<main class="shell" id="main">
+<nav class="crumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/eoltracker/">Catalog</a></li>
+    <li aria-current="page">FFmpeg</li>
+  </ol>
+</nav>
+
+<section class="hero product-hero">
+  <p class="eyebrow">framework · software</p>
+  <h1 class="page-title">FFmpeg</h1>
+  <p class="lead">
+    38 releases published by endoflife.date, with each normalized milestone and the raw
+    upstream values behind it. Identifier for this record: <code>ffmpeg</code>.
+  </p>
+  <p class="hero-meta">
+    Verified Sep 17, 2026 at 11:51 UTC by <code>deterministic-endoflife-date-v1</code>.
+Source: endoflife.date.    Upstream modified Aug 13, 2026 at 00:06 UTC.
+    Last catalog refresh <time datetime="2026-09-17T18:35:21Z">Sep 17, 2026 at 18:35 UTC</time>.
+  </p>
+  <p class="product-links">
+    <a class="button" href="/eoltracker/v1/products/ffmpeg.json">JSON record</a>
+    <a class="button" href="https://endoflife.date/api/v1/products/ffmpeg/" rel="noopener">Source on endoflife.date</a>
+<a class="button" href="https://cdn.jsdelivr.net/npm/simple-icons/icons/ffmpeg.svg" rel="noopener">icon</a><a class="button" href="https://endoflife.date/ffmpeg" rel="noopener">html</a><a class="button" href="https://ffmpeg.org/" rel="noopener">releasePolicy</a>  </p>
+</section>
+
+<section class="panel" aria-labelledby="coverage-title">
+  <h2 class="panel-title" id="coverage-title">Data coverage</h2>
+  <p class="panel-note">
+    Upstream does not publish every milestone for every release. Empty cells in the table below are unknown dates,
+    not implied support.
+  </p>
+  <ul class="bars">
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">General availability</span>
+        <span class="bar-value">38 / 38 releases (100%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="General availability: 38 of 38 releases have a published date">
+        <div class="bar-fill" style="width: 100%"></div>
+      </div>
+    </li>
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">End of sale</span>
+        <span class="bar-value">0 / 38 releases (0%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="End of sale: 0 of 38 releases have a published date">
+        <div class="bar-fill" style="width: 0%"></div>
+      </div>
+    </li>
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">End of security support</span>
+        <span class="bar-value">0 / 38 releases (0%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="End of security support: 0 of 38 releases have a published date">
+        <div class="bar-fill" style="width: 0%"></div>
+      </div>
+    </li>
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">End of life</span>
+        <span class="bar-value">31 / 38 releases (82%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="End of life: 31 of 38 releases have a published date">
+        <div class="bar-fill" style="width: 82%"></div>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section class="panel" aria-labelledby="legend-title">
+  <h2 class="panel-title" id="legend-title">How to read these dates</h2>
+  <dl class="legend">
+    <div class="legend-row">
+      <dt>General availability</dt>
+      <dd>
+        <p>First public release. Taken from the upstream releaseDate.</p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>End of sale</dt>
+      <dd>
+        <p>Last day new licenses or units are sold. Only mapped from an upstream field whose label names an end of sale.</p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>End of security support</dt>
+      <dd>
+        <p>Last day security fixes are published. Mapped from eolFrom or eoesFrom only when the label names security support.</p>
+        <p>
+          Extended support counts as security support: when upstream publishes an extended-support date, it replaces
+          the standard security-support deadline here.
+        </p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>End of life</dt>
+      <dd>
+        <p>End of all support. A published extended-support date wins; otherwise eolFrom when its label describes a full support end.</p>
+        <p>
+          An announced extended-support period with no published end date leaves end of life blank — the earlier
+          <code>eolFrom</code> value stays visible in the table rather than being promoted into a deadline upstream
+          never set.
+        </p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>Blank date</dt>
+      <dd><p>The source publishes no value for that milestone. A missing date is an absent announcement, not a claim that support ends or continues.</p></dd>
+    </div>
+  </dl>
+</section>
+
+
+<section class="releases" aria-labelledby="releases-title">
+  <div class="catalog-head">
+    <h2 class="panel-title" id="releases-title">Release lifecycle</h2>
+    <p class="catalog-count">38 releases</p>
+  </div>
+  <p class="panel-note">
+    Newest first. Cells show normalized dates; a secondary line shows the raw upstream field and label when the
+    normalized date differs from, or is absent despite, a published value.
+  </p>
+
+  <div class="table-scroll">
+    <table class="release-table">
+      <caption class="sr-only">Lifecycle dates for each FFmpeg release</caption>
+      <thead>
+        <tr>
+          <th scope="col">Release</th>
+          <th scope="col">General availability</th>
+          <th scope="col">End of sale</th>
+          <th scope="col">End of security support</th>
+          <th scope="col">End of life</th>
+          <th scope="col">Upstream status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">9.0 &#39;Lei&#39;</span>
+<code class="release-raw">9.0</code>          </th>
+          <td class="milestone">
+            <time datetime="2026-08-04">Aug 4, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://ffmpeg.org/download.html#release_9.0" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">8.1 &#39;Hoare&#39;</span>
+<code class="release-raw">8.1</code>          </th>
+          <td class="milestone">
+            <time datetime="2026-03-16">Mar 16, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://ffmpeg.org/download.html#release_8.1" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">8.0 &#39;Huffman&#39;</span>
+<code class="release-raw">8.0</code>          </th>
+          <td class="milestone">
+            <time datetime="2025-08-22">Aug 22, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://ffmpeg.org/download.html#release_8.0" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">7.1 &#39;Péter&#39; (LTS)</span>
+<code class="release-raw">7.1</code>          </th>
+          <td class="milestone">
+            <time datetime="2024-09-30">Sep 30, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag">LTS</span><span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://ffmpeg.org/download.html#release_7.1" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">7.0 &#39;Dijkstra&#39;</span>
+<code class="release-raw">7.0</code>          </th>
+          <td class="milestone">
+            <time datetime="2024-04-05">Apr 5, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-06-22 (Supported)</span>          </td>
+          <td class="milestone">
+            <time datetime="2026-06-22">Jun 22, 2026</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://ffmpeg.org/download.html#release_7.0" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">6.1 &#39;Heaviside&#39;</span>
+<code class="release-raw">6.1</code>          </th>
+          <td class="milestone">
+            <time datetime="2023-11-11">Nov 11, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://ffmpeg.org/download.html#release_6.1" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">6.0 &#39;Von Neumann&#39;</span>
+<code class="release-raw">6.0</code>          </th>
+          <td class="milestone">
+            <time datetime="2023-02-27">Feb 27, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-07-11 (Supported)</span>          </td>
+          <td class="milestone">
+            <time datetime="2024-07-11">Jul 11, 2024</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://ffmpeg.org/download.html#release_6.0" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">5.1 &#39;Riemann&#39; (LTS)</span>
+<code class="release-raw">5.1</code>          </th>
+          <td class="milestone">
+            <time datetime="2022-07-22">Jul 22, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag">LTS</span><span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://ffmpeg.org/download.html#release_5.1" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">5.0 &#39;Lorentz&#39;</span>
+<code class="release-raw">5.0</code>          </th>
+          <td class="milestone">
+            <time datetime="2022-01-14">Jan 14, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-04-02 (Supported)</span>          </td>
+          <td class="milestone">
+            <time datetime="2023-04-02">Apr 2, 2023</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://ffmpeg.org/download.html#release_5.0" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">4.4 &#39;Rao&#39;</span>
+<code class="release-raw">4.4</code>          </th>
+          <td class="milestone">
+            <time datetime="2021-04-08">Apr 8, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://ffmpeg.org/download.html#release_4.4" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">4.3 &#39;4:3&#39;</span>
+<code class="release-raw">4.3</code>          </th>
+          <td class="milestone">
+            <time datetime="2020-06-15">Jun 15, 2020</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-06-21 (Supported)</span>          </td>
+          <td class="milestone">
+            <time datetime="2026-06-21">Jun 21, 2026</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://ffmpeg.org/download.html#release_4.3" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">4.2 &#39;Ada&#39;</span>
+<code class="release-raw">4.2</code>          </th>
+          <td class="milestone">
+            <time datetime="2019-08-05">Aug 5, 2019</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-06-21 (Supported)</span>          </td>
+          <td class="milestone">
+            <time datetime="2026-06-21">Jun 21, 2026</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://ffmpeg.org/download.html#release_4.2" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">4.1 &#39;al-Khwarizmi&#39;</span>
+<code class="release-raw">4.1</code>          </th>
+          <td class="milestone">
+            <time datetime="2018-11-06">Nov 6, 2018</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-07-21 (Supported)</span>          </td>
+          <td class="milestone">
+            <time datetime="2024-07-21">Jul 21, 2024</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://ffmpeg.org/download.html#release_4.1" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">4.0 &#39;Wu&#39;</span>
+<code class="release-raw">4.0</code>          </th>
+          <td class="milestone">
+            <time datetime="2018-04-20">Apr 20, 2018</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2020-07-03 (Supported)</span>          </td>
+          <td class="milestone">
+            <time datetime="2020-07-03">Jul 3, 2020</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://ffmpeg.org/download.html#release_4.0" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.4 &#39;Cantor&#39;</span>
+<code class="release-raw">3.4</code>          </th>
+          <td class="milestone">
+            <time datetime="2017-10-15">Oct 15, 2017</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-06-21 (Supported)</span>          </td>
+          <td class="milestone">
+            <time datetime="2026-06-21">Jun 21, 2026</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://ffmpeg.org/download.html#release_3.4" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.3 &#39;Hilbert&#39;</span>
+<code class="release-raw">3.3</code>          </th>
+          <td class="milestone">
+            <time datetime="2017-04-13">Apr 13, 2017</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2018-11-18 (Supported)</span>          </td>
+          <td class="milestone">
+            <time datetime="2018-11-18">Nov 18, 2018</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://ffmpeg.org/download.html#release_3.3" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.2 &#39;Hypatia&#39;</span>
+<code class="release-raw">3.2</code>          </th>
+          <td class="milestone">
+            <time datetime="2016-10-27">Oct 27, 2016</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2022-10-28 (Supported)</span>          </td>
+          <td class="milestone">
+            <time datetime="2022-10-28">Oct 28, 2022</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://ffmpeg.org/download.html#release_3.2" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.1 &#39;Laplace&#39;</span>
+<code class="release-raw">3.1</code>          </th>
+          <td class="milestone">
+            <time datetime="2016-06-27">Jun 27, 2016</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2017-09-25 (Supported)</span>          </td>
+          <td class="milestone">
+            <time datetime="2017-09-25">Sep 25, 2017</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://ffmpeg.org/download.html#release_3.1" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.0 &#39;Einstein&#39;</span>
+<code class="release-raw">3.0</code>          </th>
+          <td class="milestone">
+            <time datetime="2016-02-15">Feb 15, 2016</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2018-10-28 (Supported)</span>          </td>
+          <td class="milestone">
+            <time datetime="2018-10-28">Oct 28, 2018</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://ffmpeg.org/download.html#release_3.0" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">2.8 &#39;Feynman&#39;</span>
+<code class="release-raw">2.8</code>          </th>
+          <td class="milestone">
+            <time datetime="2015-09-09">Sep 9, 2015</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-06-21 (Supported)</span>          </td>
+          <td class="milestone">
+            <time datetime="2026-06-21">Jun 21, 2026</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://ffmpeg.org/download.html#release_2.8" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">2.7 &#39;Nash&#39;</span>
+<code class="release-raw">2.7</code>          </th>
+          <td class="milestone">
+            <time datetime="2015-06-10">Jun 10, 2015</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2016-04-30 (Supported)</span>          </td>
+          <td class="milestone">
+            <time datetime="2016-04-30">Apr 30, 2016</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://ffmpeg.org/download.html#release_2.7" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">2.6 &#39;Grothendieck&#39;</span>
+<code class="release-raw">2.6</code>          </th>
+          <td class="milestone">
+            <time datetime="2015-03-07">Mar 7, 2015</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2016-05-03 (Supported)</span>          </td>
+          <td class="milestone">
+            <time datetime="2016-05-03">May 3, 2016</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://ffmpeg.org/download.html#release_2.6" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">2.5 &#39;Bohr&#39;</span>
+<code class="release-raw">2.5</code>          </th>
+          <td class="milestone">
+            <time datetime="2014-12-04">Dec 4, 2014</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2016-02-02 (Supported)</span>          </td>
+          <td class="milestone">
+            <time datetime="2016-02-02">Feb 2, 2016</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://ffmpeg.org/download.html#release_2.5" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">2.4 &#39;Fresnel&#39;</span>
+<code class="release-raw">2.4</code>          </th>
+          <td class="milestone">
+            <time datetime="2014-09-14">Sep 14, 2014</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2017-12-31 (Supported)</span>          </td>
+          <td class="milestone">
+            <time datetime="2017-12-31">Dec 31, 2017</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://ffmpeg.org/download.html#release_2.4" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">2.3 &#39;Mandelbrot&#39;</span>
+<code class="release-raw">2.3</code>          </th>
+          <td class="milestone">
+            <time datetime="2014-07-16">Jul 16, 2014</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2015-01-06 (Supported)</span>          </td>
+          <td class="milestone">
+            <time datetime="2015-01-06">Jan 6, 2015</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://ffmpeg.org/download.html#release_2.3" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">2.2 &#39;Muybridge&#39;</span>
+<code class="release-raw">2.2</code>          </th>
+          <td class="milestone">
+            <time datetime="2014-03-23">Mar 23, 2014</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2015-06-18 (Supported)</span>          </td>
+          <td class="milestone">
+            <time datetime="2015-06-18">Jun 18, 2015</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://ffmpeg.org/download.html#release_2.2" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">2.1 &#39;Fourier&#39;</span>
+<code class="release-raw">2.1</code>          </th>
+          <td class="milestone">
+            <time datetime="2013-10-28">Oct 28, 2013</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2015-04-30 (Supported)</span>          </td>
+          <td class="milestone">
+            <time datetime="2015-04-30">Apr 30, 2015</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://ffmpeg.org/download.html#release_2.1" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">2.0 &#39;Nameless&#39;</span>
+<code class="release-raw">2.0</code>          </th>
+          <td class="milestone">
+            <time datetime="2013-07-10">Jul 10, 2013</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2015-06-10 (Supported)</span>          </td>
+          <td class="milestone">
+            <time datetime="2015-06-10">Jun 10, 2015</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://ffmpeg.org/download.html#release_2.0" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">1.2 &#39;Magic&#39;</span>
+<code class="release-raw">1.2</code>          </th>
+          <td class="milestone">
+            <time datetime="2013-03-15">Mar 15, 2013</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2015-02-12 (Supported)</span>          </td>
+          <td class="milestone">
+            <time datetime="2015-02-12">Feb 12, 2015</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://ffmpeg.org/download.html#release_1.2" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">1.1 &#39;Fire Flower&#39;</span>
+<code class="release-raw">1.1</code>          </th>
+          <td class="milestone">
+            <time datetime="2013-01-06">Jan 6, 2013</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2015-03-13 (Supported)</span>          </td>
+          <td class="milestone">
+            <time datetime="2015-03-13">Mar 13, 2015</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://ffmpeg.org/download.html#release_1.1" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">1.0 &#39;Angel&#39;</span>
+<code class="release-raw">1.0</code>          </th>
+          <td class="milestone">
+            <time datetime="2012-09-28">Sep 28, 2012</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2014-07-20 (Supported)</span>          </td>
+          <td class="milestone">
+            <time datetime="2014-07-20">Jul 20, 2014</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://ffmpeg.org/download.html#release_1.0" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">0.11 &#39;Happiness&#39;</span>
+<code class="release-raw">0.11</code>          </th>
+          <td class="milestone">
+            <time datetime="2012-05-25">May 25, 2012</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2014-03-10 (Supported)</span>          </td>
+          <td class="milestone">
+            <time datetime="2014-03-10">Mar 10, 2014</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://ffmpeg.org/download.html#release_0.11" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">0.10 &#39;Freedom&#39;</span>
+<code class="release-raw">0.10</code>          </th>
+          <td class="milestone">
+            <time datetime="2012-01-26">Jan 26, 2012</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2015-03-12 (Supported)</span>          </td>
+          <td class="milestone">
+            <time datetime="2015-03-12">Mar 12, 2015</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://ffmpeg.org/download.html#release_0.10" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">0.9 &#39;Harmony&#39;</span>
+<code class="release-raw">0.9</code>          </th>
+          <td class="milestone">
+            <time datetime="2011-12-11">Dec 11, 2011</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2014-03-21 (Supported)</span>          </td>
+          <td class="milestone">
+            <time datetime="2014-03-21">Mar 21, 2014</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://ffmpeg.org/download.html#release_0.9" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">0.8 &#39;Love&#39;</span>
+<code class="release-raw">0.8</code>          </th>
+          <td class="milestone">
+            <time datetime="2011-06-21">Jun 21, 2011</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2013-10-06 (Supported)</span>          </td>
+          <td class="milestone">
+            <time datetime="2013-10-06">Oct 6, 2013</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://ffmpeg.org/download.html#release_0.8" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">0.7 &#39;Peace&#39;</span>
+<code class="release-raw">0.7</code>          </th>
+          <td class="milestone">
+            <time datetime="2011-06-21">Jun 21, 2011</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2015-03-12 (Supported)</span>          </td>
+          <td class="milestone">
+            <time datetime="2015-03-12">Mar 12, 2015</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://ffmpeg.org/download.html#release_0.7" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">0.6 &#39;Works with HTML5&#39;</span>
+<code class="release-raw">0.6</code>          </th>
+          <td class="milestone">
+            <time datetime="2010-05-04">May 4, 2010</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2013-09-23 (Supported)</span>          </td>
+          <td class="milestone">
+            <time datetime="2013-09-23">Sep 23, 2013</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://ffmpeg.org/download.html#release_0.6" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">0.5 &#39;half-way to world domination A.K.A. the belligerent blue bike shed&#39;</span>
+<code class="release-raw">0.5</code>          </th>
+          <td class="milestone">
+            <time datetime="2009-03-02">Mar 2, 2009</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2014-11-29 (Supported)</span>          </td>
+          <td class="milestone">
+            <time datetime="2014-11-29">Nov 29, 2014</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://ffmpeg.org/download.html#release_0.5" rel="noopener">latest release</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="panel" aria-labelledby="source-title">
+  <h2 class="panel-title" id="source-title">Source and upstream values</h2>
+  <p class="panel-note">
+    This record is a normalization of endoflife.date data, licensed MIT. Raw upstream values are
+    retained in full so the mapping below can be checked value by value.
+  </p>
+  <dl class="facts">
+    <div><dt>Upstream record</dt><dd><a href="https://endoflife.date/api/v1/products/ffmpeg/" rel="noopener">https://endoflife.date/api/v1/products/ffmpeg/</a></dd></div>
+    <div><dt>Source license</dt><dd><a href="https://github.com/endoflife-date/endoflife.date/blob/master/LICENSE" rel="noopener">endoflife.date — MIT</a></dd></div>
+    <div><dt>Verifier</dt><dd><code>deterministic-endoflife-date-v1</code></dd></div>
+    <div><dt>Last checked</dt><dd>Sep 17, 2026 at 11:51 UTC</dd></div>
+    <div><dt>Upstream modified</dt><dd>Aug 13, 2026 at 00:06 UTC</dd></div>
+    <div><dt>JSON record</dt><dd><a href="https://zarguell.github.io/eoltracker/v1/products/ffmpeg.json">https://zarguell.github.io/eoltracker/v1/products/ffmpeg.json</a></dd></div>
+    <div><dt>Schema</dt><dd><a href="https://zarguell.github.io/eoltracker/v1/schema/product.json">v1/schema/product.json</a></dd></div>
+  </dl>
+
+  <h3 class="sub-title">Identifiers</h3>
+  <ul class="chips">
+<li><span class="tag">repology</span> <code>ffmpeg</code></li><li><span class="tag">purl</span> <code>pkg:brew/ffmpeg</code></li><li><span class="tag">purl</span> <code>pkg:deb/debian/ffmpeg</code></li><li><span class="tag">purl</span> <code>pkg:deb/ubuntu/ffmpeg</code></li><li><span class="tag">purl</span> <code>pkg:github/ffmpeg/ffmpeg</code></li><li><span class="tag">purl</span> <code>pkg:rpm/fedora/ffmpeg</code></li><li><span class="tag">cpe</span> <code>cpe:/a:ffmpeg:ffmpeg</code></li><li><span class="tag">cpe</span> <code>cpe:2.3:a:ffmpeg:ffmpeg</code></li>  </ul>
+
+  <h3 class="sub-title">Upstream label semantics</h3>
+  <p class="panel-note">
+    endoflife.date labels decide which raw date fields become which normalized milestone. These are this product's
+    label texts and the rule each one triggers.
+  </p>
+  <dl class="label-rules">
+    <div>
+      <dt><code>eoas</code> = not set</dt>
+      <dd>End-of-sale date when the text names an end of sale.</dd>
+    </div>
+    <div>
+      <dt><code>discontinued</code> = not set</dt>
+      <dd>End-of-sale date when the text names an end of sale; otherwise recorded only, never turned into a date.</dd>
+    </div>
+    <div>
+      <dt><code>eol</code> = “Supported”</dt>
+      <dd>End of security support when the text names security support; end of life only when no extended-support label is set and the text describes a full support end.</dd>
+    </div>
+    <div>
+      <dt><code>eoes</code> = not set</dt>
+      <dd>Extended support. A published date also sets end of life, and a security-support text supersedes end of security support.</dd>
+    </div>
+  </dl>
+
+
+  <details class="raw">
+    <summary>Raw upstream release objects (38)</summary>
+    <p class="panel-note">Verbatim <code>releases[]</code> entries from the upstream record, unmodified.</p>
+    <details class="raw-release">
+      <summary><code>9.0</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2026-08-04&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>8.1</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2026-03-16&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>8.0</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-08-22&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>7.1</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-09-30&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>7.0</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-04-05&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Supported&#34;,
+    &#34;value&#34;: &#34;2026-06-22&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>6.1</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-11-11&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>6.0</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-02-27&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Supported&#34;,
+    &#34;value&#34;: &#34;2024-07-11&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>5.1</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-07-22&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>5.0</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-01-14&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Supported&#34;,
+    &#34;value&#34;: &#34;2023-04-02&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>4.4</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2021-04-08&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>4.3</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2020-06-15&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Supported&#34;,
+    &#34;value&#34;: &#34;2026-06-21&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>4.2</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2019-08-05&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Supported&#34;,
+    &#34;value&#34;: &#34;2026-06-21&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>4.1</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2018-11-06&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Supported&#34;,
+    &#34;value&#34;: &#34;2024-07-21&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>4.0</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2018-04-20&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Supported&#34;,
+    &#34;value&#34;: &#34;2020-07-03&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.4</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2017-10-15&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Supported&#34;,
+    &#34;value&#34;: &#34;2026-06-21&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.3</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2017-04-13&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Supported&#34;,
+    &#34;value&#34;: &#34;2018-11-18&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.2</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2016-10-27&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Supported&#34;,
+    &#34;value&#34;: &#34;2022-10-28&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.1</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2016-06-27&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Supported&#34;,
+    &#34;value&#34;: &#34;2017-09-25&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.0</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2016-02-15&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Supported&#34;,
+    &#34;value&#34;: &#34;2018-10-28&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2.8</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2015-09-09&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Supported&#34;,
+    &#34;value&#34;: &#34;2026-06-21&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2.7</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2015-06-10&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Supported&#34;,
+    &#34;value&#34;: &#34;2016-04-30&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2.6</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2015-03-07&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Supported&#34;,
+    &#34;value&#34;: &#34;2016-05-03&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2.5</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2014-12-04&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Supported&#34;,
+    &#34;value&#34;: &#34;2016-02-02&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2.4</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2014-09-14&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Supported&#34;,
+    &#34;value&#34;: &#34;2017-12-31&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2.3</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2014-07-16&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Supported&#34;,
+    &#34;value&#34;: &#34;2015-01-06&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2.2</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2014-03-23&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Supported&#34;,
+    &#34;value&#34;: &#34;2015-06-18&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2.1</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2013-10-28&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Supported&#34;,
+    &#34;value&#34;: &#34;2015-04-30&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2.0</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2013-07-10&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Supported&#34;,
+    &#34;value&#34;: &#34;2015-06-10&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>1.2</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2013-03-15&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Supported&#34;,
+    &#34;value&#34;: &#34;2015-02-12&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>1.1</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2013-01-06&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Supported&#34;,
+    &#34;value&#34;: &#34;2015-03-13&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>1.0</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2012-09-28&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Supported&#34;,
+    &#34;value&#34;: &#34;2014-07-20&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>0.11</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2012-05-25&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Supported&#34;,
+    &#34;value&#34;: &#34;2014-03-10&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>0.10</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2012-01-26&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Supported&#34;,
+    &#34;value&#34;: &#34;2015-03-12&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>0.9</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2011-12-11&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Supported&#34;,
+    &#34;value&#34;: &#34;2014-03-21&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>0.8</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2011-06-21&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Supported&#34;,
+    &#34;value&#34;: &#34;2013-10-06&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>0.7</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2011-06-21&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Supported&#34;,
+    &#34;value&#34;: &#34;2015-03-12&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>0.6</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2010-05-04&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Supported&#34;,
+    &#34;value&#34;: &#34;2013-09-23&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>0.5</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2009-03-02&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Supported&#34;,
+    &#34;value&#34;: &#34;2014-11-29&#34;
+  }
+]</code></pre>
+    </details>
+  </details>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="shell footer-inner">
+    <div class="footer-col">
+      <p class="footer-title">EOL Tracker</p>
+      <p class="footer-note">
+        Software lifecycle dates are republished from
+        <a href="https://endoflife.date/" rel="noopener">endoflife.date</a>.
+        Source data is licensed
+        <a href="https://github.com/endoflife-date/endoflife.date/blob/master/LICENSE" rel="noopener">MIT</a>.
+      </p>
+      <p class="footer-note">
+        Hardware lifecycle data comes from
+        <a href="https://eosl.date/" rel="noopener">eosl.date</a> by Subash Geetha Krishnan,
+        which aggregates public vendor announcements, and from
+        <a href="https://opengear.com/end-life-products" rel="noopener">Opengear's end-of-life product list</a>.
+        Attribution here is credit by name and link, not a licence to the source material: nothing is reproduced as
+        licensed material. This catalog is an independent normalization, not affiliated with endoflife.date, eosl.date,
+        Opengear or any vendor listed here.
+      </p>
+      <p class="footer-note">
+        Last catalog refresh Sep 17, 2026 at 18:35 UTC.
+      </p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-title">Data</p>
+      <ul class="footer-links">
+        <li><a href="/eoltracker/v1/feed.json">Feed (JSON)</a></li>
+        <li><a href="/eoltracker/v1/feed.atom">Deadlines (Atom)</a></li>
+        <li><a href="/eoltracker/v1/calendar.ics">Deadlines (iCal)</a></li>
+        <li><a href="/eoltracker/v1/products.json">Product summaries</a></li>
+        <li><a href="/eoltracker/v1/hardware.json">Hardware summaries</a></li>
+        <li><a href="/eoltracker/v1/changes.atom">Changes (Atom)</a></li>
+        <li><a href="/eoltracker/v1/changes.json">Changes (JSON)</a></li>
+        <li><a href="/eoltracker/hardware/">Hardware catalog</a></li>
+        <li><a href="/eoltracker/api/">Endpoints &amp; mapping</a></li>
+        <li><a href="/eoltracker/v1/schema/product.json">Record schema</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <p class="footer-title">Project</p>
+      <ul class="footer-links">
+        <li><a href="https://github.com/zarguell/eoltracker" rel="noopener">Source on GitHub</a></li>
+        <li><a href="https://endoflife.date/" rel="noopener">Upstream source</a></li>
+        <li><a href="/eoltracker/THIRD-PARTY-NOTICES.txt">THIRD-PARTY-NOTICES.txt</a></li>
+        <li><a href="/eoltracker/OASIS-NOTICE.txt">OASIS-NOTICE.txt</a></li>
+        <li><a href="/eoltracker/404.html">Not found page</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script src="/eoltracker/app.js" defer></script>
+</body>
+</html>

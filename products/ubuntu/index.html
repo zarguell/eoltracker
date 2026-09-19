@@ -1,0 +1,2059 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ubuntu lifecycle dates — EOL Tracker</title>
+<meta name="description" content="General availability, end-of-sale, security-support and end-of-life dates for every Ubuntu release, with raw source values and provenance.">
+<link rel="canonical" href="https://zarguell.github.io/eoltracker/products/ubuntu/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EOL Tracker">
+<meta property="og:title" content="Ubuntu lifecycle dates — EOL Tracker">
+<meta property="og:description" content="General availability, end-of-sale, security-support and end-of-life dates for every Ubuntu release, with raw source values and provenance.">
+<meta property="og:url" content="https://zarguell.github.io/eoltracker/products/ubuntu/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d1b2a'/%3E%3Cpath d='M7 20.5l5-6 4 4.5 4-6.5 5 8' fill='none' stroke='%234fd1c5' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/eoltracker/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="shell masthead-inner">
+    <a class="wordmark" href="/eoltracker/">EOL<span>Tracker</span></a>
+    <nav class="mainnav" aria-label="Primary">
+      <a href="/eoltracker/">Software</a>
+      <a href="/eoltracker/hardware/">Hardware</a>
+      <a href="/eoltracker/api/">API &amp; data</a>
+      <a href="https://endoflife.date/" rel="noopener">endoflife.date</a>
+    </nav>
+    <p class="masthead-meta">483 products · 7814 releases · 6999 hardware records</p>
+  </div>
+</header>
+
+<main class="shell" id="main">
+<nav class="crumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/eoltracker/">Catalog</a></li>
+    <li aria-current="page">Ubuntu</li>
+  </ol>
+</nav>
+
+<section class="hero product-hero">
+  <p class="eyebrow">os · software</p>
+  <h1 class="page-title">Ubuntu</h1>
+  <p class="lead">
+    44 releases published by endoflife.date, with each normalized milestone and the raw
+    upstream values behind it. Identifier for this record: <code>ubuntu</code>.
+  </p>
+  <p class="hero-meta">
+    Verified Sep 17, 2026 at 11:51 UTC by <code>deterministic-endoflife-date-v1</code>.
+Source: endoflife.date.    Upstream modified Sep 1, 2026 at 00:11 UTC.
+    Last catalog refresh <time datetime="2026-09-17T18:35:21Z">Sep 17, 2026 at 18:35 UTC</time>.
+  </p>
+  <p class="product-links">
+    <a class="button" href="/eoltracker/v1/products/ubuntu.json">JSON record</a>
+    <a class="button" href="https://endoflife.date/api/v1/products/ubuntu/" rel="noopener">Source on endoflife.date</a>
+<a class="button" href="https://cdn.jsdelivr.net/npm/simple-icons/icons/ubuntu.svg" rel="noopener">icon</a><a class="button" href="https://endoflife.date/ubuntu" rel="noopener">html</a><a class="button" href="https://ubuntu.com/project/docs/release-team/list-of-releases/" rel="noopener">releasePolicy</a>  </p>
+</section>
+
+<section class="panel" aria-labelledby="coverage-title">
+  <h2 class="panel-title" id="coverage-title">Data coverage</h2>
+  <p class="panel-note">
+    Upstream does not publish every milestone for every release. Empty cells in the table below are unknown dates,
+    not implied support.
+  </p>
+  <ul class="bars">
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">General availability</span>
+        <span class="bar-value">44 / 44 releases (100%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="General availability: 44 of 44 releases have a published date">
+        <div class="bar-fill" style="width: 100%"></div>
+      </div>
+    </li>
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">End of sale</span>
+        <span class="bar-value">0 / 44 releases (0%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="End of sale: 0 of 44 releases have a published date">
+        <div class="bar-fill" style="width: 0%"></div>
+      </div>
+    </li>
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">End of security support</span>
+        <span class="bar-value">8 / 44 releases (18%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="End of security support: 8 of 44 releases have a published date">
+        <div class="bar-fill" style="width: 18%"></div>
+      </div>
+    </li>
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">End of life</span>
+        <span class="bar-value">8 / 44 releases (18%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="End of life: 8 of 44 releases have a published date">
+        <div class="bar-fill" style="width: 18%"></div>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section class="panel" aria-labelledby="legend-title">
+  <h2 class="panel-title" id="legend-title">How to read these dates</h2>
+  <dl class="legend">
+    <div class="legend-row">
+      <dt>General availability</dt>
+      <dd>
+        <p>First public release. Taken from the upstream releaseDate.</p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>End of sale</dt>
+      <dd>
+        <p>Last day new licenses or units are sold. Only mapped from an upstream field whose label names an end of sale.</p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>End of security support</dt>
+      <dd>
+        <p>Last day security fixes are published. Mapped from eolFrom or eoesFrom only when the label names security support.</p>
+        <p>
+          Extended support counts as security support: when upstream publishes an extended-support date, it replaces
+          the standard security-support deadline here.
+        </p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>End of life</dt>
+      <dd>
+        <p>End of all support. A published extended-support date wins; otherwise eolFrom when its label describes a full support end.</p>
+        <p>
+          An announced extended-support period with no published end date leaves end of life blank — the earlier
+          <code>eolFrom</code> value stays visible in the table rather than being promoted into a deadline upstream
+          never set.
+        </p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>Blank date</dt>
+      <dd><p>The source publishes no value for that milestone. A missing date is an absent announcement, not a claim that support ends or continues.</p></dd>
+    </div>
+  </dl>
+</section>
+
+<section class="panel" aria-labelledby="next-title">
+  <h2 class="panel-title" id="next-title">Upcoming published deadlines</h2>
+  <ul class="events">
+    <li>
+      <span class="event-release">18.04 &#39;Bionic Beaver&#39; (LTS)</span>
+      <span class="event-milestone">End of security support</span>
+      <span class="event-date"><time datetime="2028-04-26">Apr 26, 2028</time>        <span class="event-days">in 585 days</span></span>
+    </li>
+    <li>
+      <span class="event-release">18.04 &#39;Bionic Beaver&#39; (LTS)</span>
+      <span class="event-milestone">End of life</span>
+      <span class="event-date"><time datetime="2028-04-26">Apr 26, 2028</time>        <span class="event-days">in 585 days</span></span>
+    </li>
+    <li>
+      <span class="event-release">20.04 &#39;Focal Fossa&#39; (LTS)</span>
+      <span class="event-milestone">End of security support</span>
+      <span class="event-date"><time datetime="2030-04-23">Apr 23, 2030</time>        <span class="event-days">in 1312 days</span></span>
+    </li>
+    <li>
+      <span class="event-release">20.04 &#39;Focal Fossa&#39; (LTS)</span>
+      <span class="event-milestone">End of life</span>
+      <span class="event-date"><time datetime="2030-04-23">Apr 23, 2030</time>        <span class="event-days">in 1312 days</span></span>
+    </li>
+    <li>
+      <span class="event-release">22.04 &#39;Jammy Jellyfish&#39; (LTS)</span>
+      <span class="event-milestone">End of security support</span>
+      <span class="event-date"><time datetime="2032-04-21">Apr 21, 2032</time>        <span class="event-days">in 2041 days</span></span>
+    </li>
+    <li>
+      <span class="event-release">22.04 &#39;Jammy Jellyfish&#39; (LTS)</span>
+      <span class="event-milestone">End of life</span>
+      <span class="event-date"><time datetime="2032-04-21">Apr 21, 2032</time>        <span class="event-days">in 2041 days</span></span>
+    </li>
+    <li>
+      <span class="event-release">24.04 &#39;Noble Numbat&#39; (LTS)</span>
+      <span class="event-milestone">End of security support</span>
+      <span class="event-date"><time datetime="2034-04-25">Apr 25, 2034</time>        <span class="event-days">in 2775 days</span></span>
+    </li>
+    <li>
+      <span class="event-release">24.04 &#39;Noble Numbat&#39; (LTS)</span>
+      <span class="event-milestone">End of life</span>
+      <span class="event-date"><time datetime="2034-04-25">Apr 25, 2034</time>        <span class="event-days">in 2775 days</span></span>
+    </li>
+  </ul>
+</section>
+
+<section class="releases" aria-labelledby="releases-title">
+  <div class="catalog-head">
+    <h2 class="panel-title" id="releases-title">Release lifecycle</h2>
+    <p class="catalog-count">44 releases</p>
+  </div>
+  <p class="panel-note">
+    Newest first. Cells show normalized dates; a secondary line shows the raw upstream field and label when the
+    normalized date differs from, or is absent despite, a published value.
+  </p>
+
+  <div class="table-scroll">
+    <table class="release-table">
+      <caption class="sr-only">Lifecycle dates for each Ubuntu release</caption>
+      <thead>
+        <tr>
+          <th scope="col">Release</th>
+          <th scope="col">General availability</th>
+          <th scope="col">End of sale</th>
+          <th scope="col">End of security support</th>
+          <th scope="col">End of life</th>
+          <th scope="col">Upstream status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">26.04 &#39;Resolute Raccoon&#39; (LTS)</span>
+<code class="release-raw">26.04</code>          </th>
+          <td class="milestone">
+            <time datetime="2026-04-23">Apr 23, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2031-05-29 (Hardware &amp; Maintenance)</span>          </td>
+          <td class="milestone">
+            <time datetime="2036-04-23">Apr 23, 2036</time><span class="cell-note">eolFrom 2031-05-29 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2036-04-23">Apr 23, 2036</time><span class="cell-note">eolFrom 2031-05-29 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag">LTS</span><span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://wiki.ubuntu.com/ResoluteRaccoon/ReleaseNotes/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">25.10 &#39;Questing Quokka&#39;</span>
+<code class="release-raw">25.10</code>          </th>
+          <td class="milestone">
+            <time datetime="2025-10-09">Oct 9, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2026-07-01 (Hardware &amp; Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-07-01 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-07-01 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://wiki.ubuntu.com/QuestingQuokka/ReleaseNotes/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">25.04 &#39;Plucky Puffin&#39;</span>
+<code class="release-raw">25.04</code>          </th>
+          <td class="milestone">
+            <time datetime="2025-04-17">Apr 17, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2026-01-17 (Hardware &amp; Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-01-17 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-01-17 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://wiki.ubuntu.com/PluckyPuffin/ReleaseNotes/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">24.10 &#39;Oracular Oriole&#39;</span>
+<code class="release-raw">24.10</code>          </th>
+          <td class="milestone">
+            <time datetime="2024-10-10">Oct 10, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2025-07-10 (Hardware &amp; Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-07-10 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-07-10 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://wiki.ubuntu.com/OracularOriole/ReleaseNotes/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">24.04 &#39;Noble Numbat&#39; (LTS)</span>
+<code class="release-raw">24.04</code>          </th>
+          <td class="milestone">
+            <time datetime="2024-04-25">Apr 25, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2029-05-31 (Hardware &amp; Maintenance)</span>          </td>
+          <td class="milestone">
+            <time datetime="2034-04-25">Apr 25, 2034</time><span class="cell-note">eolFrom 2029-05-31 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2034-04-25">Apr 25, 2034</time><span class="cell-note">eolFrom 2029-05-31 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag">LTS</span><span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://wiki.ubuntu.com/NobleNumbat/ReleaseNotes/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">23.10 &#39;Mantic Minotaur&#39;</span>
+<code class="release-raw">23.10</code>          </th>
+          <td class="milestone">
+            <time datetime="2023-10-12">Oct 12, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2024-07-12 (Hardware &amp; Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-07-12 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-07-12 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://wiki.ubuntu.com/ManticMinotaur/ReleaseNotes/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">23.04 &#39;Lunar Lobster&#39;</span>
+<code class="release-raw">23.04</code>          </th>
+          <td class="milestone">
+            <time datetime="2023-04-20">Apr 20, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2024-01-20 (Hardware &amp; Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-01-20 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-01-20 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://wiki.ubuntu.com/LunarLobster/ReleaseNotes/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">22.10 &#39;Kinetic Kudu&#39;</span>
+<code class="release-raw">22.10</code>          </th>
+          <td class="milestone">
+            <time datetime="2022-10-20">Oct 20, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2023-07-20 (Hardware &amp; Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-07-20 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-07-20 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://wiki.ubuntu.com/KineticKudu/ReleaseNotes/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">22.04 &#39;Jammy Jellyfish&#39; (LTS)</span>
+<code class="release-raw">22.04</code>          </th>
+          <td class="milestone">
+            <time datetime="2022-04-21">Apr 21, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2024-09-30 (Hardware &amp; Maintenance)</span>          </td>
+          <td class="milestone">
+            <time datetime="2032-04-21">Apr 21, 2032</time><span class="cell-note">eolFrom 2027-06-01 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2032-04-21">Apr 21, 2032</time><span class="cell-note">eolFrom 2027-06-01 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag">LTS</span><span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://wiki.ubuntu.com/JammyJellyfish/ReleaseNotes/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">21.10 &#39;Impish Indri&#39;</span>
+<code class="release-raw">21.10</code>          </th>
+          <td class="milestone">
+            <time datetime="2021-10-14">Oct 14, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2022-07-14 (Hardware &amp; Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2022-07-14 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2022-07-14 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://wiki.ubuntu.com/ImpishIndri/ReleaseNotes/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">21.04 &#39;Hirsute Hippo&#39;</span>
+<code class="release-raw">21.04</code>          </th>
+          <td class="milestone">
+            <time datetime="2021-04-22">Apr 22, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2022-01-20 (Hardware &amp; Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2022-01-20 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2022-01-20 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://wiki.ubuntu.com/HirsuteHippo/ReleaseNotes/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">20.10 &#39;Groovy Gorilla&#39;</span>
+<code class="release-raw">20.10</code>          </th>
+          <td class="milestone">
+            <time datetime="2020-10-22">Oct 22, 2020</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2021-07-22 (Hardware &amp; Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2021-07-22 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2021-07-22 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://wiki.ubuntu.com/GroovyGorilla/ReleaseNotes/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">20.04 &#39;Focal Fossa&#39; (LTS)</span>
+<code class="release-raw">20.04</code>          </th>
+          <td class="milestone">
+            <time datetime="2020-04-23">Apr 23, 2020</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2022-10-01 (Hardware &amp; Maintenance)</span>          </td>
+          <td class="milestone">
+            <time datetime="2030-04-23">Apr 23, 2030</time><span class="cell-note">eolFrom 2025-05-31 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2030-04-23">Apr 23, 2030</time><span class="cell-note">eolFrom 2025-05-31 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag">LTS</span><span class="tag tag-ok">maintained</span><span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://wiki.ubuntu.com/FocalFossa/ReleaseNotes/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">19.10 &#39;Eoan Ermine&#39;</span>
+<code class="release-raw">19.10</code>          </th>
+          <td class="milestone">
+            <time datetime="2019-10-17">Oct 17, 2019</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2020-07-06 (Hardware &amp; Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2020-07-06 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2020-07-06 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://wiki.ubuntu.com/EoanErmine/ReleaseNotes/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">19.04 &#39;Disco Dingo&#39;</span>
+<code class="release-raw">19.04</code>          </th>
+          <td class="milestone">
+            <time datetime="2019-04-18">Apr 18, 2019</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2020-01-23 (Hardware &amp; Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2020-01-23 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2020-01-23 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://wiki.ubuntu.com/DiscoDingo/ReleaseNotes/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">18.10 &#39;Cosmic Cuttlefish&#39;</span>
+<code class="release-raw">18.10</code>          </th>
+          <td class="milestone">
+            <time datetime="2018-10-18">Oct 18, 2018</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2019-07-18 (Hardware &amp; Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2019-07-18 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2019-07-18 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://wiki.ubuntu.com/CosmicCuttlefish/ReleaseNotes/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">18.04 &#39;Bionic Beaver&#39; (LTS)</span>
+<code class="release-raw">18.04</code>          </th>
+          <td class="milestone">
+            <time datetime="2018-04-26">Apr 26, 2018</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2023-05-31 (Hardware &amp; Maintenance)</span>          </td>
+          <td class="milestone">
+            <time datetime="2028-04-26">Apr 26, 2028</time><span class="cell-note">eolFrom 2023-05-31 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2028-04-26">Apr 26, 2028</time><span class="cell-note">eolFrom 2023-05-31 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag">LTS</span><span class="tag tag-ok">maintained</span><span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://wiki.ubuntu.com/BionicBeaver/ReleaseNotes/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">17.10 &#39;Artful Aardvark&#39;</span>
+<code class="release-raw">17.10</code>          </th>
+          <td class="milestone">
+            <time datetime="2017-10-19">Oct 19, 2017</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2018-07-19 (Hardware &amp; Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2018-07-19 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2018-07-19 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://wiki.ubuntu.com/ArtfulAardvark/ReleaseNotes/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">17.04 &#39;Zesty Zapus&#39;</span>
+<code class="release-raw">17.04</code>          </th>
+          <td class="milestone">
+            <time datetime="2017-04-13">Apr 13, 2017</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2018-01-13 (Hardware &amp; Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2018-01-13 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2018-01-13 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://wiki.ubuntu.com/ZestyZapus/ReleaseNotes/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">16.10 &#39;Yakkety Yak&#39;</span>
+<code class="release-raw">16.10</code>          </th>
+          <td class="milestone">
+            <time datetime="2016-10-13">Oct 13, 2016</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2017-07-20 (Hardware &amp; Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2017-07-20 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2017-07-20 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://wiki.ubuntu.com/YakketyYak/ReleaseNotes/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">16.04 &#39;Xenial Xerus&#39; (LTS)</span>
+<code class="release-raw">16.04</code>          </th>
+          <td class="milestone">
+            <time datetime="2016-04-21">Apr 21, 2016</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2021-04-02 (Hardware &amp; Maintenance)</span>          </td>
+          <td class="milestone">
+            <time datetime="2026-04-02">Apr 2, 2026</time><span class="cell-note">eolFrom 2021-04-02 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2026-04-02">Apr 2, 2026</time><span class="cell-note">eolFrom 2021-04-02 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag">LTS</span><span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://wiki.ubuntu.com/XenialXerus/ReleaseNotes/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">15.10 &#39;Wily Werewolf&#39;</span>
+<code class="release-raw">15.10</code>          </th>
+          <td class="milestone">
+            <time datetime="2015-10-22">Oct 22, 2015</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2016-07-28 (Hardware &amp; Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2016-07-28 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2016-07-28 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://wiki.ubuntu.com/WilyWerewolf/ReleaseNotes/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">15.04 &#39;Vivid Vervet&#39;</span>
+<code class="release-raw">15.04</code>          </th>
+          <td class="milestone">
+            <time datetime="2015-04-23">Apr 23, 2015</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2016-02-04 (Hardware &amp; Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2016-02-04 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2016-02-04 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://wiki.ubuntu.com/VividVervet/ReleaseNotes/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">14.10 &#39;Utopic Unicorn&#39;</span>
+<code class="release-raw">14.10</code>          </th>
+          <td class="milestone">
+            <time datetime="2014-10-23">Oct 23, 2014</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2015-07-23 (Hardware &amp; Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2015-07-23 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2015-07-23 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://wiki.ubuntu.com/UtopicUnicorn/ReleaseNotes/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">14.04 &#39;Trusty Tahr&#39; (LTS)</span>
+<code class="release-raw">14.04</code>          </th>
+          <td class="milestone">
+            <time datetime="2014-04-17">Apr 17, 2014</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2019-04-02 (Hardware &amp; Maintenance)</span>          </td>
+          <td class="milestone">
+            <time datetime="2024-04-02">Apr 2, 2024</time><span class="cell-note">eolFrom 2019-04-02 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2024-04-02">Apr 2, 2024</time><span class="cell-note">eolFrom 2019-04-02 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag">LTS</span><span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://wiki.ubuntu.com/TrustyTahr/ReleaseNotes/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">13.10 &#39;Saucy Salamander&#39;</span>
+<code class="release-raw">13.10</code>          </th>
+          <td class="milestone">
+            <time datetime="2013-10-17">Oct 17, 2013</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2014-07-17 (Hardware &amp; Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2014-07-17 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2014-07-17 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://wiki.ubuntu.com/SaucySalamander/ReleaseNotes/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">13.04 &#39;Raring Ringtail&#39;</span>
+<code class="release-raw">13.04</code>          </th>
+          <td class="milestone">
+            <time datetime="2013-04-25">Apr 25, 2013</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2014-01-27 (Hardware &amp; Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2014-01-27 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2014-01-27 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://wiki.ubuntu.com/RaringRingtail/ReleaseNotes/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">12.10 &#39;Quantal Quetzal&#39;</span>
+<code class="release-raw">12.10</code>          </th>
+          <td class="milestone">
+            <time datetime="2012-10-18">Oct 18, 2012</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2014-05-16 (Hardware &amp; Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2014-05-16 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2014-05-16 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://wiki.ubuntu.com/QuantalQuetzal/ReleaseNotes/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">12.04 &#39;Precise Pangolin&#39; (LTS)</span>
+<code class="release-raw">12.04</code>          </th>
+          <td class="milestone">
+            <time datetime="2012-04-26">Apr 26, 2012</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2017-04-28 (Hardware &amp; Maintenance)</span>          </td>
+          <td class="milestone">
+            <time datetime="2019-04-26">Apr 26, 2019</time><span class="cell-note">eolFrom 2017-04-28 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2019-04-26">Apr 26, 2019</time><span class="cell-note">eolFrom 2017-04-28 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag">LTS</span><span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://wiki.ubuntu.com/PrecisePangolin/ReleaseNotes/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">11.10 &#39;Oneiric Ocelot&#39;</span>
+<code class="release-raw">11.10</code>          </th>
+          <td class="milestone">
+            <time datetime="2011-10-13">Oct 13, 2011</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2013-05-09 (Hardware &amp; Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2013-05-09 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2013-05-09 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://wiki.ubuntu.com/OneiricOcelot/ReleaseNotes/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">11.04 &#39;Natty Narwhal&#39;</span>
+<code class="release-raw">11.04</code>          </th>
+          <td class="milestone">
+            <time datetime="2011-04-28">Apr 28, 2011</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2012-10-28 (Hardware &amp; Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2012-10-28 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2012-10-28 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://wiki.ubuntu.com/NattyNarwhal/ReleaseNotes/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">10.10 &#39;Maverick Meerkat&#39;</span>
+<code class="release-raw">10.10</code>          </th>
+          <td class="milestone">
+            <time datetime="2010-10-10">Oct 10, 2010</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2012-04-10 (Hardware &amp; Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2012-04-10 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2012-04-10 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://wiki.ubuntu.com/MaverickMeerkat/ReleaseNotes/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">10.04 &#39;Lucid Lynx&#39; (LTS)</span>
+<code class="release-raw">10.04</code>          </th>
+          <td class="milestone">
+            <time datetime="2010-04-29">Apr 29, 2010</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2013-05-09 (Hardware &amp; Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2013-05-09 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2013-05-09 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag">LTS</span><span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://wiki.ubuntu.com/LucidLynx/ReleaseNotes/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">9.10 &#39;Karmic Koala&#39;</span>
+<code class="release-raw">9.10</code>          </th>
+          <td class="milestone">
+            <time datetime="2009-10-29">Oct 29, 2009</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2011-04-30 (Hardware &amp; Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2011-04-30 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2011-04-30 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://wiki.ubuntu.com/KarmicKoala/ReleaseNotes/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">9.04 &#39;Jaunty Jackalope&#39;</span>
+<code class="release-raw">9.04</code>          </th>
+          <td class="milestone">
+            <time datetime="2009-04-23">Apr 23, 2009</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2010-10-23 (Hardware &amp; Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2010-10-23 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2010-10-23 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://wiki.ubuntu.com/JauntyJackalope/ReleaseNotes/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">8.10 &#39;Intrepid Ibex&#39;</span>
+<code class="release-raw">8.10</code>          </th>
+          <td class="milestone">
+            <time datetime="2008-10-30">Oct 30, 2008</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2010-04-30 (Hardware &amp; Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2010-04-30 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2010-04-30 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">8.04 &#39;Hardy Heron&#39; (LTS)</span>
+<code class="release-raw">8.04</code>          </th>
+          <td class="milestone">
+            <time datetime="2008-04-24">Apr 24, 2008</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2013-05-09 (Hardware &amp; Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2013-05-09 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2013-05-09 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag">LTS</span><span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">7.10 &#39;Gutsy Gibbon&#39;</span>
+<code class="release-raw">7.10</code>          </th>
+          <td class="milestone">
+            <time datetime="2007-10-18">Oct 18, 2007</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2009-04-18 (Hardware &amp; Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2009-04-18 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2009-04-18 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://wiki.ubuntu.com/GutsyGibbon/ReleaseNotes/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">7.04 &#39;Feisty Fawn&#39;</span>
+<code class="release-raw">7.04</code>          </th>
+          <td class="milestone">
+            <time datetime="2007-04-19">Apr 19, 2007</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2008-10-19 (Hardware &amp; Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2008-10-19 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2008-10-19 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">6.10 &#39;Edgy Eft&#39;</span>
+<code class="release-raw">6.10</code>          </th>
+          <td class="milestone">
+            <time datetime="2006-10-26">Oct 26, 2006</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2006-10-26 (Hardware &amp; Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2008-04-26 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2008-04-26 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">6.06 &#39;Dapper Drake&#39; (LTS)</span>
+<code class="release-raw">6.06</code>          </th>
+          <td class="milestone">
+            <time datetime="2006-06-01">Jun 1, 2006</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2011-06-01 (Hardware &amp; Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2011-06-01 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2011-06-01 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag">LTS</span><span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">5.10 &#39;Breezy Badger&#39;</span>
+<code class="release-raw">5.10</code>          </th>
+          <td class="milestone">
+            <time datetime="2005-10-12">Oct 12, 2005</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2007-04-13 (Hardware &amp; Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2007-04-13 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2007-04-13 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">5.04 &#39;Hoary Hedgehog&#39;</span>
+<code class="release-raw">5.04</code>          </th>
+          <td class="milestone">
+            <time datetime="2005-04-08">Apr 8, 2005</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2006-10-31 (Hardware &amp; Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2006-10-31 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2006-10-31 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">4.10 &#39;Warty Warthog&#39;</span>
+<code class="release-raw">4.10</code>          </th>
+          <td class="milestone">
+            <time datetime="2004-10-26">Oct 26, 2004</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2004-10-26 (Hardware &amp; Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2006-04-30 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2006-04-30 (Maintenance &amp; Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="panel" aria-labelledby="source-title">
+  <h2 class="panel-title" id="source-title">Source and upstream values</h2>
+  <p class="panel-note">
+    This record is a normalization of endoflife.date data, licensed MIT. Raw upstream values are
+    retained in full so the mapping below can be checked value by value.
+  </p>
+  <dl class="facts">
+    <div><dt>Upstream record</dt><dd><a href="https://endoflife.date/api/v1/products/ubuntu/" rel="noopener">https://endoflife.date/api/v1/products/ubuntu/</a></dd></div>
+    <div><dt>Source license</dt><dd><a href="https://github.com/endoflife-date/endoflife.date/blob/master/LICENSE" rel="noopener">endoflife.date — MIT</a></dd></div>
+    <div><dt>Verifier</dt><dd><code>deterministic-endoflife-date-v1</code></dd></div>
+    <div><dt>Last checked</dt><dd>Sep 17, 2026 at 11:51 UTC</dd></div>
+    <div><dt>Upstream modified</dt><dd>Sep 1, 2026 at 00:11 UTC</dd></div>
+    <div><dt>JSON record</dt><dd><a href="https://zarguell.github.io/eoltracker/v1/products/ubuntu.json">https://zarguell.github.io/eoltracker/v1/products/ubuntu.json</a></dd></div>
+    <div><dt>Schema</dt><dd><a href="https://zarguell.github.io/eoltracker/v1/schema/product.json">v1/schema/product.json</a></dd></div>
+  </dl>
+
+  <h3 class="sub-title">Identifiers</h3>
+  <ul class="chips">
+<li><span class="tag">cpe</span> <code>cpe:2.3:o:canonical:ubuntu_linux</code></li><li><span class="tag">cpe</span> <code>cpe:/o:canonical:ubuntu_linux</code></li>  </ul>
+
+  <h3 class="sub-title">Upstream label semantics</h3>
+  <p class="panel-note">
+    endoflife.date labels decide which raw date fields become which normalized milestone. These are this product's
+    label texts and the rule each one triggers.
+  </p>
+  <dl class="label-rules">
+    <div>
+      <dt><code>eoas</code> = “Hardware &amp; Maintenance”</dt>
+      <dd>End-of-sale date when the text names an end of sale.</dd>
+    </div>
+    <div>
+      <dt><code>discontinued</code> = not set</dt>
+      <dd>End-of-sale date when the text names an end of sale; otherwise recorded only, never turned into a date.</dd>
+    </div>
+    <div>
+      <dt><code>eol</code> = “Maintenance &amp; Security Support”</dt>
+      <dd>End of security support when the text names security support; end of life only when no extended-support label is set and the text describes a full support end.</dd>
+    </div>
+    <div>
+      <dt><code>eoes</code> = “Expanded Security Maintenance”</dt>
+      <dd>Extended support. A published date also sets end of life, and a security-support text supersedes end of security support.</dd>
+    </div>
+  </dl>
+
+
+  <details class="raw">
+    <summary>Raw upstream release objects (44)</summary>
+    <p class="panel-note">Verbatim <code>releases[]</code> entries from the upstream record, unmodified.</p>
+    <details class="raw-release">
+      <summary><code>26.04</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2026-04-23&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Hardware &amp; Maintenance&#34;,
+    &#34;value&#34;: &#34;2031-05-29&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Maintenance &amp; Security Support&#34;,
+    &#34;value&#34;: &#34;2031-05-29&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoesFrom&#34;,
+    &#34;label&#34;: &#34;Expanded Security Maintenance&#34;,
+    &#34;value&#34;: &#34;2036-04-23&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>25.10</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-10-09&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Hardware &amp; Maintenance&#34;,
+    &#34;value&#34;: &#34;2026-07-01&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Maintenance &amp; Security Support&#34;,
+    &#34;value&#34;: &#34;2026-07-01&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>25.04</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-04-17&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Hardware &amp; Maintenance&#34;,
+    &#34;value&#34;: &#34;2026-01-17&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Maintenance &amp; Security Support&#34;,
+    &#34;value&#34;: &#34;2026-01-17&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>24.10</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-10-10&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Hardware &amp; Maintenance&#34;,
+    &#34;value&#34;: &#34;2025-07-10&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Maintenance &amp; Security Support&#34;,
+    &#34;value&#34;: &#34;2025-07-10&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>24.04</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-04-25&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Hardware &amp; Maintenance&#34;,
+    &#34;value&#34;: &#34;2029-05-31&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Maintenance &amp; Security Support&#34;,
+    &#34;value&#34;: &#34;2029-05-31&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoesFrom&#34;,
+    &#34;label&#34;: &#34;Expanded Security Maintenance&#34;,
+    &#34;value&#34;: &#34;2034-04-25&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>23.10</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-10-12&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Hardware &amp; Maintenance&#34;,
+    &#34;value&#34;: &#34;2024-07-12&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Maintenance &amp; Security Support&#34;,
+    &#34;value&#34;: &#34;2024-07-12&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>23.04</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-04-20&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Hardware &amp; Maintenance&#34;,
+    &#34;value&#34;: &#34;2024-01-20&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Maintenance &amp; Security Support&#34;,
+    &#34;value&#34;: &#34;2024-01-20&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>22.10</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-10-20&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Hardware &amp; Maintenance&#34;,
+    &#34;value&#34;: &#34;2023-07-20&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Maintenance &amp; Security Support&#34;,
+    &#34;value&#34;: &#34;2023-07-20&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>22.04</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-04-21&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Hardware &amp; Maintenance&#34;,
+    &#34;value&#34;: &#34;2024-09-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Maintenance &amp; Security Support&#34;,
+    &#34;value&#34;: &#34;2027-06-01&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoesFrom&#34;,
+    &#34;label&#34;: &#34;Expanded Security Maintenance&#34;,
+    &#34;value&#34;: &#34;2032-04-21&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>21.10</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2021-10-14&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Hardware &amp; Maintenance&#34;,
+    &#34;value&#34;: &#34;2022-07-14&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Maintenance &amp; Security Support&#34;,
+    &#34;value&#34;: &#34;2022-07-14&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>21.04</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2021-04-22&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Hardware &amp; Maintenance&#34;,
+    &#34;value&#34;: &#34;2022-01-20&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Maintenance &amp; Security Support&#34;,
+    &#34;value&#34;: &#34;2022-01-20&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>20.10</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2020-10-22&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Hardware &amp; Maintenance&#34;,
+    &#34;value&#34;: &#34;2021-07-22&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Maintenance &amp; Security Support&#34;,
+    &#34;value&#34;: &#34;2021-07-22&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>20.04</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2020-04-23&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Hardware &amp; Maintenance&#34;,
+    &#34;value&#34;: &#34;2022-10-01&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Maintenance &amp; Security Support&#34;,
+    &#34;value&#34;: &#34;2025-05-31&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoesFrom&#34;,
+    &#34;label&#34;: &#34;Expanded Security Maintenance&#34;,
+    &#34;value&#34;: &#34;2030-04-23&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>19.10</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2019-10-17&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Hardware &amp; Maintenance&#34;,
+    &#34;value&#34;: &#34;2020-07-06&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Maintenance &amp; Security Support&#34;,
+    &#34;value&#34;: &#34;2020-07-06&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>19.04</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2019-04-18&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Hardware &amp; Maintenance&#34;,
+    &#34;value&#34;: &#34;2020-01-23&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Maintenance &amp; Security Support&#34;,
+    &#34;value&#34;: &#34;2020-01-23&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>18.10</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2018-10-18&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Hardware &amp; Maintenance&#34;,
+    &#34;value&#34;: &#34;2019-07-18&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Maintenance &amp; Security Support&#34;,
+    &#34;value&#34;: &#34;2019-07-18&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>18.04</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2018-04-26&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Hardware &amp; Maintenance&#34;,
+    &#34;value&#34;: &#34;2023-05-31&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Maintenance &amp; Security Support&#34;,
+    &#34;value&#34;: &#34;2023-05-31&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoesFrom&#34;,
+    &#34;label&#34;: &#34;Expanded Security Maintenance&#34;,
+    &#34;value&#34;: &#34;2028-04-26&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>17.10</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2017-10-19&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Hardware &amp; Maintenance&#34;,
+    &#34;value&#34;: &#34;2018-07-19&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Maintenance &amp; Security Support&#34;,
+    &#34;value&#34;: &#34;2018-07-19&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>17.04</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2017-04-13&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Hardware &amp; Maintenance&#34;,
+    &#34;value&#34;: &#34;2018-01-13&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Maintenance &amp; Security Support&#34;,
+    &#34;value&#34;: &#34;2018-01-13&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>16.10</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2016-10-13&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Hardware &amp; Maintenance&#34;,
+    &#34;value&#34;: &#34;2017-07-20&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Maintenance &amp; Security Support&#34;,
+    &#34;value&#34;: &#34;2017-07-20&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>16.04</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2016-04-21&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Hardware &amp; Maintenance&#34;,
+    &#34;value&#34;: &#34;2021-04-02&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Maintenance &amp; Security Support&#34;,
+    &#34;value&#34;: &#34;2021-04-02&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoesFrom&#34;,
+    &#34;label&#34;: &#34;Expanded Security Maintenance&#34;,
+    &#34;value&#34;: &#34;2026-04-02&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>15.10</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2015-10-22&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Hardware &amp; Maintenance&#34;,
+    &#34;value&#34;: &#34;2016-07-28&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Maintenance &amp; Security Support&#34;,
+    &#34;value&#34;: &#34;2016-07-28&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>15.04</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2015-04-23&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Hardware &amp; Maintenance&#34;,
+    &#34;value&#34;: &#34;2016-02-04&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Maintenance &amp; Security Support&#34;,
+    &#34;value&#34;: &#34;2016-02-04&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>14.10</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2014-10-23&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Hardware &amp; Maintenance&#34;,
+    &#34;value&#34;: &#34;2015-07-23&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Maintenance &amp; Security Support&#34;,
+    &#34;value&#34;: &#34;2015-07-23&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>14.04</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2014-04-17&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Hardware &amp; Maintenance&#34;,
+    &#34;value&#34;: &#34;2019-04-02&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Maintenance &amp; Security Support&#34;,
+    &#34;value&#34;: &#34;2019-04-02&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoesFrom&#34;,
+    &#34;label&#34;: &#34;Expanded Security Maintenance&#34;,
+    &#34;value&#34;: &#34;2024-04-02&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>13.10</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2013-10-17&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Hardware &amp; Maintenance&#34;,
+    &#34;value&#34;: &#34;2014-07-17&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Maintenance &amp; Security Support&#34;,
+    &#34;value&#34;: &#34;2014-07-17&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>13.04</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2013-04-25&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Hardware &amp; Maintenance&#34;,
+    &#34;value&#34;: &#34;2014-01-27&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Maintenance &amp; Security Support&#34;,
+    &#34;value&#34;: &#34;2014-01-27&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>12.10</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2012-10-18&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Hardware &amp; Maintenance&#34;,
+    &#34;value&#34;: &#34;2014-05-16&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Maintenance &amp; Security Support&#34;,
+    &#34;value&#34;: &#34;2014-05-16&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>12.04</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2012-04-26&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Hardware &amp; Maintenance&#34;,
+    &#34;value&#34;: &#34;2017-04-28&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Maintenance &amp; Security Support&#34;,
+    &#34;value&#34;: &#34;2017-04-28&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoesFrom&#34;,
+    &#34;label&#34;: &#34;Expanded Security Maintenance&#34;,
+    &#34;value&#34;: &#34;2019-04-26&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>11.10</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2011-10-13&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Hardware &amp; Maintenance&#34;,
+    &#34;value&#34;: &#34;2013-05-09&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Maintenance &amp; Security Support&#34;,
+    &#34;value&#34;: &#34;2013-05-09&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>11.04</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2011-04-28&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Hardware &amp; Maintenance&#34;,
+    &#34;value&#34;: &#34;2012-10-28&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Maintenance &amp; Security Support&#34;,
+    &#34;value&#34;: &#34;2012-10-28&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>10.10</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2010-10-10&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Hardware &amp; Maintenance&#34;,
+    &#34;value&#34;: &#34;2012-04-10&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Maintenance &amp; Security Support&#34;,
+    &#34;value&#34;: &#34;2012-04-10&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>10.04</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2010-04-29&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Hardware &amp; Maintenance&#34;,
+    &#34;value&#34;: &#34;2013-05-09&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Maintenance &amp; Security Support&#34;,
+    &#34;value&#34;: &#34;2013-05-09&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>9.10</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2009-10-29&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Hardware &amp; Maintenance&#34;,
+    &#34;value&#34;: &#34;2011-04-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Maintenance &amp; Security Support&#34;,
+    &#34;value&#34;: &#34;2011-04-30&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>9.04</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2009-04-23&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Hardware &amp; Maintenance&#34;,
+    &#34;value&#34;: &#34;2010-10-23&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Maintenance &amp; Security Support&#34;,
+    &#34;value&#34;: &#34;2010-10-23&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>8.10</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2008-10-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Hardware &amp; Maintenance&#34;,
+    &#34;value&#34;: &#34;2010-04-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Maintenance &amp; Security Support&#34;,
+    &#34;value&#34;: &#34;2010-04-30&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>8.04</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2008-04-24&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Hardware &amp; Maintenance&#34;,
+    &#34;value&#34;: &#34;2013-05-09&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Maintenance &amp; Security Support&#34;,
+    &#34;value&#34;: &#34;2013-05-09&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>7.10</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2007-10-18&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Hardware &amp; Maintenance&#34;,
+    &#34;value&#34;: &#34;2009-04-18&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Maintenance &amp; Security Support&#34;,
+    &#34;value&#34;: &#34;2009-04-18&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>7.04</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2007-04-19&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Hardware &amp; Maintenance&#34;,
+    &#34;value&#34;: &#34;2008-10-19&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Maintenance &amp; Security Support&#34;,
+    &#34;value&#34;: &#34;2008-10-19&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>6.10</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2006-10-26&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Hardware &amp; Maintenance&#34;,
+    &#34;value&#34;: &#34;2006-10-26&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Maintenance &amp; Security Support&#34;,
+    &#34;value&#34;: &#34;2008-04-26&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>6.06</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2006-06-01&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Hardware &amp; Maintenance&#34;,
+    &#34;value&#34;: &#34;2011-06-01&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Maintenance &amp; Security Support&#34;,
+    &#34;value&#34;: &#34;2011-06-01&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>5.10</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2005-10-12&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Hardware &amp; Maintenance&#34;,
+    &#34;value&#34;: &#34;2007-04-13&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Maintenance &amp; Security Support&#34;,
+    &#34;value&#34;: &#34;2007-04-13&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>5.04</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2005-04-08&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Hardware &amp; Maintenance&#34;,
+    &#34;value&#34;: &#34;2006-10-31&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Maintenance &amp; Security Support&#34;,
+    &#34;value&#34;: &#34;2006-10-31&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>4.10</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2004-10-26&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Hardware &amp; Maintenance&#34;,
+    &#34;value&#34;: &#34;2004-10-26&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Maintenance &amp; Security Support&#34;,
+    &#34;value&#34;: &#34;2006-04-30&#34;
+  }
+]</code></pre>
+    </details>
+  </details>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="shell footer-inner">
+    <div class="footer-col">
+      <p class="footer-title">EOL Tracker</p>
+      <p class="footer-note">
+        Software lifecycle dates are republished from
+        <a href="https://endoflife.date/" rel="noopener">endoflife.date</a>.
+        Source data is licensed
+        <a href="https://github.com/endoflife-date/endoflife.date/blob/master/LICENSE" rel="noopener">MIT</a>.
+      </p>
+      <p class="footer-note">
+        Hardware lifecycle data comes from
+        <a href="https://eosl.date/" rel="noopener">eosl.date</a> by Subash Geetha Krishnan,
+        which aggregates public vendor announcements, and from
+        <a href="https://opengear.com/end-life-products" rel="noopener">Opengear's end-of-life product list</a>.
+        Attribution here is credit by name and link, not a licence to the source material: nothing is reproduced as
+        licensed material. This catalog is an independent normalization, not affiliated with endoflife.date, eosl.date,
+        Opengear or any vendor listed here.
+      </p>
+      <p class="footer-note">
+        Last catalog refresh Sep 17, 2026 at 18:35 UTC.
+      </p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-title">Data</p>
+      <ul class="footer-links">
+        <li><a href="/eoltracker/v1/feed.json">Feed (JSON)</a></li>
+        <li><a href="/eoltracker/v1/feed.atom">Deadlines (Atom)</a></li>
+        <li><a href="/eoltracker/v1/calendar.ics">Deadlines (iCal)</a></li>
+        <li><a href="/eoltracker/v1/products.json">Product summaries</a></li>
+        <li><a href="/eoltracker/v1/hardware.json">Hardware summaries</a></li>
+        <li><a href="/eoltracker/v1/changes.atom">Changes (Atom)</a></li>
+        <li><a href="/eoltracker/v1/changes.json">Changes (JSON)</a></li>
+        <li><a href="/eoltracker/hardware/">Hardware catalog</a></li>
+        <li><a href="/eoltracker/api/">Endpoints &amp; mapping</a></li>
+        <li><a href="/eoltracker/v1/schema/product.json">Record schema</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <p class="footer-title">Project</p>
+      <ul class="footer-links">
+        <li><a href="https://github.com/zarguell/eoltracker" rel="noopener">Source on GitHub</a></li>
+        <li><a href="https://endoflife.date/" rel="noopener">Upstream source</a></li>
+        <li><a href="/eoltracker/THIRD-PARTY-NOTICES.txt">THIRD-PARTY-NOTICES.txt</a></li>
+        <li><a href="/eoltracker/OASIS-NOTICE.txt">OASIS-NOTICE.txt</a></li>
+        <li><a href="/eoltracker/404.html">Not found page</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script src="/eoltracker/app.js" defer></script>
+</body>
+</html>

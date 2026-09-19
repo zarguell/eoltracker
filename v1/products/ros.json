@@ -1,0 +1,124 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "ros",
+  "name": "ROS",
+  "category": "software",
+  "upstream_category": "framework",
+  "identifiers": [
+    {
+      "type": "purl",
+      "id": "pkg:github/ros/ros"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "End Of Life",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/ros.svg",
+    "html": "https://endoflife.date/ros",
+    "releasePolicy": "https://wiki.ros.org/Distributions"
+  },
+  "releases": [
+    {
+      "id": "noetic",
+      "name": "Noetic Ninjemys",
+      "milestones": {
+        "ga": "2020-05-23",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-05-01"
+      },
+      "upstream": {
+        "name": "noetic",
+        "codename": "Noetic Ninjemys",
+        "label": "Noetic Ninjemys",
+        "releaseDate": "2020-05-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-05-01",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "melodic",
+      "name": "Melodic Morenia",
+      "milestones": {
+        "ga": "2018-05-23",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-04-01"
+      },
+      "upstream": {
+        "name": "melodic",
+        "codename": "Melodic Morenia",
+        "label": "Melodic Morenia",
+        "releaseDate": "2018-05-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-04-01",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "lunar",
+      "name": "Lunar Loggerhead",
+      "milestones": {
+        "ga": "2017-05-23",
+        "eos": null,
+        "eossec": null,
+        "eol": "2019-05-01"
+      },
+      "upstream": {
+        "name": "lunar",
+        "codename": "Lunar Loggerhead",
+        "label": "Lunar Loggerhead",
+        "releaseDate": "2017-05-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-05-01",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "kinetic",
+      "name": "Kinetic Kame",
+      "milestones": {
+        "ga": "2016-05-23",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-05-01"
+      },
+      "upstream": {
+        "name": "kinetic",
+        "codename": "Kinetic Kame",
+        "label": "Kinetic Kame",
+        "releaseDate": "2016-05-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-05-01",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/ros/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-05-01T09:58:42+00:00"
+  }
+}

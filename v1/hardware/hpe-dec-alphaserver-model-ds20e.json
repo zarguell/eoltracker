@@ -1,0 +1,63 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "hpe-dec-alphaserver-model-ds20e",
+  "name": "DEC AlphaServer Model DS20E",
+  "category": "hardware",
+  "vendor": "HPE",
+  "product_line": "DEC AlphaServer",
+  "family": "Alpha Server",
+  "model_number": "DEC AlphaServer Model DS20E",
+  "milestones": {
+    "ga": null,
+    "eos": null,
+    "eossec": null,
+    "eol": "2011-12-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "DEC AlphaServer Model DS20E",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "DEC AlphaServer Model DS20E",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "DEC AlphaServer",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Not Announced",
+      "datetime": "",
+      "value": null,
+      "role": "ga",
+      "links": []
+    },
+    "End of Support": {
+      "text": "2011-12-31",
+      "datetime": null,
+      "value": "2011-12-31",
+      "role": "eol",
+      "links": [
+        "https://www.hpe.com/psnow/doc/c04282246"
+      ]
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/servers/vendor/hpe/alpha-server/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

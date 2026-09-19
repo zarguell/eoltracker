@@ -1,0 +1,82 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "hpe-1-0-0",
+  "name": "1.0.0",
+  "category": "hardware",
+  "vendor": "HPE",
+  "product_line": "HPE",
+  "family": "Infosight for Servers",
+  "model_number": "1.0.0",
+  "milestones": {
+    "ga": "2019-01-07",
+    "eos": null,
+    "eossec": null,
+    "eol": "2024-11-01"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "1.0.0",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Version Number": {
+      "text": "1.0.0",
+      "datetime": null,
+      "value": null,
+      "role": "version",
+      "links": []
+    },
+    "Release Type": {
+      "text": "End of Software Support",
+      "datetime": null,
+      "value": null,
+      "role": null,
+      "links": []
+    },
+    "Release Stream": {
+      "text": "1.x.x",
+      "datetime": null,
+      "value": null,
+      "role": null,
+      "links": []
+    },
+    "Release Notes Summary": {
+      "text": "Initial release, now EOL",
+      "datetime": null,
+      "value": null,
+      "role": null,
+      "links": []
+    },
+    "Download Information": {
+      "text": "Not available; refer to latest version",
+      "datetime": null,
+      "value": null,
+      "role": null,
+      "links": []
+    },
+    "Release Date": {
+      "text": "Jan. 07, 2019",
+      "datetime": "2019-01-07",
+      "value": "2019-01-07",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "Nov. 01, 2024",
+      "datetime": "2024-11-01",
+      "value": "2024-11-01",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/servers/server-monitoring/vendor/hpe/infosight-for-servers/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

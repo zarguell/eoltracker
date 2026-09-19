@@ -1,0 +1,1587 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "firefox",
+  "name": "Firefox",
+  "category": "software",
+  "upstream_category": "app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "firefox"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:apk/alpine/firefox"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:deb/debian/firefox-esr"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:generic/firefox"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:mozilla:firefox"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/firefoxbrowser.svg",
+    "html": "https://endoflife.date/firefox",
+    "releasePolicy": "https://www.mozilla.org/firefox/"
+  },
+  "releases": [
+    {
+      "id": "156",
+      "name": "156",
+      "milestones": {
+        "ga": "2026-09-15",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "156",
+        "codename": null,
+        "label": "156",
+        "releaseDate": "2026-09-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "156.0",
+          "date": "2026-09-15",
+          "link": "https://www.mozilla.org/firefox/156.0/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "155",
+      "name": "155",
+      "milestones": {
+        "ga": "2026-09-01",
+        "eos": null,
+        "eossec": "2026-09-15",
+        "eol": "2026-09-15"
+      },
+      "upstream": {
+        "name": "155",
+        "codename": null,
+        "label": "155",
+        "releaseDate": "2026-09-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-09-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "155.0.1",
+          "date": "2026-09-04",
+          "link": "https://www.mozilla.org/firefox/155.0.1/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "154",
+      "name": "154",
+      "milestones": {
+        "ga": "2026-08-18",
+        "eos": null,
+        "eossec": "2026-09-01",
+        "eol": "2026-09-01"
+      },
+      "upstream": {
+        "name": "154",
+        "codename": null,
+        "label": "154",
+        "releaseDate": "2026-08-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-09-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "154.0.1",
+          "date": "2026-08-25",
+          "link": "https://www.mozilla.org/firefox/154.0.1/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "153",
+      "name": "153 (ESR)",
+      "milestones": {
+        "ga": "2026-07-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "153",
+        "codename": null,
+        "label": "153 (ESR)",
+        "releaseDate": "2026-07-21",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "153.3.0",
+          "date": "2026-09-15",
+          "link": "https://www.mozilla.org/firefox/153.3.0/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "152",
+      "name": "152",
+      "milestones": {
+        "ga": "2026-06-16",
+        "eos": null,
+        "eossec": "2026-07-21",
+        "eol": "2026-07-21"
+      },
+      "upstream": {
+        "name": "152",
+        "codename": null,
+        "label": "152",
+        "releaseDate": "2026-06-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-07-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "152.0.6",
+          "date": "2026-07-14",
+          "link": "https://www.mozilla.org/firefox/152.0.6/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "151",
+      "name": "151",
+      "milestones": {
+        "ga": "2026-05-18",
+        "eos": null,
+        "eossec": "2026-06-16",
+        "eol": "2026-06-16"
+      },
+      "upstream": {
+        "name": "151",
+        "codename": null,
+        "label": "151",
+        "releaseDate": "2026-05-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-06-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "151.0.4",
+          "date": "2026-06-09",
+          "link": "https://www.mozilla.org/firefox/151.0.4/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "150",
+      "name": "150",
+      "milestones": {
+        "ga": "2026-04-21",
+        "eos": null,
+        "eossec": "2026-05-18",
+        "eol": "2026-05-18"
+      },
+      "upstream": {
+        "name": "150",
+        "codename": null,
+        "label": "150",
+        "releaseDate": "2026-04-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-05-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "150.0.3",
+          "date": "2026-05-12",
+          "link": "https://www.mozilla.org/firefox/150.0.3/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "149",
+      "name": "149",
+      "milestones": {
+        "ga": "2026-03-24",
+        "eos": null,
+        "eossec": "2026-04-21",
+        "eol": "2026-04-21"
+      },
+      "upstream": {
+        "name": "149",
+        "codename": null,
+        "label": "149",
+        "releaseDate": "2026-03-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-04-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "149.0.2",
+          "date": "2026-04-07",
+          "link": "https://www.mozilla.org/firefox/149.0.2/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "148",
+      "name": "148",
+      "milestones": {
+        "ga": "2026-02-24",
+        "eos": null,
+        "eossec": "2026-03-24",
+        "eol": "2026-03-24"
+      },
+      "upstream": {
+        "name": "148",
+        "codename": null,
+        "label": "148",
+        "releaseDate": "2026-02-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-03-24",
+        "isMaintained": false,
+        "latest": {
+          "name": "148.0.2",
+          "date": "2026-03-10",
+          "link": "https://www.mozilla.org/firefox/148.0.2/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "147",
+      "name": "147",
+      "milestones": {
+        "ga": "2026-01-13",
+        "eos": null,
+        "eossec": "2026-02-24",
+        "eol": "2026-02-24"
+      },
+      "upstream": {
+        "name": "147",
+        "codename": null,
+        "label": "147",
+        "releaseDate": "2026-01-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-02-24",
+        "isMaintained": false,
+        "latest": {
+          "name": "147.0.4",
+          "date": "2026-02-16",
+          "link": "https://www.mozilla.org/firefox/147.0.4/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "146",
+      "name": "146",
+      "milestones": {
+        "ga": "2025-12-09",
+        "eos": null,
+        "eossec": "2026-01-13",
+        "eol": "2026-01-13"
+      },
+      "upstream": {
+        "name": "146",
+        "codename": null,
+        "label": "146",
+        "releaseDate": "2025-12-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-01-13",
+        "isMaintained": false,
+        "latest": {
+          "name": "146.0.1",
+          "date": "2025-12-18",
+          "link": "https://www.mozilla.org/firefox/146.0.1/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "145",
+      "name": "145",
+      "milestones": {
+        "ga": "2025-11-11",
+        "eos": null,
+        "eossec": "2025-12-09",
+        "eol": "2025-12-09"
+      },
+      "upstream": {
+        "name": "145",
+        "codename": null,
+        "label": "145",
+        "releaseDate": "2025-11-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-12-09",
+        "isMaintained": false,
+        "latest": {
+          "name": "145.0.2",
+          "date": "2025-11-25",
+          "link": "https://www.mozilla.org/firefox/145.0.2/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "144",
+      "name": "144",
+      "milestones": {
+        "ga": "2025-10-14",
+        "eos": null,
+        "eossec": "2025-11-11",
+        "eol": "2025-11-11"
+      },
+      "upstream": {
+        "name": "144",
+        "codename": null,
+        "label": "144",
+        "releaseDate": "2025-10-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-11-11",
+        "isMaintained": false,
+        "latest": {
+          "name": "144.0.2",
+          "date": "2025-10-28",
+          "link": "https://www.mozilla.org/firefox/144.0.2/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "143",
+      "name": "143",
+      "milestones": {
+        "ga": "2025-09-16",
+        "eos": null,
+        "eossec": "2025-10-14",
+        "eol": "2025-10-14"
+      },
+      "upstream": {
+        "name": "143",
+        "codename": null,
+        "label": "143",
+        "releaseDate": "2025-09-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-10-14",
+        "isMaintained": false,
+        "latest": {
+          "name": "143.0.4",
+          "date": "2025-10-03",
+          "link": "https://www.mozilla.org/firefox/143.0.4/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "142",
+      "name": "142",
+      "milestones": {
+        "ga": "2025-08-19",
+        "eos": null,
+        "eossec": "2025-09-16",
+        "eol": "2025-09-16"
+      },
+      "upstream": {
+        "name": "142",
+        "codename": null,
+        "label": "142",
+        "releaseDate": "2025-08-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-09-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "142.0.1",
+          "date": "2025-08-27",
+          "link": "https://www.mozilla.org/firefox/142.0.1/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "141",
+      "name": "141",
+      "milestones": {
+        "ga": "2025-07-22",
+        "eos": null,
+        "eossec": "2025-08-19",
+        "eol": "2025-08-19"
+      },
+      "upstream": {
+        "name": "141",
+        "codename": null,
+        "label": "141",
+        "releaseDate": "2025-07-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-08-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "141.0.3",
+          "date": "2025-08-07",
+          "link": "https://www.mozilla.org/firefox/141.0.3/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "140",
+      "name": "140 (ESR)",
+      "milestones": {
+        "ga": "2025-06-24",
+        "eos": null,
+        "eossec": "2026-09-29",
+        "eol": "2026-09-29"
+      },
+      "upstream": {
+        "name": "140",
+        "codename": null,
+        "label": "140 (ESR)",
+        "releaseDate": "2025-06-24",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2026-09-29",
+        "isMaintained": true,
+        "latest": {
+          "name": "140.16.0",
+          "date": "2026-09-15",
+          "link": "https://www.mozilla.org/firefox/140.16.0/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "139",
+      "name": "139",
+      "milestones": {
+        "ga": "2025-05-27",
+        "eos": null,
+        "eossec": "2025-06-24",
+        "eol": "2025-06-24"
+      },
+      "upstream": {
+        "name": "139",
+        "codename": null,
+        "label": "139",
+        "releaseDate": "2025-05-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-06-24",
+        "isMaintained": false,
+        "latest": {
+          "name": "139.0.4",
+          "date": "2025-06-10",
+          "link": "https://www.mozilla.org/firefox/139.0.4/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "138",
+      "name": "138",
+      "milestones": {
+        "ga": "2025-04-29",
+        "eos": null,
+        "eossec": "2025-05-27",
+        "eol": "2025-05-27"
+      },
+      "upstream": {
+        "name": "138",
+        "codename": null,
+        "label": "138",
+        "releaseDate": "2025-04-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-05-27",
+        "isMaintained": false,
+        "latest": {
+          "name": "138.0.4",
+          "date": "2025-05-17",
+          "link": "https://www.mozilla.org/firefox/138.0.4/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "137",
+      "name": "137",
+      "milestones": {
+        "ga": "2025-04-01",
+        "eos": null,
+        "eossec": "2025-04-29",
+        "eol": "2025-04-29"
+      },
+      "upstream": {
+        "name": "137",
+        "codename": null,
+        "label": "137",
+        "releaseDate": "2025-04-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-04-29",
+        "isMaintained": false,
+        "latest": {
+          "name": "137.0.2",
+          "date": "2025-04-15",
+          "link": "https://www.mozilla.org/firefox/137.0.2/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "136",
+      "name": "136",
+      "milestones": {
+        "ga": "2025-03-04",
+        "eos": null,
+        "eossec": "2025-04-01",
+        "eol": "2025-04-01"
+      },
+      "upstream": {
+        "name": "136",
+        "codename": null,
+        "label": "136",
+        "releaseDate": "2025-03-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-04-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "136.0.4",
+          "date": "2025-03-27",
+          "link": "https://www.mozilla.org/firefox/136.0.4/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "135",
+      "name": "135",
+      "milestones": {
+        "ga": "2025-02-04",
+        "eos": null,
+        "eossec": "2025-03-04",
+        "eol": "2025-03-04"
+      },
+      "upstream": {
+        "name": "135",
+        "codename": null,
+        "label": "135",
+        "releaseDate": "2025-02-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-03-04",
+        "isMaintained": false,
+        "latest": {
+          "name": "135.0.1",
+          "date": "2025-02-18",
+          "link": "https://www.mozilla.org/firefox/135.0.1/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "134",
+      "name": "134",
+      "milestones": {
+        "ga": "2025-01-07",
+        "eos": null,
+        "eossec": "2025-02-04",
+        "eol": "2025-02-04"
+      },
+      "upstream": {
+        "name": "134",
+        "codename": null,
+        "label": "134",
+        "releaseDate": "2025-01-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-02-04",
+        "isMaintained": false,
+        "latest": {
+          "name": "134.0.2",
+          "date": "2025-01-21",
+          "link": "https://www.mozilla.org/firefox/134.0.2/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "133",
+      "name": "133",
+      "milestones": {
+        "ga": "2024-11-26",
+        "eos": null,
+        "eossec": "2025-01-07",
+        "eol": "2025-01-07"
+      },
+      "upstream": {
+        "name": "133",
+        "codename": null,
+        "label": "133",
+        "releaseDate": "2024-11-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-01-07",
+        "isMaintained": false,
+        "latest": {
+          "name": "133.0.3",
+          "date": "2024-12-10",
+          "link": "https://www.mozilla.org/firefox/133.0.3/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "132",
+      "name": "132",
+      "milestones": {
+        "ga": "2024-10-29",
+        "eos": null,
+        "eossec": "2024-11-26",
+        "eol": "2024-11-26"
+      },
+      "upstream": {
+        "name": "132",
+        "codename": null,
+        "label": "132",
+        "releaseDate": "2024-10-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-11-26",
+        "isMaintained": false,
+        "latest": {
+          "name": "132.0.2",
+          "date": "2024-11-12",
+          "link": "https://www.mozilla.org/firefox/132.0.2/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "131",
+      "name": "131",
+      "milestones": {
+        "ga": "2024-10-01",
+        "eos": null,
+        "eossec": "2024-10-29",
+        "eol": "2024-10-29"
+      },
+      "upstream": {
+        "name": "131",
+        "codename": null,
+        "label": "131",
+        "releaseDate": "2024-10-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-10-29",
+        "isMaintained": false,
+        "latest": {
+          "name": "131.0.3",
+          "date": "2024-10-14",
+          "link": "https://www.mozilla.org/firefox/131.0.3/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "130",
+      "name": "130",
+      "milestones": {
+        "ga": "2024-09-03",
+        "eos": null,
+        "eossec": "2024-10-01",
+        "eol": "2024-10-01"
+      },
+      "upstream": {
+        "name": "130",
+        "codename": null,
+        "label": "130",
+        "releaseDate": "2024-09-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-10-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "130.0.1",
+          "date": "2024-09-17",
+          "link": "https://www.mozilla.org/firefox/130.0.1/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "129",
+      "name": "129",
+      "milestones": {
+        "ga": "2024-08-06",
+        "eos": null,
+        "eossec": "2024-09-03",
+        "eol": "2024-09-03"
+      },
+      "upstream": {
+        "name": "129",
+        "codename": null,
+        "label": "129",
+        "releaseDate": "2024-08-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-09-03",
+        "isMaintained": false,
+        "latest": {
+          "name": "129.0.2",
+          "date": "2024-08-20",
+          "link": "https://www.mozilla.org/firefox/129.0.2/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "128",
+      "name": "128 (ESR)",
+      "milestones": {
+        "ga": "2024-07-09",
+        "eos": null,
+        "eossec": "2025-09-16",
+        "eol": "2025-09-16"
+      },
+      "upstream": {
+        "name": "128",
+        "codename": null,
+        "label": "128 (ESR)",
+        "releaseDate": "2024-07-09",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-09-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "128.14.0",
+          "date": "2025-08-19",
+          "link": "https://www.mozilla.org/firefox/128.14.0/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "127",
+      "name": "127",
+      "milestones": {
+        "ga": "2024-06-11",
+        "eos": null,
+        "eossec": "2024-07-09",
+        "eol": "2024-07-09"
+      },
+      "upstream": {
+        "name": "127",
+        "codename": null,
+        "label": "127",
+        "releaseDate": "2024-06-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-07-09",
+        "isMaintained": false,
+        "latest": {
+          "name": "127.0.2",
+          "date": "2024-06-25",
+          "link": "https://www.mozilla.org/firefox/127.0.2/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "126",
+      "name": "126",
+      "milestones": {
+        "ga": "2024-05-14",
+        "eos": null,
+        "eossec": "2024-06-11",
+        "eol": "2024-06-11"
+      },
+      "upstream": {
+        "name": "126",
+        "codename": null,
+        "label": "126",
+        "releaseDate": "2024-05-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-06-11",
+        "isMaintained": false,
+        "latest": {
+          "name": "126.0.1",
+          "date": "2024-05-28",
+          "link": "https://www.mozilla.org/firefox/126.0.1/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "125",
+      "name": "125",
+      "milestones": {
+        "ga": "2024-04-16",
+        "eos": null,
+        "eossec": "2024-05-14",
+        "eol": "2024-05-14"
+      },
+      "upstream": {
+        "name": "125",
+        "codename": null,
+        "label": "125",
+        "releaseDate": "2024-04-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-05-14",
+        "isMaintained": false,
+        "latest": {
+          "name": "125.0.3",
+          "date": "2024-04-29",
+          "link": "https://www.mozilla.org/firefox/125.0.3/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "124",
+      "name": "124",
+      "milestones": {
+        "ga": "2024-03-19",
+        "eos": null,
+        "eossec": "2024-04-16",
+        "eol": "2024-04-16"
+      },
+      "upstream": {
+        "name": "124",
+        "codename": null,
+        "label": "124",
+        "releaseDate": "2024-03-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-04-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "124.0.2",
+          "date": "2024-04-02",
+          "link": "https://www.mozilla.org/firefox/124.0.2/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "123",
+      "name": "123",
+      "milestones": {
+        "ga": "2024-02-20",
+        "eos": null,
+        "eossec": "2024-03-19",
+        "eol": "2024-03-19"
+      },
+      "upstream": {
+        "name": "123",
+        "codename": null,
+        "label": "123",
+        "releaseDate": "2024-02-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-03-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "123.0.1",
+          "date": "2024-03-05",
+          "link": "https://www.mozilla.org/firefox/123.0.1/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "122",
+      "name": "122",
+      "milestones": {
+        "ga": "2024-01-23",
+        "eos": null,
+        "eossec": "2024-02-20",
+        "eol": "2024-02-20"
+      },
+      "upstream": {
+        "name": "122",
+        "codename": null,
+        "label": "122",
+        "releaseDate": "2024-01-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-02-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "122.0.1",
+          "date": "2024-02-06",
+          "link": "https://www.mozilla.org/firefox/122.0.1/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "121",
+      "name": "121",
+      "milestones": {
+        "ga": "2023-12-19",
+        "eos": null,
+        "eossec": "2024-01-23",
+        "eol": "2024-01-23"
+      },
+      "upstream": {
+        "name": "121",
+        "codename": null,
+        "label": "121",
+        "releaseDate": "2023-12-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-01-23",
+        "isMaintained": false,
+        "latest": {
+          "name": "121.0.1",
+          "date": "2024-01-09",
+          "link": "https://www.mozilla.org/firefox/121.0.1/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "120",
+      "name": "120",
+      "milestones": {
+        "ga": "2023-11-21",
+        "eos": null,
+        "eossec": "2023-12-19",
+        "eol": "2023-12-19"
+      },
+      "upstream": {
+        "name": "120",
+        "codename": null,
+        "label": "120",
+        "releaseDate": "2023-11-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-12-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "120.0.1",
+          "date": "2023-11-30",
+          "link": "https://www.mozilla.org/firefox/120.0.1/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "119",
+      "name": "119",
+      "milestones": {
+        "ga": "2023-10-24",
+        "eos": null,
+        "eossec": "2023-11-21",
+        "eol": "2023-11-21"
+      },
+      "upstream": {
+        "name": "119",
+        "codename": null,
+        "label": "119",
+        "releaseDate": "2023-10-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-11-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "119.0.1",
+          "date": "2023-11-07",
+          "link": "https://www.mozilla.org/firefox/119.0.1/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "118",
+      "name": "118",
+      "milestones": {
+        "ga": "2023-09-26",
+        "eos": null,
+        "eossec": "2023-10-24",
+        "eol": "2023-10-24"
+      },
+      "upstream": {
+        "name": "118",
+        "codename": null,
+        "label": "118",
+        "releaseDate": "2023-09-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-10-24",
+        "isMaintained": false,
+        "latest": {
+          "name": "118.0.2",
+          "date": "2023-10-10",
+          "link": "https://www.mozilla.org/firefox/118.0.2/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "117",
+      "name": "117",
+      "milestones": {
+        "ga": "2023-08-29",
+        "eos": null,
+        "eossec": "2023-09-26",
+        "eol": "2023-09-26"
+      },
+      "upstream": {
+        "name": "117",
+        "codename": null,
+        "label": "117",
+        "releaseDate": "2023-08-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-09-26",
+        "isMaintained": false,
+        "latest": {
+          "name": "117.0.1",
+          "date": "2023-09-12",
+          "link": "https://www.mozilla.org/firefox/117.0.1/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "116",
+      "name": "116",
+      "milestones": {
+        "ga": "2023-08-01",
+        "eos": null,
+        "eossec": "2023-08-29",
+        "eol": "2023-08-29"
+      },
+      "upstream": {
+        "name": "116",
+        "codename": null,
+        "label": "116",
+        "releaseDate": "2023-08-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-08-29",
+        "isMaintained": false,
+        "latest": {
+          "name": "116.0.3",
+          "date": "2023-08-16",
+          "link": "https://www.mozilla.org/firefox/116.0.3/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "115",
+      "name": "115 (ESR)",
+      "milestones": {
+        "ga": "2023-07-04",
+        "eos": null,
+        "eossec": "2027-03-31",
+        "eol": "2027-03-31"
+      },
+      "upstream": {
+        "name": "115",
+        "codename": null,
+        "label": "115 (ESR)",
+        "releaseDate": "2023-07-04",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-03-31",
+        "isMaintained": true,
+        "latest": {
+          "name": "115.38.0",
+          "date": "2026-07-21",
+          "link": "https://www.mozilla.org/firefox/115.38.0/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "114",
+      "name": "114",
+      "milestones": {
+        "ga": "2023-06-06",
+        "eos": null,
+        "eossec": "2023-07-04",
+        "eol": "2023-07-04"
+      },
+      "upstream": {
+        "name": "114",
+        "codename": null,
+        "label": "114",
+        "releaseDate": "2023-06-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-07-04",
+        "isMaintained": false,
+        "latest": {
+          "name": "114.0.2",
+          "date": "2023-06-20",
+          "link": "https://www.mozilla.org/firefox/114.0.2/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "113",
+      "name": "113",
+      "milestones": {
+        "ga": "2023-05-09",
+        "eos": null,
+        "eossec": "2023-06-06",
+        "eol": "2023-06-06"
+      },
+      "upstream": {
+        "name": "113",
+        "codename": null,
+        "label": "113",
+        "releaseDate": "2023-05-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-06-06",
+        "isMaintained": false,
+        "latest": {
+          "name": "113.0.2",
+          "date": "2023-05-23",
+          "link": "https://www.mozilla.org/firefox/113.0.2/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "112",
+      "name": "112",
+      "milestones": {
+        "ga": "2023-04-11",
+        "eos": null,
+        "eossec": "2023-05-09",
+        "eol": "2023-05-09"
+      },
+      "upstream": {
+        "name": "112",
+        "codename": null,
+        "label": "112",
+        "releaseDate": "2023-04-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-05-09",
+        "isMaintained": false,
+        "latest": {
+          "name": "112.0.2",
+          "date": "2023-04-25",
+          "link": "https://www.mozilla.org/firefox/112.0.2/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "111",
+      "name": "111",
+      "milestones": {
+        "ga": "2023-03-14",
+        "eos": null,
+        "eossec": "2023-04-11",
+        "eol": "2023-04-11"
+      },
+      "upstream": {
+        "name": "111",
+        "codename": null,
+        "label": "111",
+        "releaseDate": "2023-03-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-04-11",
+        "isMaintained": false,
+        "latest": {
+          "name": "111.0.1",
+          "date": "2023-03-21",
+          "link": "https://www.mozilla.org/firefox/111.0.1/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "110",
+      "name": "110",
+      "milestones": {
+        "ga": "2023-02-14",
+        "eos": null,
+        "eossec": "2023-03-14",
+        "eol": "2023-03-14"
+      },
+      "upstream": {
+        "name": "110",
+        "codename": null,
+        "label": "110",
+        "releaseDate": "2023-02-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-03-14",
+        "isMaintained": false,
+        "latest": {
+          "name": "110.0.1",
+          "date": "2023-02-28",
+          "link": "https://www.mozilla.org/firefox/110.0.1/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "109",
+      "name": "109",
+      "milestones": {
+        "ga": "2023-01-17",
+        "eos": null,
+        "eossec": "2023-02-14",
+        "eol": "2023-02-14"
+      },
+      "upstream": {
+        "name": "109",
+        "codename": null,
+        "label": "109",
+        "releaseDate": "2023-01-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-02-14",
+        "isMaintained": false,
+        "latest": {
+          "name": "109.0.1",
+          "date": "2023-01-31",
+          "link": "https://www.mozilla.org/firefox/109.0.1/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "108",
+      "name": "108",
+      "milestones": {
+        "ga": "2022-12-13",
+        "eos": null,
+        "eossec": "2023-01-17",
+        "eol": "2023-01-17"
+      },
+      "upstream": {
+        "name": "108",
+        "codename": null,
+        "label": "108",
+        "releaseDate": "2022-12-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-01-17",
+        "isMaintained": false,
+        "latest": {
+          "name": "108.0.2",
+          "date": "2023-01-05",
+          "link": "https://www.mozilla.org/firefox/108.0.2/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "107",
+      "name": "107",
+      "milestones": {
+        "ga": "2022-11-15",
+        "eos": null,
+        "eossec": "2022-12-13",
+        "eol": "2022-12-13"
+      },
+      "upstream": {
+        "name": "107",
+        "codename": null,
+        "label": "107",
+        "releaseDate": "2022-11-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-12-13",
+        "isMaintained": false,
+        "latest": {
+          "name": "107.0.1",
+          "date": "2022-11-29",
+          "link": "https://www.mozilla.org/firefox/107.0.1/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "106",
+      "name": "106",
+      "milestones": {
+        "ga": "2022-10-18",
+        "eos": null,
+        "eossec": "2022-11-15",
+        "eol": "2022-11-15"
+      },
+      "upstream": {
+        "name": "106",
+        "codename": null,
+        "label": "106",
+        "releaseDate": "2022-10-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-11-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "106.0.5",
+          "date": "2022-11-04",
+          "link": "https://www.mozilla.org/firefox/106.0.5/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "105",
+      "name": "105",
+      "milestones": {
+        "ga": "2022-09-20",
+        "eos": null,
+        "eossec": "2022-10-18",
+        "eol": "2022-10-18"
+      },
+      "upstream": {
+        "name": "105",
+        "codename": null,
+        "label": "105",
+        "releaseDate": "2022-09-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-10-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "105.0.3",
+          "date": "2022-10-07",
+          "link": "https://www.mozilla.org/firefox/105.0.3/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "104",
+      "name": "104",
+      "milestones": {
+        "ga": "2022-08-23",
+        "eos": null,
+        "eossec": "2022-09-20",
+        "eol": "2022-09-20"
+      },
+      "upstream": {
+        "name": "104",
+        "codename": null,
+        "label": "104",
+        "releaseDate": "2022-08-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-09-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "104.0.2",
+          "date": "2022-09-06",
+          "link": "https://www.mozilla.org/firefox/104.0.2/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "103",
+      "name": "103",
+      "milestones": {
+        "ga": "2022-07-26",
+        "eos": null,
+        "eossec": "2022-08-23",
+        "eol": "2022-08-23"
+      },
+      "upstream": {
+        "name": "103",
+        "codename": null,
+        "label": "103",
+        "releaseDate": "2022-07-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-08-23",
+        "isMaintained": false,
+        "latest": {
+          "name": "103.0.2",
+          "date": "2022-08-09",
+          "link": "https://www.mozilla.org/firefox/103.0.2/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "102",
+      "name": "102 (ESR)",
+      "milestones": {
+        "ga": "2022-06-28",
+        "eos": null,
+        "eossec": "2023-09-26",
+        "eol": "2023-09-26"
+      },
+      "upstream": {
+        "name": "102",
+        "codename": null,
+        "label": "102 (ESR)",
+        "releaseDate": "2022-06-28",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-09-26",
+        "isMaintained": false,
+        "latest": {
+          "name": "102.15.1",
+          "date": "2023-09-12",
+          "link": "https://www.mozilla.org/firefox/102.15.1/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "91",
+      "name": "91 (ESR)",
+      "milestones": {
+        "ga": "2021-08-10",
+        "eos": null,
+        "eossec": "2022-09-20",
+        "eol": "2022-09-20"
+      },
+      "upstream": {
+        "name": "91",
+        "codename": null,
+        "label": "91 (ESR)",
+        "releaseDate": "2021-08-10",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-09-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "91.13.0",
+          "date": "2022-08-23",
+          "link": "https://www.mozilla.org/firefox/91.13.0/releasenotes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "78",
+      "name": "78 (ESR)",
+      "milestones": {
+        "ga": "2020-06-30",
+        "eos": null,
+        "eossec": "2021-11-02",
+        "eol": "2021-11-02"
+      },
+      "upstream": {
+        "name": "78",
+        "codename": null,
+        "label": "78 (ESR)",
+        "releaseDate": "2020-06-30",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-11-02",
+        "isMaintained": false,
+        "latest": {
+          "name": "78.15.0",
+          "date": "2021-10-05",
+          "link": "https://www.mozilla.org/firefox/78.15.0/releasenotes/"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/firefox/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-16T00:07:55+00:00"
+  }
+}

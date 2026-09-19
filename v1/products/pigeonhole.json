@@ -1,0 +1,198 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "pigeonhole",
+  "name": "Pigeonhole",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "dovecot-pigeonhole"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:dovecot:pigeonhole"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/dovecot.svg",
+    "html": "https://endoflife.date/pigeonhole",
+    "releasePolicy": null
+  },
+  "releases": [
+    {
+      "id": "2.4",
+      "name": "2.4",
+      "milestones": {
+        "ga": "2025-01-24",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.4",
+        "codename": null,
+        "label": "2.4",
+        "releaseDate": "2025-01-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "2.4.5",
+          "date": "2026-08-28",
+          "link": "https://github.com/dovecot/pigeonhole/releases/tag/2.4.5"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.5",
+      "name": "0.5",
+      "milestones": {
+        "ga": "2017-12-24",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.5",
+        "codename": null,
+        "label": "0.5",
+        "releaseDate": "2017-12-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "0.5.21.1",
+          "date": "2024-08-14",
+          "link": "https://github.com/dovecot/pigeonhole/releases/tag/0.5.21.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.4",
+      "name": "0.4",
+      "milestones": {
+        "ga": "2013-05-09",
+        "eos": null,
+        "eossec": "2025-01-24",
+        "eol": "2025-01-24"
+      },
+      "upstream": {
+        "name": "0.4",
+        "codename": null,
+        "label": "0.4",
+        "releaseDate": "2013-05-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-01-24",
+        "isMaintained": false,
+        "latest": {
+          "name": "0.4.24.2",
+          "date": "2019-08-28",
+          "link": "https://github.com/dovecot/pigeonhole/releases/tag/0.4.24.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.3",
+      "name": "0.3",
+      "milestones": {
+        "ga": "2012-02-16",
+        "eos": null,
+        "eossec": "2017-12-24",
+        "eol": "2017-12-24"
+      },
+      "upstream": {
+        "name": "0.3",
+        "codename": null,
+        "label": "0.3",
+        "releaseDate": "2012-02-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-12-24",
+        "isMaintained": false,
+        "latest": {
+          "name": "0.3.6",
+          "date": "2013-09-26",
+          "link": "https://github.com/dovecot/pigeonhole/releases/tag/0.3.6"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.2",
+      "name": "0.2",
+      "milestones": {
+        "ga": "2010-09-10",
+        "eos": null,
+        "eossec": "2013-05-09",
+        "eol": "2013-05-09"
+      },
+      "upstream": {
+        "name": "0.2",
+        "codename": null,
+        "label": "0.2",
+        "releaseDate": "2010-09-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2013-05-09",
+        "isMaintained": false,
+        "latest": {
+          "name": "0.2.5",
+          "date": "2011-11-19",
+          "link": "https://github.com/dovecot/pigeonhole/releases/tag/0.2.5"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.1",
+      "name": "0.1",
+      "milestones": {
+        "ga": "2008-10-23",
+        "eos": null,
+        "eossec": "2012-02-16",
+        "eol": "2012-02-16"
+      },
+      "upstream": {
+        "name": "0.1",
+        "codename": null,
+        "label": "0.1",
+        "releaseDate": "2008-10-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2012-02-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "0.1.4",
+          "date": "2009-03-21",
+          "link": "https://github.com/dovecot/pigeonhole/releases/tag/0.1.4"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/pigeonhole/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-08-29T00:06:26+00:00"
+  }
+}

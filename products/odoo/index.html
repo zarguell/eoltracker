@@ -1,0 +1,821 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Odoo lifecycle dates — EOL Tracker</title>
+<meta name="description" content="General availability, end-of-sale, security-support and end-of-life dates for every Odoo release, with raw source values and provenance.">
+<link rel="canonical" href="https://zarguell.github.io/eoltracker/products/odoo/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EOL Tracker">
+<meta property="og:title" content="Odoo lifecycle dates — EOL Tracker">
+<meta property="og:description" content="General availability, end-of-sale, security-support and end-of-life dates for every Odoo release, with raw source values and provenance.">
+<meta property="og:url" content="https://zarguell.github.io/eoltracker/products/odoo/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d1b2a'/%3E%3Cpath d='M7 20.5l5-6 4 4.5 4-6.5 5 8' fill='none' stroke='%234fd1c5' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/eoltracker/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="shell masthead-inner">
+    <a class="wordmark" href="/eoltracker/">EOL<span>Tracker</span></a>
+    <nav class="mainnav" aria-label="Primary">
+      <a href="/eoltracker/">Software</a>
+      <a href="/eoltracker/hardware/">Hardware</a>
+      <a href="/eoltracker/api/">API &amp; data</a>
+      <a href="https://endoflife.date/" rel="noopener">endoflife.date</a>
+    </nav>
+    <p class="masthead-meta">483 products · 7814 releases · 6999 hardware records</p>
+  </div>
+</header>
+
+<main class="shell" id="main">
+<nav class="crumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/eoltracker/">Catalog</a></li>
+    <li aria-current="page">Odoo</li>
+  </ol>
+</nav>
+
+<section class="hero product-hero">
+  <p class="eyebrow">server-app · software · vendor collector</p>
+  <h1 class="page-title">Odoo</h1>
+  <p class="lead">
+    14 releases published by Odoo from the vendor's
+    own lifecycle table, with each row's cells kept verbatim beneath the normalized dates. Identifier for this
+    record: <code>odoo</code>.
+  </p>
+  <p class="hero-meta">
+    Verified Sep 17, 2026 at 22:25 UTC by <code>deterministic-odoo</code>.
+Source: Odoo.    Upstream publishes no modification timestamp for this product.
+    Last catalog refresh <time datetime="2026-09-17T18:35:21Z">Sep 17, 2026 at 18:35 UTC</time>.
+  </p>
+  <p class="product-links">
+    <a class="button" href="/eoltracker/v1/products/odoo.json">JSON record</a>
+    <a class="button" href="https://www.odoo.com/documentation/master/administration/standard_extended_support.html" rel="noopener">Source: Odoo standard and extended support</a>
+<a class="button" href="https://www.odoo.com/documentation/master/administration/standard_extended_support.html" rel="noopener">html</a>  </p>
+</section>
+
+<section class="panel" aria-labelledby="coverage-title">
+  <h2 class="panel-title" id="coverage-title">Data coverage</h2>
+  <p class="panel-note">
+    Upstream does not publish every milestone for every release. Empty cells in the table below are unknown dates,
+    not implied support.
+  </p>
+  <ul class="bars">
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">General availability</span>
+        <span class="bar-value">12 / 14 releases (86%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="General availability: 12 of 14 releases have a published date">
+        <div class="bar-fill" style="width: 86%"></div>
+      </div>
+    </li>
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">End of sale</span>
+        <span class="bar-value">0 / 14 releases (0%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="End of sale: 0 of 14 releases have a published date">
+        <div class="bar-fill" style="width: 0%"></div>
+      </div>
+    </li>
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">End of security support</span>
+        <span class="bar-value">0 / 14 releases (0%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="End of security support: 0 of 14 releases have a published date">
+        <div class="bar-fill" style="width: 0%"></div>
+      </div>
+    </li>
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">End of life</span>
+        <span class="bar-value">0 / 14 releases (0%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="End of life: 0 of 14 releases have a published date">
+        <div class="bar-fill" style="width: 0%"></div>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section class="panel" aria-labelledby="legend-title">
+  <h2 class="panel-title" id="legend-title">How to read these dates</h2>
+  <p class="panel-note">
+    The milestone meanings below are the catalog's shared vocabulary. The endoflife.date label rules that map raw
+    upstream fields onto them do not apply to this record: its dates were read from the vendor's own lifecycle table,
+    which states only the milestones shown, and every row's cells are retained verbatim below.
+  </p>
+  <dl class="legend">
+    <div class="legend-row">
+      <dt>General availability</dt>
+      <dd>
+        <p>First public release. Taken from the upstream releaseDate.</p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>End of sale</dt>
+      <dd>
+        <p>Last day new licenses or units are sold. Only mapped from an upstream field whose label names an end of sale.</p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>End of security support</dt>
+      <dd>
+        <p>Last day security fixes are published. Mapped from eolFrom or eoesFrom only when the label names security support.</p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>End of life</dt>
+      <dd>
+        <p>End of all support. A published extended-support date wins; otherwise eolFrom when its label describes a full support end.</p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>Blank date</dt>
+      <dd><p>The source publishes no value for that milestone. A missing date is an absent announcement, not a claim that support ends or continues.</p></dd>
+    </div>
+    <div class="legend-row">
+      <dt>Month precision</dt>
+      <dd><p>A date shown as a month (<code>YYYY-MM</code>) is the width the source published, not a truncated day. This catalog never pads a month with an invented day, so such a date is not syndicated to the day-precision feeds and is excluded from the OpenEoX export; both exclusions are published with their reasons.</p></dd>
+    </div>
+  </dl>
+</section>
+
+
+<section class="releases" aria-labelledby="releases-title">
+  <div class="catalog-head">
+    <h2 class="panel-title" id="releases-title">Release lifecycle</h2>
+    <p class="catalog-count">14 releases</p>
+  </div>
+  <p class="panel-note">
+    Newest first. Cells show normalized dates; a secondary line shows the raw upstream field and label when the
+    normalized date differs from, or is absent despite, a published value.
+  </p>
+
+  <div class="table-scroll">
+    <table class="release-table">
+      <caption class="sr-only">Lifecycle dates for each Odoo release</caption>
+      <thead>
+        <tr>
+          <th scope="col">Release</th>
+          <th scope="col">General availability</th>
+          <th scope="col">End of sale</th>
+          <th scope="col">End of security support</th>
+          <th scope="col">End of life</th>
+          <th scope="col">Upstream status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Odoo SaaS 19.4</span>
+<code class="release-raw">odoo-saas-19.4</code>          </th>
+          <td class="milestone">
+            <time datetime="2026-07">July 2026</time><span class="tag tag-neutral" title="The source states this month only, so no day exists to show.">month precision</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag">Odoo SaaS 19.4</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Odoo SaaS 19.3</span>
+<code class="release-raw">odoo-saas-19.3</code>          </th>
+          <td class="milestone">
+            <time datetime="2026-05">May 2026</time><span class="tag tag-neutral" title="The source states this month only, so no day exists to show.">month precision</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag">Odoo SaaS 19.3</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Odoo SaaS 19.2</span>
+<code class="release-raw">odoo-saas-19.2</code>          </th>
+          <td class="milestone">
+            <time datetime="2026-03">March 2026</time><span class="tag tag-neutral" title="The source states this month only, so no day exists to show.">month precision</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag">Odoo SaaS 19.2</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Odoo SaaS 19.1</span>
+<code class="release-raw">odoo-saas-19.1</code>          </th>
+          <td class="milestone">
+            <time datetime="2026-01">January 2026</time><span class="tag tag-neutral" title="The source states this month only, so no day exists to show.">month precision</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag">Odoo SaaS 19.1</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Odoo 19.0</span>
+<code class="release-raw">odoo-19.0</code>          </th>
+          <td class="milestone">
+            <time datetime="2025-09">September 2025</time><span class="tag tag-neutral" title="The source states this month only, so no day exists to show.">month precision</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag">Odoo 19.0</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Odoo SaaS 18.4</span>
+<code class="release-raw">odoo-saas-18.4</code>          </th>
+          <td class="milestone">
+            <time datetime="2025-07">July 2025</time><span class="tag tag-neutral" title="The source states this month only, so no day exists to show.">month precision</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag">Odoo SaaS 18.4</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Odoo SaaS 18.3</span>
+<code class="release-raw">odoo-saas-18.3</code>          </th>
+          <td class="milestone">
+            <time datetime="2025-05">May 2025</time><span class="tag tag-neutral" title="The source states this month only, so no day exists to show.">month precision</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag">Odoo SaaS 18.3</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Odoo SaaS 18.2</span>
+<code class="release-raw">odoo-saas-18.2</code>          </th>
+          <td class="milestone">
+            <time datetime="2025-03">March 2025</time><span class="tag tag-neutral" title="The source states this month only, so no day exists to show.">month precision</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag">Odoo SaaS 18.2</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Odoo 18.0</span>
+<code class="release-raw">odoo-18.0</code>          </th>
+          <td class="milestone">
+            <time datetime="2024-10">October 2024</time><span class="tag tag-neutral" title="The source states this month only, so no day exists to show.">month precision</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag">Odoo 18.0</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Odoo 17.0</span>
+<code class="release-raw">odoo-17.0</code>          </th>
+          <td class="milestone">
+            <time datetime="2023-11">November 2023</time><span class="tag tag-neutral" title="The source states this month only, so no day exists to show.">month precision</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag">Odoo 17.0</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Odoo 16.0</span>
+<code class="release-raw">odoo-16.0</code>          </th>
+          <td class="milestone">
+            <time datetime="2022-10">October 2022</time><span class="tag tag-neutral" title="The source states this month only, so no day exists to show.">month precision</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag">Odoo 16.0</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Odoo 15.0</span>
+<code class="release-raw">odoo-15.0</code>          </th>
+          <td class="milestone">
+            <time datetime="2021-10">October 2021</time><span class="tag tag-neutral" title="The source states this month only, so no day exists to show.">month precision</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag">Odoo 15.0</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Older versions</span>
+<code class="release-raw">older-versions</code>          </th>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag">Older versions</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Odoo 14.0</span>
+<code class="release-raw">odoo-14.0</code>          </th>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag">Odoo 14.0</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="panel" aria-labelledby="source-title">
+  <h2 class="panel-title" id="source-title">Source and upstream values</h2>
+  <p class="panel-note">
+    This record is a normalization of the vendor's own published lifecycle table, read by
+    Odoo — not of endoflife.date data, so the endoflife.date label rules and
+    license below do not apply to it. Every row's cells are retained verbatim below, so each normalized date can be
+    checked against the cell it came from.
+  </p>
+  <dl class="facts">
+    <div><dt>Upstream record</dt><dd><a href="https://www.odoo.com/documentation/master/administration/standard_extended_support.html" rel="noopener">https://www.odoo.com/documentation/master/administration/standard_extended_support.html</a></dd></div>
+    <div><dt>Source attribution</dt><dd>Odoo release and standard-support calendar; standard support ending is not terminal or security support ending. Planned dates remain vendor text.</dd></div>
+    <div><dt>Verifier</dt><dd><code>deterministic-odoo</code></dd></div>
+    <div><dt>Last checked</dt><dd>Sep 17, 2026 at 22:25 UTC</dd></div>
+    <div><dt>Upstream modified</dt><dd>not published upstream</dd></div>
+    <div><dt>JSON record</dt><dd><a href="https://zarguell.github.io/eoltracker/v1/products/odoo.json">https://zarguell.github.io/eoltracker/v1/products/odoo.json</a></dd></div>
+    <div><dt>Schema</dt><dd><a href="https://zarguell.github.io/eoltracker/v1/schema/product.json">v1/schema/product.json</a></dd></div>
+  </dl>
+
+  <h3 class="sub-title">Identifiers</h3>
+  <ul class="chips">
+<li><span class="tag">purl</span> <code>pkg:github/odoo/odoo</code></li>  </ul>
+
+  <h3 class="sub-title">Upstream label semantics</h3>
+  <p class="panel-note">
+    endoflife.date labels decide which raw date fields become which normalized milestone. These are this product's
+    label texts and the rule each one triggers.
+  </p>
+  <dl class="label-rules">
+    <div>
+      <dt><code>eoas</code> = not set</dt>
+      <dd>End-of-sale date when the text names an end of sale.</dd>
+    </div>
+    <div>
+      <dt><code>discontinued</code> = not set</dt>
+      <dd>End-of-sale date when the text names an end of sale; otherwise recorded only, never turned into a date.</dd>
+    </div>
+    <div>
+      <dt><code>eol</code> = not set</dt>
+      <dd>End of security support when the text names security support; end of life only when no extended-support label is set and the text describes a full support end.</dd>
+    </div>
+    <div>
+      <dt><code>eoes</code> = not set</dt>
+      <dd>Extended support. A published date also sets end of life, and a security-support text supersedes end of security support.</dd>
+    </div>
+  </dl>
+
+  <h3 class="sub-title">Vendor row cells</h3>
+  <p class="panel-note">
+    The vendor's own columns, as the source publishes them. A normalized milestone above is mapped from one of these
+    cells — never inferred from another — so each date can be checked value by value against the row it came from.
+  </p>
+  <div class="table-scroll">
+    <table class="release-table">
+      <thead>
+        <tr>
+          <th scope="col">Release</th>
+<th scope="col">Version</th><th scope="col">Odoo Online</th><th scope="col">Odoo.sh</th><th scope="col">On-premise</th><th scope="col">Release date</th><th scope="col">End of standard support</th>        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Odoo SaaS 19.4</span></th>
+<td>Odoo SaaS 19.4</td><td>Standard support</td><td>N/A</td><td>N/A</td><td>July 2026</td><td></td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Odoo SaaS 19.3</span></th>
+<td>Odoo SaaS 19.3</td><td>Standard support</td><td>N/A</td><td>N/A</td><td>May 2026</td><td></td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Odoo SaaS 19.2</span></th>
+<td>Odoo SaaS 19.2</td><td>Standard support</td><td>N/A</td><td>N/A</td><td>March 2026</td><td></td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Odoo SaaS 19.1</span></th>
+<td>Odoo SaaS 19.1</td><td>Not supported</td><td>N/A</td><td>N/A</td><td>January 2026</td><td></td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Odoo 19.0</span></th>
+<td>Odoo 19.0</td><td>Standard support</td><td>Standard support</td><td>Standard support</td><td>September 2025</td><td>September 2028 (planned)</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Odoo SaaS 18.4</span></th>
+<td>Odoo SaaS 18.4</td><td>Not supported</td><td>N/A</td><td>N/A</td><td>July 2025</td><td></td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Odoo SaaS 18.3</span></th>
+<td>Odoo SaaS 18.3</td><td>Not supported</td><td>N/A</td><td>N/A</td><td>May 2025</td><td></td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Odoo SaaS 18.2</span></th>
+<td>Odoo SaaS 18.2</td><td>Not supported</td><td>N/A</td><td>N/A</td><td>March 2025</td><td></td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Odoo 18.0</span></th>
+<td>Odoo 18.0</td><td>Standard support</td><td>Standard support</td><td>Standard support</td><td>October 2024</td><td>September 2027 (planned)</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Odoo 17.0</span></th>
+<td>Odoo 17.0</td><td>Standard support</td><td>Standard support</td><td>Standard support</td><td>November 2023</td><td>September 2026 (planned)</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Odoo 16.0</span></th>
+<td>Odoo 16.0</td><td>Not supported</td><td>Extended support (mandatory extra fee)</td><td>Extended support (mandatory extra fee)</td><td>October 2022</td><td>September 2025</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Odoo 15.0</span></th>
+<td>Odoo 15.0</td><td>Not supported</td><td>Extended support (mandatory extra fee)</td><td>Extended support (mandatory extra fee)</td><td>October 2021</td><td>October 2024</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Older versions</span></th>
+<td>Older versions</td><td>Not supported</td><td>Not supported</td><td>Extended support (mandatory extra fee)</td><td>Before 2021</td><td>Before 2024</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Odoo 14.0</span></th>
+<td>Odoo 14.0</td><td>Not supported</td><td>Extended support (mandatory extra fee)</td><td>Extended support (mandatory extra fee)</td><td>Before 2021</td><td>Before 2024</td>        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <details class="raw">
+    <summary>Raw upstream release objects (14)</summary>
+    <p class="panel-note">Verbatim <code>releases[]</code> entries: each release's stored <code>upstream</code> object, including the vendor's own row cells, unmodified.</p>
+    <details class="raw-release">
+      <summary><code>odoo-saas-19.4</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;End of standard support&#34;: &#34;&#34;,
+    &#34;Odoo Online&#34;: &#34;Standard support&#34;,
+    &#34;Odoo.sh&#34;: &#34;N/A&#34;,
+    &#34;On-premise&#34;: &#34;N/A&#34;,
+    &#34;Release date&#34;: &#34;July 2026&#34;,
+    &#34;Version&#34;: &#34;Odoo SaaS 19.4&#34;
+  },
+  &#34;name&#34;: &#34;Odoo SaaS 19.4&#34;,
+  &#34;table&#34;: &#34;Standard and extended support&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>odoo-saas-19.3</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;End of standard support&#34;: &#34;&#34;,
+    &#34;Odoo Online&#34;: &#34;Standard support&#34;,
+    &#34;Odoo.sh&#34;: &#34;N/A&#34;,
+    &#34;On-premise&#34;: &#34;N/A&#34;,
+    &#34;Release date&#34;: &#34;May 2026&#34;,
+    &#34;Version&#34;: &#34;Odoo SaaS 19.3&#34;
+  },
+  &#34;name&#34;: &#34;Odoo SaaS 19.3&#34;,
+  &#34;table&#34;: &#34;Standard and extended support&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>odoo-saas-19.2</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;End of standard support&#34;: &#34;&#34;,
+    &#34;Odoo Online&#34;: &#34;Standard support&#34;,
+    &#34;Odoo.sh&#34;: &#34;N/A&#34;,
+    &#34;On-premise&#34;: &#34;N/A&#34;,
+    &#34;Release date&#34;: &#34;March 2026&#34;,
+    &#34;Version&#34;: &#34;Odoo SaaS 19.2&#34;
+  },
+  &#34;name&#34;: &#34;Odoo SaaS 19.2&#34;,
+  &#34;table&#34;: &#34;Standard and extended support&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>odoo-saas-19.1</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;End of standard support&#34;: &#34;&#34;,
+    &#34;Odoo Online&#34;: &#34;Not supported&#34;,
+    &#34;Odoo.sh&#34;: &#34;N/A&#34;,
+    &#34;On-premise&#34;: &#34;N/A&#34;,
+    &#34;Release date&#34;: &#34;January 2026&#34;,
+    &#34;Version&#34;: &#34;Odoo SaaS 19.1&#34;
+  },
+  &#34;name&#34;: &#34;Odoo SaaS 19.1&#34;,
+  &#34;table&#34;: &#34;Standard and extended support&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>odoo-19.0</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;End of standard support&#34;: &#34;September 2028 (planned)&#34;,
+    &#34;Odoo Online&#34;: &#34;Standard support&#34;,
+    &#34;Odoo.sh&#34;: &#34;Standard support&#34;,
+    &#34;On-premise&#34;: &#34;Standard support&#34;,
+    &#34;Release date&#34;: &#34;September 2025&#34;,
+    &#34;Version&#34;: &#34;Odoo 19.0&#34;
+  },
+  &#34;name&#34;: &#34;Odoo 19.0&#34;,
+  &#34;table&#34;: &#34;Standard and extended support&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>odoo-saas-18.4</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;End of standard support&#34;: &#34;&#34;,
+    &#34;Odoo Online&#34;: &#34;Not supported&#34;,
+    &#34;Odoo.sh&#34;: &#34;N/A&#34;,
+    &#34;On-premise&#34;: &#34;N/A&#34;,
+    &#34;Release date&#34;: &#34;July 2025&#34;,
+    &#34;Version&#34;: &#34;Odoo SaaS 18.4&#34;
+  },
+  &#34;name&#34;: &#34;Odoo SaaS 18.4&#34;,
+  &#34;table&#34;: &#34;Standard and extended support&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>odoo-saas-18.3</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;End of standard support&#34;: &#34;&#34;,
+    &#34;Odoo Online&#34;: &#34;Not supported&#34;,
+    &#34;Odoo.sh&#34;: &#34;N/A&#34;,
+    &#34;On-premise&#34;: &#34;N/A&#34;,
+    &#34;Release date&#34;: &#34;May 2025&#34;,
+    &#34;Version&#34;: &#34;Odoo SaaS 18.3&#34;
+  },
+  &#34;name&#34;: &#34;Odoo SaaS 18.3&#34;,
+  &#34;table&#34;: &#34;Standard and extended support&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>odoo-saas-18.2</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;End of standard support&#34;: &#34;&#34;,
+    &#34;Odoo Online&#34;: &#34;Not supported&#34;,
+    &#34;Odoo.sh&#34;: &#34;N/A&#34;,
+    &#34;On-premise&#34;: &#34;N/A&#34;,
+    &#34;Release date&#34;: &#34;March 2025&#34;,
+    &#34;Version&#34;: &#34;Odoo SaaS 18.2&#34;
+  },
+  &#34;name&#34;: &#34;Odoo SaaS 18.2&#34;,
+  &#34;table&#34;: &#34;Standard and extended support&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>odoo-18.0</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;End of standard support&#34;: &#34;September 2027 (planned)&#34;,
+    &#34;Odoo Online&#34;: &#34;Standard support&#34;,
+    &#34;Odoo.sh&#34;: &#34;Standard support&#34;,
+    &#34;On-premise&#34;: &#34;Standard support&#34;,
+    &#34;Release date&#34;: &#34;October 2024&#34;,
+    &#34;Version&#34;: &#34;Odoo 18.0&#34;
+  },
+  &#34;name&#34;: &#34;Odoo 18.0&#34;,
+  &#34;table&#34;: &#34;Standard and extended support&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>odoo-17.0</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;End of standard support&#34;: &#34;September 2026 (planned)&#34;,
+    &#34;Odoo Online&#34;: &#34;Standard support&#34;,
+    &#34;Odoo.sh&#34;: &#34;Standard support&#34;,
+    &#34;On-premise&#34;: &#34;Standard support&#34;,
+    &#34;Release date&#34;: &#34;November 2023&#34;,
+    &#34;Version&#34;: &#34;Odoo 17.0&#34;
+  },
+  &#34;name&#34;: &#34;Odoo 17.0&#34;,
+  &#34;table&#34;: &#34;Standard and extended support&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>odoo-16.0</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;End of standard support&#34;: &#34;September 2025&#34;,
+    &#34;Odoo Online&#34;: &#34;Not supported&#34;,
+    &#34;Odoo.sh&#34;: &#34;Extended support (mandatory extra fee)&#34;,
+    &#34;On-premise&#34;: &#34;Extended support (mandatory extra fee)&#34;,
+    &#34;Release date&#34;: &#34;October 2022&#34;,
+    &#34;Version&#34;: &#34;Odoo 16.0&#34;
+  },
+  &#34;name&#34;: &#34;Odoo 16.0&#34;,
+  &#34;table&#34;: &#34;Standard and extended support&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>odoo-15.0</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;End of standard support&#34;: &#34;October 2024&#34;,
+    &#34;Odoo Online&#34;: &#34;Not supported&#34;,
+    &#34;Odoo.sh&#34;: &#34;Extended support (mandatory extra fee)&#34;,
+    &#34;On-premise&#34;: &#34;Extended support (mandatory extra fee)&#34;,
+    &#34;Release date&#34;: &#34;October 2021&#34;,
+    &#34;Version&#34;: &#34;Odoo 15.0&#34;
+  },
+  &#34;name&#34;: &#34;Odoo 15.0&#34;,
+  &#34;table&#34;: &#34;Standard and extended support&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>older-versions</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;End of standard support&#34;: &#34;Before 2024&#34;,
+    &#34;Odoo Online&#34;: &#34;Not supported&#34;,
+    &#34;Odoo.sh&#34;: &#34;Not supported&#34;,
+    &#34;On-premise&#34;: &#34;Extended support (mandatory extra fee)&#34;,
+    &#34;Release date&#34;: &#34;Before 2021&#34;,
+    &#34;Version&#34;: &#34;Older versions&#34;
+  },
+  &#34;name&#34;: &#34;Older versions&#34;,
+  &#34;table&#34;: &#34;Standard and extended support&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>odoo-14.0</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;End of standard support&#34;: &#34;Before 2024&#34;,
+    &#34;Odoo Online&#34;: &#34;Not supported&#34;,
+    &#34;Odoo.sh&#34;: &#34;Extended support (mandatory extra fee)&#34;,
+    &#34;On-premise&#34;: &#34;Extended support (mandatory extra fee)&#34;,
+    &#34;Release date&#34;: &#34;Before 2021&#34;,
+    &#34;Version&#34;: &#34;Odoo 14.0&#34;
+  },
+  &#34;name&#34;: &#34;Odoo 14.0&#34;,
+  &#34;table&#34;: &#34;Standard and extended support&#34;
+}</code></pre>
+    </details>
+  </details>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="shell footer-inner">
+    <div class="footer-col">
+      <p class="footer-title">EOL Tracker</p>
+      <p class="footer-note">
+        Software lifecycle dates are republished from
+        <a href="https://endoflife.date/" rel="noopener">endoflife.date</a>.
+        Source data is licensed
+        <a href="https://github.com/endoflife-date/endoflife.date/blob/master/LICENSE" rel="noopener">MIT</a>.
+      </p>
+      <p class="footer-note">
+        Hardware lifecycle data comes from
+        <a href="https://eosl.date/" rel="noopener">eosl.date</a> by Subash Geetha Krishnan,
+        which aggregates public vendor announcements, and from
+        <a href="https://opengear.com/end-life-products" rel="noopener">Opengear's end-of-life product list</a>.
+        Attribution here is credit by name and link, not a licence to the source material: nothing is reproduced as
+        licensed material. This catalog is an independent normalization, not affiliated with endoflife.date, eosl.date,
+        Opengear or any vendor listed here.
+      </p>
+      <p class="footer-note">
+        Last catalog refresh Sep 17, 2026 at 18:35 UTC.
+      </p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-title">Data</p>
+      <ul class="footer-links">
+        <li><a href="/eoltracker/v1/feed.json">Feed (JSON)</a></li>
+        <li><a href="/eoltracker/v1/feed.atom">Deadlines (Atom)</a></li>
+        <li><a href="/eoltracker/v1/calendar.ics">Deadlines (iCal)</a></li>
+        <li><a href="/eoltracker/v1/products.json">Product summaries</a></li>
+        <li><a href="/eoltracker/v1/hardware.json">Hardware summaries</a></li>
+        <li><a href="/eoltracker/v1/changes.atom">Changes (Atom)</a></li>
+        <li><a href="/eoltracker/v1/changes.json">Changes (JSON)</a></li>
+        <li><a href="/eoltracker/hardware/">Hardware catalog</a></li>
+        <li><a href="/eoltracker/api/">Endpoints &amp; mapping</a></li>
+        <li><a href="/eoltracker/v1/schema/product.json">Record schema</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <p class="footer-title">Project</p>
+      <ul class="footer-links">
+        <li><a href="https://github.com/zarguell/eoltracker" rel="noopener">Source on GitHub</a></li>
+        <li><a href="https://endoflife.date/" rel="noopener">Upstream source</a></li>
+        <li><a href="/eoltracker/THIRD-PARTY-NOTICES.txt">THIRD-PARTY-NOTICES.txt</a></li>
+        <li><a href="/eoltracker/OASIS-NOTICE.txt">OASIS-NOTICE.txt</a></li>
+        <li><a href="/eoltracker/404.html">Not found page</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script src="/eoltracker/app.js" defer></script>
+</body>
+</html>

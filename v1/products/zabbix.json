@@ -1,0 +1,309 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "zabbix",
+  "name": "Zabbix",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "zabbix"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:brew/zabbix"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/zabbix/zabbix"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:zabbix:zabbix"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:zabbix:zabbix"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/zabbix",
+    "releasePolicy": "https://www.zabbix.com/life_cycle_and_release_policy"
+  },
+  "releases": [
+    {
+      "id": "7.4",
+      "name": "7.4",
+      "milestones": {
+        "ga": "2025-06-30",
+        "eos": null,
+        "eossec": "2026-12-31",
+        "eol": "2026-12-31"
+      },
+      "upstream": {
+        "name": "7.4",
+        "codename": null,
+        "label": "7.4",
+        "releaseDate": "2025-06-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": "2026-12-31",
+        "isMaintained": true,
+        "latest": {
+          "name": "7.4.14",
+          "date": "2026-08-25",
+          "link": "https://www.zabbix.com/rn/rn7.4.14"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.2",
+      "name": "7.2",
+      "milestones": {
+        "ga": "2024-12-10",
+        "eos": null,
+        "eossec": "2025-12-31",
+        "eol": "2025-12-31"
+      },
+      "upstream": {
+        "name": "7.2",
+        "codename": null,
+        "label": "7.2",
+        "releaseDate": "2024-12-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-06-30",
+        "isEol": true,
+        "eolFrom": "2025-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.2.15",
+          "date": "2025-12-17",
+          "link": "https://www.zabbix.com/rn/rn7.2.15"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.0",
+      "name": "7.0 (LTS)",
+      "milestones": {
+        "ga": "2024-06-04",
+        "eos": null,
+        "eossec": "2029-06-30",
+        "eol": "2029-06-30"
+      },
+      "upstream": {
+        "name": "7.0",
+        "codename": null,
+        "label": "7.0 (LTS)",
+        "releaseDate": "2024-06-04",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": "2027-06-30",
+        "isEol": false,
+        "eolFrom": "2029-06-30",
+        "isMaintained": true,
+        "latest": {
+          "name": "7.0.30",
+          "date": "2026-08-25",
+          "link": "https://www.zabbix.com/rn/rn7.0.30"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.4",
+      "name": "6.4",
+      "milestones": {
+        "ga": "2023-03-06",
+        "eos": null,
+        "eossec": "2024-12-31",
+        "eol": "2024-12-31"
+      },
+      "upstream": {
+        "name": "6.4",
+        "codename": null,
+        "label": "6.4",
+        "releaseDate": "2023-03-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-06-30",
+        "isEol": true,
+        "eolFrom": "2024-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.4.21",
+          "date": "2025-01-27",
+          "link": "https://www.zabbix.com/rn/rn6.4.21"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.2",
+      "name": "6.2",
+      "milestones": {
+        "ga": "2022-07-04",
+        "eos": null,
+        "eossec": "2023-02-28",
+        "eol": "2023-02-28"
+      },
+      "upstream": {
+        "name": "6.2",
+        "codename": null,
+        "label": "6.2",
+        "releaseDate": "2022-07-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-01-31",
+        "isEol": true,
+        "eolFrom": "2023-02-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.2.9",
+          "date": "2023-03-27",
+          "link": "https://www.zabbix.com/rn/rn6.2.9"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.0",
+      "name": "6.0 (LTS)",
+      "milestones": {
+        "ga": "2022-02-08",
+        "eos": null,
+        "eossec": "2027-02-28",
+        "eol": "2027-02-28"
+      },
+      "upstream": {
+        "name": "6.0",
+        "codename": null,
+        "label": "6.0 (LTS)",
+        "releaseDate": "2022-02-08",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-02-28",
+        "isEol": false,
+        "eolFrom": "2027-02-28",
+        "isMaintained": true,
+        "latest": {
+          "name": "6.0.48",
+          "date": "2026-07-28",
+          "link": "https://www.zabbix.com/rn/rn6.0.48"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.4",
+      "name": "5.4",
+      "milestones": {
+        "ga": "2021-05-17",
+        "eos": null,
+        "eossec": "2022-03-31",
+        "eol": "2022-03-31"
+      },
+      "upstream": {
+        "name": "5.4",
+        "codename": null,
+        "label": "5.4",
+        "releaseDate": "2021-05-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-02-28",
+        "isEol": true,
+        "eolFrom": "2022-03-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.4.12",
+          "date": "2022-04-04",
+          "link": "https://www.zabbix.com/rn/rn5.4.12"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.0",
+      "name": "5.0 (LTS)",
+      "milestones": {
+        "ga": "2020-05-11",
+        "eos": null,
+        "eossec": "2025-05-31",
+        "eol": "2025-05-31"
+      },
+      "upstream": {
+        "name": "5.0",
+        "codename": null,
+        "label": "5.0 (LTS)",
+        "releaseDate": "2020-05-11",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-05-31",
+        "isEol": true,
+        "eolFrom": "2025-05-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.0.47",
+          "date": "2025-05-20",
+          "link": "https://www.zabbix.com/rn/rn5.0.47"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.0",
+      "name": "4.0 (LTS)",
+      "milestones": {
+        "ga": "2018-10-01",
+        "eos": null,
+        "eossec": "2023-10-31",
+        "eol": "2023-10-31"
+      },
+      "upstream": {
+        "name": "4.0",
+        "codename": null,
+        "label": "4.0 (LTS)",
+        "releaseDate": "2018-10-01",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-10-31",
+        "isEol": true,
+        "eolFrom": "2023-10-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.0.50",
+          "date": "2023-10-30",
+          "link": "https://www.zabbix.com/rn/rn4.0.50"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/zabbix/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-08-26T00:06:55+00:00"
+  }
+}

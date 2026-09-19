@@ -1,0 +1,468 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "cos",
+  "name": "Google Container-Optimized OS (COS)",
+  "category": "software",
+  "upstream_category": "os",
+  "identifiers": [
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:o:google:container-optimized_os"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/o:google:container-optimized_os"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Support Status",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/googlecloud.svg",
+    "html": "https://endoflife.date/cos",
+    "releasePolicy": "https://cloud.google.com/container-optimized-os/docs/resources/support-policy"
+  },
+  "releases": [
+    {
+      "id": "cos-129",
+      "name": "129 (LTS)",
+      "milestones": {
+        "ga": "2026-05-21",
+        "eos": null,
+        "eossec": null,
+        "eol": "2028-03-01"
+      },
+      "upstream": {
+        "name": "cos-129",
+        "codename": null,
+        "label": "129 (LTS)",
+        "releaseDate": "2026-05-21",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2028-03-01",
+        "isMaintained": true,
+        "latest": {
+          "name": "cos-129-19506-448-20",
+          "date": "2026-09-08",
+          "link": "https://cloud.google.com/container-optimized-os/docs/release-notes/m129"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "cos-125",
+      "name": "125 (LTS)",
+      "milestones": {
+        "ga": "2025-10-09",
+        "eos": null,
+        "eossec": null,
+        "eol": "2027-09-01"
+      },
+      "upstream": {
+        "name": "cos-125",
+        "codename": null,
+        "label": "125 (LTS)",
+        "releaseDate": "2025-10-09",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-09-01",
+        "isMaintained": true,
+        "latest": {
+          "name": "cos-125-19216-655-12",
+          "date": "2026-09-08",
+          "link": "https://cloud.google.com/container-optimized-os/docs/release-notes/m125"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "cos-121",
+      "name": "121 (LTS)",
+      "milestones": {
+        "ga": "2025-04-14",
+        "eos": null,
+        "eossec": null,
+        "eol": "2027-03-01"
+      },
+      "upstream": {
+        "name": "cos-121",
+        "codename": null,
+        "label": "121 (LTS)",
+        "releaseDate": "2025-04-14",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-03-01",
+        "isMaintained": true,
+        "latest": {
+          "name": "cos-121-18867-584-7",
+          "date": "2026-09-08",
+          "link": "https://cloud.google.com/container-optimized-os/docs/release-notes/m121"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "cos-117",
+      "name": "117 (LTS)",
+      "milestones": {
+        "ga": "2024-10-02",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-09-01"
+      },
+      "upstream": {
+        "name": "cos-117",
+        "codename": null,
+        "label": "117 (LTS)",
+        "releaseDate": "2024-10-02",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-09-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "cos-117-18613-731-6",
+          "date": "2026-09-08",
+          "link": "https://cloud.google.com/container-optimized-os/docs/release-notes/m117"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "cos-113",
+      "name": "113 (LTS)",
+      "milestones": {
+        "ga": "2024-04-15",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-05-12"
+      },
+      "upstream": {
+        "name": "cos-113",
+        "codename": null,
+        "label": "113 (LTS)",
+        "releaseDate": "2024-04-15",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-05-12",
+        "isMaintained": false,
+        "latest": {
+          "name": "cos-113-18244-582-104",
+          "date": "2026-05-12",
+          "link": "https://cloud.google.com/container-optimized-os/docs/release-notes/m113"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "cos-109",
+      "name": "109 (LTS)",
+      "milestones": {
+        "ga": "2023-09-27",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-09-24"
+      },
+      "upstream": {
+        "name": "cos-109",
+        "codename": null,
+        "label": "109 (LTS)",
+        "releaseDate": "2023-09-27",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-09-24",
+        "isMaintained": false,
+        "latest": {
+          "name": "cos-109-17800-570-50",
+          "date": "2025-09-24",
+          "link": "https://cloud.google.com/container-optimized-os/docs/release-notes/m109"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "cos-105",
+      "name": "105 (LTS)",
+      "milestones": {
+        "ga": "2023-04-03",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-04-01"
+      },
+      "upstream": {
+        "name": "cos-105",
+        "codename": null,
+        "label": "105 (LTS)",
+        "releaseDate": "2023-04-03",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-04-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "cos-105-17412-535-98",
+          "date": "2025-03-31",
+          "link": "https://cloud.google.com/container-optimized-os/docs/release-notes/m105"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "cos-101",
+      "name": "101 (LTS)",
+      "milestones": {
+        "ga": "2022-09-15",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-10-21"
+      },
+      "upstream": {
+        "name": "cos-101",
+        "codename": null,
+        "label": "101 (LTS)",
+        "releaseDate": "2022-09-15",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-10-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "cos-101-17162-528-64",
+          "date": "2024-10-21",
+          "link": "https://cloud.google.com/container-optimized-os/docs/release-notes/m101"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "cos-97",
+      "name": "97 (LTS)",
+      "milestones": {
+        "ga": "2022-03-29",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-03-27"
+      },
+      "upstream": {
+        "name": "cos-97",
+        "codename": null,
+        "label": "97 (LTS)",
+        "releaseDate": "2022-03-29",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-03-27",
+        "isMaintained": false,
+        "latest": {
+          "name": "cos-97-16919-450-41",
+          "date": "2024-03-27",
+          "link": "https://cloud.google.com/container-optimized-os/docs/release-notes/m97"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "cos-93",
+      "name": "93 (LTS)",
+      "milestones": {
+        "ga": "2021-10-18",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-10-24"
+      },
+      "upstream": {
+        "name": "cos-93",
+        "codename": null,
+        "label": "93 (LTS)",
+        "releaseDate": "2021-10-18",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-10-24",
+        "isMaintained": false,
+        "latest": {
+          "name": "cos-93-16623-461-42",
+          "date": "2023-10-24",
+          "link": "https://cloud.google.com/container-optimized-os/docs/release-notes/m93"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "cos-89",
+      "name": "89 (LTS)",
+      "milestones": {
+        "ga": "2021-04-07",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-03-01"
+      },
+      "upstream": {
+        "name": "cos-89",
+        "codename": null,
+        "label": "89 (LTS)",
+        "releaseDate": "2021-04-07",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-03-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "cos-89-16108-798-22",
+          "date": "2023-04-03",
+          "link": "https://cloud.google.com/container-optimized-os/docs/release-notes/m89"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "cos-85",
+      "name": "85 (LTS)",
+      "milestones": {
+        "ga": "2020-09-24",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-09-01"
+      },
+      "upstream": {
+        "name": "cos-85",
+        "codename": null,
+        "label": "85 (LTS)",
+        "releaseDate": "2020-09-24",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-09-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "cos-85-13310-1498-13",
+          "date": "2022-08-22",
+          "link": "https://cloud.google.com/container-optimized-os/docs/release-notes/m85"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "cos-81",
+      "name": "81 (LTS)",
+      "milestones": {
+        "ga": "2020-03-27",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-01-10"
+      },
+      "upstream": {
+        "name": "cos-81",
+        "codename": null,
+        "label": "81 (LTS)",
+        "releaseDate": "2020-03-27",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-01-10",
+        "isMaintained": false,
+        "latest": {
+          "name": "cos-81-12871-1317-8",
+          "date": "2022-01-10",
+          "link": "https://cloud.google.com/container-optimized-os/docs/release-notes/m81"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "cos-77",
+      "name": "77 (LTS)",
+      "milestones": {
+        "ga": "2019-09-27",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-04-01"
+      },
+      "upstream": {
+        "name": "cos-77",
+        "codename": null,
+        "label": "77 (LTS)",
+        "releaseDate": "2019-09-27",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-04-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "cos-77-12371-1109-0",
+          "date": "2021-01-11",
+          "link": "https://cloud.google.com/container-optimized-os/docs/release-notes/m77"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "cos-73",
+      "name": "73 (LTS)",
+      "milestones": {
+        "ga": "2019-03-25",
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-09-05"
+      },
+      "upstream": {
+        "name": "cos-73",
+        "codename": null,
+        "label": "73 (LTS)",
+        "releaseDate": "2019-03-25",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-09-05",
+        "isMaintained": false,
+        "latest": {
+          "name": "cos-73-11647-656-0",
+          "date": "2020-09-05",
+          "link": "https://cloud.google.com/container-optimized-os/docs/release-notes/m73"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "cos-69",
+      "name": "69 (LTS)",
+      "milestones": {
+        "ga": "2018-09-18",
+        "eos": null,
+        "eossec": null,
+        "eol": "2019-12-01"
+      },
+      "upstream": {
+        "name": "cos-69",
+        "codename": null,
+        "label": "69 (LTS)",
+        "releaseDate": "2018-09-18",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-12-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "cos-69-10895-385-0",
+          "date": "2019-10-08",
+          "link": "https://cloud.google.com/container-optimized-os/docs/release-notes/m69"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/cos/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-13T00:07:17+00:00"
+  }
+}

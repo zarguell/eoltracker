@@ -1,0 +1,525 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "elixir",
+  "name": "Elixir",
+  "category": "software",
+  "upstream_category": "lang",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "elixir"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/elixir.svg",
+    "html": "https://endoflife.date/elixir",
+    "releasePolicy": "https://hexdocs.pm/elixir/compatibility-and-deprecations.html"
+  },
+  "releases": [
+    {
+      "id": "1.20",
+      "name": "1.20",
+      "milestones": {
+        "ga": "2026-06-03",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.20",
+        "codename": null,
+        "label": "1.20",
+        "releaseDate": "2026-06-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "1.20.4",
+          "date": "2026-08-28",
+          "link": "https://github.com/elixir-lang/elixir/blob/v1.20/CHANGELOG.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.19",
+      "name": "1.19",
+      "milestones": {
+        "ga": "2025-10-16",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.19",
+        "codename": null,
+        "label": "1.19",
+        "releaseDate": "2025-10-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-06-03",
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "1.19.6",
+          "date": "2026-08-28",
+          "link": "https://github.com/elixir-lang/elixir/blob/v1.19/CHANGELOG.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.18",
+      "name": "1.18",
+      "milestones": {
+        "ga": "2024-12-19",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.18",
+        "codename": null,
+        "label": "1.18",
+        "releaseDate": "2024-12-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-10-16",
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "1.18.5",
+          "date": "2026-08-28",
+          "link": "https://github.com/elixir-lang/elixir/blob/v1.18/CHANGELOG.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.17",
+      "name": "1.17",
+      "milestones": {
+        "ga": "2024-06-12",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.17",
+        "codename": null,
+        "label": "1.17",
+        "releaseDate": "2024-06-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-12-19",
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "1.17.3",
+          "date": "2024-09-18",
+          "link": "https://github.com/elixir-lang/elixir/blob/v1.17/CHANGELOG.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.16",
+      "name": "1.16",
+      "milestones": {
+        "ga": "2023-12-22",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.16",
+        "codename": null,
+        "label": "1.16",
+        "releaseDate": "2023-12-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-06-12",
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "1.16.3",
+          "date": "2024-05-21",
+          "link": "https://github.com/elixir-lang/elixir/blob/v1.16/CHANGELOG.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.15",
+      "name": "1.15",
+      "milestones": {
+        "ga": "2023-06-19",
+        "eos": null,
+        "eossec": "2026-06-03",
+        "eol": "2026-06-03"
+      },
+      "upstream": {
+        "name": "1.15",
+        "codename": null,
+        "label": "1.15",
+        "releaseDate": "2023-06-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-12-22",
+        "isEol": true,
+        "eolFrom": "2026-06-03",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.15.8",
+          "date": "2024-05-21",
+          "link": "https://github.com/elixir-lang/elixir/blob/v1.15/CHANGELOG.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.14",
+      "name": "1.14",
+      "milestones": {
+        "ga": "2022-09-01",
+        "eos": null,
+        "eossec": "2025-10-16",
+        "eol": "2025-10-16"
+      },
+      "upstream": {
+        "name": "1.14",
+        "codename": null,
+        "label": "1.14",
+        "releaseDate": "2022-09-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-06-19",
+        "isEol": true,
+        "eolFrom": "2025-10-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.14.5",
+          "date": "2023-05-22",
+          "link": "https://github.com/elixir-lang/elixir/blob/v1.14/CHANGELOG.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.13",
+      "name": "1.13",
+      "milestones": {
+        "ga": "2021-12-03",
+        "eos": null,
+        "eossec": "2024-12-19",
+        "eol": "2024-12-19"
+      },
+      "upstream": {
+        "name": "1.13",
+        "codename": null,
+        "label": "1.13",
+        "releaseDate": "2021-12-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-09-01",
+        "isEol": true,
+        "eolFrom": "2024-12-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.13.4",
+          "date": "2022-04-07",
+          "link": "https://github.com/elixir-lang/elixir/blob/v1.13/CHANGELOG.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.12",
+      "name": "1.12",
+      "milestones": {
+        "ga": "2021-05-19",
+        "eos": null,
+        "eossec": "2024-06-12",
+        "eol": "2024-06-12"
+      },
+      "upstream": {
+        "name": "1.12",
+        "codename": null,
+        "label": "1.12",
+        "releaseDate": "2021-05-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-12-03",
+        "isEol": true,
+        "eolFrom": "2024-06-12",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.12.3",
+          "date": "2021-09-05",
+          "link": "https://github.com/elixir-lang/elixir/blob/v1.12/CHANGELOG.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.11",
+      "name": "1.11",
+      "milestones": {
+        "ga": "2020-10-06",
+        "eos": null,
+        "eossec": "2023-12-22",
+        "eol": "2023-12-22"
+      },
+      "upstream": {
+        "name": "1.11",
+        "codename": null,
+        "label": "1.11",
+        "releaseDate": "2020-10-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-05-19",
+        "isEol": true,
+        "eolFrom": "2023-12-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.11.4",
+          "date": "2021-03-16",
+          "link": "https://github.com/elixir-lang/elixir/blob/v1.11/CHANGELOG.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.10",
+      "name": "1.10",
+      "milestones": {
+        "ga": "2020-01-27",
+        "eos": null,
+        "eossec": "2023-06-19",
+        "eol": "2023-06-19"
+      },
+      "upstream": {
+        "name": "1.10",
+        "codename": null,
+        "label": "1.10",
+        "releaseDate": "2020-01-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-10-06",
+        "isEol": true,
+        "eolFrom": "2023-06-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.10.4",
+          "date": "2020-07-04",
+          "link": "https://github.com/elixir-lang/elixir/blob/v1.10/CHANGELOG.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.9",
+      "name": "1.9",
+      "milestones": {
+        "ga": "2019-06-24",
+        "eos": null,
+        "eossec": "2022-09-01",
+        "eol": "2022-09-01"
+      },
+      "upstream": {
+        "name": "1.9",
+        "codename": null,
+        "label": "1.9",
+        "releaseDate": "2019-06-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-01-27",
+        "isEol": true,
+        "eolFrom": "2022-09-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.9.4",
+          "date": "2019-11-05",
+          "link": "https://github.com/elixir-lang/elixir/blob/v1.9/CHANGELOG.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.8",
+      "name": "1.8",
+      "milestones": {
+        "ga": "2019-01-14",
+        "eos": null,
+        "eossec": "2021-12-03",
+        "eol": "2021-12-03"
+      },
+      "upstream": {
+        "name": "1.8",
+        "codename": null,
+        "label": "1.8",
+        "releaseDate": "2019-01-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2019-06-24",
+        "isEol": true,
+        "eolFrom": "2021-12-03",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.8.2",
+          "date": "2019-05-11",
+          "link": "https://github.com/elixir-lang/elixir/blob/v1.8/CHANGELOG.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.7",
+      "name": "1.7",
+      "milestones": {
+        "ga": "2018-07-25",
+        "eos": null,
+        "eossec": "2021-05-19",
+        "eol": "2021-05-19"
+      },
+      "upstream": {
+        "name": "1.7",
+        "codename": null,
+        "label": "1.7",
+        "releaseDate": "2018-07-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2019-01-14",
+        "isEol": true,
+        "eolFrom": "2021-05-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.7.4",
+          "date": "2018-10-24",
+          "link": "https://github.com/elixir-lang/elixir/blob/v1.7/CHANGELOG.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.6",
+      "name": "1.6",
+      "milestones": {
+        "ga": "2018-01-17",
+        "eos": null,
+        "eossec": "2020-10-06",
+        "eol": "2020-10-06"
+      },
+      "upstream": {
+        "name": "1.6",
+        "codename": null,
+        "label": "1.6",
+        "releaseDate": "2018-01-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2018-07-25",
+        "isEol": true,
+        "eolFrom": "2020-10-06",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.6.6",
+          "date": "2018-06-20",
+          "link": "https://github.com/elixir-lang/elixir/blob/v1.6/CHANGELOG.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.5",
+      "name": "1.5",
+      "milestones": {
+        "ga": "2017-07-25",
+        "eos": null,
+        "eossec": "2020-01-27",
+        "eol": "2020-01-27"
+      },
+      "upstream": {
+        "name": "1.5",
+        "codename": null,
+        "label": "1.5",
+        "releaseDate": "2017-07-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2018-01-17",
+        "isEol": true,
+        "eolFrom": "2020-01-27",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.5.3",
+          "date": "2017-12-19",
+          "link": "https://github.com/elixir-lang/elixir/blob/v1.5/CHANGELOG.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.4",
+      "name": "1.4",
+      "milestones": {
+        "ga": "2017-01-05",
+        "eos": null,
+        "eossec": "2019-06-24",
+        "eol": "2019-06-24"
+      },
+      "upstream": {
+        "name": "1.4",
+        "codename": null,
+        "label": "1.4",
+        "releaseDate": "2017-01-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2017-07-25",
+        "isEol": true,
+        "eolFrom": "2019-06-24",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.4.5",
+          "date": "2017-06-22",
+          "link": "https://github.com/elixir-lang/elixir/blob/v1.4/CHANGELOG.md"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/elixir/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-08-29T00:06:26+00:00"
+  }
+}

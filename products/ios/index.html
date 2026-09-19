@@ -1,0 +1,851 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apple iOS lifecycle dates — EOL Tracker</title>
+<meta name="description" content="General availability, end-of-sale, security-support and end-of-life dates for every Apple iOS release, with raw source values and provenance.">
+<link rel="canonical" href="https://zarguell.github.io/eoltracker/products/ios/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EOL Tracker">
+<meta property="og:title" content="Apple iOS lifecycle dates — EOL Tracker">
+<meta property="og:description" content="General availability, end-of-sale, security-support and end-of-life dates for every Apple iOS release, with raw source values and provenance.">
+<meta property="og:url" content="https://zarguell.github.io/eoltracker/products/ios/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d1b2a'/%3E%3Cpath d='M7 20.5l5-6 4 4.5 4-6.5 5 8' fill='none' stroke='%234fd1c5' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/eoltracker/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="shell masthead-inner">
+    <a class="wordmark" href="/eoltracker/">EOL<span>Tracker</span></a>
+    <nav class="mainnav" aria-label="Primary">
+      <a href="/eoltracker/">Software</a>
+      <a href="/eoltracker/hardware/">Hardware</a>
+      <a href="/eoltracker/api/">API &amp; data</a>
+      <a href="https://endoflife.date/" rel="noopener">endoflife.date</a>
+    </nav>
+    <p class="masthead-meta">483 products · 7814 releases · 6999 hardware records</p>
+  </div>
+</header>
+
+<main class="shell" id="main">
+<nav class="crumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/eoltracker/">Catalog</a></li>
+    <li aria-current="page">Apple iOS</li>
+  </ol>
+</nav>
+
+<section class="hero product-hero">
+  <p class="eyebrow">os · software</p>
+  <h1 class="page-title">Apple iOS</h1>
+  <p class="lead">
+    16 releases published by endoflife.date, with each normalized milestone and the raw
+    upstream values behind it. Identifier for this record: <code>ios</code>.
+  </p>
+  <p class="hero-meta">
+    Verified Sep 17, 2026 at 11:51 UTC by <code>deterministic-endoflife-date-v1</code>.
+Source: endoflife.date.    Upstream modified Sep 15, 2026 at 06:42 UTC.
+    Last catalog refresh <time datetime="2026-09-17T18:35:21Z">Sep 17, 2026 at 18:35 UTC</time>.
+  </p>
+  <p class="product-links">
+    <a class="button" href="/eoltracker/v1/products/ios.json">JSON record</a>
+    <a class="button" href="https://endoflife.date/api/v1/products/ios/" rel="noopener">Source on endoflife.date</a>
+<a class="button" href="https://cdn.jsdelivr.net/npm/simple-icons/icons/ios.svg" rel="noopener">icon</a><a class="button" href="https://endoflife.date/ios" rel="noopener">html</a>  </p>
+</section>
+
+<section class="panel" aria-labelledby="coverage-title">
+  <h2 class="panel-title" id="coverage-title">Data coverage</h2>
+  <p class="panel-note">
+    Upstream does not publish every milestone for every release. Empty cells in the table below are unknown dates,
+    not implied support.
+  </p>
+  <ul class="bars">
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">General availability</span>
+        <span class="bar-value">16 / 16 releases (100%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="General availability: 16 of 16 releases have a published date">
+        <div class="bar-fill" style="width: 100%"></div>
+      </div>
+    </li>
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">End of sale</span>
+        <span class="bar-value">0 / 16 releases (0%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="End of sale: 0 of 16 releases have a published date">
+        <div class="bar-fill" style="width: 0%"></div>
+      </div>
+    </li>
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">End of security support</span>
+        <span class="bar-value">11 / 16 releases (69%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="End of security support: 11 of 16 releases have a published date">
+        <div class="bar-fill" style="width: 69%"></div>
+      </div>
+    </li>
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">End of life</span>
+        <span class="bar-value">11 / 16 releases (69%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="End of life: 11 of 16 releases have a published date">
+        <div class="bar-fill" style="width: 69%"></div>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section class="panel" aria-labelledby="legend-title">
+  <h2 class="panel-title" id="legend-title">How to read these dates</h2>
+  <dl class="legend">
+    <div class="legend-row">
+      <dt>General availability</dt>
+      <dd>
+        <p>First public release. Taken from the upstream releaseDate.</p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>End of sale</dt>
+      <dd>
+        <p>Last day new licenses or units are sold. Only mapped from an upstream field whose label names an end of sale.</p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>End of security support</dt>
+      <dd>
+        <p>Last day security fixes are published. Mapped from eolFrom or eoesFrom only when the label names security support.</p>
+        <p>
+          Extended support counts as security support: when upstream publishes an extended-support date, it replaces
+          the standard security-support deadline here.
+        </p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>End of life</dt>
+      <dd>
+        <p>End of all support. A published extended-support date wins; otherwise eolFrom when its label describes a full support end.</p>
+        <p>
+          An announced extended-support period with no published end date leaves end of life blank — the earlier
+          <code>eolFrom</code> value stays visible in the table rather than being promoted into a deadline upstream
+          never set.
+        </p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>Blank date</dt>
+      <dd><p>The source publishes no value for that milestone. A missing date is an absent announcement, not a claim that support ends or continues.</p></dd>
+    </div>
+  </dl>
+</section>
+
+
+<section class="releases" aria-labelledby="releases-title">
+  <div class="catalog-head">
+    <h2 class="panel-title" id="releases-title">Release lifecycle</h2>
+    <p class="catalog-count">16 releases</p>
+  </div>
+  <p class="panel-note">
+    Newest first. Cells show normalized dates; a secondary line shows the raw upstream field and label when the
+    normalized date differs from, or is absent despite, a published value.
+  </p>
+
+  <div class="table-scroll">
+    <table class="release-table">
+      <caption class="sr-only">Lifecycle dates for each Apple iOS release</caption>
+      <thead>
+        <tr>
+          <th scope="col">Release</th>
+          <th scope="col">General availability</th>
+          <th scope="col">End of sale</th>
+          <th scope="col">End of security support</th>
+          <th scope="col">End of life</th>
+          <th scope="col">Upstream status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">27</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2026-09-14">Sep 14, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-27-release-notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">26</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2025-09-15">Sep 15, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2026-09-14 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26-release-notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">18</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2024-09-16">Sep 16, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2025-09-15 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">17</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2023-09-18">Sep 18, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2024-09-16 (Active Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2025-05-13">May 13, 2025</time>          </td>
+          <td class="milestone">
+            <time datetime="2025-05-13">May 13, 2025</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-17-release-notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">16</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2022-09-12">Sep 12, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2023-09-18 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://developer.apple.com/documentation/ios-ipados-release-notes/ios-16-release-notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">15</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2021-09-20">Sep 20, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2022-09-12 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-15-release-notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">14</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2020-09-16">Sep 16, 2020</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2021-09-20 (Active Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2021-10-26">Oct 26, 2021</time>          </td>
+          <td class="milestone">
+            <time datetime="2021-10-26">Oct 26, 2021</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14-release-notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">13</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2019-09-19">Sep 19, 2019</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2020-09-16 (Active Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2020-09-16">Sep 16, 2020</time>          </td>
+          <td class="milestone">
+            <time datetime="2020-09-16">Sep 16, 2020</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://developer.apple.com/documentation/ios-ipados-release-notes/ios-13-release-notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">12</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2018-09-17">Sep 17, 2018</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2019-09-19 (Active Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2026-01-26">Jan 26, 2026</time>          </td>
+          <td class="milestone">
+            <time datetime="2026-01-26">Jan 26, 2026</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://developer.apple.com/documentation/ios-ipados-release-notes/ios-12-release-notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">11</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2017-09-19">Sep 19, 2017</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2018-09-17 (Active Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2018-10-08">Oct 8, 2018</time>          </td>
+          <td class="milestone">
+            <time datetime="2018-10-08">Oct 8, 2018</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://support.apple.com/HT208067" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">10</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2016-09-13">Sep 13, 2016</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2017-09-19 (Active Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2019-07-22">Jul 22, 2019</time>          </td>
+          <td class="milestone">
+            <time datetime="2019-07-22">Jul 22, 2019</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://support.apple.com/HT208011" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">9</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2015-09-16">Sep 16, 2015</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2016-09-13 (Active Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2019-07-22">Jul 22, 2019</time>          </td>
+          <td class="milestone">
+            <time datetime="2019-07-22">Jul 22, 2019</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://support.apple.com/HT208010" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">8</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2014-09-17">Sep 17, 2014</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2015-09-16 (Active Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2015-09-30">Sep 30, 2015</time>          </td>
+          <td class="milestone">
+            <time datetime="2015-09-30">Sep 30, 2015</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://support.apple.com/HT208000" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">7</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2013-09-18">Sep 18, 2013</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2014-09-17 (Active Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2014-10-20">Oct 20, 2014</time>          </td>
+          <td class="milestone">
+            <time datetime="2014-10-20">Oct 20, 2014</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://support.apple.com/HT207979" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">6</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2012-09-19">Sep 19, 2012</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2013-09-18 (Active Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2013-09-26">Sep 26, 2013</time>          </td>
+          <td class="milestone">
+            <time datetime="2013-09-26">Sep 26, 2013</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://support.apple.com/HT212584" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">5</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2011-10-12">Oct 12, 2011</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2012-09-19 (Active Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2012-11-01">Nov 1, 2012</time>          </td>
+          <td class="milestone">
+            <time datetime="2012-11-01">Nov 1, 2012</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://support.apple.com/HT212597" rel="noopener">latest release</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="panel" aria-labelledby="source-title">
+  <h2 class="panel-title" id="source-title">Source and upstream values</h2>
+  <p class="panel-note">
+    This record is a normalization of endoflife.date data, licensed MIT. Raw upstream values are
+    retained in full so the mapping below can be checked value by value.
+  </p>
+  <dl class="facts">
+    <div><dt>Upstream record</dt><dd><a href="https://endoflife.date/api/v1/products/ios/" rel="noopener">https://endoflife.date/api/v1/products/ios/</a></dd></div>
+    <div><dt>Source license</dt><dd><a href="https://github.com/endoflife-date/endoflife.date/blob/master/LICENSE" rel="noopener">endoflife.date — MIT</a></dd></div>
+    <div><dt>Verifier</dt><dd><code>deterministic-endoflife-date-v1</code></dd></div>
+    <div><dt>Last checked</dt><dd>Sep 17, 2026 at 11:51 UTC</dd></div>
+    <div><dt>Upstream modified</dt><dd>Sep 15, 2026 at 06:42 UTC</dd></div>
+    <div><dt>JSON record</dt><dd><a href="https://zarguell.github.io/eoltracker/v1/products/ios.json">https://zarguell.github.io/eoltracker/v1/products/ios.json</a></dd></div>
+    <div><dt>Schema</dt><dd><a href="https://zarguell.github.io/eoltracker/v1/schema/product.json">v1/schema/product.json</a></dd></div>
+  </dl>
+
+
+  <h3 class="sub-title">Upstream label semantics</h3>
+  <p class="panel-note">
+    endoflife.date labels decide which raw date fields become which normalized milestone. These are this product's
+    label texts and the rule each one triggers.
+  </p>
+  <dl class="label-rules">
+    <div>
+      <dt><code>eoas</code> = “Active Support”</dt>
+      <dd>End-of-sale date when the text names an end of sale.</dd>
+    </div>
+    <div>
+      <dt><code>discontinued</code> = not set</dt>
+      <dd>End-of-sale date when the text names an end of sale; otherwise recorded only, never turned into a date.</dd>
+    </div>
+    <div>
+      <dt><code>eol</code> = “Security Support”</dt>
+      <dd>End of security support when the text names security support; end of life only when no extended-support label is set and the text describes a full support end.</dd>
+    </div>
+    <div>
+      <dt><code>eoes</code> = not set</dt>
+      <dd>Extended support. A published date also sets end of life, and a security-support text supersedes end of security support.</dd>
+    </div>
+  </dl>
+
+
+  <details class="raw">
+    <summary>Raw upstream release objects (16)</summary>
+    <p class="panel-note">Verbatim <code>releases[]</code> entries from the upstream record, unmodified.</p>
+    <details class="raw-release">
+      <summary><code>27</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2026-09-14&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>26</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-09-15&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2026-09-14&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>18</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-09-16&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2025-09-15&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>17</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-09-18&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2024-09-16&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2025-05-13&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>16</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-09-12&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2023-09-18&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>15</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2021-09-20&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2022-09-12&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>14</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2020-09-16&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2021-09-20&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2021-10-26&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>13</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2019-09-19&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2020-09-16&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2020-09-16&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>12</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2018-09-17&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2019-09-19&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2026-01-26&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>11</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2017-09-19&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2018-09-17&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2018-10-08&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>10</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2016-09-13&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2017-09-19&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2019-07-22&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>9</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2015-09-16&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2016-09-13&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2019-07-22&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>8</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2014-09-17&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2015-09-16&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2015-09-30&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>7</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2013-09-18&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2014-09-17&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2014-10-20&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>6</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2012-09-19&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2013-09-18&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2013-09-26&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>5</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2011-10-12&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2012-09-19&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2012-11-01&#34;
+  }
+]</code></pre>
+    </details>
+  </details>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="shell footer-inner">
+    <div class="footer-col">
+      <p class="footer-title">EOL Tracker</p>
+      <p class="footer-note">
+        Software lifecycle dates are republished from
+        <a href="https://endoflife.date/" rel="noopener">endoflife.date</a>.
+        Source data is licensed
+        <a href="https://github.com/endoflife-date/endoflife.date/blob/master/LICENSE" rel="noopener">MIT</a>.
+      </p>
+      <p class="footer-note">
+        Hardware lifecycle data comes from
+        <a href="https://eosl.date/" rel="noopener">eosl.date</a> by Subash Geetha Krishnan,
+        which aggregates public vendor announcements, and from
+        <a href="https://opengear.com/end-life-products" rel="noopener">Opengear's end-of-life product list</a>.
+        Attribution here is credit by name and link, not a licence to the source material: nothing is reproduced as
+        licensed material. This catalog is an independent normalization, not affiliated with endoflife.date, eosl.date,
+        Opengear or any vendor listed here.
+      </p>
+      <p class="footer-note">
+        Last catalog refresh Sep 17, 2026 at 18:35 UTC.
+      </p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-title">Data</p>
+      <ul class="footer-links">
+        <li><a href="/eoltracker/v1/feed.json">Feed (JSON)</a></li>
+        <li><a href="/eoltracker/v1/feed.atom">Deadlines (Atom)</a></li>
+        <li><a href="/eoltracker/v1/calendar.ics">Deadlines (iCal)</a></li>
+        <li><a href="/eoltracker/v1/products.json">Product summaries</a></li>
+        <li><a href="/eoltracker/v1/hardware.json">Hardware summaries</a></li>
+        <li><a href="/eoltracker/v1/changes.atom">Changes (Atom)</a></li>
+        <li><a href="/eoltracker/v1/changes.json">Changes (JSON)</a></li>
+        <li><a href="/eoltracker/hardware/">Hardware catalog</a></li>
+        <li><a href="/eoltracker/api/">Endpoints &amp; mapping</a></li>
+        <li><a href="/eoltracker/v1/schema/product.json">Record schema</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <p class="footer-title">Project</p>
+      <ul class="footer-links">
+        <li><a href="https://github.com/zarguell/eoltracker" rel="noopener">Source on GitHub</a></li>
+        <li><a href="https://endoflife.date/" rel="noopener">Upstream source</a></li>
+        <li><a href="/eoltracker/THIRD-PARTY-NOTICES.txt">THIRD-PARTY-NOTICES.txt</a></li>
+        <li><a href="/eoltracker/OASIS-NOTICE.txt">OASIS-NOTICE.txt</a></li>
+        <li><a href="/eoltracker/404.html">Not found page</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script src="/eoltracker/app.js" defer></script>
+</body>
+</html>

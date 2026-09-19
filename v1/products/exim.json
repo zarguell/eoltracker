@@ -1,0 +1,1143 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "exim",
+  "name": "Exim",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "exim"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:exim:exim"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/exim",
+    "releasePolicy": "https://github.com/Exim/exim/wiki/EximReleasePolicy"
+  },
+  "releases": [
+    {
+      "id": "4.99",
+      "name": "4.99",
+      "milestones": {
+        "ga": "2025-10-28",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.99",
+        "codename": null,
+        "label": "4.99",
+        "releaseDate": "2025-10-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "4.99.1",
+          "date": "2025-12-14",
+          "link": "https://lists.exim.org/lurker/message/20251028.114149.3bf19800.en.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.98",
+      "name": "4.98",
+      "milestones": {
+        "ga": "2024-07-10",
+        "eos": null,
+        "eossec": "2025-10-28",
+        "eol": "2025-10-28"
+      },
+      "upstream": {
+        "name": "4.98",
+        "codename": null,
+        "label": "4.98",
+        "releaseDate": "2024-07-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-10-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.98.2",
+          "date": "2025-03-21",
+          "link": "https://github.com/Exim/exim/releases/tag/exim-4.98.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.97",
+      "name": "4.97",
+      "milestones": {
+        "ga": "2023-11-04",
+        "eos": null,
+        "eossec": "2024-07-10",
+        "eol": "2024-07-10"
+      },
+      "upstream": {
+        "name": "4.97",
+        "codename": null,
+        "label": "4.97",
+        "releaseDate": "2023-11-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-07-10",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.97.1",
+          "date": "2023-12-25",
+          "link": "https://github.com/Exim/exim/releases/tag/exim-4.97.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.96",
+      "name": "4.96",
+      "milestones": {
+        "ga": "2022-06-25",
+        "eos": null,
+        "eossec": "2023-11-04",
+        "eol": "2023-11-04"
+      },
+      "upstream": {
+        "name": "4.96",
+        "codename": null,
+        "label": "4.96",
+        "releaseDate": "2022-06-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-11-04",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.96.2",
+          "date": "2023-10-15",
+          "link": "https://github.com/Exim/exim/releases/tag/exim-4.96.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.95",
+      "name": "4.95",
+      "milestones": {
+        "ga": "2021-09-28",
+        "eos": null,
+        "eossec": "2022-06-25",
+        "eol": "2022-06-25"
+      },
+      "upstream": {
+        "name": "4.95",
+        "codename": null,
+        "label": "4.95",
+        "releaseDate": "2021-09-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-06-25",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.95",
+          "date": "2021-09-28",
+          "link": "https://github.com/Exim/exim/releases/tag/exim-4.95"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.94",
+      "name": "4.94",
+      "milestones": {
+        "ga": "2020-06-01",
+        "eos": null,
+        "eossec": "2021-09-28",
+        "eol": "2021-09-28"
+      },
+      "upstream": {
+        "name": "4.94",
+        "codename": null,
+        "label": "4.94",
+        "releaseDate": "2020-06-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-09-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.94.2",
+          "date": "2021-04-30",
+          "link": "https://github.com/Exim/exim/releases/tag/exim-4.94.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.93",
+      "name": "4.93",
+      "milestones": {
+        "ga": "2019-12-08",
+        "eos": null,
+        "eossec": "2020-06-01",
+        "eol": "2020-06-01"
+      },
+      "upstream": {
+        "name": "4.93",
+        "codename": null,
+        "label": "4.93",
+        "releaseDate": "2019-12-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-06-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.93.0.4",
+          "date": "2020-01-07",
+          "link": "https://github.com/Exim/exim/releases/tag/exim-4.93.0.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.92",
+      "name": "4.92",
+      "milestones": {
+        "ga": "2019-02-10",
+        "eos": null,
+        "eossec": "2019-12-08",
+        "eol": "2019-12-08"
+      },
+      "upstream": {
+        "name": "4.92",
+        "codename": null,
+        "label": "4.92",
+        "releaseDate": "2019-02-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-12-08",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.92.3",
+          "date": "2019-09-29",
+          "link": "https://github.com/Exim/exim/releases/tag/exim-4.92.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.91",
+      "name": "4.91",
+      "milestones": {
+        "ga": "2018-04-15",
+        "eos": null,
+        "eossec": "2019-02-10",
+        "eol": "2019-02-10"
+      },
+      "upstream": {
+        "name": "4.91",
+        "codename": null,
+        "label": "4.91",
+        "releaseDate": "2018-04-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-02-10",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.91",
+          "date": "2018-04-15",
+          "link": "https://github.com/Exim/exim/releases/tag/exim-4_91"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.90",
+      "name": "4.90",
+      "milestones": {
+        "ga": "2017-12-19",
+        "eos": null,
+        "eossec": "2018-04-15",
+        "eol": "2018-04-15"
+      },
+      "upstream": {
+        "name": "4.90",
+        "codename": null,
+        "label": "4.90",
+        "releaseDate": "2017-12-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-04-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.90.1",
+          "date": "2018-02-08",
+          "link": "https://github.com/Exim/exim/releases/tag/exim-4_90_1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.89",
+      "name": "4.89",
+      "milestones": {
+        "ga": "2017-03-07",
+        "eos": null,
+        "eossec": "2017-12-19",
+        "eol": "2017-12-19"
+      },
+      "upstream": {
+        "name": "4.89",
+        "codename": null,
+        "label": "4.89",
+        "releaseDate": "2017-03-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-12-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.89.1",
+          "date": "2017-11-29",
+          "link": "https://github.com/Exim/exim/releases/tag/exim-4_89"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.88",
+      "name": "4.88",
+      "milestones": {
+        "ga": "2016-12-18",
+        "eos": null,
+        "eossec": "2017-03-07",
+        "eol": "2017-03-07"
+      },
+      "upstream": {
+        "name": "4.88",
+        "codename": null,
+        "label": "4.88",
+        "releaseDate": "2016-12-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-03-07",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.88",
+          "date": "2016-12-18",
+          "link": "https://github.com/Exim/exim/releases/tag/exim-4_88"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.87",
+      "name": "4.87",
+      "milestones": {
+        "ga": "2016-04-06",
+        "eos": null,
+        "eossec": "2016-12-18",
+        "eol": "2016-12-18"
+      },
+      "upstream": {
+        "name": "4.87",
+        "codename": null,
+        "label": "4.87",
+        "releaseDate": "2016-04-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2016-12-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.87.1",
+          "date": "2016-12-17",
+          "link": "https://github.com/Exim/exim/releases/tag/exim-4_87_1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.86",
+      "name": "4.86",
+      "milestones": {
+        "ga": "2015-07-26",
+        "eos": null,
+        "eossec": "2016-04-06",
+        "eol": "2016-04-06"
+      },
+      "upstream": {
+        "name": "4.86",
+        "codename": null,
+        "label": "4.86",
+        "releaseDate": "2015-07-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2016-04-06",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.86.2",
+          "date": "2016-03-02",
+          "link": "https://github.com/Exim/exim/releases/tag/exim-4_86_2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.85",
+      "name": "4.85",
+      "milestones": {
+        "ga": "2015-01-12",
+        "eos": null,
+        "eossec": "2015-07-26",
+        "eol": "2015-07-26"
+      },
+      "upstream": {
+        "name": "4.85",
+        "codename": null,
+        "label": "4.85",
+        "releaseDate": "2015-01-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2015-07-26",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.85.2",
+          "date": "2016-03-02",
+          "link": "https://github.com/Exim/exim/releases/tag/exim-4_85_2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.84",
+      "name": "4.84",
+      "milestones": {
+        "ga": "2014-08-11",
+        "eos": null,
+        "eossec": "2015-01-12",
+        "eol": "2015-01-12"
+      },
+      "upstream": {
+        "name": "4.84",
+        "codename": null,
+        "label": "4.84",
+        "releaseDate": "2014-08-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2015-01-12",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.84.2",
+          "date": "2016-03-02",
+          "link": "https://github.com/Exim/exim/releases/tag/exim-4_84_2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.83",
+      "name": "4.83",
+      "milestones": {
+        "ga": "2014-07-21",
+        "eos": null,
+        "eossec": "2014-08-11",
+        "eol": "2014-08-11"
+      },
+      "upstream": {
+        "name": "4.83",
+        "codename": null,
+        "label": "4.83",
+        "releaseDate": "2014-07-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2014-08-11",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.83",
+          "date": "2014-07-21",
+          "link": "https://github.com/Exim/exim/releases/tag/exim-4_83"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.82",
+      "name": "4.82",
+      "milestones": {
+        "ga": "2013-10-28",
+        "eos": null,
+        "eossec": "2014-07-21",
+        "eol": "2014-07-21"
+      },
+      "upstream": {
+        "name": "4.82",
+        "codename": null,
+        "label": "4.82",
+        "releaseDate": "2013-10-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2014-07-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.82.1",
+          "date": "2014-05-28",
+          "link": "https://github.com/Exim/exim/releases/tag/exim-4_82_1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.80",
+      "name": "4.80",
+      "milestones": {
+        "ga": "2012-05-31",
+        "eos": null,
+        "eossec": "2013-10-28",
+        "eol": "2013-10-28"
+      },
+      "upstream": {
+        "name": "4.80",
+        "codename": null,
+        "label": "4.80",
+        "releaseDate": "2012-05-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2013-10-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.80.1",
+          "date": "2012-10-24",
+          "link": "https://github.com/Exim/exim/releases/tag/exim-4_80_1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.77",
+      "name": "4.77",
+      "milestones": {
+        "ga": "2011-10-10",
+        "eos": null,
+        "eossec": "2012-05-31",
+        "eol": "2012-05-31"
+      },
+      "upstream": {
+        "name": "4.77",
+        "codename": null,
+        "label": "4.77",
+        "releaseDate": "2011-10-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2012-05-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.77",
+          "date": "2011-10-10",
+          "link": "https://github.com/Exim/exim/releases/tag/exim-4_77"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.76",
+      "name": "4.76",
+      "milestones": {
+        "ga": "2011-05-09",
+        "eos": null,
+        "eossec": "2011-10-10",
+        "eol": "2011-10-10"
+      },
+      "upstream": {
+        "name": "4.76",
+        "codename": null,
+        "label": "4.76",
+        "releaseDate": "2011-05-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2011-10-10",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.76",
+          "date": "2011-05-09",
+          "link": "https://github.com/Exim/exim/releases/tag/exim-4_76"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.75",
+      "name": "4.75",
+      "milestones": {
+        "ga": "2011-03-22",
+        "eos": null,
+        "eossec": "2011-05-09",
+        "eol": "2011-05-09"
+      },
+      "upstream": {
+        "name": "4.75",
+        "codename": null,
+        "label": "4.75",
+        "releaseDate": "2011-03-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2011-05-09",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.75",
+          "date": "2011-03-22",
+          "link": "https://github.com/Exim/exim/releases/tag/exim-4_75"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.74",
+      "name": "4.74",
+      "milestones": {
+        "ga": "2011-01-24",
+        "eos": null,
+        "eossec": "2011-03-22",
+        "eol": "2011-03-22"
+      },
+      "upstream": {
+        "name": "4.74",
+        "codename": null,
+        "label": "4.74",
+        "releaseDate": "2011-01-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2011-03-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.74",
+          "date": "2011-01-24",
+          "link": "https://github.com/Exim/exim/releases/tag/exim-4_74"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.73",
+      "name": "4.73",
+      "milestones": {
+        "ga": "2010-12-26",
+        "eos": null,
+        "eossec": "2011-01-25",
+        "eol": "2011-01-25"
+      },
+      "upstream": {
+        "name": "4.73",
+        "codename": null,
+        "label": "4.73",
+        "releaseDate": "2010-12-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2011-01-25",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.73",
+          "date": "2010-12-26",
+          "link": "https://github.com/Exim/exim/releases/tag/exim-4_73"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.72",
+      "name": "4.72",
+      "milestones": {
+        "ga": "2010-06-03",
+        "eos": null,
+        "eossec": "2010-12-27",
+        "eol": "2010-12-27"
+      },
+      "upstream": {
+        "name": "4.72",
+        "codename": null,
+        "label": "4.72",
+        "releaseDate": "2010-06-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2010-12-27",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.72",
+          "date": "2010-06-03",
+          "link": "https://github.com/Exim/exim/releases/tag/exim-4_72"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.71",
+      "name": "4.71",
+      "milestones": {
+        "ga": "2009-11-23",
+        "eos": null,
+        "eossec": "2010-06-03",
+        "eol": "2010-06-03"
+      },
+      "upstream": {
+        "name": "4.71",
+        "codename": null,
+        "label": "4.71",
+        "releaseDate": "2009-11-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2010-06-03",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.71",
+          "date": "2009-11-23",
+          "link": "https://github.com/Exim/exim/releases/tag/exim-4_71"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.70",
+      "name": "4.70",
+      "milestones": {
+        "ga": "2009-11-13",
+        "eos": null,
+        "eossec": "2009-11-24",
+        "eol": "2009-11-24"
+      },
+      "upstream": {
+        "name": "4.70",
+        "codename": null,
+        "label": "4.70",
+        "releaseDate": "2009-11-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2009-11-24",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.70",
+          "date": "2009-11-13",
+          "link": "https://github.com/Exim/exim/releases/tag/exim-4_70"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.69",
+      "name": "4.69",
+      "milestones": {
+        "ga": "2007-12-01",
+        "eos": null,
+        "eossec": "2009-11-14",
+        "eol": "2009-11-14"
+      },
+      "upstream": {
+        "name": "4.69",
+        "codename": null,
+        "label": "4.69",
+        "releaseDate": "2007-12-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2009-11-14",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.69",
+          "date": "2007-12-01",
+          "link": "https://github.com/Exim/exim/releases/tag/exim-4_69"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.68",
+      "name": "4.68",
+      "milestones": {
+        "ga": "2007-08-30",
+        "eos": null,
+        "eossec": "2007-12-02",
+        "eol": "2007-12-02"
+      },
+      "upstream": {
+        "name": "4.68",
+        "codename": null,
+        "label": "4.68",
+        "releaseDate": "2007-08-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2007-12-02",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.68",
+          "date": "2007-08-30",
+          "link": "https://github.com/Exim/exim/releases/tag/exim-4_68"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.67",
+      "name": "4.67",
+      "milestones": {
+        "ga": "2007-04-17",
+        "eos": null,
+        "eossec": "2007-08-31",
+        "eol": "2007-08-31"
+      },
+      "upstream": {
+        "name": "4.67",
+        "codename": null,
+        "label": "4.67",
+        "releaseDate": "2007-04-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2007-08-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.67",
+          "date": "2007-04-17",
+          "link": "https://github.com/Exim/exim/releases/tag/exim-4_67"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.66",
+      "name": "4.66",
+      "milestones": {
+        "ga": "2007-01-08",
+        "eos": null,
+        "eossec": "2007-04-18",
+        "eol": "2007-04-18"
+      },
+      "upstream": {
+        "name": "4.66",
+        "codename": null,
+        "label": "4.66",
+        "releaseDate": "2007-01-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2007-04-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.66",
+          "date": "2007-01-08",
+          "link": "https://github.com/Exim/exim/releases/tag/exim-4_66"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.65",
+      "name": "4.65",
+      "milestones": {
+        "ga": "2007-01-02",
+        "eos": null,
+        "eossec": "2007-01-08",
+        "eol": "2007-01-08"
+      },
+      "upstream": {
+        "name": "4.65",
+        "codename": null,
+        "label": "4.65",
+        "releaseDate": "2007-01-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2007-01-08",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.65",
+          "date": "2007-01-02",
+          "link": "https://github.com/Exim/exim/releases/tag/exim-4_65"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.64",
+      "name": "4.64",
+      "milestones": {
+        "ga": "2006-12-20",
+        "eos": null,
+        "eossec": "2007-01-02",
+        "eol": "2007-01-02"
+      },
+      "upstream": {
+        "name": "4.64",
+        "codename": null,
+        "label": "4.64",
+        "releaseDate": "2006-12-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2007-01-02",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.64",
+          "date": "2006-12-20",
+          "link": "https://github.com/Exim/exim/releases/tag/exim-4_64"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.63",
+      "name": "4.63",
+      "milestones": {
+        "ga": "2006-07-31",
+        "eos": null,
+        "eossec": "2006-12-20",
+        "eol": "2006-12-20"
+      },
+      "upstream": {
+        "name": "4.63",
+        "codename": null,
+        "label": "4.63",
+        "releaseDate": "2006-07-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2006-12-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.63",
+          "date": "2006-07-31",
+          "link": "https://github.com/Exim/exim/releases/tag/exim-4_63"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.62",
+      "name": "4.62",
+      "milestones": {
+        "ga": "2006-04-28",
+        "eos": null,
+        "eossec": "2006-08-01",
+        "eol": "2006-08-01"
+      },
+      "upstream": {
+        "name": "4.62",
+        "codename": null,
+        "label": "4.62",
+        "releaseDate": "2006-04-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2006-08-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.62",
+          "date": "2006-04-28",
+          "link": "https://github.com/Exim/exim/releases/tag/exim-4_62"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.61",
+      "name": "4.61",
+      "milestones": {
+        "ga": "2006-04-04",
+        "eos": null,
+        "eossec": "2006-04-29",
+        "eol": "2006-04-29"
+      },
+      "upstream": {
+        "name": "4.61",
+        "codename": null,
+        "label": "4.61",
+        "releaseDate": "2006-04-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2006-04-29",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.61",
+          "date": "2006-04-04",
+          "link": "https://github.com/Exim/exim/releases/tag/exim-4_61"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.54",
+      "name": "4.54",
+      "milestones": {
+        "ga": "2005-10-04",
+        "eos": null,
+        "eossec": "2006-04-05",
+        "eol": "2006-04-05"
+      },
+      "upstream": {
+        "name": "4.54",
+        "codename": null,
+        "label": "4.54",
+        "releaseDate": "2005-10-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2006-04-05",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.54",
+          "date": "2005-10-04",
+          "link": "https://github.com/Exim/exim/releases/tag/exim-4_54"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.53",
+      "name": "4.53",
+      "milestones": {
+        "ga": "2005-09-26",
+        "eos": null,
+        "eossec": "2005-10-04",
+        "eol": "2005-10-04"
+      },
+      "upstream": {
+        "name": "4.53",
+        "codename": null,
+        "label": "4.53",
+        "releaseDate": "2005-09-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2005-10-04",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.53",
+          "date": "2005-09-26",
+          "link": "https://github.com/Exim/exim/releases/tag/exim-4_54"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.52",
+      "name": "4.52",
+      "milestones": {
+        "ga": "2005-07-01",
+        "eos": null,
+        "eossec": "2005-09-26",
+        "eol": "2005-09-26"
+      },
+      "upstream": {
+        "name": "4.52",
+        "codename": null,
+        "label": "4.52",
+        "releaseDate": "2005-07-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2005-09-26",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.52",
+          "date": "2005-07-01",
+          "link": "https://github.com/Exim/exim/releases/tag/exim-4_52"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.51",
+      "name": "4.51",
+      "milestones": {
+        "ga": "2005-05-04",
+        "eos": null,
+        "eossec": "2005-07-01",
+        "eol": "2005-07-01"
+      },
+      "upstream": {
+        "name": "4.51",
+        "codename": null,
+        "label": "4.51",
+        "releaseDate": "2005-05-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2005-07-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.51",
+          "date": "2005-05-04",
+          "link": "https://github.com/Exim/exim/releases/tag/exim-4_51"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.50",
+      "name": "4.50",
+      "milestones": {
+        "ga": "2005-02-17",
+        "eos": null,
+        "eossec": "2005-05-04",
+        "eol": "2005-05-04"
+      },
+      "upstream": {
+        "name": "4.50",
+        "codename": null,
+        "label": "4.50",
+        "releaseDate": "2005-02-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2005-05-04",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.50",
+          "date": "2005-02-17",
+          "link": "https://github.com/Exim/exim/releases/tag/exim-4_50"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/exim/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-05-01T09:58:42+00:00"
+  }
+}

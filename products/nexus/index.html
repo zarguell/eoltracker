@@ -1,0 +1,2923 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nexus Repository lifecycle dates — EOL Tracker</title>
+<meta name="description" content="General availability, end-of-sale, security-support and end-of-life dates for every Nexus Repository release, with raw source values and provenance.">
+<link rel="canonical" href="https://zarguell.github.io/eoltracker/products/nexus/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EOL Tracker">
+<meta property="og:title" content="Nexus Repository lifecycle dates — EOL Tracker">
+<meta property="og:description" content="General availability, end-of-sale, security-support and end-of-life dates for every Nexus Repository release, with raw source values and provenance.">
+<meta property="og:url" content="https://zarguell.github.io/eoltracker/products/nexus/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d1b2a'/%3E%3Cpath d='M7 20.5l5-6 4 4.5 4-6.5 5 8' fill='none' stroke='%234fd1c5' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/eoltracker/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="shell masthead-inner">
+    <a class="wordmark" href="/eoltracker/">EOL<span>Tracker</span></a>
+    <nav class="mainnav" aria-label="Primary">
+      <a href="/eoltracker/">Software</a>
+      <a href="/eoltracker/hardware/">Hardware</a>
+      <a href="/eoltracker/api/">API &amp; data</a>
+      <a href="https://endoflife.date/" rel="noopener">endoflife.date</a>
+    </nav>
+    <p class="masthead-meta">483 products · 7814 releases · 6999 hardware records</p>
+  </div>
+</header>
+
+<main class="shell" id="main">
+<nav class="crumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/eoltracker/">Catalog</a></li>
+    <li aria-current="page">Nexus Repository</li>
+  </ol>
+</nav>
+
+<section class="hero product-hero">
+  <p class="eyebrow">server-app · software</p>
+  <h1 class="page-title">Nexus Repository</h1>
+  <p class="lead">
+    69 releases published by endoflife.date, with each normalized milestone and the raw
+    upstream values behind it. Identifier for this record: <code>nexus</code>.
+  </p>
+  <p class="hero-meta">
+    Verified Sep 17, 2026 at 11:51 UTC by <code>deterministic-endoflife-date-v1</code>.
+Source: endoflife.date.    Upstream modified Sep 13, 2026 at 00:07 UTC.
+    Last catalog refresh <time datetime="2026-09-17T18:35:21Z">Sep 17, 2026 at 18:35 UTC</time>.
+  </p>
+  <p class="product-links">
+    <a class="button" href="/eoltracker/v1/products/nexus.json">JSON record</a>
+    <a class="button" href="https://endoflife.date/api/v1/products/nexus/" rel="noopener">Source on endoflife.date</a>
+<a class="button" href="https://cdn.jsdelivr.net/npm/simple-icons/icons/sonatype.svg" rel="noopener">icon</a><a class="button" href="https://endoflife.date/nexus" rel="noopener">html</a><a class="button" href="https://help.sonatype.com/en/sonatype-sunsetting-information.html" rel="noopener">releasePolicy</a>  </p>
+</section>
+
+<section class="panel" aria-labelledby="coverage-title">
+  <h2 class="panel-title" id="coverage-title">Data coverage</h2>
+  <p class="panel-note">
+    Upstream does not publish every milestone for every release. Empty cells in the table below are unknown dates,
+    not implied support.
+  </p>
+  <ul class="bars">
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">General availability</span>
+        <span class="bar-value">69 / 69 releases (100%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="General availability: 69 of 69 releases have a published date">
+        <div class="bar-fill" style="width: 100%"></div>
+      </div>
+    </li>
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">End of sale</span>
+        <span class="bar-value">0 / 69 releases (0%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="End of sale: 0 of 69 releases have a published date">
+        <div class="bar-fill" style="width: 0%"></div>
+      </div>
+    </li>
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">End of security support</span>
+        <span class="bar-value">0 / 69 releases (0%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="End of security support: 0 of 69 releases have a published date">
+        <div class="bar-fill" style="width: 0%"></div>
+      </div>
+    </li>
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">End of life</span>
+        <span class="bar-value">0 / 69 releases (0%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="End of life: 0 of 69 releases have a published date">
+        <div class="bar-fill" style="width: 0%"></div>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section class="panel" aria-labelledby="legend-title">
+  <h2 class="panel-title" id="legend-title">How to read these dates</h2>
+  <dl class="legend">
+    <div class="legend-row">
+      <dt>General availability</dt>
+      <dd>
+        <p>First public release. Taken from the upstream releaseDate.</p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>End of sale</dt>
+      <dd>
+        <p>Last day new licenses or units are sold. Only mapped from an upstream field whose label names an end of sale.</p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>End of security support</dt>
+      <dd>
+        <p>Last day security fixes are published. Mapped from eolFrom or eoesFrom only when the label names security support.</p>
+        <p>
+          Extended support counts as security support: when upstream publishes an extended-support date, it replaces
+          the standard security-support deadline here.
+        </p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>End of life</dt>
+      <dd>
+        <p>End of all support. A published extended-support date wins; otherwise eolFrom when its label describes a full support end.</p>
+        <p>
+          An announced extended-support period with no published end date leaves end of life blank — the earlier
+          <code>eolFrom</code> value stays visible in the table rather than being promoted into a deadline upstream
+          never set.
+        </p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>Blank date</dt>
+      <dd><p>The source publishes no value for that milestone. A missing date is an absent announcement, not a claim that support ends or continues.</p></dd>
+    </div>
+  </dl>
+</section>
+
+
+<section class="releases" aria-labelledby="releases-title">
+  <div class="catalog-head">
+    <h2 class="panel-title" id="releases-title">Release lifecycle</h2>
+    <p class="catalog-count">69 releases</p>
+  </div>
+  <p class="panel-note">
+    Newest first. Cells show normalized dates; a secondary line shows the raw upstream field and label when the
+    normalized date differs from, or is absent despite, a published value.
+  </p>
+
+  <div class="table-scroll">
+    <table class="release-table">
+      <caption class="sr-only">Lifecycle dates for each Nexus Repository release</caption>
+      <thead>
+        <tr>
+          <th scope="col">Release</th>
+          <th scope="col">General availability</th>
+          <th scope="col">End of sale</th>
+          <th scope="col">End of security support</th>
+          <th scope="col">End of life</th>
+          <th scope="col">Upstream status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.96</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2026-09-01">Sep 1, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2027-09-01 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2028-03-01 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2028-03-01 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-96-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.95</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2026-08-05">Aug 5, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2027-08-05 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2028-02-05 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2028-02-05 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-95-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.94</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2026-07-09">Jul 9, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2027-07-09 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2028-01-09 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2028-01-09 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-94-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.93</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2026-06-04">Jun 4, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2027-06-04 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-12-04 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-12-04 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-93-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.92</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2026-05-07">May 7, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2027-05-07 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-11-07 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-11-07 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-92-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.91</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2026-04-07">Apr 7, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2027-04-07 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-10-07 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-10-07 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-91-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.90</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2026-03-05">Mar 5, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2027-03-05 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-09-05 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-09-05 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-90-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.89</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2026-02-03">Feb 3, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2027-02-03 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-08-03 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-08-03 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-89-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.88</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2026-01-13">Jan 13, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2027-01-13 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-07-13 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-07-13 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-88-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.87</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2025-12-02">Dec 2, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2026-12-02 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-06-02 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-06-02 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-87-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.86</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2025-11-05">Nov 5, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2026-11-05 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-05-05 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-05-05 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-86-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.85</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2025-10-07">Oct 7, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2026-10-07 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-04-07 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-04-07 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-85-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.84</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2025-09-09">Sep 9, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2026-09-09 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-03-09 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-03-09 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-84-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.83</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2025-08-12">Aug 12, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2026-08-12 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-02-12 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-02-12 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-83-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.82</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2025-07-09">Jul 9, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2026-07-09 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-01-09 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-01-09 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-82-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.81</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2025-06-10">Jun 10, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2026-06-10 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-12-10 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-12-10 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-81-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.80</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2025-05-06">May 6, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2026-05-06 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-11-06 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-11-06 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-80-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.79</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2025-04-01">Apr 1, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2026-04-01 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-10-01 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-10-01 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-79-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.78</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2025-03-04">Mar 4, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2026-03-04 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-09-04 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-09-04 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-78-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.77</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2025-02-04">Feb 4, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2026-02-04 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-08-04 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-08-04 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-77-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.76</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2025-01-07">Jan 7, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2026-01-07 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-07-07 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-07-07 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-76-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.75</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2024-12-03">Dec 3, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2025-12-03 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-06-03 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-06-03 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-75-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.74</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2024-11-05">Nov 5, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2025-11-05 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-05-05 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-05-05 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-74-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.73</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2024-10-10">Oct 10, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2025-10-10 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-04-10 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-04-10 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-73-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.72</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2024-09-04">Sep 4, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2025-09-04 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-03-04 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-03-04 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-72-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.71</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2024-08-08">Aug 8, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2025-08-08 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-02-08 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-02-08 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-71-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.70 (Latest for OrientDB)</span>
+<code class="release-raw">3.70</code>          </th>
+          <td class="milestone">
+            <time datetime="2024-07-09">Jul 9, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2025-07-09 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-01-09 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-01-09 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/orientdb-downloads.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.69</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2024-06-04">Jun 4, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2025-06-04 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-12-04 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-12-04 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-69-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.68</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2024-05-07">May 7, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2025-05-07 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-11-07 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-11-07 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-68-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.67</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2024-04-02">Apr 2, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2025-04-02 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-10-02 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-10-02 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-67-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.66</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2024-03-05">Mar 5, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2025-03-05 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-09-05 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-09-05 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-66-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.65</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2024-02-06">Feb 6, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2025-02-06 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-08-06 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-08-06 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-65-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.64</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2024-01-09">Jan 9, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2025-01-09 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-07-09 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-07-09 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-64-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.63</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2023-12-05">Dec 5, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2024-12-05 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-06-05 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-06-05 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-63-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.62</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2023-11-07">Nov 7, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2024-11-07 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-05-07 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-05-07 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-62-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.61</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2023-10-03">Oct 3, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2024-10-03 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-04-03 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-04-03 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-61-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.60</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2023-09-07">Sep 7, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2024-09-07 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-03-07 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-03-07 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-60-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.59</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2023-08-15">Aug 15, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2024-08-15 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-02-15 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-02-15 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-59-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.58</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2023-07-17">Jul 17, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2024-07-17 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-01-17 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-01-17 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-58-0---3-58-1-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.57</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2023-07-05">Jul 5, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2024-07-05 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-01-05 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-01-05 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-57-0---3-57-1-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.56</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2023-06-19">Jun 19, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2024-06-19 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-12-29 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-12-29 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-56-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.55</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2023-06-05">Jun 5, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2024-06-05 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-12-05 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-12-05 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-55-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.54</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2023-05-22">May 22, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2024-05-22 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-11-22 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-11-22 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-54-0---3-54-1-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.53</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2023-05-03">May 3, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2024-05-03 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-11-02 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-11-02 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-53-0---3-53-1-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.52</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2023-04-18">Apr 18, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2024-04-17 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-10-14 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-10-14 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-52-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.51</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2023-04-05">Apr 5, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2024-04-04 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-10-01 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-10-01 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-51-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.50</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2023-03-27">Mar 27, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2024-03-26 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-09-22 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-09-22 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-50-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.49</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2023-03-17">Mar 17, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2024-03-16 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-09-12 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-09-12 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-49-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.48</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2023-02-27">Feb 27, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2024-02-27 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-08-25 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-08-25 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/sonatype-nexus-repository-3-48-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.47</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2023-02-08">Feb 8, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2024-02-08 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-08-06 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-08-06 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/nexus-repository-3-47-0---3-47-1-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.46</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2023-01-30">Jan 30, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2024-01-30 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-07-28 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-07-28 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/nexus-repository-3-46-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.45</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2022-12-28">Dec 28, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2023-12-28 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-06-28 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-06-28 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/nexus-repository-3-45-0---3-45-1-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.44</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2022-12-15">Dec 15, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2023-12-15 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-06-12 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-06-12 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/nexus-repository-3-44-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.43</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2022-11-07">Nov 7, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2023-11-07 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-05-05 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-05-05 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/nexus-repository-3-43-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.42</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2022-09-26">Sep 26, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2023-09-26 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-03-24 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-03-24 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/nexus-repository-3-42-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.41</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2022-07-27">Jul 27, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2023-08-03 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-01-27 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-01-27 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/nexus-repository-3-41-0---3-41-1-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.40</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2022-06-22">Jun 22, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2023-08-03 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-12-22 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-12-22 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/nexus-repository-3-40-0---3-40-1-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.39</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2022-05-23">May 23, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2023-08-03 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-11-19 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-11-19 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/nexus-repository-3-39-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.38</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2022-03-03">Mar 3, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2023-08-03 (Full Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-09-25 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-09-25 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/nexus-repository-3-38-0---3-38-1-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.37</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2021-11-14">Nov 14, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-05-24 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-05-24 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/nexus-repository-3-37-0---3-37-3-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.36</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2021-10-29">Oct 29, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-04-29 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-04-29 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/nexus-repository-3-36-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.35</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2021-10-13">Oct 13, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-04-13 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-04-13 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/nexus-repository-3-35-0-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.34</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2021-08-31">Aug 31, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-03-03 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-03-03 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/nexus-repository-3-34-0---3-34-1-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.33</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2021-08-04">Aug 4, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-02-04 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-02-04 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/nexus-repository-3-33-0---3-33-1-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.32</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2021-07-08">Jul 8, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-01-08 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-01-08 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/nexus-repository-3-32-0---3-32-1-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.31</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2021-06-16">Jun 16, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2022-12-16 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2022-12-16 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/nexus-repository-3-31-0---3-31-1-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.30</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2021-03-04">Mar 4, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2022-09-04 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2022-09-04 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/nexus-repository-3-30-0---3-30-1-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.29</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2020-12-04">Dec 4, 2020</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2022-06-04 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2022-06-04 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/en/nexus-repository-3-29-0---3-29-2-release-notes.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">2</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2017-03-31">Mar 31, 2017</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-06-30 (Extended Maintenance)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-06-30 (Extended Maintenance)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://help.sonatype.com/repomanager2/release-notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="panel" aria-labelledby="source-title">
+  <h2 class="panel-title" id="source-title">Source and upstream values</h2>
+  <p class="panel-note">
+    This record is a normalization of endoflife.date data, licensed MIT. Raw upstream values are
+    retained in full so the mapping below can be checked value by value.
+  </p>
+  <dl class="facts">
+    <div><dt>Upstream record</dt><dd><a href="https://endoflife.date/api/v1/products/nexus/" rel="noopener">https://endoflife.date/api/v1/products/nexus/</a></dd></div>
+    <div><dt>Source license</dt><dd><a href="https://github.com/endoflife-date/endoflife.date/blob/master/LICENSE" rel="noopener">endoflife.date — MIT</a></dd></div>
+    <div><dt>Verifier</dt><dd><code>deterministic-endoflife-date-v1</code></dd></div>
+    <div><dt>Last checked</dt><dd>Sep 17, 2026 at 11:51 UTC</dd></div>
+    <div><dt>Upstream modified</dt><dd>Sep 13, 2026 at 00:07 UTC</dd></div>
+    <div><dt>JSON record</dt><dd><a href="https://zarguell.github.io/eoltracker/v1/products/nexus.json">https://zarguell.github.io/eoltracker/v1/products/nexus.json</a></dd></div>
+    <div><dt>Schema</dt><dd><a href="https://zarguell.github.io/eoltracker/v1/schema/product.json">v1/schema/product.json</a></dd></div>
+  </dl>
+
+  <h3 class="sub-title">Identifiers</h3>
+  <ul class="chips">
+<li><span class="tag">purl</span> <code>pkg:github/sonatype/nexus-public</code></li><li><span class="tag">cpe</span> <code>cpe:2.3:a:sonatype:nexus_repository_manager</code></li>  </ul>
+
+  <h3 class="sub-title">Upstream label semantics</h3>
+  <p class="panel-note">
+    endoflife.date labels decide which raw date fields become which normalized milestone. These are this product's
+    label texts and the rule each one triggers.
+  </p>
+  <dl class="label-rules">
+    <div>
+      <dt><code>eoas</code> = “Full Support”</dt>
+      <dd>End-of-sale date when the text names an end of sale.</dd>
+    </div>
+    <div>
+      <dt><code>discontinued</code> = not set</dt>
+      <dd>End-of-sale date when the text names an end of sale; otherwise recorded only, never turned into a date.</dd>
+    </div>
+    <div>
+      <dt><code>eol</code> = “Extended Maintenance”</dt>
+      <dd>End of security support when the text names security support; end of life only when no extended-support label is set and the text describes a full support end.</dd>
+    </div>
+    <div>
+      <dt><code>eoes</code> = not set</dt>
+      <dd>Extended support. A published date also sets end of life, and a security-support text supersedes end of security support.</dd>
+    </div>
+  </dl>
+
+
+  <details class="raw">
+    <summary>Raw upstream release objects (69)</summary>
+    <p class="panel-note">Verbatim <code>releases[]</code> entries from the upstream record, unmodified.</p>
+    <details class="raw-release">
+      <summary><code>3.96</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2026-09-01&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2027-09-01&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2028-03-01&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.95</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2026-08-05&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2027-08-05&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2028-02-05&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.94</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2026-07-09&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2027-07-09&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2028-01-09&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.93</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2026-06-04&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2027-06-04&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2027-12-04&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.92</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2026-05-07&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2027-05-07&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2027-11-07&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.91</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2026-04-07&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2027-04-07&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2027-10-07&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.90</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2026-03-05&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2027-03-05&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2027-09-05&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.89</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2026-02-03&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2027-02-03&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2027-08-03&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.88</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2026-01-13&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2027-01-13&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2027-07-13&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.87</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-12-02&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2026-12-02&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2027-06-02&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.86</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-11-05&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2026-11-05&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2027-05-05&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.85</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-10-07&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2026-10-07&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2027-04-07&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.84</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-09-09&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2026-09-09&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2027-03-09&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.83</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-08-12&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2026-08-12&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2027-02-12&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.82</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-07-09&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2026-07-09&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2027-01-09&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.81</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-06-10&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2026-06-10&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2026-12-10&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.80</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-05-06&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2026-05-06&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2026-11-06&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.79</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-04-01&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2026-04-01&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2026-10-01&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.78</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-03-04&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2026-03-04&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2026-09-04&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.77</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-02-04&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2026-02-04&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2026-08-04&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.76</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-01-07&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2026-01-07&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2026-07-07&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.75</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-12-03&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2025-12-03&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2026-06-03&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.74</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-11-05&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2025-11-05&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2026-05-05&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.73</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-10-10&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2025-10-10&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2026-04-10&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.72</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-09-04&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2025-09-04&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2026-03-04&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.71</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-08-08&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2025-08-08&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2026-02-08&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.70</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-07-09&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2025-07-09&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2026-01-09&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.69</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-06-04&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2025-06-04&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2025-12-04&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.68</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-05-07&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2025-05-07&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2025-11-07&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.67</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-04-02&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2025-04-02&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2025-10-02&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.66</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-03-05&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2025-03-05&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2025-09-05&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.65</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-02-06&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2025-02-06&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2025-08-06&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.64</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-01-09&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2025-01-09&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2025-07-09&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.63</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-12-05&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2024-12-05&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2025-06-05&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.62</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-11-07&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2024-11-07&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2025-05-07&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.61</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-10-03&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2024-10-03&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2025-04-03&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.60</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-09-07&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2024-09-07&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2025-03-07&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.59</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-08-15&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2024-08-15&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2025-02-15&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.58</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-07-17&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2024-07-17&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2025-01-17&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.57</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-07-05&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2024-07-05&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2025-01-05&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.56</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-06-19&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2024-06-19&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2024-12-29&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.55</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-06-05&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2024-06-05&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2024-12-05&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.54</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-05-22&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2024-05-22&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2024-11-22&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.53</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-05-03&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2024-05-03&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2024-11-02&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.52</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-04-18&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2024-04-17&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2024-10-14&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.51</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-04-05&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2024-04-04&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2024-10-01&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.50</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-03-27&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2024-03-26&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2024-09-22&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.49</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-03-17&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2024-03-16&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2024-09-12&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.48</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-02-27&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2024-02-27&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2024-08-25&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.47</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-02-08&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2024-02-08&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2024-08-06&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.46</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-01-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2024-01-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2024-07-28&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.45</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-12-28&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2023-12-28&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2024-06-28&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.44</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-12-15&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2023-12-15&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2024-06-12&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.43</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-11-07&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2023-11-07&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2024-05-05&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.42</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-09-26&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2023-09-26&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2024-03-24&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.41</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-07-27&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2023-08-03&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2024-01-27&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.40</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-06-22&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2023-08-03&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2023-12-22&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.39</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-05-23&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2023-08-03&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2023-11-19&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.38</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-03-03&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Full Support&#34;,
+    &#34;value&#34;: &#34;2023-08-03&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2023-09-25&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.37</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2021-11-14&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2023-05-24&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.36</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2021-10-29&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2023-04-29&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.35</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2021-10-13&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2023-04-13&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.34</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2021-08-31&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2023-03-03&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.33</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2021-08-04&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2023-02-04&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.32</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2021-07-08&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2023-01-08&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.31</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2021-06-16&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2022-12-16&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.30</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2021-03-04&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2022-09-04&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.29</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2020-12-04&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2022-06-04&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2017-03-31&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Extended Maintenance&#34;,
+    &#34;value&#34;: &#34;2025-06-30&#34;
+  }
+]</code></pre>
+    </details>
+  </details>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="shell footer-inner">
+    <div class="footer-col">
+      <p class="footer-title">EOL Tracker</p>
+      <p class="footer-note">
+        Software lifecycle dates are republished from
+        <a href="https://endoflife.date/" rel="noopener">endoflife.date</a>.
+        Source data is licensed
+        <a href="https://github.com/endoflife-date/endoflife.date/blob/master/LICENSE" rel="noopener">MIT</a>.
+      </p>
+      <p class="footer-note">
+        Hardware lifecycle data comes from
+        <a href="https://eosl.date/" rel="noopener">eosl.date</a> by Subash Geetha Krishnan,
+        which aggregates public vendor announcements, and from
+        <a href="https://opengear.com/end-life-products" rel="noopener">Opengear's end-of-life product list</a>.
+        Attribution here is credit by name and link, not a licence to the source material: nothing is reproduced as
+        licensed material. This catalog is an independent normalization, not affiliated with endoflife.date, eosl.date,
+        Opengear or any vendor listed here.
+      </p>
+      <p class="footer-note">
+        Last catalog refresh Sep 17, 2026 at 18:35 UTC.
+      </p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-title">Data</p>
+      <ul class="footer-links">
+        <li><a href="/eoltracker/v1/feed.json">Feed (JSON)</a></li>
+        <li><a href="/eoltracker/v1/feed.atom">Deadlines (Atom)</a></li>
+        <li><a href="/eoltracker/v1/calendar.ics">Deadlines (iCal)</a></li>
+        <li><a href="/eoltracker/v1/products.json">Product summaries</a></li>
+        <li><a href="/eoltracker/v1/hardware.json">Hardware summaries</a></li>
+        <li><a href="/eoltracker/v1/changes.atom">Changes (Atom)</a></li>
+        <li><a href="/eoltracker/v1/changes.json">Changes (JSON)</a></li>
+        <li><a href="/eoltracker/hardware/">Hardware catalog</a></li>
+        <li><a href="/eoltracker/api/">Endpoints &amp; mapping</a></li>
+        <li><a href="/eoltracker/v1/schema/product.json">Record schema</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <p class="footer-title">Project</p>
+      <ul class="footer-links">
+        <li><a href="https://github.com/zarguell/eoltracker" rel="noopener">Source on GitHub</a></li>
+        <li><a href="https://endoflife.date/" rel="noopener">Upstream source</a></li>
+        <li><a href="/eoltracker/THIRD-PARTY-NOTICES.txt">THIRD-PARTY-NOTICES.txt</a></li>
+        <li><a href="/eoltracker/OASIS-NOTICE.txt">OASIS-NOTICE.txt</a></li>
+        <li><a href="/eoltracker/404.html">Not found page</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script src="/eoltracker/app.js" defer></script>
+</body>
+</html>

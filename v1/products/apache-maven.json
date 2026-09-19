@@ -1,0 +1,342 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "apache-maven",
+  "name": "Apache Maven",
+  "category": "software",
+  "upstream_category": "app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "maven"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:apache:maven"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:apache:maven"
+    },
+    {
+      "type": "repology",
+      "id": "maven-shared-utils"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:apache:maven_shared_utils"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:apache:maven_shared_utils"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:deb/debian/maven"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:deb/ubuntu/maven"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/apache/maven"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:maven/org.apache.maven/maven"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:rpm/opensuse/maven"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/apachemaven.svg",
+    "html": "https://endoflife.date/apache-maven",
+    "releasePolicy": "https://maven.apache.org/docs/history.html"
+  },
+  "releases": [
+    {
+      "id": "3.9",
+      "name": "3.9",
+      "milestones": {
+        "ga": "2023-01-31",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.9",
+        "codename": null,
+        "label": "3.9",
+        "releaseDate": "2023-01-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "3.9.16",
+          "date": "2026-05-17",
+          "link": "https://github.com/apache/maven/releases/tag/maven-3.9.16"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.8",
+      "name": "3.8",
+      "milestones": {
+        "ga": "2021-03-30",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-06-14"
+      },
+      "upstream": {
+        "name": "3.8",
+        "codename": null,
+        "label": "3.8",
+        "releaseDate": "2021-03-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-06-14",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.8.9",
+          "date": "2025-06-14",
+          "link": "https://github.com/apache/maven/releases/tag/maven-3.8.9"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.6",
+      "name": "3.6",
+      "milestones": {
+        "ga": "2018-10-24",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-03-30"
+      },
+      "upstream": {
+        "name": "3.6",
+        "codename": null,
+        "label": "3.6",
+        "releaseDate": "2018-10-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-03-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.6.3",
+          "date": "2019-11-19",
+          "link": "https://github.com/apache/maven/releases/tag/maven-3.6.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.5",
+      "name": "3.5",
+      "milestones": {
+        "ga": "2017-04-03",
+        "eos": null,
+        "eossec": null,
+        "eol": "2018-10-24"
+      },
+      "upstream": {
+        "name": "3.5",
+        "codename": null,
+        "label": "3.5",
+        "releaseDate": "2017-04-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-10-24",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.5.4",
+          "date": "2018-06-17",
+          "link": "https://github.com/apache/maven/releases/tag/maven-3.5.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.3",
+      "name": "3.3",
+      "milestones": {
+        "ga": "2015-03-13",
+        "eos": null,
+        "eossec": null,
+        "eol": "2017-04-03"
+      },
+      "upstream": {
+        "name": "3.3",
+        "codename": null,
+        "label": "3.3",
+        "releaseDate": "2015-03-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-04-03",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.3.9",
+          "date": "2015-11-10",
+          "link": "https://github.com/apache/maven/releases/tag/maven-3.3.9"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.2",
+      "name": "3.2",
+      "milestones": {
+        "ga": "2014-02-14",
+        "eos": null,
+        "eossec": null,
+        "eol": "2015-03-13"
+      },
+      "upstream": {
+        "name": "3.2",
+        "codename": null,
+        "label": "3.2",
+        "releaseDate": "2014-02-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2015-03-13",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.2.5",
+          "date": "2014-12-14",
+          "link": "https://github.com/apache/maven/releases/tag/maven-3.2.5"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.1",
+      "name": "3.1",
+      "milestones": {
+        "ga": "2013-06-28",
+        "eos": null,
+        "eossec": null,
+        "eol": "2014-02-14"
+      },
+      "upstream": {
+        "name": "3.1",
+        "codename": null,
+        "label": "3.1",
+        "releaseDate": "2013-06-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2014-02-14",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.1.1",
+          "date": "2013-09-17",
+          "link": "https://github.com/apache/maven/releases/tag/maven-3.1.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.0",
+      "name": "3.0",
+      "milestones": {
+        "ga": "2010-10-04",
+        "eos": null,
+        "eossec": null,
+        "eol": "2013-06-28"
+      },
+      "upstream": {
+        "name": "3.0",
+        "codename": null,
+        "label": "3.0",
+        "releaseDate": "2010-10-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2013-06-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.0.5",
+          "date": "2013-02-19",
+          "link": "https://github.com/apache/maven/releases/tag/maven-3.0.5"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2",
+      "name": "2",
+      "milestones": {
+        "ga": "2006-05-07",
+        "eos": null,
+        "eossec": null,
+        "eol": "2014-02-18"
+      },
+      "upstream": {
+        "name": "2",
+        "codename": null,
+        "label": "2",
+        "releaseDate": "2006-05-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2014-02-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.2.1",
+          "date": "2009-08-06",
+          "link": "https://github.com/apache/maven/releases/tag/maven-2.2.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1",
+      "name": "1",
+      "milestones": {
+        "ga": "2004-07-13",
+        "eos": null,
+        "eossec": null,
+        "eol": "2014-02-18"
+      },
+      "upstream": {
+        "name": "1",
+        "codename": null,
+        "label": "1",
+        "releaseDate": "2004-07-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2014-02-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.1",
+          "date": "2007-06-25",
+          "link": "https://maven.apache.org/archives/maven-1.x/start/release-notes-LATEST.html"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/apache-maven/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-05-18T00:09:03+00:00"
+  }
+}

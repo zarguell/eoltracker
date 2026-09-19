@@ -1,0 +1,191 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "alibaba-dragonwell",
+  "name": "Alibaba Dragonwell",
+  "category": "software",
+  "upstream_category": "lang",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "jdk8-dragonwell-extended"
+    },
+    {
+      "type": "repology",
+      "id": "jdk8-dragonwell-standard"
+    },
+    {
+      "type": "repology",
+      "id": "jdk17-dragonwell-standard"
+    },
+    {
+      "type": "repology",
+      "id": "jdk11-dragonwell-extended"
+    },
+    {
+      "type": "repology",
+      "id": "jdk11-dragonwell-standard"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/alibabadragonwell/dragonwell"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:rpm/aliyun/java-1.8.0-alibaba-dragonwell?repository_url=http://mirrors.aliyun.com/alinux/2.1903/plus/x86_64/"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/openjdk.svg",
+    "html": "https://endoflife.date/alibaba-dragonwell",
+    "releasePolicy": "https://github.com/dragonwell-project/dragonwell21/wiki/Alibaba-Dragonwell-Support"
+  },
+  "releases": [
+    {
+      "id": "25",
+      "name": "25 (LTS)",
+      "milestones": {
+        "ga": "2025-09-24",
+        "eos": null,
+        "eossec": "2029-09-30",
+        "eol": "2029-09-30"
+      },
+      "upstream": {
+        "name": "25",
+        "codename": null,
+        "label": "25 (LTS)",
+        "releaseDate": "2025-09-24",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2029-09-30",
+        "isMaintained": true,
+        "latest": {
+          "name": "25.0.4.0.4+7",
+          "date": "2026-08-06",
+          "link": "https://github.com/dragonwell-project/dragonwell25/wiki/Alibaba-Dragonwell-25-Standard-Edition-Release-Notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "21",
+      "name": "21 (LTS)",
+      "milestones": {
+        "ga": "2023-11-24",
+        "eos": null,
+        "eossec": "2029-11-30",
+        "eol": "2029-11-30"
+      },
+      "upstream": {
+        "name": "21",
+        "codename": null,
+        "label": "21 (LTS)",
+        "releaseDate": "2023-11-24",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2029-11-30",
+        "isMaintained": true,
+        "latest": {
+          "name": "21.0.12.0.12+8",
+          "date": "2026-09-01",
+          "link": "https://github.com/dragonwell-project/dragonwell21/wiki/Alibaba-Dragonwell-21-Standard-Edition-Release-Notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "17",
+      "name": "17 (LTS)",
+      "milestones": {
+        "ga": "2021-10-18",
+        "eos": null,
+        "eossec": "2027-09-30",
+        "eol": "2027-09-30"
+      },
+      "upstream": {
+        "name": "17",
+        "codename": null,
+        "label": "17 (LTS)",
+        "releaseDate": "2021-10-18",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-09-30",
+        "isMaintained": true,
+        "latest": {
+          "name": "17.0.20.0.21+8",
+          "date": "2026-09-01",
+          "link": "https://github.com/dragonwell-project/dragonwell17/wiki/Alibaba-Dragonwell-17-Standard-Edition-Release-Notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "11",
+      "name": "11 (LTS)",
+      "milestones": {
+        "ga": "2020-07-20",
+        "eos": null,
+        "eossec": "2027-09-30",
+        "eol": "2027-09-30"
+      },
+      "upstream": {
+        "name": "11",
+        "codename": null,
+        "label": "11 (LTS)",
+        "releaseDate": "2020-07-20",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-09-30",
+        "isMaintained": true,
+        "latest": {
+          "name": "11.0.31.27",
+          "date": "2026-05-15",
+          "link": "https://github.com/dragonwell-project/dragonwell11/wiki/Alibaba-Dragonwell-11-Standard-Edition-Release-Notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8",
+      "name": "8 (LTS)",
+      "milestones": {
+        "ga": "2019-06-24",
+        "eos": null,
+        "eossec": "2026-06-30",
+        "eol": "2026-06-30"
+      },
+      "upstream": {
+        "name": "8",
+        "codename": null,
+        "label": "8 (LTS)",
+        "releaseDate": "2019-06-24",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-06-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.29.28",
+          "date": "2026-05-15",
+          "link": "https://github.com/dragonwell-project/dragonwell8/wiki/Alibaba-Dragonwell8-Standard-Edition-Release-Notes"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/alibaba-dragonwell/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-02T00:07:32+00:00"
+  }
+}

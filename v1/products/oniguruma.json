@@ -1,0 +1,118 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "oniguruma",
+  "name": "Oniguruma",
+  "category": "software",
+  "upstream_category": "framework",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "oniguruma"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/kkos/oniguruma"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:deb/debian/libonig"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:deb/ubuntu/libonig"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:rpm/fedora/oniguruma"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:apk/alpine/oniguruma"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:apk/alpine/oniguruma-dev"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:alpm/arch/oniguruma"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:oniguruma_project:oniguruma"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/oniguruma",
+    "releasePolicy": "https://github.com/kkos/oniguruma"
+  },
+  "releases": [
+    {
+      "id": "6",
+      "name": "6",
+      "milestones": {
+        "ga": "2016-05-09",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-04-24"
+      },
+      "upstream": {
+        "name": "6",
+        "codename": null,
+        "label": "6",
+        "releaseDate": "2016-05-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-04-24",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.9.10",
+          "date": "2025-01-01",
+          "link": "https://github.com/kkos/oniguruma/releases/tag/v6.9.10/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5",
+      "name": "5",
+      "milestones": {
+        "ga": "2006-10-19",
+        "eos": null,
+        "eossec": null,
+        "eol": "2016-05-09"
+      },
+      "upstream": {
+        "name": "5",
+        "codename": null,
+        "label": "5",
+        "releaseDate": "2006-10-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2016-05-09",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.9.6",
+          "date": "2015-09-07",
+          "link": "https://github.com/kkos/oniguruma/releases/tag/v5.9.6/"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/oniguruma/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-05-01T09:58:42+00:00"
+  }
+}

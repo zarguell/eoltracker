@@ -1,0 +1,98 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "ckeditor",
+  "name": "CKEditor",
+  "category": "software",
+  "upstream_category": "framework",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "ckeditor"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:ckeditor:ckeditor"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:ckeditor:ckeditor"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Support",
+    "eoes": "Extended Support"
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/ckeditor4.svg",
+    "html": "https://endoflife.date/ckeditor",
+    "releasePolicy": "https://ckeditor.com/docs/ckeditor5/latest/updating/versioning-policy.html"
+  },
+  "releases": [
+    {
+      "id": "5",
+      "name": "5",
+      "milestones": {
+        "ga": "2018-04-25",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5",
+        "codename": null,
+        "label": "5",
+        "releaseDate": "2018-04-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "48.4.0",
+          "date": "2026-08-05",
+          "link": "https://github.com/ckeditor/ckeditor5/releases/tag/v48.4.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4",
+      "name": "4 (LTS)",
+      "milestones": {
+        "ga": "2012-11-23",
+        "eos": null,
+        "eossec": null,
+        "eol": "2028-12-01"
+      },
+      "upstream": {
+        "name": "4",
+        "codename": null,
+        "label": "4 (LTS)",
+        "releaseDate": "2012-11-23",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-06-30",
+        "isEoes": false,
+        "eoesFrom": "2028-12-01",
+        "isMaintained": true,
+        "latest": {
+          "name": "4.25.1",
+          "date": "2025-02-05",
+          "link": "https://github.com/ckeditor/ckeditor4/releases/tag/4.25.1-lts"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/ckeditor/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-08-30T16:35:10+00:00"
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "joomla",
+  "name": "Joomla!",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "joomla"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:joomla:joomla\\!"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/joomla.svg",
+    "html": "https://endoflife.date/joomla",
+    "releasePolicy": "https://docs.joomla.org/Release_and_support_cycle"
+  },
+  "releases": [
+    {
+      "id": "6",
+      "name": "6",
+      "milestones": {
+        "ga": "2025-10-14",
+        "eos": null,
+        "eossec": "2029-10-16",
+        "eol": "2029-10-16"
+      },
+      "upstream": {
+        "name": "6",
+        "codename": null,
+        "label": "6",
+        "releaseDate": "2025-10-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": "2028-10-17",
+        "isEol": false,
+        "eolFrom": "2029-10-16",
+        "isMaintained": true,
+        "latest": {
+          "name": "6.1.3",
+          "date": "2026-08-18",
+          "link": "https://www.joomla.org/announcements/release-news/5939-joomla-6-0-and-joomla-5-4-are-here.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5",
+      "name": "5",
+      "milestones": {
+        "ga": "2023-10-14",
+        "eos": null,
+        "eossec": "2027-10-12",
+        "eol": "2027-10-12"
+      },
+      "upstream": {
+        "name": "5",
+        "codename": null,
+        "label": "5",
+        "releaseDate": "2023-10-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": "2026-10-13",
+        "isEol": false,
+        "eolFrom": "2027-10-12",
+        "isMaintained": true,
+        "latest": {
+          "name": "5.4.8",
+          "date": "2026-08-18",
+          "link": "https://docs.joomla.org/Special:MyLanguage/Joomla_5.4_version_history#Joomla_5.4.8"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4",
+      "name": "4",
+      "milestones": {
+        "ga": "2021-08-17",
+        "eos": null,
+        "eossec": "2025-10-14",
+        "eol": "2025-10-14"
+      },
+      "upstream": {
+        "name": "4",
+        "codename": null,
+        "label": "4",
+        "releaseDate": "2021-08-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-10-15",
+        "isEol": true,
+        "eolFrom": "2025-10-14",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.4.14",
+          "date": "2025-09-30",
+          "link": "https://docs.joomla.org/Special:MyLanguage/Joomla_4.4_version_history#Joomla_4.4.14"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3",
+      "name": "3",
+      "milestones": {
+        "ga": "2012-09-27",
+        "eos": null,
+        "eossec": "2023-08-17",
+        "eol": "2023-08-17"
+      },
+      "upstream": {
+        "name": "3",
+        "codename": null,
+        "label": "3",
+        "releaseDate": "2012-09-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-08-17",
+        "isEol": true,
+        "eolFrom": "2023-08-17",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.10.12",
+          "date": "2023-07-11",
+          "link": "https://docs.joomla.org/Special:MyLanguage/Joomla_3.10_version_history#Joomla_3.10.12"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/joomla/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-08-29T11:57:33+00:00"
+  }
+}

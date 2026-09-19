@@ -1,0 +1,156 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "phpbb",
+  "name": "phpBB",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "phpbb"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:phpbb:phpbb"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:phpbb:phpbb"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/phpbb.svg",
+    "html": "https://endoflife.date/phpbb",
+    "releasePolicy": null
+  },
+  "releases": [
+    {
+      "id": "3.3",
+      "name": "3.3",
+      "milestones": {
+        "ga": "2020-01-06",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.3",
+        "codename": null,
+        "label": "3.3",
+        "releaseDate": "2020-01-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "3.3.17",
+          "date": "2026-06-06",
+          "link": "https://www.phpbb.com/community/viewtopic.php?t=2661607"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.2",
+      "name": "3.2",
+      "milestones": {
+        "ga": "2017-01-07",
+        "eos": null,
+        "eossec": "2019-11-01",
+        "eol": "2019-11-01"
+      },
+      "upstream": {
+        "name": "3.2",
+        "codename": null,
+        "label": "3.2",
+        "releaseDate": "2017-01-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2019-05-01",
+        "isEol": true,
+        "eolFrom": "2019-11-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.2.11",
+          "date": "2020-11-04",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.1",
+      "name": "3.1",
+      "milestones": {
+        "ga": "2014-10-28",
+        "eos": null,
+        "eossec": "2018-11-01",
+        "eol": "2018-11-01"
+      },
+      "upstream": {
+        "name": "3.1",
+        "codename": null,
+        "label": "3.1",
+        "releaseDate": "2014-10-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2017-06-01",
+        "isEol": true,
+        "eolFrom": "2018-11-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.1.12",
+          "date": "2018-01-07",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.0",
+      "name": "3.0",
+      "milestones": {
+        "ga": "2007-12-12",
+        "eos": null,
+        "eossec": "2015-11-01",
+        "eol": "2015-11-01"
+      },
+      "upstream": {
+        "name": "3.0",
+        "codename": null,
+        "label": "3.0",
+        "releaseDate": "2007-12-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2015-05-01",
+        "isEol": true,
+        "eolFrom": "2015-11-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.0.14",
+          "date": "2015-05-03",
+          "link": null
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/phpbb/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-06-07T00:07:00+00:00"
+  }
+}

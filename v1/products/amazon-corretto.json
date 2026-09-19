@@ -1,0 +1,466 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "amazon-corretto",
+  "name": "Amazon Corretto",
+  "category": "software",
+  "upstream_category": "lang",
+  "identifiers": [
+    {
+      "type": "cpe",
+      "id": "cpe:/a:amazon:corretto"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:amazon:corretto"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/library/amazoncorretto"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/corretto/corretto-26"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/corretto/corretto-25"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/corretto/corretto-24"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/corretto/corretto-23"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/corretto/corretto-22"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/corretto/corretto-21"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/corretto/corretto-20"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/corretto/corretto-19"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/corretto/corretto-18"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/corretto/corretto-17"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/corretto/corretto-11"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/corretto/corretto-8"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/openjdk.svg",
+    "html": "https://endoflife.date/amazon-corretto",
+    "releasePolicy": "https://aws.amazon.com/corretto/faqs/"
+  },
+  "releases": [
+    {
+      "id": "26",
+      "name": "26",
+      "milestones": {
+        "ga": "2026-03-17",
+        "eos": null,
+        "eossec": "2026-10-31",
+        "eol": "2026-10-31"
+      },
+      "upstream": {
+        "name": "26",
+        "codename": null,
+        "label": "26",
+        "releaseDate": "2026-03-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2026-10-31",
+        "isMaintained": true,
+        "latest": {
+          "name": "26.0.2.11.1",
+          "date": "2026-08-18",
+          "link": "https://github.com/corretto/corretto-26/releases/tag/26.0.2.11.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "25",
+      "name": "25 (LTS)",
+      "milestones": {
+        "ga": "2025-09-16",
+        "eos": null,
+        "eossec": "2032-10-31",
+        "eol": "2032-10-31"
+      },
+      "upstream": {
+        "name": "25",
+        "codename": null,
+        "label": "25 (LTS)",
+        "releaseDate": "2025-09-16",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2032-10-31",
+        "isMaintained": true,
+        "latest": {
+          "name": "25.0.4.8.1",
+          "date": "2026-08-18",
+          "link": "https://github.com/corretto/corretto-25/releases/tag/25.0.4.8.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "24",
+      "name": "24",
+      "milestones": {
+        "ga": "2025-03-18",
+        "eos": null,
+        "eossec": "2025-10-31",
+        "eol": "2025-10-31"
+      },
+      "upstream": {
+        "name": "24",
+        "codename": null,
+        "label": "24",
+        "releaseDate": "2025-03-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-10-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "24.0.2.12.1",
+          "date": "2025-07-16",
+          "link": "https://github.com/corretto/corretto-24/releases/tag/24.0.2.12.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "23",
+      "name": "23",
+      "milestones": {
+        "ga": "2024-09-17",
+        "eos": null,
+        "eossec": "2025-04-30",
+        "eol": "2025-04-30"
+      },
+      "upstream": {
+        "name": "23",
+        "codename": null,
+        "label": "23",
+        "releaseDate": "2024-09-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-04-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "23.0.2.7.1",
+          "date": "2025-01-21",
+          "link": "https://github.com/corretto/corretto-23/releases/tag/23.0.2.7.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "22",
+      "name": "22",
+      "milestones": {
+        "ga": "2024-03-19",
+        "eos": null,
+        "eossec": "2024-10-15",
+        "eol": "2024-10-15"
+      },
+      "upstream": {
+        "name": "22",
+        "codename": null,
+        "label": "22",
+        "releaseDate": "2024-03-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-10-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "22.0.2.9.1",
+          "date": "2024-07-16",
+          "link": "https://github.com/corretto/corretto-22/releases/tag/22.0.2.9.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "21",
+      "name": "21 (LTS)",
+      "milestones": {
+        "ga": "2023-08-25",
+        "eos": null,
+        "eossec": "2030-10-31",
+        "eol": "2030-10-31"
+      },
+      "upstream": {
+        "name": "21",
+        "codename": null,
+        "label": "21 (LTS)",
+        "releaseDate": "2023-08-25",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2030-10-31",
+        "isMaintained": true,
+        "latest": {
+          "name": "21.0.12.9.1",
+          "date": "2026-08-18",
+          "link": "https://github.com/corretto/corretto-21/releases/tag/21.0.12.9.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "20",
+      "name": "20",
+      "milestones": {
+        "ga": "2023-02-23",
+        "eos": null,
+        "eossec": "2023-10-17",
+        "eol": "2023-10-17"
+      },
+      "upstream": {
+        "name": "20",
+        "codename": null,
+        "label": "20",
+        "releaseDate": "2023-02-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-10-17",
+        "isMaintained": false,
+        "latest": {
+          "name": "20.0.2.10.1",
+          "date": "2023-08-23",
+          "link": "https://github.com/corretto/corretto-20/releases/tag/20.0.2.10.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "19",
+      "name": "19",
+      "milestones": {
+        "ga": "2022-08-17",
+        "eos": null,
+        "eossec": "2023-04-19",
+        "eol": "2023-04-19"
+      },
+      "upstream": {
+        "name": "19",
+        "codename": null,
+        "label": "19",
+        "releaseDate": "2022-08-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-04-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "19.0.2.7.1",
+          "date": "2023-01-17",
+          "link": "https://github.com/corretto/corretto-19/releases/tag/19.0.2.7.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18",
+      "name": "18",
+      "milestones": {
+        "ga": "2022-02-26",
+        "eos": null,
+        "eossec": "2022-10-18",
+        "eol": "2022-10-18"
+      },
+      "upstream": {
+        "name": "18",
+        "codename": null,
+        "label": "18",
+        "releaseDate": "2022-02-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-10-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.0.2.9.1",
+          "date": "2022-07-19",
+          "link": "https://github.com/corretto/corretto-18/releases/tag/18.0.2.9.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "17",
+      "name": "17 (LTS)",
+      "milestones": {
+        "ga": "2021-08-24",
+        "eos": null,
+        "eossec": "2029-10-31",
+        "eol": "2029-10-31"
+      },
+      "upstream": {
+        "name": "17",
+        "codename": null,
+        "label": "17 (LTS)",
+        "releaseDate": "2021-08-24",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2029-10-31",
+        "isMaintained": true,
+        "latest": {
+          "name": "17.0.20.10.1",
+          "date": "2026-08-18",
+          "link": "https://github.com/corretto/corretto-17/releases/tag/17.0.20.10.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "16",
+      "name": "16",
+      "milestones": {
+        "ga": "2021-03-16",
+        "eos": null,
+        "eossec": "2021-10-19",
+        "eol": "2021-10-19"
+      },
+      "upstream": {
+        "name": "16",
+        "codename": null,
+        "label": "16",
+        "releaseDate": "2021-03-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-10-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "16.0.2.7.1",
+          "date": "2022-04-19",
+          "link": "https://github.com/corretto/corretto-jdk/blob/release-16.0.2.7.1/CHANGELOG.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "15",
+      "name": "15",
+      "milestones": {
+        "ga": "2020-08-26",
+        "eos": null,
+        "eossec": "2021-04-20",
+        "eol": "2021-04-20"
+      },
+      "upstream": {
+        "name": "15",
+        "codename": null,
+        "label": "15",
+        "releaseDate": "2020-08-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-04-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "15.0.2.7.1",
+          "date": "2021-01-22",
+          "link": "https://github.com/corretto/corretto-jdk/blob/216fca10a21d6a26ca2846d4ca2861ea644a7a1e/CHANGELOG.md#january-2021-critical-patch-update-corretto-version-150271"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "11",
+      "name": "11 (LTS)",
+      "milestones": {
+        "ga": "2019-02-18",
+        "eos": null,
+        "eossec": "2032-01-31",
+        "eol": "2032-01-31"
+      },
+      "upstream": {
+        "name": "11",
+        "codename": null,
+        "label": "11 (LTS)",
+        "releaseDate": "2019-02-18",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2032-01-31",
+        "isMaintained": true,
+        "latest": {
+          "name": "11.0.32.10.1",
+          "date": "2026-08-18",
+          "link": "https://github.com/corretto/corretto-11/releases/tag/11.0.32.10.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8",
+      "name": "8 (LTS)",
+      "milestones": {
+        "ga": "2019-01-31",
+        "eos": null,
+        "eossec": "2030-12-31",
+        "eol": "2030-12-31"
+      },
+      "upstream": {
+        "name": "8",
+        "codename": null,
+        "label": "8 (LTS)",
+        "releaseDate": "2019-01-31",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2030-12-31",
+        "isMaintained": true,
+        "latest": {
+          "name": "8.504.01.1",
+          "date": "2026-08-18",
+          "link": "https://github.com/corretto/corretto-8/releases/tag/8.504.01.1"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/amazon-corretto/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-08-20T00:09:04+00:00"
+  }
+}

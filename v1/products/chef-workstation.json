@@ -1,0 +1,206 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "chef-workstation",
+  "name": "Chef Workstation",
+  "category": "software",
+  "upstream_category": "app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "chef-workstation"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/chef.svg",
+    "html": "https://endoflife.date/chef-workstation",
+    "releasePolicy": null
+  },
+  "releases": [
+    {
+      "id": "25",
+      "name": "2025",
+      "milestones": {
+        "ga": "2025-02-03",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "25",
+        "codename": null,
+        "label": "2025",
+        "releaseDate": "2025-02-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "25.14.2",
+          "date": "2026-05-18",
+          "link": "https://docs.chef.io/release_notes_workstation/#25.14.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "24",
+      "name": "2024",
+      "milestones": {
+        "ga": "2024-02-07",
+        "eos": null,
+        "eossec": "2026-04-30",
+        "eol": "2026-04-30"
+      },
+      "upstream": {
+        "name": "24",
+        "codename": null,
+        "label": "2024",
+        "releaseDate": "2024-02-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-04-30",
+        "isEol": true,
+        "eolFrom": "2026-04-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "24.12.1073",
+          "date": "2024-12-16",
+          "link": "https://docs.chef.io/release_notes_workstation/#24.12.1073"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "23",
+      "name": "2023",
+      "milestones": {
+        "ga": "2023-02-09",
+        "eos": null,
+        "eossec": "2024-12-31",
+        "eol": "2024-12-31"
+      },
+      "upstream": {
+        "name": "23",
+        "codename": null,
+        "label": "2023",
+        "releaseDate": "2023-02-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-12-31",
+        "isEol": true,
+        "eolFrom": "2024-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "23.12.1055",
+          "date": "2023-12-04",
+          "link": "https://docs.chef.io/release_notes_workstation/#23.12.1055"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "22",
+      "name": "2021",
+      "milestones": {
+        "ga": "2022-01-06",
+        "eos": null,
+        "eossec": "2024-12-31",
+        "eol": "2024-12-31"
+      },
+      "upstream": {
+        "name": "22",
+        "codename": null,
+        "label": "2021",
+        "releaseDate": "2022-01-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-12-31",
+        "isEol": true,
+        "eolFrom": "2024-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "22.12.1024",
+          "date": "2022-12-20",
+          "link": "https://docs.chef.io/release_notes_workstation/#22.12.1024"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "21",
+      "name": "2021",
+      "milestones": {
+        "ga": "2021-01-05",
+        "eos": null,
+        "eossec": "2024-12-31",
+        "eol": "2024-12-31"
+      },
+      "upstream": {
+        "name": "21",
+        "codename": null,
+        "label": "2021",
+        "releaseDate": "2021-01-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-12-31",
+        "isEol": true,
+        "eolFrom": "2024-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "21.12.720",
+          "date": "2021-12-17",
+          "link": "https://docs.chef.io/release_notes_workstation/#21.12.720"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "20",
+      "name": "2020",
+      "milestones": {
+        "ga": "2020-06-02",
+        "eos": null,
+        "eossec": "2024-12-31",
+        "eol": "2024-12-31"
+      },
+      "upstream": {
+        "name": "20",
+        "codename": null,
+        "label": "2020",
+        "releaseDate": "2020-06-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-12-31",
+        "isEol": true,
+        "eolFrom": "2024-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "20.12.205",
+          "date": "2020-12-14",
+          "link": "https://docs.chef.io/release_notes_workstation/#20.12.205"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/chef-workstation/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-06-16T05:52:15+00:00"
+  }
+}

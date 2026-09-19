@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-ml6010-6020-6030",
+  "name": "ML6010/6020/6030",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC PowerVault Tape",
+  "family": "PowerVault Tape",
+  "model_number": "ML6010/6020/6030",
+  "milestones": {
+    "ga": "2005-12-01",
+    "eos": "2018-08-03",
+    "eossec": null,
+    "eol": "2023-08-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "ML6010/6020/6030",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "ML6010/6020/6030",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC PowerVault Tape",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2018-08-03",
+      "datetime": null,
+      "value": "2018-08-03",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Dec. 01, 2005",
+      "datetime": "2005-12-01",
+      "value": "2005-12-01",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2023-08-31",
+      "datetime": null,
+      "value": "2023-08-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/backup/vendor/dell-emc/powervault-tape/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

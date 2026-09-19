@@ -1,0 +1,247 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "openvpn",
+  "name": "OpenVPN",
+  "category": "software",
+  "upstream_category": "app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "openvpn"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:deb/debian/openvpn"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:deb/ubuntu/openvpn"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/openvpn/openvpn"
+    }
+  ],
+  "labels": {
+    "eoas": "Full Stable Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/openvpn.svg",
+    "html": "https://endoflife.date/openvpn",
+    "releasePolicy": "https://community.openvpn.net/openvpn/wiki/SupportedVersions"
+  },
+  "releases": [
+    {
+      "id": "2.7",
+      "name": "2.7",
+      "milestones": {
+        "ga": "2026-02-11",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.7",
+        "codename": null,
+        "label": "2.7",
+        "releaseDate": "2026-02-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "2.7.7",
+          "date": "2026-09-03",
+          "link": "https://github.com/OpenVPN/openvpn/blob/release/2.7/ChangeLog"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.6",
+      "name": "2.6",
+      "milestones": {
+        "ga": "2023-01-25",
+        "eos": null,
+        "eossec": "2028-08-31",
+        "eol": "2028-08-31"
+      },
+      "upstream": {
+        "name": "2.6",
+        "codename": null,
+        "label": "2.6",
+        "releaseDate": "2023-01-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-08-31",
+        "isEol": false,
+        "eolFrom": "2028-08-31",
+        "isMaintained": true,
+        "latest": {
+          "name": "2.6.22",
+          "date": "2026-08-05",
+          "link": "https://github.com/OpenVPN/openvpn/blob/release/2.6/ChangeLog"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.5",
+      "name": "2.5",
+      "milestones": {
+        "ga": "2020-10-27",
+        "eos": null,
+        "eossec": "2025-07-31",
+        "eol": "2025-07-31"
+      },
+      "upstream": {
+        "name": "2.5",
+        "codename": null,
+        "label": "2.5",
+        "releaseDate": "2020-10-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-07-18",
+        "isEol": true,
+        "eolFrom": "2025-07-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.5.11",
+          "date": "2024-07-18",
+          "link": "https://github.com/OpenVPN/openvpn/blob/release/2.5/ChangeLog"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.4",
+      "name": "2.4",
+      "milestones": {
+        "ga": "2016-12-16",
+        "eos": null,
+        "eossec": "2023-03-31",
+        "eol": "2023-03-31"
+      },
+      "upstream": {
+        "name": "2.4",
+        "codename": null,
+        "label": "2.4",
+        "releaseDate": "2016-12-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-03-17",
+        "isEol": true,
+        "eolFrom": "2023-03-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.4.12",
+          "date": "2022-03-17",
+          "link": "https://github.com/OpenVPN/openvpn/blob/release/2.4/ChangeLog"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.3",
+      "name": "2.3",
+      "milestones": {
+        "ga": "2013-01-02",
+        "eos": null,
+        "eossec": "2021-06-30",
+        "eol": "2021-06-30"
+      },
+      "upstream": {
+        "name": "2.3",
+        "codename": null,
+        "label": "2.3",
+        "releaseDate": "2013-01-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2017-09-25",
+        "isEol": true,
+        "eolFrom": "2021-06-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.3.18",
+          "date": "2017-09-25",
+          "link": "https://github.com/OpenVPN/openvpn/blob/release/2.3/ChangeLog"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.2",
+      "name": "2.2",
+      "milestones": {
+        "ga": "2011-04-21",
+        "eos": null,
+        "eossec": "2015-11-30",
+        "eol": "2015-11-30"
+      },
+      "upstream": {
+        "name": "2.2",
+        "codename": null,
+        "label": "2.2",
+        "releaseDate": "2011-04-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2014-11-30",
+        "isEol": true,
+        "eolFrom": "2015-11-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.2.3",
+          "date": "2014-11-30",
+          "link": "https://github.com/OpenVPN/openvpn/blob/release/2.2/ChangeLog"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.1",
+      "name": "2.1",
+      "milestones": {
+        "ga": "2009-12-11",
+        "eos": null,
+        "eossec": "2011-11-30",
+        "eol": "2011-11-30"
+      },
+      "upstream": {
+        "name": "2.1",
+        "codename": null,
+        "label": "2.1",
+        "releaseDate": "2009-12-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2010-11-06",
+        "isEol": true,
+        "eolFrom": "2011-11-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.1.4",
+          "date": "2010-11-06",
+          "link": "https://github.com/OpenVPN/openvpn/blob/release/2.1/ChangeLog"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/openvpn/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-04T00:07:10+00:00"
+  }
+}

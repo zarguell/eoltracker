@@ -1,0 +1,160 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "yarn",
+  "name": "Yarn",
+  "category": "software",
+  "upstream_category": "app",
+  "identifiers": [
+    {
+      "type": "purl",
+      "id": "pkg:github/yarnpkg/berry"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/yarnpkg/yarn"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:npm/yarn"
+    },
+    {
+      "type": "repology",
+      "id": "yarn"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:yarnpkg:yarn"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:yarnpkg:yarn"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/yarn.svg",
+    "html": "https://endoflife.date/yarn",
+    "releasePolicy": null
+  },
+  "releases": [
+    {
+      "id": "4",
+      "name": "4",
+      "milestones": {
+        "ga": "2023-10-22",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4",
+        "codename": null,
+        "label": "4",
+        "releaseDate": "2023-10-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "4.18.0",
+          "date": "2026-07-29",
+          "link": "https://github.com/yarnpkg/berry/releases/tag/%40yarnpkg%2Fcli%2F4.18.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3",
+      "name": "3",
+      "milestones": {
+        "ga": "2021-07-26",
+        "eos": null,
+        "eossec": "2024-12-04",
+        "eol": "2024-12-04"
+      },
+      "upstream": {
+        "name": "3",
+        "codename": null,
+        "label": "3",
+        "releaseDate": "2021-07-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-12-04",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.8.7",
+          "date": "2024-12-04",
+          "link": "https://github.com/yarnpkg/berry/releases/tag/%40yarnpkg%2Fcli%2F3.8.7"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2",
+      "name": "2",
+      "milestones": {
+        "ga": "2020-07-09",
+        "eos": null,
+        "eossec": "2021-09-06",
+        "eol": "2021-09-06"
+      },
+      "upstream": {
+        "name": "2",
+        "codename": null,
+        "label": "2",
+        "releaseDate": "2020-07-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-09-06",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.4.3",
+          "date": "2021-09-06",
+          "link": "https://github.com/yarnpkg/berry/releases/tag/%40yarnpkg%2Fcli%2F2.4.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1",
+      "name": "1",
+      "milestones": {
+        "ga": "2017-09-05",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1",
+        "codename": null,
+        "label": "1",
+        "releaseDate": "2017-09-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "1.22.22",
+          "date": "2024-03-09",
+          "link": "https://github.com/yarnpkg/yarn/releases/tag/v1.22.22"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/yarn/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-07-30T00:07:06+00:00"
+  }
+}

@@ -1,0 +1,809 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "istio",
+  "name": "Istio",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "istio"
+    },
+    {
+      "type": "repology",
+      "id": "istioctl"
+    },
+    {
+      "type": "repology",
+      "id": "go:istio-pkg"
+    },
+    {
+      "type": "repology",
+      "id": "go:istio-api"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:brew/istioctl"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/istio/base"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/istio/pilot"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/istio/distroless"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/istio/install-cni"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/istio/app"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/istio/proxyv2"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/istio/operator"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/istio/istio"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:istio:istio"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/istio.svg",
+    "html": "https://endoflife.date/istio",
+    "releasePolicy": "https://istio.io/latest/docs/releases/supported-releases/#support-policy"
+  },
+  "releases": [
+    {
+      "id": "1.31",
+      "name": "1.31",
+      "milestones": {
+        "ga": "2026-08-31",
+        "eos": null,
+        "eossec": "2027-02-28",
+        "eol": "2027-02-28"
+      },
+      "upstream": {
+        "name": "1.31",
+        "codename": null,
+        "label": "1.31",
+        "releaseDate": "2026-08-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-02-28",
+        "isMaintained": true,
+        "latest": {
+          "name": "1.31.0",
+          "date": "2026-08-31",
+          "link": "https://istio.io/latest/news/releases/1.31.x/announcing-1.31/"
+        },
+        "custom": {
+          "supportedKubernetesVersions": "1.32 - 1.36"
+        }
+      }
+    },
+    {
+      "id": "1.30",
+      "name": "1.30",
+      "milestones": {
+        "ga": "2026-05-18",
+        "eos": null,
+        "eossec": "2026-12-31",
+        "eol": "2026-12-31"
+      },
+      "upstream": {
+        "name": "1.30",
+        "codename": null,
+        "label": "1.30",
+        "releaseDate": "2026-05-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2026-12-31",
+        "isMaintained": true,
+        "latest": {
+          "name": "1.30.4",
+          "date": "2026-08-27",
+          "link": "https://istio.io/latest/news/releases/1.30.x/announcing-1.30.4/"
+        },
+        "custom": {
+          "supportedKubernetesVersions": "1.32 - 1.36"
+        }
+      }
+    },
+    {
+      "id": "1.29",
+      "name": "1.29",
+      "milestones": {
+        "ga": "2026-02-16",
+        "eos": null,
+        "eossec": "2026-10-31",
+        "eol": "2026-10-31"
+      },
+      "upstream": {
+        "name": "1.29",
+        "codename": null,
+        "label": "1.29",
+        "releaseDate": "2026-02-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2026-10-31",
+        "isMaintained": true,
+        "latest": {
+          "name": "1.29.7",
+          "date": "2026-08-27",
+          "link": "https://istio.io/latest/news/releases/1.29.x/announcing-1.29.7/"
+        },
+        "custom": {
+          "supportedKubernetesVersions": "1.31 - 1.35"
+        }
+      }
+    },
+    {
+      "id": "1.28",
+      "name": "1.28",
+      "milestones": {
+        "ga": "2025-11-05",
+        "eos": null,
+        "eossec": "2026-07-01",
+        "eol": "2026-07-01"
+      },
+      "upstream": {
+        "name": "1.28",
+        "codename": null,
+        "label": "1.28",
+        "releaseDate": "2025-11-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-07-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.28.10",
+          "date": "2026-07-01",
+          "link": "https://istio.io/latest/news/releases/1.28.x/announcing-1.28.10/"
+        },
+        "custom": {
+          "supportedKubernetesVersions": "1.30 - 1.34"
+        }
+      }
+    },
+    {
+      "id": "1.27",
+      "name": "1.27",
+      "milestones": {
+        "ga": "2025-08-11",
+        "eos": null,
+        "eossec": "2026-04-07",
+        "eol": "2026-04-07"
+      },
+      "upstream": {
+        "name": "1.27",
+        "codename": null,
+        "label": "1.27",
+        "releaseDate": "2025-08-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-04-07",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.27.9",
+          "date": "2026-04-07",
+          "link": "https://istio.io/latest/news/releases/1.27.x/announcing-1.27.9/"
+        },
+        "custom": {
+          "supportedKubernetesVersions": "1.29 - 1.33"
+        }
+      }
+    },
+    {
+      "id": "1.26",
+      "name": "1.26",
+      "milestones": {
+        "ga": "2025-05-08",
+        "eos": null,
+        "eossec": "2025-12-22",
+        "eol": "2025-12-22"
+      },
+      "upstream": {
+        "name": "1.26",
+        "codename": null,
+        "label": "1.26",
+        "releaseDate": "2025-05-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-12-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.26.8",
+          "date": "2025-12-22",
+          "link": "https://istio.io/latest/news/releases/1.26.x/announcing-1.26.8/"
+        },
+        "custom": {
+          "supportedKubernetesVersions": "1.29 - 1.33"
+        }
+      }
+    },
+    {
+      "id": "1.25",
+      "name": "1.25",
+      "milestones": {
+        "ga": "2025-03-03",
+        "eos": null,
+        "eossec": "2025-09-30",
+        "eol": "2025-09-30"
+      },
+      "upstream": {
+        "name": "1.25",
+        "codename": null,
+        "label": "1.25",
+        "releaseDate": "2025-03-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-09-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.25.5",
+          "date": "2025-09-03",
+          "link": "https://istio.io/latest/news/releases/1.25.x/announcing-1.25.5/"
+        },
+        "custom": {
+          "supportedKubernetesVersions": "1.29 - 1.32"
+        }
+      }
+    },
+    {
+      "id": "1.24",
+      "name": "1.24",
+      "milestones": {
+        "ga": "2024-11-07",
+        "eos": null,
+        "eossec": "2025-06-24",
+        "eol": "2025-06-24"
+      },
+      "upstream": {
+        "name": "1.24",
+        "codename": null,
+        "label": "1.24",
+        "releaseDate": "2024-11-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-06-24",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.24.6",
+          "date": "2025-05-13",
+          "link": "https://istio.io/latest/news/releases/1.24.x/announcing-1.24.6/"
+        },
+        "custom": {
+          "supportedKubernetesVersions": "1.28 - 1.31"
+        }
+      }
+    },
+    {
+      "id": "1.23",
+      "name": "1.23",
+      "milestones": {
+        "ga": "2024-08-14",
+        "eos": null,
+        "eossec": "2025-04-16",
+        "eol": "2025-04-16"
+      },
+      "upstream": {
+        "name": "1.23",
+        "codename": null,
+        "label": "1.23",
+        "releaseDate": "2024-08-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-04-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.23.6",
+          "date": "2025-04-07",
+          "link": "https://istio.io/latest/news/releases/1.23.x/announcing-1.23.6/"
+        },
+        "custom": {
+          "supportedKubernetesVersions": "1.27 - 1.30"
+        }
+      }
+    },
+    {
+      "id": "1.22",
+      "name": "1.22",
+      "milestones": {
+        "ga": "2024-05-13",
+        "eos": null,
+        "eossec": "2025-01-22",
+        "eol": "2025-01-22"
+      },
+      "upstream": {
+        "name": "1.22",
+        "codename": null,
+        "label": "1.22",
+        "releaseDate": "2024-05-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-01-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.22.8",
+          "date": "2025-01-23",
+          "link": "https://istio.io/latest/news/releases/1.22.x/announcing-1.22.8/"
+        },
+        "custom": {
+          "supportedKubernetesVersions": "1.27 - 1.30"
+        }
+      }
+    },
+    {
+      "id": "1.21",
+      "name": "1.21",
+      "milestones": {
+        "ga": "2024-03-13",
+        "eos": null,
+        "eossec": "2024-09-27",
+        "eol": "2024-09-27"
+      },
+      "upstream": {
+        "name": "1.21",
+        "codename": null,
+        "label": "1.21",
+        "releaseDate": "2024-03-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-09-27",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.21.6",
+          "date": "2024-09-23",
+          "link": "https://istio.io/latest/news/releases/1.21.x/announcing-1.21.6/"
+        },
+        "custom": {
+          "supportedKubernetesVersions": "1.26 - 1.29"
+        }
+      }
+    },
+    {
+      "id": "1.20",
+      "name": "1.20",
+      "milestones": {
+        "ga": "2023-11-14",
+        "eos": null,
+        "eossec": "2024-06-25",
+        "eol": "2024-06-25"
+      },
+      "upstream": {
+        "name": "1.20",
+        "codename": null,
+        "label": "1.20",
+        "releaseDate": "2023-11-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-06-25",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.20.8",
+          "date": "2024-07-01",
+          "link": "https://istio.io/latest/news/releases/1.20.x/announcing-1.20.8/"
+        },
+        "custom": {
+          "supportedKubernetesVersions": "1.25 - 1.29"
+        }
+      }
+    },
+    {
+      "id": "1.19",
+      "name": "1.19",
+      "milestones": {
+        "ga": "2023-09-05",
+        "eos": null,
+        "eossec": "2024-04-24",
+        "eol": "2024-04-24"
+      },
+      "upstream": {
+        "name": "1.19",
+        "codename": null,
+        "label": "1.19",
+        "releaseDate": "2023-09-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-04-24",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.19.10",
+          "date": "2024-04-22",
+          "link": "https://istio.io/latest/news/releases/1.19.x/announcing-1.19.10/"
+        },
+        "custom": {
+          "supportedKubernetesVersions": "1.25 - 1.28"
+        }
+      }
+    },
+    {
+      "id": "1.18",
+      "name": "1.18",
+      "milestones": {
+        "ga": "2023-06-07",
+        "eos": null,
+        "eossec": "2024-01-04",
+        "eol": "2024-01-04"
+      },
+      "upstream": {
+        "name": "1.18",
+        "codename": null,
+        "label": "1.18",
+        "releaseDate": "2023-06-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-01-04",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.18.7",
+          "date": "2024-01-03",
+          "link": "https://istio.io/latest/news/releases/1.18.x/announcing-1.18.7/"
+        },
+        "custom": {
+          "supportedKubernetesVersions": "1.24 - 1.27"
+        }
+      }
+    },
+    {
+      "id": "1.17",
+      "name": "1.17",
+      "milestones": {
+        "ga": "2023-02-14",
+        "eos": null,
+        "eossec": "2023-10-27",
+        "eol": "2023-10-27"
+      },
+      "upstream": {
+        "name": "1.17",
+        "codename": null,
+        "label": "1.17",
+        "releaseDate": "2023-02-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-10-27",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.17.8",
+          "date": "2023-10-11",
+          "link": "https://istio.io/latest/news/releases/1.17.x/announcing-1.17.8/"
+        },
+        "custom": {
+          "supportedKubernetesVersions": "1.23 - 1.26"
+        }
+      }
+    },
+    {
+      "id": "1.16",
+      "name": "1.16",
+      "milestones": {
+        "ga": "2022-11-15",
+        "eos": null,
+        "eossec": "2023-07-25",
+        "eol": "2023-07-25"
+      },
+      "upstream": {
+        "name": "1.16",
+        "codename": null,
+        "label": "1.16",
+        "releaseDate": "2022-11-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-07-25",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.16.7",
+          "date": "2023-07-25",
+          "link": "https://istio.io/latest/news/releases/1.16.x/announcing-1.16.7/"
+        },
+        "custom": {
+          "supportedKubernetesVersions": "1.22 - 1.25"
+        }
+      }
+    },
+    {
+      "id": "1.15",
+      "name": "1.15",
+      "milestones": {
+        "ga": "2022-08-31",
+        "eos": null,
+        "eossec": "2023-04-04",
+        "eol": "2023-04-04"
+      },
+      "upstream": {
+        "name": "1.15",
+        "codename": null,
+        "label": "1.15",
+        "releaseDate": "2022-08-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-04-04",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.15.7",
+          "date": "2023-04-04",
+          "link": "https://istio.io/latest/news/releases/1.15.x/announcing-1.15.7/"
+        },
+        "custom": {
+          "supportedKubernetesVersions": "1.22 - 1.25"
+        }
+      }
+    },
+    {
+      "id": "1.14",
+      "name": "1.14",
+      "milestones": {
+        "ga": "2022-06-01",
+        "eos": null,
+        "eossec": "2022-12-27",
+        "eol": "2022-12-27"
+      },
+      "upstream": {
+        "name": "1.14",
+        "codename": null,
+        "label": "1.14",
+        "releaseDate": "2022-06-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-12-27",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.14.6",
+          "date": "2022-12-12",
+          "link": "https://istio.io/latest/news/releases/1.14.x/announcing-1.14.6/"
+        },
+        "custom": {
+          "supportedKubernetesVersions": "1.21 - 1.24"
+        }
+      }
+    },
+    {
+      "id": "1.13",
+      "name": "1.13",
+      "milestones": {
+        "ga": "2022-02-11",
+        "eos": null,
+        "eossec": "2022-10-12",
+        "eol": "2022-10-12"
+      },
+      "upstream": {
+        "name": "1.13",
+        "codename": null,
+        "label": "1.13",
+        "releaseDate": "2022-02-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-10-12",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.13.9",
+          "date": "2022-10-11",
+          "link": "https://istio.io/latest/news/releases/1.13.x/announcing-1.13.9/"
+        },
+        "custom": {
+          "supportedKubernetesVersions": "1.20 - 1.23"
+        }
+      }
+    },
+    {
+      "id": "1.12",
+      "name": "1.12",
+      "milestones": {
+        "ga": "2021-11-18",
+        "eos": null,
+        "eossec": "2022-07-12",
+        "eol": "2022-07-12"
+      },
+      "upstream": {
+        "name": "1.12",
+        "codename": null,
+        "label": "1.12",
+        "releaseDate": "2021-11-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-07-12",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.12.9",
+          "date": "2022-07-12",
+          "link": "https://istio.io/latest/news/releases/1.12.x/announcing-1.12.9/"
+        },
+        "custom": {
+          "supportedKubernetesVersions": "1.19 - 1.22"
+        }
+      }
+    },
+    {
+      "id": "1.11",
+      "name": "1.11",
+      "milestones": {
+        "ga": "2021-08-12",
+        "eos": null,
+        "eossec": "2022-03-25",
+        "eol": "2022-03-25"
+      },
+      "upstream": {
+        "name": "1.11",
+        "codename": null,
+        "label": "1.11",
+        "releaseDate": "2021-08-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-03-25",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.11.8",
+          "date": "2022-03-09",
+          "link": "https://istio.io/latest/news/releases/1.11.x/announcing-1.11.8/"
+        },
+        "custom": {
+          "supportedKubernetesVersions": "1.18 - 1.22"
+        }
+      }
+    },
+    {
+      "id": "1.10",
+      "name": "1.10",
+      "milestones": {
+        "ga": "2021-05-18",
+        "eos": null,
+        "eossec": "2022-01-07",
+        "eol": "2022-01-07"
+      },
+      "upstream": {
+        "name": "1.10",
+        "codename": null,
+        "label": "1.10",
+        "releaseDate": "2021-05-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-01-07",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.10.6",
+          "date": "2021-12-06",
+          "link": "https://istio.io/latest/news/releases/1.10.x/announcing-1.10.6/"
+        },
+        "custom": {
+          "supportedKubernetesVersions": "1.18 - 1.21"
+        }
+      }
+    },
+    {
+      "id": "1.9",
+      "name": "1.9",
+      "milestones": {
+        "ga": "2021-02-09",
+        "eos": null,
+        "eossec": "2021-10-08",
+        "eol": "2021-10-08"
+      },
+      "upstream": {
+        "name": "1.9",
+        "codename": null,
+        "label": "1.9",
+        "releaseDate": "2021-02-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-10-08",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.9.9",
+          "date": "2021-10-08",
+          "link": "https://istio.io/latest/news/releases/1.9.x/announcing-1.9.9/"
+        },
+        "custom": {
+          "supportedKubernetesVersions": "1.17 - 1.20"
+        }
+      }
+    },
+    {
+      "id": "1.8",
+      "name": "1.8",
+      "milestones": {
+        "ga": "2020-11-19",
+        "eos": null,
+        "eossec": "2021-05-12",
+        "eol": "2021-05-12"
+      },
+      "upstream": {
+        "name": "1.8",
+        "codename": null,
+        "label": "1.8",
+        "releaseDate": "2020-11-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-05-12",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.8.6",
+          "date": "2021-05-11",
+          "link": "https://istio.io/latest/news/releases/1.8.x/announcing-1.8.6/"
+        },
+        "custom": {
+          "supportedKubernetesVersions": "1.16 - 1.19"
+        }
+      }
+    },
+    {
+      "id": "1.7",
+      "name": "1.7",
+      "milestones": {
+        "ga": "2020-08-21",
+        "eos": null,
+        "eossec": "2021-02-25",
+        "eol": "2021-02-25"
+      },
+      "upstream": {
+        "name": "1.7",
+        "codename": null,
+        "label": "1.7",
+        "releaseDate": "2020-08-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-02-25",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.7.8",
+          "date": "2021-02-25",
+          "link": "https://istio.io/latest/news/releases/1.7.x/announcing-1.7.8/"
+        },
+        "custom": {
+          "supportedKubernetesVersions": "1.16 - 1.18"
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/istio/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-03T07:00:27+00:00"
+  }
+}

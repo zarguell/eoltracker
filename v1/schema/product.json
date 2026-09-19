@@ -1,0 +1,304 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "title": "EOL Tracker normalized software record (not OpenEoX Core)",
+  "$defs": {
+    "research": {
+      "description": "One-time researched provenance (AGENTS.md rule 8 tier b). Present only on records a human or agent contributed for a product no deterministic source covers; absent on every record an importer owns. The quote is the vendor sentence, stored verbatim with normalized whitespace, that states the dates beside it.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "quote",
+        "source_url",
+        "retrieved_at",
+        "contributor",
+        "method",
+        "verified_at",
+        "stale_after",
+        "evidence"
+      ],
+      "properties": {
+        "quote": {
+          "type": "string",
+          "minLength": 20
+        },
+        "source_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "retrieved_at": {
+          "type": "string",
+          "format": "date"
+        },
+        "contributor": {
+          "type": "string",
+          "minLength": 1
+        },
+        "method": {
+          "enum": [
+            "manual",
+            "agent"
+          ]
+        },
+        "verified_at": {
+          "description": "When the quote was last confirmed against source_url. null means the evidence was admitted from store only and has never been refetched.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "stale_after": {
+          "description": "Explicit review deadline, when the contributor set one. Null falls back to the 180-day freshness horizon on the record's last_checked.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "evidence": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/evidence"
+          }
+        },
+        "vendor": {
+          "type": "string",
+          "minLength": 1
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "evidence": {
+      "description": "One stored verbatim quote and the page it came from. Every milestone the record states must appear, at the same day precision, in a quote that backs it.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "quote",
+        "source_url",
+        "retrieved_at"
+      ],
+      "properties": {
+        "quote": {
+          "type": "string",
+          "minLength": 20
+        },
+        "source_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "retrieved_at": {
+          "type": "string",
+          "format": "date"
+        },
+        "milestones": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "enum": [
+              "ga",
+              "eos",
+              "eossec",
+              "eol"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "id",
+    "name",
+    "category",
+    "upstream_category",
+    "identifiers",
+    "labels",
+    "links",
+    "releases",
+    "provenance"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://zarguell.github.io/eoltracker/v1/schema/product.json"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "category": {
+      "const": "software"
+    },
+    "upstream_category": {
+      "enum": [
+        "app",
+        "database",
+        "framework",
+        "lang",
+        "os",
+        "server-app",
+        "service",
+        "standard"
+      ]
+    },
+    "identifiers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "type",
+          "id"
+        ],
+        "properties": {
+          "type": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "labels": {
+      "type": "object",
+      "additionalProperties": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "links": {
+      "type": "object",
+      "additionalProperties": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "releases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "milestones",
+          "upstream"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string"
+          },
+          "milestones": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "ga",
+              "eos",
+              "eossec",
+              "eol"
+            ],
+            "properties": {
+              "ga": {
+                "description": "Calendar day (YYYY-MM-DD) or month precision (YYYY-MM) when the source publishes no day. A month is never padded to a day.",
+                "oneOf": [
+                  {"type": "null"},
+                  {"type": "string", "pattern": "^\\d{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12]\\d|3[01])$", "format": "date"},
+                  {"type": "string", "pattern": "^\\d{4}-(?:0[1-9]|1[0-2])$"}
+                ]
+              },
+              "eos": {
+                "oneOf": [
+                  {"type": "null"},
+                  {"type": "string", "pattern": "^\\d{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12]\\d|3[01])$", "format": "date"},
+                  {"type": "string", "pattern": "^\\d{4}-(?:0[1-9]|1[0-2])$"}
+                ]
+              },
+              "eossec": {
+                "oneOf": [
+                  {"type": "null"},
+                  {"type": "string", "pattern": "^\\d{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12]\\d|3[01])$", "format": "date"},
+                  {"type": "string", "pattern": "^\\d{4}-(?:0[1-9]|1[0-2])$"}
+                ]
+              },
+              "eol": {
+                "oneOf": [
+                  {"type": "null"},
+                  {"type": "string", "pattern": "^\\d{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12]\\d|3[01])$", "format": "date"},
+                  {"type": "string", "pattern": "^\\d{4}-(?:0[1-9]|1[0-2])$"}
+                ]
+              }
+            }
+          },
+          "upstream": {
+            "type": "object",
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "name": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_url",
+        "verifier",
+        "last_checked",
+        "upstream_modified"
+      ],
+      "properties": {
+        "source_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "verifier": {
+          "description": "The pipeline that owns this record: the deterministic importer's fixed id (deterministic-<source-slug>; the registry in engine/sources.py decides which ones exist and which catalog each owns), or researched-<contributor-slug> for a one-time researched contribution. The pattern admits a new collector; only a registered source is published.",
+          "type": "string",
+          "pattern": "^(?:deterministic|researched)-[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "last_checked": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "upstream_modified": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "research": {
+          "$ref": "#/$defs/research"
+        }
+      }
+    }
+  }
+}

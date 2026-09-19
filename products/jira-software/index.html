@@ -1,0 +1,3688 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jira Software lifecycle dates — EOL Tracker</title>
+<meta name="description" content="General availability, end-of-sale, security-support and end-of-life dates for every Jira Software release, with raw source values and provenance.">
+<link rel="canonical" href="https://zarguell.github.io/eoltracker/products/jira-software/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EOL Tracker">
+<meta property="og:title" content="Jira Software lifecycle dates — EOL Tracker">
+<meta property="og:description" content="General availability, end-of-sale, security-support and end-of-life dates for every Jira Software release, with raw source values and provenance.">
+<meta property="og:url" content="https://zarguell.github.io/eoltracker/products/jira-software/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d1b2a'/%3E%3Cpath d='M7 20.5l5-6 4 4.5 4-6.5 5 8' fill='none' stroke='%234fd1c5' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/eoltracker/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="shell masthead-inner">
+    <a class="wordmark" href="/eoltracker/">EOL<span>Tracker</span></a>
+    <nav class="mainnav" aria-label="Primary">
+      <a href="/eoltracker/">Software</a>
+      <a href="/eoltracker/hardware/">Hardware</a>
+      <a href="/eoltracker/api/">API &amp; data</a>
+      <a href="https://endoflife.date/" rel="noopener">endoflife.date</a>
+    </nav>
+    <p class="masthead-meta">483 products · 7814 releases · 6999 hardware records</p>
+  </div>
+</header>
+
+<main class="shell" id="main">
+<nav class="crumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/eoltracker/">Catalog</a></li>
+    <li aria-current="page">Jira Software</li>
+  </ol>
+</nav>
+
+<section class="hero product-hero">
+  <p class="eyebrow">server-app · software</p>
+  <h1 class="page-title">Jira Software</h1>
+  <p class="lead">
+    105 releases published by endoflife.date, with each normalized milestone and the raw
+    upstream values behind it. Identifier for this record: <code>jira-software</code>.
+  </p>
+  <p class="hero-meta">
+    Verified Sep 17, 2026 at 11:51 UTC by <code>deterministic-endoflife-date-v1</code>.
+Source: endoflife.date.    Upstream modified Sep 4, 2026 at 00:07 UTC.
+    Last catalog refresh <time datetime="2026-09-17T18:35:21Z">Sep 17, 2026 at 18:35 UTC</time>.
+  </p>
+  <p class="product-links">
+    <a class="button" href="/eoltracker/v1/products/jira-software.json">JSON record</a>
+    <a class="button" href="https://endoflife.date/api/v1/products/jira-software/" rel="noopener">Source on endoflife.date</a>
+<a class="button" href="https://cdn.jsdelivr.net/npm/simple-icons/icons/jirasoftware.svg" rel="noopener">icon</a><a class="button" href="https://endoflife.date/jira-software" rel="noopener">html</a><a class="button" href="https://confluence.atlassian.com/enterprise/atlassian-enterprise-releases-948227420.html#LongTermSupportreleases-Policyanddetails" rel="noopener">releasePolicy</a>  </p>
+</section>
+
+<section class="panel" aria-labelledby="coverage-title">
+  <h2 class="panel-title" id="coverage-title">Data coverage</h2>
+  <p class="panel-note">
+    Upstream does not publish every milestone for every release. Empty cells in the table below are unknown dates,
+    not implied support.
+  </p>
+  <ul class="bars">
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">General availability</span>
+        <span class="bar-value">105 / 105 releases (100%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="General availability: 105 of 105 releases have a published date">
+        <div class="bar-fill" style="width: 100%"></div>
+      </div>
+    </li>
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">End of sale</span>
+        <span class="bar-value">0 / 105 releases (0%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="End of sale: 0 of 105 releases have a published date">
+        <div class="bar-fill" style="width: 0%"></div>
+      </div>
+    </li>
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">End of security support</span>
+        <span class="bar-value">0 / 105 releases (0%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="End of security support: 0 of 105 releases have a published date">
+        <div class="bar-fill" style="width: 0%"></div>
+      </div>
+    </li>
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">End of life</span>
+        <span class="bar-value">79 / 105 releases (75%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="End of life: 79 of 105 releases have a published date">
+        <div class="bar-fill" style="width: 75%"></div>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section class="panel" aria-labelledby="legend-title">
+  <h2 class="panel-title" id="legend-title">How to read these dates</h2>
+  <dl class="legend">
+    <div class="legend-row">
+      <dt>General availability</dt>
+      <dd>
+        <p>First public release. Taken from the upstream releaseDate.</p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>End of sale</dt>
+      <dd>
+        <p>Last day new licenses or units are sold. Only mapped from an upstream field whose label names an end of sale.</p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>End of security support</dt>
+      <dd>
+        <p>Last day security fixes are published. Mapped from eolFrom or eoesFrom only when the label names security support.</p>
+        <p>
+          Extended support counts as security support: when upstream publishes an extended-support date, it replaces
+          the standard security-support deadline here.
+        </p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>End of life</dt>
+      <dd>
+        <p>End of all support. A published extended-support date wins; otherwise eolFrom when its label describes a full support end.</p>
+        <p>
+          An announced extended-support period with no published end date leaves end of life blank — the earlier
+          <code>eolFrom</code> value stays visible in the table rather than being promoted into a deadline upstream
+          never set.
+        </p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>Blank date</dt>
+      <dd><p>The source publishes no value for that milestone. A missing date is an absent announcement, not a claim that support ends or continues.</p></dd>
+    </div>
+  </dl>
+</section>
+
+<section class="panel" aria-labelledby="next-title">
+  <h2 class="panel-title" id="next-title">Upcoming published deadlines</h2>
+  <ul class="events">
+    <li>
+      <span class="event-release">10.1</span>
+      <span class="event-milestone">End of life</span>
+      <span class="event-date"><time datetime="2026-10-09">Oct 9, 2026</time>        <span class="event-days">in 20 days</span></span>
+    </li>
+    <li>
+      <span class="event-release">10.2</span>
+      <span class="event-milestone">End of life</span>
+      <span class="event-date"><time datetime="2026-11-20">Nov 20, 2026</time>        <span class="event-days">in 62 days</span></span>
+    </li>
+    <li>
+      <span class="event-release">10.3 (LTS)</span>
+      <span class="event-milestone">End of life</span>
+      <span class="event-date"><time datetime="2026-12-05">Dec 5, 2026</time>        <span class="event-days">in 77 days</span></span>
+    </li>
+    <li>
+      <span class="event-release">10.4</span>
+      <span class="event-milestone">End of life</span>
+      <span class="event-date"><time datetime="2027-01-22">Jan 22, 2027</time>        <span class="event-days">in 125 days</span></span>
+    </li>
+    <li>
+      <span class="event-release">10.5</span>
+      <span class="event-milestone">End of life</span>
+      <span class="event-date"><time datetime="2027-03-12">Mar 12, 2027</time>        <span class="event-days">in 174 days</span></span>
+    </li>
+    <li>
+      <span class="event-release">10.6</span>
+      <span class="event-milestone">End of life</span>
+      <span class="event-date"><time datetime="2027-04-23">Apr 23, 2027</time>        <span class="event-days">in 216 days</span></span>
+    </li>
+    <li>
+      <span class="event-release">10.7</span>
+      <span class="event-milestone">End of life</span>
+      <span class="event-date"><time datetime="2027-06-13">Jun 13, 2027</time>        <span class="event-days">in 267 days</span></span>
+    </li>
+    <li>
+      <span class="event-release">11.0</span>
+      <span class="event-milestone">End of life</span>
+      <span class="event-date"><time datetime="2027-08-13">Aug 13, 2027</time>        <span class="event-days">in 328 days</span></span>
+    </li>
+  </ul>
+</section>
+
+<section class="releases" aria-labelledby="releases-title">
+  <div class="catalog-head">
+    <h2 class="panel-title" id="releases-title">Release lifecycle</h2>
+    <p class="catalog-count">105 releases</p>
+  </div>
+  <p class="panel-note">
+    Newest first. Cells show normalized dates; a secondary line shows the raw upstream field and label when the
+    normalized date differs from, or is absent despite, a published value.
+  </p>
+
+  <div class="table-scroll">
+    <table class="release-table">
+      <caption class="sr-only">Lifecycle dates for each Jira Software release</caption>
+      <thead>
+        <tr>
+          <th scope="col">Release</th>
+          <th scope="col">General availability</th>
+          <th scope="col">End of sale</th>
+          <th scope="col">End of security support</th>
+          <th scope="col">End of life</th>
+          <th scope="col">Upstream status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">11.3 (LTS)</span>
+<code class="release-raw">11.3</code>          </th>
+          <td class="milestone">
+            <time datetime="2025-12-03">Dec 3, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-12-03 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2027-12-03">Dec 3, 2027</time>          </td>
+          <td class="upstream-status">
+<span class="tag">LTS</span><span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+11.3.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">11.2</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2025-11-06">Nov 6, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-11-06 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2027-11-06">Nov 6, 2027</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+11.2.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">11.1</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2025-09-24">Sep 24, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-09-24 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2027-09-24">Sep 24, 2027</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+11.1.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">11.0</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2025-08-13">Aug 13, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-08-13 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2027-08-13">Aug 13, 2027</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+11.0.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">10.7</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2025-06-13">Jun 13, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-06-13 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2027-06-13">Jun 13, 2027</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+10.7.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">10.6</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2025-04-23">Apr 23, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-04-23 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2027-04-23">Apr 23, 2027</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+10.6.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">10.5</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2025-03-12">Mar 12, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-03-12 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2027-03-12">Mar 12, 2027</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+10.5.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">10.4</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2025-01-22">Jan 22, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-01-22 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2027-01-22">Jan 22, 2027</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+10.4.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">10.3 (LTS)</span>
+<code class="release-raw">10.3</code>          </th>
+          <td class="milestone">
+            <time datetime="2024-12-05">Dec 5, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-12-05 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2026-12-05">Dec 5, 2026</time>          </td>
+          <td class="upstream-status">
+<span class="tag">LTS</span><span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+10.3.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">10.2</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2024-11-20">Nov 20, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-11-20 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2026-11-20">Nov 20, 2026</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+10.2.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">10.1</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2024-10-09">Oct 9, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-10-09 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2026-10-09">Oct 9, 2026</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+10.1.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">10.0</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2024-08-22">Aug 22, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-08-22 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2026-08-22">Aug 22, 2026</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+10.0.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">9.17</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2024-06-26">Jun 26, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-06-26 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2026-06-26">Jun 26, 2026</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+9.17.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">9.16</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2024-05-23">May 23, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-05-23 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2026-05-23">May 23, 2026</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+9.16.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">9.15</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2024-03-27">Mar 27, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-03-27 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2026-03-27">Mar 27, 2026</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+9.15.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">9.14</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2024-02-14">Feb 14, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-02-15 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2026-02-15">Feb 15, 2026</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+9.14.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">9.13</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2024-01-22">Jan 22, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-01-22 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2026-01-22">Jan 22, 2026</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+9.13.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">9.12 (LTS)</span>
+<code class="release-raw">9.12</code>          </th>
+          <td class="milestone">
+            <time datetime="2023-11-29">Nov 29, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-11-29 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2025-11-29">Nov 29, 2025</time>          </td>
+          <td class="upstream-status">
+<span class="tag">LTS</span><span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+9.12.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">9.11</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2023-08-30">Aug 30, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-08-30 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2025-08-30">Aug 30, 2025</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+9.11.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">9.10</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2023-07-11">Jul 11, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-07-11 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2025-07-11">Jul 11, 2025</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+9.10.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">9.9</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2023-06-02">Jun 2, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-06-02 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2025-06-02">Jun 2, 2025</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+9.9.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">9.8</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2023-04-25">Apr 25, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-04-25 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2025-04-25">Apr 25, 2025</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+9.8.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">9.7</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2023-03-20">Mar 20, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-03-20 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2025-03-20">Mar 20, 2025</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+9.7.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">9.6</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2023-01-24">Jan 24, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-01-24 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2025-01-24">Jan 24, 2025</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+9.6.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">9.5</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2022-12-06">Dec 6, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-12-06 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2024-12-06">Dec 6, 2024</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+9.5.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">9.4 (LTS)</span>
+<code class="release-raw">9.4</code>          </th>
+          <td class="milestone">
+            <time datetime="2022-11-15">Nov 15, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-01-31 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2025-01-31">Jan 31, 2025</time>          </td>
+          <td class="upstream-status">
+<span class="tag">LTS</span><span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+9.4.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">9.3</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2022-09-28">Sep 28, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-09-29 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2024-09-29">Sep 29, 2024</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+9.3.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">9.2</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2022-08-25">Aug 25, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-08-25 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2024-08-25">Aug 25, 2024</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+9.2.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">9.1</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2022-07-21">Jul 21, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-07-21 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2024-07-21">Jul 21, 2024</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+9.1.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">9.0</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2022-06-21">Jun 21, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-06-21 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2024-06-21">Jun 21, 2024</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+9.0.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">8.22</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2022-02-16">Feb 16, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-02-16 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2024-02-16">Feb 16, 2024</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+8.22.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">8.21</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2021-12-09">Dec 9, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-12-09 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2023-12-09">Dec 9, 2023</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+8.21.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">8.20 (LTS)</span>
+<code class="release-raw">8.20</code>          </th>
+          <td class="milestone">
+            <time datetime="2021-10-19">Oct 19, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-01-31 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2024-01-31">Jan 31, 2024</time>          </td>
+          <td class="upstream-status">
+<span class="tag">LTS</span><span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+8.20.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">8.19</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2021-08-25">Aug 25, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-08-26 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2023-08-26">Aug 26, 2023</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+8.19.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">8.18</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2021-07-21">Jul 21, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-07-01 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2023-07-01">Jul 1, 2023</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+8.18.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">8.17</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2021-05-17">May 17, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-05-18 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2023-05-18">May 18, 2023</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+8.17.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">8.16</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2021-03-22">Mar 22, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-03-23 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2023-03-23">Mar 23, 2023</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+8.16.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">8.15</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2021-01-21">Jan 21, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-02-02 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2023-02-02">Feb 2, 2023</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+8.15.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">8.14</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2020-11-22">Nov 22, 2020</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2022-11-23 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2022-11-23">Nov 23, 2022</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+8.14.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">8.13 (LTS)</span>
+<code class="release-raw">8.13</code>          </th>
+          <td class="milestone">
+            <time datetime="2020-10-06">Oct 6, 2020</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2022-10-08 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2022-10-08">Oct 8, 2022</time>          </td>
+          <td class="upstream-status">
+<span class="tag">LTS</span><span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+8.13.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">8.12</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2020-08-25">Aug 25, 2020</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2022-08-26 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2022-08-26">Aug 26, 2022</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+8.12.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">8.11</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2020-07-14">Jul 14, 2020</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2022-07-15 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2022-07-15">Jul 15, 2022</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+8.11.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">8.10</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2020-06-22">Jun 22, 2020</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2022-06-23 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2022-06-23">Jun 23, 2022</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+8.10.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">8.9</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2020-05-18">May 18, 2020</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2022-05-20 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2022-05-20">May 20, 2022</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+8.9.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">8.8</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2020-03-18">Mar 18, 2020</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2022-03-19 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2022-03-19">Mar 19, 2022</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+8.8.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">8.7</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2020-02-02">Feb 2, 2020</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2022-02-03 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2022-02-03">Feb 3, 2022</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+8.7.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">8.6</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2019-12-16">Dec 16, 2019</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2021-12-17 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2021-12-17">Dec 17, 2021</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+8.6.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">8.5 (LTS)</span>
+<code class="release-raw">8.5</code>          </th>
+          <td class="milestone">
+            <time datetime="2019-10-21">Oct 21, 2019</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2021-10-21 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2021-10-21">Oct 21, 2021</time>          </td>
+          <td class="upstream-status">
+<span class="tag">LTS</span><span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+8.5.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">8.4</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2019-09-08">Sep 8, 2019</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2021-09-09 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2021-09-09">Sep 9, 2021</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+8.4.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">8.3</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2019-07-21">Jul 21, 2019</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2021-07-22 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2021-07-22">Jul 22, 2021</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+8.3.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">8.2</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2019-05-20">May 20, 2019</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2021-05-21 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2021-05-21">May 21, 2021</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+8.2.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">8.1</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2019-04-03">Apr 3, 2019</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2021-04-04 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2021-04-04">Apr 4, 2021</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+8.1.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">8.0</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2019-02-08">Feb 8, 2019</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2021-02-11 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2021-02-11">Feb 11, 2021</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+8.0.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">7.13 (LTS)</span>
+<code class="release-raw">7.13</code>          </th>
+          <td class="milestone">
+            <time datetime="2018-11-27">Nov 27, 2018</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2020-11-28 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2020-11-28">Nov 28, 2020</time>          </td>
+          <td class="upstream-status">
+<span class="tag">LTS</span><span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+7.13.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">7.12</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2018-08-26">Aug 26, 2018</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2020-08-27 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2020-08-27">Aug 27, 2020</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+7.12.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">7.11</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2018-07-10">Jul 10, 2018</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2020-07-11 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2020-07-11">Jul 11, 2020</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+7.11.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">7.10</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2018-05-28">May 28, 2018</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2020-05-29 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2020-05-29">May 29, 2020</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+7.10.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">7.9</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2018-04-08">Apr 8, 2018</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2020-04-09 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2020-04-09">Apr 9, 2020</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+7.9.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">7.8</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2018-02-19">Feb 19, 2018</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2020-02-20 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2020-02-20">Feb 20, 2020</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+7.8.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">7.7</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2018-01-10">Jan 10, 2018</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2020-01-11 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2020-01-11">Jan 11, 2020</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+7.7.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">7.6 (LTS)</span>
+<code class="release-raw">7.6</code>          </th>
+          <td class="milestone">
+            <time datetime="2017-11-15">Nov 15, 2017</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2019-11-14 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2019-11-14">Nov 14, 2019</time>          </td>
+          <td class="upstream-status">
+<span class="tag">LTS</span><span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+7.6.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">7.5</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2017-09-05">Sep 5, 2017</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2019-09-06 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2019-09-06">Sep 6, 2019</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+7.5.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">7.4</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2017-06-28">Jun 28, 2017</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2019-06-29 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2019-06-29">Jun 29, 2019</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+7.4.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">7.3</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2017-01-02">Jan 2, 2017</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2019-01-03 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2019-01-03">Jan 3, 2019</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+7.3.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">7.2</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2016-08-23">Aug 23, 2016</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2018-08-23 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2018-08-23">Aug 23, 2018</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+7.2.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">7.1</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2016-02-10">Feb 10, 2016</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2018-02-10 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2018-02-10">Feb 10, 2018</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+7.1.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">7.0</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2015-10-01">Oct 1, 2015</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2017-10-06 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2017-10-06">Oct 6, 2017</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/display/JIRASOFTWARE/JIRA+Software+7.0.x+release+notes" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">6.4</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2015-03-16">Mar 16, 2015</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2017-03-17 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2017-03-17">Mar 17, 2017</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/jira064/jira-6-4-14-release-notes-834232021.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">6.3</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2014-07-08">Jul 8, 2014</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2016-07-08 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2016-07-08">Jul 8, 2016</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/jira063/jira-6-3-15-release-notes-707625090.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">6.2</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2014-02-24">Feb 24, 2014</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2016-06-11 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2016-06-11">Jun 11, 2016</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/jira063/jira-6-2-7-release-notes-683542003.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">6.1</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2013-09-23">Sep 23, 2013</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2016-05-22 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2016-05-22">May 22, 2016</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/jira063/jira-6-1-9-release-notes-683542023.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">6.0</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2013-05-21">May 21, 2013</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2015-09-03 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2015-09-03">Sep 3, 2015</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/jira064/jira-6-0-8-release-notes-720413919.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">5.2</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2012-11-11">Nov 11, 2012</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/jira063/jira-5-2-11-release-notes-683542112.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">5.1</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2012-07-09">Jul 9, 2012</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/jira063/jira-5-1-8-release-notes-683542060.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">5.0</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2012-02-22">Feb 22, 2012</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2012-07-01 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2012-07-01">Jul 1, 2012</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/jira063/jira-5-0-7-release-notes-683542076.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">4.4</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2011-08-02">Aug 2, 2011</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2014-02-22 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2014-02-22">Feb 22, 2014</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/jira063/jira-4-4-5-release-notes-683541908.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">4.3</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2011-03-16">Mar 16, 2011</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2013-05-27 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2013-05-27">May 27, 2013</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/jira063/jira-4-3-4-release-notes-683541993.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">4.2</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2010-10-19">Oct 19, 2010</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2013-02-08 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2013-02-08">Feb 8, 2013</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/jira063/jira-4-2-4-release-notes-683541978.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">4.1</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2010-04-07">Apr 7, 2010</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2012-06-18 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2012-06-18">Jun 18, 2012</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/jira063/jira-4-1-2-release-notes-683541950.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">4.0</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2009-10-06">Oct 6, 2009</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2012-02-26 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2012-02-26">Feb 26, 2012</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/jira063/jira-4-0-2-release-notes-683541921.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.13</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2008-09-09">Sep 9, 2008</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2011-07-21 (Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2011-07-21">Jul 21, 2011</time>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/jira063/jira-3-13-5-release-notes-683541942.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.12</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2007-12-07">Dec 7, 2007</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/jira063/jira-3-12-3-release-notes-683541916.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.11</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2007-09-25">Sep 25, 2007</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/jira063/jira-3-11-release-notes-683541982.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.10</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2007-07-09">Jul 9, 2007</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/jira063/jira-3-10-2-release-notes-683541819.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.9</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2007-05-08">May 8, 2007</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/jira063/jira-3-9-3-release-notes-683541851.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.8</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2007-03-13">Mar 13, 2007</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/jira063/jira-3-8-1-release-notes-683541854.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.7</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2006-12-18">Dec 18, 2006</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/jira063/jira-3-7-4-release-notes-683541869.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.6</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2006-04-18">Apr 18, 2006</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/jira063/jira-3-6-5-release-notes-683541895.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.5</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2006-02-01">Feb 1, 2006</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/jira063/jira-3-5-3-release-notes-683541839.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.4</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2005-11-15">Nov 15, 2005</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/jira063/jira-3-4-3-release-notes-683541799.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.3</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2005-08-05">Aug 5, 2005</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/jira063/jira-3-3-3-release-notes-683541879.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.2</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2005-05-27">May 27, 2005</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/jira063/jira-3-2-3-release-notes-683541833.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.1</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2005-02-14">Feb 14, 2005</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/jira063/jira-3-1-1-release-notes-683541805.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">3.0</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2004-10-12">Oct 12, 2004</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://confluence.atlassian.com/jira063/jira-3-0-3-release-notes-683541813.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">2.6</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2004-03-03">Mar 3, 2004</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://www.atlassian.com/blog/archives/jira_261_releas$" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">2.5</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2003-11-12">Nov 12, 2003</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://www.atlassian.com/blog/archives/jira_253_releas$" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">2.4</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2003-08-20">Aug 20, 2003</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://www.atlassian.com/blog/archives/jira_24_release$" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">2.3</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2003-07-03">Jul 3, 2003</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://www.atlassian.com/blog/archives/jira_23_release$" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">2.2</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2003-06-20">Jun 20, 2003</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://www.atlassian.com/blog/archives/jira_221_releas$" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">2.1</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2003-06-03">Jun 3, 2003</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://www.atlassian.com/blog/archives/jira_21_release$" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">1.4</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2002-09-10">Sep 10, 2002</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://www.atlassian.com/blog/archives/jira_1_4_1_released$" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">1.3</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2002-07-04">Jul 4, 2002</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://www.atlassian.com/blog/archives/jira_1_3_3_released$" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">1.2</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2002-05-21">May 21, 2002</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://www.atlassian.com/blog/archives/jira_12_adds_pe$" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">1.1</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2002-04-30">Apr 30, 2002</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://www.atlassian.com/blog/archives/jira_11_availab$" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">1.0</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2002-04-10">Apr 10, 2002</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://www.atlassian.com/blog/archives/jira_10_release$" rel="noopener">latest release</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="panel" aria-labelledby="source-title">
+  <h2 class="panel-title" id="source-title">Source and upstream values</h2>
+  <p class="panel-note">
+    This record is a normalization of endoflife.date data, licensed MIT. Raw upstream values are
+    retained in full so the mapping below can be checked value by value.
+  </p>
+  <dl class="facts">
+    <div><dt>Upstream record</dt><dd><a href="https://endoflife.date/api/v1/products/jira-software/" rel="noopener">https://endoflife.date/api/v1/products/jira-software/</a></dd></div>
+    <div><dt>Source license</dt><dd><a href="https://github.com/endoflife-date/endoflife.date/blob/master/LICENSE" rel="noopener">endoflife.date — MIT</a></dd></div>
+    <div><dt>Verifier</dt><dd><code>deterministic-endoflife-date-v1</code></dd></div>
+    <div><dt>Last checked</dt><dd>Sep 17, 2026 at 11:51 UTC</dd></div>
+    <div><dt>Upstream modified</dt><dd>Sep 4, 2026 at 00:07 UTC</dd></div>
+    <div><dt>JSON record</dt><dd><a href="https://zarguell.github.io/eoltracker/v1/products/jira-software.json">https://zarguell.github.io/eoltracker/v1/products/jira-software.json</a></dd></div>
+    <div><dt>Schema</dt><dd><a href="https://zarguell.github.io/eoltracker/v1/schema/product.json">v1/schema/product.json</a></dd></div>
+  </dl>
+
+  <h3 class="sub-title">Identifiers</h3>
+  <ul class="chips">
+<li><span class="tag">repology</span> <code>jira</code></li><li><span class="tag">cpe</span> <code>cpe:/a:atlassian:jira</code></li><li><span class="tag">cpe</span> <code>cpe:2.3:a:atlassian:jira</code></li>  </ul>
+
+  <h3 class="sub-title">Upstream label semantics</h3>
+  <p class="panel-note">
+    endoflife.date labels decide which raw date fields become which normalized milestone. These are this product's
+    label texts and the rule each one triggers.
+  </p>
+  <dl class="label-rules">
+    <div>
+      <dt><code>eoas</code> = not set</dt>
+      <dd>End-of-sale date when the text names an end of sale.</dd>
+    </div>
+    <div>
+      <dt><code>discontinued</code> = not set</dt>
+      <dd>End-of-sale date when the text names an end of sale; otherwise recorded only, never turned into a date.</dd>
+    </div>
+    <div>
+      <dt><code>eol</code> = “Support”</dt>
+      <dd>End of security support when the text names security support; end of life only when no extended-support label is set and the text describes a full support end.</dd>
+    </div>
+    <div>
+      <dt><code>eoes</code> = not set</dt>
+      <dd>Extended support. A published date also sets end of life, and a security-support text supersedes end of security support.</dd>
+    </div>
+  </dl>
+
+
+  <details class="raw">
+    <summary>Raw upstream release objects (105)</summary>
+    <p class="panel-note">Verbatim <code>releases[]</code> entries from the upstream record, unmodified.</p>
+    <details class="raw-release">
+      <summary><code>11.3</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-12-03&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2027-12-03&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>11.2</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-11-06&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2027-11-06&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>11.1</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-09-24&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2027-09-24&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>11.0</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-08-13&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2027-08-13&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>10.7</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-06-13&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2027-06-13&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>10.6</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-04-23&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2027-04-23&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>10.5</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-03-12&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2027-03-12&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>10.4</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-01-22&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2027-01-22&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>10.3</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-12-05&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2026-12-05&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>10.2</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-11-20&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2026-11-20&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>10.1</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-10-09&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2026-10-09&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>10.0</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-08-22&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2026-08-22&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>9.17</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-06-26&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2026-06-26&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>9.16</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-05-23&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2026-05-23&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>9.15</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-03-27&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2026-03-27&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>9.14</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-02-14&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2026-02-15&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>9.13</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-01-22&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2026-01-22&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>9.12</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-11-29&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2025-11-29&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>9.11</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-08-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2025-08-30&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>9.10</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-07-11&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2025-07-11&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>9.9</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-06-02&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2025-06-02&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>9.8</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-04-25&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2025-04-25&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>9.7</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-03-20&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2025-03-20&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>9.6</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-01-24&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2025-01-24&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>9.5</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-12-06&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2024-12-06&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>9.4</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-11-15&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2025-01-31&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>9.3</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-09-28&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2024-09-29&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>9.2</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-08-25&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2024-08-25&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>9.1</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-07-21&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2024-07-21&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>9.0</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-06-21&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2024-06-21&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>8.22</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-02-16&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2024-02-16&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>8.21</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2021-12-09&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2023-12-09&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>8.20</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2021-10-19&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2024-01-31&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>8.19</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2021-08-25&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2023-08-26&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>8.18</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2021-07-21&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2023-07-01&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>8.17</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2021-05-17&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2023-05-18&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>8.16</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2021-03-22&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2023-03-23&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>8.15</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2021-01-21&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2023-02-02&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>8.14</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2020-11-22&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2022-11-23&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>8.13</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2020-10-06&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2022-10-08&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>8.12</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2020-08-25&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2022-08-26&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>8.11</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2020-07-14&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2022-07-15&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>8.10</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2020-06-22&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2022-06-23&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>8.9</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2020-05-18&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2022-05-20&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>8.8</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2020-03-18&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2022-03-19&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>8.7</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2020-02-02&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2022-02-03&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>8.6</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2019-12-16&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2021-12-17&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>8.5</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2019-10-21&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2021-10-21&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>8.4</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2019-09-08&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2021-09-09&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>8.3</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2019-07-21&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2021-07-22&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>8.2</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2019-05-20&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2021-05-21&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>8.1</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2019-04-03&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2021-04-04&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>8.0</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2019-02-08&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2021-02-11&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>7.13</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2018-11-27&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2020-11-28&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>7.12</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2018-08-26&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2020-08-27&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>7.11</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2018-07-10&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2020-07-11&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>7.10</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2018-05-28&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2020-05-29&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>7.9</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2018-04-08&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2020-04-09&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>7.8</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2018-02-19&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2020-02-20&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>7.7</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2018-01-10&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2020-01-11&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>7.6</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2017-11-15&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2019-11-14&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>7.5</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2017-09-05&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2019-09-06&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>7.4</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2017-06-28&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2019-06-29&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>7.3</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2017-01-02&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2019-01-03&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>7.2</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2016-08-23&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2018-08-23&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>7.1</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2016-02-10&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2018-02-10&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>7.0</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2015-10-01&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2017-10-06&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>6.4</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2015-03-16&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2017-03-17&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>6.3</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2014-07-08&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2016-07-08&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>6.2</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2014-02-24&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2016-06-11&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>6.1</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2013-09-23&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2016-05-22&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>6.0</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2013-05-21&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2015-09-03&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>5.2</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2012-11-11&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>5.1</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2012-07-09&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>5.0</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2012-02-22&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2012-07-01&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>4.4</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2011-08-02&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2014-02-22&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>4.3</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2011-03-16&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2013-05-27&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>4.2</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2010-10-19&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2013-02-08&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>4.1</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2010-04-07&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2012-06-18&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>4.0</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2009-10-06&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2012-02-26&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.13</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2008-09-09&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Support&#34;,
+    &#34;value&#34;: &#34;2011-07-21&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.12</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2007-12-07&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.11</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2007-09-25&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.10</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2007-07-09&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.9</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2007-05-08&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.8</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2007-03-13&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.7</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2006-12-18&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.6</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2006-04-18&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.5</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2006-02-01&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.4</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2005-11-15&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.3</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2005-08-05&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.2</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2005-05-27&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.1</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2005-02-14&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.0</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2004-10-12&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2.6</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2004-03-03&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2.5</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2003-11-12&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2.4</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2003-08-20&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2.3</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2003-07-03&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2.2</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2003-06-20&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2.1</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2003-06-03&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>1.4</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2002-09-10&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>1.3</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2002-07-04&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>1.2</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2002-05-21&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>1.1</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2002-04-30&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>1.0</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2002-04-10&#34;
+  }
+]</code></pre>
+    </details>
+  </details>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="shell footer-inner">
+    <div class="footer-col">
+      <p class="footer-title">EOL Tracker</p>
+      <p class="footer-note">
+        Software lifecycle dates are republished from
+        <a href="https://endoflife.date/" rel="noopener">endoflife.date</a>.
+        Source data is licensed
+        <a href="https://github.com/endoflife-date/endoflife.date/blob/master/LICENSE" rel="noopener">MIT</a>.
+      </p>
+      <p class="footer-note">
+        Hardware lifecycle data comes from
+        <a href="https://eosl.date/" rel="noopener">eosl.date</a> by Subash Geetha Krishnan,
+        which aggregates public vendor announcements, and from
+        <a href="https://opengear.com/end-life-products" rel="noopener">Opengear's end-of-life product list</a>.
+        Attribution here is credit by name and link, not a licence to the source material: nothing is reproduced as
+        licensed material. This catalog is an independent normalization, not affiliated with endoflife.date, eosl.date,
+        Opengear or any vendor listed here.
+      </p>
+      <p class="footer-note">
+        Last catalog refresh Sep 17, 2026 at 18:35 UTC.
+      </p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-title">Data</p>
+      <ul class="footer-links">
+        <li><a href="/eoltracker/v1/feed.json">Feed (JSON)</a></li>
+        <li><a href="/eoltracker/v1/feed.atom">Deadlines (Atom)</a></li>
+        <li><a href="/eoltracker/v1/calendar.ics">Deadlines (iCal)</a></li>
+        <li><a href="/eoltracker/v1/products.json">Product summaries</a></li>
+        <li><a href="/eoltracker/v1/hardware.json">Hardware summaries</a></li>
+        <li><a href="/eoltracker/v1/changes.atom">Changes (Atom)</a></li>
+        <li><a href="/eoltracker/v1/changes.json">Changes (JSON)</a></li>
+        <li><a href="/eoltracker/hardware/">Hardware catalog</a></li>
+        <li><a href="/eoltracker/api/">Endpoints &amp; mapping</a></li>
+        <li><a href="/eoltracker/v1/schema/product.json">Record schema</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <p class="footer-title">Project</p>
+      <ul class="footer-links">
+        <li><a href="https://github.com/zarguell/eoltracker" rel="noopener">Source on GitHub</a></li>
+        <li><a href="https://endoflife.date/" rel="noopener">Upstream source</a></li>
+        <li><a href="/eoltracker/THIRD-PARTY-NOTICES.txt">THIRD-PARTY-NOTICES.txt</a></li>
+        <li><a href="/eoltracker/OASIS-NOTICE.txt">OASIS-NOTICE.txt</a></li>
+        <li><a href="/eoltracker/404.html">Not found page</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script src="/eoltracker/app.js" defer></script>
+</body>
+</html>

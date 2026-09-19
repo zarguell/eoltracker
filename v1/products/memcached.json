@@ -1,0 +1,145 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "memcached",
+  "name": "Memcached",
+  "category": "software",
+  "upstream_category": "database",
+  "identifiers": [
+    {
+      "type": "purl",
+      "id": "pkg:generic/memcached"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:deb/ubuntu/memcached"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:deb/debian/memcached"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:rpm/amzn/memcached"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:rpm/redhat/memcached"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:rpm/centos/memcached"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/library/memcached"
+    },
+    {
+      "type": "repology",
+      "id": "memcached"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:memcached:memcached"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/memcached",
+    "releasePolicy": null
+  },
+  "releases": [
+    {
+      "id": "1.6",
+      "name": "1.6",
+      "milestones": {
+        "ga": "2020-03-08",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.6",
+        "codename": null,
+        "label": "1.6",
+        "releaseDate": "2020-03-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "1.6.45",
+          "date": "2026-07-09",
+          "link": "https://github.com/memcached/memcached/wiki/ReleaseNotes1645"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.5",
+      "name": "1.5",
+      "milestones": {
+        "ga": "2017-07-21",
+        "eos": null,
+        "eossec": "2020-03-09",
+        "eol": "2020-03-09"
+      },
+      "upstream": {
+        "name": "1.5",
+        "codename": null,
+        "label": "1.5",
+        "releaseDate": "2017-07-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-03-09",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.5.22",
+          "date": "2020-02-01",
+          "link": "https://github.com/memcached/memcached/wiki/ReleaseNotes1522"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.4",
+      "name": "1.4",
+      "milestones": {
+        "ga": "2009-07-09",
+        "eos": null,
+        "eossec": "2017-07-21",
+        "eol": "2017-07-21"
+      },
+      "upstream": {
+        "name": "1.4",
+        "codename": null,
+        "label": "1.4",
+        "releaseDate": "2009-07-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-07-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.4.39",
+          "date": "2017-07-04",
+          "link": "https://github.com/memcached/memcached/wiki/ReleaseNotes1439"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/memcached/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-07-11T00:06:20+00:00"
+  }
+}

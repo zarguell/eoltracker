@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-dlm960",
+  "name": "DLm960",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Disk Library for Mainframe (DLm)",
+  "family": "Disk Library for Mainframe (DLm)",
+  "model_number": "DLm960",
+  "milestones": {
+    "ga": "2009-08-31",
+    "eos": "2011-12-31",
+    "eossec": null,
+    "eol": "2016-12-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "DLm960",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "DLm960",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Disk Library for Mainframe (DLm)",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2011-12-31",
+      "datetime": null,
+      "value": "2011-12-31",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Aug. 31, 2009",
+      "datetime": "2009-08-31",
+      "value": "2009-08-31",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2016-12-31",
+      "datetime": null,
+      "value": "2016-12-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/mainframe-storage/vendor/dell-emc/disk-library-for-mainframe-dlm/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

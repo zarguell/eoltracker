@@ -1,0 +1,63 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "hpe-convergedsystem-750",
+  "name": "Converged System 750 (CS750)",
+  "category": "hardware",
+  "vendor": "HPE",
+  "product_line": "HPE ConvergedSystem",
+  "family": "Converged System",
+  "model_number": "ConvergedSystem 750",
+  "milestones": {
+    "ga": "2021-11-01",
+    "eos": null,
+    "eossec": null,
+    "eol": "2026-01-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "Converged System 750 (CS750)",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "ConvergedSystem 750",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "HPE ConvergedSystem",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Nov. 01, 2021",
+      "datetime": "2021-11-01",
+      "value": "2021-11-01",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support": {
+      "text": "2026-01-31",
+      "datetime": null,
+      "value": "2026-01-31",
+      "role": "eol",
+      "links": [
+        "https://support.hpe.com/hpesc/public/docDisplay?docId=a00105348en_us&docLocale=en_US"
+      ]
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/servers/vendor/hpe/converged-system/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

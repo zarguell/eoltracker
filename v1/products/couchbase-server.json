@@ -1,0 +1,642 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "couchbase-server",
+  "name": "Couchbase Server",
+  "category": "software",
+  "upstream_category": "database",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "couchbase-server-community"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/library/couchbase"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/couchbase/server"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:couchbase:couchbase_server"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:couchbase:couchbase_server"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Full Maintenance",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/couchbase.svg",
+    "html": "https://endoflife.date/couchbase-server",
+    "releasePolicy": "https://www.couchbase.com/support-policy/enterprise-software/"
+  },
+  "releases": [
+    {
+      "id": "8.0",
+      "name": "8.0",
+      "milestones": {
+        "ga": "2025-10-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "8.0",
+        "codename": null,
+        "label": "8.0",
+        "releaseDate": "2025-10-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2028-10-31",
+        "isMaintained": true,
+        "latest": {
+          "name": "8.0.3",
+          "date": "2026-09-01",
+          "link": "https://www.couchbase.com/blog/couchbase-8-hyperscale-ai/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.6",
+      "name": "7.6",
+      "milestones": {
+        "ga": "2024-03-25",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.6",
+        "codename": null,
+        "label": "7.6",
+        "releaseDate": "2024-03-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-03-31",
+        "isMaintained": true,
+        "latest": {
+          "name": "7.6.12",
+          "date": "2026-07-01",
+          "link": "https://docs.couchbase.com/server/7.6/release-notes/relnotes.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.2",
+      "name": "7.2",
+      "milestones": {
+        "ga": "2023-06-01",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.2",
+        "codename": null,
+        "label": "7.2",
+        "releaseDate": "2023-06-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-07-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.2.9",
+          "date": "2026-01-01",
+          "link": "https://docs.couchbase.com/server/7.2/release-notes/relnotes.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.1",
+      "name": "7.1",
+      "milestones": {
+        "ga": "2022-05-10",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.1",
+        "codename": null,
+        "label": "7.1",
+        "releaseDate": "2022-05-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-01-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.1.6",
+          "date": "2023-11-01",
+          "link": "https://web.archive.org/web/20251008201114/https://docs.couchbase.com/server/7.1/release-notes/relnotes.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.0",
+      "name": "7.0",
+      "milestones": {
+        "ga": "2021-07-29",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.0",
+        "codename": null,
+        "label": "7.0",
+        "releaseDate": "2021-07-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-01-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.0.5",
+          "date": "2022-12-01",
+          "link": "https://web.archive.org/web/20250916172610/https://docs.couchbase.com/server/7.0/release-notes/relnotes.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.6",
+      "name": "6.6",
+      "milestones": {
+        "ga": "2020-08-12",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.6",
+        "codename": null,
+        "label": "6.6",
+        "releaseDate": "2020-08-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-01-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.6.6",
+          "date": "2023-01-15",
+          "link": "https://web.archive.org/web/20230519153917/https://docs.couchbase.com/server/6.6/release-notes/relnotes.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.5",
+      "name": "6.5",
+      "milestones": {
+        "ga": "2020-01-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.5",
+        "codename": null,
+        "label": "6.5",
+        "releaseDate": "2020-01-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-02-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.5.2",
+          "date": "2021-02-15",
+          "link": "https://web.archive.org/web/20230519160357/https://docs.couchbase.com/server/6.5/release-notes/relnotes.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.0",
+      "name": "6.0",
+      "milestones": {
+        "ga": "2018-10-31",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.0",
+        "codename": null,
+        "label": "6.0",
+        "releaseDate": "2018-10-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-07-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.0.5",
+          "date": "2022-04-30",
+          "link": "https://web.archive.org/web/20230519162206/https://docs.couchbase.com/server/6.0/release-notes/relnotes.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.5",
+      "name": "5.5",
+      "milestones": {
+        "ga": "2018-07-23",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.5",
+        "codename": null,
+        "label": "5.5",
+        "releaseDate": "2018-07-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-07-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.5.6",
+          "date": "2019-11-15",
+          "link": "https://web.archive.org/web/20211016022911/https://docs.couchbase.com/server/5.5/release-notes/relnotes.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.1",
+      "name": "5.1",
+      "milestones": {
+        "ga": "2018-02-28",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.1",
+        "codename": null,
+        "label": "5.1",
+        "releaseDate": "2018-02-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-01-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.1.3",
+          "date": "2018-11-15",
+          "link": "https://web.archive.org/web/20211021103137/https://docs.couchbase.com/server/5.1/release-notes/relnotes.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.0",
+      "name": "5.0",
+      "milestones": {
+        "ga": "2017-10-26",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.0",
+        "codename": null,
+        "label": "5.0",
+        "releaseDate": "2017-10-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-08-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.0.1",
+          "date": "2017-12-15",
+          "link": "https://web.archive.org/web/20211207070105/https://docs.couchbase.com/server/5.0/release-notes/relnotes.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.6",
+      "name": "4.6",
+      "milestones": {
+        "ga": "2017-02-16",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.6",
+        "codename": null,
+        "label": "4.6",
+        "releaseDate": "2017-02-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-08-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.0.1",
+          "date": "2017-12-15",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.5",
+      "name": "4.5",
+      "milestones": {
+        "ga": "2016-06-27",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.5",
+        "codename": null,
+        "label": "4.5",
+        "releaseDate": "2016-06-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-04-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.5.1",
+          "date": "2016-10-05",
+          "link": "https://web.archive.org/web/20250803112322/https://www.couchbase.com/blog/announcing-couchbase-server-4-5-1/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.1",
+      "name": "4.1",
+      "milestones": {
+        "ga": "2015-12-10",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.1",
+        "codename": null,
+        "label": "4.1",
+        "releaseDate": "2015-12-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-04-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.1.2",
+          "date": "2016-08-15",
+          "link": "https://web.archive.org/web/20250807032054/https://www.couchbase.com/blog/announcing-couchbase-server-4-1-2/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.0",
+      "name": "4.0",
+      "milestones": {
+        "ga": "2015-10-06",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.0",
+        "codename": null,
+        "label": "4.0",
+        "releaseDate": "2015-10-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-04-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.0.0",
+          "date": "2015-10-06",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.1",
+      "name": "3.1",
+      "milestones": {
+        "ga": "2015-08-31",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.1",
+        "codename": null,
+        "label": "3.1",
+        "releaseDate": "2015-08-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-02-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.1.3",
+          "date": "2016-05-16",
+          "link": "https://web.archive.org/web/20250816123113/https://www.couchbase.com/blog/couchbase-3.1.3-ce-is-now-available/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.0",
+      "name": "3.0",
+      "milestones": {
+        "ga": "2014-12-17",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.0",
+        "codename": null,
+        "label": "3.0",
+        "releaseDate": "2014-12-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2016-04-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.0.3",
+          "date": "2015-03-30",
+          "link": "https://www.couchbase.com/blog/announcing-couchbase-server-3.0.3/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.5",
+      "name": "2.5",
+      "milestones": {
+        "ga": "2014-02-28",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.5",
+        "codename": null,
+        "label": "2.5",
+        "releaseDate": "2014-02-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2015-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.5.0",
+          "date": "2014-02-28",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.2",
+      "name": "2.2",
+      "milestones": {
+        "ga": "2013-09-30",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.2",
+        "codename": null,
+        "label": "2.2",
+        "releaseDate": "2013-09-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2015-03-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.2.0",
+          "date": "2013-09-30",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.1",
+      "name": "2.1",
+      "milestones": {
+        "ga": "2013-06-26",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.1",
+        "codename": null,
+        "label": "2.1",
+        "releaseDate": "2013-06-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2014-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.1.0",
+          "date": "2013-06-26",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.0",
+      "name": "2.0",
+      "milestones": {
+        "ga": "2012-12-31",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.0",
+        "codename": null,
+        "label": "2.0",
+        "releaseDate": "2012-12-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2014-06-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.0.0",
+          "date": "2012-12-31",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.8",
+      "name": "1.8",
+      "milestones": {
+        "ga": "2012-07-31",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.8",
+        "codename": null,
+        "label": "1.8",
+        "releaseDate": "2012-07-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2014-01-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.8.0",
+          "date": "2012-07-31",
+          "link": null
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/couchbase-server/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-14T05:28:06+00:00"
+  }
+}

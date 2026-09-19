@@ -1,0 +1,232 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "openzfs",
+  "name": "OpenZFS",
+  "category": "software",
+  "upstream_category": "app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "openzfs"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:openzfs:openzfs"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:openzfs:openzfs"
+    }
+  ],
+  "labels": {
+    "eoas": "Active support",
+    "discontinued": null,
+    "eol": "LTS support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/openzfs.svg",
+    "html": "https://endoflife.date/openzfs",
+    "releasePolicy": "https://github.com/openzfs/zfs/blob/master/RELEASES.md"
+  },
+  "releases": [
+    {
+      "id": "2.4",
+      "name": "2.4",
+      "milestones": {
+        "ga": "2025-12-18",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.4",
+        "codename": null,
+        "label": "2.4",
+        "releaseDate": "2025-12-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "2.4.4",
+          "date": "2026-08-21",
+          "link": "https://github.com/openzfs/zfs/releases/tag/zfs-2.4.4"
+        },
+        "custom": {
+          "supportedLinux": "4.18 - 6.18",
+          "supportedFreeBSD": "14, 15, 16"
+        }
+      }
+    },
+    {
+      "id": "2.3",
+      "name": "2.3",
+      "milestones": {
+        "ga": "2024-10-17",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.3",
+        "codename": null,
+        "label": "2.3",
+        "releaseDate": "2024-10-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-12-18",
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "2.3.9",
+          "date": "2026-08-21",
+          "link": "https://github.com/openzfs/zfs/releases/tag/zfs-2.3.9"
+        },
+        "custom": {
+          "supportedLinux": "4.18 - 6.15",
+          "supportedFreeBSD": "13.3+, 14.0+"
+        }
+      }
+    },
+    {
+      "id": "2.2",
+      "name": "2.2",
+      "milestones": {
+        "ga": "2023-07-27",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.2",
+        "codename": null,
+        "label": "2.2",
+        "releaseDate": "2023-07-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-01-13",
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "2.2.11",
+          "date": "2026-08-21",
+          "link": "https://github.com/openzfs/zfs/releases/tag/zfs-2.2.11"
+        },
+        "custom": {
+          "supportedLinux": "4.18 - 6.15",
+          "supportedFreeBSD": "13.3+, 14.0+"
+        }
+      }
+    },
+    {
+      "id": "2.1",
+      "name": "2.1",
+      "milestones": {
+        "ga": "2021-04-19",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.1",
+        "codename": null,
+        "label": "2.1",
+        "releaseDate": "2021-04-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-10-12",
+        "isEol": true,
+        "eolFrom": "2025-01-13",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.1.16",
+          "date": "2024-12-06",
+          "link": "https://github.com/openzfs/zfs/releases/tag/zfs-2.1.16"
+        },
+        "custom": {
+          "supportedLinux": "3.10 - 6.7",
+          "supportedFreeBSD": "12.2+"
+        }
+      }
+    },
+    {
+      "id": "2.0",
+      "name": "2.0",
+      "milestones": {
+        "ga": "2020-11-30",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.0",
+        "codename": null,
+        "label": "2.0",
+        "releaseDate": "2020-11-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-07-02",
+        "isEol": true,
+        "eolFrom": "2021-12-23",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.0.7",
+          "date": "2021-12-23",
+          "link": "https://github.com/openzfs/zfs/releases/tag/zfs-2.0.7"
+        },
+        "custom": {
+          "supportedLinux": "3.10 - 5.15",
+          "supportedFreeBSD": "12.2+"
+        }
+      }
+    },
+    {
+      "id": "0.8",
+      "name": "0.8",
+      "milestones": {
+        "ga": "2019-05-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.8",
+        "codename": null,
+        "label": "0.8",
+        "releaseDate": "2019-05-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-12-14",
+        "isEol": true,
+        "eolFrom": "2020-12-14",
+        "isMaintained": false,
+        "latest": {
+          "name": "0.8.6",
+          "date": "2020-12-14",
+          "link": "https://github.com/openzfs/zfs/releases/tag/zfs-0.8.6"
+        },
+        "custom": {
+          "supportedLinux": "2.6.32 - 5.9",
+          "supportedFreeBSD": "N/A"
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/openzfs/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-14T20:08:33+00:00"
+  }
+}

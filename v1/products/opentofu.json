@@ -1,0 +1,229 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "opentofu",
+  "name": "OpenTofu",
+  "category": "software",
+  "upstream_category": "app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "opentofu"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/opentofu/opentofu"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:oci/opentofu?repository_url=ghcr.io/opentofu"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/opentofu.svg",
+    "html": "https://endoflife.date/opentofu",
+    "releasePolicy": null
+  },
+  "releases": [
+    {
+      "id": "1.12",
+      "name": "1.12",
+      "milestones": {
+        "ga": "2026-05-14",
+        "eos": null,
+        "eossec": "2027-02-01",
+        "eol": "2027-02-01"
+      },
+      "upstream": {
+        "name": "1.12",
+        "codename": null,
+        "label": "1.12",
+        "releaseDate": "2026-05-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-02-01",
+        "isMaintained": true,
+        "latest": {
+          "name": "1.12.6",
+          "date": "2026-08-19",
+          "link": "https://github.com/opentofu/opentofu/blob/v1.12.6/CHANGELOG.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.11",
+      "name": "1.11",
+      "milestones": {
+        "ga": "2025-12-09",
+        "eos": null,
+        "eossec": "2026-08-19",
+        "eol": "2026-08-19"
+      },
+      "upstream": {
+        "name": "1.11",
+        "codename": null,
+        "label": "1.11",
+        "releaseDate": "2025-12-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-08-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.11.14",
+          "date": "2026-08-19",
+          "link": "https://github.com/opentofu/opentofu/blob/v1.11.14/CHANGELOG.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.10",
+      "name": "1.10",
+      "milestones": {
+        "ga": "2025-06-24",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.10",
+        "codename": null,
+        "label": "1.10",
+        "releaseDate": "2025-06-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "1.10.10",
+          "date": "2026-05-11",
+          "link": "https://github.com/opentofu/opentofu/blob/v1.10.10/CHANGELOG.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.9",
+      "name": "1.9",
+      "milestones": {
+        "ga": "2025-01-09",
+        "eos": null,
+        "eossec": "2026-05-14",
+        "eol": "2026-05-14"
+      },
+      "upstream": {
+        "name": "1.9",
+        "codename": null,
+        "label": "1.9",
+        "releaseDate": "2025-01-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-05-14",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.9.4",
+          "date": "2025-09-03",
+          "link": "https://github.com/opentofu/opentofu/blob/v1.9.4/CHANGELOG.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.8",
+      "name": "1.8",
+      "milestones": {
+        "ga": "2024-07-29",
+        "eos": null,
+        "eossec": "2025-12-09",
+        "eol": "2025-12-09"
+      },
+      "upstream": {
+        "name": "1.8",
+        "codename": null,
+        "label": "1.8",
+        "releaseDate": "2024-07-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-12-09",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.8.11",
+          "date": "2025-07-31",
+          "link": "https://github.com/opentofu/opentofu/blob/v1.8.11/CHANGELOG.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.7",
+      "name": "1.7",
+      "milestones": {
+        "ga": "2024-04-30",
+        "eos": null,
+        "eossec": "2025-06-24",
+        "eol": "2025-06-24"
+      },
+      "upstream": {
+        "name": "1.7",
+        "codename": null,
+        "label": "1.7",
+        "releaseDate": "2024-04-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-06-24",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.7.10",
+          "date": "2025-07-31",
+          "link": "https://github.com/opentofu/opentofu/blob/v1.7.10/CHANGELOG.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.6",
+      "name": "1.6",
+      "milestones": {
+        "ga": "2024-01-09",
+        "eos": null,
+        "eossec": "2025-01-09",
+        "eol": "2025-01-09"
+      },
+      "upstream": {
+        "name": "1.6",
+        "codename": null,
+        "label": "1.6",
+        "releaseDate": "2024-01-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-01-09",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.6.3",
+          "date": "2024-07-09",
+          "link": "https://github.com/opentofu/opentofu/blob/v1.6.3/CHANGELOG.md"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/opentofu/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-08-21T18:44:32+00:00"
+  }
+}

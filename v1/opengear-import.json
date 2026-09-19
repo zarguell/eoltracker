@@ -1,0 +1,138 @@
+{
+  "source_url": "https://opengear.com/end-life-products",
+  "verifier": "deterministic-opengear",
+  "checked_at": "2026-09-19T09:39:24Z",
+  "record_scope": "Opengear hardware lifecycle rows and part groups (dated retirements and undated announcements, exact part strings) plus the current configurator's exact SKU listings, which carry no support deadline of their own",
+  "lifecycle": {
+    "source_url": "https://opengear.com/end-life-products",
+    "rows": 51,
+    "published_records": 43,
+    "dated_records": 42,
+    "unknown_date_records": 1,
+    "excluded_rows": 8,
+    "announcements": [
+      {
+        "id": "opengear-im7200-infrastructure-manager-bcc074a0f86e",
+        "name": "IM7200 Infrastructure Manager",
+        "part_scope": "IM7200 Rev 06",
+        "reason": "Announced retirement without a published support deadline (End of Sale 'N/A', End of Support 'N/A')",
+        "source_url": "https://opengear.com/wp-content/uploads/2025/12/Product-Revision-Notice-071619.pdf"
+      }
+    ],
+    "retained_absent": []
+  },
+  "imported_count": 89,
+  "excluded_count": 8,
+  "excluded": [
+    {
+      "product": "VCMS",
+      "parts": "VCMS",
+      "reason": "Software product (software appliance or utility), not hardware lifecycle scope"
+    },
+    {
+      "product": "PortShare for Windows",
+      "parts": "n/a",
+      "reason": "Software product (software appliance or utility), not hardware lifecycle scope"
+    },
+    {
+      "product": "PortShare",
+      "reason": "Software section; not hardware"
+    },
+    {
+      "product": "SDT Connector",
+      "reason": "Software section; not hardware"
+    },
+    {
+      "product": "Lighthouse 4",
+      "reason": "Software section; not hardware"
+    },
+    {
+      "product": "Lighthouse (Standard)",
+      "reason": "Software section; not hardware"
+    },
+    {
+      "product": "Lighthouse Enterprise",
+      "reason": "Software section; not hardware"
+    },
+    {
+      "product": "Lighthouse Enterprise Automation Edition",
+      "reason": "Software section; not hardware"
+    }
+  ],
+  "catalog": {
+    "source_url": "https://opengear.com/configure/",
+    "models": 46,
+    "expected_models": 46,
+    "listed": 46,
+    "matched_lifecycle": 0,
+    "unmatched_lifecycle": 46,
+    "unmatched_skus": [
+      "ACM7004-2-GLB",
+      "ACM7004-2-L-GLB",
+      "ACM7004-2-LMP-GLB",
+      "ACM7004-2-M-GLB",
+      "ACM7004-5-GLB",
+      "ACM7004-5-L-GLB",
+      "ACM7004-5-LMP-GLB",
+      "ACM7008-2-GLB",
+      "ACM7008-2-L-GLB",
+      "ACM7008-2-LMP-GLB",
+      "ACM7008-2-M-GLB",
+      "CM8004",
+      "CM8004-C",
+      "CM8008",
+      "CM8008-C",
+      "CM8116",
+      "CM8116-10G",
+      "CM8116-10G-C",
+      "CM8116-10G-DDC",
+      "CM8116-10G-USB",
+      "CM8116-DDC",
+      "CM8132",
+      "CM8132-10G",
+      "CM8132-10G-C",
+      "CM8132-10G-DDC",
+      "CM8132-DDC",
+      "CM8148",
+      "CM8148-10G",
+      "CM8148-10G-C",
+      "CM8148-10G-DDC",
+      "CM8148-10G-USB",
+      "CM8148-DDC",
+      "CM8196-10G",
+      "OM1304-4E",
+      "OM1304-4E-C",
+      "OM1308-8E",
+      "OM1308-8E-C",
+      "OM2224-24E",
+      "OM2224-24E-10G",
+      "OM2224-24E-10G-DDC",
+      "OM2224-24E-10G-DDC-L",
+      "OM2224-24E-10G-L",
+      "OM2224-24E-10G-L-1TB",
+      "OM2224-24E-DDC",
+      "OM2224-24E-DDC-L",
+      "OM2224-24E-L"
+    ],
+    "unlisted": 0,
+    "retained_unlisted": []
+  },
+  "record_counts": {
+    "hardware": 40,
+    "revision": 3,
+    "catalog": 46,
+    "added": [],
+    "retained": [],
+    "status_unknown": 47
+  },
+  "total_records": 89,
+  "limitations": [
+    "Catalog listing is a current-sale fact from the Opengear configurator, not a support entitlement.",
+    "Removal from the catalog is not an end of life: retained records keep catalog.listed false.",
+    "Lifecycle notices are matched by exact published part string only, never by replacement part, family or substring, so grouped and revision scopes stay grouped.",
+    "A revision-only notice is never applied to the whole SKU it revises.",
+    "A SKU absent from the lifecycle tables has no published support date here; none is inferred.",
+    "Support dates come from Opengear's public lifecycle tables; contract extensions are out of scope.",
+    "Software sections, and software products listed in the hardware table, stay out of hardware scope."
+  ]
+}

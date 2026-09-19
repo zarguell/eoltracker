@@ -1,0 +1,234 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "title": "EOL Tracker normalized hardware record (not OpenEoX Core)",
+  "$defs": {
+    "research": {
+      "description": "One-time researched provenance (AGENTS.md rule 8 tier b). Present only on records a human or agent contributed for a model no deterministic source covers; absent on every record an importer owns. The quote is the vendor sentence, stored verbatim with normalized whitespace, that states the dates beside it.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "quote",
+        "source_url",
+        "retrieved_at",
+        "contributor",
+        "method",
+        "verified_at",
+        "stale_after",
+        "evidence"
+      ],
+      "properties": {
+        "quote": {
+          "type": "string",
+          "minLength": 20
+        },
+        "source_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "retrieved_at": {
+          "type": "string",
+          "format": "date"
+        },
+        "contributor": {
+          "type": "string",
+          "minLength": 1
+        },
+        "method": {
+          "enum": [
+            "manual",
+            "agent"
+          ]
+        },
+        "verified_at": {
+          "description": "When the quote was last confirmed against source_url. null means the evidence was admitted from store only and has never been refetched.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "stale_after": {
+          "description": "Explicit review deadline, when the contributor set one. Null falls back to the 180-day freshness horizon on the record's last_checked.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "evidence": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/evidence"
+          }
+        },
+        "vendor": {
+          "type": "string",
+          "minLength": 1
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "evidence": {
+      "description": "One stored verbatim quote and the page it came from. Every milestone the record states must appear, at the same day precision, in a quote that backs it.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "quote",
+        "source_url",
+        "retrieved_at"
+      ],
+      "properties": {
+        "quote": {
+          "type": "string",
+          "minLength": 20
+        },
+        "source_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "retrieved_at": {
+          "type": "string",
+          "format": "date"
+        },
+        "milestones": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "enum": [
+              "ga",
+              "eos",
+              "eossec",
+              "eol"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "id",
+    "name",
+    "category",
+    "vendor",
+    "product_line",
+    "milestones",
+    "status",
+    "upstream",
+    "provenance"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "category": {
+      "const": "hardware"
+    },
+    "vendor": {
+      "type": "string",
+      "minLength": 1
+    },
+    "product_line": {
+      "type": "string",
+      "minLength": 1
+    },
+    "family": {
+      "type": "string"
+    },
+    "model_number": {
+      "type": "string"
+    },
+    "upstream": {
+      "type": "object"
+    },
+    "milestones": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ga", "eos", "eossec", "eol"],
+      "properties": {
+        "ga": {"type": ["string", "null"], "format": "date"},
+        "eos": {"type": ["string", "null"], "format": "date"},
+        "eossec": {"type": ["string", "null"], "format": "date"},
+        "eol": {"type": ["string", "null"], "format": "date"}
+      }
+    },
+    "status": {
+      "enum": ["supported", "expiring", "eol", "unknown"]
+    },
+    "catalog": {
+      "description": "Opengear configurator listing evidence: whether the current catalog offers this exact SKU. Listing is not support entitlement, and removal from the catalog is not an end of life.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["listed", "source_url"],
+      "properties": {
+        "listed": {"type": "boolean"},
+        "source_url": {"const": "https://opengear.com/configure/"}
+      }
+    },
+    "lifecycle": {
+      "description": "The lifecycle group/revision records whose published part scope names this exact SKU, and whether any such notice exists now. An unknown state is never invented: an empty match list with listed false means no notice names this SKU.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["listed", "matches"],
+      "properties": {
+        "listed": {"type": "boolean"},
+        "matches": {
+          "type": "array",
+          "items": {"type": "string", "pattern": "^opengear-"}
+        }
+      }
+    },
+    "evidence": {
+      "description": "Set when a committed record is retained although the current source snapshot no longer states it. Its milestones and raw upstream cells stay unchanged; an absent source row is neither a support claim nor an end of life.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["in_source"],
+      "properties": {
+        "in_source": {"type": "boolean"}
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_urls", "verifier", "last_checked"],
+      "properties": {
+        "source_urls": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string", "format": "uri"}
+        },
+        "verifier": {
+          "description": "The pipeline that owns this record: a deterministic collector's fixed id (deterministic-<source-slug>; the registry in engine/sources.py decides which ones exist and which catalog each owns), or researched-<contributor-slug> for a one-time researched contribution. The pattern admits a new collector; only a registered source is published.",
+          "type": "string",
+          "pattern": "^(?:deterministic|researched)-[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "last_checked": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "research": {
+          "$ref": "#/$defs/research"
+        }
+      }
+    }
+  }
+}

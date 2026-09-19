@@ -1,0 +1,94 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "behat",
+  "name": "Behat",
+  "category": "software",
+  "upstream_category": "framework",
+  "identifiers": [
+    {
+      "type": "purl",
+      "id": "pkg:composer/behat/behat"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/behat/behat"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/behat",
+    "releasePolicy": "https://docs.behat.org/en/latest/releases.html"
+  },
+  "releases": [
+    {
+      "id": "3",
+      "name": "3",
+      "milestones": {
+        "ga": "2014-04-20",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3",
+        "codename": null,
+        "label": "3",
+        "releaseDate": "2014-04-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "3.33.0",
+          "date": "2026-09-07",
+          "link": "https://github.com/Behat/Behat/releases/tag/v3.33.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2",
+      "name": "2",
+      "milestones": {
+        "ga": "2011-07-01",
+        "eos": null,
+        "eossec": "2015-06-01",
+        "eol": "2015-06-01"
+      },
+      "upstream": {
+        "name": "2",
+        "codename": null,
+        "label": "2",
+        "releaseDate": "2011-07-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2015-06-01",
+        "isEol": true,
+        "eolFrom": "2015-06-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.5.5",
+          "date": "2015-06-01",
+          "link": "https://github.com/Behat/Behat/releases/tag/v2.5.5"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/behat/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-08T00:07:27+00:00"
+  }
+}
