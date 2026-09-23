@@ -420,6 +420,27 @@ SOURCES = (
         validator="engine.iis.validate_record",
         report="iis-import.json",
     ),
+    Source(
+        id="import-openui5",
+        module="engine.openui5",
+        entry="import_openui5",
+        verifier="deterministic-openui5",
+        category="software",
+        name="OpenUI5 release and maintenance data",
+        url="https://openui5.org/releases.html",
+        pages=(
+            Page("https://openui5.org/releases.html", "OpenUI5 releases"),
+            Page("https://openui5versiontracker.cfapps.eu10.hana.ondemand.com/OpenUI5ReleasesInfo",
+                 "OpenUI5 release feed"),
+            Page("https://sdk.openui5.org/versionoverview.json", "OpenUI5 version overview"),
+            Page("https://sdk.openui5.org/version.json", "OpenUI5 current version"),
+            Page("https://ui5.github.io/docs/02_Read-Me-First/versioning-and-maintenance-of-openui5-91f0214.md",
+                 "OpenUI5 versioning and maintenance policy"),
+        ),
+        attribution="OpenUI5 release and branch maintenance data published directly by the OpenUI5 project; EOM/EOMM/EOCP remain raw lifecycle fields until their precision and semantics are normalized.",
+        validator="engine.openui5.validate_record",
+        report="openui5-import.json",
+    ),
 )
 
 # Registry id -> source, and verifier -> source: one source per verifier, which

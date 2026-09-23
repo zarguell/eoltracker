@@ -1,0 +1,163 @@
+{
+  "target": "software",
+  "id": "researched-prosody",
+  "name": "Prosody",
+  "vendor": "Prosody IM",
+  "category": "server-app",
+  "release": "13.0",
+  "summary": "Prosody is a lightweight, extensible XMPP (Jabber) server written in Lua. Its lifecycle is defined per release branch (x.y) by the project's own packager/versioning policy; the project publishes no API or machine-readable lifecycle feed.",
+  "identifiers": [
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:prosody:prosody"
+    }
+  ],
+  "links": {
+    "html": "https://prosody.im/doc/packagers",
+    "releaseNotes": "https://prosody.im/doc/release",
+    "repository": "https://hg.prosody.im/trunk/branches",
+    "source": "https://prosody.im/source/"
+  },
+  "releases": [
+    {
+      "id": "13.0",
+      "name": "Prosody 13.0 (13.0.x)",
+      "milestones": {
+        "ga": "2025-03-17",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      }
+    },
+    {
+      "id": "0.12",
+      "name": "Prosody 0.12 (0.12.x)",
+      "milestones": {
+        "ga": "2022-03-14",
+        "eos": null,
+        "eossec": "2026-06",
+        "eol": "2026-06"
+      }
+    },
+    {
+      "id": "0.11",
+      "name": "Prosody 0.11 (0.11.x)",
+      "milestones": {
+        "ga": "2018-11-20",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-08-22"
+      }
+    },
+    {
+      "id": "0.10-and-older",
+      "name": "Prosody 0.10 and older (0.10.x, 0.9.x, 0.8.x, 0.7.x, 0.6.x, 0.5.x, 0.4.x, 0.3.x, 0.2.x, 0.1.x)",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "quote": "Current branches: 13.0: Included in Debian 13 (trixie). Support until at least 2028. 0.12: Included in Debian 12 (bookworm). Support ends in June 2026. 0.11: Included in Debian 11 (bullseye). Not supported since August 2024.",
+      "source_url": "https://prosody.im/doc/packagers",
+      "retrieved_at": "2026-09-23",
+      "milestones": [
+        "eol"
+      ]
+    },
+    {
+      "quote": "Support for the 0.12.x series ends in June 2026. This means it will no longer receive any fixes or updates, even for security issues.",
+      "source_url": "https://blog.prosody.im/prosody-0.12.6-released/",
+      "retrieved_at": "2026-09-23",
+      "milestones": [
+        "eossec",
+        "eol"
+      ]
+    },
+    {
+      "quote": "changeset 443f4426e7d2 0.11 EOL 0.11 author Kim Alvefur date 2024-08-22",
+      "source_url": "https://hg.prosody.im/trunk/rev/443f4426e7d2",
+      "retrieved_at": "2026-09-23",
+      "milestones": [
+        "eol"
+      ]
+    },
+    {
+      "quote": "13.0.0 Released: 2025-03-17",
+      "source_url": "https://prosody.im/doc/release/13.0.0",
+      "retrieved_at": "2026-09-23",
+      "milestones": [
+        "ga"
+      ]
+    },
+    {
+      "quote": "0.12.0 Released: 2022-03-14",
+      "source_url": "https://prosody.im/doc/release/0.12.0",
+      "retrieved_at": "2026-09-23",
+      "milestones": [
+        "ga"
+      ]
+    },
+    {
+      "quote": "0.11.0 Released: 2018-11-20",
+      "source_url": "https://prosody.im/doc/release/0.11.0",
+      "retrieved_at": "2026-09-23",
+      "milestones": [
+        "ga"
+      ]
+    },
+    {
+      "quote": "Our release branches are identified by the first two components ( x.y ), e.g. 0.12 or 13.0 . Patch releases, which introduce only bug fixes will increase the last component ( z ).",
+      "source_url": "https://prosody.im/doc/packagers",
+      "retrieved_at": "2026-09-23"
+    },
+    {
+      "quote": "Each Prosody release branch (as identified by the first two components of the version number) begins with a .0 release (such as 0.12.0 or 13.0.0 ). From this first release onwards, we commit to including only bug fixes or non-disruptive small improvements in that series.",
+      "source_url": "https://prosody.im/doc/packagers",
+      "retrieved_at": "2026-09-23"
+    },
+    {
+      "quote": "Our general policy is to support a branch for as long as it is included in a non-end-of-life version of Debian. This excludes Debian LTS.",
+      "source_url": "https://prosody.im/doc/packagers",
+      "retrieved_at": "2026-09-23"
+    },
+    {
+      "quote": "Specifically, we consider 13.0 and 13.1 to be independent major releases, as we did 0.11 and 0.12 .",
+      "source_url": "https://prosody.im/doc/packagers",
+      "retrieved_at": "2026-09-23"
+    },
+    {
+      "quote": "Our package repository contains packages for each of our major branches, e.g. prosody-13.0 . Once a branch is released it is considered stable, and will only receive bug fixes and no major changes.",
+      "source_url": "https://prosody.im/doc/upgrading",
+      "retrieved_at": "2026-09-23"
+    },
+    {
+      "quote": "This is a security release for the Prosody 0.12.x old stable series.",
+      "source_url": "https://blog.prosody.im/prosody-0.12.6-released/",
+      "retrieved_at": "2026-09-23"
+    },
+    {
+      "quote": "13.0.6 0.12.6 13.0.5 13.0.4 13.0.3 13.0.2 13.0.1 13.0.0 0.12.5 0.12.4 0.12.3 0.12.2 0.11.14 0.12.1 0.12.0 0.11.13 0.11.12 0.11.11 0.11.10 0.11.9 0.11.8 0.11.7 0.11.6 0.11.5 0.11.4 0.11.3 0.11.2 0.11.1 0.11.0 0.10.3 0.10.2 0.10.1 0.10.0 0.9.14 Release Notes 0.9.13 Release Notes 0.9.12 Release Notes 0.9.11 Release Notes 0.9.10 Release Notes 0.9.9 Release Notes 0.9.8 Release Notes 0.9.7 Release Notes 0.9.6 Release Notes 0.9.5 Release Notes 0.9.4 Release Notes 0.9.3 Release Notes 0.9.2 Release Notes 0.9.1 Release Notes 0.9.0 Release Notes 0.8.2 Release Notes 0.8.1 Release Notes 0.8.0 Release Notes 0.7.0 Release Notes 0.6.2 Release Notes 0.6.1 Release Notes 0.6.0 Release Notes 0.5.2 Release Notes 0.5.1 Release Notes 0.5.0 Release Notes 0.4.2 Release Notes 0.4.1 Release Notes 0.4.0 Release Notes 0.3.0 Release Notes 0.2.0 Release Notes 0.1.0 Release Notes",
+      "source_url": "https://prosody.im/doc/release",
+      "retrieved_at": "2026-09-23"
+    },
+    {
+      "quote": "branch node default ce31fdde0ad1 13.0 8f34af6a3821 0.12 5011e4bc95d7 0.11 443f4426e7d2 s2s 774ab5f2efa6 tls 7407b1160b46 sasl 70a7ef4b6aaa",
+      "source_url": "https://hg.prosody.im/trunk/branches",
+      "retrieved_at": "2026-09-23"
+    },
+    {
+      "quote": "Downloading a snapshot (tarball) The current development source can always be downloaded from here . The current and past releases are available in our downloads section .",
+      "source_url": "https://prosody.im/source/",
+      "retrieved_at": "2026-09-23"
+    }
+  ],
+  "contributor": "eoltracker-agent",
+  "method": "agent",
+  "stale_after": "2027-03-23",
+  "notes": "Tier: researched (AGENTS.md rule 8b). No deterministic source covers Prosody: https://endoflife.date/api/all.json lists 477 products (checked 2026-09-23) with no prosody/jabber/xmpp slug and https://endoflife.date/api/prosody.json returns HTTP 404, and data/products/ holds no prosody record, so this contribution neither overwrites nor shadows a pipeline. The lifecycle evidence is entirely first-party Prosody material (prosody.im docs, blog.prosody.im release notices, and the project's own Mercurial repository). MODELING: Prosody defines its lifecycle at the release BRANCH level, not per patch tag -- the packager/versioning policy states that branches are identified by the first two components (x.y, e.g. 0.12 or 13.0) and that each branch begins with a .0 release and then receives only bug fixes -- so this record carries one row per branch: 13.0, 0.12, 0.11, and the undated historical aggregate 0.10-and-older. The complete first-party tag inventory is retained as evidence (13.0.0-13.0.6, 0.12.0-0.12.6, 0.11.0-0.11.14, and 0.10.3 back to 0.1.0), so no historical release silently disappears; per-patch tags are not separate lifecycle rows because the vendor attaches no lifecycle to them. NOT DERIVED: every stored date is a vendor-stated date quoted verbatim from the page it came from; no milestone_provenance is present and nothing is computed. Specifically, (1) 13.0's entry 'Support until at least 2028' is a year-only, explicitly non-terminal lower bound and the schema has no year-precision representation, so 13.0's eos/eossec/eol stay null -- it is retained in the evidence above rather than converted into 2028-01-01 or 2028-12-31; (2) 0.12's 'Support ends in June 2026' is stored as the month 2026-06 and never padded to a day; (3) 0.11's 'Not supported since August 2024' is corroboration only -- its stored eol is the exact day 2024-08-22 read from the project's own EOL marker changeset, not a month expanded backwards. eossec: 0.12 also fills eossec because the vendor's own security release notice states it will no longer receive fixes 'even for security issues'; 0.11's eossec stays null because its only support statement is the generic 'Not supported since August 2024', which AGENTS.md forbids mapping into end-of-security-support, and the EOL marker names no security cut-off. SOURCE LIMITS: (1) the support rule itself ('support a branch for as long as it is included in a non-end-of-life version of Debian, excluding Debian LTS') is quoted but deliberately never converted into a date: Debian's own release schedule is a third party's calendar, not a Prosody-published duration or release trigger, and no Debian date is stored anywhere here; (2) the release index's tag-node commit dates and the blog post dates differ by a day or two for some releases (e.g. 13.0.6 code node 2026-05-26 vs announcement 2026-05-27) -- those are release-catalog facts and none is used as a lifecycle date; (3) 0.10 and older have release tags but no first-party lifecycle statement, so the row is published with every milestone null rather than dating it from release age or cadence; (4) 0.11's marker is an empty commit whose message is 'EOL 0.11', which is the vendor's own termination statement, not an inference from a newer release. EXCLUSIONS: the Mercurial development branch default/trunk is not a released branch and gets no release row, and the closed development branches s2s, tls and sasl appear on the repository's branch list but are not version branches, so they are excluded rather than published as releases. If a deterministic collector for Prosody is ever added, this researched record must be retired in favour of it (rule 8)."
+}
