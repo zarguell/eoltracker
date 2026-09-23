@@ -1,0 +1,141 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "researched-freertos-lts",
+  "name": "FreeRTOS LTS",
+  "category": "software",
+  "upstream_category": "os",
+  "identifiers": [],
+  "labels": {},
+  "links": {
+    "repository": "https://github.com/FreeRTOS/FreeRTOS-LTS",
+    "changelog": "https://github.com/FreeRTOS/FreeRTOS-LTS/blob/202604.00-LTS/CHANGELOG.md",
+    "releasePolicy": "https://aws.amazon.com/freertos/features/",
+    "kernel": "https://github.com/FreeRTOS/FreeRTOS-Kernel",
+    "support": "https://www.freertos.org/Why-FreeRTOS/Support-options"
+  },
+  "releases": [
+    {
+      "id": "202604.00-LTS",
+      "name": "FreeRTOS 202604.00-LTS (April 2026)",
+      "milestones": {
+        "ga": "2026-04",
+        "eos": null,
+        "eossec": "2028-04-30",
+        "eol": "2028-04-30"
+      },
+      "upstream": {
+        "name": "FreeRTOS 202604.00-LTS (April 2026)",
+        "Contribution": {
+          "text": "Libraries in this GitHub branch (also listed below) are part of the FreeRTOS 202604-LTS release. Learn more at https://freertos.org/lts-libraries.html. | Library | Version | LTS Until | LTS Repo URL | |------------------------- |---------------------|------------|------------------------------------------------------------------------------- | | FreeRTOS Kernel | 11.3.0 | 04/30/2028 | https://github.com/FreeRTOS/FreeRTOS-Kernel/tree/V11.3.0 | Libraries in this GitHub branch (also listed below) are part of the FreeRTOS 202406-LTS release. Learn more at https://freertos.org/lts-libraries.html. | Library | Version | LTS Until | LTS Repo URL | |------------------------- |---------------------|------------|------------------------------------------------------------------------------- | | FreeRTOS Kernel | 11.1.0 | 06/30/2026 | https://github.com/FreeRTOS/FreeRTOS-Kernel/tree/V11.1.0 | ## 202604.00-LTS (April 2026) Long Term Support (LTS) release of the following libraries: ## 202406.00-LTS (June 2024) Long Term Support (LTS) release of the following libraries: FreeRTOS offers feature stability with long term support (LTS) releases. FreeRTOS LTS libraries come with security updates and critical bug fixes to the FreeRTOS kernel and IoT libraries listed below for two years, and are maintained by AWS for the benefit of the FreeRTOS community. FreeRTOS LTS releases use a date-based versioning scheme (YYYYMM) followed by a patch sequential number (.XX). For example, FreeRTOS 202604.01 LTS means the first patch to the April-2026 FreeRTOS LTS release. AWS also offers FreeRTOS Extended Maintenance Plan (EMP) that provides you with security patches and critical bug fixes on your chosen FreeRTOS LTS version for up to an additional 10 years.",
+          "value": null,
+          "datetime": null,
+          "role": null,
+          "links": [
+            "https://raw.githubusercontent.com/FreeRTOS/FreeRTOS-LTS/202604.00-LTS/README.md",
+            "https://raw.githubusercontent.com/FreeRTOS/FreeRTOS-LTS/202406.00-LTS/README.md",
+            "https://raw.githubusercontent.com/FreeRTOS/FreeRTOS-LTS/202604.00-LTS/CHANGELOG.md",
+            "https://raw.githubusercontent.com/FreeRTOS/FreeRTOS-LTS/202406.00-LTS/CHANGELOG.md"
+          ]
+        }
+      }
+    },
+    {
+      "id": "202406.00-LTS",
+      "name": "FreeRTOS 202406.00-LTS (June 2024)",
+      "milestones": {
+        "ga": "2024-06",
+        "eos": null,
+        "eossec": "2026-06-30",
+        "eol": "2026-06-30"
+      },
+      "upstream": {
+        "name": "FreeRTOS 202406.00-LTS (June 2024)",
+        "Contribution": {
+          "text": "Libraries in this GitHub branch (also listed below) are part of the FreeRTOS 202604-LTS release. Learn more at https://freertos.org/lts-libraries.html. | Library | Version | LTS Until | LTS Repo URL | |------------------------- |---------------------|------------|------------------------------------------------------------------------------- | | FreeRTOS Kernel | 11.3.0 | 04/30/2028 | https://github.com/FreeRTOS/FreeRTOS-Kernel/tree/V11.3.0 | Libraries in this GitHub branch (also listed below) are part of the FreeRTOS 202406-LTS release. Learn more at https://freertos.org/lts-libraries.html. | Library | Version | LTS Until | LTS Repo URL | |------------------------- |---------------------|------------|------------------------------------------------------------------------------- | | FreeRTOS Kernel | 11.1.0 | 06/30/2026 | https://github.com/FreeRTOS/FreeRTOS-Kernel/tree/V11.1.0 | ## 202604.00-LTS (April 2026) Long Term Support (LTS) release of the following libraries: ## 202406.00-LTS (June 2024) Long Term Support (LTS) release of the following libraries: FreeRTOS offers feature stability with long term support (LTS) releases. FreeRTOS LTS libraries come with security updates and critical bug fixes to the FreeRTOS kernel and IoT libraries listed below for two years, and are maintained by AWS for the benefit of the FreeRTOS community. FreeRTOS LTS releases use a date-based versioning scheme (YYYYMM) followed by a patch sequential number (.XX). For example, FreeRTOS 202604.01 LTS means the first patch to the April-2026 FreeRTOS LTS release. AWS also offers FreeRTOS Extended Maintenance Plan (EMP) that provides you with security patches and critical bug fixes on your chosen FreeRTOS LTS version for up to an additional 10 years.",
+          "value": null,
+          "datetime": null,
+          "role": null,
+          "links": [
+            "https://raw.githubusercontent.com/FreeRTOS/FreeRTOS-LTS/202604.00-LTS/README.md",
+            "https://raw.githubusercontent.com/FreeRTOS/FreeRTOS-LTS/202406.00-LTS/README.md",
+            "https://raw.githubusercontent.com/FreeRTOS/FreeRTOS-LTS/202604.00-LTS/CHANGELOG.md",
+            "https://raw.githubusercontent.com/FreeRTOS/FreeRTOS-LTS/202406.00-LTS/CHANGELOG.md"
+          ]
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "verifier": "researched-eoltracker-agent",
+    "last_checked": "2026-09-23T22:57:22Z",
+    "research": {
+      "quote": "Libraries in this GitHub branch (also listed below) are part of the FreeRTOS 202604-LTS release. Learn more at https://freertos.org/lts-libraries.html. | Library | Version | LTS Until | LTS Repo URL | |------------------------- |---------------------|------------|------------------------------------------------------------------------------- | | FreeRTOS Kernel | 11.3.0 | 04/30/2028 | https://github.com/FreeRTOS/FreeRTOS-Kernel/tree/V11.3.0 | Libraries in this GitHub branch (also listed below) are part of the FreeRTOS 202406-LTS release. Learn more at https://freertos.org/lts-libraries.html. | Library | Version | LTS Until | LTS Repo URL | |------------------------- |---------------------|------------|------------------------------------------------------------------------------- | | FreeRTOS Kernel | 11.1.0 | 06/30/2026 | https://github.com/FreeRTOS/FreeRTOS-Kernel/tree/V11.1.0 | ## 202604.00-LTS (April 2026) Long Term Support (LTS) release of the following libraries: ## 202406.00-LTS (June 2024) Long Term Support (LTS) release of the following libraries: FreeRTOS offers feature stability with long term support (LTS) releases. FreeRTOS LTS libraries come with security updates and critical bug fixes to the FreeRTOS kernel and IoT libraries listed below for two years, and are maintained by AWS for the benefit of the FreeRTOS community. FreeRTOS LTS releases use a date-based versioning scheme (YYYYMM) followed by a patch sequential number (.XX). For example, FreeRTOS 202604.01 LTS means the first patch to the April-2026 FreeRTOS LTS release. AWS also offers FreeRTOS Extended Maintenance Plan (EMP) that provides you with security patches and critical bug fixes on your chosen FreeRTOS LTS version for up to an additional 10 years.",
+      "source_url": "https://raw.githubusercontent.com/FreeRTOS/FreeRTOS-LTS/202604.00-LTS/README.md",
+      "retrieved_at": "2026-09-23",
+      "contributor": "eoltracker-agent",
+      "method": "agent",
+      "verified_at": "2026-09-23T22:57:22Z",
+      "stale_after": "2027-03-22",
+      "evidence": [
+        {
+          "quote": "Libraries in this GitHub branch (also listed below) are part of the FreeRTOS 202604-LTS release. Learn more at https://freertos.org/lts-libraries.html. | Library | Version | LTS Until | LTS Repo URL | |------------------------- |---------------------|------------|------------------------------------------------------------------------------- | | FreeRTOS Kernel | 11.3.0 | 04/30/2028 | https://github.com/FreeRTOS/FreeRTOS-Kernel/tree/V11.3.0 |",
+          "source_url": "https://raw.githubusercontent.com/FreeRTOS/FreeRTOS-LTS/202604.00-LTS/README.md",
+          "retrieved_at": "2026-09-23",
+          "milestones": [
+            "eossec",
+            "eol"
+          ]
+        },
+        {
+          "quote": "Libraries in this GitHub branch (also listed below) are part of the FreeRTOS 202406-LTS release. Learn more at https://freertos.org/lts-libraries.html. | Library | Version | LTS Until | LTS Repo URL | |------------------------- |---------------------|------------|------------------------------------------------------------------------------- | | FreeRTOS Kernel | 11.1.0 | 06/30/2026 | https://github.com/FreeRTOS/FreeRTOS-Kernel/tree/V11.1.0 |",
+          "source_url": "https://raw.githubusercontent.com/FreeRTOS/FreeRTOS-LTS/202406.00-LTS/README.md",
+          "retrieved_at": "2026-09-23",
+          "milestones": [
+            "eossec",
+            "eol"
+          ]
+        },
+        {
+          "quote": "## 202604.00-LTS (April 2026) Long Term Support (LTS) release of the following libraries:",
+          "source_url": "https://raw.githubusercontent.com/FreeRTOS/FreeRTOS-LTS/202604.00-LTS/CHANGELOG.md",
+          "retrieved_at": "2026-09-23",
+          "milestones": [
+            "ga"
+          ]
+        },
+        {
+          "quote": "## 202406.00-LTS (June 2024) Long Term Support (LTS) release of the following libraries:",
+          "source_url": "https://raw.githubusercontent.com/FreeRTOS/FreeRTOS-LTS/202406.00-LTS/CHANGELOG.md",
+          "retrieved_at": "2026-09-23",
+          "milestones": [
+            "ga"
+          ]
+        },
+        {
+          "quote": "FreeRTOS offers feature stability with long term support (LTS) releases. FreeRTOS LTS libraries come with security updates and critical bug fixes to the FreeRTOS kernel and IoT libraries listed below for two years, and are maintained by AWS for the benefit of the FreeRTOS community.",
+          "source_url": "https://raw.githubusercontent.com/FreeRTOS/FreeRTOS-LTS/202604.00-LTS/README.md",
+          "retrieved_at": "2026-09-23",
+          "milestones": [
+            "eossec",
+            "eol"
+          ]
+        },
+        {
+          "quote": "FreeRTOS LTS releases use a date-based versioning scheme (YYYYMM) followed by a patch sequential number (.XX). For example, FreeRTOS 202604.01 LTS means the first patch to the April-2026 FreeRTOS LTS release.",
+          "source_url": "https://raw.githubusercontent.com/FreeRTOS/FreeRTOS-LTS/202604.00-LTS/README.md",
+          "retrieved_at": "2026-09-23"
+        },
+        {
+          "quote": "AWS also offers FreeRTOS Extended Maintenance Plan (EMP) that provides you with security patches and critical bug fixes on your chosen FreeRTOS LTS version for up to an additional 10 years.",
+          "source_url": "https://raw.githubusercontent.com/FreeRTOS/FreeRTOS-LTS/202604.00-LTS/README.md",
+          "retrieved_at": "2026-09-23"
+        }
+      ],
+      "vendor": "Amazon Web Services",
+      "summary": "FreeRTOS is an MIT-licensed real-time operating system kernel maintained by Amazon Web Services. Its long term support distribution publishes a per-branch README table whose 'LTS Until' column states the day the kernel and the listed IoT libraries stop receiving security updates; there is no API, feed or machine-readable lifecycle document.",
+      "notes": "Tier: researched (AGENTS.md rule 8b). No deterministic source covers FreeRTOS LTS: https://endoflife.date/api/v1/products/ lists 477 products (checked 2026-09-23) with no freertos/rtos slug, and data/products/ holds no freertos record, so this contribution neither overwrites nor shadows a pipeline. SCOPE: the title names the AWS-maintained LTS distribution, not the FreeRTOS kernel release stream. The kernel's own tags (V11.1.0, V11.3.1, ...) publish release notes but no support deadline, so no kernel tag is a line here and no kernel-tag EOL is inferred from cadence. LINES: one row per LTS branch initial release, 202406.00-LTS and 202604.00-LTS, read from the branch's pinned .00 tag rather than a mutable branch name (the current 202406-LTS branch README has moved on to the 4.2.6/2.3.1 patched component versions, while the .00 tag still shows the initial 4.2.1/2.3.0). The .05 patch of 202406 and the .01 patch of 202604 change component versions only; both branch tables still state the same LTS Until day, so the patch rows are not separate lifecycle lines. GA is MONTH precision, exactly as the official changelog headings state it ('202406.00-LTS (June 2024)', '202604.00-LTS (April 2026)'): the vendor publishes no day for the LTS release, so none is stored and neither month is padded to 2024-06-01/2026-04-01. EOSSEC/EOL are the 'LTS Until' cell of the branch table, day precision and quoted verbatim: 06/30/2026 for 202406.00-LTS and 04/30/2028 for 202604.00-LTS. Both milestones carry that one date because the labelled window is the whole LTS support window and its stated content is 'security updates and critical bug fixes' - i.e. the day security fixes stop is also the day the LTS branch's support ends. EOS is null: FreeRTOS is open source and sells nothing, and no orderability cut-off is published. EMP: AWS's Extended Maintenance Plan ('up to an additional 10 years') is a paid, subscription-conditional extension that must not be published as a universal deadline; it is stored as a quote only, and it carries no milestone. The 202406 branch's LTS Until (2026-06-30) is already in the past at the research date and is published as the historical deadline it is. MONTH-PRECISION GA excludes both releases from the day-precision OpenEoX export (general_availability_month_precision in v1/openeox/index.json) because OpenEoX Core carries a stated day only; the day-precision eossec/eol of the 202604 branch are still syndicated by Atom/RSS/iCalendar."
+    },
+    "source_url": "https://raw.githubusercontent.com/FreeRTOS/FreeRTOS-LTS/202604.00-LTS/README.md",
+    "upstream_modified": null
+  }
+}

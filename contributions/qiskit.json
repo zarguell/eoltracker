@@ -1,0 +1,182 @@
+{
+  "target": "software",
+  "id": "researched-qiskit",
+  "name": "Qiskit SDK",
+  "vendor": "IBM",
+  "category": "framework",
+  "release": "2.x",
+  "summary": "The Qiskit SDK is IBM's open-source SDK for working with quantum computers at the level of extended quantum circuits, operators, and primitives; it is the core `qiskit` package on PyPI. IBM publishes a major-version support strategy in prose (a new major version ends the previous major version after a minimum period, and a final patch release documents the end of support), dates every release in its own release notes, and publishes exact release timestamps through the Qiskit repository's GitHub release metadata. It publishes no lifecycle table and no machine-readable end-of-life feed.",
+  "identifiers": [
+    {
+      "type": "purl",
+      "id": "pkg:pypi/qiskit"
+    }
+  ],
+  "links": {
+    "about": "https://www.ibm.com/quantum/qiskit",
+    "documentation": "https://quantum.cloud.ibm.com/docs",
+    "releaseNotes": "https://quantum.cloud.ibm.com/docs/en/api/qiskit/release-notes",
+    "versionStrategy": "https://quantum.cloud.ibm.com/docs/en/guides/qiskit-sdk-version-strategy",
+    "repository": "https://github.com/Qiskit/qiskit",
+    "milestones": "https://github.com/Qiskit/qiskit/milestones",
+    "pypi": "https://pypi.org/project/qiskit/"
+  },
+  "releases": [
+    {
+      "id": "2.x",
+      "name": "Qiskit SDK 2.x (current)",
+      "milestones": {
+        "ga": "2025-03-31",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      }
+    },
+    {
+      "id": "1.x",
+      "name": "Qiskit SDK 1.x",
+      "milestones": {
+        "ga": "2024-02-15",
+        "eos": null,
+        "eossec": "2026-06-12",
+        "eol": "2026-06-12"
+      }
+    },
+    {
+      "id": "0.46",
+      "name": "Qiskit SDK 0.46.x (final 0.x series)",
+      "milestones": {
+        "ga": "2024-02-01",
+        "eos": null,
+        "eossec": "2024-09-23",
+        "eol": "2024-09-23"
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "quote": "A final patch version is published when support is dropped, and that release also documents the end of support for that major version series.",
+      "source_url": "https://quantum.cloud.ibm.com/docs/en/guides/qiskit-sdk-version-strategy",
+      "retrieved_at": "2026-09-23"
+    },
+    {
+      "quote": "With the release of a new major version, the previous major version is supported for at least six months with only bug fixes, and one year for security fixes.",
+      "source_url": "https://quantum.cloud.ibm.com/docs/en/guides/qiskit-sdk-version-strategy",
+      "retrieved_at": "2026-09-23"
+    },
+    {
+      "quote": "The minimum period between major version releases is one year.",
+      "source_url": "https://quantum.cloud.ibm.com/docs/en/guides/qiskit-sdk-version-strategy",
+      "retrieved_at": "2026-09-23"
+    },
+    {
+      "quote": "The 0.46.0 release is the final minor version release for the 0.x series.",
+      "source_url": "https://quantum.cloud.ibm.com/docs/en/api/qiskit/release-notes/0.46",
+      "retrieved_at": "2026-09-23"
+    },
+    {
+      "quote": "The 0.46.x release series will continue to be supported and recieve bugfix and security fixes via patch releases for 6 months after this release.",
+      "source_url": "https://quantum.cloud.ibm.com/docs/en/api/qiskit/release-notes/0.46",
+      "retrieved_at": "2026-09-23"
+    },
+    {
+      "quote": "Qiskit 0.46.3 is a minor bugfix and backport release for the 0.46 series. It is also the last release of the 0.46 minor version, marking its end-of-life.",
+      "source_url": "https://quantum.cloud.ibm.com/docs/en/api/qiskit/release-notes/0.46",
+      "retrieved_at": "2026-09-23"
+    },
+    {
+      "quote": "the 0.46.x release will continue to be supported, with periodic patch releases that contain bug fixes, for 6 months after the release of 1.0. That is, 0.46.x will be supported until 2024-08.",
+      "source_url": "https://quantum.cloud.ibm.com/docs/en/api/qiskit/release-notes/1.0",
+      "retrieved_at": "2026-09-23"
+    },
+    {
+      "quote": "The v1.4.x release series will continue to be supported and receive bugfixes for 6 months and security fixes for 1 year after this release.",
+      "source_url": "https://quantum.cloud.ibm.com/docs/en/api/qiskit/release-notes/1.4",
+      "retrieved_at": "2026-09-23"
+    },
+    {
+      "quote": "Qiskit v1.4.5 is the last bugfix release in the 1.4 series and marks the end-of-life of the series. Support for security fixes in the 1.4 series will be continued until March 31st, 2026.",
+      "source_url": "https://quantum.cloud.ibm.com/docs/en/api/qiskit/release-notes/1.4",
+      "retrieved_at": "2026-09-23"
+    },
+    {
+      "quote": "Qiskit v1.4.6 is a security-only release, and the final release in the Qiskit v1.x series.",
+      "source_url": "https://quantum.cloud.ibm.com/docs/en/api/qiskit/release-notes/1.4",
+      "retrieved_at": "2026-09-23"
+    },
+    {
+      "quote": "Qiskit v1.x is no longer maintained in any form.",
+      "source_url": "https://quantum.cloud.ibm.com/docs/en/api/qiskit/release-notes/1.4",
+      "retrieved_at": "2026-09-23"
+    },
+    {
+      "quote": "The removed APIs are still supported in the Qiskit v1.4.x release which will receive bug fixes for another six months and will have security updates for one year.",
+      "source_url": "https://quantum.cloud.ibm.com/docs/en/api/qiskit/release-notes/2.0",
+      "retrieved_at": "2026-09-23"
+    },
+    {
+      "quote": "There will be further feature releases of Qiskit in the 2.x series; we do not expect to release Qiskit 3.0 until much later in 2026, as there is currently no need for breaking changes.",
+      "source_url": "https://quantum.cloud.ibm.com/docs/en/api/qiskit/release-notes/2.3",
+      "retrieved_at": "2026-09-23"
+    },
+    {
+      "quote": "An open-source SDK for working with quantum computers at the level of extended quantum circuits, operators, and primitives.",
+      "source_url": "https://pypi.org/project/qiskit/",
+      "retrieved_at": "2026-09-23"
+    },
+    {
+      "quote": "This library is the core component of Qiskit, which contains the building blocks for creating and working with quantum circuits, quantum operators, and primitive functions (Sampler and Estimator).",
+      "source_url": "https://pypi.org/project/qiskit/",
+      "retrieved_at": "2026-09-23"
+    },
+    {
+      "quote": "\"published_at\":\"2024-02-01T20:26:30Z\"",
+      "source_url": "https://api.github.com/repos/Qiskit/qiskit/releases/tags/0.46.0",
+      "retrieved_at": "2026-09-23",
+      "milestones": ["ga"]
+    },
+    {
+      "quote": "\"published_at\":\"2024-09-23T09:58:02Z\"",
+      "source_url": "https://api.github.com/repos/Qiskit/qiskit/releases/tags/0.46.3",
+      "retrieved_at": "2026-09-23",
+      "milestones": ["eossec", "eol"]
+    },
+    {
+      "quote": "This is the final release in the 0.x release series marking the end-of-life of the release series.",
+      "source_url": "https://api.github.com/repos/Qiskit/qiskit/releases/tags/0.46.3",
+      "retrieved_at": "2026-09-23"
+    },
+    {
+      "quote": "\"published_at\":\"2024-02-15T20:42:34Z\"",
+      "source_url": "https://api.github.com/repos/Qiskit/qiskit/releases/tags/1.0.0",
+      "retrieved_at": "2026-09-23",
+      "milestones": ["ga"]
+    },
+    {
+      "quote": "\"published_at\":\"2025-10-13T11:07:03Z\"",
+      "source_url": "https://api.github.com/repos/Qiskit/qiskit/releases/tags/1.4.5",
+      "retrieved_at": "2026-09-23"
+    },
+    {
+      "quote": "\"published_at\":\"2026-06-12T17:37:39Z\"",
+      "source_url": "https://api.github.com/repos/Qiskit/qiskit/releases/tags/1.4.6",
+      "retrieved_at": "2026-09-23",
+      "milestones": ["eossec", "eol"]
+    },
+    {
+      "quote": "\"published_at\":\"2025-03-31T19:17:28Z\"",
+      "source_url": "https://api.github.com/repos/Qiskit/qiskit/releases/tags/2.0.0",
+      "retrieved_at": "2026-09-23",
+      "milestones": ["ga"]
+    },
+    {
+      "quote": "\"due_on\":null,\"closed_at\":null",
+      "source_url": "https://api.github.com/repos/Qiskit/qiskit/milestones/76",
+      "retrieved_at": "2026-09-23"
+    }
+  ],
+  "contributor": "eoltracker-agent",
+  "method": "agent",
+  "stale_after": "2027-03-22",
+  "notes": "Tier: researched, vendor-stated dates only. This record carries no derived milestone and no milestone_provenance entry: every stored date is a date the vendor publishes, and the only rule IBM states about terminal support is an explicit MINIMUM, which is not a terminal date and is therefore stored nowhere as one (see below). NO DETERMINISTIC SOURCE COVERS QISKIT: https://endoflife.date/api/v1/products/ lists 477 products (checked 2026-09-23) with no qiskit or quantum slug, and data/products/ holds no qiskit record, so this contribution neither overwrites nor shadows a pipeline (AGENTS.md rule 8a/8b). SCOPE: the Qiskit SDK, the core `qiskit` package, which PyPI defines as 'An open-source SDK for working with quantum computers at the level of extended quantum circuits, operators, and primitives' and 'the core component of Qiskit'. Excluded: IBM Quantum Platform, Qiskit Runtime and Serverless, Qiskit Aer, providers, addons, and the separately versioned ecosystem packages. CATEGORY: framework follows the endoflife.date precedent for SDK and runtime libraries rather than applications (nodejs, numpy, deno, bun and qt are all categorized framework there). MODELING: IBM organizes support by MAJOR release series -- minor versions and patches are published for the current major version only -- so the rows here are the three major series with published lifecycle events: 0.46 (the final pre-1.0 branch, the last of the 0.x series), 1.x, and 2.x (current). Earlier 0.x history is out of scope: it predates the semantic-versioning and support policy introduced at 1.0, and IBM dates no terminal schedule for those pre-0.46 branches. GA: each ga is the official publication timestamp of that series' first final release, read from the Qiskit repository's own release metadata: 0.46.0 -> 2024-02-01T20:26:30Z, 1.0.0 -> 2024-02-15T20:42:34Z, 2.0.0 -> 2025-03-31T19:17:28Z. The day stored is the UTC day the vendor's release object states; no date is derived from cadence. 0.46 TERMINAL (2024-09-23): the 0.46 release notes state 'The 0.46.0 release is the final minor version release for the 0.x series.' and, of the last patch, 'Qiskit 0.46.3 is a minor bugfix and backport release for the 0.46 series. It is also the last release of the 0.46 minor version, marking its end-of-life.'; the release object for 0.46.3 states the same fact in its own words ('This is the final release in the 0.x release series marking the end-of-life of the release series.') and carries published_at 2024-09-23T09:58:02Z. eossec and eol therefore share 2024-09-23: the vendor's last 0.46.x release ends both bugfix and security support, and no separate security-only phase is stated for 0.46, so a distinct eossec date would have to be invented. 1.x TERMINAL (2026-06-12): 1.4.0 states 'will continue to be supported and receive bugfixes for 6 months and security fixes for 1 year after this release'; 1.4.5 states it 'is the last bugfix release in the 1.4 series and marks the end-of-life of the series'; and 1.4.6 states it 'is a security-only release, and the final release in the Qiskit v1.x series' with 'Qiskit v1.x is no longer maintained in any form.' The 1.4.6 release object, published 2026-06-12T17:37:39Z, is the last security fix the 1.x series ever shipped, so eossec and eol both carry 2026-06-12. EOS: null on every row, including the two ended series. IBM documents release, support, bug-fix and security-fix dates; it states nothing about end of sale, orderability or commercial availability for the open-source SDK, and no date is invented for a milestone the source never mentions. THE MINIMUM SUPPORT POLICY IS NOT A TERMINAL DATE: the current strategy page says the previous major version 'is supported for at least six months with only bug fixes, and one year for security fixes' and that 'The minimum period between major version releases is one year.' Both are explicit lower bounds, and the support clock starts at a new major version whose release is not dated: the Qiskit 3.0 milestone on GitHub is open with no due date (\"due_on\":null,\"closed_at\":null, read 2026-09-23) and the 2.3 release notes say only 'we do not expect to release Qiskit 3.0 until much later in 2026'. A lower bound cannot be stored as a milestone, and the policy's own resolution is to wait: 'A final patch version is published when support is dropped, and that release also documents the end of support for that major version series.' 2.x is therefore published with map 2025-03-31 and its eossec/eol null, and no date is projected onto it. SUPERSEDED OR NON-TERMINAL STATEMENTS, DELIBERATELY NOT STORED: (1) the 1.0 notes' '0.46.x will be supported until 2024-08' is MONTH precision and was overtaken by the exact terminal event of 0.46.3 on 2024-09-23; it is never padded to a day. (2) the 1.4.5 note's 'Support for security fixes in the 1.4 series will be continued until March 31st, 2026' was itself superseded -- the series shipped a further security-only release, 1.4.6, on 2026-06-12 -- so the later actual terminal event is the one stored. (3) 2025-10-13 (the 1.4.5 publication day) is the end of BUG-FIX support only, not the end of the series: the same sentence continues security support afterwards, so it fills neither eossec nor eol. (4) Python and operating-system support tiers in the release notes (for example Linux aarch64 tier-1 support, or the supported Python versions) are platform compatibility facts, not release lifecycle milestones. NO INDIVIDUAL 2.x MINOR IS GIVEN A LIFE: IBM states no end date for an individual superseded 2.x minor, so none is inferred from a later minor's release, and the record carries one current 2.x row instead of per-minor rows with invented terminals. SOURCE NOTES: the IBM documentation pages are dynamic; the quotes were read from the canonical pages listed as source_url at the alternate Markdown rendering and cross-checked against the rendered HTML text, both of which carry the same wording. The exact-day release timestamps come from the Qiskit repository's own GitHub release objects, which are the vendor's machine-readable publication record; the GitHub API is rate limited (a 403 was observed for one request on 2026-09-23), so the record is expected to be admitted with --allow-stale-evidence and re-verified by re-reading the same release objects. RETIREMENT: if a deterministic collector for Qiskit is ever added, this researched record must be retired in favour of it (AGENTS.md rule 8); and when a final 2.x patch documenting that series' end of support is published, its date replaces the nulls in the 2.x row."
+}
