@@ -1,0 +1,248 @@
+{
+  "target": "software",
+  "id": "researched-r",
+  "name": "R",
+  "vendor": "The R Foundation for Statistical Computing",
+  "category": "lang",
+  "release": "4.6",
+  "summary": "R is a language and environment for statistical computing and graphics distributed by the R Foundation as 'Base R plus Recommended Packages'. The Foundation states the rule that ends each release line in its own Software Development Life Cycle document and dates each release on its own CRAN archive listing; it publishes no lifecycle table and no API.",
+  "identifiers": [],
+  "links": {
+    "about": "https://www.r-project.org/",
+    "download": "https://cran.r-project.org/src/base/R-4/",
+    "releasePolicy": "https://www.r-project.org/doc/R-SDLC.pdf",
+    "certification": "https://www.r-project.org/certification.html",
+    "releasePlans": "https://developer.r-project.org/",
+    "releaseNotes": "https://stat.ethz.ch/pipermail/r-announce/"
+  },
+  "releases": [
+    {
+      "id": "4.0",
+      "name": "R 4.0.x (Arbor Day)",
+      "milestones": {
+        "ga": "2020-04-24",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-05-18"
+      },
+      "milestone_provenance": {
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.r-project.org/doc/R-SDLC.pdf",
+          "quote": "At a new x.y.0 version of R, the prior version is retired from formal support. R Core’s efforts are then focused on the new Release (and the ongoing Development) version. No further development, bug fixes or patches are made available for the retired versions.",
+          "base_date": "2020-04-24",
+          "base_label": "R 4.0.0 general availability",
+          "trigger": {
+            "release_id": "4.1",
+            "date": "2021-05-18",
+            "label": "R 4.1.0, the successor x.y.0 release that retires the prior version"
+          }
+        }
+      }
+    },
+    {
+      "id": "4.1",
+      "name": "R 4.1.x (Camp Pontanezen)",
+      "milestones": {
+        "ga": "2021-05-18",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-04-22"
+      },
+      "milestone_provenance": {
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.r-project.org/doc/R-SDLC.pdf",
+          "quote": "At a new x.y.0 version of R, the prior version is retired from formal support. R Core’s efforts are then focused on the new Release (and the ongoing Development) version. No further development, bug fixes or patches are made available for the retired versions.",
+          "base_date": "2021-05-18",
+          "base_label": "R 4.1.0 general availability",
+          "trigger": {
+            "release_id": "4.2",
+            "date": "2022-04-22",
+            "label": "R 4.2.0, the successor x.y.0 release that retires the prior version"
+          }
+        }
+      }
+    },
+    {
+      "id": "4.2",
+      "name": "R 4.2.x (Vigorous Calisthenics)",
+      "milestones": {
+        "ga": "2022-04-22",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-04-21"
+      },
+      "milestone_provenance": {
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.r-project.org/doc/R-SDLC.pdf",
+          "quote": "At a new x.y.0 version of R, the prior version is retired from formal support. R Core’s efforts are then focused on the new Release (and the ongoing Development) version. No further development, bug fixes or patches are made available for the retired versions.",
+          "base_date": "2022-04-22",
+          "base_label": "R 4.2.0 general availability",
+          "trigger": {
+            "release_id": "4.3",
+            "date": "2023-04-21",
+            "label": "R 4.3.0, the successor x.y.0 release that retires the prior version"
+          }
+        }
+      }
+    },
+    {
+      "id": "4.3",
+      "name": "R 4.3.x (Already Tomorrow)",
+      "milestones": {
+        "ga": "2023-04-21",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-04-24"
+      },
+      "milestone_provenance": {
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.r-project.org/doc/R-SDLC.pdf",
+          "quote": "At a new x.y.0 version of R, the prior version is retired from formal support. R Core’s efforts are then focused on the new Release (and the ongoing Development) version. No further development, bug fixes or patches are made available for the retired versions.",
+          "base_date": "2023-04-21",
+          "base_label": "R 4.3.0 general availability",
+          "trigger": {
+            "release_id": "4.4",
+            "date": "2024-04-24",
+            "label": "R 4.4.0, the successor x.y.0 release that retires the prior version"
+          }
+        }
+      }
+    },
+    {
+      "id": "4.4",
+      "name": "R 4.4.x (Puppy Cup)",
+      "milestones": {
+        "ga": "2024-04-24",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-04-11"
+      },
+      "milestone_provenance": {
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.r-project.org/doc/R-SDLC.pdf",
+          "quote": "At a new x.y.0 version of R, the prior version is retired from formal support. R Core’s efforts are then focused on the new Release (and the ongoing Development) version. No further development, bug fixes or patches are made available for the retired versions.",
+          "base_date": "2024-04-24",
+          "base_label": "R 4.4.0 general availability",
+          "trigger": {
+            "release_id": "4.5",
+            "date": "2025-04-11",
+            "label": "R 4.5.0, the successor x.y.0 release that retires the prior version"
+          }
+        }
+      }
+    },
+    {
+      "id": "4.5",
+      "name": "R 4.5.x (Great Square Root)",
+      "milestones": {
+        "ga": "2025-04-11",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-04-24"
+      },
+      "milestone_provenance": {
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.r-project.org/doc/R-SDLC.pdf",
+          "quote": "At a new x.y.0 version of R, the prior version is retired from formal support. R Core’s efforts are then focused on the new Release (and the ongoing Development) version. No further development, bug fixes or patches are made available for the retired versions.",
+          "base_date": "2025-04-11",
+          "base_label": "R 4.5.0 general availability",
+          "trigger": {
+            "release_id": "4.6",
+            "date": "2026-04-24",
+            "label": "R 4.6.0, the successor x.y.0 release that retires the prior version"
+          }
+        }
+      }
+    },
+    {
+      "id": "4.6",
+      "name": "R 4.6.x (Because it was There)",
+      "milestones": {
+        "ga": "2026-04-24",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "quote": "R-4.0.0.tar.gz 2020-04-24 09:05 32M",
+      "source_url": "https://cran.r-project.org/src/base/R-4/",
+      "retrieved_at": "2026-09-23",
+      "milestones": ["ga"]
+    },
+    {
+      "quote": "R-4.1.0.tar.gz 2021-05-18 09:05 32M",
+      "source_url": "https://cran.r-project.org/src/base/R-4/",
+      "retrieved_at": "2026-09-23",
+      "milestones": ["ga"]
+    },
+    {
+      "quote": "R-4.2.0.tar.gz 2022-04-22 09:05 36M",
+      "source_url": "https://cran.r-project.org/src/base/R-4/",
+      "retrieved_at": "2026-09-23",
+      "milestones": ["ga"]
+    },
+    {
+      "quote": "R-4.3.0.tar.gz 2023-04-21 09:06 33M",
+      "source_url": "https://cran.r-project.org/src/base/R-4/",
+      "retrieved_at": "2026-09-23",
+      "milestones": ["ga"]
+    },
+    {
+      "quote": "R-4.4.0.tar.gz 2024-04-24 06:07 36M",
+      "source_url": "https://cran.r-project.org/src/base/R-4/",
+      "retrieved_at": "2026-09-23",
+      "milestones": ["ga"]
+    },
+    {
+      "quote": "R-4.5.0.tar.gz 2025-04-11 10:51 39M",
+      "source_url": "https://cran.r-project.org/src/base/R-4/",
+      "retrieved_at": "2026-09-23",
+      "milestones": ["ga"]
+    },
+    {
+      "quote": "R-4.6.0.tar.gz 2026-04-24 09:17 39M",
+      "source_url": "https://cran.r-project.org/src/base/R-4/",
+      "retrieved_at": "2026-09-23",
+      "milestones": ["ga"]
+    },
+    {
+      "quote": "Version 4.6.1 (\"Happy Hop\") was released on 2026-06-24.",
+      "source_url": "https://developer.r-project.org/",
+      "retrieved_at": "2026-09-23"
+    },
+    {
+      "quote": "The wrap-up release of the R-4.5.x series was 4.5.3 (\"Reassured Reassurer\") on 2026-03-11.",
+      "source_url": "https://developer.r-project.org/",
+      "retrieved_at": "2026-09-23"
+    },
+    {
+      "quote": "The date for the next release is not yet set.",
+      "source_url": "https://developer.r-project.org/",
+      "retrieved_at": "2026-09-23"
+    },
+    {
+      "quote": "R: Software Development Life Cycle",
+      "source_url": "https://www.r-project.org/certification.html",
+      "retrieved_at": "2026-09-23"
+    }
+  ],
+  "contributor": "eoltracker-agent",
+  "method": "agent",
+  "stale_after": "2027-03-22",
+  "notes": "Tier: researched, with six derived milestones (AGENTS.md rule 8b). No deterministic source covers R: https://endoflife.date/api/all.json lists 477 products (checked 2026-09-23) with no r, r-project or r-lang slug, and data/products/ holds no r record, so this contribution neither overwrites nor shadows a pipeline. MODELING: R's lifecycle is stated at the x.y line level, not per patch. The R Foundation's own SDLC document says each x.y.0 release is maintained 'via a series of x.y.z patch releases' and that 'At a new x.y.0 version of R, the prior version is retired from formal support', so this record carries one row per line: 4.0 through 4.6. GA is each line's own x.y.0 release day, read from the Foundation's own CRAN base archive row for that tarball (the archive's Last-modified day for R-4.0.0.tar.gz is 2020-04-24, and the same row's ISO day is what `ga` stores). The day a source publishes is stored as a day; no month is padded to a day and no day is narrowed, because every value here is a full day. DERIVATION: the eol of 4.0 through 4.5 is DERIVED, not vendor-stated. The vendor states the rule (the prior version is retired from formal support at a new x.y.0 version) and dates each successor x.y.0 release in its own archive, so each line's derived deadline is the successor line's published release day: 4.0 (2021-05-18), 4.1 (2022-04-22), 4.2 (2023-04-21), 4.3 (2024-04-24), 4.4 (2025-04-11), 4.5 (2026-04-24). Every entry carries method release-trigger, the PDF page URL, the rule sentence verbatim, base_date = the line's own GA day, and trigger = the successor release id and its date, and engine/derived.py re-derives each result from them. Because they are derived, they MUST be presented as derived and are excluded from the exact-day Atom/RSS/iCalendar feeds and the OpenEoX export, each with machine-readable disclosure; none of them is a vendor-stated day. Rule-source limitation, stated plainly: the rule exists only in the R Foundation's R-SDLC.pdf (revised 2026-03-12), which is cited from https://www.r-project.org/certification.html; the project publishes no HTML or text edition of it (checked 2026-09-23: r-project.org, CRAN, the svn.r-project.org R-project-web/R-dev-web mirrors, the R Development Guide, and the r-announce archives all lack the sentence). A PDF is not text-fetchable by the contribution checker, so the rule quote is carried where a rule belongs — the derived entry's own milestone_provenance — and `evidence[]` holds only live-fetchable HTML (the CRAN archive rows for GA and the developer page for the current line), so the default contribution check re-verifies every stated date with no offline flag. The sentence was read from the PDF on 2026-09-23 and is stored verbatim including its typographic apostrophe in \"R Core’s\"; re-review requires reopening that PDF, which is why the PDF URL travels in every entry rather than in a quote the checker cannot fetch. 4.6 IS CURRENT AND UNKNOWN: the Foundation's release-plans page states the next release date is not yet set, and no 4.7.0 line exists in the source archive, so 4.6's eos, eossec and eol stay null and it carries no milestone_provenance. The same page's cadence sentence ('annual x.y.0 releases in Spring') is quoted nowhere in this record and is never used: cadence is not derivation evidence. EOSSEC: every line leaves eossec null. The vendor states one terminal event ('retired from formal support ... No further development, bug fixes or patches'), which is end of life; it states no separate end of security support, so mapping that generic sentence into eossec would be exactly the collapse AGENTS.md forbids. eos stays null for the same reason: the Foundation announces no end of sale or orderability date. WHAT WAS DELIBERATELY NOT USED: (1) CRAN archival age or the community '5+ years' archival practice — an archive's age is retrospective and states no forward rule; (2) host-platform statements such as the R for Windows FAQ's 'Windows Vista, 7 and 8 are no longer supported' or '32-bit Windows' notes — those are statements about operating systems, not R release lives; (3) current support status ('there is always only one current version of R') — a statement of present state, published in the rule's own paragraph only as context, never converted into a date; (4) release activity as a support test — patch releases such as 4.5.3 on 2026-03-11 and 4.6.1 on 2026-06-24 are quoted as the current-line context, and a patch release never reopens a retired line. If a deterministic collector for R is ever added, this researched record must be retired in favour of it (rule 8)."
+}

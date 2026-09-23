@@ -78,7 +78,7 @@
       }
     },
     "derived_entry": {
-      "description": "One derived milestone's provenance, keyed by the milestone it explains under `milestone_provenance`. A derived date is arithmetic on a base date and a rule the vendor states explicitly — a duration, the release that ends this one, or the parent platform whose lifecycle this component follows — so the base, the rule and the page it was read from are all published beside the result, and `engine/derived.py` re-derives the result from them. There is deliberately no `result` field: the result is the milestone value this entry sits beside, which is what makes a tampered date detectable (it stops matching its own rule).",
+      "description": "One derived milestone's provenance, keyed by the milestone it explains under `milestone_provenance`. A derived date is arithmetic on a base date and a rule the vendor states explicitly — a duration, the release that ends this one, or the parent platform whose lifecycle this component follows — so the base, the rule and the page it was read from are all published beside the result, and `engine/derived.py` re-derives the result from them. There is deliberately no `result` field: the result is the milestone value this entry sits beside, which is what makes a tampered date detectable (it stops matching its own rule). The derived value keeps the width its evidence states: a month-only trigger or parent date yields a `YYYY-MM` milestone (see AGENTS.md rule 4), and `base_date` stays a full ISO day because the arithmetic starts from a stated day.",
       "type": "object",
       "additionalProperties": false,
       "required": ["kind", "method", "source_url", "quote", "base_date", "base_label"],
@@ -123,18 +123,23 @@
           }
         },
         "trigger": {
-          "description": "Present only for `release-trigger`. The release whose own publication ends this one's support; its `date` is that release's published date and IS the derived deadline.",
+          "description": "Present only for `release-trigger`. The release whose own publication ends this one's support; its `date` is that release's published date and IS the derived deadline, at the width the source states — an ISO day, or `YYYY-MM` when the source names only a month. It must match the milestone's precision exactly.",
           "type": "object",
           "additionalProperties": false,
           "required": ["release_id", "date", "label"],
           "properties": {
             "release_id": {"type": "string", "minLength": 1},
-            "date": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$", "format": "date"},
+            "date": {
+              "oneOf": [
+                {"type": "string", "pattern": "^\\d{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12]\\d|3[01])$", "format": "date"},
+                {"type": "string", "pattern": "^\\d{4}-(?:0[1-9]|1[0-2])$"}
+              ]
+            },
             "label": {"type": "string", "minLength": 1}
           }
         },
         "parent": {
-          "description": "Present only for `support-inheritance`. The published parent whose lifecycle this record's dates follow. `milestone` names which of the parent's normalized milestones is inherited (an end milestone, never general availability) and `date` is that milestone's date, which IS the derived deadline.",
+          "description": "Present only for `support-inheritance`. The published parent whose lifecycle this record's dates follow. `milestone` names which of the parent's normalized milestones is inherited (an end milestone, never general availability) and `date` is that milestone's date, which IS the derived deadline, at the width the parent states — an ISO day, or `YYYY-MM`. It must match this milestone's precision exactly.",
           "type": "object",
           "additionalProperties": false,
           "required": ["product_id", "release_id", "release_name", "milestone", "date", "source_url"],
@@ -143,7 +148,12 @@
             "release_id": {"type": "string", "minLength": 1},
             "release_name": {"type": "string", "minLength": 1},
             "milestone": {"enum": ["eos", "eossec", "eol"]},
-            "date": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$", "format": "date"},
+            "date": {
+              "oneOf": [
+                {"type": "string", "pattern": "^\\d{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12]\\d|3[01])$", "format": "date"},
+                {"type": "string", "pattern": "^\\d{4}-(?:0[1-9]|1[0-2])$"}
+              ]
+            },
             "source_url": {"type": "string", "format": "uri"}
           }
         }

@@ -194,6 +194,64 @@ class TriggerDerivationTests(unittest.TestCase):
             derived.validate_milestone_provenance(self.MILESTONES, {"eol": entry}, "t", {"1", "3"})
 
 
+class MonthTriggerTests(unittest.TestCase):
+    """A trigger the vendor dates only to a month derives a ``YYYY-MM`` milestone.
+
+    The trigger date *is* the derived deadline, so it keeps the width the source
+    publishes: a vendor naming only "the release in February 2027" states no day,
+    and padding one in would be the invented day AGENTS.md rule 4 forbids. The
+    base stays a full day — the deadline is measured from a dated release — and
+    the two sides must agree in precision exactly.
+    """
+
+    QUOTE = TriggerDerivationTests.QUOTE
+    MILESTONES = {"ga": "2026-08-17", "eos": None, "eossec": None, "eol": "2027-02"}
+
+    def entry(self, **overrides):
+        entry = {
+            "kind": "derived", "method": "release-trigger", "source_url": SOURCE, "quote": self.QUOTE,
+            "base_date": "2026-08-17", "base_label": "general availability",
+            "trigger": {"release_id": "3", "date": "2027-02", "label": "the February 2027 release"},
+        }
+        entry.update(overrides)
+        return entry
+
+    def test_a_month_trigger_reproduces_a_month_milestone(self):
+        self.assertIsNone(derived.validate_milestone_provenance(
+            self.MILESTONES, {"eol": self.entry()}, "t", {"1", "3"}))
+        self.assertEqual(derived.derive(self.MILESTONES, {"eol": self.entry()}), {"eol": "2027-02"})
+
+    def test_a_trigger_naming_the_wrong_month_is_refused(self):
+        entry = self.entry()
+        entry["trigger"]["date"] = "2027-03"
+        with self.assertRaisesRegex(ValueError, "is not the eol milestone 2027-02"):
+            derived.validate_milestone_provenance(self.MILESTONES, {"eol": entry}, "t", {"1", "3"})
+
+    def test_a_day_and_a_month_are_never_the_same_deadline(self):
+        # Widening a month trigger into a day invents the day; narrowing a day
+        # milestone into a month drops it. Each is a width mismatch, refused
+        # before either side is compared as a date.
+        day_milestones = {"ga": "2025-04-01", "eos": None, "eossec": None, "eol": "2027-06-17"}
+        for milestones, date in ((self.MILESTONES, "2027-02-01"), (day_milestones, "2027-06")):
+            entry = self.entry(trigger={"release_id": "3", "date": date, "label": "3.0.0 release"},
+                               base_date="2025-04-01")
+            with self.assertRaisesRegex(ValueError, "different precisions"):
+                derived.validate_milestone_provenance(milestones, {"eol": entry}, "t", {"1", "3"})
+
+    def test_a_month_trigger_cannot_begin_before_its_base(self):
+        # A month covers its whole width, so the comparison uses its first day:
+        # a trigger in the base's own month may begin before the base and is
+        # refused rather than assumed to fall later.
+        milestones = {"ga": "2026-08-17", "eos": None, "eossec": None, "eol": "2026-08"}
+        entry = self.entry(trigger={"release_id": "3", "date": "2026-08", "label": "the August release"})
+        with self.assertRaisesRegex(ValueError, "precedes base_date 2026-08-17"):
+            derived.validate_milestone_provenance(milestones, {"eol": entry}, "t", {"1", "3"})
+
+    def test_the_triggering_release_must_still_exist_in_the_record(self):
+        with self.assertRaisesRegex(ValueError, "names no release in this record"):
+            derived.validate_milestone_provenance(self.MILESTONES, {"eol": self.entry()}, "t", {"1"})
+
+
 class InheritanceDerivationTests(unittest.TestCase):
     """A component inherits a parent's deadline, stated by the vendor."""
 
@@ -249,6 +307,19 @@ class InheritanceDerivationTests(unittest.TestCase):
         entry["parent"]["date"] = "2031-11-01"
         with self.assertRaisesRegex(ValueError, "is not the eol milestone"):
             derived.validate_milestone_provenance(self.MILESTONES, {"eol": entry}, "t")
+
+    def test_a_parent_stating_only_a_month_inherits_at_month_precision(self):
+        # The parent's own source published a month, so the component inherits a
+        # month; a day would be the padded day rule 4 forbids.
+        milestones = {"ga": "2021-09-01", "eos": None, "eossec": None, "eol": "2031-10"}
+        entry = self.entry()
+        entry["parent"]["date"] = "2031-10"
+        self.assertIsNone(derived.validate_milestone_provenance(milestones, {"eol": entry}, "t"))
+        self.assertEqual(derived.derive(milestones, {"eol": entry}), {"eol": "2031-10"})
+        # The parent's own recorded milestone is a day: that is a width mismatch.
+        entry["parent"]["date"] = "2031-10-14"
+        with self.assertRaisesRegex(ValueError, "different precisions"):
+            derived.validate_milestone_provenance(milestones, {"eol": entry}, "t")
 
 
 class SchemaTests(unittest.TestCase):
@@ -326,6 +397,49 @@ class SchemaTests(unittest.TestCase):
         record["releases"][0]["milestone_provenance"]["supported"] = duration_entry()
         with self.assertRaises(ValidationError):
             self.schema().validate(record)
+
+    def test_both_trigger_date_widths_validate(self):
+        # The schema admits the width the source states; which width a given
+        # entry may use is `engine/derived.py`'s precision check, not the shape.
+        for date in ("2027-06-17", "2027-06"):
+            record = self.valid_record()
+            milestones = record["releases"][0]["milestones"]
+            milestones["eol"] = date
+            record["releases"][0]["milestone_provenance"]["eol"] = {
+                "kind": "derived", "method": "release-trigger", "source_url": SOURCE,
+                "quote": TriggerDerivationTests.QUOTE,
+                "base_date": "2025-04-01", "base_label": "general availability",
+                "trigger": {"release_id": "1", "date": date, "label": "1"}}
+            self.schema().validate(record)
+
+    def test_both_parent_date_widths_validate(self):
+        for date in ("2031-10-14", "2031-10"):
+            record = self.valid_record()
+            record["releases"][0]["milestones"]["eol"] = date
+            record["releases"][0]["milestone_provenance"]["eol"] = {
+                "kind": "derived", "method": "support-inheritance", "source_url": SOURCE,
+                "quote": InheritanceDerivationTests.FIXED_POLICY,
+                "base_date": "2021-09-01", "base_label": "parent general availability",
+                "parent": {"product_id": "windows-server", "release_id": "2022",
+                           "release_name": "Windows Server 2022", "milestone": "eol",
+                           "date": date, "source_url": "https://learn.microsoft.com/parent"}}
+            self.schema().validate(record)
+
+    def test_a_trigger_date_of_another_width_is_still_a_valid_shape(self):
+        # `2027-06-17` is a day and `2027-06` a month; a half-formed value is
+        # neither, and the schema refuses it rather than letting derived.py
+        # decide what it meant.
+        from jsonschema.exceptions import ValidationError
+
+        for date in ("2027-6", "2027-06-1", "2027", "June 2027", ""):
+            record = self.valid_record()
+            record["releases"][0]["milestone_provenance"]["eol"] = {
+                "kind": "derived", "method": "release-trigger", "source_url": SOURCE,
+                "quote": TriggerDerivationTests.QUOTE,
+                "base_date": "2025-04-01", "base_label": "general availability",
+                "trigger": {"release_id": "1", "date": date, "label": "1"}}
+            with self.assertRaises(ValidationError):
+                self.schema().validate(record)
 
 
 class ContributionRoundTripTests(unittest.TestCase):

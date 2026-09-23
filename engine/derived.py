@@ -34,7 +34,18 @@ Every derived value is published on the record as a sibling object::
 The entry is keyed by the milestone it explains, carries the base the
 arithmetic starts from, the rule as the vendor stated it and the page it was
 read from — and never a ``result`` field, because the result *is* the milestone
-value beside it. That is what makes tampering detectable: this module
+value beside it.
+
+A trigger or parent date *is* the derived deadline, so it keeps the width the
+source publishes. ``base_date`` is always a full ISO day (the arithmetic has to
+start somewhere with a day), but a vendor that names only "the release in
+February 2027" states a month: the milestone is ``2027-02``, the trigger date
+is ``2027-02``, and the two must agree exactly in precision. A month is never
+padded into a day, and a day is never narrowed into a month. Chronology is
+checked on the earliest day each value covers, so a month that could begin
+before its base is refused rather than assumed later.
+
+That is what makes tampering detectable: this module
 re-derives every result from the stored base and rule and refuses a record
 whose milestone disagrees (``validate_milestone_provenance``), so a derived
 date can never be edited into a number its own rule does not produce.
@@ -85,6 +96,7 @@ PARENT_KEYS = ("product_id", "release_id", "release_name", "milestone", "date", 
 # evidence, so a fragment cannot stand in for a vendor sentence.
 MIN_QUOTE = 20
 DAY = re.compile(r"\d{4}-\d{2}-\d{2}\Z")
+MONTH = re.compile(r"\d{4}-\d{2}\Z")
 
 # A support-inheritance quote states that the component's support follows its
 # parent: it has to state the *relationship*, not merely mention a parent, and
@@ -118,6 +130,40 @@ def _day(value, where, field):
     except ValueError as error:
         raise ValueError(f"{where}: {field} is not a real calendar day: {value!r}") from error
     return value
+
+
+def _month(value, where, field):
+    if not isinstance(value, str) or not MONTH.fullmatch(value):
+        raise ValueError(f"{where}: {field} must be an ISO month (YYYY-MM): {value!r}")
+    try:
+        date.fromisoformat(value + "-01")
+    except ValueError as error:
+        raise ValueError(f"{where}: {field} is not a real calendar month: {value!r}") from error
+    return value
+
+
+def _milestone(value, where, field):
+    """A stated deadline at the width the source publishes: day or month.
+
+    A milestone is a day or a month, never the other width: the value a
+    trigger/parent states is also the derived milestone, so it is parsed as
+    whichever of the two it is and compared to the milestone at that precision.
+    """
+    if isinstance(value, str) and MONTH.fullmatch(value):
+        return _month(value, where, field)
+    return _day(value, where, field)
+
+
+def _covered_day(value):
+    """The earliest calendar day a stated milestone can cover.
+
+    Chronology compares instants, not spellings: a ``YYYY-MM`` milestone begins
+    on the first of its month, so a month that might start before the base is
+    refused rather than assumed to fall later (the conservative direction).
+    """
+    if MONTH.fullmatch(value):
+        return date.fromisoformat(value + "-01")
+    return date.fromisoformat(value)
 
 
 def _url(value, where, field):
@@ -187,7 +233,7 @@ def _entry(milestones, key, entry, where, release_ids):
     if not value:
         raise ValueError(f"{at}: states a derived date, but the {key} milestone is absent. "
                          "Provenance is keyed only by published milestones; an absent date stays absent")
-    _day(value, at, "milestone")
+    _milestone(value, at, "milestone")
     if not isinstance(entry, dict):
         raise ValueError(f"{at}: must be an object")
     method = entry.get("method")
@@ -230,12 +276,16 @@ def _duration(at, key, value, base, duration):
 def _trigger(at, key, value, base, trigger, release_ids):
     _object(trigger, at, "trigger", TRIGGER_KEYS)
     release_id = _text(trigger["release_id"], at, "trigger.release_id")
-    stated = _day(trigger["date"], at, "trigger.date")
+    stated = _milestone(trigger["date"], at, "trigger.date")
     _text(trigger["label"], at, "trigger.label")
+    if (MONTH.fullmatch(stated) is not None) != (MONTH.fullmatch(value) is not None):
+        raise ValueError(f"{at}: trigger.date {stated} and the {key} milestone {value} are different "
+                         "precisions; the trigger states the deadline at the width the source gives, so a "
+                         "month trigger needs a month milestone and a day trigger a day milestone")
     if stated != value:
         raise ValueError(f"{at}: trigger.date {stated} is not the {key} milestone {value}; the trigger "
                          "release's own date is the derived deadline, or the entry states a different rule")
-    if stated < base:
+    if _covered_day(stated) < _covered_day(base):
         raise ValueError(f"{at}: trigger.date {stated} precedes base_date {base}; the triggering event "
                          "cannot come before the release it ends")
     if release_ids is not None and release_id not in release_ids:
@@ -253,12 +303,15 @@ def _parent(at, key, value, base, parent, quote):
     if milestone not in END_MILESTONES:
         raise ValueError(f"{at}: parent.milestone must be one of {list(END_MILESTONES)}; support is "
                          "inherited from a parent's deadline, never from its general availability")
-    stated = _day(parent["date"], at, "parent.date")
+    stated = _milestone(parent["date"], at, "parent.date")
     _url(parent["source_url"], at, "parent.source_url")
+    if (MONTH.fullmatch(stated) is not None) != (MONTH.fullmatch(value) is not None):
+        raise ValueError(f"{at}: parent.date {stated} and the {key} milestone {value} are different "
+                         "precisions; the inherited deadline keeps the width the parent states")
     if stated != value:
         raise ValueError(f"{at}: parent.date {stated} is not the {key} milestone {value}; the inherited "
                          "deadline is the parent's own deadline, or the entry claims a different one")
-    if stated < base:
+    if _covered_day(stated) < _covered_day(base):
         raise ValueError(f"{at}: parent.date {stated} precedes base_date {base}")
     if not (_INHERITS.search(quote) and _COMPONENT.search(quote)):
         raise ValueError(f"{at}: the quote does not state that this component's support follows its "

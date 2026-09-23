@@ -1,0 +1,56 @@
+{
+  "target": "software",
+  "id": "researched-openlitespeed",
+  "name": "OpenLiteSpeed",
+  "vendor": "LiteSpeed Technologies, Inc.",
+  "category": "server-app",
+  "summary": "OpenLiteSpeed is the open-source edition of LiteSpeed Web Server (repository litespeedtech/openlitespeed), an event-driven HTTP/1.x, HTTP/2 and HTTP/3 server with a built-in WebAdmin console. The vendor publishes a release log that categorizes each branch as Latest, Stable or Archived and states in prose when the archived 1.7.x branch stopped being maintained; it publishes no lifecycle table, no dated EOL table and no machine-readable lifecycle feed. This record covers the open-source server only, not LiteSpeed Web Server Enterprise.",
+  "identifiers": [],
+  "links": {
+    "about": "https://openlitespeed.org/",
+    "releaseLog": "https://openlitespeed.org/release-log/",
+    "legacyReleases": "https://openlitespeed.org/release-log/legacy-releases/",
+    "downloads": "https://openlitespeed.org/downloads/",
+    "documentation": "https://docs.openlitespeed.org/",
+    "repository": "https://github.com/litespeedtech/openlitespeed"
+  },
+  "releases": [
+    {
+      "id": "1.7",
+      "name": "OpenLiteSpeed 1.7.x (archived)",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-09"
+      }
+    },
+    {
+      "id": "1.6-and-older",
+      "name": "OpenLiteSpeed 1.6.x & Older (archived)",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "quote": "As of September 2025, OpenLiteSpeed version 1.7.x is archived and no longer maintained. Please upgrade to version 1.8.x or 1.9.x.",
+      "source_url": "https://openlitespeed.org/release-log/",
+      "retrieved_at": "2026-09-17",
+      "milestones": ["eol"]
+    },
+    {
+      "quote": "Version 1.9.x Latest Version 1.8.x Stable Version 1.7.x & Older Archived",
+      "source_url": "https://openlitespeed.org/release-log/",
+      "retrieved_at": "2026-09-23"
+    }
+  ],
+  "contributor": "eoltracker-agent",
+  "method": "agent",
+  "stale_after": "2027-03-22",
+  "notes": "Tier: researched, not derived. The preserved vendor sentence says OpenLiteSpeed 1.7.x was archived and no longer maintained as of September 2025; it supports a vendor-stated EOL month of 2025-09, not a separate security-support date, so eossec remains null. Month precision is preserved and excluded from exact-day feeds/OpenEoX. The live page now shows only undated branch categories; the dated sentence is retained as stale evidence retrieved 2026-09-17 and this record must be installed with --allow-stale-evidence. No date is transferred to 1.6.x or older branches. No GA, EOS, or duration/trigger derivation is used."
+}
