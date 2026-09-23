@@ -10,16 +10,24 @@ them by date, and writes three equivalent representations below `_site`:
 * `v1/feed.rss`      RSS 2.0, one `item` per event.
 * `v1/calendar.ics`  RFC 5545, one all-day `VEVENT` per event.
 
-All three formats carry an *exact calendar day*: Atom and RSS stamp each item
-with an RFC 3339/RFC 822 date-time and iCalendar with a `VALUE=DATE` day. A
-milestone whose source states only a month (``YYYY-MM``) therefore cannot be
-represented without inventing a day (AGENTS.md rule 4), so those events are
-left out of the three documents and published instead, in full, in
+All three formats carry an *exact calendar day a source states*: Atom and RSS
+stamp each item with an RFC 3339/RFC 822 date-time and iCalendar with a
+`VALUE=DATE` day. Two kinds of upcoming event have no such day, and neither is
+representable without misrepresenting the source:
+
+* a *month-precision* event (``YYYY-MM``) — the source states a month, so a day
+  would have to be invented (AGENTS.md rule 4); and
+* a *derived* event — the day is arithmetic on a rule and a base date the
+  vendor publishes (``milestone_provenance``; see `engine/derived.py`), so
+  syndicating it would publish a computed result as a vendor-stated deadline.
+
+Both are left out of the three documents and published instead, in full, in
 `v1/feed-exclusions.json`: every excluded event with its stable identity, its
-product, release, milestone and the month the source states, plus the reason
-its width is not representable. Nothing is silently dropped and no day is
-padded in. The two sets are disjoint halves of one upcoming window, so a
-consumer that wants every upcoming deadline reads the feed *and* that document.
+product, release, milestone and the value the source states, its own reason
+code, and — for a derived event — the method, base date, rule and quote the
+date was computed from. Nothing is silently dropped, no day is padded in, and
+the sets are disjoint halves of one upcoming window, so a consumer that wants
+every upcoming deadline reads the feed *and* that document.
 
 Identifiers are permanent. An event is named by a `tag:` URI (RFC 4151) and
 that same string is the iCalendar `UID`. The tagging entity is the project's
@@ -50,6 +58,7 @@ from urllib.parse import quote
 from xml.sax.saxutils import escape, quoteattr
 
 from .importer import ROOT
+from . import derived
 from .site_config import (MILESTONES, SCHEMA_VERSION, SITE_URL, human_date, is_month,
                           published_period, site_url)
 
@@ -81,15 +90,29 @@ FEED_PATHS = {
     "ics": Path("v1/calendar.ics"),
 }
 EXCLUSIONS_PATH = Path("v1/feed-exclusions.json")
-# The published reason an upcoming event is not in the three documents. It is a
-# statement about the event's *width*, not about its validity: the milestone is
-# real and upcoming, and it is listed in full next to this sentence.
+# The published reasons an upcoming event is not in the three documents. Each is
+# a statement about the *event*, not about its validity: the milestone is real
+# and upcoming, and it is listed in full next to this sentence.
 MONTH_EXCLUSION_CODE = "month_precision_not_representable"
 MONTH_EXCLUSION_REASON = (
     "The source states this milestone's month only (YYYY-MM), and Atom, RSS and iCalendar each "
     "carry an exact calendar day. The event is published here with the month the source states "
     "rather than padding it with a day the source never published."
 )
+DERIVED_EXCLUSION_CODE = "derived_not_vendor_stated"
+DERIVED_EXCLUSION_REASON = (
+    "This milestone is a derived date, not a vendor-stated one: its rule, inputs, and base are "
+    "published in the record's milestone_provenance and engine/derived.py recomputes it from them, "
+    "but the vendor states no calendar day for it. Atom, RSS and iCalendar carry a day a source "
+    "states, so syndicating it would publish a calculated result as a vendor deadline. The event "
+    "is listed here in full, with the rule that produced it, instead."
+)
+# Order is the order the reasons print and the order a consumer reads them in.
+EXCLUSION_REASONS = (
+    {"code": MONTH_EXCLUSION_CODE, "statement": MONTH_EXCLUSION_REASON, "precision": "month"},
+    {"code": DERIVED_EXCLUSION_CODE, "statement": DERIVED_EXCLUSION_REASON, "precision": "derived"},
+)
+EXCLUSION_REASON_BY_CODE = {reason["code"]: reason for reason in EXCLUSION_REASONS}
 
 # The milestone vocabulary is the published one: same keys, same labels as the
 # site, so a feed never renames what a page shows.
@@ -118,12 +141,17 @@ def _specific(value):
     return quote(str(value), safe="")
 
 
-def _event(kind, product_id, product_name, release_id, release_name, milestone, value, url):
+def _event(kind, product_id, product_name, release_id, release_name, milestone, value, url, derived=None):
     """One upcoming milestone as a stable id plus the text every format prints.
 
     `kind` is the namespace half of the event's identity — `software` or
     `hardware` — and is carried on the event because the exclusion document
     names each excluded event by the same fields its identifier encodes.
+
+    `derived` is the milestone's own derivation disclosure when the record
+    states a rule instead of a day (see `engine/derived.py`): a derived event is
+    never syndicated, so this is what the exclusion document publishes about it
+    instead of the three documents publishing the date.
     """
     name = _clean(product_name)
     release = _clean(release_name) if release_name else None
@@ -142,6 +170,7 @@ def _event(kind, product_id, product_name, release_id, release_name, milestone, 
         "id": TAG_PREFIX + specific,
         "date": value,
         "month": is_month(value),
+        "derived": derived or None,
         "milestone": milestone,
         "label": label,
         "kind": kind,
@@ -155,13 +184,41 @@ def _event(kind, product_id, product_name, release_id, release_name, milestone, 
     }
 
 
+def _derived_view(provenance, milestone):
+    """The derivation disclosure one release carries for one milestone, or None.
+
+    The rule fields are copied verbatim — the identity of the rule is part of
+    what the exclusion publishes — so a consumer can recompute the date or
+    check it against the record without a second fetch.
+    """
+    entry = (provenance or {}).get(milestone)
+    if not entry:
+        return None
+    return {
+        "method": entry["method"],
+        "base_date": entry["base_date"],
+        "base_label": entry["base_label"],
+        "source_url": entry["source_url"],
+        "quote": entry["quote"],
+        "duration": entry.get("duration"),
+        "trigger": entry.get("trigger"),
+        "parent": entry.get("parent"),
+    }
+
+
 def software_events(products):
-    """Every published milestone of every release of every product, unsorted."""
+    """Every published milestone of every release of every product, unsorted.
+
+    A release's `milestone_provenance` is read here rather than in the
+    formatters: an event carries whether its date is derived, so the split into
+    syndicated and excluded events happens once and every format agrees.
+    """
     events = []
     for record in products or ():
         url = site_url(f"products/{record['id']}/")
         for release in record["releases"]:
             milestones = release["milestones"]
+            provenance = release.get(derived.DERIVED_KEY)
             for milestone in MILESTONE_KEYS:
                 value = milestones.get(milestone)
                 if not value:
@@ -169,6 +226,7 @@ def software_events(products):
                 events.append(_event(
                     "software", record["id"], record["name"], release["id"],
                     release.get("name") or release["id"], milestone, value, url,
+                    _derived_view(provenance, milestone),
                 ))
     return events
 
@@ -218,59 +276,89 @@ def upcoming_events(products, hardware=None, today=None):
 
 
 def representable(events):
-    """Split upcoming events into ``(day_events, month_events)``, order preserved.
+    """Split upcoming events into ``(day_events, excluded_events)``, order preserved.
 
-    The three syndication formats carry an exact calendar day each; only the
-    day-precision events can be written to them without inventing a day. The
-    month-precision events are not dropped — they are what the exclusion
-    document publishes, so the two lists are disjoint and together cover every
-    upcoming event.
+    The three syndication formats carry an exact calendar day a source states;
+    only those events can be written to them. Two kinds of upcoming event have
+    no such day:
+
+    * a month-precision event (``month``) — the source states a month, so there
+      is no day to carry; and
+    * a derived event (``derived``) — the day is arithmetic on a published rule
+      and base, so carrying it would syndicate a computed date as a vendor
+      deadline.
+
+    Neither is dropped: they are what the exclusion document publishes, each
+    tagged with its own code, so the two lists are disjoint and together cover
+    every upcoming event. ``excluded`` keeps the upcoming order of ``events``.
     """
-    days = [event for event in events if not event["month"]]
-    months = [event for event in events if event["month"]]
-    return days, months
+    days = [event for event in events if not event["month"] and not event["derived"]]
+    excluded = [event for event in events if event["month"] or event["derived"]]
+    return days, excluded
 
 
-def exclusions_document(months, day_count, updated):
+def _exclusion(event):
+    """One excluded upcoming event, with the code and reason that apply to it.
+
+    A derived event can also be month precision in principle; the derived code
+    wins, because "the vendor states a rule rather than a day" is the stronger
+    statement about why syndicating it would misrepresent the source. Each
+    excluded event carries exactly one code.
+    """
+    code = DERIVED_EXCLUSION_CODE if event["derived"] else MONTH_EXCLUSION_CODE
+    reason = EXCLUSION_REASON_BY_CODE[code]
+    entry = {
+        "id": event["id"],
+        "kind": event["kind"],
+        "product": event["product_id"],
+        "product_name": event["product"],
+        "release": event["release_id"],
+        "release_name": event["release"],
+        "milestone": event["milestone"],
+        "milestone_label": event["label"],
+        "date": event["date"],
+        "human": human_date(event["date"]),
+        "url": event["url"],
+        "code": code,
+        "reason": reason["statement"],
+    }
+    if event["month"]:
+        entry["month"] = event["date"]
+    if event["derived"]:
+        entry["derived"] = event["derived"]
+    return entry
+
+
+def exclusions_document(excluded, day_count, updated):
     """The machine-readable account of the upcoming events no feed can carry.
 
     Written next to the three documents so a consumer reading `v1/feed.atom`
     can discover, without guessing, which upcoming deadlines it does not
-    contain: the counts, the reason code and sentence, and every excluded event
-    with its stable identity, product, release, milestone and stored month.
+    contain: the counts, every reason code with its statement, and every
+    excluded event with its stable identity, product, release, milestone and the
+    value the source states — plus, for a derived event, the rule, base and
+    quote its date was computed from. Nothing is dropped silently and no day is
+    invented for either exclusion.
+
+    ``counts`` keeps its three preserved keys and the accounting invariant they
+    state (``upcoming_events`` = ``feeds`` + ``excluded``); ``by_code`` adds the
+    per-reason tally, which sums to ``excluded`` and names each code once.
     """
+    entries = [_exclusion(event) for event in excluded]
+    counts = {
+        "upcoming_events": day_count + len(entries),
+        "feeds": day_count,
+        "excluded": len(entries),
+    }
+    by_code = {reason["code"]: sum(1 for entry in entries if entry["code"] == reason["code"])
+               for reason in EXCLUSION_REASONS}
     return {
         "schema_version": SCHEMA_VERSION,
         "generated_at": _atom_stamp(updated),
         "feeds": [str(path) for path in FEED_PATHS.values()],
-        "reason": {
-            "code": MONTH_EXCLUSION_CODE,
-            "statement": MONTH_EXCLUSION_REASON,
-            "precision": "month",
-        },
-        "counts": {
-            "upcoming_events": day_count + len(months),
-            "feeds": day_count,
-            "excluded": len(months),
-        },
-        "excluded": [
-            {
-                "id": event["id"],
-                "kind": event["kind"],
-                "product": event["product_id"],
-                "product_name": event["product"],
-                "release": event["release_id"],
-                "release_name": event["release"],
-                "milestone": event["milestone"],
-                "milestone_label": event["label"],
-                "month": event["date"],
-                "human": human_date(event["date"]),
-                "url": event["url"],
-                "code": MONTH_EXCLUSION_CODE,
-                "reason": MONTH_EXCLUSION_REASON,
-            }
-            for event in months
-        ],
+        "reasons": EXCLUSION_REASONS,
+        "counts": {**counts, "by_code": by_code},
+        "excluded": entries,
     }
 
 
@@ -453,15 +541,16 @@ def build(products, hardware=None, out_dir=None, manifest=None):
     when omitted it is read from `data/manifest.json`, and failing that the
     current UTC time is used.
 
-    Only day-precision events reach the three documents; month-precision events
-    are written to `v1/feed-exclusions.json` instead, so the return value's
-    counts are split rather than a single total. Returns the day-event count as
-    `events`, the excluded month-event count as `excluded`, the update timestamp
-    as Atom prints it, and every written path.
+    Only events whose date a source states as a calendar day reach the three
+    documents; month-precision events — and derived events, whose day is
+    arithmetic on a published rule — are written to `v1/feed-exclusions.json`
+    instead, so the return value's counts are split rather than a single total.
+    Returns the day-event count as `events`, the excluded-event count as
+    `excluded`, the update timestamp as Atom prints it, and every written path.
     """
     out = Path(out_dir) if out_dir is not None else DEFAULT_OUT
     updated = generated_at(manifest)
-    days, months = representable(upcoming_events(products, hardware))
+    days, excluded = representable(upcoming_events(products, hardware))
     documents = {
         "atom": atom_feed(days, updated),
         "rss": rss_feed(days, updated),
@@ -473,7 +562,7 @@ def build(products, hardware=None, out_dir=None, manifest=None):
         _write(path, document)
         written.append(str(path))
     exclusions = out / EXCLUSIONS_PATH
-    _write(exclusions, json.dumps(exclusions_document(months, len(days), updated),
+    _write(exclusions, json.dumps(exclusions_document(excluded, len(days), updated),
                                   ensure_ascii=False, indent=2) + "\n")
     written.append(str(exclusions))
-    return {"events": len(days), "excluded": len(months), "updated": _atom_stamp(updated), "files": written}
+    return {"events": len(days), "excluded": len(excluded), "updated": _atom_stamp(updated), "files": written}

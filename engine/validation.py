@@ -1,4 +1,11 @@
-"""Offline schema and provenance consistency validation."""
+"""Offline schema and provenance consistency validation.
+
+The JSON Schemas prove shape; the checks here prove coherence — a record's
+milestones still follow the pipeline that owns it, its researched quotes still
+back its dates, and a derived milestone still recomputes from its own stored
+rule (``engine.derived``). Every check re-derives from the record itself, so a
+hand-edited catalog fails the gate instead of being published.
+"""
 import json
 from pathlib import Path
 
@@ -37,6 +44,23 @@ def check_source(record, category):
         return sources.validate_verifier(verifier, category)
     except sources.RegistryError as error:
         raise type(error)(f"{record.get('id')}: {error}") from None
+
+
+def check_derived(record):
+    """Re-derive every `milestone_provenance` entry of one software record.
+
+    The schema proves the entry's shape; this proves its arithmetic. A derived
+    milestone is a published date, so it is held to the same bar as a stated one
+    — the record's own rule has to produce the value beside it — and it runs the
+    shared module's check, so the catalog gate and a collector cannot drift apart.
+    """
+    from . import derived
+
+    release_ids = {release["id"] for release in record["releases"]}
+    for release in record["releases"]:
+        derived.validate_milestone_provenance(
+            release["milestones"], release.get(derived.DERIVED_KEY),
+            f"{record['id']}/{release['id']}", release_ids)
 
 
 def validate_hardware(directory=None):
@@ -118,6 +142,7 @@ def validate_data(directory=None):
         validator.validate(record)
         if record["id"] != file.stem:
             raise ValueError(f"Record identity mismatch: {file}")
+        check_derived(record)
         if is_researched(record):
             # Researched records have no upstream release object to contradict;
             # their stored quotes are the evidence and are checked against them.

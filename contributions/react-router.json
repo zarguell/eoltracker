@@ -1,0 +1,113 @@
+{
+  "target": "software",
+  "id": "researched-react-router",
+  "name": "React Router",
+  "vendor": "Remix Software",
+  "category": "framework",
+  "release": "8",
+  "summary": "React Router is the routing library and framework for React published by Remix Software (npm react-router, repository remix-run/react-router). The vendor states release dates on its blog and changelog and states the lifecycle rule that ends v6 in the v8 announcement; it publishes no lifecycle table.",
+  "identifiers": [],
+  "links": {
+    "about": "https://reactrouter.com/",
+    "html": "https://remix.run/blog/react-router-v8",
+    "releasePolicy": "https://github.com/remix-run/react-router/blob/main/SECURITY.md",
+    "changelog": "https://reactrouter.com/changelog",
+    "repository": "https://github.com/remix-run/react-router"
+  },
+  "releases": [
+    {
+      "id": "6",
+      "name": "React Router v6",
+      "milestones": {
+        "ga": "2021-11-03",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-06-17"
+      },
+      "milestone_provenance": {
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://remix.run/blog/react-router-v8",
+          "quote": "With the release of React Router v8 we are officially marking React Router v6 and Remix v2 as End of Life (EOL) so they will no longer be receiving security updates. React Router v7 will continue to receive security updates, just like v6 (and Remix v2) did.",
+          "base_date": "2021-11-03",
+          "base_label": "React Router v6.0.0 general availability",
+          "trigger": {
+            "release_id": "8",
+            "date": "2026-06-17",
+            "label": "React Router v8.0.0 release"
+          }
+        }
+      }
+    },
+    {
+      "id": "7",
+      "name": "React Router v7",
+      "milestones": {
+        "ga": "2024-11-22",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      }
+    },
+    {
+      "id": "8",
+      "name": "React Router v8",
+      "milestones": {
+        "ga": "2026-06-17",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "quote": "November 3, 2021 React Router v6 Michael Jackson Co-Founder Today we are very happy to announce the stable release of React Router v6 .",
+      "source_url": "https://remix.run/blog/react-router-v6",
+      "retrieved_at": "2026-09-23",
+      "milestones": ["ga"]
+    },
+    {
+      "quote": "November 22, 2024 React Router v7 Michael Jackson Co-Founder Today we are happy to announce the stable release of React Router v7 .",
+      "source_url": "https://remix.run/blog/react-router-v7",
+      "retrieved_at": "2026-09-23",
+      "milestones": ["ga"]
+    },
+    {
+      "quote": "June 17, 2026 React Router v8 Brooks Lybrand Developer Relations Manager Today we are excited to announce React Router v8!",
+      "source_url": "https://remix.run/blog/react-router-v8",
+      "retrieved_at": "2026-09-23",
+      "milestones": ["ga"]
+    },
+    {
+      "quote": "With the release of React Router v8 we are officially marking React Router v6 and Remix v2 as End of Life (EOL) so they will no longer be receiving security updates. React Router v7 will continue to receive security updates, just like v6 (and Remix v2) did.",
+      "source_url": "https://remix.run/blog/react-router-v8",
+      "retrieved_at": "2026-09-23"
+    },
+    {
+      "quote": "v6.0.0 Date: 2021-11-03 React Router v6 is here!",
+      "source_url": "https://raw.githubusercontent.com/remix-run/react-router/v6/CHANGELOG.md",
+      "retrieved_at": "2026-09-23"
+    },
+    {
+      "quote": "v7.0.0 Date: 2024-11-21 Breaking Changes Package Restructuring",
+      "source_url": "https://reactrouter.com/changelog",
+      "retrieved_at": "2026-09-23"
+    },
+    {
+      "quote": "v8.0.0 Date: 2026-06-17 What's Changed React Router v8 is here!",
+      "source_url": "https://reactrouter.com/changelog",
+      "retrieved_at": "2026-09-23"
+    },
+    {
+      "quote": "The following versions are currently being supported with security updates: | Version | Supported | | ------------- | ------------------ | | 8.x | :white_check_mark: | | 7.x | :white_check_mark: | | 6.x and below | :x: |",
+      "source_url": "https://raw.githubusercontent.com/remix-run/react-router/main/SECURITY.md",
+      "retrieved_at": "2026-09-23"
+    }
+  ],
+  "contributor": "eoltracker-agent",
+  "method": "agent",
+  "stale_after": "2027-03-22",
+  "notes": "Tier: researched, with one derived milestone (AGENTS.md rule 8b). React Router is React Router the routing library/framework published by Remix Software (npm react-router, repository remix-run/react-router) as its own separate npm package; it is NOT the React UI library (endoflife.date product `react`, a separate record) and this record does not restate or inherit anything from Research-Remix, which tracks Remix v2 as a distinct product. endoflife.date has no react-router slug and data/products/ holds no react-router record, so no deterministic source is displaced. GA dates use the vendor's own dated announcements and are quoted verbatim above. v6 eol 2026-06-17 is DERIVED, not vendor-stated: the vendor states the release trigger ('With the release of React Router v8 we are officially marking React Router v6 ... as End of Life (EOL)') and dates the v8 release 2026-06-17 on its own v8 announcement page and changelog, and the derived date is carried under milestone_provenance with method release-trigger, base_date 2021-11-03 (v6 GA), and trigger {release_id 8, date 2026-06-17}. Because it is derived, it MUST be presented as derived and is excluded from the exact-day Atom/RSS/iCalendar feeds and the OpenEoX export with machine-readable disclosure; it is not a vendor-stated date. v7 and v8 terminal milestones are null: the vendor has announced no end for either line, and the changelog's 'aiming for a v9 release around the same time next year' (May 2027 timeframe, tied to the Node 22 EOL) is a projected release plan and a cadence, never an explicit v7/v8 support end, so it is not derivation evidence. Neither 'no longer receiving security updates' nor the security policy's undated 6.x row is mapped to a separate eossec: the vendor labels the state End of Life and attaches no separate security date, so eossec stays null. v7 GA has a preserved vendor-source discrepancy: the v7 announcement and the GitHub release are dated 2024-11-22, while the official changelog dates v7.0.0 as 2024-11-21; both are quoted above, the announcement's 2024-11-22 is stored, and the conflict is left visible rather than resolved into false certainty. A v6.30.6 patch on 2026-08-18 postdates the v6 EOL; EOL is not a promise the vendor can never publish another non-security patch, and release activity is not used here as a support test."
+}

@@ -77,6 +77,105 @@
         }
       }
     },
+    "derived_entry": {
+      "description": "One derived milestone's provenance, keyed by the milestone it explains under `milestone_provenance`. A derived date is arithmetic on a base date and a rule the vendor states explicitly — a duration, the release that ends this one, or the parent platform whose lifecycle this component follows — so the base, the rule and the page it was read from are all published beside the result, and `engine/derived.py` re-derives the result from them. There is deliberately no `result` field: the result is the milestone value this entry sits beside, which is what makes a tampered date detectable (it stops matching its own rule).",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "method", "source_url", "quote", "base_date", "base_label"],
+      "properties": {
+        "kind": {
+          "description": "Always `derived`, so a computed date can never be read as a vendor statement.",
+          "const": "derived"
+        },
+        "method": {
+          "description": "The published rule shape. `release-plus-duration`: the vendor states a duration from a stated base date. `release-trigger`: the vendor states which release ends this one. `support-inheritance`: the vendor states that this component follows its parent platform's lifecycle.",
+          "enum": ["release-plus-duration", "release-trigger", "support-inheritance"]
+        },
+        "source_url": {
+          "description": "The page the rule and the base date were read from.",
+          "type": "string",
+          "format": "uri"
+        },
+        "quote": {
+          "description": "The vendor sentence that states the rule, verbatim with normalized whitespace. This is the evidence that licenses the derivation.",
+          "type": "string",
+          "minLength": 20
+        },
+        "base_date": {
+          "description": "The stated date the rule starts from, as a full ISO day: the release's own milestone, or the parent's stated deadline. Never a date this entry invents.",
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+          "format": "date"
+        },
+        "base_label": {
+          "description": "What the base date is, in the source's own terms — for example `general availability`, or the parent row's label.",
+          "type": "string",
+          "minLength": 1
+        },
+        "duration": {
+          "description": "Present only for `release-plus-duration`. A positive whole number of calendar days, months or years from `base_date`. Months and years are calendar arithmetic, so a result that would land past the end of its month clamps to that month's last day. Cadence is not a duration: an approximate release interval is not representable here.",
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["value", "unit"],
+          "properties": {
+            "value": {"type": "integer", "minimum": 1},
+            "unit": {"enum": ["day", "month", "year"]}
+          }
+        },
+        "trigger": {
+          "description": "Present only for `release-trigger`. The release whose own publication ends this one's support; its `date` is that release's published date and IS the derived deadline.",
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["release_id", "date", "label"],
+          "properties": {
+            "release_id": {"type": "string", "minLength": 1},
+            "date": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$", "format": "date"},
+            "label": {"type": "string", "minLength": 1}
+          }
+        },
+        "parent": {
+          "description": "Present only for `support-inheritance`. The published parent whose lifecycle this record's dates follow. `milestone` names which of the parent's normalized milestones is inherited (an end milestone, never general availability) and `date` is that milestone's date, which IS the derived deadline.",
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["product_id", "release_id", "release_name", "milestone", "date", "source_url"],
+          "properties": {
+            "product_id": {"type": "string", "minLength": 1},
+            "release_id": {"type": "string", "minLength": 1},
+            "release_name": {"type": "string", "minLength": 1},
+            "milestone": {"enum": ["eos", "eossec", "eol"]},
+            "date": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$", "format": "date"},
+            "source_url": {"type": "string", "format": "uri"}
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"method": {"const": "release-plus-duration"}}, "required": ["method"]},
+          "then": {"required": ["duration"], "not": {"anyOf": [{"required": ["trigger"]}, {"required": ["parent"]}]}}
+        },
+        {
+          "if": {"properties": {"method": {"const": "release-trigger"}}, "required": ["method"]},
+          "then": {"required": ["trigger"], "not": {"anyOf": [{"required": ["duration"]}, {"required": ["parent"]}]}}
+        },
+        {
+          "if": {"properties": {"method": {"const": "support-inheritance"}}, "required": ["method"]},
+          "then": {"required": ["parent"], "not": {"anyOf": [{"required": ["duration"]}, {"required": ["trigger"]}]}}
+        }
+      ]
+    },
+    "milestone_provenance": {
+      "description": "Optional, release-level, keyed by the milestone names this release derives rather than states. Only a non-null milestone may appear: an absent date stays absent, and a rule alone would fill it. A record whose dates are all vendor-stated carries no such key, so every existing record validates unchanged.",
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": false,
+      "propertyNames": {"enum": ["ga", "eos", "eossec", "eol"]},
+      "properties": {
+        "ga": {"$ref": "#/$defs/derived_entry"},
+        "eos": {"$ref": "#/$defs/derived_entry"},
+        "eossec": {"$ref": "#/$defs/derived_entry"},
+        "eol": {"$ref": "#/$defs/derived_entry"}
+      }
+    },
     "evidence": {
       "description": "One stored verbatim quote and the page it came from. Every milestone the record states must appear, at the same day precision, in a quote that backs it.",
       "type": "object",
@@ -261,6 +360,9 @@
                 "type": "string"
               }
             }
+          },
+          "milestone_provenance": {
+            "$ref": "#/$defs/milestone_provenance"
           }
         }
       }

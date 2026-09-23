@@ -9,10 +9,15 @@ authoritative technical brief; the [README](README.md) is the public overview.
    commit message, comment or file created in this repository.** We do not
    backlink our planning to upstream's tracker. Upstream *sources* (the API,
    docs, schemas) may be referenced; upstream issue/PR URLs may not.
-2. **No fabricated dates, ever.** A milestone is published only when the
-   upstream data or label explicitly carries it. Never infer EOL from release
-   cadence, support status, a newer release, or "the product is old". Absent
-   stays absent.
+2. **No fabricated dates, ever.** A milestone is normally published only when
+   the upstream data or label explicitly carries it. Never infer EOL from
+   release cadence, support status, a newer release, or "the product is old".
+   A date calculated from an explicit vendor duration or release trigger may
+   be published only through `milestone_provenance`, with its base date, rule,
+   source URL, and exact vendor quote retained; it must be labeled derived in
+   every presentation and excluded from exact-day feeds and OpenEoX. Absent
+   stays absent when neither a stated date nor an explicit vendor rule supports
+   a derivation.
 3. **Conservative label mapping.** Milestones in `engine/importer.py` /
    `engine/hardware.py` are assigned by matching the upstream column *label*
    (normalized: case, hyphens, punctuation folded). Extending the mapping
@@ -37,20 +42,23 @@ authoritative technical brief; the [README](README.md) is the public overview.
    website, and feeds end to end before calling the integration complete.
    Explicitly report source limitations; never present partial coverage as
    complete merely because its parser and deployment succeed.
-8. **Deterministic first, researched second, invented never.** For every
-   product ask, in order: (a) does a deterministic pipeline cover it today?
-   If yes, extend that pipeline; a manual copy of what automation can fetch
-   rots silently. (b) If not, can a human or agent find an *authoritative
-   primary source* (vendor notice with an explicit date) whose exact quote
-   can be stored verbatim? A correct, manually contributed date with a
-   verifiable citation beats an absent one: users managing real fleets need
-   stable facts even when no pipeline can re-derive them. (c) Only when both
-   fail does the product stay absent. A researched contribution is never a
-   substitute for an existing deterministic source: it may not overwrite or
-   shadow a deterministic record, and its provenance must carry the verbatim
-   quote, source URL, contributor, and research date so staleness is visible.
-   When implementing any new coverage, name which tier (deterministic,
-   researched, absent) the source supports before writing code.
+8. **Deterministic first, researched second, derived only with provenance,
+   invented never.** For every product ask, in order: (a) does a deterministic
+   pipeline cover it today? If yes, extend that pipeline; a manual copy of what
+   automation can fetch rots silently. (b) If not, can a human or agent find an
+   *authoritative primary source* whose exact dates or explicit duration /
+   release-trigger rule can be stored verbatim? A correct, manually
+   contributed date with a verifiable citation beats an absent one: users
+   managing real fleets need stable facts even when no pipeline can re-derive
+   them. A calculated date is admitted only with `milestone_provenance`; the
+   result is derived, not vendor-stated. (c) Only when neither a stated date
+   nor an explicit vendor rule supports a defensible record does the product
+   stay absent. A researched contribution is never a substitute for an
+   existing deterministic source: it may not overwrite or shadow a
+   deterministic record, and its provenance must carry the verbatim quote,
+   source URL, contributor, and research date so staleness is visible. When
+   implementing any new coverage, name which tier (deterministic, researched,
+   absent) the source supports before writing code.
 
 ## Repository layout
 
@@ -102,12 +110,20 @@ Software record (`data/products/<slug>.json`):
 - `id` — URL-safe slug, also the filename. Renaming an id breaks every
   permalink and feed identity; treat id changes as destructive migrations.
 - `releases[]` — each has `id`, `milestones` (`ga`/`eos`/`eossec`/`eol`, ISO
-  dates, month-precision `YYYY-MM`, or `null`), `upstream` (the raw upstream
-  release object, kept verbatim for transparency), `provenance` (`source_url`,
+  dates, month-precision `YYYY-MM`, or `null`), optional `milestone_provenance`
+  for dates derived from an explicit vendor duration, release trigger, or
+  support-inheritance rule, `upstream` (the raw upstream release object, kept
+  verbatim for transparency), and record-level `provenance` (`source_url`,
   `verifier`, `last_checked`, `upstream_modified`).
 - A milestone is a day (`YYYY-MM-DD`) or a month (`YYYY-MM`) when its source
   states no day; the two widths are distinct values, never padded from one into
   the other. A source that publishes only a day form still stores days.
+- `milestone_provenance` is keyed by milestone and contains `kind: derived`, the
+  method, source URL, exact quote, base date/label, and exactly one calculation
+  input: a duration, dated release trigger, or named parent product/release and
+  terminal milestone for support inheritance. Validation recomputes or matches
+  the result. Derived dates remain visible in the catalog and product page, but
+  never in Atom/RSS/iCalendar or OpenEoX; exclusion documents state why.
 - `upstream` for a vendor collector (a source other than endoflife.date) holds
   that vendor's own declared columns under `upstream.cells` and the table they
   came from under `upstream.table`, rather than endoflife.date field names.
@@ -135,6 +151,11 @@ Milestone semantics (shared contract):
   with unknown end date must not collapse into an earlier known deadline;
   extended-security dates fill both `eossec` and `eol` only per the mapping
   evidence rules in the importers.
+- A derived milestone is never described as vendor-stated. Duration arithmetic
+  uses calendar units; a trigger uses the dated release named by the vendor;
+  support inheritance uses the explicitly named parent product/release and its
+  terminal milestone. Cadence, age, current support and “a newer version exists”
+  without an explicit vendor rule are not derivation evidence.
 
 Published endpoints (all under `https://zarguell.github.io/eoltracker/`):
 `/v1/products.json`, `/v1/products/{id}.json`, `/v1/hardware.json`,

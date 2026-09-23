@@ -10,9 +10,9 @@ EOL Tracker ingests community lifecycle catalogs, normalizes their vendor-specif
 
 | What | Where |
 |---|---|
-| Software catalog (455 products, 7,479 releases) | `/v1/products.json`, `/v1/products/{id}.json`, human pages `/products/{id}/` |
-| Hardware catalog (6,910 models, 9 vendors) | `/v1/hardware.json`, `/v1/hardware/{id}.json`, human pages `/hardware/{id}/` |
-| Upcoming lifecycle milestones (one event per release × milestone) | `/v1/feed.atom` (RFC 4287), `/v1/feed.rss` (RSS 2.0), `/v1/calendar.ics` (RFC 5545) |
+| Software catalog (488 products, 7,988 releases) | `/v1/products.json`, `/v1/products/{id}.json`, human pages `/products/{id}/` |
+| Hardware catalog (6,999 models, 9 vendors) | `/v1/hardware.json`, `/v1/hardware/{id}.json`, human pages `/hardware/{id}/` |
+| Upcoming lifecycle milestones (one exact vendor-stated event per release × milestone) | `/v1/feed.atom` (RFC 4287), `/v1/feed.rss` (RSS 2.0), `/v1/calendar.ics` (RFC 5545), exclusions `/v1/feed-exclusions.json` |
 | OpenEoX Core v1.0 CSD01 export | `/v1/openeox/index.json`, `/v1/openeox/{product}/{release}.json` |
 | JSON Schemas for every published record | `/v1/schema/product.json`, `/v1/schema/hardware.json` |
 
@@ -35,8 +35,8 @@ feed events and does not establish dated Odoo EOL coverage.
 ## What differentiates it
 
 - **Hardware and software in one normalized schema.** Community sources are software-shaped or hardware-shaped; this catalog merges both under one milestone model (`ga` / `eos` / `eossec` / `eol`) with provenance on every record (`source_url`, `verifier`, `last_checked`, `upstream_modified`).
-- **Conservative, evidence-driven milestone semantics.** Dates are mapped only when the upstream *label* says so ("End of Technical Support" → `eol`, "Security Support" → `eossec`). An absent date is published as absent — never inferred from release cadence, support status or a newer version. Where the normalized view is empty but a raw upstream value exists, the human pages show both side by side, so what was set aside and why is always visible.
-- **Official OpenEoX export, not just a lookalike.** Records are exported against the unmodified OASIS OpenEoX Core v1.0 CSD01 JSON Schema (vendored, attributed in `OASIS-NOTICE.txt`). Releases whose required dates are unknown are *excluded* from the export and listed in a machine-readable exclusions index instead of being faked into compliance.
+- **Conservative, evidence-driven milestone semantics.** Dates are mapped only when the upstream *label* says so ("End of Technical Support" → `eol`, "Security Support" → `eossec`). An absent date is published as absent — never inferred from release cadence, support status or a newer version. A vendor-stated duration, release trigger, or component-support inheritance rule may produce a **derived** date when the base, exact rule, source URL, and quote are retained in `milestone_provenance`; the UI labels it derived. Derived dates are excluded from exact-day feeds and OpenEoX, with machine-readable reasons.
+- **Official OpenEoX export, not just a lookalike.** Records are exported against the unmodified OASIS OpenEoX Core v1.0 CSD01 JSON Schema (vendored, attributed in `OASIS-NOTICE.txt`). Releases whose required dates are unknown or derived are *excluded* from the export and listed in a machine-readable exclusions index instead of being faked into compliance.
 - **Permanent, collision-free event identities.** Every feed entry and calendar event carries a `tag:` URI (RFC 4151) that is minted once and kept for the event's whole life — stable for downstream deduplication and alerting across all three feed formats.
 - **Fail-closed publication.** Every deploy validates the full catalog against JSON Schema, checks provenance consistency, runs the unit-test suite and only then builds and publishes. A failing refresh leaves the last good deployment live.
 
@@ -82,7 +82,7 @@ Automation lives in `.github/workflows/`: `publish.yml` builds and publishes on 
 
 ## Data sources and attribution
 
-- Software records derive from [endoflife.date](https://endoflife.date/) (MIT — see `THIRD-PARTY-NOTICES.txt`).
+- The baseline software catalog derives from [endoflife.date](https://endoflife.date/) (MIT — see `THIRD-PARTY-NOTICES.txt`). Vendor-primary collectors and researched contributions add products that source does not cover; every record names its exact vendor pages, verifier, and stated/derived date basis.
 - Hardware records derive from [eosl.date](https://eosl.date/) by Subash Geetha Krishnan (CC BY 4.0 — see `THIRD-PARTY-NOTICES.txt`).
 - OpenEoX Core v1.0 CSD01 schema is vendored unmodified from OASIS (`OASIS-NOTICE.txt`).
 

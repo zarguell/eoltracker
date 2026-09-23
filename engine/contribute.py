@@ -84,7 +84,7 @@ from urllib.parse import urlsplit
 import requests
 from jsonschema import Draft202012Validator, FormatChecker
 
-from . import net, sources
+from . import derived, net, sources
 from .importer import ROOT, dump
 
 CONTRIBUTIONS = "contributions"
@@ -111,15 +111,17 @@ MIN_QUOTE = 20
 SCHEMAS = {"software": "product.json", "hardware": "hardware.json"}
 CONTRIBUTION_KEYS = frozenset({
     "target", "id", "name", "vendor", "category", "product_line", "summary", "release",
-    "releases", "identifiers", "links", "milestones", "evidence", "contributor", "method",
-    "stale_after", "notes",
+    "releases", "identifiers", "links", "milestones", "milestone_provenance", "evidence",
+    "contributor", "method", "stale_after", "notes",
 })
 EVIDENCE_KEYS = frozenset({"quote", "source_url", "retrieved_at", "milestones"})
 # One release line inside a contribution that covers several. `milestones` states
 # the branch's own dates, so a product whose notice dates more than one line --
 # or dates the current line and leaves an undated one that must not disappear --
-# is one contribution with one release per branch.
-RELEASE_KEYS = frozenset({"id", "name", "milestones"})
+# is one contribution with one release per branch. `milestone_provenance` is the
+# line's optional derived-date disclosure, keyed by the milestones the notice
+# states a *rule* for rather than a date (see engine/derived.py).
+RELEASE_KEYS = frozenset({"id", "name", "milestones", "milestone_provenance"})
 # Contribution fields copied into the research object as kept context. A
 # hardware record already states its own vendor and product line, so only the
 # software target keeps `vendor` there.
@@ -275,18 +277,24 @@ def date_in_quote(value, quote):
     return False
 
 
-def missing_backing(milestones, evidence):
+def missing_backing(milestones, evidence, provenance=None):
     """The milestone keys whose stored date no stored quote states.
 
     An evidence entry that names milestones only backs those; one that names
-    none backs any of them.
+    none backs any of them. A *derived* milestone is exempt: the vendor states a
+    rule for it rather than a date, so no sentence can contain the resulting day
+    and the rule's own stored quote is its evidence (``engine/derived.py``
+    re-derives the date from it). Exempting exactly the keys the provenance
+    names keeps every stated date on the literal-quote rule.
     """
+    derived = provenance or {}
     quoted = {key: [] for key in MILESTONE_KEYS}
     for entry in evidence:
         for key in entry.get("milestones") or MILESTONE_KEYS:
             quoted[key].append(entry["quote"])
     return [key for key in MILESTONE_KEYS
-            if milestones.get(key) and not any(date_in_quote(milestones[key], quote) for quote in quoted[key])]
+            if milestones.get(key) and key not in derived
+            and not any(date_in_quote(milestones[key], quote) for quote in quoted[key])]
 
 
 def quote_of(evidence):
@@ -391,6 +399,24 @@ def _parse_milestones(value, where, allow_empty=False):
     return milestones
 
 
+def validate_derived(milestones, provenance, where, release_ids=None):
+    """Check one release line's derived-date disclosure against its own rule.
+
+    A contribution may state a milestone the vendor dates only as a *rule* --
+    an explicit duration, the release that ends this line, or the parent platform
+    whose lifecycle it follows. The stored provenance is checked here against the
+    dates beside it: a rule that does not produce the stored date is refused
+    rather than published as a vendor fact. The check is ``engine.derived``'s --
+    the same one the catalog gate runs -- so a contribution and the committed
+    record cannot disagree about what a rule produces. Returns the entry as it
+    was written, or ``None`` when the line states only vendor dates.
+    """
+    if provenance is None:
+        return None
+    derived.validate_milestone_provenance(milestones, provenance, where, release_ids)
+    return copy.deepcopy(provenance)
+
+
 def _parse_releases(value, where):
     """The release lines of a contribution that covers more than one branch.
 
@@ -413,6 +439,9 @@ def _parse_releases(value, where):
         release = {"id": _text(raw.get("id"), at, "id")}
         release["name"] = _text(raw.get("name", release["id"]), at, "name")
         release["milestones"] = _parse_milestones(raw.get("milestones"), at, allow_empty=True)
+        release["milestone_provenance"] = validate_derived(
+            release["milestones"], raw.get("milestone_provenance"), at,
+            {line["id"] for line in value if isinstance(line, dict) and isinstance(line.get("id"), str)})
         if release["id"] in seen:
             raise ValueError(f"{at}: duplicate release id {release['id']!r}")
         seen.add(release["id"])
@@ -534,8 +563,11 @@ def parse_contribution(raw, path="<contribution>"):
     else:
         default_release = record_id[len(RESEARCHED_VERIFIER_PREFIX):]
         label = _text(raw.get("release", default_release), where, "release")
-        lines = [{"id": label, "name": label,
-                  "milestones": _parse_milestones(raw.get("milestones"), where)}]
+        milestones = _parse_milestones(raw.get("milestones"), where)
+        lines = [{"id": label, "name": label, "milestones": milestones,
+                  "milestone_provenance": validate_derived(
+                      milestones, raw.get("milestone_provenance") if target == "software" else None,
+                      where, {label})}]
     contribution = {
         "target": target,
         "contributor": _text(raw.get("contributor"), where, "contributor"),
@@ -560,7 +592,7 @@ def parse_contribution(raw, path="<contribution>"):
         contribution["identifiers"] = _parse_identifiers(raw.get("identifiers"), where)
         contribution["links"] = _parse_links(raw.get("links"), where)
     else:
-        software_only = sorted({"identifiers", "links", "release", "category"} & set(raw))
+        software_only = sorted({"identifiers", "links", "release", "category", "milestone_provenance"} & set(raw))
         if software_only:
             raise ValueError(f"{where}: {software_only} are software-only fields")
         contribution["vendor"] = _text(raw.get("vendor"), where, "vendor")
@@ -577,7 +609,8 @@ def parse_contribution(raw, path="<contribution>"):
         if raw.get(key) is not None:
             contribution[key] = _text(raw[key], where, key)
     unbacked = [key for line in lines
-                for key in missing_backing(line["milestones"], contribution["evidence"])]
+                for key in missing_backing(line["milestones"], contribution["evidence"],
+                                           line.get("milestone_provenance"))]
     if unbacked:
         labels = ", ".join(dict.fromkeys(MILESTONE_LABELS[key] for key in unbacked))
         raise ValueError(f"{where}: no stored quote states the {labels} date; every milestone must be "
@@ -667,7 +700,9 @@ def build_record(contribution, research, checked, now=None):
             "upstream_category": contribution["category"], "identifiers": contribution["identifiers"],
             "labels": {}, "links": contribution["links"],
             "releases": [{"id": line["id"], "name": line["name"], "milestones": dict(line["milestones"]),
-                          "upstream": {"name": line["name"], "Contribution": cell}}
+                          "upstream": {"name": line["name"], "Contribution": cell},
+                          **({derived.DERIVED_KEY: copy.deepcopy(line[derived.DERIVED_KEY])}
+                             if line.get(derived.DERIVED_KEY) else {})}
                          for line in contribution["releases"]],
             "provenance": provenance,
         }
@@ -775,7 +810,16 @@ def validate_research(record, target):
             if not isinstance(cell, dict) or cell.get("text") != research["quote"]:
                 raise ValueError(f"{where}: release {release['id']!r} must carry the researched quote "
                                  "verbatim under upstream.Contribution")
+        # A derived date is checked against its own rule here, not only against
+        # the schema: a hand-edited milestone or base that no longer follows the
+        # stored rule fails the catalog gate instead of being published.
+        derived_ids = {release["id"] for release in releases}
+        for release in releases:
+            validate_derived(release["milestones"], release.get(derived.DERIVED_KEY),
+                             f"{where}/{release['id']}", derived_ids)
         milestone_sets = [release["milestones"] for release in releases]
+        published = [{"milestones": release["milestones"],
+                      derived.DERIVED_KEY: release.get(derived.DERIVED_KEY)} for release in releases]
     else:
         urls = provenance["source_urls"]
         if urls[0] != research["source_url"] or set(urls) != {e["source_url"] for e in evidence}:
@@ -786,6 +830,7 @@ def validate_research(record, target):
             raise ValueError(f"{where}: the record must carry the researched quote verbatim "
                              "under upstream.Contribution")
         milestone_sets = [record["milestones"]]
+        published = [record]
     # An entry's `milestones` says which dates its quote backs; the record may
     # publish those dates on more than one release line (a notice that dates a
     # branch is quoted once for it), so the claim is checked against every set
@@ -796,8 +841,8 @@ def validate_research(record, target):
             if key not in stated:
                 raise ValueError(f"{where}: research.evidence[{index}] claims "
                                  f"{MILESTONE_LABELS[key]} but the record states no such date")
-    for milestones in milestone_sets:
-        unbacked = missing_backing(milestones, evidence)
+    for line in published:
+        unbacked = missing_backing(line["milestones"], evidence, line.get(derived.DERIVED_KEY))
         if unbacked:
             labels = ", ".join(MILESTONE_LABELS[key] for key in unbacked)
             raise ValueError(f"{where}: no stored quote states the {labels} date")

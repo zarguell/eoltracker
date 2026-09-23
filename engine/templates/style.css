@@ -382,6 +382,13 @@ main { padding: 28px 0 56px; }
 /* Researched provenance: a citation, not a health state. It is styled to read
    as a source note so it can never be mistaken for a deterministic status. */
 .tag-research { background: var(--surface-2); border-color: var(--teal-600); color: var(--link); }
+/* A derived date is a published, recomputable fact but not a vendor-stated
+   day: its tag reads as a qualifier on the date beside it, never as a status. */
+.tag-derived { background: var(--surface-2); border-color: var(--line); color: var(--fg-muted); font-style: italic; }
+.derived-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 20px; }
+.derived-item { border-left: 2px solid var(--line); padding-left: 14px; }
+.derived-head { margin: 0 0 10px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.derived-milestone { color: var(--fg-muted); }
 .research-head { margin: 0 0 14px; font-size: 0.92rem; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
 .banner {
   margin: 0 0 16px;

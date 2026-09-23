@@ -86,19 +86,41 @@
     </li>
   </ul>
 
-  <h3 class="sub-title">Upcoming deadlines and precision exclusions</h3>
+  <h3 class="sub-title">Upcoming deadlines and exclusion reasons</h3>
   <p class="panel-note">
     The deadline feeds syndicate upcoming milestones only (<code>today &lt;= date</code>, UTC), as an Atom document, an
-    RSS document and an iCalendar file. All three carry an exact calendar day: Atom and RSS stamp each item with a
-    date-time and iCalendar with a <code>VALUE=DATE</code> day. A milestone whose source states only a month
-    (<code>YYYY-MM</code>) has no day to carry, and this catalog never invents one, so those events are not in the
-    three documents — they are enumerated, with their identity and the month the source states, in the exclusion
-    document below. Its entries are disjoint from the feeds' and together they cover every upcoming milestone.
+    RSS document and an iCalendar file. All three carry an exact calendar day that a source states: Atom and RSS stamp
+    each item with a date-time and iCalendar with a <code>VALUE=DATE</code> day. Two kinds of upcoming event have no
+    such day, and neither is silently dropped:
+  </p>
+  <ul class="endpoints">
+    <li>
+      <span><code>month_precision_not_representable</code></span>
+      <span>
+        A milestone whose source states only a month (<code>YYYY-MM</code>) has no day to carry, and this catalog
+        never invents one.
+      </span>
+    </li>
+    <li>
+      <span><code>derived_not_vendor_stated</code></span>
+      <span>
+        A <em>derived</em> milestone (<code>releases[].milestone_provenance</code>, below) is computed from a rule the
+        vendor states — an explicit duration, the release that ends the line, or a parent platform's lifecycle —
+        applied to a published base date. The date is real, published and recomputable, but it is not a day the vendor
+        states, so syndicating it would print an arithmetic result as a vendor deadline. See
+        <a href="#derived-dates">Derived dates</a> for the full field list.
+      </span>
+    </li>
+  </ul>
+  <p class="panel-note">
+    The exclusion document below enumerates every event the three documents do not carry, with its stable identity and
+    the value the source states. Its entries are disjoint from the feeds' and together they cover every upcoming
+    milestone.
   </p>
   <ul class="endpoints">
     <li>
       <a href="{{ url_for('v1/feed.atom') }}"><code>v1/feed.atom</code></a>
-      <span>RFC 4287. One <code>entry</code> per upcoming day-precision milestone.</span>
+      <span>RFC 4287. One <code>entry</code> per upcoming milestone whose source states a calendar day.</span>
     </li>
     <li>
       <a href="{{ url_for('v1/feed.rss') }}"><code>v1/feed.rss</code></a>
@@ -112,11 +134,12 @@
       <a href="{{ url_for('v1/feed-exclusions.json') }}"><code>v1/feed-exclusions.json</code></a>
       <span>
         Machine-readable accounting of the upcoming events the three documents do not carry:
-        <code>{counts: {upcoming_events, feeds, excluded}, reason: {code, statement, precision}, excluded: [...]}</code>.
+        <code>{counts: {upcoming_events, feeds, excluded, by_code: {&lt;code&gt;: n}}, reasons: [{code, statement, precision}], excluded: [...]}</code>.
         Each excluded entry carries the event's stable <code>id</code>, its <code>kind</code> (software or hardware),
-        <code>product</code>, <code>release</code>, <code>milestone</code>, the stored <code>month</code> and the
-        <code>code</code> <code>month_precision_not_representable</code> with its reason. Nothing is dropped silently;
-        a consumer that wants every deadline reads the feeds and this document.
+        <code>product</code>, <code>release</code>, <code>milestone</code>, the <code>date</code> the source states,
+        and exactly one <code>code</code> with its <code>reason</code> — plus, for a derived event, the
+        <code>derived</code> object with the method, base date, duration/trigger/parent and quote it was computed
+        from. Nothing is dropped silently; a consumer that wants every deadline reads the feeds and this document.
       </span>
     </li>
   </ul>
@@ -219,8 +242,42 @@
     <div><dt><code>releases[].milestones</code></dt><dd>The four normalized dates: <code>ga</code>, <code>eos</code>, <code>eossec</code>, <code>eol</code>. Each is an ISO date (<code>YYYY-MM-DD</code>), a month (<code>YYYY-MM</code>) when the source states no day, or <code>null</code>; <code>null</code> means the source publishes no date, never a guessed one, and a month is never padded into a day.</dd></div>
     <div><dt><code>releases[].upstream</code></dt><dd>The entire original upstream release object, so any normalized value can be audited against its source. A vendor collector stores that vendor's own declared columns under <code>upstream.cells</code> and the table they came from under <code>upstream.table</code>, so its record shows the source's wording rather than a mapping that does not apply to it.</dd></div>
     <div><dt><code>provenance</code></dt><dd><code>source_url</code>, <code>verifier</code> (pipeline revision), <code>last_checked</code> (UTC, per record), <code>upstream_modified</code> (or <code>null</code> when upstream publishes none).</dd></div>
+    <div><dt><code>releases[].milestone_provenance</code></dt><dd>Optional, and present only on a release that derives a milestone rather than stating it. Keyed by milestone name (only milestones the release publishes may appear), each value is <code>{kind: "derived", method, source_url, quote, base_date, base_label, …}</code>; <code>method</code> is <code>release-plus-duration</code> (with <code>duration: {value, unit}</code>), <code>release-trigger</code> (with <code>trigger: {release_id, date, label}</code>) or <code>support-inheritance</code> (with <code>parent: {product_id, release_id, release_name, milestone, date, source_url}</code>). A derived date carries no <code>result</code> field: the result is the milestone value beside it, and the rule has to produce that value or the record fails validation.</dd></div>
     <div><dt><code>provenance.research</code></dt><dd>Optional, and present only on researched records — a record whose dates came from a one-time reading of a vendor notice because no refreshable catalog publishes them (see <em>Researched records</em> below for the fields and what the quotes must satisfy).</dd></div>
   </dl>
+</section>
+
+<section class="panel" aria-labelledby="derived-dates">
+  <h2 class="panel-title" id="derived-dates">Derived dates</h2>
+  <p class="panel-note">
+    Some vendors publish the <em>rule</em> that ends a release's support while never writing the resulting calendar
+    day: an explicit duration ("supported for five years from general availability"), an explicit trigger ("end of
+    sale occurs with the release of the next major version"), or explicit inheritance ("a component receives the same
+    support as its parent product or platform"). When the base date, the rule and the arithmetic are all published,
+    the resulting date is a fact a reader can recompute — so this catalog publishes it, and says exactly what it is.
+  </p>
+  <p class="panel-note">
+    A derived date is never presented as a date the vendor states. It is marked <code>derived</code> in the release
+    table, listed with its rule and quote on the product page, and kept out of every exact-day surface: the
+    upcoming-deadlines list, the three syndication feeds and the OpenEoX export each carry only days a source states,
+    and every derived event excluded from the feeds is enumerated in <code>v1/feed-exclusions.json</code> under the
+    code <code>derived_not_vendor_stated</code>. A derived date is also <em>never</em> produced from release cadence:
+    a vendor policy of approximate intervals states no duration, so it yields no entry here.
+  </p>
+  <dl class="facts">
+    <div><dt><code>kind</code></dt><dd>Always <code>"derived"</code>, so a consumer can never mistake the value for a vendor statement.</dd></div>
+    <div><dt><code>method</code></dt><dd><code>release-plus-duration</code>, <code>release-trigger</code> or <code>support-inheritance</code> — which shape of rule the vendor stated. Exactly one rule object accompanies it.</dd></div>
+    <div><dt><code>source_url</code>, <code>quote</code></dt><dd>The page the rule and base were read from, and the vendor sentence stating the rule stored verbatim. The quote is the evidence that licenses the derivation; the dates it contains (if any) are not what makes it valid, the rule is.</dd></div>
+    <div><dt><code>base_date</code>, <code>base_label</code></dt><dd>The stated date the rule starts from and what it is in the source's terms. A <code>release-plus-duration</code> base is the release's own stated milestone; a <code>support-inheritance</code> base is the parent's stated deadline.</dd></div>
+    <div><dt><code>duration.value</code>, <code>duration.unit</code></dt><dd>A positive whole number of <code>day</code>, <code>month</code> or <code>year</code>s, added as calendar arithmetic. A result past the end of its month clamps to that month's last day.</dd></div>
+    <div><dt><code>trigger.release_id</code>, <code>trigger.date</code>, <code>trigger.label</code></dt><dd>The release whose own publication ends this line's support, the date it was published (which <em>is</em> the derived deadline) and a reader-facing label for the event.</dd></div>
+    <div><dt><code>parent</code></dt><dd>The published parent this component follows: the catalog record and release ids, the normalized parent milestone inherited (an end milestone, never general availability), that milestone's date (which <em>is</em> the derived deadline) and the parent's source page.</dd></div>
+  </dl>
+  <p class="panel-note">
+    Verified as published: every derived entry is re-checked at validation time and at contribution time by the same
+    shared code, so a record whose milestone no longer matches its own rule is refused instead of published. Tamper
+    with the date or the base and the record fails; there is no second, derived-from-the-result answer.
+  </p>
 </section>
 
 <section class="panel" aria-labelledby="hw-record-title">

@@ -24,11 +24,11 @@ from .site_config import (CATALOG_STATES, CHANGES_ATOM, CHANGES_JSON, DEFAULT_DA
                           MILESTONES, NOTICE_FILES, OPENGEAR_SOURCE, SCHEMA_DIR, SCHEMA_VERSION,
                           TEMPLATES, VENDOR_INDEX, env, human_datetime, site_url, url_for)
 from .site_sources import (source_attribution, source_links, source_name, source_order)
-from .site_views import (catalog_categories, catalog_identity, catalog_stats, hardware_rows,
-                         hardware_statuses, hardware_vendor_shards, hardware_vendors,
-                         milestone_coverage, opengear_index, release_rows, report_families,
-                         research_count, research_view, RESEARCH_STALE_DAYS, summarize,
-                         summarize_hardware, upcoming_events)
+from .site_views import (catalog_categories, catalog_identity, catalog_stats, derived_count,
+                         derived_rows, hardware_rows, hardware_statuses, hardware_vendor_shards,
+                         hardware_vendors, milestone_coverage, opengear_index, release_rows,
+                         report_families, research_count, research_view, RESEARCH_STALE_DAYS,
+                         summarize, summarize_hardware, upcoming_events)
 from .importer import ROOT
 from . import contribute, sources
 from .validation import validate_data, validate_hardware
@@ -77,14 +77,18 @@ def build(data_dir=None, out_dir=None):
     for schema_file in schema_files:
         shutil.copyfile(schema_file, out / "v1" / "schema" / schema_file.name)
 
+    rows_by_id = {record["id"]: release_rows(record) for record in records}
     catalog_counts = {
         "product_count": len(records),
         "release_count": sum(len(record["releases"]) for record in records),
         "researched_count": research_count(records),
+        # The count of products publishing at least one derived date, so a
+        # consumer reading either catalog document sees how many carry a
+        # computed milestone without fetching all 480 record endpoints.
+        "derived_count": derived_count(rows_by_id),
     }
     feed = {"schema_version": SCHEMA_VERSION, **manifest, **catalog_counts, "products": records}
     write_json(out / "v1" / "feed.json", feed)
-    rows_by_id = {record["id"]: release_rows(record) for record in records}
     summaries = [summarize(record, rows_by_id[record["id"]], today) for record in records]
     write_json(out / "v1" / "products.json", {
         "schema_version": SCHEMA_VERSION, **manifest, **catalog_counts, "products": summaries})
@@ -330,6 +334,7 @@ def build(data_dir=None, out_dir=None):
             events=page_events,
             labels=record.get("labels") or {},
             label_rules=LABEL_RULES,
+            derived_rows=derived_rows(rows),
             identifiers=record.get("identifiers") or [],
             links=record.get("links") or {},
             json_url=url_for(f"v1/products/{record['id']}.json"),

@@ -13,6 +13,15 @@ date-times of a stated day, so a release whose source states only a month
 never widened into a deadline. That is a different claim from an absent date:
 the source *did* announce a deadline, at a width this format cannot carry.
 
+A *derived* milestone is the other reason of the same kind, and the sharper one.
+``milestone_provenance`` publishes a date whose rule and base the vendor states
+(see `engine/derived.py`), so the date is real, published and recomputable — but
+it is not a day the vendor states. These properties are the source's own
+lifecycle dates, so exporting a derived value as one would present arithmetic as
+a vendor statement; the release is excluded under ``<property>_derived`` with
+the rule, base and quote named in the reason, and the derived date stays
+published in the catalog record where its rule travels with it.
+
 The records carry no product identity: OpenEoX Core deliberately has no product,
 vendor or version properties, so the product and release are bound through the
 record's URL and through ``index.json`` next to it.
@@ -35,6 +44,7 @@ from pathlib import Path
 from jsonschema import Draft202012Validator, FormatChecker
 
 from .site_config import is_month
+from . import derived
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE_BASE = "https://zarguell.github.io/eoltracker"
@@ -164,17 +174,25 @@ def _chronology_errors(record):
     return errors
 
 
-def _milestones(product_id, release_id, milestones):
+def _milestones(product_id, release_id, milestones, provenance=None):
     """Map catalog milestones to catalog dates, or report why they are unusable.
 
     Returns ``(days, exclusion)``. ``days`` maps OpenEoX property names to
     calendar days; ``exclusion`` is the machine-readable reason the release has
-    no usable milestone set at all, or None. A month-precision milestone is
-    *not* a day: OpenEoX Core's ``general_availability`` and end-of-* properties
-    are RFC 3339 date-times of a stated day, so publishing "July 2028" would
-    mean inventing the day AGENTS.md rule 4 forbids. Such a release is excluded
-    with its own code — never padded, never silently dropped, and never given
-    the ``tba`` value.
+    no usable milestone set at all, or None. Two kinds of milestone are not a
+    stated day:
+
+    * a *month-precision* milestone (``YYYY-MM``) states a month, so publishing
+      "July 2028" as an OpenEoX date-time would mean inventing the day AGENTS.md
+      rule 4 forbids; and
+    * a *derived* milestone (``milestone_provenance``; see `engine/derived.py`)
+      is arithmetic on a rule and a base the vendor publishes, which is a real
+      published date but not a *vendor-stated day* — and the OpenEoX Core
+      properties are exactly the vendor's stated lifecycle dates. Its rule and
+      base live in the catalog record, not in an OpenEoX document.
+
+    A release carrying either is excluded with its own code — never padded,
+    never silently dropped, and never given the ``tba`` value.
     """
     if not isinstance(milestones, dict):
         raise ValueError(f"Release {product_id}/{release_id} has no milestones object")
@@ -193,6 +211,18 @@ def _milestones(product_id, release_id, milestones):
                 "reason": f"The source states {field} as the month {value}, not a day. OpenEoX Core "
                 "requires a date-time of a stated day, so this release is not exported rather than "
                 "having a day invented for it.",
+            }
+        if (provenance or {}).get(key):
+            return None, {
+                "product": product_id,
+                "release": release_id,
+                "code": f"{field}_derived",
+                "reason": f"{field} is a derived date: the record's milestone_provenance states the "
+                f"method {provenance[key]['method']!r} with base date {provenance[key]['base_date']} "
+                f"({provenance[key]['base_label']}) and the quote it comes from. The value is derived "
+                "from that explicit rule rather than stated as a day by the source. OpenEoX Core "
+                "properties are the source's own lifecycle dates, so this release is not exported; "
+                "the derived date stays published in the catalog record with its rule.",
             }
         if not DATE.fullmatch(value):
             raise ValueError(f"Release {product_id}/{release_id} milestone {key} is not a date: {value!r}")
@@ -225,12 +255,13 @@ def _last_updated(product_id, provenance):
 def _record(product_id, release, last_updated):
     """Return (record, None) for a publishable release or (None, exclusion)."""
     release_id = release["id"]
-    days, month = _milestones(product_id, release_id, release.get("milestones"))
-    if month:
+    days, exclusion = _milestones(product_id, release_id, release.get("milestones"),
+                                  release.get(derived.DERIVED_KEY))
+    if exclusion:
         # The exclusion is built before the release's name so the index entry
         # carries the same identity fields as every other exclusion row.
         return None, {"product": product_id, "release": release_id,
-                      "release_name": release.get("name") or release_id, **month}
+                      "release_name": release.get("name") or release_id, **exclusion}
     unknown = [field for field in REQUIRED if days[field] is None]
     if unknown:
         field = unknown[0]
@@ -353,6 +384,11 @@ def _index(entries, exclusions, counts):
             "source states a milestone as a month (YYYY-MM) is excluded under the code "
             "'<property>_month_precision' rather than having a day invented for it, so no record here carries a "
             "day the source never published.",
+            "derived": "A release whose milestone_provenance derives a milestone from a stated rule (an explicit "
+            "duration, a release trigger, or a parent platform's lifecycle) is excluded under the code "
+            "'<property>_derived'. The date is a published, recomputable fact — the rule, base and quote are in "
+            "the catalog record — but it is not a day the source states, and OpenEoX Core properties are the "
+            "source's own lifecycle dates. No derived date is exported as if the vendor had stated the day.",
             "last_updated": "Taken from the upstream revision timestamp of the source record, falling back to its "
             "last checked time; unchanged source content keeps the same value across builds.",
             "excluded": "Releases without a record are listed under 'excluded' with a machine-readable code and a "

@@ -1,0 +1,2434 @@
+ <!DOCTYPE html>
+		<html
+			class="layout layout-holy-grail   show-table-of-contents conceptual show-breadcrumb default-focus"
+			lang="en-us"
+			dir="ltr"
+			data-authenticated="false"
+			data-auth-status-determined="false"
+			data-target="docs"
+			x-ms-format-detection="none"
+		>
+			
+		<head>
+			<title>Microsoft Entra Connect: Version release history - Microsoft Entra ID | Microsoft Learn</title>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<meta name="color-scheme" content="light dark" />
+
+			<meta name="description" content="This article lists all releases of Microsoft Entra Connect and Azure AD Sync." />
+			<link rel="canonical" href="https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/reference-connect-version-history" /> 
+
+			<!-- Non-customizable open graph and sharing-related metadata -->
+			<meta name="twitter:card" content="summary_large_image" />
+			<meta name="twitter:site" content="@MicrosoftLearn" />
+			<meta property="og:type" content="website" />
+			<meta property="og:image:alt" content="Microsoft Learn" />
+			<meta property="og:image" content="https://learn.microsoft.com/en-us/media/open-graph-image.png" />
+			<!-- Page specific open graph and sharing-related metadata -->
+			<meta property="og:title" content="Microsoft Entra Connect: Version release history - Microsoft Entra ID" />
+			<meta property="og:url" content="https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/reference-connect-version-history" />
+			<meta property="og:description" content="This article lists all releases of Microsoft Entra Connect and Azure AD Sync." />
+			<meta name="platform_id" content="3be253a2-b013-ed0d-92c3-041d94449c6c" /> <meta name="scope" content="Microsoft Entra" />
+			<meta name="locale" content="en-us" />
+			 
+			<meta name="uhfHeaderId" content="MSDocsHeader-Entra" />
+
+			<meta name="page_type" content="conceptual" />
+
+			<!--page specific meta tags-->
+			
+
+			<!-- custom meta tags -->
+			
+		<meta name="breadcrumb_path" content="/entra/breadcrumb/toc.json" />
+	
+		<meta name="feedback_system" content="Standard" />
+	
+		<meta name="feedback_product_url" content="https://feedback.azure.com/d365community/forum/22920db1-ad25-ec11-b6e6-000d3a4f0789" />
+	
+		<meta name="author" content="boscoMW" />
+	
+		<meta name="ms.author" content="bmutunga" />
+	
+		<meta name="ms.service" content="entra-id" />
+	
+		<meta name="manager" content="pmwongera" />
+	
+		<meta name="ms.assetid" content="ef2797d7-d440-4a9a-a648-db32ad137494" />
+	
+		<meta name="ms.topic" content="reference" />
+	
+		<meta name="ms.date" content="2026-09-16T00:00:00Z" />
+	
+		<meta name="ms.subservice" content="hybrid-connect" />
+	
+		<meta name="ms.custom" content="no-azure-ad-ps-ref, sfi-ga-nochange" />
+	
+		<meta name="ai-usage" content="ai-assisted" />
+	
+		<meta name="document_id" content="fd856307-25bf-4b18-ef90-75df56fd9493" />
+	
+		<meta name="document_version_independent_id" content="59686ac8-db3d-0edf-ba0e-4aef1e2fdd0b" />
+	
+		<meta name="updated_at" content="2026-09-16T17:38:00Z" />
+	
+		<meta name="original_content_git_url" content="https://github.com/MicrosoftDocs/entra-docs-pr/blob/live/docs/identity/hybrid/connect/reference-connect-version-history.md" />
+	
+		<meta name="gitcommit" content="https://github.com/MicrosoftDocs/entra-docs-pr/blob/69d6b1435b5b57de7732a632c2789321aaac74b6/docs/identity/hybrid/connect/reference-connect-version-history.md" />
+	
+		<meta name="git_commit_id" content="69d6b1435b5b57de7732a632c2789321aaac74b6" />
+	
+		<meta name="site_name" content="Docs" />
+	
+		<meta name="depot_name" content="MSDN.entra-docs" />
+	
+		<meta name="schema" content="Conceptual" />
+	
+		<meta name="toc_rel" content="../toc.json" />
+	
+		<meta name="feedback_help_link_type" content="" />
+	
+		<meta name="feedback_help_link_url" content="" />
+	
+		<meta name="word_count" content="10253" />
+	
+		<meta name="asset_id" content="identity/hybrid/connect/reference-connect-version-history" />
+	
+		<meta name="moniker_range_name" content="" />
+	
+		<meta name="item_type" content="Content" />
+	
+		<meta name="source_path" content="docs/identity/hybrid/connect/reference-connect-version-history.md" />
+	
+		<meta name="previous_tlsh_hash" content="BF756263C60D8702FFC32D0AB827BB80A5F0D48564B0A2D80615BA9298259E335F7F69D7D627A24967334A8322C7DA1F56A2FB3DC1FD13526724609CC06D31576ACE3BF9D7" />
+	
+		<meta name="github_feedback_content_git_url" content="https://github.com/MicrosoftDocs/entra-docs/blob/main/docs/identity/hybrid/connect/reference-connect-version-history.md" />
+	
+		<meta name="markdown_url" content="https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/reference-connect-version-history?accept=text/markdown" />
+	 
+		<meta name="cmProducts" content="https://microsoft-devrel.poolparty.biz/DevRelOfferingOntology/57eae307-c3a1-4cac-b645-1a899934bac8" data-source="generated" />
+	
+		<meta name="spProducts" content="https://microsoft-devrel.poolparty.biz/DevRelOfferingOntology/ee561821-1ac7-45a8-9409-6ba5eb7a5b97" data-source="generated" />
+	
+
+			<!-- Apply persisted/system theme before first paint to prevent wrong-theme flash when scripts are deferred. -->
+			<script id="theme-preference">
+				(function () {
+			try {
+				var stored = localStorage.getItem('theme');
+				var theme = /^(light|dark|high-contrast)$/.test(stored)
+					? stored
+					: matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+				document.documentElement.classList.add('theme-' + theme);
+			} catch (e) {}
+		})();;
+			</script>
+
+			<script id="atlas-layout-preferences">
+				(function () {
+			try {
+				var state = JSON.parse(localStorage.getItem('atlas-layout-preferences') || '{}');
+				var view = state["docs-layout-persistence"] || {};
+				var excludesKey = "";
+				var blocked = {};
+				if (excludesKey) {
+					var exclusions = JSON.parse(localStorage.getItem('atlas-layout-exclusions') || '{}');
+					if (Object.prototype.hasOwnProperty.call(exclusions, excludesKey)) {
+						var scoped = exclusions[excludesKey];
+						if (scoped) {
+							if (typeof scoped === 'object') blocked = scoped;
+						}
+					}
+				}
+				var html = document.documentElement;
+				for (var c in view) {
+					if (Object.prototype.hasOwnProperty.call(blocked, c)) continue;
+					if (view[c]) html.classList.add(c);
+					else html.classList.remove(c);
+				}
+			} catch (e) {}
+		})();;
+			</script>
+
+			<!-- assets and js globals -->
+			
+			<link rel="stylesheet" href="/static/assets/0.4.03547.8249-7a3b4850/styles/site.css" />
+			
+			<script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+			<!-- Keep this URL in sync with oneDSScriptSelector in instrumentation/one-ds.ts. -->
+			<script async src="https://js.monitor.azure.com/scripts/c/ms.jsll-4.min.js"></script>
+			
+
+			<!-- msdocs global object -->
+			<script id="msdocs-script">
+		var msDocs = {
+  "environment": {
+    "accessLevel": "online",
+    "azurePortalHostname": "portal.azure.com",
+    "reviewFeatures": false,
+    "supportLevel": "production",
+    "systemContent": true,
+    "siteName": "learn",
+    "legacyHosting": false
+  },
+  "data": {
+    "contentLocale": "en-us",
+    "contentDir": "ltr",
+    "userLocale": "en-us",
+    "userDir": "ltr",
+    "pageTemplate": "Conceptual",
+    "layoutStateStorageKey": "docs-layout-persistence",
+    "brand": "entra",
+    "context": {},
+    "standardFeedback": true,
+    "showFeedbackReport": false,
+    "feedbackHelpLinkType": "",
+    "feedbackHelpLinkUrl": "",
+    "feedbackSystem": "Standard",
+    "feedbackGitHubRepo": "MicrosoftDocs/entra-docs",
+    "feedbackProductUrl": "https://feedback.azure.com/d365community/forum/22920db1-ad25-ec11-b6e6-000d3a4f0789",
+    "extendBreadcrumb": false,
+    "isEditDisplayable": true,
+    "isPrivateUnauthorized": false,
+    "hideViewSource": false,
+    "isPermissioned": false,
+    "hasRecommendations": false
+  },
+  "functions": {}
+};;
+	</script>
+
+			<!-- base scripts, msdocs global should be before this -->
+			<script
+				src="/static/assets/0.4.03547.8249-7a3b4850/scripts/en-us/index-docs.js"
+				async
+			></script>
+			
+
+			<!-- json-ld -->
+			
+		</head>
+	
+			<body
+				id="body"
+				data-bi-name="body"
+				class="layout-body "
+				lang="en-us"
+				dir="ltr"
+			>
+				<header class="layout-body-header background-color-body-medium">
+		<div class="header-holder has-default-focus">
+			
+		<a
+			href="#main"
+			
+			style="z-index: 1070"
+			class="outline-color-text visually-hidden-until-focused position-fixed inner-focus focus-visible top-0 left-0 right-0 padding-xs text-align-center background-color-body"
+			
+		>
+			Skip to main content
+		</a>
+	
+		<a
+			href="#"
+			data-skip-to-ask-learn
+			style="z-index: 1070"
+			class="outline-color-text visually-hidden-until-focused position-fixed inner-focus focus-visible top-0 left-0 right-0 padding-xs text-align-center background-color-body"
+			hidden
+		>
+			Skip to Ask Learn chat experience
+		</a>
+	
+
+			<div hidden id="cookie-consent-holder" data-test-id="cookie-consent-container"></div>
+			<!-- Unsupported browser warning -->
+			<div
+				id="unsupported-browser"
+				style="background-color: white; color: black; padding: 16px; border-bottom: 1px solid grey;"
+				hidden
+			>
+				<div style="max-width: 800px; margin: 0 auto;">
+					<p style="font-size: 24px">This browser is no longer supported.</p>
+					<p style="font-size: 16px; margin-top: 16px;">
+						Upgrade to Microsoft Edge to take advantage of the latest features, security updates, and technical support.
+					</p>
+					<div style="margin-top: 12px;">
+						<a
+							href="https://go.microsoft.com/fwlink/p/?LinkID=2092881 "
+							style="background-color: #0078d4; border: 1px solid #0078d4; color: white; padding: 6px 12px; border-radius: 2px; display: inline-block;"
+						>
+							Download Microsoft Edge
+						</a>
+						<a
+							href="https://learn.microsoft.com/en-us/lifecycle/faq/internet-explorer-microsoft-edge"
+							style="background-color: white; padding: 6px 12px; border: 1px solid #505050; color: #171717; border-radius: 2px; display: inline-block;"
+						>
+							More info about Internet Explorer and Microsoft Edge
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- site header -->
+			<div
+				id="ms--site-header"
+				data-test-id="site-header-wrapper"
+				itemscope="itemscope"
+				itemtype="http://schema.org/Organization"
+			>
+				<div
+					id="ms--mobile-nav"
+					class="site-header display-none-tablet padding-inline-none gap-none"
+					data-bi-name="mobile-header"
+					data-test-id="mobile-header"
+				></div>
+				<div
+					id="ms--primary-nav"
+					class="site-header display-none display-flex-tablet"
+					data-bi-name="L1-header"
+					data-test-id="primary-header"
+				></div>
+				<div
+					id="ms--secondary-nav"
+					class="site-header display-none display-flex-tablet"
+					data-bi-name="L2-header"
+					data-test-id="secondary-header"
+					
+				></div>
+			</div>
+			
+		<!-- banner -->
+		<div data-banner>
+			<div id="disclaimer-holder"></div>
+			
+		</div>
+		<!-- banner end -->
+	
+		</div>
+	</header>
+				 <section
+					id="layout-body-menu"
+					class="layout-body-menu border-right display-flex background-color-body-medium"
+					data-bi-name="menu"
+			  >
+					
+		<div
+			id="left-container"
+			class="left-container display-none padding-none display-block-tablet width-full display-none-until-layout-restored"
+			data-toc-container="true"
+		>
+			<div
+				id="ms--toc-content"
+				class="padding-left-sm padding-right-none padding-bottom-sm height-full"
+			>
+				<nav
+					id="affixed-left-container"
+					class="margin-top-xxs-tablet position-sticky display-flex flex-direction-column width-full"
+					aria-label="Primary"
+					data-bi-name="left-toc"
+					role="navigation"
+				>
+					<div
+						id="ms--collapsible-toc-header"
+						class="display-flex flex-direction-row-reverse justify-content-center align-items-center margin-bottom-xxs margin-right-xxs"
+					>
+						<button
+							type="button"
+							class="button button-clear button-sm inner-focus"
+							data-collapsible-toc-toggle
+							aria-expanded="true"
+							hidden
+							aria-controls="ms--toc-content"
+							aria-label="Table of contents"
+						>
+							<span class="icon icon-mirrored-rtl" aria-hidden="true">
+								<span
+									class="docon docon-panel-left-contract display-none-layout-menu-collapsed"
+								></span>
+								<span
+									class="docon docon-panel-left-expand display-none display-inline-layout-menu-collapsed"
+								></span>
+							</span>
+						</button>
+						<div
+							id="ms--collapsible-toc-moniker-slot"
+							class="flex-grow-1 display-none-layout-menu-collapsed"
+						></div>
+					</div>
+				</nav>
+			</div>
+		</div>
+	
+			  </section>
+
+				<main
+					id="main"
+					role="main"
+					class="layout-body-main "
+					data-bi-name="content"
+					lang="en-us"
+					dir="ltr"
+				>
+					
+			<div
+		id="ms--content-header"
+		class="content-header default-focus border-bottom-none"
+		data-bi-name="content-header"
+	>
+		<div class="content-header-controls margin-xxs margin-inline-sm-tablet">
+			<button
+				type="button"
+				class="contents-button button button-sm margin-right-xxs"
+				data-bi-name="contents-expand"
+				aria-haspopup="true"
+				data-contents-button
+			>
+				<span class="icon" aria-hidden="true"><span class="docon docon-menu"></span></span>
+				<span class="contents-expand-title"> Table of contents </span>
+			</button>
+			<button
+				type="button"
+				class="ap-collapse-behavior ap-expanded button button-sm"
+				data-bi-name="ap-collapse"
+				aria-controls="action-panel"
+			>
+				<span class="icon" aria-hidden="true"><span class="docon docon-exit-mode"></span></span>
+				<span>Exit editor mode</span>
+			</button>
+		</div>
+	</div> 
+		<div
+			id="action-panel"
+			role="region"
+			aria-label="Action Panel"
+			class="action-panel"
+			tabindex="-1"
+		></div>
+	
+			<div
+				data-main-column
+				class="reading-width margin-inline-auto layout-padding padding-top-none padding-top-sm-tablet padding-bottom-sm"
+			>
+				<div>
+					
+		<div id="article-header" class="background-color-body margin-bottom-xs display-none-print">
+			<div class="display-flex align-items-center justify-content-space-between">
+				
+		<details
+			id="article-header-breadcrumbs-overflow-popover"
+			class="popover popover-left"
+			data-for="article-header-breadcrumbs"
+		>
+			<summary
+				class="button button-clear button-primary button-sm inner-focus"
+				aria-label="All breadcrumbs"
+			>
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-more"></span>
+				</span>
+			</summary>
+			<div id="article-header-breadcrumbs-overflow" class="popover-content"></div>
+		</details>
+
+		<bread-crumbs
+			id="article-header-breadcrumbs"
+			role="group"
+			aria-label="Breadcrumbs"
+			data-test-id="article-header-breadcrumbs"
+			class="overflow-hidden flex-grow-1 margin-right-sm margin-right-md-tablet margin-right-lg-desktop margin-left-negative-xxs padding-left-xxs"
+		></bread-crumbs>
+	 
+		<div
+			id="article-header-page-actions"
+			class="opacity-none margin-left-auto display-flex flex-wrap-no-wrap align-items-stretch"
+		>
+			
+		<button
+			class="button button-sm border-none inner-focus display-none-tablet flex-shrink-0 "
+			data-bi-name="ask-learn-assistant-entry"
+			data-test-id="ask-learn-assistant-modal-entry-mobile"
+			data-ask-learn-modal-entry
+			
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-label="Ask Learn"
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+		</button>
+		<button
+			class="button button-sm display-none display-inline-flex-tablet display-none-desktop flex-shrink-0 margin-right-xxs border-color-ask-learn "
+			data-bi-name="ask-learn-assistant-entry"
+			
+			data-test-id="ask-learn-assistant-modal-entry-tablet"
+			data-ask-learn-modal-entry
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+		<button
+			class="button button-sm display-none flex-shrink-0 display-inline-flex-desktop margin-right-xxs border-color-ask-learn "
+			data-bi-name="ask-learn-assistant-entry"
+			
+			data-test-id="ask-learn-assistant-flyout-entry"
+			data-ask-learn-flyout-entry
+			data-flyout-button="toggle"
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-controls="ask-learn-flyout"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+	 
+
+			<details class="popover popover-right" id="article-header-page-actions-overflow">
+				<summary
+					class="justify-content-flex-start button button-clear button-sm button-primary inner-focus"
+					aria-label="More actions"
+					title="More actions"
+				>
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-more-vertical"></span>
+					</span>
+				</summary>
+				<div class="popover-content">
+					
+		<button
+			type="button"
+			id="ms--focus-mode-button"
+			data-focus-mode
+			data-bi-name="focus-mode-entry"
+			data-page-action-item="overflow-all"
+			data-popover-close
+			class="button button-clear button-sm button-block justify-content-flex-start text-align-left inner-focus display-none display-inline-flex-tablet"
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-glasses"></span>
+			</span>
+			<span>Reading mode</span>
+		</button>
+	 
+		<button
+			data-page-action-item="overflow-mobile"
+			type="button"
+			class="display-block-layout-menu-collapsed button-block button-sm inner-focus button button-clear display-none-tablet justify-content-flex-start text-align-left"
+			data-bi-name="contents-expand"
+			data-contents-button
+			data-popover-close
+		>
+			<span class="icon" aria-hidden="true"
+				><span class="docon docon-editor-list-bullet"></span
+			></span>
+			<span class="contents-expand-title">Table of contents</span>
+		</button>
+	 
+		<a
+			id="lang-link-overflow"
+			class="button-sm inner-focus button button-clear button-block justify-content-flex-start text-align-left"
+			data-bi-name="language-toggle"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-read-in-link
+			href="#"
+			hidden
+		>
+			<span class="icon" aria-hidden="true" data-read-in-link-icon>
+				<span class="docon docon-locale-globe"></span>
+			</span>
+			<span data-read-in-link-text>Read in English</span>
+		</a>
+	
+					
+		<button
+			type="button"
+			class="collection button button-clear button-sm button-block justify-content-flex-start text-align-left inner-focus"
+			data-list-type="collection"
+			data-bi-name="collection"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-popover-close
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-circle-addition"></span>
+			</span>
+			<span class="collection-status">Add</span>
+		</button>
+	 
+		<button
+			type="button"
+			class="collection button button-block button-clear button-sm justify-content-flex-start text-align-left inner-focus"
+			data-list-type="plan"
+			data-bi-name="plan"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-popover-close
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-circle-addition"></span>
+			</span>
+			<span class="plan-status">Add to Plans</span>
+		</button>
+	 
+					
+		<a
+			data-contenteditbtn
+			class="button button-clear button-block button-sm inner-focus justify-content-flex-start text-align-left text-decoration-none"
+			data-bi-name="edit"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			
+			href="https://github.com/MicrosoftDocs/entra-docs/blob/main/docs/identity/hybrid/connect/reference-connect-version-history.md"
+			data-original_content_git_url="https://github.com/MicrosoftDocs/entra-docs-pr/blob/live/docs/identity/hybrid/connect/reference-connect-version-history.md"
+			data-original_content_git_url_template="{repo}/blob/{branch}/docs/identity/hybrid/connect/reference-connect-version-history.md"
+			data-pr_repo=""
+			data-pr_branch=""
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-edit-outline"></span>
+			</span>
+			<span>Edit</span>
+		</a>
+	  
+		<hr class="margin-block-xxs" />
+		
+				<button
+					class="button button-block button-clear button-sm justify-content-flex-start text-align-left inner-focus"
+					type="button"
+					data-bi-name="copy-markdown"
+					data-page-action-item="overflow-all"
+					data-copy-markdown
+					data-copy-state="idle"
+					data-check-hidden="true"
+				>
+					<span class="icon color-primary" aria-hidden="true">
+						<span data-show-when="idle" class="docon docon-code-lang"></span>
+						<span data-show-when="loading" class="loader" hidden></span>
+						<span data-show-when="success" class="docon docon-check-mark" hidden></span>
+					</span>
+					<span>Copy Markdown</span>
+				</button>
+		   
+				<button
+					class="button button-block button-clear button-sm justify-content-flex-start text-align-left inner-focus"
+					type="button"
+					data-bi-name="print"
+					data-page-action-item="overflow-all"
+					data-popover-close
+					data-print-page
+					data-check-hidden="true"
+				>
+					<span class="icon color-primary" aria-hidden="true">
+						<span class="docon docon-print"></span>
+					</span>
+					<span>Print</span>
+				</button>
+		  
+	
+				</div>
+			</details>
+		</div>
+	
+			</div>
+		</div>
+	  
+		<!-- privateUnauthorizedTemplate is hidden by default -->
+		<div unauthorized-private-section data-bi-name="permission-content-unauthorized-private" hidden>
+			<hr class="hr margin-top-xs margin-bottom-sm" />
+			<div class="notification notification-info">
+				<div class="notification-content">
+					<p class="margin-top-none notification-title">
+						<span class="icon" aria-hidden="true"
+							><span class="docon docon-exclamation-circle-solid"></span
+						></span>
+						<span>Note</span>
+					</p>
+					<p class="margin-top-none authentication-determined not-authenticated">
+						Access to this page requires authorization. You can try <a class="docs-sign-in" href="#" data-bi-name="permission-content-sign-in">signing in</a> or <a  class="docs-change-directory" data-bi-name="permisson-content-change-directory">changing directories</a>.
+					</p>
+					<p class="margin-top-none authentication-determined authenticated">
+						Access to this page requires authorization. You can try <a class="docs-change-directory" data-bi-name="permisson-content-change-directory">changing directories</a>.
+					</p>
+				</div>
+			</div>
+		</div>
+	
+					<div class="content"><h1 id="microsoft-entra-connect-version-release-history">Microsoft Entra Connect: Version release history</h1></div>
+					
+		<div
+			id="article-metadata"
+			data-bi-name="article-metadata"
+			data-test-id="article-metadata"
+			class="page-metadata-container display-flex gap-xxs justify-content-space-between align-items-center flex-wrap-wrap"
+		>
+			 
+				<div
+					id="user-feedback"
+					class="margin-block-xxs display-none display-none-print"
+					hidden
+					data-hide-on-archived
+				>
+					
+		<button
+			id="user-feedback-button"
+			data-test-id="conceptual-feedback-button"
+			class="button button-sm button-clear button-primary display-none"
+			type="button"
+			data-bi-name="user-feedback-button"
+			data-user-feedback-button
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-like"></span>
+			</span>
+			<span>Feedback</span>
+		</button>
+	
+				</div>
+		  
+		</div>
+	 
+		<div data-id="ai-summary" class="display-none-print">
+			<div id="ms--ai-summary-cta" class="margin-top-xs display-flex align-items-center">
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-sparkle-fill gradient-text-vivid"></span>
+				</span>
+				<button
+					id="ms--ai-summary"
+					type="button"
+					class="tag tag-sm tag-suggestion margin-left-xxs"
+					data-test-id="ai-summary-cta"
+					data-bi-name="ai-summary-cta"
+					data-an="ai-summary"
+				>
+					<span class="ai-summary-cta-text">
+						Summarize this article for me
+					</span>
+				</button>
+			</div>
+			<!-- Slot where the client will render the summary card after the user clicks the CTA -->
+			<div id="ms--ai-summary-header" class="margin-top-xs"></div>
+		</div>
+	 
+		<nav
+			id="center-doc-outline"
+			class="doc-outline display-none-desktop display-none-print margin-bottom-sm"
+			data-bi-name="intopic toc"
+			aria-label="In this article"
+		>
+			<h2 id="ms--in-this-article" class="title is-6 margin-block-xs">
+				In this article
+			</h2>
+		</nav>
+	 <div class="content"><p>The Microsoft Entra team regularly updates Microsoft Entra Connect with new features and functionality. Not all additions apply to all audiences.</p>
+<p>This article helps you keep track of the versions that have released and the changes in those versions.</p>
+<div class="IMPORTANT">
+<p>Important</p>
+<p><strong>Mandatory Upgrade Required</strong>: All synchronization services in Microsoft Entra Connect Sync will stop working on <strong>September 30, 2026</strong> if you're not on at least version 2.5.79.0. In May 2025, we released this version with a back-end service change that hardens our services. Upgrade before this deadline to avoid any service disruption.</p>
+<p>If you're unable to upgrade before the deadline, all synchronization services will fail until you upgrade to the latest version. The Microsoft Entra Connect Sync .msi installation file is exclusively available on <a href="https://entra.microsoft.com/#view/Microsoft_AAD_Connect_Provisioning/AADConnectMenuBlade/%7E/GetStarted" data-linktype="external">Microsoft Entra Admin Center</a>. Make sure you meet the minimum requirements including .NET Framework 4.7.2 and TLS 1.2.</p>
+</div>
+<h2 id="known-issue-synchronization-fails-after-upgrade-if-miiserverexeconfig-was-previously-modified">Known issue: Synchronization fails after upgrade if miiserver.exe.config was previously modified</h2>
+<p>Applies to</p>
+<ul>
+<li>Microsoft Entra Connect 2.5.190.0</li>
+<li>Microsoft Entra Connect 2.6.1.0</li>
+</ul>
+<h3 id="issue">Issue</h3>
+<p>After upgrading Microsoft Entra Connect, synchronization may fail if the <code>miiserver.exe.config</code> file was previously modified.</p>
+<h3 id="symptom">Symptom</h3>
+<p><code>Synchronization fails after upgrade with the following error: System.IO.FileLoadException: Could not load file or assembly 'System.Diagnostics.DiagnosticSource, Version=6.0.0.1' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)</code></p>
+<h3 id="cause">Cause</h3>
+<p>During upgrade, Microsoft Entra Connect detects that <code>miiserver.exe.config</code> has been modified and does not update the file. This results in a missing dependency binding required for synchronization.
+This scenario has been observed when the file was modified based on earlier guidance to support Password Hash Synchronization (PHS) in FIPS enabled environments as
+Workaround
+Manually update the configuration file.</p>
+<ol>
+<li><p>Go to: %programfiles%\Microsoft Azure AD Sync\Bin</p>
+</li>
+<li><p>Back up <code>miiserver.exe.config</code>.</p>
+</li>
+<li><p>Open <code>miiserver.exe.config</code> and add the following entry inside the assemblyBinding section:
+<code>&lt;dependentAssembly&gt; &lt;assemblyIdentity name="System.Diagnostics.DiagnosticSource" publicKeyToken="cc7b13ffcd2ddd51" culture="neutral" /&gt; &lt;bindingRedirect oldVersion="0.0.0.0-8.0.0.0" newVersion="8.0.0.0" /&gt;  &lt;/dependentAssembly&gt;</code></p>
+</li>
+<li><p>Save the file.</p>
+</li>
+<li><p>Restart the ADSync service.</p>
+</li>
+</ol>
+<h2 id="looking-for-the-latest-versions">Looking for the latest versions?</h2>
+<p>You can upgrade your Microsoft Entra Connect server from all supported versions with the latest versions:</p>
+<p>You can download the latest version from the <a href="https://entra.microsoft.com/#view/Microsoft_AAD_Connect_Provisioning/AADConnectMenuBlade/%7E/GetStarted" data-linktype="external">Microsoft Entra Admin Center</a> under the <strong>Manage</strong> tab of the <strong>Microsoft Entra Connect | Get started</strong> page.</p>
+<p>Get notified about when to revisit this page for updates by copying and pasting this URL: <code>https://aka.ms/aadconnectrss</code> into your <img src="media/reference-connect-version-history/feed-icon-16x16.png" alt="RSS feed reader icon" data-linktype="relative-path"> feed reader.</p>
+<p>The following table lists related topics:</p>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Steps to upgrade from Microsoft Entra Connect</td>
+<td>Different methods to <a href="how-to-upgrade-previous-version" data-linktype="relative-path">upgrade from a previous version to the latest</a> Microsoft Entra Connect release.</td>
+</tr>
+<tr>
+<td>Required permissions</td>
+<td>For permissions required to apply an update, see <a href="reference-connect-accounts-permissions#upgrade" data-linktype="relative-path">Microsoft Entra Connect: Accounts and permissions</a>.</td>
+</tr>
+</tbody>
+</table>
+<p><a name="retiring-azure-ad-connect-1x-versions"></a></p>
+<h2 id="non-functional-microsoft-entra-connect-1x-versions">Non-functional Microsoft Entra Connect 1.x versions</h2>
+<div class="IMPORTANT">
+<p>Important</p>
+<p>All Microsoft Entra Connect Sync 1.x versions are unsupported and synchronization doesn't function. Customers using cloud sync or supported versions of Microsoft Entra Connect 2.x remain fully operational. For more information about the retirement of all 1.x versions, see <a href="https://aka.ms/DecommissionAADConnectV1" data-linktype="external">Decommission Azure AD Connect V1</a>.</p>
+</div>
+<p><a name="retiring-azure-ad-connect-2x-versions"></a></p>
+<h2 id="retiring-microsoft-entra-connect-2x-versions">Retiring Microsoft Entra Connect 2.x versions</h2>
+<div class="IMPORTANT">
+<p>Important</p>
+<p>Versions of Microsoft Entra Connect Sync 2.x retire 12 months from the date that a newer version is released.
+This policy went into effect on 15 March 2023.</p>
+<p>For new installs, always install the latest version. For upgrades, make sure you upgrade to the latest version before the retirement of your current version.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>End of support date</th>
+<th>Release date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#2320" data-linktype="self-bookmark">2.3.2.0</a></td>
+<td>30 Apr 2025 (To align with the security change released in version 2.4.18.0)</td>
+<td>12 Dec 2023</td>
+</tr>
+<tr>
+<td><a href="#2360" data-linktype="self-bookmark">2.3.6.0</a></td>
+<td>30 Apr 2025 (To align with the security change released in version 2.4.18.0)</td>
+<td>21 Feb 2024</td>
+</tr>
+<tr>
+<td><a href="#2380" data-linktype="self-bookmark">2.3.8.0</a></td>
+<td>30 Apr 2025 (To align with the security change released in version 2.4.18.0)</td>
+<td>1 Apr 2024</td>
+</tr>
+<tr>
+<td><a href="#23200" data-linktype="self-bookmark">2.3.20.0</a></td>
+<td>30 Apr 2025 (To align with the security change released in version 2.4.18.0)</td>
+<td>15 Jul 2024</td>
+</tr>
+<tr>
+<td><a href="#24180" data-linktype="self-bookmark">2.4.18.0</a></td>
+<td>9 Oct 2025 (12 months after release of 2.4.21.0)</td>
+<td>7 Oct 2024</td>
+</tr>
+<tr>
+<td><a href="#24210" data-linktype="self-bookmark">2.4.21.0</a></td>
+<td>15 Nov 2025 (12 months after release of 2.4.27.0)</td>
+<td>9 Oct 2024</td>
+</tr>
+<tr>
+<td><a href="#24270" data-linktype="self-bookmark">2.4.27.0</a></td>
+<td>15 Jan 2026 (12 months after release of 2.4.129.0)</td>
+<td>14 Nov 2024</td>
+</tr>
+<tr>
+<td><a href="#241290" data-linktype="self-bookmark">2.4.129.0</a></td>
+<td>27 Mar 2026 (12 months after release of 2.4.131.0)</td>
+<td>15 Jan 2025</td>
+</tr>
+<tr>
+<td><a href="#241310" data-linktype="self-bookmark">2.4.131.0</a></td>
+<td>26 May 2026 (12 months after release of 2.5.3.0)</td>
+<td>27 Mar 2025</td>
+</tr>
+<tr>
+<td><a href="#2530" data-linktype="self-bookmark">2.5.3.0</a></td>
+<td>31 July 2026 (12 months after release of 2.5.76.0)</td>
+<td>27 May 2025</td>
+</tr>
+<tr>
+<td><a href="#25760" data-linktype="self-bookmark">2.5.76.0</a></td>
+<td>01 September 2026 (12 months after release of 2.5.79.0)</td>
+<td>31 Jul 2025</td>
+</tr>
+<tr>
+<td><a href="#25790" data-linktype="self-bookmark">2.5.79.0</a></td>
+<td>23 Oct 2026 (12 months after release of 2.5.190.0)</td>
+<td>1 Sep 2025</td>
+</tr>
+<tr>
+<td><a href="#251900" data-linktype="self-bookmark">2.5.190.0</a></td>
+<td>02 Feb 2027 (12 months after release of 2.6.1.0)</td>
+<td>19 Nov 2025</td>
+</tr>
+<tr>
+<td><a href="#2610" data-linktype="self-bookmark">2.6.1.0</a></td>
+<td>10 Mar 2027 (12 months after release of 2.6.3.0)</td>
+<td>2 Feb 2026</td>
+</tr>
+<tr>
+<td><a href="#2630" data-linktype="self-bookmark">2.6.3.0</a></td>
+<td>07 Jul 2027 (12 months after release of 2.6.84.0)</td>
+<td>10 Mar 2026</td>
+</tr>
+<tr>
+<td><a href="#26840" data-linktype="self-bookmark">2.6.84.0</a></td>
+<td>16 Sep 2027 (12 months after release of 2.6.91.0)</td>
+<td>7 Jul 2026</td>
+</tr>
+<tr>
+<td><a href="#26910" data-linktype="self-bookmark">2.6.91.0</a></td>
+<td></td>
+<td>16 Sep 2026</td>
+</tr>
+</tbody>
+</table>
+<p><strong>All other versions are not supported</strong></p>
+<p>If you run a retired version of Microsoft Entra Connect, it might unexpectedly stop working. You also might not have the latest security fixes, performance improvements, troubleshooting and diagnostic tools, and service enhancements. If you require support, we might not be able to provide you with the level of service your organization needs.</p>
+<p>To learn more about versions 2.x and how this change affects you, see <a href="whatis-azure-ad-connect-v2" data-linktype="relative-path">Microsoft Entra Connect v2</a>.</p>
+<p>To learn more about how to upgrade Microsoft Entra Connect to the latest version, see <a href="how-to-upgrade-previous-version" data-linktype="relative-path">Microsoft Entra Connect: Upgrade from a previous version to the latest</a>.</p>
+<p>For version history information on retired versions, see <a href="reference-connect-version-history-archive" data-linktype="relative-path">Microsoft Entra Connect: Version release history archive</a>.</p>
+<div class="NOTE">
+<p>Note</p>
+<p>Releasing a new version of Microsoft Entra Connect requires several quality-control steps to ensure the operation functionality of the service. While we go through this process, the version number of a new release and the release status are updated to reflect the most recent state.</p>
+</div>
+<p>Not all releases of Microsoft Entra Connect are made available for autoupgrade. The release status indicates whether a release is made available for autoupgrade or for download only. If autoupgrade was enabled on your Microsoft Entra Connect server, that server automatically upgrades to the latest version of Microsoft Entra Connect that's released for autoupgrade. Not all Microsoft Entra Connect configurations are eligible for autoupgrade.</p>
+<p>Auto-upgrade is meant to push all important updates and critical fixes to you. It isn't necessarily the latest version because not all versions will require or include a fix to a critical security issue. (This example is just one of many.) Critical issues are addressed with a new version provided via autoupgrade. If there are no such issues, there are no updates pushed out by using autoupgrade. In general, if you're using the latest autoupgrade version, you should be good.</p>
+<p>If you want all the latest features and updates, check this page and install what you need.</p>
+<p>To read more about autoupgrade, see <a href="how-to-connect-install-automatic-upgrade" data-linktype="relative-path">Microsoft Entra Connect: Automatic upgrade</a>.</p>
+<h2 id="26910">2.6.91.0</h2>
+<div class="IMPORTANT">
+<p>Important</p>
+<p>This release includes security fixes. We recommend upgrading to this version as soon as possible.</p>
+</div>
+<h3 id="release-status">Release status</h3>
+<p>09/16/2026: Released for download via the Microsoft Entra admin center.</p>
+<h3 id="added-features">Added features</h3>
+<ul>
+<li>Added a guided migration workflow from Microsoft Entra Connect Sync to Microsoft Entra Cloud Sync. The workflow includes configuration assessment, provisioning agent setup, staged activation, and validation. This feature is available only in the Azure public cloud.</li>
+<li>Added support for an additional sovereign cloud environment, including Pass-through Authentication, Seamless Single Sign-On, password writeback, and Health Agent monitoring.</li>
+</ul>
+<h3 id="updated-features">Updated features</h3>
+<ul>
+<li>Phishing-resistant authentication in the Microsoft Entra Connect setup wizard is now generally available and enabled by default. The Windows Web Account Manager prompt supports passkeys, FIDO2 security keys, and passwords, reuses the signed-in session across Microsoft Entra services, and preserves Seamless Single Sign-On Kerberos key rotation.</li>
+<li>When you configure Seamless Single Sign-On by using the standalone PowerShell module, you must import <code>ADSync.psd1</code> before <code>AzureADSSO.psd1</code>. <a href="../cloud-sync/how-to-sso" data-linktype="relative-path">Learn more</a>.</li>
+<li>Cloud configuration cmdlets no longer require an explicit <code>-AADUserName</code>. When you omit the parameter, Microsoft Entra Connect derives a sign-in hint from the connector configuration and opens an interactive sign-in prompt. This behavior applies to <code>Set-ADSyncAADCompanyFeature</code>, <code>Set-ADSyncAADPasswordSyncState</code>, <code>Enable-ADSyncExportDeletionThreshold</code>, <code>Set-ADSyncScheduler</code>, and <code>Set-ADSyncDirSyncConfiguration</code>.</li>
+<li>The Select Containers dialog in Synchronization Service Manager is now read-only. You can still use the dialog to view the current selections. To make changes, use Customize synchronization options in the Microsoft Entra Connect wizard. <a href="how-to-connect-installation-wizard#customize-synchronization-options" data-linktype="relative-path">Learn more</a>.</li>
+<li>Updated the bundled SQL Server 2022 LocalDB from version 16.0.4250.1 to 16.0.4262.2.</li>
+</ul>
+<h3 id="bug-fixes">Bug fixes</h3>
+<ul>
+<li>Fixed an issue where installing or upgrading Microsoft Entra Connect with an existing ADSync database could fail with error <code>0xE0474352</code>.</li>
+<li>Fixed an issue where upgrading Microsoft Entra Connect didn't update an installed Microsoft Visual C++ 2015-2022 Redistributable version earlier than 14.41.</li>
+<li>Fixed an issue where the Microsoft Entra Connect wizard could close during startup when the Windows PowerShell Transcription policy contained an invalid output directory.</li>
+<li>Fixed an Application-Based Authentication certificate rotation issue that could remove the last usable application key during directory replica delays.</li>
+<li>Fixed an issue where Synchronization Service Manager could close unexpectedly when you opened Connector Properties and listed directory partitions.</li>
+<li>Fixed an issue where Change Credentials didn't open for connector rows outside the visible area on configurations with many Active Directory connectors.</li>
+<li>Fixed an issue where expanding a previously deselected domain on the Domain and OU filtering page could reselect the domain and enable synchronization for the entire domain after the wizard completed.</li>
+<li>Fixed multiple security vulnerabilities in bundled third-party dependencies and hardened local temporary-file permissions and SharePoint connector profile-image downloads.</li>
+</ul>
+<div class="IMPORTANT">
+<p>Important</p>
+<p>Microsoft Graph permissions have been added to Microsoft Entra Connect. If you use app-scoped Conditional Access policies, review policies targeting Microsoft.Azure.SyncFabric or Microsoft 365 Reporting Service.</p>
+</div>
+<h2 id="26840">2.6.84.0</h2>
+<div class="IMPORTANT">
+<p>Important</p>
+<p>This release includes security fixes. We recommend upgrading to this version as soon as possible.</p>
+</div>
+<h3 id="release-status-1">Release status</h3>
+<p>07/07/2026: Released for download via the Microsoft Entra admin center.</p>
+<h3 id="added-features-1">Added features</h3>
+<ul>
+<li>Added support for phishing-resistant authentication methods in the Microsoft Entra Connect setup wizard (preview). Administrators can now sign in using passkeys and FIDO2 security keys through Windows Web Account Manager (WAM) when configuring Microsoft Entra Connect.</li>
+<li>Added support for the France sovereign cloud environment, including Pass-through Authentication, Seamless Single Sign-On, password writeback, and Health Agent monitoring.</li>
+</ul>
+<h3 id="updated-features-1">Updated features</h3>
+<ul>
+<li>Improved the auto-upgrade process to preserve customer modifications to configuration files. Previously, auto-upgrade overwrote the <code>miiserver.exe.config</code> file, discarding any manual customizations. The system now merges customer modifications with the new configuration and validates the result before applying.</li>
+<li>Improved the setup process for Application-Based Authentication to handle Trusted Platform Module (TPM)-backed certificates. The system now tests a certificate's signing capability upfront and handles TPM signature verification correctly.</li>
+<li>Microsoft Entra Connect setup wizard no longer silently falls back to the legacy directory synchronization account when Application-Based Authentication setup fails. The wizard now stops with an error so the underlying issue can be resolved: "Microsoft Entra Connect could not configure application-based authentication for this server. Setup cannot continue."</li>
+<li>Microsoft Entra Connect no longer automatically switches existing servers from the legacy directory synchronization account to Application-Based Authentication during background sync. New installations continue to configure Application-Based Authentication during setup. To switch an existing server, run the wizard and choose <strong>Configure application-based authentication to Microsoft Entra ID</strong>.</li>
+<li>PowerShell cmdlets that modify cloud configuration (<code>Set-ADSyncAADCompanyFeature</code>, <code>Set-ADSyncAADPasswordSyncState</code>) now require explicit <code>-AADUsername</code> for interactive admin authentication. The setup wizard uses interactive Microsoft Authentication Library (MSAL) authentication for cloud writes instead of stored service credentials. The uninstall wizard now prompts for admin credentials to clean up cloud configuration; if skipped, local cleanup still proceeds.</li>
+<li>Removed Password Hash Synchronization (PHS) self-healing. PHS no longer automatically re-enables its cloud feature flag in the background. If the PHS cloud feature flag is disabled, an administrator must explicitly re-enable it.</li>
+<li>Updated the bundled MSAL from version 4.64.1 to 4.83.3.</li>
+<li>Upgraded the bundled SQL LocalDB from SQL Server 2019 to SQL Server 2022.</li>
+<li>Upgraded the Visual C++ redistributable from version 12 (2013) to version 14.42.34438 (2015-2022).</li>
+<li>Removed the Visual C++ 2013 redistributable dependency.</li>
+</ul>
+<h3 id="bug-fixes-1">Bug fixes</h3>
+<ul>
+<li>Fixed an issue in the PowerShell diagnostic HTML report rendering.</li>
+<li>Fixed an issue in the Synchronization Service Manager metaverse search.</li>
+<li>Improved Application-Based Authentication setup on servers with non-conforming TPM firmware by falling back to a software-based certificate when the TPM cannot produce a valid signature.</li>
+<li>Fixed an issue where Generic SQL (GSQL) connector profile creation failed because required profile parameters were not populated during configuration.</li>
+<li>Fixed an issue where the Application Proxy cloud name was not correctly resolved in the France cloud environment, causing Pass-through Authentication registration to fail with an "EnvironmentName attribute is invalid" error.</li>
+<li>Fixed an issue where the China cloud instance name was not correctly resolved by the Discovery Endpoint API, which could cause cloud instance detection to fail.</li>
+<li>Fixed an issue where admin actions audit logging captured the service account identity instead of the actual administrator performing the action for Synchronization Rule changes.</li>
+<li>Fixed multiple security vulnerabilities in bundled third-party dependencies.</li>
+</ul>
+<h3 id="known-issues">Known issues</h3>
+<ul>
+<li>Installing or upgrading to Microsoft Entra Connect version 2.6.84.0 with an existing ADSync database might fail with error <code>0xE0474352</code>. To install or upgrade with an existing database, use <a href="#26910" data-linktype="self-bookmark">version 2.6.91.0</a> or later.</li>
+<li>Synchronization Service Manager might close unexpectedly when you open <strong>Connector Properties</strong> and list directory partitions. This issue is fixed in <a href="#26910" data-linktype="self-bookmark">version 2.6.91.0</a>.</li>
+<li>When you reopen the Microsoft Entra Connect wizard and expand a domain that was completely deselected on the Domain and OU filtering page, the wizard might select the domain again. If you complete the wizard, synchronization might be enabled for the entire domain. This issue is fixed in <a href="#26910" data-linktype="self-bookmark">version 2.6.91.0</a>.</li>
+</ul>
+<div class="IMPORTANT">
+<p>Important</p>
+<p>Version 2.6.79.0 is no longer available for download. An issue was identified after release and the installer was recalled. Customers who installed this version should uninstall it and install the <a href="#26910" data-linktype="self-bookmark">latest available version (2.6.91.0)</a> of Microsoft Entra Connect Sync.</p>
+</div>
+<h2 id="2630">2.6.3.0</h2>
+<h3 id="release-status-2">Release status</h3>
+<p>03/10/2026: Released for download via the Microsoft Entra admin center. This is a hotfix release. Auto-upgrade will upgrade your existing installations to this build starting March 11th, 2026, and will complete in multiple phases.</p>
+<h3 id="bug-fixes-2">Bug Fixes</h3>
+<ul>
+<li>Fixed a <a href="#known-issue-synchronization-fails-after-upgrade-if-miiserverexeconfig-was-previously-modified" data-linktype="self-bookmark">known issue</a> where auto-upgrade could stop your Microsoft Entra Connect server unexpectedly. Auto-upgrade now detects modifications to the <code>miiserver.exe.config</code> and <code>miisclient.exe.config</code> configuration files and skips automatic upgrade on those servers. If you manually upgrade and previously modified these configuration files, you might encounter installation failures. To resolve the issue, see the <a href="#known-issue-synchronization-fails-after-upgrade-if-miiserverexeconfig-was-previously-modified" data-linktype="self-bookmark">known issues section</a>.</li>
+</ul>
+<h2 id="2610">2.6.1.0</h2>
+<h3 id="release-status-3">Release status</h3>
+<p>02/02/2026: Released for download via the Microsoft Entra admin center. Existing installations will be auto-upgraded to this build starting February 9th, 2026, and will be done in multiple phases.</p>
+<h3 id="bug-fixes-3">Bug Fixes</h3>
+<ul>
+<li>Fixed an issue where using the Synchronization Service Manager UI to modify the Microsoft Entra ID Connector configuration deleted Application-Based Authentication parameters, causing Wizard and certificate rotation failures. We recommend not using the Synchronization Service Manager UI in older versions.</li>
+<li>Fixed an issue where Staging Mode configuration failed when the Password Writeback Service is disabled or deleted from the Entra ID tenant.</li>
+<li>The default certificate lifetime for certificates managed by Microsoft Entra Connect is now 90 days. The certificate renewal threshold has been updated to use percentage-based lifetime consumption (70%) instead of a fixed 30-day window. The certificate renewal process will now attempt to renew after 70% of the lifetime has elapsed instead of fixed 30 day intervals.</li>
+<li>Enhanced Application-Based Authentication logging in Windows Event logs and trace logs to help diagnose authentication failures.</li>
+<li>Fixed an accessibility issue in the Connect wizard where help icons were announced incorrectly by screen readers, causing the full multi-line help text to be read as the control name. The help control now exposes the correct name and role, providing a better experience.</li>
+<li>Fixed a keyboard accessibility issue where a hyperlink inside a help popup was not reachable using keyboard navigation. The link is now accessible using the keyboard alone.</li>
+</ul>
+<h3 id="known-issues-1">Known issues</h3>
+<p>See: <a href="#known-issue-synchronization-fails-after-upgrade-if-miiserverexeconfig-was-previously-modified" data-linktype="self-bookmark">Synchronization fails after upgrade if miiserver.exe.config was previously modified</a></p>
+<h2 id="251900">2.5.190.0</h2>
+<div class="NOTE">
+<p>Note</p>
+<p>Do not use the Synchronization Service Manager UI in this version. Doing so may cause the Microsoft Entra Connect wizard and automatic certificate renewal to fail. This issue is fixed in version 2.6.1.0.</p>
+</div>
+<h3 id="release-status-4">Release status</h3>
+<p>11/19/2025: Released for download via the Microsoft Entra admin center.</p>
+<h3 id="known-issues-2">Known issues</h3>
+<p>See: <a href="#known-issue-synchronization-fails-after-upgrade-if-miiserverexeconfig-was-previously-modified" data-linktype="self-bookmark">Synchronization fails after upgrade if miiserver.exe.config was previously modified</a></p>
+<h3 id="added-features-2">Added features</h3>
+<ul>
+<li><strong>AAD Connector V2 API Enforcement</strong>: The default connector API version is now V2. Using the previous V1 connector API is no longer supported.</li>
+</ul>
+<h3 id="bug-fixes-4">Bug fixes</h3>
+<ul>
+<li>Fixed an issue where Application-Based Authentication failed with Trusted Platform Module (TPM) and Microsoft Authentication Library (MSAL). The fix ensures compatibility with MSAL's default signing method.</li>
+<li>Fixed issue in the configuration wizard that resulted in "Directory synchronization for this directory currently has a mismatch in sync enabled and sync status" error when DirSync Status is in "Other".</li>
+<li>The certificate renewal threshold for Application-based Authentication has been updated to 30 days. Entra-managed certificates will now automatically renew when their expiration date is 30 days or less.</li>
+<li>Fixed issue with cloud management of Exchange attributes that raised export errors labelled <code>ExchangeManagedAttributesUpdateNotAllowed</code>.</li>
+</ul>
+<h2 id="25790">2.5.79.0</h2>
+<div class="NOTE">
+<p>Note</p>
+<p>Do not use the Synchronization Service Manager UI in this version. Doing so may cause the Microsoft Entra Connect wizard and automatic certificate renewal to fail. This issue is fixed in version 2.6.1.0.</p>
+</div>
+<h3 id="release-status-5">Release status</h3>
+<p>09/01/2025: Released for download via the Microsoft Entra admin center. Existing installations will be auto-upgraded to this build starting September 4, 2025 and will be done in multiple phases.</p>
+<h3 id="added-features-3">Added Features</h3>
+<ul>
+<li>Improved the setup process for Application-Based Authentication to handle TPM-backed certificates (certificates protected by a Trusted Platform Module, see <a href="/en-us/windows/security/information-protection/tpm/trusted-platform-module-overview" data-linktype="absolute-path">What is a TPM?</a>). The system now tests a certificate’s signing capability upfront and automatically falls back to software-based certificates if TPM signature fails.</li>
+<li>Implemented automatic removal of certificates if an Application-Based Authentication configuration fails after a certificate is created. This prevents unused certificates from lingering on the server in failure scenarios, improving security by avoiding accumulation of orphaned certificates.</li>
+</ul>
+<h3 id="bug-fixes-5">Bug fixes</h3>
+<ul>
+<li>Resolved an issue on FIPS-enabled servers that was causing setup failures. Application-Based Authentication now works correctly on servers with FIPS mode enabled by using FIPS-compliant cryptographic algorithms.
+<div class="TIP">
+<p>Tip</p>
+<p>FIPS (Federal Information Processing Standards) mode is a Windows security setting that enforces the use of cryptographic algorithms for sensitive data. When FIPS mode is enabled, only FIPS-compliant algorithms can be used, which is why this fix ensures compatibility for environments requiring strict security standards.</p>
+</div>
+</li>
+<li>Fixed an issue where certificate auto-rotation was incorrectly reported as active when the scheduler was suspended. The auto-rotation logic now checks the scheduler’s state before indicating status, ensuring the <em>View or export current configuration wizard</em> accurately reflects whether auto-rotation is enabled.</li>
+<li>Removed an inappropriate admin audit event that was being logged for automatic certificate operations. These background certificate actions no longer generate administrative audit log entries, resulting in a cleaner audit trail (only actual administrator-initiated changes will appear in the Entra Connect Sync audit logs).</li>
+</ul>
+<h2 id="25760">2.5.76.0</h2>
+<div class="NOTE">
+<p>Note</p>
+<p>Do not use the Synchronization Service Manager UI in this version. Doing so may cause the Microsoft Entra Connect wizard and automatic certificate renewal to fail. This issue is fixed in version 2.6.1.0.</p>
+</div>
+<h3 id="release-status-6">Release status</h3>
+<p>07/31/2025: Released for download via the Microsoft Entra admin center. Existing installations will be auto-upgraded to this build starting August 14th, 2025, and will be done in multiple phases.</p>
+<h3 id="added-features-4">Added Features</h3>
+<ul>
+<li>Application based authentication to Microsoft Entra ID is now generally available and will be the default option. See <a href="authenticate-application-id" data-linktype="relative-path">Authenticate to Microsoft Entra ID by Using Application Identity</a>.</li>
+<li>Administrator action logging is now generally available, providing Windows audit events for all administrative changes made on Microsoft Entra Connect. See <a href="admin-audit-logging" data-linktype="relative-path">Auditing administrator events in Microsoft Entra Connect Sync</a>.</li>
+<li>Group Source of Authority conversion feature allowing administrators to transfer on-premises Active Directory groups to become cloud only groups managed through Microsoft Entra ID (Public Preview). See <a href="../concept-source-of-authority-overview" data-linktype="relative-path">Group Source of Authority overview</a>.</li>
+</ul>
+<h3 id="bug-fixes-6">Bug fixes</h3>
+<ul>
+<li>The issue in selecting and de-selecting child OUs, affecting Active Directory multi-domain scenarios in the Connect Sync wizard, is fixed.</li>
+<li>The issue where users were prompted to set up Azure MFA instead of on-premises ADFS MFA, due to federated domain settings and MFA flag resets during updates, has been resolved.</li>
+<li>Resolved an issue that prevented some Microsoft Entra Connect Sync instances from auto-upgrading by ensuring the agent identifier is correctly sourced when missing.</li>
+<li>Fixed issue in the configuration wizard that resulted in <strong>Directory synchronization for this directory currently has a mismatch in sync enabled and sync status</strong> error when DirSync Status is in <strong>PendingEnabled</strong></li>
+</ul>
+<h2 id="2530">2.5.3.0</h2>
+<div class="NOTE">
+<p>Note</p>
+<p>Do not use the Synchronization Service Manager UI in this version. Doing so may cause the Microsoft Entra Connect wizard and automatic certificate renewal to fail. This issue is fixed in version 2.6.1.0.</p>
+</div>
+<h3 id="release-status-7">Release status</h3>
+<p>05/27/2025: Released for download via the Microsoft Entra admin center.</p>
+<h3 id="added-features-5">Added Features</h3>
+<ul>
+<li>Modern Authentication enabled allowing customers to configure application-based authentication for enhanced security (Public Preview). More details <a href="authenticate-application-id" data-linktype="relative-path">here</a></li>
+</ul>
+<h3 id="updated-features-2">Updated Features</h3>
+<ul>
+<li>Upgraded the bundled health agent to version 4.5.2520.0</li>
+<li>Moved from download center to Azure portal for downloads</li>
+<li>Administrator credentials now required when toggling staging mode via PowerShell with SSPR enabled.</li>
+<li>Administrator credentials now required when enabling, disabling, or removing SSPR configuration via PowerShell.</li>
+</ul>
+<h2 id="241310">2.4.131.0</h2>
+<h3 id="release-status-8">Release status</h3>
+<p>03/27/2025: Released for download and auto upgrade.</p>
+<div class="NOTE">
+<p>Note</p>
+<p>Auto upgrade runs from the release date until 15 April 2025. If your environment isn't upgraded by then, it means the auto upgrade attempt failed and you need to perform a <a href="how-to-upgrade-previous-version" data-linktype="relative-path">manual upgrade</a>. You can check the <a href="how-to-connect-install-automatic-upgrade#troubleshooting" data-linktype="relative-path">Application event logs</a> for reasons for the failure of the auto upgrade.</p>
+</div>
+<h3 id="updated-features-3">Updated Features</h3>
+<ul>
+<li>Removed the pre-requisite check for the SchUseStrongCrypto registry key being enabled. This version uses .NET 4.7.2 which uses strong cryptography by default.</li>
+</ul>
+<h2 id="241290">2.4.129.0</h2>
+<h3 id="release-status-9">Release status</h3>
+<p>01/15/2025: Released for download and autoupgrade</p>
+<h3 id="added-features-6">Added Features</h3>
+<ul>
+<li>Auditing administrator events in Microsoft Entra Connect Sync enabled for logging any admin changes made on Microsoft Entra Connect Sync. This includes changes made using the UI and the PowerShell scripts. For more information see <a href="admin-audit-logging" data-linktype="relative-path">Auditing administrator events in Microsoft Entra Connect Sync (Public Preview)</a></li>
+</ul>
+<h3 id="bug-fixes-7">Bug fixes</h3>
+<ul>
+<li>Fixed the removal of the SSPR configuration when changes are made on the Azure AD Connector and saved in the Sync Service manager UI</li>
+<li>Fixed validation for the Global Administrator/Hybrid Identity Administrator role done during Entra Connect Sync installation and users with Global Administrator/Hybrid Identity Administrator through Privileged Identity Management (PIM).</li>
+<li>Fixed the "no registered protocol handlers" error on Federate with AD FS scenario.</li>
+<li>Fixed "Relying party must be unique (conflict error)" error on Federate with AD FS scenario.</li>
+</ul>
+<h2 id="24270">2.4.27.0</h2>
+<h3 id="release-status-10">Release status</h3>
+<p>11/14/2024: Released for download</p>
+<h3 id="updated-features-4">Updated Features</h3>
+<ul>
+<li>SQL related drivers shipped with Microsoft Entra Connect have been updated to OLE DB <a href="/en-us/sql/connect/oledb/release-notes-for-oledb-driver-for-sql-server#1874" data-linktype="absolute-path">version 18.7.4</a></li>
+</ul>
+<h3 id="bug-fixes-8">Bug fixes</h3>
+<ul>
+<li>Fixed an issue with Privileged Identity Management (PIM), Microsoft Entra roles, and PIM for Groups to verify that PIM is enabled and that the user has the Hybrid Identity Administrator role enabled.</li>
+<li>Fixed an issue where AD FS commands were failing when Connect Sync is installed on a non-ADFS server.</li>
+</ul>
+<h2 id="24210">2.4.21.0</h2>
+<h3 id="release-status-11">Release status</h3>
+<p>10/09/2024: Released for download</p>
+<h3 id="bug-fixes-9">Bug fixes</h3>
+<ul>
+<li>Fixed an authentication issue with non-commercial clouds.</li>
+</ul>
+<h2 id="24180">2.4.18.0</h2>
+<h3 id="release-status-12">Release status</h3>
+<p>10/07/2024: Released for download</p>
+<h3 id="updated-features-5">Updated Features</h3>
+<ul>
+<li>The step <strong>Connect to Microsoft Entra ID</strong> in the Connect Sync Wizard won't require password before redirecting you to the login page.</li>
+<li>Updated Default Rule: "onPremisesObjectIdentifier" attribute added to the <strong>In from AD - User Account Enabled</strong> sync rule. Adding this rule allows the sync engine to pick the <strong>onPremisesObjectIdentifier</strong> attribute from the user who is enabled, in a scenario where:</li>
+<li>the same user is represented across different forests, and</li>
+<li>the user is disabled in one of the forests</li>
+<li>Introduced a registry key that allows you to set the precedence number for custom rules to be more than 100, if needed. The precedence of the first standard rule can be set using the key <strong>HLKM:\SOFTWARE\Microsoft\Azure AD Connect\FirstStandardRulePrecedence,</strong> allowing for more custom rules. If no value is set, 100 is the default.</li>
+<li>Cmdlets in ADSync PowerShell module that communicate with Microsoft Entra ID now require Microsoft Entra ID login, for example, <code>Add-ADSyncAADServiceAccount</code> or <code>Get-ADSyncExportDeletionThreshold</code></li>
+</ul>
+<h3 id="decommissioned-features">Decommissioned features</h3>
+<ul>
+<li>The feature that used to validate object against schema has been deprecated and is no longer available in the Synchronization Service Manager.</li>
+<li>The <code>/enableldap</code> command-line switch (Preview feature) has been deprecated and is no longer available when you run the Wizard.</li>
+<li>All references to legacy MSOnline PowerShell module have been removed and replaced by equivalent Microsoft Graph API calls.</li>
+</ul>
+<h3 id="miscellaneous">Miscellaneous</h3>
+<ul>
+<li>The minimum .NET runtime requirement has been increased to 4.7.2.</li>
+<li>Branding updates to match Microsoft Entra ID branding.</li>
+</ul>
+<h3 id="bug-fixes-10">Bug fixes</h3>
+<ul>
+<li>Improved Wizard experience to ensure domain validation has to be completed before moving to the next step in the wizard.</li>
+<li>Improved error messaging when fetching list of domains in a forest</li>
+<li>Fixed error that made installing with an existing database incompatible with Password Writeback enabled.</li>
+<li>Fixed credential issue with ADConnectivityTool module that could occur if NTLM is set to deny-all.</li>
+<li>Fixed error around localization string that could occur when prompting for Enterprise Admin.</li>
+<li>Fixed an issue where the re-running the Wizard would display initial OU configuration instead of the correct configuration.</li>
+<li>Fixed error that could occur during sync if the string was longer than expected due to special Unicode characters.</li>
+<li>Fixed error that could occur that caused the Wizard install to hang due to null certificates in the AD FS configuration setup.</li>
+<li>Fixed an issue where auto upgrade could fail when trying to get the service account.</li>
+<li>Fixed an error that could occur if a join rule contains an attribute name with a hyphen.</li>
+<li>Improved error messaging in the Wizard when TLS settings don't meet the prerequisites.</li>
+<li>Fixed a bug with the password hash not syncing on changing the SMART CARD REQUIRED bit flag. This fix won't allow the passwords in Microsoft Entra ID and Active Directory to be in sync for scenarios where smart card is used as an authentication method. <a href="how-to-connect-password-hash-synchronization#password-hash-synchronization-and-smart-card-authentication" data-linktype="relative-path">Learn more</a></li>
+<li>Fixed a bug where auto upgrade endpoints were configured incorrectly for some clouds.</li>
+</ul>
+<h2 id="23200">2.3.20.0</h2>
+<div class="IMPORTANT">
+<p>Important</p>
+<p>Version 2.3.20.0 is a security update. With this update, Microsoft Entra Connect requires TLS 1.2. Ensure that you have TLS 1.2 enabled before updating to this version.</p>
+<p>All versions of <a href="/en-us/windows-server/security/tls/tls-ssl-schannel-ssp-overview" data-linktype="absolute-path">Windows Server support TLS 1.2</a>. If TLS 1.2 isn't enabled on your server you'll need to enable this before you can deploy Microsoft Entra Connect V2.0.</p>
+<p>For a PowerShell script to check whether TLS 1.2 is enabled, see <a href="reference-connect-tls-enforcement#powershell-script-to-check-tls-12" data-linktype="relative-path">PowerShell script to check TLS</a></p>
+<p>For more information about TLS 1.2, see <a href="/en-us/security-updates/SecurityAdvisories/2015/2960358" data-linktype="absolute-path">Microsoft Security Advisory 2960358</a>.
+For more information on enabling TLS 1.2, see <a href="reference-connect-tls-enforcement" data-linktype="relative-path">how to enable TLS 1.2</a></p>
+</div>
+<h3 id="release-status-13">Release status</h3>
+<p>7/15/2024: Released for download</p>
+<h3 id="functional-changes">Functional changes</h3>
+<ul>
+<li>TLS 1.2 or greater is required for Microsoft Entra Connect. Please see the prerequisites for guidance: <a href="how-to-connect-install-prerequisites#enable-tls-12-for-microsoft-entra-connect" data-linktype="relative-path">Microsoft Entra Connect: Prerequisites and hardware - Microsoft Entra ID</a> | Microsoft Learn</li>
+<li>TLS 1.3 is supported by Microsoft Entra Connect. Support for <a href="/en-us/troubleshoot/azure/entra/entra-id/ad-dmn-services/enable-support-tls-environment?tabs=azure-monitor#tls-13-support-for-microsoft-entra-services" data-linktype="absolute-path">TLS 1.3 is being rolled out for Microsoft Entra ID services</a>, However, until this is complete, it isn't recommended to enforce TLS 1.3.</li>
+</ul>
+<h3 id="other-changes">Other Changes</h3>
+<ul>
+<li>SQL related drivers shipped with Microsoft Entra Connect have been updated. ODBC to 17.10.6, OLE DB to 18.7.2.</li>
+<li>Changes to SSPR handling to reduce SQL deadlocks during sync cycles.</li>
+<li>Changes to what elements in the Wizard that Narrator reads to improve Accessibility.</li>
+<li>Microsoft Entra Connect icon branding</li>
+</ul>
+<h2 id="2380">2.3.8.0</h2>
+<h3 id="release-status-14">Release status</h3>
+<p>1 Apr 2024: Released for download</p>
+<h3 id="bug-fixes-11">Bug Fixes</h3>
+<ul>
+<li>Microsoft Entra Connect Health has been updated to 4.5.2466.0 to address an endpoint discovery issue that could occur in some clouds.</li>
+</ul>
+<h2 id="2360">2.3.6.0</h2>
+<h3 id="release-status-15">Release status</h3>
+<p>21 Feb 2024: Released for download and autoupgrade.</p>
+<h3 id="bug-fixes-12">Bug Fixes:</h3>
+<ul>
+<li>Improvements to auto-upgrade detection. Auto-upgrade no longer retries if it detects the machine doesn't meet the OS or .NET runtime requirements.</li>
+</ul>
+<h2 id="2320">2.3.2.0</h2>
+<h3 id="release-status-16">Release status</h3>
+<p>12/12/2023: Released for download</p>
+<h3 id="functional-changes-1">Functional Changes</h3>
+<ul>
+<li>Application scaling with Windows Accessibility font size setting has been added.</li>
+<li>Group Writeback V2 can no longer be enabled as the feature is being decommissioned. Please see the notice in this <a href="how-to-connect-group-writeback-enable" data-linktype="relative-path">article about group writeback</a>.</li>
+</ul>
+<h3 id="other-changes-1">Other Changes</h3>
+<ul>
+<li>SQL related drivers shipped with Microsoft Entra Connect have been updated. ODBC to 17.10.5, OLE DB to 18.6.7.</li>
+<li>Microsoft Entra Connect Health shipped with Microsoft Entra Connect has been updated to 4.5.2428.0.</li>
+<li>Fixed a DSSO bug for Azure in China</li>
+</ul>
+<h2 id="2280">2.2.8.0</h2>
+<h3 id="release-status-17">Release status</h3>
+<p>10/11/2023: Released for download</p>
+<h3 id="functional-changes-2">Functional Changes</h3>
+<ul>
+<li>The attribute onPremisesObjectIdentifier has been added to the default sync rules. This attribute is required by Microsoft Entra Cloud Sync's Group Provisioning to AD feature.</li>
+<li>The minimum .NET runtime requirement has been increased to 4.7.1.</li>
+</ul>
+<h3 id="bug-fixes-13">Bug Fixes</h3>
+<ul>
+<li>Improvements to upgrade and auto-upgrade components.</li>
+<li>Fixed an issue preventing deprovisioning of group when deletions of both the group and a member belonging to a different domain are processed in the same sync cycle.</li>
+</ul>
+<h2 id="2210">2.2.1.0</h2>
+<h3 id="release-status-18">Release status</h3>
+<p>6/19/2023: Released for download.</p>
+<h3 id="functional-changes-3">Functional Changes</h3>
+<ul>
+<li>We have enabled Auto Upgrade for tenants with custom synchronization rules. Note that deleted (not disabled) default rules are re-created and enabled upon Auto Upgrade.</li>
+<li>We have added Microsoft Entra Connect Agent Updater service to the install. This new service is used for future auto upgrades.</li>
+<li>We have removed the Synchronization Service WebService Connector Config program from the install.</li>
+<li>Default sync rule “In from AD – User Common” was updated to flow the employeeType attribute.</li>
+</ul>
+<h3 id="bug-fixes-14">Bug Fixes</h3>
+<ul>
+<li>We have made improvements to accessibility.</li>
+<li>We have made the Microsoft Privacy Statement accessible in more places.</li>
+</ul>
+<h2 id="21200">2.1.20.0</h2>
+<h3 id="release-status-19">Release status:</h3>
+<p>11/9/2022: Released for download</p>
+<h3 id="bug-fixes-15">Bug fixes</h3>
+<ul>
+<li>We fixed a bug where the new employeeLeaveDateTime attribute wasn't syncing correctly in version 2.1.19.0. Note that if the incorrect attribute was already used in a rule, then the rule must be updated with the new attribute and any objects in the Microsoft Entra connector space that have the incorrect attribute must be removed with the "Remove-ADSyncCSObject" cmdlet, and then a full sync cycle must be run.</li>
+</ul>
+<h2 id="21190">2.1.19.0</h2>
+<h3 id="release-status-20">Release status:</h3>
+<p>11/2/2022: Released for download</p>
+<h3 id="functional-changes-4">Functional changes</h3>
+<ul>
+<li>We added a new attribute 'employeeLeaveDateTime' for syncing to Microsoft Entra ID. To learn more about how to use this attribute to manage your users' life cycles, please refer to <a href="../../../id-governance/how-to-lifecycle-workflow-sync-attributes" data-linktype="relative-path">this article</a></li>
+</ul>
+<h3 id="bug-fixes-16">Bug fixes</h3>
+<ul>
+<li>we fixed a bug where Microsoft Entra Connect Password writeback stopped with error code "SSPR_0029 ERROR_ACCESS_DENIED"</li>
+</ul>
+<h2 id="21180">2.1.18.0</h2>
+<h3 id="release-status-21">Release status:</h3>
+<p>10/5/2022: Released for download</p>
+<h3 id="bug-fixes-17">Bug fixes</h3>
+<ul>
+<li>we fixed a bug where upgrade from version 1.6 to version 2.1 got stuck in a loop due to IsMemberOfLocalGroup enumeration.</li>
+<li>we fixed a bug where the Microsoft Entra Connect Configuration Wizard was sending incorrect credentials (username format) while validating if Enterprise Admin.</li>
+</ul>
+<h2 id="21160">2.1.16.0</h2>
+<h3 id="release-status-22">Release status</h3>
+<p>8/2/2022: Released for download and autoupgrade.</p>
+<h3 id="bug-fixes-18">Bug fixes</h3>
+<ul>
+<li>We fixed a bug where autoupgrade fails when the service account is in "UPN" format.</li>
+</ul>
+<h2 id="21150">2.1.15.0</h2>
+<h3 id="release-status-23">Release status</h3>
+<p>7/6/2022: Released for download.</p>
+<div class="IMPORTANT">
+<p>Important</p>
+<p>We have discovered a security vulnerability in the Microsoft Entra Connect Admin Agent. If you have installed the Admin Agent previously it's important that you update your Microsoft Entra Connect server(s) to this version to mitigate the vulnerability.</p>
+</div>
+<h3 id="functional-changes-5">Functional changes</h3>
+<ul>
+<li>We have removed the public preview functionality for the Admin Agent from Microsoft Entra Connect. We won't provide this functionality going forward.</li>
+<li>We added support for two new attributes: employeeOrgDataCostCenter and employeeOrgDataDivision.</li>
+<li>We added CertificateUserIds attribute to Microsoft Entra Connector static schema.</li>
+<li>The Microsoft Entra Connect wizard now aborts if write event logs permission is missing.</li>
+<li>We updated the Microsoft Entra Connect Health endpoints to support the US government clouds.</li>
+<li>We added new cmdlets “Get-ADSyncToolsDuplicateUsersSourceAnchor and Set-ADSyncToolsDuplicateUsersSourceAnchor“ to fix bulk "source anchor has changed" errors. When a new forest is added to Microsoft Entra Connect with duplicate user objects, the objects are running into bulk "source anchor has changed" errors. This is happening due to the mismatch between msDsConsistencyGuid &amp; ImmutableId. More information about this module and the new cmdlets can be found in <a href="reference-connect-adsynctools" data-linktype="relative-path">this article</a>.</li>
+</ul>
+<h3 id="bug-fixes-19">Bug fixes</h3>
+<ul>
+<li>We fixed a bug that prevented localDB upgrades in some Locales.</li>
+<li>We fixed a bug to prevent database corruption when using localDB.</li>
+<li>We added time out and size limit errors to the connection log.</li>
+<li>We fixed a bug where, if child domain has a user with same name as parent domain user that happens to be an enterprise admin, the group membership failed.</li>
+<li>We updated the expressions used in the "In from Microsoft Entra ID - Group SOAInAAD" rule to limit the description attribute to 448 characters.</li>
+<li>We made a change to set extended rights for "Unexpire Password" for Password Reset.</li>
+<li>We modified the AD connector upgrade to refresh the schema – we no longer show constructed and non-replicated attributes in the Wizard during upgrade.</li>
+<li>We fixed a bug in ADSyncConfig functions ConvertFQDNtoDN and ConvertDNtoFQDN - If a user decides to set variables called '$dn' or '$fqdn', these variables are no longer used inside the script scope.</li>
+<li>We made the following Accessibility fixes:</li>
+<li>Fixed a bug where Focus is lost during keyboard navigation on Domain and OU Filtering page.</li>
+<li>We updated the accessible name of Clear Runs drop down.</li>
+<li>We fixed a bug where the tooltip of the "Help" button isn't accessible through keyboard if navigated with arrow keys.</li>
+<li>We fixed a bug where the underline of hyperlinks was missing on the Welcome page of the wizard.</li>
+<li>We fixed a bug in Sync Service Manager's About dialog where the Screen reader isn't announcing the information about the data appearing under the "About" dialog box.</li>
+<li>We fixed a bug where the Management Agent Name wasn't mentioned in logs when an error occurred while validating MA Name.</li>
+<li>We fixed several accessibility issues with the keyboard navigation and custom control type fixes. The Tooltip of the "help" button isn't collapsing by pressing "Esc" key. There was an Illogical keyboard focus on the User Sign In radio buttons and there was an invalid control type on the help popups.</li>
+<li>We fixed a bug where an empty label was causing an accessibility error.</li>
+</ul>
+<h2 id="2110">2.1.1.0</h2>
+<h3 id="release-status-24">Release status</h3>
+<p>3/24/2022: Released for download only, not available for auto upgrade</p>
+<h3 id="bug-fixes-20">Bug fixes</h3>
+<ul>
+<li>Fixed an issue where some sync rule functions weren't parsing surrogate pairs properly.</li>
+<li>Fixed an issue where, under certain circumstances, the sync service wouldn't start due to a model db corruption. You can read more about the model db corruption issue in <a href="/en-us/troubleshoot/azure/active-directory/resolve-model-database-corruption-sqllocaldb" data-linktype="absolute-path">this article</a></li>
+</ul>
+<h2 id="20910">2.0.91.0</h2>
+<h3 id="release-status-25">Release status</h3>
+<p>01/19/2022: Released for download only, not available for auto upgrade</p>
+<h3 id="functional-changes-6">Functional changes</h3>
+<ul>
+<li>We updated the Microsoft Entra Connect Health component in this release from version 3.1.110.0 to version 3.2.1823.12. This new version provides compliance of the Microsoft Entra Connect Health component with the <a href="https://www.nist.gov/standardsgov/compliance-faqs-federal-information-processing-standards-fips" data-linktype="external">Federal Information Processing Standards (FIPS)</a> requirements.</li>
+</ul>
+<h2 id="20890">2.0.89.0</h2>
+<h3 id="release-status-26">Release status</h3>
+<p>12/22/2021: Released for download only, not available for auto upgrade</p>
+<h3 id="bug-fixes-21">Bug fixes</h3>
+<ul>
+<li>We fixed a bug in version 2.0.88.0 where, under certain conditions, linked mailboxes of disabled users and mailboxes of certain resource objects, were getting deleted.</li>
+<li>We fixed an issue which causes upgrade to Microsoft Entra Connect version 2.x to fail, when using SQL localdb along with a VSA service account for ADSync.</li>
+</ul>
+<h2 id="20880">2.0.88.0</h2>
+<div class="NOTE">
+<p>Note</p>
+<p>This release requires Windows Server 2016 or newer. It fixes a vulnerability that's present in version 2.0 of Microsoft Entra Connect and other bug fixes and minor feature updates.</p>
+</div>
+<h3 id="release-status-27">Release status</h3>
+<p>12/15/2021: Released for download only, not available for autoupgrade</p>
+<h3 id="bug-fixes-22">Bug fixes</h3>
+<ul>
+<li>We upgraded the version of Microsoft.Data.OData from 5.8.1 to 5.8.4 to fix a vulnerability.</li>
+<li>Accessibility fixes:</li>
+<li>We made the Microsoft Entra Connect wizard resizable to account for different zoom levels and screen resolutions.</li>
+<li>We named elements to satisfy accessibility requirements.</li>
+<li>We fixed a bug where miisserver failed because of a null reference.</li>
+<li>We fixed a bug to ensure the desktop SSO value persists after upgrading Microsoft Entra Connect to a newer version.</li>
+<li>We modified the inetorgperson sync rules to fix an issue with account/resource forests.</li>
+<li>We fixed a radio button test to display a <strong>Link More</strong> link.</li>
+</ul>
+<h3 id="functional-changes-7">Functional changes</h3>
+<ul>
+<li>We made a change so that group writeback DN is now configurable with the display name of the synced group.</li>
+<li>We removed the hard requirement for exchange schema when you enable group writeback.</li>
+<li>Microsoft Entra Kerberos changes:</li>
+<li>We extended the PowerShell command to support custom top-level names for trusted object creation.</li>
+<li>We made a change to set an official brand name for the Microsoft Entra Kerberos feature.</li>
+</ul>
+<h2 id="16160">1.6.16.0</h2>
+<div class="NOTE">
+<p>Note</p>
+<p>This release is an update release of Microsoft Entra Connect. This version is intended to be used by customers who are running an older version of Windows Server and can't upgrade their server to Windows Server 2016 or newer at this time. You can't use this version to update a Microsoft Entra Connect V2.0 server.</p>
+<p>Don't install this release on Windows Server 2016 or newer. This release includes SQL Server 2012 components and was retired on August 31, 2022. Upgrade your Server OS and Microsoft Entra Connect version before that date.</p>
+<p>When you upgrade to this V1.6 build or any newer builds, the group membership limit resets to 50,000. When a server is upgraded to this build, or any newer 1.6 builds, reapply the rule changes you applied when you initially increased the group membership limit to 250,000 before you enable sync for the server.</p>
+</div>
+<h3 id="release-status-28">Release status</h3>
+<p>10/13/2021: Released for download and autoupgrade</p>
+<h3 id="bug-fixes-23">Bug fixes</h3>
+<ul>
+<li>We fixed a bug where the autoupgrade process attempted to upgrade Microsoft Entra Connect servers that are running older Windows OS version 2008 or 2008 R2 and failed. These versions of Windows Server are no longer supported. In this release, we only attempt autoupgrade on machines that run Windows Server 2012 or newer.</li>
+<li>We fixed an issue where, under certain conditions, miisserver failed because of an access violation exception.</li>
+</ul>
+<h3 id="known-issues-3">Known issues</h3>
+<p>When you upgrade to this V1.6 build or any newer builds, the group membership limit resets to 50,000. When a server is upgraded to this build, or any newer 1.6 builds, reapply the rule changes you applied when you initially increased the group membership limit to 250,000 before you enable sync for the server.</p>
+<h2 id="20280">2.0.28.0</h2>
+<div class="NOTE">
+<p>Note</p>
+<p>This release is a maintenance update release of Microsoft Entra Connect. It requires Windows Server 2016 or newer.</p>
+</div>
+<h3 id="release-status-29">Release status</h3>
+<p>9/30/2021: Released for download only, not available for autoupgrade</p>
+<h3 id="bug-fixes-24">Bug fixes</h3>
+<ul>
+<li>We removed a download button for a PowerShell script on the <strong>Group Writeback Permissions</strong> page in the wizard. We also changed the text on the wizard page to include a <strong>Learn More</strong> link that links to an online article where the PowerShell script can be found.</li>
+<li>We fixed a bug where the wizard was incorrectly blocking the installation when the .NET version on the server was greater than 4.6 because of missing registry keys. Those registry keys aren't required and should only block installation if they're intentionally set to false.</li>
+<li>We fixed a bug where an error was thrown if phantom objects were found during the initialization of a sync step. This bug blocked the sync step or removed transient objects. The phantom objects are now ignored.</li>
+</ul>
+<p>A phantom object is a placeholder for an object that isn't there or hasn't been seen yet. For example, if a source object has a reference for a target object that isn't there, we create the target object as a phantom.</p>
+<h3 id="functional-changes-8">Functional changes</h3>
+<p>A change was made that allows a user to deselect objects and attributes from the inclusion list, even if they're in use. Instead of blocking this action, we now provide a warning.</p>
+<h2 id="16142">1.6.14.2</h2>
+<div class="NOTE">
+<p>Note</p>
+<p>This release is an update release of Microsoft Entra Connect. This version is intended to be used by customers who are running an older version of Windows Server and can't upgrade their server to Windows Server 2016 or newer at this time. You can't use this version to update a Microsoft Entra Connect V2.0 server.</p>
+</div>
+<p>We'll begin auto-upgrading eligible tenants when this version is available for download. Auto-upgrade takes a few weeks to complete.</p>
+<p>When you upgrade to this V1.6 build or any newer builds, the group membership limit resets to 50,000. When a server is upgraded to this build, or any newer 1.6 builds, reapply the rule changes you applied when you initially increased the group membership limit to 250,000 before you enable sync for the server.</p>
+<h3 id="release-status-30">Release status</h3>
+<p>9/21/2021: Released for download and autoupgrade</p>
+<h3 id="functional-changes-9">Functional changes</h3>
+<ul>
+<li>We added the latest versions of Microsoft Identity Manager (MIM) Connectors (1.1.1610.0). For more information, see the <a href="/en-us/microsoft-identity-manager/reference/microsoft-identity-manager-2016-connector-version-history#1116100-september-2021" data-linktype="absolute-path">release history page of the MIM Connectors</a>.</li>
+<li>We added a configuration option to disable the Soft Matching feature in Microsoft Entra Connect. We recommend that you disable Soft Matching unless you need it to take over cloud-only accounts. To disable Soft Matching, see <a href="how-to-connect-install-existing-tenant#hard-match-vs-soft-match" data-linktype="relative-path">this reference article</a>.</li>
+</ul>
+<h3 id="bug-fixes-25">Bug fixes</h3>
+<ul>
+<li>We fixed a bug where the desktop single sign-on settings weren't persisted after upgrade from a previous version.</li>
+<li>We fixed a bug that caused the Set-ADSync*Permission cmdlets to fail.</li>
+</ul>
+<h2 id="20251">2.0.25.1</h2>
+<div class="NOTE">
+<p>Note</p>
+<p>This release is a hotfix update release of Microsoft Entra Connect. This release requires Windows Server 2016 or newer. It fixes a security issue that's present in version 2.0 of Microsoft Entra Connect and includes other bug fixes.</p>
+</div>
+<h3 id="release-status-31">Release status</h3>
+<p>9/14/2021: Released for download only, not available for autoupgrade</p>
+<h3 id="bug-fixes-26">Bug fixes</h3>
+<ul>
+<li>We fixed a security issue where an unquoted path was used to point to the Microsoft Entra Connect service. This path is now a quoted path.</li>
+<li>We fixed an import configuration issue with writeback enabled when you use the existing Microsoft Entra Connector account.</li>
+<li>We fixed an issue in Set-ADSyncExchangeHybridPermissions and other related cmdlets, which were broken from V1.6 because of an invalid inheritance type.</li>
+<li>We fixed an issue with the cmdlet we published in a previous release to set the TLS version. The cmdlet overwrote the keys, which destroyed any values that were in them. Now a new key is created only if one doesn't already exist. We added a warning to let users know the TLS registry changes aren't exclusive to Microsoft Entra Connect and might affect other applications on the same server.</li>
+<li>We added a check to enforce autoupgrade for V2.0 to require Windows Server 2016 or newer.</li>
+<li>We added the Replicating Directory Changes permission in the Set-ADSyncBasicReadPermissions cmdlet.</li>
+<li>We made a change to prevent UseExistingDatabase and import configuration from being used together because they could contain conflicting configuration settings.</li>
+<li>We made a change to allow a user with the Application Administrator role to change the application proxy service configuration.</li>
+<li>We removed the label from the labels of <strong>Import/Export</strong> settings. This functionality is generally available.</li>
+<li>We changed some labels that still referred to Company Administrator. We now use the role name Global Administrator.</li>
+<li>We created new Microsoft Entra Kerberos PowerShell cmdlets (*-AADKerberosServer) to add a Claims Transform rule to the Microsoft Entra service principal.</li>
+</ul>
+<h3 id="functional-changes-10">Functional changes</h3>
+<ul>
+<li>We added the latest versions of MIM Connectors (1.1.1610.0). For more information, see the <a href="/en-us/microsoft-identity-manager/reference/microsoft-identity-manager-2016-connector-version-history#1116100-september-2021" data-linktype="absolute-path">release history page of the MIM Connectors</a>.</li>
+<li>We added a configuration option to disable the Soft Matching feature in Microsoft Entra Connect. We recommend that you disable Soft Matching unless you need it to take over cloud-only accounts. To disable Soft Matching, see <a href="how-to-connect-install-existing-tenant#hard-match-vs-soft-match" data-linktype="relative-path">this reference article</a>.</li>
+</ul>
+<h2 id="20100">2.0.10.0</h2>
+<h3 id="release-status-32">Release status</h3>
+<p>8/19/2021: Released for download only, not available for autoupgrade</p>
+<div class="NOTE">
+<p>Note</p>
+<p>This is a hotfix update release of Microsoft Entra Connect. This release requires Windows Server 2016 or newer. This hotfix addresses an issue that's present in version 2.0 and in Microsoft Entra Connect version 1.6. If you're running Microsoft Entra Connect on an older Windows server, install the <a href="#16130" data-linktype="self-bookmark">1.6.13.0</a> build instead.</p>
+</div>
+<h3 id="release-status-33">Release status</h3>
+<p>8/19/2021: Released for download only, not available for autoupgrade</p>
+<h3 id="known-issues-4">Known issues</h3>
+<p>Under certain circumstances, the installer for this version displays an error that states TLS 1.2 isn't enabled and stops the installation. This issue occurs because of an error in the code that verifies the registry setting for TLS 1.2. We'll correct this issue in a future release. If you see this issue, follow the instructions to enable TLS 1.2 in <a href="reference-connect-tls-enforcement" data-linktype="relative-path">TLS 1.2 enforcement for Microsoft Entra Connect</a>.</p>
+<h3 id="bug-fixes-27">Bug fixes</h3>
+<p>We fixed a bug that occurred when a domain was renamed and Password Hash Sync failed with an error that indicated "a specified cast isn't valid" in the Event log. This regression is from earlier builds.</p>
+<h2 id="16130">1.6.13.0</h2>
+<div class="NOTE">
+<p>Note</p>
+<p>This release is a hotfix update release of Microsoft Entra Connect. It's intended to be used by customers who are running Microsoft Entra Connect on a server with Windows Server 2012 or 2012 R2.</p>
+</div>
+<p>8/19/2021: Released for download only, not available for autoupgrade</p>
+<h3 id="bug-fixes-28">Bug fixes</h3>
+<p>We fixed a bug that occurred when a domain was renamed and Password Hash Sync failed with an error that indicated "a specified cast isn't valid" in the Event log. This regression is from earlier builds.</p>
+<h3 id="functional-changes-11">Functional changes</h3>
+<p>There are no functional changes in this release.</p>
+<h2 id="2090">2.0.9.0</h2>
+<h3 id="release-status-34">Release status</h3>
+<p>8/17/2021: Released for download only, not available for autoupgrade</p>
+<h3 id="bug-fixes-29">Bug fixes</h3>
+<div class="NOTE">
+<p>Note</p>
+<p>This release is a hotfix update release of Microsoft Entra Connect. This release requires Windows Server 2016 or newer. It addresses an issue that's present in version 2.0.8.0. This issue isn't present in Microsoft Entra Connect version 1.6.</p>
+</div>
+<p>We fixed a bug that occurred when you synced a large number of Password Hash Sync transactions and the Event log entry length exceeded the maximum-allowed length for a Password Hash Sync event entry. We now split the lengthy log entry into multiple entries.</p>
+<h2 id="2080">2.0.8.0</h2>
+<div class="NOTE">
+<p>Note</p>
+<p>This release is a security update release of Microsoft Entra Connect. This release requires Windows Server 2016 or newer. If you're using an older version of Windows Server, use <a href="#16113" data-linktype="self-bookmark">version 1.6.11.3</a>.</p>
+</div>
+<p>This release addresses a vulnerability as documented in <a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-36949" data-linktype="external">this CVE</a>. For more information about this vulnerability, see the CVE.</p>
+<h3 id="release-status-35">Release status</h3>
+<p>8/10/2021: Released for download only, not available for autoupgrade</p>
+<h3 id="functional-changes-12">Functional changes</h3>
+<p>There are no functional changes in this release.</p>
+<h2 id="16113">1.6.11.3</h2>
+<div class="NOTE">
+<p>Note</p>
+<p>This release is a security update release of Microsoft Entra Connect. It's intended to be used by customers who are running an older version of Windows Server and can't upgrade their server to Windows Server 2016 or newer at this time. You can't use this version to update a Microsoft Entra Connect V2.0 server.</p>
+</div>
+<p>This release addresses a vulnerability as documented in <a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-36949" data-linktype="external">this CVE</a>. For more information about this vulnerability, see the CVE.</p>
+<h3 id="release-status-36">Release status</h3>
+<p>8/10/2021: Released for download only, not available for autoupgrade</p>
+<h3 id="functional-changes-13">Functional changes</h3>
+<p>There are no functional changes in this release.</p>
+<h2 id="2030">2.0.3.0</h2>
+<div class="NOTE">
+<p>Note</p>
+<p>This release is a major release of Microsoft Entra Connect. For more information, see <a href="whatis-azure-ad-connect-v2" data-linktype="relative-path">Introduction to Microsoft Entra Connect V2.0</a>.</p>
+</div>
+<h3 id="release-status-37">Release status</h3>
+<p>7/20/2021: Released for download only, not available for autoupgrade</p>
+<h3 id="functional-changes-14">Functional changes</h3>
+<ul>
+<li>We upgraded the LocalDB components of SQL Server to SQL 2019.</li>
+<li>This release requires Windows Server 2016 or newer because of the requirements of SQL Server 2019. An in-place upgrade of Windows Server on a Microsoft Entra Connect server isn't supported. For this reason, you might need to use a <a href="how-to-upgrade-previous-version#swing-migration" data-linktype="relative-path">swing migration</a>.</li>
+<li>We enforce the use of TLS 1.2 in this release. If you enabled your Windows Server for TLS 1.2, Microsoft Entra Connect uses this protocol. If TLS 1.2 isn't enabled on the server, you'll see an error message when you attempt to install Microsoft Entra Connect. The installation won't continue until you've enabled TLS 1.2. You can use the new Set-ADSyncToolsTls12 cmdlets to enable TLS 1.2 on your server.</li>
+<li>We made a change so that with this release, you can use the Hybrid Identity Administrator role to authenticate when you install Microsoft Entra Connect. You no longer need to use the Global Administrator role.</li>
+<li>We upgraded the Visual C++ runtime library to version 14 as a prerequisite for SQL Server 2019.</li>
+<li>We updated this release to use the Microsoft Authentication Library for authentication. We removed the older Azure AD Authentication Library, which was retired.</li>
+<li>We no longer apply permissions on AdminSDHolders following Windows security guidance. We changed the parameter SkipAdminSdHolders to IncludeAdminSdHolders in the ADSyncConfig.psm1 module.</li>
+<li>We made a change so that passwords are now reevaluated when an expired password is "unexpired," no matter if the password itself is changed. If the password is set to "Must change password at next logon" for a user, and this flag is cleared (which "unexpires" the password), the unexpired status and the password hash are synced to Microsoft Entra ID. In Microsoft Entra ID, when the user attempts to sign in, they can use the unexpired password.
+To sync an expired password from Active Directory to Microsoft Entra ID, use the feature in Microsoft Entra Connect to <a href="how-to-connect-password-hash-synchronization#synchronizing-temporary-passwords-and-force-password-change-on-next-logon" data-linktype="relative-path">synchronize temporary passwords</a>. Enable password writeback to use this feature so that the password the user updates is written back to Active Directory.</li>
+<li>We added two new cmdlets to the ADSyncTools module to enable or retrieve TLS 1.2 settings from the Windows Server:</li>
+<li>Get-ADSyncToolsTls12</li>
+<li>Set-ADSyncToolsTls12</li>
+</ul>
+<p>You can use these cmdlets to retrieve the TLS 1.2 enablement status or set it as needed. TLS 1.2 must be enabled on the server for the installation or Microsoft Entra Connect to succeed.</p>
+<ul>
+<li>We revamped ADSyncTools with several new and improved cmdlets. The <a href="reference-connect-adsynctools" data-linktype="relative-path">ADSyncTools article</a> has more details about these cmdlets.
+The following cmdlets have been added or updated:</li>
+<li>Clear-ADSyncToolsMsDsConsistencyGuid</li>
+<li>ConvertFrom-ADSyncToolsAadDistinguishedName</li>
+<li>ConvertFrom-ADSyncToolsImmutableID</li>
+<li>ConvertTo-ADSyncToolsAadDistinguishedName</li>
+<li>ConvertTo-ADSyncToolsCloudAnchor</li>
+<li>ConvertTo-ADSyncToolsImmutableID</li>
+<li>Export-ADSyncToolsAadDisconnectors</li>
+<li>Export-ADSyncToolsObjects</li>
+<li>Export-ADSyncToolsRunHistory</li>
+<li>Get-ADSyncToolsAadObject</li>
+<li>Get-ADSyncToolsMsDsConsistencyGuid</li>
+<li>Import-ADSyncToolsObjects</li>
+<li>Import-ADSyncToolsRunHistory</li>
+<li>Remove-ADSyncToolsAadObject</li>
+<li>Search-ADSyncToolsADobject</li>
+<li>Set-ADSyncToolsMsDsConsistencyGuid</li>
+<li>Trace-ADSyncToolsADImport</li>
+<li>Trace-ADSyncToolsLdapQuery</li>
+<li>We now use the V2 endpoint for import and export. We fixed an issue in the Get-ADSyncAADConnectorExportApiVersion cmdlet. To learn more about the V2 endpoint, see <a href="how-to-connect-sync-endpoint-api-v2" data-linktype="relative-path">Microsoft Entra Connect Sync V2 endpoint</a>.</li>
+<li>We added the following new user properties to sync from on-premises Active Directory to Microsoft Entra ID:</li>
+<li>employeeType</li>
+<li>employeeHireDate</li>
+</ul>
+<div class="NOTE">
+<p>Note</p>
+<p>There's no corresponding EmployeeHireDate or EmployeeLeaveDateTime attribute in Active Directory. If you're importing from on-premises AD, you'll need to identify an attribute in AD that can be used. This attribute must be a string. For more information see, <a href="../../../id-governance/how-to-lifecycle-workflow-sync-attributes" data-linktype="relative-path">Synchronizing lifecycle workflow attributes</a></p>
+</div>
+<ul>
+<li>This release requires PowerShell version 5.0 or newer to be installed on the Windows server. This version is part of Windows Server 2016 and newer.</li>
+<li>We increased the group sync membership limits to 250,000 with the new V2 endpoint.</li>
+<li>We updated the Generic LDAP Connector and the Generic SQL Connector to the latest versions. To learn more about these connectors, see the reference documentation for:</li>
+<li><a href="/en-us/microsoft-identity-manager/reference/microsoft-identity-manager-2016-connector-genericldap" data-linktype="absolute-path">Generic LDAP Connector</a></li>
+<li><a href="/en-us/microsoft-identity-manager/reference/microsoft-identity-manager-2016-connector-genericsql" data-linktype="absolute-path">Generic SQL Connector</a></li>
+<li>In the Microsoft 365 admin center, we now report the Microsoft Entra Connect client version whenever there's export activity to Microsoft Entra ID. This reporting ensures that the Microsoft 365 admin center always has the most up-to-date Microsoft Entra Connect client version, and that it can detect when you're using an outdated version.</li>
+</ul>
+<h3 id="bug-fixes-30">Bug fixes</h3>
+<ul>
+<li>We fixed an accessibility bug where the screen reader announced an incorrect role of the <strong>Learn More</strong> link.</li>
+<li>We fixed a bug where sync rules with large precedence values (for example, 387163089) caused an upgrade to fail. We updated the sproc mms_UpdateSyncRulePrecedence to cast the precedence number as an integer before incrementing the value.</li>
+<li>We fixed a bug where group writeback permissions weren't set on the sync account if a group writeback configuration was imported. We now set the group writeback permissions if group writeback is enabled on the imported configuration.</li>
+<li>We updated the Microsoft Entra Connect Health agent version to 3.1.110.0 to fix an installation failure.</li>
+<li>We're seeing an issue with nondefault attributes from exported configurations where directory extension attributes are configured. In the process of importing these configurations to a new server or installation, the attribute inclusion list is overridden by the directory extension configuration step. As a result, after import, only default and directory extension attributes are selected in the sync service manager. Nondefault attributes aren't included in the installation, so the user must manually reenable them from the sync service manager if they want their imported sync rules to work. We now refresh the Microsoft Entra Connector before configuring the directory extension to keep existing attributes from the attribute inclusion list.</li>
+<li>We fixed an accessibility issue where the page header's font weight was set as Light. Font weight is now set to Bold for the page title, which applies to the header of all pages.</li>
+<li>We renamed the function Get-AdObject in ADSyncSingleObjectSync.ps1 to Get-AdDirectoryObject to prevent ambiguity with the Active Directory cmdlet.</li>
+<li>We removed the condition that allowed duplicate rule precedence. The SQL function mms_CheckSynchronizationRuleHasUniquePrecedence had allowed duplicates precedence on outbound sync rules on different connectors.</li>
+<li>We fixed a bug where the Single Object Sync cmdlet fails if the attribute flow data is null. An example is on exporting a delete operation.</li>
+<li>We fixed a bug where the installation fails because the ADSync bootstrap service can't be started. We now add Sync Service Account to the Local Builtin User Group before starting the bootstrap service.</li>
+<li>We fixed an accessibility issue where the active tab on Microsoft Entra Connect wizard wasn't showing the correct color on High Contrast theme. The selected color code was being overwritten because of a missing condition in the normal color code configuration.</li>
+<li>We addressed an issue where you were allowed to deselect objects and attributes used in sync rules by using the UI and PowerShell. We now show friendly error messages if you try to deselect any attribute or object that's used in any sync rules.</li>
+<li>We made some updates to the "migrate settings code" to check and fix backward compatibility issues when the script runs on an older version of Microsoft Entra Connect.</li>
+<li>We fixed a bug that occurred when PHS tried to look up an incomplete object. It didn't use the same algorithm to resolve the DC as it used originally to fetch the passwords. In particular, it ignored affinitized DC information. The Incomplete object lookup should use the same logic to locate the DC in both instances.</li>
+<li>We fixed a bug where Microsoft Entra Connect can't read Application Proxy items by using Microsoft Graph because of a permissions issue with calling Microsoft Graph directly based on the Microsoft Entra Connect client identifier. To fix this issue, we removed the dependency on Microsoft Graph and instead use Microsoft Entra PowerShell to work with the application proxy Application objects.</li>
+<li>We removed the writeback member limit from the Out to AD - Group SOAInAAD Exchange sync rule.</li>
+<li>We fixed a bug that occurred when you changed connector account permissions. If an object came in scope that hadn't changed since the last delta import, a delta import wouldn't import it. We now display a warning to alert you of the issue.</li>
+<li>We fixed an accessibility issue where the screen reader wasn't reading the radio button position. We added positional text to the radio button accessibility text field.</li>
+<li>We updated the Pass-Thru Authentication Agent bundle. The older bundle didn't have the correct reply URL for the HIP's first-party application in US Government.</li>
+<li>We fixed a bug where a stopped-extension-dll-exception error on Microsoft Entra Connector exported after clean installing the Microsoft Entra Connect version 1.6.X.X, which defaulted to using DirSyncWebServices API V2, by using an existing database. Previously, the setting export version to V2 was only being done for upgrades. We changed it so that it's set on clean install.</li>
+<li>We removed the ADSyncPrep.psm1 module from the installation because it's no longer used.</li>
+</ul>
+<h3 id="known-issues-5">Known issues</h3>
+<ul>
+<li>The Microsoft Entra Connect wizard shows the <strong>Import Synchronization Settings</strong> option as <strong>Preview</strong>, although this feature is generally available.</li>
+<li>Some Active Directory connectors might be installed in a different order when you use the output of the migrate settings script to install the product.</li>
+<li>The <strong>User Sign In</strong> options page in the Microsoft Entra Connect wizard mentions Company Administrator. This term is no longer used and needs to be replaced by Global Administrator.</li>
+<li>The <strong>Export settings</strong> option is broken when the <strong>Sign In</strong> option has been configured to use PingFederate.</li>
+<li>While Microsoft Entra Connect can now be deployed by using the Hybrid Identity Administrator role, configuring Self-Service Password Reset, Passthru Authentication, or single sign-on still requires a user with the Global Administrator role.</li>
+<li>When you import the Microsoft Entra Connect configuration while you deploy to connect with a different tenant than the original Microsoft Entra Connect configuration, directory extension attributes aren't configured correctly.</li>
+</ul>
+<h2 id="1640">1.6.4.0</h2>
+<div class="NOTE">
+<p>Note</p>
+<p>The Microsoft Entra Connect Sync V2 endpoint API is now available in these Azure environments:</p>
+<ul>
+<li>Azure Commercial</li>
+<li>Microsoft Azure operated by 21Vianet</li>
+<li>Azure US Government cloud</li>
+</ul>
+<p>This release won't be made available in the Azure German cloud.</p>
+</div>
+<h3 id="release-status-38">Release status</h3>
+<p>3/31/2021: Released for download only, not available for autoupgrade</p>
+<h3 id="bug-fixes-31">Bug fixes</h3>
+<p>This release fixes a bug that occurred in version 1.6.2.4. After upgrade to that release, the Microsoft Entra Connect Health feature wasn't registered correctly and didn't work. If you deployed build 1.6.2.4, update your Microsoft Entra Connect server with this build to register the Health feature correctly.</p>
+<h2 id="1624">1.6.2.4</h2>
+<div class="IMPORTANT">
+<p>Important</p>
+<p>Update per March 30, 2021: We've discovered an issue in this build. After installation of this build, the Health services aren't registered. We recommend that you not install this build. We'll release a hotfix shortly.
+If you already installed this build, you can manually register the Health services by using the cmdlet, as shown in <a href="how-to-connect-health-agent-install#manually-register-azure-ad-connect-health-for-sync" data-linktype="relative-path">Microsoft Entra Connect Health agent installation</a>.</p>
+</div>
+<ul>
+<li>This release is available for download only.</li>
+<li>The upgrade to this release requires a full synchronization because of sync rule changes.</li>
+<li>This release defaults the Microsoft Entra Connect server to the new V2 endpoint.</li>
+</ul>
+<h3 id="release-status-39">Release status</h3>
+<p>3/19/2021: Released for download, not available for autoupgrade</p>
+<h3 id="functional-changes-15">Functional changes</h3>
+<ul>
+<li><p>We updated default sync rules to limit membership in writeback groups to 50,000 members.</p>
+</li>
+<li><p>We added new default sync rules for limiting the membership count in group writeback (Out to AD - Group Writeback Member Limit) and group sync to Microsoft Entra ID (Out to Microsoft Entra ID - Group Write up Member Limit) groups.</p>
+</li>
+<li><p>We added a member attribute to the Out to AD - Group SOAInAAD - Exchange rule to limit members in writeback groups to 50,000.</p>
+</li>
+<li><p>We updated sync rules to support group writeback V2:</p>
+</li>
+<li><p>If the In from Microsoft Entra ID - Group SOAInAAD rule is cloned and Microsoft Entra Connect is upgraded:</p>
+</li>
+<li><p>The updated rule is disabled by default, so targetWritebackType is null.</p>
+</li>
+<li><p>Microsoft Entra Connect writes back all Cloud Groups (including Microsoft Entra Security Groups enabled for writeback) as Distribution Groups.</p>
+</li>
+<li><p>If the Out to AD - Group SOAInAAD rule is cloned and Microsoft Entra Connect is upgraded:</p>
+</li>
+<li><p>The updated rule is disabled by default. A new sync rule, Out to AD - Group SOAInAAD - Exchange, which is added is enabled.</p>
+</li>
+<li><p>Depending on the Cloned Custom Sync Rule's precedence, Microsoft Entra Connect flows the Mail and Exchange attributes.</p>
+</li>
+<li><p>If the Cloned Custom Sync Rule doesn't flow some Mail and Exchange attributes, the new Exchange Sync Rule adds those attributes.</p>
+</li>
+<li><p>We added support for <a href="how-to-connect-selective-password-hash-synchronization" data-linktype="relative-path">Selective Password Hash Synchronization</a>.</p>
+</li>
+<li><p>We added the new <a href="how-to-connect-single-object-sync" data-linktype="relative-path">Single Object Sync cmdlet</a>. Use this cmdlet to troubleshoot your Microsoft Entra Connect Sync configuration.</p>
+</li>
+<li><p>Microsoft Entra Connect now supports the Hybrid Identity Administrator role for configuring the service.</p>
+</li>
+<li><p>We updated the Microsoft Entra Connect Health agent to 3.1.83.0.</p>
+</li>
+<li><p>We introduced a new version of the <a href="reference-connect-adsynctools" data-linktype="relative-path">ADSyncTools PowerShell module</a>, which has several new or improved cmdlets:</p>
+</li>
+<li><p>Clear-ADSyncToolsMsDsConsistencyGuid</p>
+</li>
+<li><p>ConvertFrom-ADSyncToolsAadDistinguishedName</p>
+</li>
+<li><p>ConvertFrom-ADSyncToolsImmutableID</p>
+</li>
+<li><p>ConvertTo-ADSyncToolsAadDistinguishedName</p>
+</li>
+<li><p>ConvertTo-ADSyncToolsCloudAnchor</p>
+</li>
+<li><p>ConvertTo-ADSyncToolsImmutableID</p>
+</li>
+<li><p>Export-ADSyncToolsAadDisconnectors</p>
+</li>
+<li><p>Export-ADSyncToolsObjects</p>
+</li>
+<li><p>Export-ADSyncToolsRunHistory</p>
+</li>
+<li><p>Get-ADSyncToolsAadObject</p>
+</li>
+<li><p>Get-ADSyncToolsMsDsConsistencyGuid</p>
+</li>
+<li><p>Import-ADSyncToolsObjects</p>
+</li>
+<li><p>Import-ADSyncToolsRunHistory</p>
+</li>
+<li><p>Remove-ADSyncToolsAadObject</p>
+</li>
+<li><p>Search-ADSyncToolsADobject</p>
+</li>
+<li><p>Set-ADSyncToolsMsDsConsistencyGuid</p>
+</li>
+<li><p>Trace-ADSyncToolsADImport</p>
+</li>
+<li><p>Trace-ADSyncToolsLdapQuery</p>
+</li>
+<li><p>We updated error logging for token acquisition failures.</p>
+</li>
+<li><p>We updated <strong>Learn More</strong> links on the configuration page to give more detail on the linked information.</p>
+</li>
+<li><p>We removed the <strong>Explicit</strong> column from the <strong>CS Search</strong> page in the old sync UI.</p>
+</li>
+<li><p>We added to the UI for the group writeback flow to prompt users for credentials or to configure their own permissions by using the ADSyncConfig module if credentials weren't already provided in an earlier step.</p>
+</li>
+<li><p>We added the ability to autocreate a managed service account for an ADSync service account on a DC.</p>
+</li>
+<li><p>We added the ability to set and get the Microsoft Entra DirSync feature group writeback V2 in the existing cmdlets:</p>
+</li>
+<li><p>Set-ADSyncAADCompanyFeature</p>
+</li>
+<li><p>Get-ADSyncAADCompanyFeature</p>
+</li>
+<li><p>We added two cmdlets to read the AWS API version:</p>
+</li>
+<li><p>Get-ADSyncAADConnectorImportApiVersion: To get the import AWS API version</p>
+</li>
+<li><p>Get-ADSyncAADConnectorExportApiVersion: To get the export AWS API version</p>
+</li>
+<li><p>We updated change tracking so that changes made to synchronization rules are now tracked to assist troubleshooting changes in the service. The cmdlet Get-ADSyncRuleAudit retrieves tracked changes.</p>
+</li>
+<li><p>We updated the Add-ADSyncADDSConnectorAccount cmdlet in the <a href="how-to-connect-configure-ad-ds-connector-account#using-the-adsyncconfig-powershell-module" data-linktype="relative-path">ADSyncConfig PowerShell module</a> to allow a user in the ADSyncAdmin group to change the Active Directory Domain Services Connector account.</p>
+</li>
+</ul>
+<h3 id="bug-fixes-32">Bug fixes</h3>
+<ul>
+<li>We updated disabled foreground color to satisfy luminosity requirements on a white background. We added more conditions for the navigation tree to set the foreground text color to white when a disabled page is selected to satisfy luminosity requirements.</li>
+<li>We increased granularity for Set-ADSyncPasswordHashSyncPermissions cmdlet.</li>
+<li>We updated the PHS permissions script (Set-ADSyncPasswordHashSyncPermissions) to include an optional ADobjectDN parameter.</li>
+<li>We made an accessibility bug fix. The screen reader now describes the UX element that holds the list of forests as <strong>Forests list</strong> instead of <strong>Forest List list</strong>.</li>
+<li>We updated screen reader output for some items in the Microsoft Entra Connect wizard. We updated the button hover color to satisfy contrast requirements. We updated Synchronization Service Manager title color to satisfy contrast requirements.</li>
+<li>We fixed an issue with installing Microsoft Entra Connect from exported configuration having custom extension attributes.</li>
+<li>We added a condition to skip checking for extension attributes in the target schema while applying the sync rule.</li>
+<li>We added appropriate permissions on installation if the group writeback feature is enabled.</li>
+<li>We fixed duplicate default sync rule precedence on import.</li>
+<li>We fixed an issue that caused a staging error during V2 API delta import for a conflicting object that was repaired via the Health portal.</li>
+<li>We fixed an issue in the sync engine that caused Connector Spaces objects to have an inconsistent link state.</li>
+<li>We added import counters to Get-ADSyncConnectorStatistics output.</li>
+<li>We fixed an unreachable domain de-selection (selected previously) issue in some corner cases during the pass2 wizard.</li>
+<li>We modified policy import and export to fail if custom rule has duplicate precedence.</li>
+<li>We fixed a bug in the domain selection logic.</li>
+<li>We fixed an issue with build 1.5.18.0 if you use mS-DS-ConsistencyGuid as the source anchor and have cloned the In from AD - Group Join rule.</li>
+<li>Fresh Microsoft Entra Connect installations use the Export Deletion Threshold stored in the cloud if there's one available and if there isn't a different one passed in.</li>
+<li>We fixed an issue where Microsoft Entra Connect wouldn't read Active Directory displayName changes of hybrid-joined devices.</li>
+</ul>
+<h2 id="related-content">Related content</h2>
+<p>Learn more about how to <a href="../whatis-hybrid-identity" data-linktype="relative-path">integrate your on-premises identities with Microsoft Entra ID</a>.</p>
+</div>
+					
+		<div
+			id="ms--inline-notifications"
+			class="margin-block-xs"
+			data-bi-name="inline-notification"
+		></div>
+	 
+		<div
+			id="assertive-live-region"
+			role="alert"
+			aria-live="assertive"
+			class="visually-hidden"
+			aria-relevant="additions"
+			aria-atomic="true"
+		></div>
+		<div
+			id="polite-live-region"
+			role="status"
+			aria-live="polite"
+			class="visually-hidden"
+			aria-relevant="additions"
+			aria-atomic="true"
+		></div>
+	
+					
+		<!-- feedback section -->
+		<section
+			id="site-user-feedback-footer"
+			class="font-size-sm margin-top-md display-none-print display-none-desktop"
+			data-test-id="site-user-feedback-footer"
+			data-bi-name="site-feedback-section"
+		>
+			<hr class="hr" />
+			<h2 id="ms--feedback" class="title is-3">Feedback</h2>
+			<div class="display-flex flex-wrap-wrap align-items-center">
+				<p class="font-weight-semibold margin-xxs margin-left-none">
+					Was this page helpful?
+				</p>
+				<div class="buttons">
+					<button
+						class="thumb-rating-button like button button-primary button-sm"
+						data-test-id="footer-rating-yes"
+						data-binary-rating-response="rating-yes"
+						type="button"
+						title="This article is helpful"
+						data-bi-name="button-rating-yes"
+						aria-pressed="false"
+					>
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-like"></span>
+						</span>
+						<span>Yes</span>
+					</button>
+					<button
+						class="thumb-rating-button dislike button button-primary button-sm"
+						id="standard-rating-no-button"
+						hidden
+						data-test-id="footer-rating-no"
+						data-binary-rating-response="rating-no"
+						type="button"
+						title="This article is not helpful"
+						data-bi-name="button-rating-no"
+						aria-pressed="false"
+					>
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-dislike"></span>
+						</span>
+						<span>No</span>
+					</button>
+					<details
+						class="popover popover-top"
+						id="mobile-help-popover"
+						data-test-id="footer-feedback-popover"
+					>
+						<summary
+							class="thumb-rating-button dislike button button-primary button-sm"
+							data-test-id="details-footer-rating-no"
+							data-binary-rating-response="rating-no"
+							title="This article is not helpful"
+							data-bi-name="button-rating-no"
+							aria-pressed="false"
+							data-bi-an="feedback-unhelpful-popover"
+						>
+							<span class="icon" aria-hidden="true">
+								<span class="docon docon-dislike"></span>
+							</span>
+							<span>No</span>
+						</summary>
+						<div
+							class="popover-content width-200 width-300-tablet"
+							role="dialog"
+							aria-labelledby="popover-heading"
+							aria-describedby="popover-description"
+						>
+							<p id="popover-heading" class="font-size-lg margin-bottom-xxs font-weight-semibold">
+								Need help with this topic?
+							</p>
+							<p id="popover-description" class="font-size-sm margin-bottom-xs">
+								Want to try using Ask Learn to clarify or guide you through this topic?
+							</p>
+							
+		<div class="buttons flex-direction-row flex-wrap justify-content-center gap-xxs">
+			<div>
+		<button
+			class="button button-sm border inner-focus display-none margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-test-id="ask-learn-assistant-modal-entry-mobile-feedback"
+			data-ask-learn-modal-entry-feedback
+			data-bi-an=feedback-unhelpful-popover
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-label="Ask Learn"
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+		</button>
+		<button
+			class="button button-sm display-inline-flex display-none-desktop flex-shrink-0 margin-right-xxs border-color-ask-learn margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-bi-an=feedback-unhelpful-popover
+			data-test-id="ask-learn-assistant-modal-entry-tablet-feedback"
+			data-ask-learn-modal-entry-feedback
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+		<button
+			class="button button-sm display-none flex-shrink-0 display-inline-flex-desktop margin-right-xxs border-color-ask-learn margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-bi-an=feedback-unhelpful-popover
+			data-test-id="ask-learn-assistant-flyout-entry-feedback"
+			data-ask-learn-flyout-entry-show-only
+			data-flyout-button="toggle"
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-controls="ask-learn-flyout"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+	</div>
+			<button
+				type="button"
+				class="button button-sm margin-right-xxs"
+				data-help-option="suggest-fix"
+				data-bi-name="feedback-suggest"
+				data-bi-an="feedback-unhelpful-popover"
+				data-test-id="suggest-fix"
+			>
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-feedback"></span>
+				</span>
+				<span> Suggest a fix? </span>
+			</button>
+		</div>
+	
+						</div>
+					</details>
+				</div>
+			</div>
+		</section>
+		<!-- end feedback section -->
+	
+				</div>
+				
+		<div id="ms--additional-resources-mobile" class="display-none-print">
+			<hr class="hr" hidden />
+			<h2 id="ms--additional-resources-mobile-heading" class="title is-3" hidden>
+				Additional resources
+			</h2>
+			 
+		<section
+			id="right-rail-training-mobile"
+			class=""
+			data-bi-name="learning-resource-card"
+			hidden
+		></section>
+	 
+		<section
+			id="right-rail-events-mobile"
+			class=""
+			data-bi-name="events-card"
+			hidden
+		></section>
+	
+		</div>
+	 
+		<div
+			id="article-metadata-footer"
+			data-bi-name="article-metadata-footer"
+			data-test-id="article-metadata-footer"
+			class="page-metadata-container"
+		>
+			<hr class="hr" />
+			<ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
+				<li class="visibility-hidden-visual-diff">
+			<span class="badge badge-sm text-wrap-pretty">
+				<span>Last updated on <local-time format="twoDigitNumeric"
+		datetime="2026-09-16T08:00:00.000Z"
+		data-article-date-source="calculated"
+		class="is-invisible"
+	>
+		2026-09-16
+	</local-time></span>
+			</span>
+		</li>
+			</ul>
+		</div>
+	
+			</div>
+		
+				</main>
+				<aside
+					id="layout-body-aside"
+					class="layout-body-aside  "
+					data-bi-name="aside"
+					aria-label="Additional resources"
+			  >
+					
+		<div
+			id="ms--additional-resources"
+			class="right-container padding-sm display-none display-block-desktop height-full"
+			data-bi-name="pageactions"
+		>
+			<div id="affixed-right-container" data-bi-name="right-column">
+				
+		<nav
+			id="side-doc-outline"
+			class="doc-outline border-bottom padding-bottom-xs margin-bottom-xs scrollbar-width-thin"
+			data-bi-name="intopic toc"
+			aria-label="In this article"
+		>
+			<h3>In this article</h3>
+		</nav>
+	
+				<!-- Feedback -->
+				
+		<section
+			id="ms--site-user-feedback-right-rail"
+			class="font-size-sm display-none-print"
+			data-test-id="site-user-feedback-right-rail"
+			data-bi-name="site-feedback-right-rail"
+		>
+			<div class="display-flex flex-wrap-wrap align-items-center">
+				<p class="font-weight-semibold margin-xxs margin-left-none">
+					Was this page helpful?
+				</p>
+				<div class="display-flex flex-wrap-nowrap">
+					<button
+						class="thumb-rating-button like inner-focus"
+						data-test-id="right-rail-rating-yes"
+						data-binary-rating-response="rating-yes"
+						type="button"
+						title="This article is helpful"
+						aria-label="This article is helpful"
+						data-bi-name="button-rating-yes"
+						aria-pressed="false"
+					>
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-like"></span>
+						</span>
+					</button>
+					<button
+						class="thumb-rating-button dislike inner-focus"
+						id="right-rail-no-button"
+						hidden
+						data-test-id="right-rail-rating-no"
+						data-binary-rating-response="rating-no"
+						type="button"
+						title="This article is not helpful"
+						aria-label="This article is not helpful"
+						data-bi-name="button-rating-no"
+						aria-pressed="false"
+					>
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-dislike"></span>
+						</span>
+					</button>
+					<details class="popover popover-right" id="help-popover" data-test-id="feedback-popover">
+						<summary
+							tabindex="0"
+							class="thumb-rating-button dislike inner-focus"
+							data-test-id="details-right-rail-rating-no"
+							data-binary-rating-response="rating-no"
+							title="This article is not helpful"
+							aria-label="This article is not helpful"
+							data-bi-name="button-rating-no"
+							aria-pressed="false"
+							data-bi-an="feedback-unhelpful-popover"
+						>
+							<span class="icon" aria-hidden="true">
+								<span class="docon docon-dislike"></span>
+							</span>
+						</summary>
+						<div
+							class="popover-content width-200 width-300-tablet"
+							role="dialog"
+							aria-labelledby="popover-heading-right-rail"
+							aria-describedby="popover-description-right-rail"
+						>
+							<p
+								id="popover-heading-right-rail"
+								class="font-size-lg margin-bottom-xxs font-weight-semibold"
+							>
+								Need help with this topic?
+							</p>
+							<p id="popover-description-right-rail" class="font-size-sm margin-bottom-xs">
+								Want to try using Ask Learn to clarify or guide you through this topic?
+							</p>
+							
+		<div class="buttons flex-direction-row flex-wrap justify-content-center gap-xxs">
+			<div>
+		<button
+			class="button button-sm border inner-focus display-none margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-test-id="ask-learn-assistant-modal-entry-mobile-feedback"
+			data-ask-learn-modal-entry-feedback
+			data-bi-an=feedback-unhelpful-popover
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-label="Ask Learn"
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+		</button>
+		<button
+			class="button button-sm display-inline-flex display-none-desktop flex-shrink-0 margin-right-xxs border-color-ask-learn margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-bi-an=feedback-unhelpful-popover
+			data-test-id="ask-learn-assistant-modal-entry-tablet-feedback"
+			data-ask-learn-modal-entry-feedback
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+		<button
+			class="button button-sm display-none flex-shrink-0 display-inline-flex-desktop margin-right-xxs border-color-ask-learn margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-bi-an=feedback-unhelpful-popover
+			data-test-id="ask-learn-assistant-flyout-entry-feedback"
+			data-ask-learn-flyout-entry-show-only
+			data-flyout-button="toggle"
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-controls="ask-learn-flyout"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+	</div>
+			<button
+				type="button"
+				class="button button-sm margin-right-xxs"
+				data-help-option="suggest-fix"
+				data-bi-name="feedback-suggest"
+				data-bi-an="feedback-unhelpful-popover"
+				data-test-id="suggest-fix"
+			>
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-feedback"></span>
+				</span>
+				<span> Suggest a fix? </span>
+			</button>
+		</div>
+	
+						</div>
+					</details>
+				</div>
+			</div>
+		</section>
+	
+			</div>
+		</div>
+	
+			  </aside> <section
+					id="layout-body-flyout"
+					class="layout-body-flyout "
+					data-bi-name="flyout"
+			  >
+					 <div
+	class="height-full border-left background-color-body-medium"
+	id="ask-learn-flyout"
+></div>
+			  </section> <div class="layout-body-footer " data-bi-name="layout-footer">
+		<footer
+			id="footer"
+			data-test-id="footer"
+			data-bi-name="footer"
+			class="footer-layout padding-xs padding-sm-desktop has-default-focus border-top"
+			role="contentinfo"
+		>
+			<div class="display-flex gap-xs flex-wrap-wrap is-full-height padding-right-lg-desktop">
+				
+		<a
+			data-mscc-ic="false"
+			href="#"
+			data-bi-name="select-locale"
+			class="locale-selector-link flex-shrink-0 button button-sm button-clear external-link-indicator"
+			id=""
+			title=""
+			><span class="icon" aria-hidden="true"
+				><span class="docon docon-world"></span></span
+			><span class="local-selector-link-text">en-us</span></a
+		>
+	 <div class="ccpa-privacy-link" data-ccpa-privacy-link hidden>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://aka.ms/yourcaliforniaprivacychoices"
+			data-bi-name="your-privacy-choices"
+			class="button button-sm button-clear flex-shrink-0 external-link-indicator"
+			id=""
+			title=""
+			>
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 30 14"
+			xml:space="preserve"
+			height="16"
+			width="43"
+			aria-hidden="true"
+			focusable="false"
+		>
+			<path
+				d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z"
+				style="fill-rule:evenodd;clip-rule:evenodd;fill:#fff"
+			></path>
+			<path
+				d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z"
+				style="fill-rule:evenodd;clip-rule:evenodd;fill:#06f"
+			></path>
+			<path
+				d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z"
+				style="fill:#fff"
+			></path>
+			<path
+				d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z"
+				style="fill:#06f"
+			></path>
+		</svg>
+	
+			<span>Your Privacy Choices</span></a
+		>
+	
+	</div>
+				<div class="flex-shrink-0">
+		<div class="dropdown has-caret-up">
+			<button
+				data-test-id="theme-selector-button"
+				class="dropdown-trigger button button-clear button-sm inner-focus theme-dropdown-trigger"
+				aria-controls="{{ themeMenuId }}"
+				aria-haspopup="true"
+				aria-expanded="false"
+				data-bi-name="theme"
+			>
+				<span class="icon" aria-hidden="true"><span class="docon docon-sun"></span></span>
+				<span>Theme</span>
+				<span class="icon expanded-indicator" aria-hidden="true">
+					<span class="docon docon-chevron-down-light"></span>
+				</span>
+			</button>
+			<div class="dropdown-menu" id="{{ themeMenuId }}" role="menu">
+				<ul class="theme-selector padding-xxs" data-test-id="theme-dropdown-menu" role="none">
+					<li class="theme display-block" role="none">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							role="menuitemradio"
+							aria-checked="false"
+							data-theme-to="light"
+							tabindex="-1"
+						>
+							<span class="theme-light margin-right-xxs">
+								<span
+									class="theme-selector-icon border display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span> Light </span>
+						</button>
+					</li>
+					<li class="theme display-block" role="none">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							role="menuitemradio"
+							aria-checked="false"
+							data-theme-to="dark"
+							tabindex="-1"
+						>
+							<span class="theme-dark margin-right-xxs">
+								<span
+									class="border theme-selector-icon display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span> Dark </span>
+						</button>
+					</li>
+					<li class="theme display-block" role="none">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							role="menuitemradio"
+							aria-checked="false"
+							data-theme-to="high-contrast"
+							tabindex="-1"
+						>
+							<span class="theme-high-contrast margin-right-xxs">
+								<span
+									class="border theme-selector-icon display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span> High contrast </span>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+			</div>
+			<ul class="links" data-bi-name="footerlinks">
+				<li class="manage-cookies-holder" hidden=""></li>
+				<li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/principles-for-ai-generated-content"
+			data-bi-name="aiDisclaimer"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>AI Disclaimer</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/previous-versions/"
+			data-bi-name="archivelink"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Previous Versions</a
+		>
+	
+	</li> <li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://techcommunity.microsoft.com/t5/microsoft-learn-blog/bg-p/MicrosoftLearnBlog"
+			data-bi-name="bloglink"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Blog</a
+		>
+	
+	</li> <li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/contribute"
+			data-bi-name="contributorGuide"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Contribute</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://go.microsoft.com/fwlink/?LinkId=521839"
+			data-bi-name="privacy"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Privacy</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://go.microsoft.com/fwlink/?linkid=2259814"
+			data-bi-name="consumer-health-privacy"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Consumer Health Privacy</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/legal/termsofuse"
+			data-bi-name="termsofuse"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Terms of Use</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://www.microsoft.com/legal/intellectualproperty/Trademarks/"
+			data-bi-name="trademarks"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Trademarks</a
+		>
+	
+	</li>
+				<li>&copy; Microsoft 2026</li>
+			</ul>
+		</footer>
+	</footer>
+			</body>
+		</html>

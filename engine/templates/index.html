@@ -180,7 +180,7 @@
   </p>
   <ul class="endpoints">
     <li><a href="{{ feed_url }}"><code>v1/feed.json</code></a><span>Full normalized software catalog: every field, every release, one versioned document.</span></li>
-    <li><a href="{{ url_for('v1/feed.atom') }}"><code>v1/feed.atom</code></a><span>Upcoming deadlines as an Atom feed, with <code>v1/feed.rss</code> and <code>v1/calendar.ics</code> alongside it. Month-precision deadlines have no day for these formats and are enumerated in <code>v1/feed-exclusions.json</code> instead.</span></li>
+    <li><a href="{{ url_for('v1/feed.atom') }}"><code>v1/feed.atom</code></a><span>Upcoming deadlines as an Atom feed, with <code>v1/feed.rss</code> and <code>v1/calendar.ics</code> alongside it. Month-precision deadlines and derived dates have no vendor-stated day for these formats and are enumerated in <code>v1/feed-exclusions.json</code> instead.</span></li>
     <li><a href="{{ products_url }}"><code>v1/products.json</code></a><span>Software summaries with counts and the absolute URL of each product endpoint.</span></li>
     <li><a href="{{ hardware_url }}"><code>v1/hardware.json</code></a><span>Hardware summaries: vendor, status, catalog state, milestone coverage and the absolute URL of each record's endpoint.</span></li>
     {% if changes_available %}

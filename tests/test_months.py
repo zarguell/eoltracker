@@ -136,8 +136,10 @@ class FeedExclusionTests(unittest.TestCase):
         for name, text in documents.items():
             self.assertNotIn(MONTH, text, name)
         excluded = json.loads((self.out / feeds.EXCLUSIONS_PATH).read_text())
-        self.assertEqual(excluded["counts"], {"upcoming_events": 1, "feeds": 0, "excluded": 1})
-        self.assertEqual(excluded["reason"]["code"], feeds.MONTH_EXCLUSION_CODE)
+        self.assertEqual({key: excluded["counts"][key] for key in ("upcoming_events", "feeds", "excluded")},
+                         {"upcoming_events": 1, "feeds": 0, "excluded": 1})
+        codes = [reason["code"] for reason in excluded["reasons"]]
+        self.assertEqual(codes, [feeds.MONTH_EXCLUSION_CODE, feeds.DERIVED_EXCLUSION_CODE])
         entry = excluded["excluded"][0]
         self.assertEqual(entry["month"], MONTH)
         self.assertEqual(entry["human"], "July 2099")
@@ -153,7 +155,7 @@ class FeedExclusionTests(unittest.TestCase):
         # The day event's permanent identity is in the feed, and the account
         # counts it on the feeds' side of the split rather than as an exclusion.
         self.assertIn("eol-2099-07-15", self.documents()["atom"])
-        self.assertEqual(excluded["counts"], {"upcoming_events": 1, "feeds": 1, "excluded": 0})
+        self.assertEqual([excluded["counts"][key] for key in ("upcoming_events", "feeds", "excluded")], [1, 1, 0])
 
     def test_every_upcoming_event_lands_in_exactly_one_side(self):
         products = [product("a", eol=MONTH), product("b", eol=DAY)]

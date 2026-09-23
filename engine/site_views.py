@@ -20,7 +20,7 @@ them:
   a published file.
 """
 from .hardware import slugify
-from . import contribute
+from . import contribute, derived
 from .site_sources import is_catalog_record, source_links, source_label, source_order
 from .site_config import (CATALOG_LISTING_STATES, CATALOG_NOTICE_STATES,
                           HARDWARE_MILESTONES, HARDWARE_STATUSES, MILESTONE_FIELDS, MILESTONE_KEYS,
@@ -53,6 +53,7 @@ def release_rows(record):
             value = upstream.get(field)
             if isinstance(value, str) and value:
                 raw.append({"field": field, "value": value, "label": labels.get(label_key) if label_key else None})
+        provenance = release.get(derived.DERIVED_KEY) or {}
         cells = {}
         for milestone in MILESTONES:
             key = milestone["key"]
@@ -67,7 +68,8 @@ def release_rows(record):
                     continue
                 notes.append(f"{entry['field']} {entry['value']}" + (f" ({entry['label']})" if entry["label"] else ""))
             cells[key] = {"value": value, "human": human_date(value), "month": is_month(value),
-                          "notes": "; ".join(notes) or None}
+                          "notes": "; ".join(notes) or None,
+                          "derived": derived_cell(key, provenance.get(key))}
         latest = upstream.get("latest") or {}
         # A researched record's release carries the contribution's verbatim
         # quote as an upstream cell instead of upstream date fields; it is
@@ -130,14 +132,20 @@ def upcoming_events(rows, today, limit=None, milestones=MILESTONES):
     countdown is to that day. Ordering still compares the stored strings, which
     sorts YYYY-MM before YYYY-MM-DD inside the same month, the conservative
     direction: an undated deadline is announced before the month is over.
+
+    A derived milestone is left out: this list is the "next published deadline"
+    a reader plans against, and a date the vendor states no day for is a
+    different claim from one the vendor states. The product page prints derived
+    dates in their own block, labelled, with the rule that produced them.
     """
     events = []
     for row in rows:
         for milestone in milestones:
             if milestone["key"] == "ga":
                 continue
-            value = row["cells"][milestone["key"]]["value"]
-            if not value:
+            cell = row["cells"][milestone["key"]]
+            value = cell["value"]
+            if not value or cell["derived"]:
                 continue
             covers = published_period(value)
             if covers < today:
@@ -180,6 +188,9 @@ def summarize(record, rows, today):
         # pipeline-derived one without fetching every record; the record itself
         # carries the citation and stays linked from here.
         "research": has_research(record),
+        # Derived dates are published dates whose rule the record carries, so
+        # the index flags a record that has any; `next` never contains one.
+        "derived": any(cell["derived"] for row in rows for cell in row["cells"].values()),
     }
 
 
@@ -208,13 +219,109 @@ def hardware_rows(record):
         value = milestones[key]
         notes = [f"{entry['column']} {entry['value']}" for entry in raw
                  if entry["role"] == key and entry["value"] and entry["value"] != value]
-        cells[key] = {"value": value, "human": human_date(value), "notes": "; ".join(notes) or None}
+        cells[key] = {"value": value, "human": human_date(value), "notes": "; ".join(notes) or None,
+                      # Hardware records carry no milestone_provenance: their
+                      # sources state every date, and the field is software-only.
+                      "derived": None}
     return {
         "id": record["id"],
         "name": record["name"],
         "cells": cells,
         "raw": raw,
     }
+
+
+# ---------------------------------------------------------------------------
+# Derived dates (engine/derived.py).
+#
+# A derived milestone is a published date whose *rule* the vendor states: an
+# explicit duration, the release that ends it, or a parent platform whose
+# lifecycle the component follows. The date is arithmetic on a stated base, so
+# it is published with the base, the rule, the quote and the page it came from
+# — and always labelled `derived`, never presented as a vendor-stated day. The
+# rule names and the arithmetic live in `engine/derived.py`; this module only
+# turns them into the sentences and flags the markup prints.
+DERIVED_LABEL = "derived"
+DERIVED_METHODS = {
+    "release-plus-duration": "the vendor states a support duration measured from a published base date",
+    "release-trigger": "the vendor states which release ends this one's support",
+    "support-inheritance": "the vendor states that this component follows its parent's lifecycle",
+}
+_UNITS = {"day": ("day", "days"), "month": ("month", "months"), "year": ("year", "years")}
+
+
+def duration_text(duration):
+    """A duration as a reader-facing phrase, e.g. ``5 years``."""
+    if not duration:
+        return None
+    single, plural = _UNITS.get(duration.get("unit"), (duration.get("unit"), duration.get("unit")))
+    value = duration.get("value")
+    return f"{value} {single if value == 1 else plural}"
+
+
+def derived_cell(key, entry):
+    """One milestone's derived-date disclosure, or None when it is stated.
+
+    The view carries everything a reader needs to recompute the date: the base
+    and what it is, the rule in the source's own terms, the quote, and the page
+    it was read from. A duration rule also prints the arithmetic in words, and a
+    trigger/inheritance rule names the release or parent it follows.
+    """
+    if not entry:
+        return None
+    method = entry["method"]
+    view = {
+        "milestone": key,
+        "kind": entry["kind"],
+        "label": DERIVED_LABEL,
+        "method": method,
+        "method_label": DERIVED_METHODS.get(method, method),
+        "quote": entry["quote"],
+        "source_url": entry["source_url"],
+        "source_label": source_label(entry["source_url"]),
+        "base_date": entry["base_date"],
+        "base_human": human_date(entry["base_date"]),
+        "base_label": entry["base_label"],
+        "duration": duration_text(entry.get("duration")),
+        "trigger": entry.get("trigger"),
+        "parent": entry.get("parent"),
+    }
+    if view["trigger"]:
+        view["trigger"] = {**view["trigger"], "human": human_date(view["trigger"]["date"])}
+    if view["duration"]:
+        view["calculation"] = (f"{view['duration']} from {view['base_label']} "
+                               f"({view['base_human']})")
+    elif view["parent"]:
+        view["calculation"] = (f"the parent's {view['parent']['milestone']} of {view['parent']['date']}")
+    else:
+        view["calculation"] = (f"the release {view['trigger']['release_id']} of {view['trigger']['date']}")
+    return view
+
+
+def derived_rows(rows):
+    """One row per derived milestone, newest release first.
+
+    Takes the rows the page already built rather than re-deriving them: the
+    derived disclosure is a property of a cell, and a second pass over the
+    record could disagree with the first about what a release carries.
+    """
+    views = []
+    for row in rows:
+        for milestone in MILESTONES:
+            cell = row["cells"][milestone["key"]]
+            if cell["derived"]:
+                views.append({**cell["derived"], "release_id": row["id"], "release": row["name"],
+                              "value": cell["value"], "human": cell["human"]})
+    return views
+
+
+def derived_count(rows_by_id):
+    """How many products in a catalog publish at least one derived date.
+
+    Takes the built rows (one list per product) so the count is read off the
+    same disclosure the pages print, not recomputed from raw records.
+    """
+    return sum(1 for rows in rows_by_id.values() if derived_rows(rows))
 
 
 def merge_links(values):

@@ -1,0 +1,81 @@
+---
+layout: Conceptual
+title: Ending Support in 2014 - Microsoft Lifecycle | Microsoft Learn
+canonicalUrl: https://learn.microsoft.com/en-us/lifecycle/end-of-support/end-of-support-2014
+feedback_system: Standard
+uhfHeaderId: MSDocsHeader-Lifecycle
+ms.service: lifecycle
+author: GitHub-Name
+ms.author: mslpol
+ms.topic: lifecycle
+toc_rel: /lifecycle/toc.json
+description: Find out which products will retire, reach end of support or move from mainstream support to extended support in 2014.
+ms.date: 2024-01-24T00:00:00.0000000Z
+locale: en-us
+document_id: 0e59b5de-bd0e-fa0d-888a-80691c9f9ddf
+document_version_independent_id: 77e76e59-0689-9891-58c9-95254e7ffc0a
+updated_at: 2024-01-24T19:43:00.0000000Z
+original_content_git_url: https://github.com/MicrosoftDocs/lifecycle-data-pr/blob/live/lifecycle-data/end-of-support/end-of-support-2014.md
+gitcommit: https://github.com/MicrosoftDocs/lifecycle-data-pr/blob/07a5a0073b115049abbdee784369991ebd787a19/lifecycle-data/end-of-support/end-of-support-2014.md
+git_commit_id: 07a5a0073b115049abbdee784369991ebd787a19
+site_name: Docs
+depot_name: MSDN.lifecycle-data
+page_type: conceptual
+feedback_product_url: ''
+feedback_help_link_type: ''
+feedback_help_link_url: ''
+word_count: 778
+asset_id: end-of-support/end-of-support-2014
+moniker_range_name: 
+monikers: []
+item_type: Content
+source_path: lifecycle-data/end-of-support/end-of-support-2014.md
+cmProducts:
+- https://authoring-docs-microsoft.poolparty.biz/devrel/aa9d0281-4c35-44bb-8c75-a0920bde2014
+- https://authoring-docs-microsoft.poolparty.biz/devrel/bcbcbad5-4208-4783-8035-8481272c98b8
+spProducts:
+- https://authoring-docs-microsoft.poolparty.biz/devrel/c7449412-70b0-48ea-831f-3b132eafb97e
+- https://authoring-docs-microsoft.poolparty.biz/devrel/43b2e5aa-8a6d-4de2-a252-692232e5edc8
+2PlusCloud:
+- Power
+- Azure
+- M365
+__autotagging_hash:
+- AEAD0B50F2EFBB5C0E918F5AEBBE73C448FB9CC75868AB72F309F5B24191D7C5
+platformId: 5ca10dd7-3934-a687-caec-5b859ea82ac2
+---
+
+# Ending Support in 2014 - Microsoft Lifecycle | Microsoft Learn
+
+![](/en-us/lifecycle/media/search.png) Please go [here](/en-us/lifecycle/products/) to search for your product's lifecycle.
+
+The following list represents products retiring or reaching the end of support in 2014. Upon retirement or end of support, there will be no new security updates, non-security updates, free or paid assisted support options or online technical content updates. Go [here](/en-us/lifecycle/overview/product-end-of-support-overview) to learn about Fixed and Modern Lifecycle policies and service packs.
+
+If you have any questions regarding support for a product, please contact your Microsoft Account Representative. If you need technical support, visit the [Microsoft Support](https://support.microsoft.com/contactus/?ws=support) website.
+
+## Products reaching End of Support
+
+The following products and releases, governed by the [Fixed Policy](/en-us/lifecycle/policies/fixed), will end support in 2014.
+
+| Product | End of Support |
+| --- | --- |
+| [Dynamics C5 2012](/en-us/lifecycle/products/dynamics-c5-2012?branch=live)[Dynamics Mobile Development Tools](/en-us/lifecycle/products/dynamics-mobile-development-tools?branch=live)[Dynamics SL 2011](/en-us/lifecycle/products/dynamics-sl-2011?branch=live)[HPC Pack 2008 R2, Service Pack 2](/en-us/lifecycle/products/hpc-pack-2008-r2?branch=live)[Microsoft Helmsman 4.0](/en-us/lifecycle/products/microsoft-helmsman-40?branch=live)[Microsoft Office 2003 Proofing Tools](/en-us/lifecycle/products/microsoft-office-2003-proofing-tools?branch=live)[Microsoft Office Live Communications Server 2003](/en-us/lifecycle/products/microsoft-office-live-communications-server-2003?branch=live)[Microsoft SQL Server 2012](/en-us/lifecycle/products/microsoft-sql-server-2012?branch=live)[Microsoft System Center 2012 App Controller](/en-us/lifecycle/products/microsoft-system-center-2012-app-controller?branch=live)[Microsoft System Center 2012 Configuration Manager](/en-us/lifecycle/products/microsoft-system-center-2012-configuration-manager?branch=live)[Microsoft System Center 2012 Data Protection Manager](/en-us/lifecycle/products/microsoft-system-center-2012-data-protection-manager?branch=live)[Microsoft System Center 2012 Endpoint Protection](/en-us/lifecycle/products/microsoft-system-center-2012-endpoint-protection?branch=live)[Microsoft System Center 2012 Operations Manager](/en-us/lifecycle/products/microsoft-system-center-2012-operations-manager?branch=live)[Microsoft System Center 2012 Orchestrator](/en-us/lifecycle/products/microsoft-system-center-2012-orchestrator?branch=live)[Microsoft System Center 2012 Service Manager](/en-us/lifecycle/products/microsoft-system-center-2012-service-manager?branch=live)[Microsoft System Center 2012 Virtual Machine Manager](/en-us/lifecycle/products/microsoft-system-center-2012-virtual-machine-manager?branch=live)[Microsoft Windows SharePoint Services 2.0](/en-us/lifecycle/products/microsoft-windows-sharepoint-services-20?branch=live)[Visual Studio Tools for the Microsoft Office System version 2003](/en-us/lifecycle/products/visual-studio-tools-for-the-microsoft-office-system-version-2003?branch=live) | January 14, 2014 |
+| [Exchange Server 2003](/en-us/lifecycle/products/exchange-server-2003?branch=live)[Exchange Server 2010, Service Pack 2](/en-us/lifecycle/products/exchange-server-2010?branch=live)[Microsoft Advanced Group Policy Management 4.0](/en-us/lifecycle/products/microsoft-advanced-group-policy-management-40?branch=live)[Microsoft Content Management Server 2002](/en-us/lifecycle/products/microsoft-content-management-server-2002?branch=live)[Microsoft Forefront Identity Manager 2010 R2](/en-us/lifecycle/products/microsoft-forefront-identity-manager-2010-r2?branch=live)[Microsoft Forefront Server Security Management Console](/en-us/lifecycle/products/microsoft-forefront-server-security-management-console?branch=live)[Microsoft Forefront Unified Access Gateway 2010, Service Pack 2](/en-us/lifecycle/products/microsoft-forefront-unified-access-gateway-2010?branch=live)[Microsoft Office 2003](/en-us/lifecycle/products/microsoft-office-2003?branch=live)[Microsoft Office Access 2003](/en-us/lifecycle/products/microsoft-office-access-2003?branch=live)[Microsoft Office Excel 2003](/en-us/lifecycle/products/microsoft-office-excel-2003?branch=live)[Microsoft Office for Mac 2011, Service Pack 2](/en-us/lifecycle/products/microsoft-office-for-mac-2011?branch=live)[Microsoft Office FrontPage 2003](/en-us/lifecycle/products/microsoft-office-frontpage-2003?branch=live)[Microsoft Office InfoPath 2003](/en-us/lifecycle/products/microsoft-office-infopath-2003?branch=live)[Microsoft Office OneNote 2003](/en-us/lifecycle/products/microsoft-office-onenote-2003?branch=live)[Microsoft Office Outlook 2003](/en-us/lifecycle/products/microsoft-office-outlook-2003?branch=live)[Microsoft Office PowerPoint 2003](/en-us/lifecycle/products/microsoft-office-powerpoint-2003?branch=live)[Microsoft Office Project 2003](/en-us/lifecycle/products/microsoft-office-project-2003?branch=live)[Microsoft Office Project Server 2003](/en-us/lifecycle/products/microsoft-office-project-server-2003?branch=live)[Microsoft Office Publisher 2003](/en-us/lifecycle/products/microsoft-office-publisher-2003?branch=live)[Microsoft Office SharePoint Portal Server 2003](/en-us/lifecycle/products/microsoft-office-sharepoint-portal-server-2003?branch=live)[Microsoft Office Word 2003](/en-us/lifecycle/products/microsoft-office-word-2003?branch=live)[Microsoft Office XP Web Components in Office 2003](/en-us/lifecycle/products/microsoft-office-xp-web-components-in-office-2003?branch=live)[Microsoft Windows Services for UNIX 3.5](/en-us/lifecycle/products/microsoft-windows-services-for-unix-35?branch=live)[Microsoft Windows XP Media Center Edition 2002](/en-us/lifecycle/products/microsoft-windows-xp-media-center-edition-2002?branch=live)[Microsoft Windows XP Media Center Edition 2004](/en-us/lifecycle/products/microsoft-windows-xp-media-center-edition-2004?branch=live)[User Experience Virtualization (UE-V) 1.0](/en-us/lifecycle/products/user-experience-virtualization-uev-10?branch=live)[Virtual PC 2004](/en-us/lifecycle/products/virtual-pc-2004?branch=live)[Visio 2003](/en-us/lifecycle/products/visio-2003?branch=live)[Windows Fundamentals for Legacy PCs](/en-us/lifecycle/products/windows-fundamentals-for-legacy-pcs?branch=live)[Windows XP](/en-us/lifecycle/products/windows-xp?branch=live)[Windows XP Media Center Edition 2005](/en-us/lifecycle/products/windows-xp-media-center-edition-2005?branch=live)[Windows XP Tablet PC Edition](/en-us/lifecycle/products/windows-xp-tablet-pc-edition?branch=live) | April 8, 2014 |
+| [Microsoft XML Core Services 4.0](/en-us/lifecycle/products/microsoft-xml-core-services-40?branch=live) | April 12, 2014 |
+| [Dynamics C5 2010, Service Pack 1](/en-us/lifecycle/products/dynamics-c5-2010?branch=live)[Dynamics GP 2010, Service Pack 2](/en-us/lifecycle/products/dynamics-gp-2010?branch=live)[HPC Pack 2008 R2, Service Pack 3](/en-us/lifecycle/products/hpc-pack-2008-r2?branch=live)[Microsoft Application Virtualization 5.0](/en-us/lifecycle/products/microsoft-application-virtualization-50?branch=live)[Microsoft Application Virtualization Hosting 5.0 for Windows Desktops](/en-us/lifecycle/products/microsoft-application-virtualization-hosting-50-for-windows-desktops?branch=live)[Microsoft BizTalk Accelerator for HL7 1.0](/en-us/lifecycle/products/microsoft-biztalk-accelerator-for-hl7-10?branch=live)[Microsoft BizTalk Server 2004](/en-us/lifecycle/products/microsoft-biztalk-server-2004?branch=live)[Microsoft Business Solutions for Analytics--FRx 6.7 Desktop](/en-us/lifecycle/products/microsoft-business-solutions-for-analyticsfrx-67-desktop?branch=live)[Microsoft Diagnostics and Recovery Toolset 8.0](/en-us/lifecycle/products/microsoft-diagnostics-and-recovery-toolset-80?branch=live)[Microsoft Speech Server 2004](/en-us/lifecycle/products/microsoft-speech-server-2004?branch=live)[Microsoft System Center Essentials 2007](/en-us/lifecycle/products/microsoft-system-center-essentials-2007?branch=live)[Windows Mobile 2003](/en-us/lifecycle/products/windows-mobile-2003?branch=live)[Windows Phone 8](/en-us/lifecycle/products/windows-phone-8?branch=live) | July 8, 2014 |
+| [Groove Server 2010, Service Pack 1](/en-us/lifecycle/products/groove-server-2010?branch=live) | July 13, 2014 |
+| [FAST Search Server 2010 (for SharePoint, for SharePoint Internet Sites), Service Pack 1](/en-us/lifecycle/products/fast-search-server-2010-for-sharepoint-for-sharepoint-internet-sites?branch=live) | July 23, 2014 |
+| [Microsoft BizTalk Accelerator for SWIFT 2.0](/en-us/lifecycle/products/microsoft-biztalk-accelerator-for-swift-20?branch=live)[Microsoft Office 2010, Service Pack 1](/en-us/lifecycle/products/microsoft-office-2010?branch=live)[Microsoft PlayReady Server Software Development Kit](/en-us/lifecycle/products/microsoft-playready-server-software-development-kit-?branch=live)[Microsoft SharePoint Server 2010, Service Pack 1](/en-us/lifecycle/products/microsoft-sharepoint-server-2010?branch=live)[Project 2010, Service Pack 1](/en-us/lifecycle/products/project-2010?branch=live)[Project Server 2010, Service Pack 1](/en-us/lifecycle/products/project-server-2010?branch=live)[SharePoint Foundation 2010, Service Pack 1](/en-us/lifecycle/products/sharepoint-foundation-2010?branch=live)[Visio 2010, Service Pack 1](/en-us/lifecycle/products/visio-2010?branch=live)[Windows CE 5.0](/en-us/lifecycle/products/windows-ce-50?branch=live)[Windows Phone 7.8](/en-us/lifecycle/products/windows-phone-78?branch=live) | October 14, 2014 |
+| [BizTalk Adapter for MQSeries 2005](/en-us/lifecycle/products/biztalk-adapter-for-mqseries-2005?branch=live) | December 31, 2014 |
+| [PixelSense Applications Suite 1.0](/en-us/lifecycle/products/pixelsense-applications-suite-10?branch=live) | January 8, 2019 |
+| [Dynamics POS 2009](/en-us/lifecycle/products/dynamics-pos-2009?branch=live) | July 9, 2019 |
+
+## Products moving to Extended Support
+
+The following products will be moving from Mainstream to Extended Support in 2014. Extended Support includes security updates at no cost, and paid non-security updates and support. Additionally, Microsoft will not accept requests for design changes or new features during the Extended Support phase.
+
+| Product | End of Mainstream Support |
+| --- | --- |
+| [Hyper-V Server 2008](/en-us/lifecycle/products/hyperv-server-2008?branch=live)[Hyper-V Server 2008 R2](/en-us/lifecycle/products/hyperv-server-2008-r2?branch=live)[Microsoft Application Virtualization 4.5](/en-us/lifecycle/products/microsoft-application-virtualization-45?branch=live)[Microsoft Application Virtualization Hosting 4.5 for Windows Desktops](/en-us/lifecycle/products/microsoft-application-virtualization-hosting-45-for-windows-desktops?branch=live)[Microsoft Customer Care Framework 2009](/en-us/lifecycle/products/microsoft-customer-care-framework-2009?branch=live)[Microsoft Diagnostics and Recovery Toolset 6.5](/en-us/lifecycle/products/microsoft-diagnostics-and-recovery-toolset-65?branch=live)[Microsoft Sync Framework 1.0](/en-us/lifecycle/products/microsoft-sync-framework-10?branch=live)[PixelSense Applications Suite 1.0](/en-us/lifecycle/products/pixelsense-applications-suite-10?branch=live)[Windows Embedded 2009](/en-us/lifecycle/products/windows-embedded-2009?branch=live) | January 14, 2014 |
+| [Microsoft .NET Micro Framework Porting Kit 3.0](/en-us/lifecycle/products/microsoft-net-micro-framework-porting-kit-30?branch=live)[Microsoft Antigen](/en-us/lifecycle/products/microsoft-antigen?branch=live)[Microsoft System Center Virtual Machine Manager 2008](/en-us/lifecycle/products/microsoft-system-center-virtual-machine-manager-2008?branch=live)[Microsoft System Center Virtual Machine Manager 2008 R2](/en-us/lifecycle/products/microsoft-system-center-virtual-machine-manager-2008-r2?branch=live)[Windows Embedded POSReady 2009](/en-us/lifecycle/products/windows-embedded-posready-2009?branch=live) | April 8, 2014 |
+| [BizTalk Server 2009](/en-us/lifecycle/products/biztalk-server-2009?branch=live)[Dynamics POS 2009](/en-us/lifecycle/products/dynamics-pos-2009?branch=live)[Microsoft BizTalk Adapters for Host Systems 2.0](/en-us/lifecycle/products/microsoft-biztalk-adapters-for-host-systems-20?branch=live)[Microsoft Commerce Server 2009](/en-us/lifecycle/products/microsoft-commerce-server-2009?branch=live)[Microsoft Commerce Server 2009 R2](/en-us/lifecycle/products/microsoft-commerce-server-2009-r2?branch=live)[Microsoft Forecaster 7.0](/en-us/lifecycle/products/microsoft-forecaster-70?branch=live)[Microsoft Forefront Endpoint Protection 2010](/en-us/lifecycle/products/microsoft-forefront-endpoint-protection-2010?branch=live)[Microsoft Host Integration Server 2009](/en-us/lifecycle/products/microsoft-host-integration-server-2009?branch=live)[Microsoft SQL Server 2008](/en-us/lifecycle/products/microsoft-sql-server-2008?branch=live)[Microsoft SQL Server 2008 R2](/en-us/lifecycle/products/microsoft-sql-server-2008-r2?branch=live)[Microsoft SQL Server 2008 R2 Parallel Data Warehouse](/en-us/lifecycle/products/microsoft-sql-server-2008-r2-parallel-data-warehouse?branch=live)[Microsoft System Center Configuration Manager 2007](/en-us/lifecycle/products/microsoft-system-center-configuration-manager-2007?branch=live)[Microsoft System Center Configuration Manager 2007 R2](/en-us/lifecycle/products/microsoft-system-center-configuration-manager-2007-r2?branch=live)[Microsoft System Center Configuration Manager 2007 R3](/en-us/lifecycle/products/microsoft-system-center-configuration-manager-2007-r3?branch=live)[Microsoft System Center Essentials 2007](/en-us/lifecycle/products/microsoft-system-center-essentials-2007?branch=live)[System Center Operations Manager 2007](/en-us/lifecycle/products/system-center-operations-manager-2007?branch=live)[System Center Operations Manager 2007 R2](/en-us/lifecycle/products/system-center-operations-manager-2007-r2?branch=live) | July 8, 2014 |
