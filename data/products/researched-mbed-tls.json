@@ -9,13 +9,14 @@
   "links": {
     "html": "https://www.trustedfirmware.org/projects/mbed-tls/",
     "repository": "https://github.com/Mbed-TLS/mbedtls",
-    "releasePolicy": "https://github.com/Mbed-TLS/mbedtls/blob/development/BRANCHES.md",
-    "releaseNotes": "https://github.com/Mbed-TLS/mbedtls/releases"
+    "releasePolicy": "https://github.com/Mbed-TLS/mbedtls/blob/v4.2.0/BRANCHES.md",
+    "releaseNotes": "https://github.com/Mbed-TLS/mbedtls/releases",
+    "changelog": "https://github.com/Mbed-TLS/mbedtls/blob/development/ChangeLog"
   },
   "releases": [
     {
       "id": "4.2",
-      "name": "Mbed TLS 4.2 (4.2.x)",
+      "name": "Mbed TLS 4.2",
       "milestones": {
         "ga": "2026-07-07",
         "eos": null,
@@ -23,22 +24,27 @@
         "eol": null
       },
       "upstream": {
-        "name": "Mbed TLS 4.2 (4.2.x)",
+        "name": "Mbed TLS 4.2",
         "Contribution": {
-          "text": "Mbed TLS implements TLS, DTLS protocols and X.509 certificate manipulation. The [`development`](https://github.com/Mbed-TLS/mbedtls/tree/development) branch: this is where the next minor version of Mbed TLS 4.x is prepared. It contains new features, bug fixes, and security fixes. One or more long-time support (LTS) branches: these only get bug fixes and security fixes. Currently, the supported LTS branches are: - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6). - [`mbedtls-4.1`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-4.1). We plan to make regular LTS releases on an 18-month cycle, each with a support lifetime of three years.On this basis, Mbed TLS 3.6 LTS (released in March 2024) will be supported until March 2027. Due to the size and scope of the 4.0 release, the first 4.x LTS, version 4.1, was released two years after 3.6, in March 2026, and will be supported until March 2029. = Mbed TLS 4.2.0 branch released 2026-07-07 Mbed TLS 4.1 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2029. = Mbed TLS 4.1.0 branch released 2026-03-31 = Mbed TLS 4.0.0 branch released 2025-10-15 Mbed TLS 3.6 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2027. = Mbed TLS 3.6.0 branch released 2024-03-28 = Mbed TLS 3.0.0 branch released 2021-07-07 = mbed TLS 2.28.0 branch released 2021-12-17 Mbed TLS 2.28 is a long-time support branch. It will be supported with bug-fixes and security fixes until end of 2024. Mbed TLS 2.28.10 is the last release of the 2.28 LTS and won't receive bug fixes or security fixes anymore. Users are advised to upgrade to a maintained version. = Mbed TLS 2.28.10 branch released 2025-03-24 = mbed TLS 2.0.0 released 2015-07-13 = PolarSSL 1.3.0 released on 2013-10-01",
+          "text": "Mbed TLS implements TLS, DTLS protocols and X.509 certificate manipulation. The [`main`](https://github.com/Mbed-TLS/mbedtls/tree/main) branch: this always contains the latest release, including all publicly available security fixes. The [`development`](https://github.com/Mbed-TLS/mbedtls/tree/development) branch: this is where the next minor version of Mbed TLS 4.x is prepared. It contains new features, bug fixes, and security fixes. One or more long-time support (LTS) branches: these only get bug fixes and security fixes. Currently, the supported LTS branches are: - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6). - [`mbedtls-4.1`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-4.1). We plan to make regular LTS releases on an 18-month cycle, each with a support lifetime of three years.On this basis, Mbed TLS 3.6 LTS (released in March 2024) will be supported until March 2027. Due to the size and scope of the 4.0 release, the first 4.x LTS, version 4.1, was released two years after 3.6, in March 2026, and will be supported until March 2029. - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6) maintained until March 2027 - [`mbedtls-4.1`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-4.1) maintained until March 2029 Mbed TLS 3.6 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2027. Mbed TLS 4.1 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2029. We retain a number of historical branches, whose names are prefixed by `archive/`, such as [`archive/mbedtls-2.7`](https://github.com/Mbed-TLS/mbedtls/tree/archive/mbedtls-2.7). These branches will not receive any changes or updates. One or more long-time support (LTS) branches: these only get bug fixes and security fixes. Currently, the supported LTS branches are: - [`mbedtls-2.28`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-2.28). - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6). We retain a number of historical branches, whose names are prefixed by `archive/`, such as [`archive/mbedtls-2.7`](https://github.com/Mbed-TLS/mbedtls/tree/archive/mbedtls-2.7). These branches will not receive any changes or updates. The following branches are currently maintained: - [main](https://github.com/Mbed-TLS/mbedtls/tree/main) - [`development`](https://github.com/Mbed-TLS/mbedtls/) - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6) maintained until March 2027, Due to the size and scope of the 4.0 release, the release date of the first 4.x LTS is yet to be determined. The next LTS release will be a 4.x release, which is planned for September 2025. - [`mbedtls-2.28`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-2.28) maintained until the end of 2024 = Mbed TLS 4.2.0 branch released 2026-07-07 = Mbed TLS 4.1.0 branch released 2026-03-31 = Mbed TLS 4.0.0 branch released 2025-10-15 = Mbed TLS 3.6.0 branch released 2024-03-28 = mbed TLS 2.28.0 branch released 2021-12-17 = Mbed TLS 2.28.10 branch released 2025-03-24 Note: [**`mbedtls-2.28.10`**](https://github.com/Mbed-TLS/mbedtls/releases/tag/v2.28.10) is the last release of the 2.28 LTS and won't receive bug fixes or security fixes anymore. Users are advised to upgrade to a maintained version. = mbed TLS 2.16.0 branch released 2018-12-21 = mbed TLS 2.16.12 branch released 2021-12-17 = mbed TLS 2.7.0 branch released 2018-02-03 = mbed TLS 2.7.19 branch released 2021-03-12 = PolarSSL 1.3.0 released on 2013-10-01 = mbed TLS 1.3.22 branch released 2018-02-03",
           "value": null,
           "datetime": null,
           "role": null,
           "links": [
             "https://www.trustedfirmware.org/projects/mbed-tls/",
-            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/development/BRANCHES.md",
-            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/development/ChangeLog",
-            "https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-4.1.0",
-            "https://github.com/Mbed-TLS/mbedtls/releases/tag/v3.6.0",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.2.0/BRANCHES.md",
+            "https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-3.6.7",
+            "https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-4.1.1",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.28/BRANCHES.md",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.0.0/BRANCHES.md",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v2.28.9/BRANCHES.md",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.2.0/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.1.0/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.0.0/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v3.6.0/ChangeLog",
             "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.28/ChangeLog",
-            "https://github.com/Mbed-TLS/mbedtls/releases/tag/v2.28.0",
-            "https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-2.28.10",
             "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.16/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.7/ChangeLog",
             "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-1.3/ChangeLog"
           ]
         }
@@ -46,64 +52,43 @@
     },
     {
       "id": "4.1",
-      "name": "Mbed TLS 4.1 LTS (4.1.x)",
+      "name": "Mbed TLS 4.1 LTS",
       "milestones": {
         "ga": "2026-03-31",
         "eos": null,
-        "eossec": "2029-03-31",
-        "eol": "2029-03-31"
+        "eossec": null,
+        "eol": "2029-03"
       },
       "upstream": {
-        "name": "Mbed TLS 4.1 LTS (4.1.x)",
+        "name": "Mbed TLS 4.1 LTS",
         "Contribution": {
-          "text": "Mbed TLS implements TLS, DTLS protocols and X.509 certificate manipulation. The [`development`](https://github.com/Mbed-TLS/mbedtls/tree/development) branch: this is where the next minor version of Mbed TLS 4.x is prepared. It contains new features, bug fixes, and security fixes. One or more long-time support (LTS) branches: these only get bug fixes and security fixes. Currently, the supported LTS branches are: - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6). - [`mbedtls-4.1`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-4.1). We plan to make regular LTS releases on an 18-month cycle, each with a support lifetime of three years.On this basis, Mbed TLS 3.6 LTS (released in March 2024) will be supported until March 2027. Due to the size and scope of the 4.0 release, the first 4.x LTS, version 4.1, was released two years after 3.6, in March 2026, and will be supported until March 2029. = Mbed TLS 4.2.0 branch released 2026-07-07 Mbed TLS 4.1 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2029. = Mbed TLS 4.1.0 branch released 2026-03-31 = Mbed TLS 4.0.0 branch released 2025-10-15 Mbed TLS 3.6 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2027. = Mbed TLS 3.6.0 branch released 2024-03-28 = Mbed TLS 3.0.0 branch released 2021-07-07 = mbed TLS 2.28.0 branch released 2021-12-17 Mbed TLS 2.28 is a long-time support branch. It will be supported with bug-fixes and security fixes until end of 2024. Mbed TLS 2.28.10 is the last release of the 2.28 LTS and won't receive bug fixes or security fixes anymore. Users are advised to upgrade to a maintained version. = Mbed TLS 2.28.10 branch released 2025-03-24 = mbed TLS 2.0.0 released 2015-07-13 = PolarSSL 1.3.0 released on 2013-10-01",
+          "text": "Mbed TLS implements TLS, DTLS protocols and X.509 certificate manipulation. The [`main`](https://github.com/Mbed-TLS/mbedtls/tree/main) branch: this always contains the latest release, including all publicly available security fixes. The [`development`](https://github.com/Mbed-TLS/mbedtls/tree/development) branch: this is where the next minor version of Mbed TLS 4.x is prepared. It contains new features, bug fixes, and security fixes. One or more long-time support (LTS) branches: these only get bug fixes and security fixes. Currently, the supported LTS branches are: - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6). - [`mbedtls-4.1`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-4.1). We plan to make regular LTS releases on an 18-month cycle, each with a support lifetime of three years.On this basis, Mbed TLS 3.6 LTS (released in March 2024) will be supported until March 2027. Due to the size and scope of the 4.0 release, the first 4.x LTS, version 4.1, was released two years after 3.6, in March 2026, and will be supported until March 2029. - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6) maintained until March 2027 - [`mbedtls-4.1`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-4.1) maintained until March 2029 Mbed TLS 3.6 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2027. Mbed TLS 4.1 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2029. We retain a number of historical branches, whose names are prefixed by `archive/`, such as [`archive/mbedtls-2.7`](https://github.com/Mbed-TLS/mbedtls/tree/archive/mbedtls-2.7). These branches will not receive any changes or updates. One or more long-time support (LTS) branches: these only get bug fixes and security fixes. Currently, the supported LTS branches are: - [`mbedtls-2.28`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-2.28). - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6). We retain a number of historical branches, whose names are prefixed by `archive/`, such as [`archive/mbedtls-2.7`](https://github.com/Mbed-TLS/mbedtls/tree/archive/mbedtls-2.7). These branches will not receive any changes or updates. The following branches are currently maintained: - [main](https://github.com/Mbed-TLS/mbedtls/tree/main) - [`development`](https://github.com/Mbed-TLS/mbedtls/) - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6) maintained until March 2027, Due to the size and scope of the 4.0 release, the release date of the first 4.x LTS is yet to be determined. The next LTS release will be a 4.x release, which is planned for September 2025. - [`mbedtls-2.28`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-2.28) maintained until the end of 2024 = Mbed TLS 4.2.0 branch released 2026-07-07 = Mbed TLS 4.1.0 branch released 2026-03-31 = Mbed TLS 4.0.0 branch released 2025-10-15 = Mbed TLS 3.6.0 branch released 2024-03-28 = mbed TLS 2.28.0 branch released 2021-12-17 = Mbed TLS 2.28.10 branch released 2025-03-24 Note: [**`mbedtls-2.28.10`**](https://github.com/Mbed-TLS/mbedtls/releases/tag/v2.28.10) is the last release of the 2.28 LTS and won't receive bug fixes or security fixes anymore. Users are advised to upgrade to a maintained version. = mbed TLS 2.16.0 branch released 2018-12-21 = mbed TLS 2.16.12 branch released 2021-12-17 = mbed TLS 2.7.0 branch released 2018-02-03 = mbed TLS 2.7.19 branch released 2021-03-12 = PolarSSL 1.3.0 released on 2013-10-01 = mbed TLS 1.3.22 branch released 2018-02-03",
           "value": null,
           "datetime": null,
           "role": null,
           "links": [
             "https://www.trustedfirmware.org/projects/mbed-tls/",
-            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/development/BRANCHES.md",
-            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/development/ChangeLog",
-            "https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-4.1.0",
-            "https://github.com/Mbed-TLS/mbedtls/releases/tag/v3.6.0",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.2.0/BRANCHES.md",
+            "https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-3.6.7",
+            "https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-4.1.1",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.28/BRANCHES.md",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.0.0/BRANCHES.md",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v2.28.9/BRANCHES.md",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.2.0/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.1.0/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.0.0/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v3.6.0/ChangeLog",
             "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.28/ChangeLog",
-            "https://github.com/Mbed-TLS/mbedtls/releases/tag/v2.28.0",
-            "https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-2.28.10",
             "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.16/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.7/ChangeLog",
             "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-1.3/ChangeLog"
           ]
-        }
-      },
-      "milestone_provenance": {
-        "eossec": {
-          "kind": "derived",
-          "method": "release-plus-duration",
-          "source_url": "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/development/BRANCHES.md",
-          "quote": "We plan to make regular LTS releases on an 18-month cycle, each with a support lifetime of three years.On this basis, Mbed TLS 3.6 LTS (released in March 2024) will be supported until March 2027. Due to the size and scope of the 4.0 release, the first 4.x LTS, version 4.1, was released two years after 3.6, in March 2026, and will be supported until March 2029.",
-          "base_date": "2026-03-31",
-          "base_label": "Mbed TLS 4.1.0 release date",
-          "duration": {
-            "value": 3,
-            "unit": "year"
-          }
-        },
-        "eol": {
-          "kind": "derived",
-          "method": "release-plus-duration",
-          "source_url": "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/development/BRANCHES.md",
-          "quote": "We plan to make regular LTS releases on an 18-month cycle, each with a support lifetime of three years.On this basis, Mbed TLS 3.6 LTS (released in March 2024) will be supported until March 2027. Due to the size and scope of the 4.0 release, the first 4.x LTS, version 4.1, was released two years after 3.6, in March 2026, and will be supported until March 2029.",
-          "base_date": "2026-03-31",
-          "base_label": "Mbed TLS 4.1.0 release date",
-          "duration": {
-            "value": 3,
-            "unit": "year"
-          }
         }
       }
     },
     {
       "id": "4.0",
-      "name": "Mbed TLS 4.0 (4.0.x)",
+      "name": "Mbed TLS 4.0",
       "milestones": {
         "ga": "2025-10-15",
         "eos": null,
@@ -111,22 +96,27 @@
         "eol": null
       },
       "upstream": {
-        "name": "Mbed TLS 4.0 (4.0.x)",
+        "name": "Mbed TLS 4.0",
         "Contribution": {
-          "text": "Mbed TLS implements TLS, DTLS protocols and X.509 certificate manipulation. The [`development`](https://github.com/Mbed-TLS/mbedtls/tree/development) branch: this is where the next minor version of Mbed TLS 4.x is prepared. It contains new features, bug fixes, and security fixes. One or more long-time support (LTS) branches: these only get bug fixes and security fixes. Currently, the supported LTS branches are: - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6). - [`mbedtls-4.1`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-4.1). We plan to make regular LTS releases on an 18-month cycle, each with a support lifetime of three years.On this basis, Mbed TLS 3.6 LTS (released in March 2024) will be supported until March 2027. Due to the size and scope of the 4.0 release, the first 4.x LTS, version 4.1, was released two years after 3.6, in March 2026, and will be supported until March 2029. = Mbed TLS 4.2.0 branch released 2026-07-07 Mbed TLS 4.1 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2029. = Mbed TLS 4.1.0 branch released 2026-03-31 = Mbed TLS 4.0.0 branch released 2025-10-15 Mbed TLS 3.6 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2027. = Mbed TLS 3.6.0 branch released 2024-03-28 = Mbed TLS 3.0.0 branch released 2021-07-07 = mbed TLS 2.28.0 branch released 2021-12-17 Mbed TLS 2.28 is a long-time support branch. It will be supported with bug-fixes and security fixes until end of 2024. Mbed TLS 2.28.10 is the last release of the 2.28 LTS and won't receive bug fixes or security fixes anymore. Users are advised to upgrade to a maintained version. = Mbed TLS 2.28.10 branch released 2025-03-24 = mbed TLS 2.0.0 released 2015-07-13 = PolarSSL 1.3.0 released on 2013-10-01",
+          "text": "Mbed TLS implements TLS, DTLS protocols and X.509 certificate manipulation. The [`main`](https://github.com/Mbed-TLS/mbedtls/tree/main) branch: this always contains the latest release, including all publicly available security fixes. The [`development`](https://github.com/Mbed-TLS/mbedtls/tree/development) branch: this is where the next minor version of Mbed TLS 4.x is prepared. It contains new features, bug fixes, and security fixes. One or more long-time support (LTS) branches: these only get bug fixes and security fixes. Currently, the supported LTS branches are: - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6). - [`mbedtls-4.1`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-4.1). We plan to make regular LTS releases on an 18-month cycle, each with a support lifetime of three years.On this basis, Mbed TLS 3.6 LTS (released in March 2024) will be supported until March 2027. Due to the size and scope of the 4.0 release, the first 4.x LTS, version 4.1, was released two years after 3.6, in March 2026, and will be supported until March 2029. - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6) maintained until March 2027 - [`mbedtls-4.1`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-4.1) maintained until March 2029 Mbed TLS 3.6 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2027. Mbed TLS 4.1 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2029. We retain a number of historical branches, whose names are prefixed by `archive/`, such as [`archive/mbedtls-2.7`](https://github.com/Mbed-TLS/mbedtls/tree/archive/mbedtls-2.7). These branches will not receive any changes or updates. One or more long-time support (LTS) branches: these only get bug fixes and security fixes. Currently, the supported LTS branches are: - [`mbedtls-2.28`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-2.28). - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6). We retain a number of historical branches, whose names are prefixed by `archive/`, such as [`archive/mbedtls-2.7`](https://github.com/Mbed-TLS/mbedtls/tree/archive/mbedtls-2.7). These branches will not receive any changes or updates. The following branches are currently maintained: - [main](https://github.com/Mbed-TLS/mbedtls/tree/main) - [`development`](https://github.com/Mbed-TLS/mbedtls/) - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6) maintained until March 2027, Due to the size and scope of the 4.0 release, the release date of the first 4.x LTS is yet to be determined. The next LTS release will be a 4.x release, which is planned for September 2025. - [`mbedtls-2.28`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-2.28) maintained until the end of 2024 = Mbed TLS 4.2.0 branch released 2026-07-07 = Mbed TLS 4.1.0 branch released 2026-03-31 = Mbed TLS 4.0.0 branch released 2025-10-15 = Mbed TLS 3.6.0 branch released 2024-03-28 = mbed TLS 2.28.0 branch released 2021-12-17 = Mbed TLS 2.28.10 branch released 2025-03-24 Note: [**`mbedtls-2.28.10`**](https://github.com/Mbed-TLS/mbedtls/releases/tag/v2.28.10) is the last release of the 2.28 LTS and won't receive bug fixes or security fixes anymore. Users are advised to upgrade to a maintained version. = mbed TLS 2.16.0 branch released 2018-12-21 = mbed TLS 2.16.12 branch released 2021-12-17 = mbed TLS 2.7.0 branch released 2018-02-03 = mbed TLS 2.7.19 branch released 2021-03-12 = PolarSSL 1.3.0 released on 2013-10-01 = mbed TLS 1.3.22 branch released 2018-02-03",
           "value": null,
           "datetime": null,
           "role": null,
           "links": [
             "https://www.trustedfirmware.org/projects/mbed-tls/",
-            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/development/BRANCHES.md",
-            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/development/ChangeLog",
-            "https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-4.1.0",
-            "https://github.com/Mbed-TLS/mbedtls/releases/tag/v3.6.0",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.2.0/BRANCHES.md",
+            "https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-3.6.7",
+            "https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-4.1.1",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.28/BRANCHES.md",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.0.0/BRANCHES.md",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v2.28.9/BRANCHES.md",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.2.0/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.1.0/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.0.0/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v3.6.0/ChangeLog",
             "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.28/ChangeLog",
-            "https://github.com/Mbed-TLS/mbedtls/releases/tag/v2.28.0",
-            "https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-2.28.10",
             "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.16/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.7/ChangeLog",
             "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-1.3/ChangeLog"
           ]
         }
@@ -134,87 +124,35 @@
     },
     {
       "id": "3.6",
-      "name": "Mbed TLS 3.6 LTS (3.6.x)",
+      "name": "Mbed TLS 3.6 LTS",
       "milestones": {
         "ga": "2024-03-28",
         "eos": null,
-        "eossec": "2027-03-28",
-        "eol": "2027-03-28"
-      },
-      "upstream": {
-        "name": "Mbed TLS 3.6 LTS (3.6.x)",
-        "Contribution": {
-          "text": "Mbed TLS implements TLS, DTLS protocols and X.509 certificate manipulation. The [`development`](https://github.com/Mbed-TLS/mbedtls/tree/development) branch: this is where the next minor version of Mbed TLS 4.x is prepared. It contains new features, bug fixes, and security fixes. One or more long-time support (LTS) branches: these only get bug fixes and security fixes. Currently, the supported LTS branches are: - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6). - [`mbedtls-4.1`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-4.1). We plan to make regular LTS releases on an 18-month cycle, each with a support lifetime of three years.On this basis, Mbed TLS 3.6 LTS (released in March 2024) will be supported until March 2027. Due to the size and scope of the 4.0 release, the first 4.x LTS, version 4.1, was released two years after 3.6, in March 2026, and will be supported until March 2029. = Mbed TLS 4.2.0 branch released 2026-07-07 Mbed TLS 4.1 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2029. = Mbed TLS 4.1.0 branch released 2026-03-31 = Mbed TLS 4.0.0 branch released 2025-10-15 Mbed TLS 3.6 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2027. = Mbed TLS 3.6.0 branch released 2024-03-28 = Mbed TLS 3.0.0 branch released 2021-07-07 = mbed TLS 2.28.0 branch released 2021-12-17 Mbed TLS 2.28 is a long-time support branch. It will be supported with bug-fixes and security fixes until end of 2024. Mbed TLS 2.28.10 is the last release of the 2.28 LTS and won't receive bug fixes or security fixes anymore. Users are advised to upgrade to a maintained version. = Mbed TLS 2.28.10 branch released 2025-03-24 = mbed TLS 2.0.0 released 2015-07-13 = PolarSSL 1.3.0 released on 2013-10-01",
-          "value": null,
-          "datetime": null,
-          "role": null,
-          "links": [
-            "https://www.trustedfirmware.org/projects/mbed-tls/",
-            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/development/BRANCHES.md",
-            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/development/ChangeLog",
-            "https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-4.1.0",
-            "https://github.com/Mbed-TLS/mbedtls/releases/tag/v3.6.0",
-            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.28/ChangeLog",
-            "https://github.com/Mbed-TLS/mbedtls/releases/tag/v2.28.0",
-            "https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-2.28.10",
-            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.16/ChangeLog",
-            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-1.3/ChangeLog"
-          ]
-        }
-      },
-      "milestone_provenance": {
-        "eossec": {
-          "kind": "derived",
-          "method": "release-plus-duration",
-          "source_url": "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/development/BRANCHES.md",
-          "quote": "We plan to make regular LTS releases on an 18-month cycle, each with a support lifetime of three years.On this basis, Mbed TLS 3.6 LTS (released in March 2024) will be supported until March 2027. Due to the size and scope of the 4.0 release, the first 4.x LTS, version 4.1, was released two years after 3.6, in March 2026, and will be supported until March 2029.",
-          "base_date": "2024-03-28",
-          "base_label": "Mbed TLS 3.6.0 release date",
-          "duration": {
-            "value": 3,
-            "unit": "year"
-          }
-        },
-        "eol": {
-          "kind": "derived",
-          "method": "release-plus-duration",
-          "source_url": "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/development/BRANCHES.md",
-          "quote": "We plan to make regular LTS releases on an 18-month cycle, each with a support lifetime of three years.On this basis, Mbed TLS 3.6 LTS (released in March 2024) will be supported until March 2027. Due to the size and scope of the 4.0 release, the first 4.x LTS, version 4.1, was released two years after 3.6, in March 2026, and will be supported until March 2029.",
-          "base_date": "2024-03-28",
-          "base_label": "Mbed TLS 3.6.0 release date",
-          "duration": {
-            "value": 3,
-            "unit": "year"
-          }
-        }
-      }
-    },
-    {
-      "id": "3.0-3.5",
-      "name": "Mbed TLS 3.0 through 3.5 (3.0.x-3.5.x)",
-      "milestones": {
-        "ga": "2021-07-07",
-        "eos": null,
         "eossec": null,
-        "eol": null
+        "eol": "2027-03"
       },
       "upstream": {
-        "name": "Mbed TLS 3.0 through 3.5 (3.0.x-3.5.x)",
+        "name": "Mbed TLS 3.6 LTS",
         "Contribution": {
-          "text": "Mbed TLS implements TLS, DTLS protocols and X.509 certificate manipulation. The [`development`](https://github.com/Mbed-TLS/mbedtls/tree/development) branch: this is where the next minor version of Mbed TLS 4.x is prepared. It contains new features, bug fixes, and security fixes. One or more long-time support (LTS) branches: these only get bug fixes and security fixes. Currently, the supported LTS branches are: - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6). - [`mbedtls-4.1`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-4.1). We plan to make regular LTS releases on an 18-month cycle, each with a support lifetime of three years.On this basis, Mbed TLS 3.6 LTS (released in March 2024) will be supported until March 2027. Due to the size and scope of the 4.0 release, the first 4.x LTS, version 4.1, was released two years after 3.6, in March 2026, and will be supported until March 2029. = Mbed TLS 4.2.0 branch released 2026-07-07 Mbed TLS 4.1 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2029. = Mbed TLS 4.1.0 branch released 2026-03-31 = Mbed TLS 4.0.0 branch released 2025-10-15 Mbed TLS 3.6 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2027. = Mbed TLS 3.6.0 branch released 2024-03-28 = Mbed TLS 3.0.0 branch released 2021-07-07 = mbed TLS 2.28.0 branch released 2021-12-17 Mbed TLS 2.28 is a long-time support branch. It will be supported with bug-fixes and security fixes until end of 2024. Mbed TLS 2.28.10 is the last release of the 2.28 LTS and won't receive bug fixes or security fixes anymore. Users are advised to upgrade to a maintained version. = Mbed TLS 2.28.10 branch released 2025-03-24 = mbed TLS 2.0.0 released 2015-07-13 = PolarSSL 1.3.0 released on 2013-10-01",
+          "text": "Mbed TLS implements TLS, DTLS protocols and X.509 certificate manipulation. The [`main`](https://github.com/Mbed-TLS/mbedtls/tree/main) branch: this always contains the latest release, including all publicly available security fixes. The [`development`](https://github.com/Mbed-TLS/mbedtls/tree/development) branch: this is where the next minor version of Mbed TLS 4.x is prepared. It contains new features, bug fixes, and security fixes. One or more long-time support (LTS) branches: these only get bug fixes and security fixes. Currently, the supported LTS branches are: - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6). - [`mbedtls-4.1`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-4.1). We plan to make regular LTS releases on an 18-month cycle, each with a support lifetime of three years.On this basis, Mbed TLS 3.6 LTS (released in March 2024) will be supported until March 2027. Due to the size and scope of the 4.0 release, the first 4.x LTS, version 4.1, was released two years after 3.6, in March 2026, and will be supported until March 2029. - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6) maintained until March 2027 - [`mbedtls-4.1`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-4.1) maintained until March 2029 Mbed TLS 3.6 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2027. Mbed TLS 4.1 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2029. We retain a number of historical branches, whose names are prefixed by `archive/`, such as [`archive/mbedtls-2.7`](https://github.com/Mbed-TLS/mbedtls/tree/archive/mbedtls-2.7). These branches will not receive any changes or updates. One or more long-time support (LTS) branches: these only get bug fixes and security fixes. Currently, the supported LTS branches are: - [`mbedtls-2.28`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-2.28). - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6). We retain a number of historical branches, whose names are prefixed by `archive/`, such as [`archive/mbedtls-2.7`](https://github.com/Mbed-TLS/mbedtls/tree/archive/mbedtls-2.7). These branches will not receive any changes or updates. The following branches are currently maintained: - [main](https://github.com/Mbed-TLS/mbedtls/tree/main) - [`development`](https://github.com/Mbed-TLS/mbedtls/) - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6) maintained until March 2027, Due to the size and scope of the 4.0 release, the release date of the first 4.x LTS is yet to be determined. The next LTS release will be a 4.x release, which is planned for September 2025. - [`mbedtls-2.28`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-2.28) maintained until the end of 2024 = Mbed TLS 4.2.0 branch released 2026-07-07 = Mbed TLS 4.1.0 branch released 2026-03-31 = Mbed TLS 4.0.0 branch released 2025-10-15 = Mbed TLS 3.6.0 branch released 2024-03-28 = mbed TLS 2.28.0 branch released 2021-12-17 = Mbed TLS 2.28.10 branch released 2025-03-24 Note: [**`mbedtls-2.28.10`**](https://github.com/Mbed-TLS/mbedtls/releases/tag/v2.28.10) is the last release of the 2.28 LTS and won't receive bug fixes or security fixes anymore. Users are advised to upgrade to a maintained version. = mbed TLS 2.16.0 branch released 2018-12-21 = mbed TLS 2.16.12 branch released 2021-12-17 = mbed TLS 2.7.0 branch released 2018-02-03 = mbed TLS 2.7.19 branch released 2021-03-12 = PolarSSL 1.3.0 released on 2013-10-01 = mbed TLS 1.3.22 branch released 2018-02-03",
           "value": null,
           "datetime": null,
           "role": null,
           "links": [
             "https://www.trustedfirmware.org/projects/mbed-tls/",
-            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/development/BRANCHES.md",
-            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/development/ChangeLog",
-            "https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-4.1.0",
-            "https://github.com/Mbed-TLS/mbedtls/releases/tag/v3.6.0",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.2.0/BRANCHES.md",
+            "https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-3.6.7",
+            "https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-4.1.1",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.28/BRANCHES.md",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.0.0/BRANCHES.md",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v2.28.9/BRANCHES.md",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.2.0/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.1.0/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.0.0/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v3.6.0/ChangeLog",
             "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.28/ChangeLog",
-            "https://github.com/Mbed-TLS/mbedtls/releases/tag/v2.28.0",
-            "https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-2.28.10",
             "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.16/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.7/ChangeLog",
             "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-1.3/ChangeLog"
           ]
         }
@@ -222,66 +160,58 @@
     },
     {
       "id": "2.28",
-      "name": "Mbed TLS 2.28 LTS (2.28.x)",
+      "name": "Mbed TLS 2.28 LTS (archived)",
       "milestones": {
         "ga": "2021-12-17",
         "eos": null,
-        "eossec": "2025-03-24",
+        "eossec": null,
         "eol": "2025-03-24"
       },
       "upstream": {
-        "name": "Mbed TLS 2.28 LTS (2.28.x)",
+        "name": "Mbed TLS 2.28 LTS (archived)",
         "Contribution": {
-          "text": "Mbed TLS implements TLS, DTLS protocols and X.509 certificate manipulation. The [`development`](https://github.com/Mbed-TLS/mbedtls/tree/development) branch: this is where the next minor version of Mbed TLS 4.x is prepared. It contains new features, bug fixes, and security fixes. One or more long-time support (LTS) branches: these only get bug fixes and security fixes. Currently, the supported LTS branches are: - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6). - [`mbedtls-4.1`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-4.1). We plan to make regular LTS releases on an 18-month cycle, each with a support lifetime of three years.On this basis, Mbed TLS 3.6 LTS (released in March 2024) will be supported until March 2027. Due to the size and scope of the 4.0 release, the first 4.x LTS, version 4.1, was released two years after 3.6, in March 2026, and will be supported until March 2029. = Mbed TLS 4.2.0 branch released 2026-07-07 Mbed TLS 4.1 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2029. = Mbed TLS 4.1.0 branch released 2026-03-31 = Mbed TLS 4.0.0 branch released 2025-10-15 Mbed TLS 3.6 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2027. = Mbed TLS 3.6.0 branch released 2024-03-28 = Mbed TLS 3.0.0 branch released 2021-07-07 = mbed TLS 2.28.0 branch released 2021-12-17 Mbed TLS 2.28 is a long-time support branch. It will be supported with bug-fixes and security fixes until end of 2024. Mbed TLS 2.28.10 is the last release of the 2.28 LTS and won't receive bug fixes or security fixes anymore. Users are advised to upgrade to a maintained version. = Mbed TLS 2.28.10 branch released 2025-03-24 = mbed TLS 2.0.0 released 2015-07-13 = PolarSSL 1.3.0 released on 2013-10-01",
+          "text": "Mbed TLS implements TLS, DTLS protocols and X.509 certificate manipulation. The [`main`](https://github.com/Mbed-TLS/mbedtls/tree/main) branch: this always contains the latest release, including all publicly available security fixes. The [`development`](https://github.com/Mbed-TLS/mbedtls/tree/development) branch: this is where the next minor version of Mbed TLS 4.x is prepared. It contains new features, bug fixes, and security fixes. One or more long-time support (LTS) branches: these only get bug fixes and security fixes. Currently, the supported LTS branches are: - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6). - [`mbedtls-4.1`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-4.1). We plan to make regular LTS releases on an 18-month cycle, each with a support lifetime of three years.On this basis, Mbed TLS 3.6 LTS (released in March 2024) will be supported until March 2027. Due to the size and scope of the 4.0 release, the first 4.x LTS, version 4.1, was released two years after 3.6, in March 2026, and will be supported until March 2029. - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6) maintained until March 2027 - [`mbedtls-4.1`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-4.1) maintained until March 2029 Mbed TLS 3.6 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2027. Mbed TLS 4.1 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2029. We retain a number of historical branches, whose names are prefixed by `archive/`, such as [`archive/mbedtls-2.7`](https://github.com/Mbed-TLS/mbedtls/tree/archive/mbedtls-2.7). These branches will not receive any changes or updates. One or more long-time support (LTS) branches: these only get bug fixes and security fixes. Currently, the supported LTS branches are: - [`mbedtls-2.28`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-2.28). - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6). We retain a number of historical branches, whose names are prefixed by `archive/`, such as [`archive/mbedtls-2.7`](https://github.com/Mbed-TLS/mbedtls/tree/archive/mbedtls-2.7). These branches will not receive any changes or updates. The following branches are currently maintained: - [main](https://github.com/Mbed-TLS/mbedtls/tree/main) - [`development`](https://github.com/Mbed-TLS/mbedtls/) - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6) maintained until March 2027, Due to the size and scope of the 4.0 release, the release date of the first 4.x LTS is yet to be determined. The next LTS release will be a 4.x release, which is planned for September 2025. - [`mbedtls-2.28`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-2.28) maintained until the end of 2024 = Mbed TLS 4.2.0 branch released 2026-07-07 = Mbed TLS 4.1.0 branch released 2026-03-31 = Mbed TLS 4.0.0 branch released 2025-10-15 = Mbed TLS 3.6.0 branch released 2024-03-28 = mbed TLS 2.28.0 branch released 2021-12-17 = Mbed TLS 2.28.10 branch released 2025-03-24 Note: [**`mbedtls-2.28.10`**](https://github.com/Mbed-TLS/mbedtls/releases/tag/v2.28.10) is the last release of the 2.28 LTS and won't receive bug fixes or security fixes anymore. Users are advised to upgrade to a maintained version. = mbed TLS 2.16.0 branch released 2018-12-21 = mbed TLS 2.16.12 branch released 2021-12-17 = mbed TLS 2.7.0 branch released 2018-02-03 = mbed TLS 2.7.19 branch released 2021-03-12 = PolarSSL 1.3.0 released on 2013-10-01 = mbed TLS 1.3.22 branch released 2018-02-03",
           "value": null,
           "datetime": null,
           "role": null,
           "links": [
             "https://www.trustedfirmware.org/projects/mbed-tls/",
-            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/development/BRANCHES.md",
-            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/development/ChangeLog",
-            "https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-4.1.0",
-            "https://github.com/Mbed-TLS/mbedtls/releases/tag/v3.6.0",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.2.0/BRANCHES.md",
+            "https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-3.6.7",
+            "https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-4.1.1",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.28/BRANCHES.md",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.0.0/BRANCHES.md",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v2.28.9/BRANCHES.md",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.2.0/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.1.0/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.0.0/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v3.6.0/ChangeLog",
             "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.28/ChangeLog",
-            "https://github.com/Mbed-TLS/mbedtls/releases/tag/v2.28.0",
-            "https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-2.28.10",
             "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.16/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.7/ChangeLog",
             "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-1.3/ChangeLog"
           ]
         }
       },
       "milestone_provenance": {
-        "eossec": {
-          "kind": "derived",
-          "method": "release-trigger",
-          "source_url": "https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-2.28.10",
-          "quote": "Mbed TLS 2.28.10 is the last release of the 2.28 LTS and won't receive bug fixes or security fixes anymore. Users are advised to upgrade to a maintained version.",
-          "base_date": "2025-03-24",
-          "base_label": "Mbed TLS 2.28.10 terminal release",
-          "trigger": {
-            "release_id": "2.28.10",
-            "date": "2025-03-24",
-            "label": "Mbed TLS 2.28.10 terminal release"
-          }
-        },
         "eol": {
           "kind": "derived",
           "method": "release-trigger",
-          "source_url": "https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-2.28.10",
-          "quote": "Mbed TLS 2.28.10 is the last release of the 2.28 LTS and won't receive bug fixes or security fixes anymore. Users are advised to upgrade to a maintained version.",
-          "base_date": "2025-03-24",
-          "base_label": "Mbed TLS 2.28.10 terminal release",
+          "source_url": "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.28/BRANCHES.md",
+          "quote": "Note: [**`mbedtls-2.28.10`**](https://github.com/Mbed-TLS/mbedtls/releases/tag/v2.28.10) is the last release of the 2.28 LTS and won't receive bug fixes or security fixes anymore. Users are advised to upgrade to a maintained version.",
+          "base_date": "2021-12-17",
+          "base_label": "Mbed TLS 2.28.0 general availability",
           "trigger": {
             "release_id": "2.28.10",
             "date": "2025-03-24",
-            "label": "Mbed TLS 2.28.10 terminal release"
+            "label": "Mbed TLS 2.28.10, the vendor's stated final 2.28 LTS release"
           }
         }
       }
     },
     {
       "id": "2.28.10",
-      "name": "Mbed TLS 2.28.10 terminal patch release",
+      "name": "Mbed TLS 2.28.10 (final 2.28 LTS release)",
       "milestones": {
         "ga": "2025-03-24",
         "eos": null,
@@ -289,53 +219,99 @@
         "eol": null
       },
       "upstream": {
-        "name": "Mbed TLS 2.28.10 terminal patch release",
+        "name": "Mbed TLS 2.28.10 (final 2.28 LTS release)",
         "Contribution": {
-          "text": "Mbed TLS implements TLS, DTLS protocols and X.509 certificate manipulation. The [`development`](https://github.com/Mbed-TLS/mbedtls/tree/development) branch: this is where the next minor version of Mbed TLS 4.x is prepared. It contains new features, bug fixes, and security fixes. One or more long-time support (LTS) branches: these only get bug fixes and security fixes. Currently, the supported LTS branches are: - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6). - [`mbedtls-4.1`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-4.1). We plan to make regular LTS releases on an 18-month cycle, each with a support lifetime of three years.On this basis, Mbed TLS 3.6 LTS (released in March 2024) will be supported until March 2027. Due to the size and scope of the 4.0 release, the first 4.x LTS, version 4.1, was released two years after 3.6, in March 2026, and will be supported until March 2029. = Mbed TLS 4.2.0 branch released 2026-07-07 Mbed TLS 4.1 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2029. = Mbed TLS 4.1.0 branch released 2026-03-31 = Mbed TLS 4.0.0 branch released 2025-10-15 Mbed TLS 3.6 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2027. = Mbed TLS 3.6.0 branch released 2024-03-28 = Mbed TLS 3.0.0 branch released 2021-07-07 = mbed TLS 2.28.0 branch released 2021-12-17 Mbed TLS 2.28 is a long-time support branch. It will be supported with bug-fixes and security fixes until end of 2024. Mbed TLS 2.28.10 is the last release of the 2.28 LTS and won't receive bug fixes or security fixes anymore. Users are advised to upgrade to a maintained version. = Mbed TLS 2.28.10 branch released 2025-03-24 = mbed TLS 2.0.0 released 2015-07-13 = PolarSSL 1.3.0 released on 2013-10-01",
+          "text": "Mbed TLS implements TLS, DTLS protocols and X.509 certificate manipulation. The [`main`](https://github.com/Mbed-TLS/mbedtls/tree/main) branch: this always contains the latest release, including all publicly available security fixes. The [`development`](https://github.com/Mbed-TLS/mbedtls/tree/development) branch: this is where the next minor version of Mbed TLS 4.x is prepared. It contains new features, bug fixes, and security fixes. One or more long-time support (LTS) branches: these only get bug fixes and security fixes. Currently, the supported LTS branches are: - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6). - [`mbedtls-4.1`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-4.1). We plan to make regular LTS releases on an 18-month cycle, each with a support lifetime of three years.On this basis, Mbed TLS 3.6 LTS (released in March 2024) will be supported until March 2027. Due to the size and scope of the 4.0 release, the first 4.x LTS, version 4.1, was released two years after 3.6, in March 2026, and will be supported until March 2029. - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6) maintained until March 2027 - [`mbedtls-4.1`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-4.1) maintained until March 2029 Mbed TLS 3.6 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2027. Mbed TLS 4.1 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2029. We retain a number of historical branches, whose names are prefixed by `archive/`, such as [`archive/mbedtls-2.7`](https://github.com/Mbed-TLS/mbedtls/tree/archive/mbedtls-2.7). These branches will not receive any changes or updates. One or more long-time support (LTS) branches: these only get bug fixes and security fixes. Currently, the supported LTS branches are: - [`mbedtls-2.28`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-2.28). - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6). We retain a number of historical branches, whose names are prefixed by `archive/`, such as [`archive/mbedtls-2.7`](https://github.com/Mbed-TLS/mbedtls/tree/archive/mbedtls-2.7). These branches will not receive any changes or updates. The following branches are currently maintained: - [main](https://github.com/Mbed-TLS/mbedtls/tree/main) - [`development`](https://github.com/Mbed-TLS/mbedtls/) - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6) maintained until March 2027, Due to the size and scope of the 4.0 release, the release date of the first 4.x LTS is yet to be determined. The next LTS release will be a 4.x release, which is planned for September 2025. - [`mbedtls-2.28`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-2.28) maintained until the end of 2024 = Mbed TLS 4.2.0 branch released 2026-07-07 = Mbed TLS 4.1.0 branch released 2026-03-31 = Mbed TLS 4.0.0 branch released 2025-10-15 = Mbed TLS 3.6.0 branch released 2024-03-28 = mbed TLS 2.28.0 branch released 2021-12-17 = Mbed TLS 2.28.10 branch released 2025-03-24 Note: [**`mbedtls-2.28.10`**](https://github.com/Mbed-TLS/mbedtls/releases/tag/v2.28.10) is the last release of the 2.28 LTS and won't receive bug fixes or security fixes anymore. Users are advised to upgrade to a maintained version. = mbed TLS 2.16.0 branch released 2018-12-21 = mbed TLS 2.16.12 branch released 2021-12-17 = mbed TLS 2.7.0 branch released 2018-02-03 = mbed TLS 2.7.19 branch released 2021-03-12 = PolarSSL 1.3.0 released on 2013-10-01 = mbed TLS 1.3.22 branch released 2018-02-03",
           "value": null,
           "datetime": null,
           "role": null,
           "links": [
             "https://www.trustedfirmware.org/projects/mbed-tls/",
-            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/development/BRANCHES.md",
-            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/development/ChangeLog",
-            "https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-4.1.0",
-            "https://github.com/Mbed-TLS/mbedtls/releases/tag/v3.6.0",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.2.0/BRANCHES.md",
+            "https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-3.6.7",
+            "https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-4.1.1",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.28/BRANCHES.md",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.0.0/BRANCHES.md",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v2.28.9/BRANCHES.md",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.2.0/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.1.0/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.0.0/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v3.6.0/ChangeLog",
             "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.28/ChangeLog",
-            "https://github.com/Mbed-TLS/mbedtls/releases/tag/v2.28.0",
-            "https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-2.28.10",
             "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.16/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.7/ChangeLog",
             "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-1.3/ChangeLog"
           ]
         }
       }
     },
     {
-      "id": "2.0-2.27",
-      "name": "Mbed TLS 2.0 through 2.27 (2.0.x-2.27.x)",
+      "id": "2.16",
+      "name": "Mbed TLS 2.16 (archived)",
       "milestones": {
-        "ga": "2015-07-13",
+        "ga": "2018-12-21",
         "eos": null,
         "eossec": null,
         "eol": null
       },
       "upstream": {
-        "name": "Mbed TLS 2.0 through 2.27 (2.0.x-2.27.x)",
+        "name": "Mbed TLS 2.16 (archived)",
         "Contribution": {
-          "text": "Mbed TLS implements TLS, DTLS protocols and X.509 certificate manipulation. The [`development`](https://github.com/Mbed-TLS/mbedtls/tree/development) branch: this is where the next minor version of Mbed TLS 4.x is prepared. It contains new features, bug fixes, and security fixes. One or more long-time support (LTS) branches: these only get bug fixes and security fixes. Currently, the supported LTS branches are: - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6). - [`mbedtls-4.1`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-4.1). We plan to make regular LTS releases on an 18-month cycle, each with a support lifetime of three years.On this basis, Mbed TLS 3.6 LTS (released in March 2024) will be supported until March 2027. Due to the size and scope of the 4.0 release, the first 4.x LTS, version 4.1, was released two years after 3.6, in March 2026, and will be supported until March 2029. = Mbed TLS 4.2.0 branch released 2026-07-07 Mbed TLS 4.1 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2029. = Mbed TLS 4.1.0 branch released 2026-03-31 = Mbed TLS 4.0.0 branch released 2025-10-15 Mbed TLS 3.6 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2027. = Mbed TLS 3.6.0 branch released 2024-03-28 = Mbed TLS 3.0.0 branch released 2021-07-07 = mbed TLS 2.28.0 branch released 2021-12-17 Mbed TLS 2.28 is a long-time support branch. It will be supported with bug-fixes and security fixes until end of 2024. Mbed TLS 2.28.10 is the last release of the 2.28 LTS and won't receive bug fixes or security fixes anymore. Users are advised to upgrade to a maintained version. = Mbed TLS 2.28.10 branch released 2025-03-24 = mbed TLS 2.0.0 released 2015-07-13 = PolarSSL 1.3.0 released on 2013-10-01",
+          "text": "Mbed TLS implements TLS, DTLS protocols and X.509 certificate manipulation. The [`main`](https://github.com/Mbed-TLS/mbedtls/tree/main) branch: this always contains the latest release, including all publicly available security fixes. The [`development`](https://github.com/Mbed-TLS/mbedtls/tree/development) branch: this is where the next minor version of Mbed TLS 4.x is prepared. It contains new features, bug fixes, and security fixes. One or more long-time support (LTS) branches: these only get bug fixes and security fixes. Currently, the supported LTS branches are: - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6). - [`mbedtls-4.1`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-4.1). We plan to make regular LTS releases on an 18-month cycle, each with a support lifetime of three years.On this basis, Mbed TLS 3.6 LTS (released in March 2024) will be supported until March 2027. Due to the size and scope of the 4.0 release, the first 4.x LTS, version 4.1, was released two years after 3.6, in March 2026, and will be supported until March 2029. - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6) maintained until March 2027 - [`mbedtls-4.1`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-4.1) maintained until March 2029 Mbed TLS 3.6 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2027. Mbed TLS 4.1 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2029. We retain a number of historical branches, whose names are prefixed by `archive/`, such as [`archive/mbedtls-2.7`](https://github.com/Mbed-TLS/mbedtls/tree/archive/mbedtls-2.7). These branches will not receive any changes or updates. One or more long-time support (LTS) branches: these only get bug fixes and security fixes. Currently, the supported LTS branches are: - [`mbedtls-2.28`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-2.28). - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6). We retain a number of historical branches, whose names are prefixed by `archive/`, such as [`archive/mbedtls-2.7`](https://github.com/Mbed-TLS/mbedtls/tree/archive/mbedtls-2.7). These branches will not receive any changes or updates. The following branches are currently maintained: - [main](https://github.com/Mbed-TLS/mbedtls/tree/main) - [`development`](https://github.com/Mbed-TLS/mbedtls/) - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6) maintained until March 2027, Due to the size and scope of the 4.0 release, the release date of the first 4.x LTS is yet to be determined. The next LTS release will be a 4.x release, which is planned for September 2025. - [`mbedtls-2.28`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-2.28) maintained until the end of 2024 = Mbed TLS 4.2.0 branch released 2026-07-07 = Mbed TLS 4.1.0 branch released 2026-03-31 = Mbed TLS 4.0.0 branch released 2025-10-15 = Mbed TLS 3.6.0 branch released 2024-03-28 = mbed TLS 2.28.0 branch released 2021-12-17 = Mbed TLS 2.28.10 branch released 2025-03-24 Note: [**`mbedtls-2.28.10`**](https://github.com/Mbed-TLS/mbedtls/releases/tag/v2.28.10) is the last release of the 2.28 LTS and won't receive bug fixes or security fixes anymore. Users are advised to upgrade to a maintained version. = mbed TLS 2.16.0 branch released 2018-12-21 = mbed TLS 2.16.12 branch released 2021-12-17 = mbed TLS 2.7.0 branch released 2018-02-03 = mbed TLS 2.7.19 branch released 2021-03-12 = PolarSSL 1.3.0 released on 2013-10-01 = mbed TLS 1.3.22 branch released 2018-02-03",
           "value": null,
           "datetime": null,
           "role": null,
           "links": [
             "https://www.trustedfirmware.org/projects/mbed-tls/",
-            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/development/BRANCHES.md",
-            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/development/ChangeLog",
-            "https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-4.1.0",
-            "https://github.com/Mbed-TLS/mbedtls/releases/tag/v3.6.0",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.2.0/BRANCHES.md",
+            "https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-3.6.7",
+            "https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-4.1.1",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.28/BRANCHES.md",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.0.0/BRANCHES.md",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v2.28.9/BRANCHES.md",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.2.0/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.1.0/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.0.0/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v3.6.0/ChangeLog",
             "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.28/ChangeLog",
-            "https://github.com/Mbed-TLS/mbedtls/releases/tag/v2.28.0",
-            "https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-2.28.10",
             "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.16/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.7/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-1.3/ChangeLog"
+          ]
+        }
+      }
+    },
+    {
+      "id": "2.7",
+      "name": "Mbed TLS 2.7 (archived)",
+      "milestones": {
+        "ga": "2018-02-03",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "Mbed TLS 2.7 (archived)",
+        "Contribution": {
+          "text": "Mbed TLS implements TLS, DTLS protocols and X.509 certificate manipulation. The [`main`](https://github.com/Mbed-TLS/mbedtls/tree/main) branch: this always contains the latest release, including all publicly available security fixes. The [`development`](https://github.com/Mbed-TLS/mbedtls/tree/development) branch: this is where the next minor version of Mbed TLS 4.x is prepared. It contains new features, bug fixes, and security fixes. One or more long-time support (LTS) branches: these only get bug fixes and security fixes. Currently, the supported LTS branches are: - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6). - [`mbedtls-4.1`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-4.1). We plan to make regular LTS releases on an 18-month cycle, each with a support lifetime of three years.On this basis, Mbed TLS 3.6 LTS (released in March 2024) will be supported until March 2027. Due to the size and scope of the 4.0 release, the first 4.x LTS, version 4.1, was released two years after 3.6, in March 2026, and will be supported until March 2029. - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6) maintained until March 2027 - [`mbedtls-4.1`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-4.1) maintained until March 2029 Mbed TLS 3.6 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2027. Mbed TLS 4.1 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2029. We retain a number of historical branches, whose names are prefixed by `archive/`, such as [`archive/mbedtls-2.7`](https://github.com/Mbed-TLS/mbedtls/tree/archive/mbedtls-2.7). These branches will not receive any changes or updates. One or more long-time support (LTS) branches: these only get bug fixes and security fixes. Currently, the supported LTS branches are: - [`mbedtls-2.28`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-2.28). - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6). We retain a number of historical branches, whose names are prefixed by `archive/`, such as [`archive/mbedtls-2.7`](https://github.com/Mbed-TLS/mbedtls/tree/archive/mbedtls-2.7). These branches will not receive any changes or updates. The following branches are currently maintained: - [main](https://github.com/Mbed-TLS/mbedtls/tree/main) - [`development`](https://github.com/Mbed-TLS/mbedtls/) - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6) maintained until March 2027, Due to the size and scope of the 4.0 release, the release date of the first 4.x LTS is yet to be determined. The next LTS release will be a 4.x release, which is planned for September 2025. - [`mbedtls-2.28`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-2.28) maintained until the end of 2024 = Mbed TLS 4.2.0 branch released 2026-07-07 = Mbed TLS 4.1.0 branch released 2026-03-31 = Mbed TLS 4.0.0 branch released 2025-10-15 = Mbed TLS 3.6.0 branch released 2024-03-28 = mbed TLS 2.28.0 branch released 2021-12-17 = Mbed TLS 2.28.10 branch released 2025-03-24 Note: [**`mbedtls-2.28.10`**](https://github.com/Mbed-TLS/mbedtls/releases/tag/v2.28.10) is the last release of the 2.28 LTS and won't receive bug fixes or security fixes anymore. Users are advised to upgrade to a maintained version. = mbed TLS 2.16.0 branch released 2018-12-21 = mbed TLS 2.16.12 branch released 2021-12-17 = mbed TLS 2.7.0 branch released 2018-02-03 = mbed TLS 2.7.19 branch released 2021-03-12 = PolarSSL 1.3.0 released on 2013-10-01 = mbed TLS 1.3.22 branch released 2018-02-03",
+          "value": null,
+          "datetime": null,
+          "role": null,
+          "links": [
+            "https://www.trustedfirmware.org/projects/mbed-tls/",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.2.0/BRANCHES.md",
+            "https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-3.6.7",
+            "https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-4.1.1",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.28/BRANCHES.md",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.0.0/BRANCHES.md",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v2.28.9/BRANCHES.md",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.2.0/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.1.0/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.0.0/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v3.6.0/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.28/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.16/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.7/ChangeLog",
             "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-1.3/ChangeLog"
           ]
         }
@@ -343,7 +319,7 @@
     },
     {
       "id": "1.3",
-      "name": "Mbed TLS 1.3 (1.3.x; PolarSSL lineage)",
+      "name": "Mbed TLS 1.3 (archived; PolarSSL-era naming)",
       "milestones": {
         "ga": "2013-10-01",
         "eos": null,
@@ -351,22 +327,63 @@
         "eol": null
       },
       "upstream": {
-        "name": "Mbed TLS 1.3 (1.3.x; PolarSSL lineage)",
+        "name": "Mbed TLS 1.3 (archived; PolarSSL-era naming)",
         "Contribution": {
-          "text": "Mbed TLS implements TLS, DTLS protocols and X.509 certificate manipulation. The [`development`](https://github.com/Mbed-TLS/mbedtls/tree/development) branch: this is where the next minor version of Mbed TLS 4.x is prepared. It contains new features, bug fixes, and security fixes. One or more long-time support (LTS) branches: these only get bug fixes and security fixes. Currently, the supported LTS branches are: - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6). - [`mbedtls-4.1`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-4.1). We plan to make regular LTS releases on an 18-month cycle, each with a support lifetime of three years.On this basis, Mbed TLS 3.6 LTS (released in March 2024) will be supported until March 2027. Due to the size and scope of the 4.0 release, the first 4.x LTS, version 4.1, was released two years after 3.6, in March 2026, and will be supported until March 2029. = Mbed TLS 4.2.0 branch released 2026-07-07 Mbed TLS 4.1 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2029. = Mbed TLS 4.1.0 branch released 2026-03-31 = Mbed TLS 4.0.0 branch released 2025-10-15 Mbed TLS 3.6 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2027. = Mbed TLS 3.6.0 branch released 2024-03-28 = Mbed TLS 3.0.0 branch released 2021-07-07 = mbed TLS 2.28.0 branch released 2021-12-17 Mbed TLS 2.28 is a long-time support branch. It will be supported with bug-fixes and security fixes until end of 2024. Mbed TLS 2.28.10 is the last release of the 2.28 LTS and won't receive bug fixes or security fixes anymore. Users are advised to upgrade to a maintained version. = Mbed TLS 2.28.10 branch released 2025-03-24 = mbed TLS 2.0.0 released 2015-07-13 = PolarSSL 1.3.0 released on 2013-10-01",
+          "text": "Mbed TLS implements TLS, DTLS protocols and X.509 certificate manipulation. The [`main`](https://github.com/Mbed-TLS/mbedtls/tree/main) branch: this always contains the latest release, including all publicly available security fixes. The [`development`](https://github.com/Mbed-TLS/mbedtls/tree/development) branch: this is where the next minor version of Mbed TLS 4.x is prepared. It contains new features, bug fixes, and security fixes. One or more long-time support (LTS) branches: these only get bug fixes and security fixes. Currently, the supported LTS branches are: - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6). - [`mbedtls-4.1`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-4.1). We plan to make regular LTS releases on an 18-month cycle, each with a support lifetime of three years.On this basis, Mbed TLS 3.6 LTS (released in March 2024) will be supported until March 2027. Due to the size and scope of the 4.0 release, the first 4.x LTS, version 4.1, was released two years after 3.6, in March 2026, and will be supported until March 2029. - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6) maintained until March 2027 - [`mbedtls-4.1`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-4.1) maintained until March 2029 Mbed TLS 3.6 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2027. Mbed TLS 4.1 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2029. We retain a number of historical branches, whose names are prefixed by `archive/`, such as [`archive/mbedtls-2.7`](https://github.com/Mbed-TLS/mbedtls/tree/archive/mbedtls-2.7). These branches will not receive any changes or updates. One or more long-time support (LTS) branches: these only get bug fixes and security fixes. Currently, the supported LTS branches are: - [`mbedtls-2.28`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-2.28). - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6). We retain a number of historical branches, whose names are prefixed by `archive/`, such as [`archive/mbedtls-2.7`](https://github.com/Mbed-TLS/mbedtls/tree/archive/mbedtls-2.7). These branches will not receive any changes or updates. The following branches are currently maintained: - [main](https://github.com/Mbed-TLS/mbedtls/tree/main) - [`development`](https://github.com/Mbed-TLS/mbedtls/) - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6) maintained until March 2027, Due to the size and scope of the 4.0 release, the release date of the first 4.x LTS is yet to be determined. The next LTS release will be a 4.x release, which is planned for September 2025. - [`mbedtls-2.28`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-2.28) maintained until the end of 2024 = Mbed TLS 4.2.0 branch released 2026-07-07 = Mbed TLS 4.1.0 branch released 2026-03-31 = Mbed TLS 4.0.0 branch released 2025-10-15 = Mbed TLS 3.6.0 branch released 2024-03-28 = mbed TLS 2.28.0 branch released 2021-12-17 = Mbed TLS 2.28.10 branch released 2025-03-24 Note: [**`mbedtls-2.28.10`**](https://github.com/Mbed-TLS/mbedtls/releases/tag/v2.28.10) is the last release of the 2.28 LTS and won't receive bug fixes or security fixes anymore. Users are advised to upgrade to a maintained version. = mbed TLS 2.16.0 branch released 2018-12-21 = mbed TLS 2.16.12 branch released 2021-12-17 = mbed TLS 2.7.0 branch released 2018-02-03 = mbed TLS 2.7.19 branch released 2021-03-12 = PolarSSL 1.3.0 released on 2013-10-01 = mbed TLS 1.3.22 branch released 2018-02-03",
           "value": null,
           "datetime": null,
           "role": null,
           "links": [
             "https://www.trustedfirmware.org/projects/mbed-tls/",
-            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/development/BRANCHES.md",
-            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/development/ChangeLog",
-            "https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-4.1.0",
-            "https://github.com/Mbed-TLS/mbedtls/releases/tag/v3.6.0",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.2.0/BRANCHES.md",
+            "https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-3.6.7",
+            "https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-4.1.1",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.28/BRANCHES.md",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.0.0/BRANCHES.md",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v2.28.9/BRANCHES.md",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.2.0/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.1.0/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.0.0/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v3.6.0/ChangeLog",
             "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.28/ChangeLog",
-            "https://github.com/Mbed-TLS/mbedtls/releases/tag/v2.28.0",
-            "https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-2.28.10",
             "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.16/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.7/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-1.3/ChangeLog"
+          ]
+        }
+      }
+    },
+    {
+      "id": "development",
+      "name": "Mbed TLS development branch (next 4.x minor)",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "Mbed TLS development branch (next 4.x minor)",
+        "Contribution": {
+          "text": "Mbed TLS implements TLS, DTLS protocols and X.509 certificate manipulation. The [`main`](https://github.com/Mbed-TLS/mbedtls/tree/main) branch: this always contains the latest release, including all publicly available security fixes. The [`development`](https://github.com/Mbed-TLS/mbedtls/tree/development) branch: this is where the next minor version of Mbed TLS 4.x is prepared. It contains new features, bug fixes, and security fixes. One or more long-time support (LTS) branches: these only get bug fixes and security fixes. Currently, the supported LTS branches are: - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6). - [`mbedtls-4.1`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-4.1). We plan to make regular LTS releases on an 18-month cycle, each with a support lifetime of three years.On this basis, Mbed TLS 3.6 LTS (released in March 2024) will be supported until March 2027. Due to the size and scope of the 4.0 release, the first 4.x LTS, version 4.1, was released two years after 3.6, in March 2026, and will be supported until March 2029. - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6) maintained until March 2027 - [`mbedtls-4.1`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-4.1) maintained until March 2029 Mbed TLS 3.6 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2027. Mbed TLS 4.1 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2029. We retain a number of historical branches, whose names are prefixed by `archive/`, such as [`archive/mbedtls-2.7`](https://github.com/Mbed-TLS/mbedtls/tree/archive/mbedtls-2.7). These branches will not receive any changes or updates. One or more long-time support (LTS) branches: these only get bug fixes and security fixes. Currently, the supported LTS branches are: - [`mbedtls-2.28`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-2.28). - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6). We retain a number of historical branches, whose names are prefixed by `archive/`, such as [`archive/mbedtls-2.7`](https://github.com/Mbed-TLS/mbedtls/tree/archive/mbedtls-2.7). These branches will not receive any changes or updates. The following branches are currently maintained: - [main](https://github.com/Mbed-TLS/mbedtls/tree/main) - [`development`](https://github.com/Mbed-TLS/mbedtls/) - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6) maintained until March 2027, Due to the size and scope of the 4.0 release, the release date of the first 4.x LTS is yet to be determined. The next LTS release will be a 4.x release, which is planned for September 2025. - [`mbedtls-2.28`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-2.28) maintained until the end of 2024 = Mbed TLS 4.2.0 branch released 2026-07-07 = Mbed TLS 4.1.0 branch released 2026-03-31 = Mbed TLS 4.0.0 branch released 2025-10-15 = Mbed TLS 3.6.0 branch released 2024-03-28 = mbed TLS 2.28.0 branch released 2021-12-17 = Mbed TLS 2.28.10 branch released 2025-03-24 Note: [**`mbedtls-2.28.10`**](https://github.com/Mbed-TLS/mbedtls/releases/tag/v2.28.10) is the last release of the 2.28 LTS and won't receive bug fixes or security fixes anymore. Users are advised to upgrade to a maintained version. = mbed TLS 2.16.0 branch released 2018-12-21 = mbed TLS 2.16.12 branch released 2021-12-17 = mbed TLS 2.7.0 branch released 2018-02-03 = mbed TLS 2.7.19 branch released 2021-03-12 = PolarSSL 1.3.0 released on 2013-10-01 = mbed TLS 1.3.22 branch released 2018-02-03",
+          "value": null,
+          "datetime": null,
+          "role": null,
+          "links": [
+            "https://www.trustedfirmware.org/projects/mbed-tls/",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.2.0/BRANCHES.md",
+            "https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-3.6.7",
+            "https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-4.1.1",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.28/BRANCHES.md",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.0.0/BRANCHES.md",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v2.28.9/BRANCHES.md",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.2.0/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.1.0/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.0.0/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v3.6.0/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.28/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.16/ChangeLog",
+            "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.7/ChangeLog",
             "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-1.3/ChangeLog"
           ]
         }
@@ -375,15 +392,15 @@
   ],
   "provenance": {
     "verifier": "researched-eoltracker-agent",
-    "last_checked": "2026-09-23T18:27:30Z",
+    "last_checked": "2026-09-23T18:49:03Z",
     "research": {
-      "quote": "Mbed TLS implements TLS, DTLS protocols and X.509 certificate manipulation. The [`development`](https://github.com/Mbed-TLS/mbedtls/tree/development) branch: this is where the next minor version of Mbed TLS 4.x is prepared. It contains new features, bug fixes, and security fixes. One or more long-time support (LTS) branches: these only get bug fixes and security fixes. Currently, the supported LTS branches are: - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6). - [`mbedtls-4.1`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-4.1). We plan to make regular LTS releases on an 18-month cycle, each with a support lifetime of three years.On this basis, Mbed TLS 3.6 LTS (released in March 2024) will be supported until March 2027. Due to the size and scope of the 4.0 release, the first 4.x LTS, version 4.1, was released two years after 3.6, in March 2026, and will be supported until March 2029. = Mbed TLS 4.2.0 branch released 2026-07-07 Mbed TLS 4.1 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2029. = Mbed TLS 4.1.0 branch released 2026-03-31 = Mbed TLS 4.0.0 branch released 2025-10-15 Mbed TLS 3.6 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2027. = Mbed TLS 3.6.0 branch released 2024-03-28 = Mbed TLS 3.0.0 branch released 2021-07-07 = mbed TLS 2.28.0 branch released 2021-12-17 Mbed TLS 2.28 is a long-time support branch. It will be supported with bug-fixes and security fixes until end of 2024. Mbed TLS 2.28.10 is the last release of the 2.28 LTS and won't receive bug fixes or security fixes anymore. Users are advised to upgrade to a maintained version. = Mbed TLS 2.28.10 branch released 2025-03-24 = mbed TLS 2.0.0 released 2015-07-13 = PolarSSL 1.3.0 released on 2013-10-01",
+      "quote": "Mbed TLS implements TLS, DTLS protocols and X.509 certificate manipulation. The [`main`](https://github.com/Mbed-TLS/mbedtls/tree/main) branch: this always contains the latest release, including all publicly available security fixes. The [`development`](https://github.com/Mbed-TLS/mbedtls/tree/development) branch: this is where the next minor version of Mbed TLS 4.x is prepared. It contains new features, bug fixes, and security fixes. One or more long-time support (LTS) branches: these only get bug fixes and security fixes. Currently, the supported LTS branches are: - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6). - [`mbedtls-4.1`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-4.1). We plan to make regular LTS releases on an 18-month cycle, each with a support lifetime of three years.On this basis, Mbed TLS 3.6 LTS (released in March 2024) will be supported until March 2027. Due to the size and scope of the 4.0 release, the first 4.x LTS, version 4.1, was released two years after 3.6, in March 2026, and will be supported until March 2029. - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6) maintained until March 2027 - [`mbedtls-4.1`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-4.1) maintained until March 2029 Mbed TLS 3.6 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2027. Mbed TLS 4.1 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2029. We retain a number of historical branches, whose names are prefixed by `archive/`, such as [`archive/mbedtls-2.7`](https://github.com/Mbed-TLS/mbedtls/tree/archive/mbedtls-2.7). These branches will not receive any changes or updates. One or more long-time support (LTS) branches: these only get bug fixes and security fixes. Currently, the supported LTS branches are: - [`mbedtls-2.28`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-2.28). - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6). We retain a number of historical branches, whose names are prefixed by `archive/`, such as [`archive/mbedtls-2.7`](https://github.com/Mbed-TLS/mbedtls/tree/archive/mbedtls-2.7). These branches will not receive any changes or updates. The following branches are currently maintained: - [main](https://github.com/Mbed-TLS/mbedtls/tree/main) - [`development`](https://github.com/Mbed-TLS/mbedtls/) - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6) maintained until March 2027, Due to the size and scope of the 4.0 release, the release date of the first 4.x LTS is yet to be determined. The next LTS release will be a 4.x release, which is planned for September 2025. - [`mbedtls-2.28`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-2.28) maintained until the end of 2024 = Mbed TLS 4.2.0 branch released 2026-07-07 = Mbed TLS 4.1.0 branch released 2026-03-31 = Mbed TLS 4.0.0 branch released 2025-10-15 = Mbed TLS 3.6.0 branch released 2024-03-28 = mbed TLS 2.28.0 branch released 2021-12-17 = Mbed TLS 2.28.10 branch released 2025-03-24 Note: [**`mbedtls-2.28.10`**](https://github.com/Mbed-TLS/mbedtls/releases/tag/v2.28.10) is the last release of the 2.28 LTS and won't receive bug fixes or security fixes anymore. Users are advised to upgrade to a maintained version. = mbed TLS 2.16.0 branch released 2018-12-21 = mbed TLS 2.16.12 branch released 2021-12-17 = mbed TLS 2.7.0 branch released 2018-02-03 = mbed TLS 2.7.19 branch released 2021-03-12 = PolarSSL 1.3.0 released on 2013-10-01 = mbed TLS 1.3.22 branch released 2018-02-03",
       "source_url": "https://www.trustedfirmware.org/projects/mbed-tls/",
       "retrieved_at": "2026-09-23",
       "contributor": "eoltracker-agent",
       "method": "agent",
-      "verified_at": "2026-09-23T18:27:30Z",
-      "stale_after": "2027-09-23",
+      "verified_at": "2026-09-23T18:49:03Z",
+      "stale_after": "2027-03-22",
       "evidence": [
         {
           "quote": "Mbed TLS implements TLS, DTLS protocols and X.509 certificate manipulation.",
@@ -391,44 +408,106 @@
           "retrieved_at": "2026-09-23"
         },
         {
+          "quote": "The [`main`](https://github.com/Mbed-TLS/mbedtls/tree/main) branch: this always contains the latest release, including all publicly available security fixes.",
+          "source_url": "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.2.0/BRANCHES.md",
+          "retrieved_at": "2026-09-23"
+        },
+        {
           "quote": "The [`development`](https://github.com/Mbed-TLS/mbedtls/tree/development) branch: this is where the next minor version of Mbed TLS 4.x is prepared. It contains new features, bug fixes, and security fixes.",
-          "source_url": "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/development/BRANCHES.md",
+          "source_url": "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.2.0/BRANCHES.md",
           "retrieved_at": "2026-09-23"
         },
         {
           "quote": "One or more long-time support (LTS) branches: these only get bug fixes and security fixes. Currently, the supported LTS branches are: - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6). - [`mbedtls-4.1`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-4.1).",
-          "source_url": "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/development/BRANCHES.md",
+          "source_url": "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.2.0/BRANCHES.md",
           "retrieved_at": "2026-09-23"
         },
         {
           "quote": "We plan to make regular LTS releases on an 18-month cycle, each with a support lifetime of three years.On this basis, Mbed TLS 3.6 LTS (released in March 2024) will be supported until March 2027. Due to the size and scope of the 4.0 release, the first 4.x LTS, version 4.1, was released two years after 3.6, in March 2026, and will be supported until March 2029.",
-          "source_url": "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/development/BRANCHES.md",
+          "source_url": "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.2.0/BRANCHES.md",
           "retrieved_at": "2026-09-23",
           "milestones": [
-            "eossec",
             "eol"
           ]
         },
         {
+          "quote": "- [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6) maintained until March 2027",
+          "source_url": "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.2.0/BRANCHES.md",
+          "retrieved_at": "2026-09-23",
+          "milestones": [
+            "eol"
+          ]
+        },
+        {
+          "quote": "- [`mbedtls-4.1`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-4.1) maintained until March 2029",
+          "source_url": "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.2.0/BRANCHES.md",
+          "retrieved_at": "2026-09-23",
+          "milestones": [
+            "eol"
+          ]
+        },
+        {
+          "quote": "Mbed TLS 3.6 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2027.",
+          "source_url": "https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-3.6.7",
+          "retrieved_at": "2026-09-23",
+          "milestones": [
+            "eol"
+          ]
+        },
+        {
+          "quote": "Mbed TLS 4.1 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2029.",
+          "source_url": "https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-4.1.1",
+          "retrieved_at": "2026-09-23",
+          "milestones": [
+            "eol"
+          ]
+        },
+        {
+          "quote": "We retain a number of historical branches, whose names are prefixed by `archive/`, such as [`archive/mbedtls-2.7`](https://github.com/Mbed-TLS/mbedtls/tree/archive/mbedtls-2.7). These branches will not receive any changes or updates.",
+          "source_url": "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.2.0/BRANCHES.md",
+          "retrieved_at": "2026-09-23"
+        },
+        {
+          "quote": "One or more long-time support (LTS) branches: these only get bug fixes and security fixes. Currently, the supported LTS branches are: - [`mbedtls-2.28`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-2.28). - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6).",
+          "source_url": "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.28/BRANCHES.md",
+          "retrieved_at": "2026-09-23"
+        },
+        {
+          "quote": "We retain a number of historical branches, whose names are prefixed by `archive/`, such as [`archive/mbedtls-2.7`](https://github.com/Mbed-TLS/mbedtls/tree/archive/mbedtls-2.7). These branches will not receive any changes or updates.",
+          "source_url": "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.28/BRANCHES.md",
+          "retrieved_at": "2026-09-23"
+        },
+        {
+          "quote": "The following branches are currently maintained: - [main](https://github.com/Mbed-TLS/mbedtls/tree/main) - [`development`](https://github.com/Mbed-TLS/mbedtls/) - [`mbedtls-3.6`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-3.6) maintained until March 2027,",
+          "source_url": "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.0.0/BRANCHES.md",
+          "retrieved_at": "2026-09-23"
+        },
+        {
+          "quote": "Due to the size and scope of the 4.0 release, the release date of the first 4.x LTS is yet to be determined.",
+          "source_url": "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.0.0/BRANCHES.md",
+          "retrieved_at": "2026-09-23"
+        },
+        {
+          "quote": "The next LTS release will be a 4.x release, which is planned for September 2025.",
+          "source_url": "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v2.28.9/BRANCHES.md",
+          "retrieved_at": "2026-09-23"
+        },
+        {
+          "quote": "- [`mbedtls-2.28`](https://github.com/Mbed-TLS/mbedtls/tree/mbedtls-2.28) maintained until the end of 2024",
+          "source_url": "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v2.28.9/BRANCHES.md",
+          "retrieved_at": "2026-09-23"
+        },
+        {
           "quote": "= Mbed TLS 4.2.0 branch released 2026-07-07",
-          "source_url": "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/development/ChangeLog",
+          "source_url": "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.2.0/ChangeLog",
           "retrieved_at": "2026-09-23",
           "milestones": [
             "ga"
           ]
         },
         {
-          "quote": "Mbed TLS 4.1 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2029.",
-          "source_url": "https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-4.1.0",
-          "retrieved_at": "2026-09-23",
-          "milestones": [
-            "eossec",
-            "eol"
-          ]
-        },
-        {
           "quote": "= Mbed TLS 4.1.0 branch released 2026-03-31",
-          "source_url": "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/development/ChangeLog",
+          "source_url": "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.1.0/ChangeLog",
           "retrieved_at": "2026-09-23",
           "milestones": [
             "ga"
@@ -436,32 +515,15 @@
         },
         {
           "quote": "= Mbed TLS 4.0.0 branch released 2025-10-15",
-          "source_url": "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/development/ChangeLog",
+          "source_url": "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v4.0.0/ChangeLog",
           "retrieved_at": "2026-09-23",
           "milestones": [
             "ga"
-          ]
-        },
-        {
-          "quote": "Mbed TLS 3.6 is a long-term support (LTS) branch. It will be supported with bug-fixes and security fixes until at least March 2027.",
-          "source_url": "https://github.com/Mbed-TLS/mbedtls/releases/tag/v3.6.0",
-          "retrieved_at": "2026-09-23",
-          "milestones": [
-            "eossec",
-            "eol"
           ]
         },
         {
           "quote": "= Mbed TLS 3.6.0 branch released 2024-03-28",
-          "source_url": "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/development/ChangeLog",
-          "retrieved_at": "2026-09-23",
-          "milestones": [
-            "ga"
-          ]
-        },
-        {
-          "quote": "= Mbed TLS 3.0.0 branch released 2021-07-07",
-          "source_url": "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/development/ChangeLog",
+          "source_url": "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/v3.6.0/ChangeLog",
           "retrieved_at": "2026-09-23",
           "milestones": [
             "ga"
@@ -476,19 +538,6 @@
           ]
         },
         {
-          "quote": "Mbed TLS 2.28 is a long-time support branch. It will be supported with bug-fixes and security fixes until end of 2024.",
-          "source_url": "https://github.com/Mbed-TLS/mbedtls/releases/tag/v2.28.0",
-          "retrieved_at": "2026-09-23"
-        },
-        {
-          "quote": "Mbed TLS 2.28.10 is the last release of the 2.28 LTS and won't receive bug fixes or security fixes anymore. Users are advised to upgrade to a maintained version.",
-          "source_url": "https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-2.28.10",
-          "retrieved_at": "2026-09-23",
-          "milestones": [
-            "ga"
-          ]
-        },
-        {
           "quote": "= Mbed TLS 2.28.10 branch released 2025-03-24",
           "source_url": "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.28/ChangeLog",
           "retrieved_at": "2026-09-23",
@@ -497,12 +546,38 @@
           ]
         },
         {
-          "quote": "= mbed TLS 2.0.0 released 2015-07-13",
+          "quote": "Note: [**`mbedtls-2.28.10`**](https://github.com/Mbed-TLS/mbedtls/releases/tag/v2.28.10) is the last release of the 2.28 LTS and won't receive bug fixes or security fixes anymore. Users are advised to upgrade to a maintained version.",
+          "source_url": "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.28/BRANCHES.md",
+          "retrieved_at": "2026-09-23",
+          "milestones": [
+            "eol"
+          ]
+        },
+        {
+          "quote": "= mbed TLS 2.16.0 branch released 2018-12-21",
           "source_url": "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.16/ChangeLog",
           "retrieved_at": "2026-09-23",
           "milestones": [
             "ga"
           ]
+        },
+        {
+          "quote": "= mbed TLS 2.16.12 branch released 2021-12-17",
+          "source_url": "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.16/ChangeLog",
+          "retrieved_at": "2026-09-23"
+        },
+        {
+          "quote": "= mbed TLS 2.7.0 branch released 2018-02-03",
+          "source_url": "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.7/ChangeLog",
+          "retrieved_at": "2026-09-23",
+          "milestones": [
+            "ga"
+          ]
+        },
+        {
+          "quote": "= mbed TLS 2.7.19 branch released 2021-03-12",
+          "source_url": "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-2.7/ChangeLog",
+          "retrieved_at": "2026-09-23"
         },
         {
           "quote": "= PolarSSL 1.3.0 released on 2013-10-01",
@@ -511,11 +586,16 @@
           "milestones": [
             "ga"
           ]
+        },
+        {
+          "quote": "= mbed TLS 1.3.22 branch released 2018-02-03",
+          "source_url": "https://raw.githubusercontent.com/Mbed-TLS/mbedtls/archive/mbedtls-1.3/ChangeLog",
+          "retrieved_at": "2026-09-23"
         }
       ],
       "vendor": "Trusted Firmware",
-      "summary": "An open source, portable TLS library implementing TLS, DTLS and X.509 certificate manipulation.",
-      "notes": "Tier: researched. Releases are modeled as branch-scoped series instead of duplicating every patch tag. The 2.0-2.27 row groups the historical 2.0 through 2.27 minor feature lines, including the archived 2.7 and 2.16 LTS lines; those archived lines have no stated terminal date, so their lifecycle milestones remain unknown. Its GA is the first stable 2.x release. The 3.0-3.5 row likewise groups historical feature lines 3.0 through 3.5, with GA marking 3.0.0. The 2.28 initial promise of support through the end of 2024 is superseded by the explicitly terminal 2.28.10 release: eossec and eol 2025-03-24 are derived by release-trigger from that release and are not vendor-stated milestone dates. The 3.6 and 4.1 support deadlines retain the source's month precision and the qualifier 'at least'. The development branch prepares an unreleased next 4.x minor and is not a lifecycle release. PolarSSL predecessor releases, beta/RC builds, packaging aliases, security advisories, and release cadence are excluded."
+      "summary": "Mbed TLS is the open source, portable TLS/DTLS and X.509 library maintained by Trusted Firmware (repository Mbed-TLS/mbedtls). The vendor documents its maintained and archived release branches in BRANCHES.md, dates every release in its ChangeLog, and states LTS support horizons as months in its release notes; it publishes no dated lifecycle table and there is no API or structured EOL feed.",
+      "notes": "Tier: researched, with one derived milestone (AGENTS.md rule 8b). Mbed TLS is the Trusted Firmware TLS/DTLS/X.509 library (repository Mbed-TLS/mbedtls), distinct from the TLS protocol version record `tls` (data/products/tls.json, an endoflife.date product) and from TF-PSA-Crypto, the sibling cryptography project this repository's ChangeLog also names; neither endoflife.date nor data/products/ holds a mbedtls slug (checked https://endoflife.date/api/all.json 2026-09-23: 477 products, no mbedtls entry), so no deterministic source is displaced. Scope is the branches the vendor's own BRANCHES.md documents (main, development, and the LTS branches 3.6 and 4.1) plus the archived release lines this record publishes: 2.28 (archived at archive/mbedtls-2.28 after its final release), 2.16, 2.7 and 1.3. Other refs exist under archive/ (for example archive/mbedtls-2.18, archive/mbedtls-2.17, archive/mbedtls-2.14, archive/mbedtls-2.15.1, archive/mbedtls-2.0 through archive/mbedtls-2.6) and are deliberately NOT published here: the vendor's BRANCHES.md names none of them as a product line, they carry no vendor statement about their end, and their only dated artefact is a ChangeLog heading in the same 'branch released <date>' form that every dot release in the file uses. A GitHub tag is not a supported branch, so this record never turns a tag into one. GA dates are the vendor's own ChangeLog headings, quoted verbatim: 4.2 2026-07-07, 4.1 2026-03-31, 4.0 2025-10-15, 3.6 2024-03-28, 2.28.0 2021-12-17, 2.28.10 2025-03-24, 2.16.0 2018-12-21, 2.7.0 2018-02-03 and PolarSSL 1.3.0 2013-10-01. 4.0 is published as a released major of the main line with its release date only: BRANCHES.md at v4.0.0 lists main, development and mbedtls-3.6 as the maintained branches, names no 4.0 branch, and states no 4.0 support end, so no terminal milestone is invented for it. MONTH PRECISION IS PRESERVED: the vendor states the two LTS horizons only as months -- 'maintained until March 2027' / 'maintained until March 2029' in BRANCHES.md and 'supported with bug-fixes and security fixes until at least March 2027' / '... until at least March 2029' in the LTS release notes -- so eol is stored as 2027-03 and 2029-03 and is NOT padded to a day (AGENTS.md rule 4). Both are vendor-stated, so neither carries milestone_provenance. The vendor's 'at least' hedge is kept visible: the stated month is a floor the vendor may extend, exactly as happened to 2.28, whose announced horizon was 'the end of 2024' while the branch in fact shipped security releases until 2025-03-24. eossec is null on every line: the LTS sentences state one combined support end ('bug fixes and security fixes'), not a separate security-only date, and AGENTS.md forbids filling eossec from a generic support date. The 2.28 eol 2025-03-24 IS DERIVED, not vendor-stated: the vendor states the trigger ('mbedtls-2.28.10 ... is the last release of the 2.28 LTS and won't receive bug fixes or security fixes anymore') and its own ChangeLog dates that final release 2025-03-24, so the entry is carried under milestone_provenance as method release-trigger, base_date 2021-12-17 (2.28.0 GA) and trigger {release_id 2.28.10, date 2025-03-24}. It must be presented as derived and is excluded from the exact-day Atom/RSS/iCalendar feeds and the OpenEoX export with machine-readable disclosure. The underlying branch is archived: archive/mbedtls-2.28's BRANCHES.md says the 2.28 branch's final release receives nothing further and states its archive rule, and the current BRANCHES.md's archive rule states such branches 'will not receive any changes or updates'. That archived page carries one internal conflict, left visible rather than resolved: its intro still lists mbedtls-2.28 among the supported LTS branches while the page's own note below says mbedtls-2.28.10 'is the last release of the 2.28 LTS and won't receive bug fixes or security fixes anymore' -- both sentences are quoted above, and the note and the ChangeLog's dated final release are the ones the record's derived date rests on. 2.16, 2.7 and 1.3 carry their stated GA dates and every terminal milestone stays null: their last ChangeLog entries (2.16.12 2021-12-17, 2.7.19 2021-03-12, 1.3.22 2018-02-03) publish no end-of-support date, and an archived branch's age is not a stated date. The development branch, which BRANCHES.md describes as 'where the next minor version of Mbed TLS 4.x is prepared', is listed with all milestones null -- it is a development line with no GA and no announced end. NO CADENCE INFERENCE: the vendor's lapsed projection is quoted above and is not treated as a date (a 2.28-era BRANCHES.md said the next LTS was 'planned for September 2025' while 4.1 actually arrived 2026-03-31, and the 4.0-era BRANCHES.md says the first 4.x LTS release date 'is yet to be determined'); the 18-month cycle and three-year lifetime sentences are therefore not used to compute any milestone here. Every stored date is backed by a verbatim quote at its own precision and was refetched on 2026-09-23."
     },
     "source_url": "https://www.trustedfirmware.org/projects/mbed-tls/",
     "upstream_modified": null
