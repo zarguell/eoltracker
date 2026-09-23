@@ -1,15 +1,15 @@
 {
   "source_url": "https://www.checkpoint.com/support-services/support-life-cycle-policy/",
   "verifier": "deterministic-checkpoint",
-  "checked_at": "2026-09-17T21:47:43Z",
+  "checked_at": "2026-09-23T10:07:28Z",
   "record_scope": "Check Point Security Gateway & Management release trains: one software record with one release per train, from the vendor's own Support Life Cycle Policy table, at the month precision that table states",
   "rows": {
-    "seen": 527,
+    "seen": 528,
     "published": 17,
     "trains": 17,
     "undated": 0,
     "retained": 0,
-    "excluded": 510
+    "excluded": 511
   },
   "excluded": [
     {
@@ -436,6 +436,12 @@
       "section": "Software Support",
       "table": "Endpoint Security and Remote Access for Windows and Mac as of June 1, 2022",
       "row": "Check Point Endpoint Security E89.30 for macOS | June 2026 | December 2027",
+      "reason": "not the Security Gateway & Management software table: this row states no Security Gateway & Management release-train lifecycle"
+    },
+    {
+      "section": "Software Support",
+      "table": "Endpoint Security and Remote Access for Windows and Mac as of June 1, 2022",
+      "row": "Check Point Endpoint Security E89.26 for Windows | September 2026 | March 2028",
       "reason": "not the Security Gateway & Management software table: this row states no Security Gateway & Management release-train lifecycle"
     },
     {
