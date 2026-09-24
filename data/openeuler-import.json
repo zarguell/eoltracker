@@ -1,0 +1,152 @@
+{
+  "source_url": "https://www.openeuler.org/en/download/",
+  "verifier": "deterministic-openeuler",
+  "checked_at": "2026-09-24T01:06:41Z",
+  "record_scope": "openEuler community releases: one software record with one release per release identity the community's own release catalog and release history name, carrying the release day the technical white paper states as general availability, the download card's stated planned end of life as end of life, and the innovation support window the lifecycle page derives where its own effective date covers the release",
+  "rows": {
+    "seen": 51,
+    "by_surface": {
+      "release catalog API": 22,
+      "technical white paper release history": 21,
+      "download page release cards": 4,
+      "download page embedded item list": 4
+    },
+    "identities": 26,
+    "reconciled": 25,
+    "published": 26,
+    "retained": 0,
+    "excluded": 0,
+    "catalog_only": 5,
+    "history_only": 4,
+    "ga_stated": 19,
+    "ga_withheld": 2,
+    "ga_absent": 5,
+    "eol_stated": 3,
+    "eol_derived": 1
+  },
+  "conflicts": [
+    {
+      "surface": "https://www.openeuler.org/en/download/",
+      "rendering": "embedded JSON-LD item list",
+      "kind": "not_rendered",
+      "identity": "community:24.03:sp2",
+      "reason": "the page's embedded item list states this release but the cards it renders do not; the list is an older rendering of the catalog and is not read for milestones",
+      "stated": "2026/03"
+    },
+    {
+      "surface": "https://www.openeuler.org/en/download/",
+      "rendering": "rendered release card",
+      "kind": "not_listed",
+      "identity": "community:24.03:sp4",
+      "reason": "the rendered card states a planned end of life the page's embedded item list does not carry; the card leads and is what this record publishes",
+      "stated": "2027/03"
+    }
+  ],
+  "set_aside": [
+    {
+      "table": "technical white paper release history",
+      "quote": "openEuler open source community was officially established",
+      "reason": "the community's own establishment, not a release of it"
+    }
+  ],
+  "disputed": [
+    {
+      "release": "24.03-lts-sp4",
+      "reason": "the sources state different general availabilities for openEuler 24.03 LTS SP4: the technical white paper dates the release to June 30, 2026, while the community's own release announcement is dated July 1, 2026 and says the release is now available; the sources define no artifact-date versus announcement-date distinction, so no day is published",
+      "evidence": [
+        {
+          "source_url": "https://www.openeuler.org/whitepaper/en/openEuler%2024.03%20LTS%20SP4%20Technical%20White%20Paper.pdf",
+          "quote": "On June 30, 2026, openEuler 24.03 LTS SP4 was officially released as an enhanced and extended update to openEuler 24.03 LTS, built on Linux kernel 6.6."
+        },
+        {
+          "source_url": "https://www.openeuler.org/en/news/20260701-openEuler%2024.03%20LTS%20SP4/20260701-openEuler%2024.03%20LTS%20SP4.html",
+          "quote": "openEuler 2026-07-01"
+        },
+        {
+          "source_url": "https://www.openeuler.org/en/news/20260701-openEuler%2024.03%20LTS%20SP4/20260701-openEuler%2024.03%20LTS%20SP4.html",
+          "quote": "OpenAtom openEuler 24.03 LTS SP4 is now available."
+        }
+      ]
+    },
+    {
+      "release": "24.03-lts",
+      "reason": "the sources state different general availabilities for openEuler 24.03 LTS: the technical white paper dates the release to May 30, 2024, the lifecycle component says only that it was released in June 2024, and the community's own release announcement carries a June 6, 2024 dateline; the sources define no artifact-date versus launch-event-date distinction, so no day is published",
+      "evidence": [
+        {
+          "source_url": "https://www.openeuler.org/whitepaper/en/openEuler%2024.03%20LTS%20SP4%20Technical%20White%20Paper.pdf",
+          "quote": "On May 30, 2024, openEuler 24.03 LTS was released."
+        },
+        {
+          "source_url": "https://www.openeuler.org/en/other/lifecycle/",
+          "quote": "The latest openEuler 24.03 LTS was released in June 2024 (kernel 6.6)."
+        },
+        {
+          "source_url": "https://www.openeuler.org/en/news/20240612-openEuler%2024.03%20LTS-The%20First%20AI-Native%20Open%20Source%20Operating%20System/",
+          "quote": "[Beijing, China, June 6, 2024]"
+        }
+      ]
+    }
+  ],
+  "cross_checks": [
+    {
+      "rule": "In principle, the lifecycle for service pack (SP) updates within an LTS release is 9 months for minor SPs (released in June, optional) or 24 months for major SPs (released in December).",
+      "release": "24.03-lts-sp4",
+      "kind": "minor",
+      "base": "2026-06-30",
+      "computed": "2027-03",
+      "stated": "2027/03"
+    },
+    {
+      "rule": "In principle, the lifecycle for service pack (SP) updates within an LTS release is 9 months for minor SPs (released in June, optional) or 24 months for major SPs (released in December).",
+      "release": "24.03-lts-sp3",
+      "kind": "major",
+      "base": "2025-12-30",
+      "computed": "2027-12",
+      "stated": "2027/12"
+    }
+  ],
+  "retained": [],
+  "policy": {
+    "url": "https://www.openeuler.org/en/other/lifecycle/",
+    "effective_from": "2025-08-01",
+    "rules": [
+      {
+        "label": "Innovation release support window",
+        "quote": "Innovation releases (effective from August 2025): Released in September every year with 6 months of community support."
+      }
+    ],
+    "not_dated": [
+      {
+        "quote": "The full lifecycle of an LTS release is 6 years (4 years of full support and 2 years of maintenance support).",
+        "reason": "the six-year LTS lifetime is stated under an effective date of August 2025, and the policy also lets an initial LTS release end half a year to 1 year before its major SP, so no release here has a certain terminal date from this sentence"
+      },
+      {
+        "quote": "By default, the lifecycle of an initial LTS release (SP0) follows that of a major SP, but could end half a year to 1 year in advance based on a review of its usage in the community and community rules.",
+        "reason": "the sentence permits an initial LTS release to end six to twelve months early by review, so no terminal date for an initial LTS release is certain"
+      },
+      {
+        "quote": "Prior to the end of this lifecycle, a joint maintenance team may be assembled to request an optional 2-year extension.",
+        "reason": "the extension is optional and neither its grant nor its terminal date is stated, so it never shortens or lengthens a published date"
+      },
+      {
+        "quote": "Maintenance or extended support is limited to fixes for critical or high-severity CVEs and bugs.",
+        "reason": "maintenance support still fixes critical and high-severity CVEs, so this boundary is not an end of security support and eossec stays null"
+      }
+    ]
+  },
+  "total_records": 1,
+  "limitations": [
+    "eos is null for every release: the community publishes no end of sale or orderability milestone, and a download is not a sale.",
+    "eossec is null for every release: the community's full-support-to-maintenance-support boundary is a real transition, but maintenance support still fixes critical and high-severity CVEs, so it is not an end of security support.",
+    "Most releases carry a null end of life: the download page states a planned end of life only for the service packs it currently serves, and the lifecycle page's durations are stated under an effective date of August 2025, so they are applied only to a release that effective date covers.",
+    "The service-pack window is compared, not published: a release card's stated month is the published end of life, and the policy's own 9/24-month arithmetic is recomputed beside it and refuses the import when the two disagree.",
+    "Two general availabilities are withheld because the sources disagree: each side's verbatim quote is reported, and neither day is chosen.",
+    "The release catalog API states identities, scenarios and architectures only: it carries no release or end-of-life date, and its FileInfo.ModTime is the zero time, so it is stored and never used for revision detection.",
+    "The catalog is not the release history: the API omits the published innovation releases 20.09, 21.03, 21.09 and 22.09, which are published from the white paper, and no catalog disappearance is read as an end of life.",
+    "The download page's embedded JSON-LD item list is an older rendering of its own catalog and is not read for milestones; every row it states differently from the rendered cards is reported under conflicts.",
+    "The lifecycle page's prose is supplied by a content-hashed script component rather than the server-rendered page; the component is discovered from the page each refresh and its rule sentence is stored verbatim with the one date derived from it.",
+    "The white paper's release history is read from a PDF with a bounded extractor for that document's own construction; a page or font it cannot decode refuses the import rather than contributing fewer sentences.",
+    "Architectures, scenarios and delivery forms are not releases: one release per identity the community names, never one per architecture or image.",
+    "The embedded line's release is catalogued and published as a release of this product, as the community's own catalog and download page list it, but neither states a release date or an end of life for it, so both stay null."
+  ]
+}

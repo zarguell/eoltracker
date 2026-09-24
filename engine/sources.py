@@ -45,6 +45,21 @@ CEPH_RELEASES = "https://docs.ceph.com/en/latest/releases/"
 CEPH_RELEASES_DATA = "https://raw.githubusercontent.com/ceph/ceph/main/doc/releases/releases.yml"
 NETSCALER_SOURCE = "https://www.citrix.com/support/product-lifecycle/product-matrix.html"
 NETSCALER_LEGACY = "https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html"
+XENSERVER_SUPPORT = "https://www.xenserver.com/support"
+XENSERVER_STATEMENT = ("https://support.citrix.com/external/article?articleUrl=CTX692513-"
+                       "prepare-for-citrix-hypervisor-82-cumulative-update-1-end-of-life")
+FLATCAR_RELEASES = "https://www.flatcar.org/releases-json/releases.json"
+FLATCAR_CHANNELS = ("https://www.flatcar.org/docs/latest/updates-releases/releases/"
+                    "switching-channels")
+OPENEULER_DOWNLOAD = "https://www.openeuler.org/en/download/"
+OPENEULER_API = "https://www.openeuler.org/api/mirrors/"
+OPENEULER_LIFECYCLE = "https://www.openeuler.org/en/other/lifecycle/"
+OPENEULER_WHITEPAPER = ("https://www.openeuler.org/whitepaper/en/openEuler%2024.03%20LTS%20SP4%20"
+                        "Technical%20White%20Paper.pdf")
+OPENEULER_ANNOUNCEMENT_2403 = ("https://www.openeuler.org/en/news/20240612-openEuler%2024.03%20"
+                               "LTS-The%20First%20AI-Native%20Open%20Source%20Operating%20System/")
+OPENEULER_ANNOUNCEMENT_SP4 = ("https://www.openeuler.org/en/news/20260701-openEuler%2024.03%20"
+                              "LTS%20SP4/20260701-openEuler%2024.03%20LTS%20SP4.html")
 CHECKPOINT_LIFECYCLE = "https://www.checkpoint.com/support-services/support-life-cycle-policy/"
 ODOO_SUPPORT = "https://www.odoo.com/documentation/master/administration/standard_extended_support.html"
 SAMBA_RELEASE_PLANNING = "https://wiki.samba.org/index.php/Samba_Release_Planning"
@@ -73,6 +88,17 @@ NVIDIA_ATTRIBUTION = ("NVIDIA vGPU software branch lifecycle published directly 
 NETSCALER_ATTRIBUTION = ("NetScaler ADC firmware lifecycle published directly by Citrix's product "
                          "matrices; EOM never fills a normalized milestone because the vendor states support "
                          "continues after it.")
+XENSERVER_ATTRIBUTION = ("XenServer hypervisor lifecycle published directly by Citrix's and XenServer's own "
+                         "product matrices and the public CTX692513 support article; only each table's own EOL "
+                         "and EOS columns become milestones, and NSC, EOM and EOES stay the vendor's own cells.")
+FLATCAR_ATTRIBUTION = ("Flatcar Container Linux Stable stream lifecycle published directly by the Flatcar "
+                       "project's release feed and channel documentation; each stream's end of life is derived "
+                       "from the documented next-major-Stable-release trigger and labelled as such.")
+OPENEULER_ATTRIBUTION = ("openEuler community release lifecycle published directly by the openEuler "
+                         "community's release catalog, download page, lifecycle policy and release "
+                         "documents; release cards state an end of life at the month precision the "
+                         "community gives, and the innovation support window derived from the published "
+                         "policy is labelled as derived.")
 # A researched record's verifier names a contributor, not a pipeline: the
 # registry leaves those to engine.contribute, which admits them against their
 # own stored citation.
@@ -222,10 +248,30 @@ SOURCES = (
         name="Citrix product lifecycle matrix",
         url=NETSCALER_SOURCE,
         pages=(Page(NETSCALER_SOURCE, "Citrix product matrix (NetScaler ADC)"),
-               Page(NETSCALER_LEGACY, "Citrix legacy product matrix (NetScaler ADC)")),
+               Page(NETSCALER_LEGACY, "Citrix legacy product matrix")),
         attribution=NETSCALER_ATTRIBUTION,
         validator="engine.netscaler.validate_record",
         report="netscaler-import.json",
+    ),
+    Source(
+        id="import-xenserver",
+        module="engine.xenserver",
+        entry="import_xenserver",
+        verifier="deterministic-xenserver",
+        category="software",
+        name="XenServer lifecycle",
+        url=XENSERVER_SUPPORT,
+        # The current vendor table leads: a reader checking a published line
+        # opens the page Citrix's own matrix names as XenServer's lifecycle
+        # source. The legacy matrix supplies the historical lines and the
+        # support article states the 8.2 line's terminal date, which the
+        # refresh cross-checks against the legacy row.
+        pages=(Page(XENSERVER_SUPPORT, "XenServer product matrix"),
+               Page(NETSCALER_LEGACY, "Citrix legacy product matrix"),
+               Page(XENSERVER_STATEMENT, "Citrix support article CTX692513")),
+        attribution=XENSERVER_ATTRIBUTION,
+        validator="engine.xenserver.validate_record",
+        report="xenserver-import.json",
     ),
     Source(
         id="import-ceph",
@@ -391,6 +437,24 @@ SOURCES = (
         report="teamcity-import.json",
     ),
     Source(
+        id="import-flatcar",
+        module="engine.flatcar",
+        entry="import_flatcar",
+        verifier="deterministic-flatcar",
+        category="software",
+        name="Flatcar Container Linux releases",
+        url=FLATCAR_RELEASES,
+        # The feed leads: it is the record's own source, and a reader checking a
+        # published stream opens the row it was read from. The channel
+        # documentation is registered beside it because it states the rule every
+        # derived end of life rests on.
+        pages=(Page(FLATCAR_RELEASES, "Flatcar Container Linux release feed"),
+               Page(FLATCAR_CHANNELS, "Flatcar Container Linux channel documentation")),
+        attribution=FLATCAR_ATTRIBUTION,
+        validator="engine.flatcar.validate_record",
+        report="flatcar-import.json",
+    ),
+    Source(
         id="import-iis",
         module="engine.iis",
         entry="import_iis",
@@ -441,6 +505,29 @@ SOURCES = (
         validator="engine.openui5.validate_record",
         report="openui5-import.json",
     ),
+    Source(
+        id="import-openeuler",
+        module="engine.openeuler",
+        entry="import_openeuler",
+        verifier="deterministic-openeuler",
+        category="software",
+        name="openEuler community releases",
+        url=OPENEULER_DOWNLOAD,
+        # The download page leads: it is the release history a reader checking a
+        # published row opens, and it states the one milestone this record
+        # publishes directly. The catalog supplies the identities, the lifecycle
+        # page the rule one date derives from, and the white paper and
+        # announcements the release dates the page does not state.
+        pages=(Page(OPENEULER_DOWNLOAD, "openEuler community release downloads"),
+               Page(OPENEULER_API, "openEuler release catalog API"),
+               Page(OPENEULER_LIFECYCLE, "openEuler community version lifecycle"),
+               Page(OPENEULER_WHITEPAPER, "openEuler 24.03 LTS SP4 technical white paper"),
+               Page(OPENEULER_ANNOUNCEMENT_2403, "openEuler 24.03 LTS release announcement"),
+               Page(OPENEULER_ANNOUNCEMENT_SP4, "openEuler 24.03 LTS SP4 release announcement")),
+        attribution=OPENEULER_ATTRIBUTION,
+        validator="engine.openeuler.validate_record",
+        report="openeuler-import.json",
+    ),
 )
 
 # Registry id -> source, and verifier -> source: one source per verifier, which
@@ -449,8 +536,18 @@ BY_ID = {source.id: source for source in SOURCES}
 BY_VERIFIER = {source.verifier: source for source in SOURCES}
 if len(BY_ID) != len(SOURCES) or len(BY_VERIFIER) != len(SOURCES):
     raise RegistryError("Duplicate source id or verifier")
-# Page URL -> label, exact match first, then the site root it belongs to.
-PAGES = {page.url: page.label for source in SOURCES for page in source.pages}
+# Page URL -> label, exact match first, then the site root it belongs to. Two
+# sources may read the same page (Citrix's legacy product matrix carries both
+# the NetScaler ADC tab and the XenServer tabs), and a page has one published
+# name: both sources must register the same label, so neither can silently
+# relabel a page another source already publishes.
+PAGES = {}
+for source in SOURCES:
+    for page in source.pages:
+        existing = PAGES.setdefault(page.url, page.label)
+        if existing != page.label:
+            raise RegistryError(f"Page {page.url} is registered as both {existing!r} and "
+                                f"{page.label!r}; a shared page carries one label")
 
 
 def all_sources():

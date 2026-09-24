@@ -86,6 +86,60 @@ Automation lives in `.github/workflows/`: `publish.yml` builds and publishes on 
 - Hardware records derive from [eosl.date](https://eosl.date/) by Subash Geetha Krishnan (CC BY 4.0 — see `THIRD-PARTY-NOTICES.txt`).
 - OpenEoX Core v1.0 CSD01 schema is vendored unmodified from OASIS (`OASIS-NOTICE.txt`).
 
+XenServer hypervisor lifecycle is refreshed with
+`.venv/bin/python -m engine import-xenserver`. It reads three public vendor
+pages: the current `xenserver.com/support` product matrix (XenServer 9 and 8.4),
+Citrix's legacy product matrix (Citrix Hypervisor 8.2/8.1/8.0, XenServer 7.6
+down to 5, and the XenSource 4.x/3.x rows), and the public support article
+CTX692513, which states the Citrix Hypervisor 8.2 Cumulative Update 1 end of
+life. XenServer 8 and 8.4 are one line (the vendor states 8 is 8.4 under the
+hood), only each table's own `EOL` and `EOS` columns become milestones, and
+`NSC`, `EOM` and `EOES` stay the vendor's own cells — `NSC` is never general
+availability and `EOM`/`EOES` never become a security-support end. Citrix
+Hypervisor 8.0/8.1 keep only the dates their tab states. The `8.2` terminal date
+is stated by both the legacy matrix and the article, and the refresh refuses if
+the two disagree.
+
+Flatcar Container Linux Stable streams are refreshed with
+`.venv/bin/python -m engine import-flatcar`. It reads the project's public
+release feed (`flatcar.org/releases-json/releases.json`) — which dates every
+release to the day — and its channel documentation, which states the Stable
+support rule: *"Any Stable major version remains supported until a new major
+Stable version is released."* One release is published per Stable major, dated
+from that stream's first Stable release as `ga`, with `eol` **derived** from the
+dated next-major release and carrying the rule, base and trigger in
+`milestone_provenance`; the newest stream keeps a null `eol`, and `eos`/`eossec`
+stay null. Alpha, Beta, Edge and LTS rows and the feed's channel-pointer rows
+are accounted for with their reasons in `data/flatcar-import.json`. The LTS
+stream's 18-month rule is deliberately not modelled: no structured first-release
+history per LTS stream exists to measure from, and its yearly cadence is a
+release interval, never a date.
+
+openEuler community releases are refreshed with
+`.venv/bin/python -m engine import-openeuler`. It reads five official, public
+sources: the release-catalog API (`openeuler.org/api/mirrors/`) for release
+identities and LTS flags, the download page for the month-precision `Planned
+EOL` of the service packs it currently serves, the lifecycle page's own content
+component for the community's support rules, the 24.03 LTS SP4 technical white
+paper for each release's day-precision release date, and the two release
+announcements that date the two releases the sources disagree about. The
+catalog API's identities become releases; a white-paper release day becomes
+`ga`; a card's `Planned EOL` becomes a month-precision `eol`; and the six-month
+innovation window becomes one **derived** `eol`, labelled and carrying its rule,
+base and duration in `milestone_provenance`. `eos` and `eossec` stay null — the
+full-support-to-maintenance-support boundary still fixes critical CVEs, so it is
+not a security-support end. Two `ga` dates stay absent because the sources
+disagree (the paper's day, the lifecycle component's month, an announcement's
+own dateline); every side is stored verbatim, and a moved or reworded one
+refuses the import. The six-year LTS lifetime, the early-SP0 sentence and the
+optional two-year extension are read and set aside with reasons, and the
+policy's 9/24-month service-pack arithmetic is recomputed beside the cards'
+stated months rather than published. The API omits the published innovation
+releases 20.09, 21.03, 21.09 and 22.09, which are published from the white
+paper's history; a catalog omission is never read as an end of life. Every
+source row is accounted for per surface, and the disclosures live in
+`data/openeuler-import.json`.
+
 ## Local development
 
 ```bash

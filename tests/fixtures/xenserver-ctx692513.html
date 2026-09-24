@@ -1,0 +1,2121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="6a5fee8c-80be-4b9a-ab7e-b607e3f8ad3e-test" ></script> -->
+    <script id="cookieScript"
+        src=""
+        type="text/javascript" charset="UTF-8"
+        data-domain-script=""></script>
+    <!-- <script type="text/javascript">
+        function OptanonWrapper() { }
+    </script> -->
+
+
+    <!-- OneTrust Cookies Settings button start -->
+    <!-- <button id="ot-sdk-btn" class="ot-sdk-show-settings" >Cookie Settings</button> -->
+    <!-- OneTrust Cookies Settings button end -->
+
+    <!-- Google Tag Manager -->
+    <!-- <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KF7XWD');
+
+    </script> -->
+    <!-- End Google Tag Manager -->
+    <title>
+        Prepare for Citrix Hypervisor 8.2 Cumulative Update 1 End of Life
+    </title>
+    <link rel="icon" type="image/x-icon" href="https://cdn.wolkenservicedesk.com/Citrix/Logos/company_logo/CitrixFavicon.ico">
+    <meta name="description"
+    content=" Prepare for Citrix Hypervisor 8.2 Cumulative Update 1 End of Life ">  
+
+        <script type="application/ld+json">
+        {"@context":"http://schema.org","@type":"Article","name":["XenServer"],"alternateName":["XenServer"],"datePublished":"06-08-2025 05:12","dateModified":"06-08-2025 05:12","mainEntityOfPage":{"@type":"WebPage","url":"support.citrix.com/external/article/692513"},"keywords":["Reference","XenServer"],"url":"support.citrix.com/external/article/692513","about":[],"author":{"@type":"Person","name":"Citrix"},"headline":"Prepare for Citrix Hypervisor 8.2 Cumulative Update 1 End of Life","publisher":{"@type":"Organization","name":"Citrix","logo":{"@type":"ImageObject","url":"https://support.citrix.com/assets/images/company-logo.png"}},"aggregateRating":{}}</script>
+
+    <link rel="canonical"
+        href="https://support.citrix.com/external/article/CTX692513/prepare-for-citrix-hypervisor-82-cumulat.html"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500" rel="stylesheet">
+
+    <!--SU Scripts-->
+
+    <style>
+        :root {
+            --wolken-primary-color: #CC092F;
+            --wolken-primary-color-light: #CC092F0D;
+            --wolken-primary-complimentory-color: #2030CC;
+            --wolken-accent-complimentory-color: #CCBC20;
+        }
+
+        body {
+            background: #FFFFFF;
+            height: 100vh;
+            padding: 0;
+            margin: 0;
+            font-size: 16px;
+            /* margin: 12px !important; */
+        }
+
+        #onetrust-consent-sdk {
+            font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            font-family: "Gotham-Book", sans-serif;
+        }
+
+        #ot-sdk-btn.ot-sdk-show-settings {
+            display: none;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 12px 0;
+        }
+
+        h1 {
+            line-height: 28px;
+        }
+
+        h2 {
+            line-height: 24px;
+        }
+
+        /* newly added for INC01200689 */
+        img {
+            height: auto !important;
+            max-width: 100% !important;
+        }
+
+        .wolken-h3 {
+            font: 500 19px/32px Poppins;
+        }
+
+        .wolken-h4 {
+            font: 400 15px/24px Poppins;
+        }
+        .wolken-h4-no-margin {
+            font: 400 15px/24px Poppins;
+            margin: 0;
+        }
+
+        .wolken-h5 {
+            font: 400 13px/20px Poppins;
+        }
+
+        .flex-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .flex-row {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .column-gap-16>*:not(:last-child) {
+            margin-bottom: 16px;
+        }
+
+        .row-gap-16>*:not(:last-child) {
+            margin-right: 16px;
+        }
+
+        .row-gap-8>*:not(:last-child) {
+            margin-right: 8px;
+        }
+
+        .row-gap {
+            margin: 10px 15px;
+        }
+
+        .row-align-space-between-center {
+            place-content: center space-between;
+            align-items: center;
+        }
+
+        .row-align-center-center {
+            place-content: center;
+            align-items: center;
+        }
+
+        .custom-header,
+        .custom-footer {
+            max-height: 100%;
+            width: 100%;
+            display: block;
+            border: 0;
+        }
+
+        .search-bar {
+            border: 1px solid #cacaca;
+            width: calc(100%);
+            outline: none;
+            padding: 12px 0;
+            padding-left: 15px !important;
+            text-indent: 12px;
+            font-family: arial, sans-serif;
+            font-size: 16px;
+            line-height: 24px;
+            height: 30px;
+            white-space: pre;
+            overflow: auto;
+            box-sizing: border-box;
+            display: block;
+            border-radius: 6px;
+        }
+
+        .show_more,
+        .show_less {
+            width: auto !important;
+        }
+
+        .search-button-container {
+            padding: 0 16px;
+            display: flex;
+            align-items: center;
+            /* place-content: end; */
+            margin-bottom: 5px !important;
+            place-content: center;
+            margin-bottom: 5px !important;
+            width: 100%;
+            background: transparent linear-gradient(90deg, #3D4145 0%, #FAFAFA 100%) 0% 0% no-repeat padding-box !important;
+            background-repeat: no-repeat;
+        }
+
+        .search-bar-container {
+            width: 880px;
+            display: flex;
+            height: 100px;
+            align-items: center;
+        }
+
+        .material-icon-search {
+            cursor: pointer;
+            align-self: center;
+            font-size: 20px;
+            color: #00000061;
+        }
+
+        .article-updated-time {
+            flex: 0 0 auto;
+            align-items: center;
+        }
+
+        .article-updated-date-icon {
+            color: var(--wolken-accent-complimentory-color);
+        }
+
+        .article-updated-date-icon_cal {
+            color: var(--wolken-primary-complimentory-color);
+        }
+
+
+        .article-detail-card {
+            box-shadow: 0px 0px 6px #00000066;
+            border-top: 4px solid var(--wolken-primary-color);
+            border-radius: 10px;
+            width: 100%;
+        }
+        .article-detail-card-desc {
+            display: none;
+
+        }
+
+        .article-detail-card-header {
+            padding: 8px 16px;
+            border-bottom: 1px solid #00000066;
+        }
+
+        .article-detail-card-content {
+            padding: 8px 16px;
+            max-width: 100%;
+            overflow: auto;
+        }
+
+        .like_dislike_btn {
+            cursor: pointer;
+        }
+
+        .product-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding: 8px;
+        }
+
+        .product-chip {
+            padding: 4px 12px;
+            margin: 4px;
+            background: var(--wolken-primary-color-light);
+            border: 1px solid #00000066;
+            border-radius: 50px;
+            font: 400 12px/25px Poppins;
+            color: #000000;
+        }
+
+        .attachment-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .attachment-card {
+            box-shadow: 0px 0px 2px #00000033;
+            border-radius: 4px;
+            margin: 8px;
+        }
+
+        .attachment-card:hover {
+            box-shadow: 0px 0px 4px #00000033;
+        }
+
+        .attachment-name {
+            padding: 0px 8px;
+            font: 400 12px/18px Poppins;
+        }
+
+        .attachment {
+            max-width: 100%;
+        }
+
+        .full-width {
+            width: 100%;
+        }
+
+        .attachment-download {
+            padding: 8px 12px;
+            color: #ffffff;
+            background: var(--wolken-primary-color);
+            border-radius: 4px;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        .attachment-download-icon {
+            font-size: 16px;
+            height: 16px;
+            width: 16px;
+        }
+
+        .text-ellipsis {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .article-page {
+            position: relative;
+        }
+
+        .loader-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #ffffff;
+            z-index: 1;
+        }
+
+        .article-container {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            width: 100%;
+        }
+
+        .wolken-footer {
+            width: 100%;
+            height: 30px;
+            padding: 0 16px;
+            background-color: var(--wolken-primary-color-light);
+            place-content: center flex-end;
+            align-items: center;
+        }
+
+        .wolken-footer-content {
+            text-decoration: none;
+            cursor: pointer;
+            font: 400 12px/10px Poppins;
+        }
+
+        table {
+            table-layout: fixed;
+            border: 1px solid;
+            border-collapse: collapse;
+            white-space: initial;
+            word-break: break-word;
+        }
+
+        table td,
+        table th {
+            border: 1px solid;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+
+        .product-table {
+            width: 100%;
+            text-align: left;
+
+            th,
+            td {
+                border: 1px solid #cacaca;
+                padding: 1rem, 2rem;
+            }
+
+            td:nth-child(1),
+            th:nth-child(1) {
+                width: auto;
+            }
+
+            td:nth-child(2),
+            th:nth-child(2) {
+                width: 30%;
+            }
+
+            .product-table-header {
+                background: var(--wolken-primary-color-light);
+            }
+        }
+
+        .alert_style {
+            background-color: rgb(209, 119, 119);
+            padding: 5px 5px 5px 5px;
+            border-radius: 5px 5px 5px 5px;
+        }
+
+        .kb_article_alert {
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .article-detail-card-attachment{
+            order: 19;
+        }
+        
+        .feedback-section{
+            order: 20;
+        }
+
+
+        @media all and (min-width: 1200px) {
+            .wolken-content-container {
+                max-width: 1170px;
+                width: 100%;
+                margin: auto;
+            }
+
+            .article-header {
+                display: flex;
+                flex-direction: row;
+                place-content: flex-start space-between;
+                align-items: flex-start;
+                margin-top: 10px !important;
+                order: 1;
+            }
+
+            .article-ruler {
+                border: 2px solid var(--wolken-primary-color);
+                width: 10px;
+                width: 100%;
+                position: absolute;
+                top: 135px;
+                left: 0;
+                right: 0;
+            }
+
+            .article-header>div:not(:last-child) {
+                margin-right: 16px;
+            }
+
+            .article-header-info {
+                display: flex;
+                flex-direction: row;
+                place-content: flex-start start;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                order: 2;
+            }
+            .article-detail-card-product{
+                order: 3;
+            }
+
+            .article-header-info>div:not(:last-child) {
+                margin-right: 2.5rem;
+            }
+        }
+
+        @media all and (min-width: 1440px) {
+            .wolken-content-container {
+                max-width: 1400px;
+                margin: auto;
+            }
+        }
+
+        @media all and (min-width: 1199px) {
+            .wolken-content-container {
+                max-width: 930px;
+                margin: auto;
+            }
+        }
+
+        @media all and (min-width: 992px) {
+            .wolken-content-container {
+                max-width: 960px;
+                margin: auto;
+            }
+        }
+
+        @media all and (max-width: 1199px) {
+            .wolken-content-container {
+                width: 100%;
+                padding: 16px;
+            }
+
+            .attachment {
+                width: 25%;
+            }
+
+            .article-header {
+                display: flex;
+                flex-direction: row;
+                place-content: flex-start space-between;
+                align-items: flex-start;
+            }
+
+            .article-header>div:not(:last-child) {
+                margin-right: 16px;
+            }
+
+            .article-header-info {
+                display: flex;
+                flex-direction: row;
+                place-content: flex-start start;
+                align-items: flex-start;
+            }
+
+            .article-header-info>div:not(:last-child) {
+                margin-right: 16px;
+            }
+        }
+
+        @media all and (min-width: 768px) and (max-width: 959px) {
+            .attachment {
+                width: 33.333333%;
+            }
+
+            .article-header {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .article-header>div:not(:last-child) {
+                margin-bottom: 8px;
+            }
+        }
+
+        @media all and (max-width: 767px) {
+            .attachment {
+                width: 50%;
+            }
+
+            .article-header {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .article-header>div:not(:last-child) {
+                margin-bottom: 8px;
+            }
+
+            .article-header-info {
+                display: flex;
+                flex-direction: row;
+                place-content: flex-start start;
+                align-items: flex-start;
+            }
+
+            .article-header-info>div:not(:last-child) {
+                margin-right: 16px;
+            }
+        }
+
+        .ghost-loader {
+            border-radius: 5px;
+            animation: shine-lines 1.5s infinite linear;
+            background-image: linear-gradient(to right, rgba(211, 211, 211, 0.2) 0%, rgba(211, 211, 211, 0.7) 20%,
+                    rgba(211, 211, 211, 0.9) 40%, rgba(211, 211, 211, 0.2) 100%);
+        }
+
+        @keyframes shine-lines {
+            0% {
+                background-position: -100px;
+            }
+
+            40%,
+            100% {
+                background-position: 140px;
+            }
+        }
+
+        .ghost-custom-header {
+            width: 100%;
+            height: 90px;
+        }
+
+        .ghost-article-title {
+            width: 200px;
+            height: 32px;
+        }
+
+        .ghost-article-date {
+            width: 200px;
+            height: 32px;
+        }
+
+        .ghost-article-detail-title {
+            width: 150px;
+            height: 24px;
+        }
+
+        .ghost-product-detail-content>div {
+            width: 20%;
+            height: 30px;
+            padding: 4px 12px;
+            margin: 4px;
+            border-radius: 50px;
+        }
+
+        .ghost-article-detail-content>div:nth-child(1) {
+            width: 70%;
+            height: 20px
+        }
+
+        .ghost-article-detail-content>div:nth-child(2) {
+            width: 20%;
+            height: 30px
+        }
+
+        .ghost-article-detail-content>div:nth-child(3) {
+            width: 40%;
+            height: 20px
+        }
+
+        .ghost-article-detail-content>div:nth-child(4) {
+            width: 30%;
+            height: 15px
+        }
+
+        .ghost-article-detail-content>div:nth-child(5) {
+            width: 50%;
+            height: 25px
+        }
+
+        .ghost-custom-footer {
+            width: 100%;
+            height: 140px;
+        }
+
+        .wolken-primary-button {
+            margin-left: 2px;
+            /* background-color: var(--wolken-primary-color); */
+            background-color: #005C8A;
+            border-radius: 4px;
+            box-shadow: 0 5px 6px 0rgba(0, 0, 0, 0.1);
+            border: none;
+            color: white;
+            border: 1px solid #7e8c9a;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            overflow: hidden;
+            height: 30px;
+            width: 65px;
+            min-width: 65px;
+            cursor: pointer;
+            line-height: 0;
+        }
+
+        .wolken-primary-button .material-icons {
+            font-size: 20px;
+            height: 20px;
+            width: 20px;
+        }
+
+        #feedback_actionMsg,
+        #feedback_actions {
+            margin: 8px 8px 8px 0px;
+        }
+
+        #feedbackForm {
+            display: none;
+        }
+
+        .article-feedback-card {
+            box-shadow: 0px 0px 6px #00000066;
+            border-radius: 10px;
+            width: 100%;
+            padding: 1em;
+        }
+        .article-feedback-card input {
+            padding: 0.5em;
+            border: 1px solid;
+            border-radius: 4px;
+            border-color: rgba(0, 0, 0, 0.2);
+            outline: none;
+        }
+        input:focus {
+            border-color: rgba(0, 0, 0, 0.7);
+        }
+        
+        .article-feedback-card textarea {
+            padding: 0.5em;
+            border: 1px solid;
+            border-radius: 4px;
+            border-color: rgba(0, 0, 0, 0.2);
+            outline: none;
+        }
+        .article-feedback-card .cancel-button {
+            background-color: transparent;
+            color: red;
+        }
+        .article-feedback-card .reset-button {
+            background-color: transparent;
+            color: var(--wolken-primary-color);
+        }
+
+        textarea:focus {
+            border-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .checkbox-section {
+            gap: 1em;
+            margin-bottom: 1em;
+        }
+
+        #comment-error {
+            color: 'red';
+            font: 400 11px/17px Poppins;
+            margin-top: '5px';
+        }
+
+        #feedback-success-msg {
+            margin-top: 1em;
+            text-align: center;
+        }
+
+        .icon-24 {
+            font-size: 20px;
+        }
+
+        span.mat-caption {
+            font: 400 12px/14px Poppins;
+            letter-spacing: normal;
+        }
+
+        @media screen and (-ms-high-contrast: active),
+        (-ms-high-contrast: none) {
+
+            /* IE10+ specific styles go here */
+            .article-updated-date-icon {
+                color: var(--wolken-primary-complimentory-color);
+                color: #ccbc20;
+            }
+
+            .article-updated-date-icon_cal {
+                color: var(--wolken-primary-complimentory-color);
+                color: #2030cc;
+            }
+
+            .article-detail-card {
+
+                box-shadow: 0px 0px 10px 0px rgba(68, 68, 68, 0.6);
+                border-top: 4px solid var(--wolken-primary-color);
+                border-top-style: solid;
+                border-top-width: 4px;
+                border-top-color: rgb(204, 9, 47);
+                border-radius: 10px;
+                width: 100%;
+            }
+
+            .article-detail-card-header {
+                padding: 8px 16px;
+                border-bottom: 1px solid #00000066;
+                border-bottom-style: solid;
+                border-bottom-width: 1px;
+                border-bottom-color: rgba(0, 0, 0, 0.40);
+            }
+
+            .product-chip {
+                padding: 4px 12px;
+                margin: 4px;
+                background: var(--wolken-primary-color-light);
+                background: rgba(204, 9, 47, 0.05);
+                border: 1px solid rgba(0, 0, 0, 0.40);
+                border-style: solid;
+                border-width: 1px;
+                border-color: rgba(0, 0, 0, 0.40);
+                border-radius: 50px;
+                font: 400 12px/25px Poppins;
+                color: #000000;
+            }
+
+            .attachment-card {
+                box-shadow: 0px 0px 2px 0px rgba(68, 68, 68, 0.6);
+                border-radius: 4px;
+                margin: 8px;
+            }
+
+            .attachment-card:hover {
+                box-shadow: 0px 0px 4px 0px rgba(68, 68, 68, 0.6);
+
+            }
+
+            .attachment-name {
+                padding: 0px 8px;
+                font: 400 12px/18px Poppins;
+            }
+
+            .attachment-download {
+                padding: 8px 12px;
+                color: #ffffff;
+                background: var(--wolken-primary-color);
+                background: rgb(204, 9, 47);
+                border-radius: 4px;
+                height: 100%;
+                cursor: pointer;
+            }
+
+            .wolken-footer {
+                width: 100%;
+                height: 30px;
+                padding: 0 16px;
+                background-color: var(--wolken-primary-color-light);
+                background: rgba(204, 9, 47, 0.05);
+                place-content: center flex-end;
+                justify-content: flex-end;
+                align-items: center;
+            }
+
+            .wolken-primary-button {
+                box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+                background-color: var(--wolken-primary-color);
+                background-color: rgb(204, 9, 47);
+                color: #ffffff;
+                padding: 4px 12px;
+                font-size: 12px;
+                line-height: 24px;
+                cursor: pointer;
+                outline: 0;
+                border: none;
+                transform: translate3d(0, 0, 0);
+                transition: background .4s cubic-bezier(.25, .8, .25, 1), box-shadow 280ms cubic-bezier(.4, 0, .2, 1);
+                font-family: Poppins;
+                font-weight: 500;
+                border-radius: 4px;
+            }
+
+            table {
+                table-layout: fixed;
+                border: 1px solid;
+                border-collapse: collapse;
+                white-space: initial;
+                word-break: break-word;
+            }
+
+            table td,
+            table th {
+                border: 1px solid;
+                border-collapse: collapse;
+            }
+
+
+
+        }
+
+        pre {
+            white-space: pre-wrap !important;
+            background: #f7f7f7 !important;
+            padding: 5px !important;
+        }
+
+        hr {
+            margin: 20px 0;
+        }
+
+        hr br[data-mce-bogus] {
+            display: none;
+        }
+
+        .custom-header-container {
+            background-color: #eee;
+            border-bottom: .3em solid var(--wolken-primary-color);
+            box-sizing: border-box;
+            display: flex;
+            min-height: 48px;
+            justify-content: space-between;
+            position: relative;
+
+            .company-logo {
+                padding: 0px !important;
+                display: flex;
+                align-items: center;
+                font-family: 'Poppins';
+            }
+
+            .header-title {
+                margin-left: 12px;
+            }
+        }
+        #feedback-submit-button:disabled{
+            opacity: .3;
+        }
+        .text-red{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="article-page">
+        <div class="article-container flex-column">
+            <div class="custom-header-container"
+                style="display: none;">
+                <div class="company-logo wolken-content-container">
+                    <!-- <p><img id="brand_logo" src="https://cdn.wolkenservicedesk.com/wolken-footer-image.png" alt="Wolken Software"></p> -->
+                    <p><img id="brand_logo"></p>
+
+                    <h2 class="header-title">Welcome to "KB Articles"</h2>
+                    <p></p>
+                </div>
+            </div>
+            <iframe id="global-header"
+                style="display: block;"
+                class="custom-header"
+                title="https://cdn.wolkenservicedesk.com/Citrix/Header-footer/external_article_header.html"
+                src="https://cdn.wolkenservicedesk.com/Citrix/Header-footer/external_article_header.html"
+                height="65px"></iframe>
+            
+            <div id="article-details-container" class="wolken-content-container flex-column column-gap-16">
+
+                <!-- <hr class="article-ruler"> -->
+                <div class="article-header">
+                    <h3 class="wolken-h3">
+                        Prepare for Citrix Hypervisor 8.2 Cumulative Update 1 End of Life
+                    </h3>
+                </div>
+
+                <div class="article-header-info" id="article-header-info">
+                    <div class="flex-row article-updated-time">
+                        <span class="material-icons article-updated-date-icon">book</span>
+                        <h4 class="wolken-h4">Article ID: CTX692513
+                        </h4>
+                    </div>
+                    <div class="flex-row row-gap-8 article-updated-time">
+                        <span class="material-icons article-updated-date-icon_cal">calendar_today</span>
+                        <h4 class="wolken-h4">Updated On: <span id="date_time"></span></h4>
+                    </div>
+                </div>
+
+                
+                    
+                
+
+                    
+                    <div id="description" class="article-detail-card article-detail-card-desc">
+                        <div class="article-detail-card-header">
+                            <h4 class="wolken-h4">Description</h4>
+                        </div>
+                        <div class="article-detail-card-content wolken-h5">
+                            <p><p>Citrix Hypervisor 8.2 Cumulative Update 1&nbsp;becomes End of Life on&nbsp;<strong>June 25, 2025</strong>. Plan to upgrade to XenServer 8.4 before this date. For more information about XenServer 8.4, see <a href="https://docs.xenserver.com/en-us/xenserver/8/whats-new" target="_blank">What's New</a>.</p>
+<h2 id="DRAFT:CTXarticleforCH8.2EoL-KeychangesinXenServer8">Key changes in XenServer 8.4</h2>
+<h3 id="DRAFT:CTXarticleforCH8.2EoL-Licensing">Licensing</h3>
+<p>Only XenServer Premium Edition socket licenses are supported with XenServer 8.4. If you currently use a Citrix Virtual Apps and Desktops license file to license your XenServer hosts, this license file is no longer supported with XenServer 8.4. Obtain separate XenServer license files, which are available as part of your Citrix Virtual Apps and Desktops entitlement.</p>
+<p>For more information about how to proceed, see the next section:&nbsp;<em>Before upgrading to XenServer 8.4</em>.</p>
+<h3 id="DRAFT:CTXarticleforCH8.2EoL-Updates">Updates</h3>
+<p>An important change in XenServer 8.4 is how updates work. XenServer 8.4 provides frequent and granular updates either from a CDN or through offline bundles. This mechanism replaces the legacy hotfix approach.</p>
+<p>Key differences:</p>
+<div>
+<table><colgroup><col><col><col></colgroup><thead><tr><th colspan="1" rowspan="1">
+<div>&nbsp;</div>
+</th><th colspan="1" rowspan="1">
+<div>Citrix Hypervisor 8.2 Cumulative Update 1</div>
+</th><th colspan="1" rowspan="1">
+<div>XenServer 8.4</div>
+</th></tr></thead><tbody><tr><td colspan="1" rowspan="1">Delivery</td><td colspan="1" rowspan="1">Updates are delivered as hotfixes. A hotfix packages RPMs into an&nbsp;<span>ISO file</span>. This ISO file is zipped for attachment to the hotfix article.</td><td colspan="1" rowspan="1">Updates are delivered as sets of RPMs. These sets of RPMs are provided by a CDN for internet-connected pools or can be downloaded from the XenServer website for airgapped environments.</td></tr><tr><td colspan="1" rowspan="1">Location</td><td colspan="1" rowspan="1">Hotfixes are available to download from support.citrix.com.</td><td colspan="1" rowspan="1">
+<p>The CDN channels can be configured through XenCenter or the xe CLI.&nbsp;</p>
+<p>The offline bundles are available to download at xenserver.com/downloads</p>
+</td></tr><tr><td colspan="1" rowspan="1">Frequency (based on 2024 data)</td><td colspan="1" rowspan="1">~&nbsp; 2 hotfixes per month</td><td colspan="1" rowspan="1">~ 3 updates per month (per channel)</td></tr><tr><td colspan="1" rowspan="1"><span>Contents applied</span></td><td colspan="1" rowspan="1">
+<p>The hotfix contains a subset of released changes</p>
+<p><span>You can choose to apply contents of all new hotfixes or just some available hotfixes when you update.<br><br></span></p>
+</td><td colspan="1" rowspan="1">
+<p>A set of updates includes all released changes.</p>
+<p>You must apply all available changes when you update.</p>
+</td></tr><tr><td colspan="1" rowspan="1">Change types</td><td colspan="1" rowspan="1">Security fixes, bug fixes, and improvements. No changes of product function.</td><td colspan="1" rowspan="1">New features, security fixes, bug fixes, improvements, and foundational changes for future features or improvements.&nbsp;</td></tr><tr><td colspan="1" rowspan="1">Post-update tasks</td><td colspan="1" rowspan="1">
+<p>Post-update tasks are listed against the entire hotfix. Listed post-update tasks are mandatory.</p>
+</td><td colspan="1" rowspan="1">Post-update tasks can be listed as mandatory, recommended, or full. Mandatory tasks must be performed as part of the update. You can choose, based on the update information, whether to perform the recommended and full tasks as part of the update or defer them.</td></tr></tbody></table>
+</div>
+<p>For more information about how to proceed, see the next section:&nbsp;<em>Before upgrading to XenServer 8.4</em>.</p>
+<h2 id="DRAFT:CTXarticleforCH8.2EoL-BeforeupgradingtoXenServer8"><span>Before upgrading</span> to XenServer 8.4</h2>
+<h3 id="DRAFT:CTXarticleforCH8.2EoL-GetaXenServerPremiumEditionsocketlicense">Get a XenServer&nbsp;<span>Premium</span>&nbsp;Edition socket license</h3>
+<p>Only XenServer&nbsp;<span>Premium</span> Edition socket licenses are supported with XenServer 8.4. Ensure you get these licenses and apply them to your hosts before upgrading.</p>
+<ul style="list-style-type: disc;"><li>If you have a Citrix for Private Cloud, Citrix Universal Hybrid Multi-Cloud, Citrix Universal MSP, or Citrix Platform License subscription, XenServer Premium Edition socket licenses are available as an entitlement of your subscription.&nbsp; Allocate&nbsp;XenServer licenses from your&nbsp;<a href="https://www.citrix.com/account/" target="_blank">MyCitrix Account</a>.</li><li>If you use your Citrix Virtual Apps and Desktops licenses to license Citrix Hypervisor 8.2 CU1,&nbsp;request to participate in a no-cost promotion for 10,000 XenServer Premium Edition socket licenses.&nbsp;Get in touch with your Citrix Sales representative or Citrix Channel partner, who will be able to complete your registration and delivery of licenses. If you don’t have a partner, please use the&nbsp;<a href="https://www.citrix.com/buy/partnerlocator/" target="_blank">partner locator</a>.</li><li>If you are already using a Premium or Standard Edition socket license with Citrix Hypervisor 8.2 CU1, you can upgrade to XenServer 8.4 and continue to use these licenses until their expiry date.</li></ul>
+<p>If you do not apply a Premium Edition socket license to your host, when you upgrade to XenServer 8.4, your hosts revert to Trial Edition. This is a 90-day trial of the Premium Edition features in a restricted size pool of up to three hosts.</p>
+<h3 id="DRAFT:CTXarticleforCH8.2EoL-Planforthenewupdatemechanism">Plan for the new update mechanism</h3>
+<p>Review the&nbsp;<a href="https://docs.xenserver.com/en-us/xenserver/8/update" target="_blank">product documentation</a>&nbsp;about updates and consider how this feature fits into your environment and workflow. For example:</p>
+<ul style="list-style-type: disc;"><li>Do you want to take updates from the CDN or by using the update bundles?
+<ul style="list-style-type: circle;"><li>Using the CDN is recommended for internet-connected environments.&nbsp;</li><li>Use the update bundles for air-gapped environments or for updating individual hosts before joining them to a more up-to-date pool.</li></ul>
+</li><li>Which update channels do you want to use in your environment and how?
+<ul style="list-style-type: circle;"><li>The Early Access channel provides the updates in advance of the Normal channel. You can use this channel in your test environments to review and verify update changes before updating your production pool.</li><li>The Normal channel provides the updates slightly later.&nbsp;</li><li>Security fixes are released to both channels at the same time. No matter which channel you choose to use, your environment has access to the most up-to-date security fixes.</li></ul>
+</li><li>How will you ensure you apply the updates in a timely manner?
+<ul style="list-style-type: circle;"><li>If you are going to use the CDN to update your pools, ensure that you do the initial set up in XenCenter&nbsp;<strong>Updates</strong>&nbsp;to choose the update channel and how often the pool synchronizes with the channel.&nbsp;</li><li>Plan your workflow for applying updates to ensure that you monitor the release of updates and have a workflow for applying them to your pools. Apply updates within 6 months of their release to remain in support.</li></ul>
+</li></ul>
+<h3 id="DRAFT:CTXarticleforCH8.2EoL-CheckthatyourhardwareissupportedwithXenServer8">Check that your hardware is supported with XenServer 8.4</h3>
+<p>Check that the hardware that the hosts in your pool is installed on is compatible with&nbsp;<span>XenServer 8.4.</span>&nbsp;For more information, see the&nbsp;<a href="https://hcl.xenserver.com/" target="_blank">Hardware Compatibility List (HCL)</a>.</p>
+<h3 id="DRAFT:CTXarticleforCH8.2EoL-CheckthatyourVMoperatingsystemsaresupportedbyXenServer8">Check that your&nbsp;<span>VM operating systems</span> are supported by XenServer 8.4</h3>
+<p>Check that the operating systems of your VMs are supported by XenServer 8.4. If your VM operating system is not supported, upgrade your VM operating system to a supported version before upgrading XenServer. For more information, see&nbsp;<a href="https://docs.xenserver.com/en-us/xenserver/8/system-requirements/guest-os-support" target="_blank">Guest operating system support</a>.</p>
+<h3 id="DRAFT:CTXarticleforCH8.2EoL-UpdateXenServerVMToolsonyourVMs">Update XenServer VM Tools on your VMs</h3>
+<p><span>Ensure</span>&nbsp;that all your Windows VMs have the latest version of the XenServer VM Tools installed.&nbsp;<span>For more information, see&nbsp;<a href="https://support.citrix.com/s/article/CTX235403-updates-to-xenserver-vm-tools-for-windows-for-xenserver-and-citrix-hypervisor?language=en_US" target="_blank">Updates to XenServer VM Tools for Windows</a>.</span></p>
+<h3 id="DRAFT:CTXarticleforCH8.2EoL-CheckthatyourenvironmentiscompatiblewithXenServer8">Check that your environment is compatible with XenServer 8.4</h3>
+<ul style="list-style-type: square;"><li>
+<p><strong>Are you using a&nbsp;<span>supported host disk partition</span>&nbsp;layout?</strong> The legacy partition layout is no longer supported. If you use it, you might not be able to upgrade to XenServer 8.4. For more information, see <a href="https://docs.xenserver.com/en-us/xenserver/8/install/upgrade#legacy-partition-layout" target="_blank">Legacy partition layout</a>.</p>
+</li><li>
+<p><strong>Are you using the Citrix Licensing Server virtual appliance?&nbsp;&nbsp;</strong>In previous releases, we supported the Linux-based License Server virtual appliance. This product is no longer supported. If you are using the License Server virtual appliance with an existing pool, migrate to the latest version of Citrix License Server for Windows before upgrading to XenServer 8.4. For more information, see&nbsp;<a href="https://docs.xenserver.com/en-us/xenserver/8/overview-licensing" target="_blank">Licensing</a>.</p>
+</li><li>
+<p><strong>Is the key size of the server’s identity certificate smaller than 2048 bytes?&nbsp;&nbsp;</strong>If your pool was first installed using XenServer 7.6 or earlier, it might still have certificates with a smaller key size than 2048 bytes. In this case, when you attempt to upgrade to XenServer 8.4, the upgrade wizard shows an error during prechecks. To proceed with the upgrade, you must reset the self-signed certificate on each affected server by running the following command:&nbsp;<code>xe host-emergency-reset-server-certificate</code></p>
+</li><li><strong>Are you using high availability with a heartbeat SR that has less that 4 GB of space?</strong> In Citrix Hypervisor 8.2 CU 1 the required size of the heartbeat SR is smaller than that required for XenServer 8.4. Before upgrading, disable high availability and resize your heartbeat SR to 4 GB or more. Or, if your heartbeat SR is the same SR as you are using for your VM disks, ensure that the SR has at least 4 GB of space that can be used for the heartbeat.
+<p>&nbsp;</p>
+</li></ul>
+<h2 id="DRAFT:CTXarticleforCH8.2EoL-UpgradetoXenServer8">Upgrade to XenServer 8.4</h2>
+<ol style="list-style-type: decimal;"><li>Download the latest XenServer 8.4 Installation ISO from <a href="https://www.xenserver.com/downloads" target="_blank">https://www.xenserver.com/downloads</a></li><li>Update your XenCenter to the latest version. For more information, see&nbsp;<a href="https://docs.xenserver.com/en-us/xencenter/current-release/updates-xencenter" target="_blank">https://docs.xenserver.com/en-us/xencenter/current-release/updates-xencenter</a></li><li>Plan your upgrade process. Review the upgrade documentation at&nbsp;<a href="https://docs.xenserver.com/en-us/xenserver/8/install/upgrade" target="_blank">https://docs.xenserver.com/en-us/xenserver/8/install/upgrade</a>. For Citrix environments, additional upgrade guidance is available at&nbsp;<a href="https://docs.xenserver.com/en-us/xenserver/8/install/upgrade-citrix-virtual-apps-desktops" target="_blank">https://docs.xenserver.com/en-us/xenserver/8/install/upgrade-citrix-virtual-apps-desktops</a>.</li><li>Complete your upgrade to XenServer 8.4 in accordance with your plan.</li></ol></p>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                        <div id="introduction" class="article-detail-card article-detail-card-desc">
+                            <div class="article-detail-card-header">
+                                <h4 class="wolken-h4">Issue/Introduction</h4>
+                            </div>
+                            <div class="article-detail-card-content wolken-h5">
+                                <p>.</p>
+                            </div>
+                        </div>
+                        
+                    
+
+                    
+                    
+
+                <div class="feedback-section">
+                    <div id="like-dislike-section" class="wolken-h5">
+                        <div class="wolken-h4" id="feedback_actionMsg">
+                            Was this article helpful?
+                        </div>
+                        <div id="feedback_actions" class="flex-row row-gap-16">
+                            <div class="flex-row row-align-center-center row-gap-8 like_dislike_btn" id="feedback_like" onclick="articleLikeDislikeHandler('like')">
+                                <span class="material-icons">thumb_up</span>
+                                <span>Yes</span>
+                            </div>
+                            <div class="flex-row row-align-center-center row-gap-8 like_dislike_btn" id="feedback_dislike" onclick="articleLikeDislikeHandler('dislike')">
+                                <span class="material-icons">thumb_down</span>
+                                <span>No</span>
+                            </div>
+                        </div>
+                    </div>
+                    <form id="feedbackForm" class="article-feedback-card" onsubmit="onSubmitSuggestionForm(event)" >
+                        <div id="checkboxSection" class="checkbox-section flex-column column-gap-8">
+                            <span id="feedback-form-msg" class="wolken-h4">Select Suggestions:</span>
+                            <span class="wolken-h5" id="suggestion-msg">Send us feedback</span>
+                        </div>
+                        <div>
+                            <input type="email" id="email" name="email" class="full-width" placeholder="Email">
+                        </div><br>
+                        <div>
+                            <textarea id="comment" name="comment" rows="6" maxlength="500" class="full-width wolken-h5" placeholder="Comment"></textarea>
+                        </div><br>
+                        <button class="wolken-primary-button cancel-button" type="button" onclick="onCancelSuggestionForm()">Cancel</button>
+                        <button class="wolken-primary-button reset-button" type="button" onclick="onResetSuggestionForm()">Reset</button>
+                        <button class="wolken-primary-button" type="submit" id="feedback-submit-button" disabled>Submit</button>
+                    </form>
+                    <div class="wolken-h5" id="feedback-success-msg"></div>
+                </div>
+            </div>
+             
+            <div class="flex-row wolken-footer">
+                <span class="mat-caption">Powered by</span>
+                <a target="_blank" href="https://www.wolkensoftware.com/">
+                    <img src="https://cdn.wolkenservicedesk.com/wolken-footer-image.png" alt="Wolken Software">
+                </a>
+            </div>
+            
+            
+            <iframe class="custom-footer" frameborder="0" scrolling="no"
+                title="https://cdn.wolkenservicedesk.com/Citrix/Header-footer/footer.html"
+                src="https://cdn.wolkenservicedesk.com/Citrix/Header-footer/footer.html" height="120px"></iframe>
+            
+        </div>
+
+        <div class="loader-container flex-column">
+            <div class="ghost-loader ghost-custom-header"></div>
+            <div class="wolken-content-container flex-column column-gap-16">
+                <div class="flex-row row-gap-16 row-align-space-between-center">
+                    <div class="ghost-loader ghost-article-title"></div>
+                    <div class="ghost-loader ghost-article-date"></div>
+                </div>
+                <div class="article-detail-card">
+                    <div class="article-detail-card-header">
+                        <div class="ghost-loader ghost-article-detail-title"></div>
+                    </div>
+                    <div class="article-detail-card-content">
+                        <div class="ghost-product-detail-content flex-row row-gap-16">
+                            <div class="ghost-loader"></div>
+                            <div class="ghost-loader"></div>
+                            <div class="ghost-loader"></div>
+                            <div class="ghost-loader"></div>
+                            <div class="ghost-loader"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="article-detail-card">
+                    <div class="article-detail-card-header">
+                        <div class="ghost-loader ghost-article-detail-title"></div>
+                    </div>
+                    <div class="article-detail-card-content">
+                        <div class="ghost-article-detail-content column-gap-16">
+                            <div class="ghost-loader"></div>
+                            <div class="ghost-loader"></div>
+                            <div class="ghost-loader"></div>
+                            <div class="ghost-loader"></div>
+                            <div class="ghost-loader"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="article-detail-card">
+                    <div class="article-detail-card-header">
+                        <div class="ghost-loader ghost-article-detail-title"></div>
+                    </div>
+                    <div class="article-detail-card-content">
+                        <div class="ghost-article-detail-content column-gap-16">
+                            <div class="ghost-loader"></div>
+                            <div class="ghost-loader"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="article-detail-card">
+                    <div class="article-detail-card-header">
+                        <div class="ghost-loader ghost-article-detail-title"></div>
+                    </div>
+                    <div class="article-detail-card-content">
+                        <div class="ghost-article-detail-content column-gap-16">
+                            <div class="ghost-loader"></div>
+                            <div class="ghost-loader"></div>
+                            <div class="ghost-loader"></div>
+                            <div class="ghost-loader"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="article-detail-card">
+                    <div class="article-detail-card-header">
+                        <div class="ghost-loader ghost-article-detail-title"></div>
+                    </div>
+                    <div class="article-detail-card-content">
+                        <div class="ghost-article-detail-content column-gap-16">
+                            <div class="ghost-loader"></div>
+                            <div class="ghost-loader"></div>
+                            <div class="ghost-loader"></div>
+                            <div class="ghost-loader"></div>
+                            <div class="ghost-loader"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ghost-loader ghost-custom-footer"></div>
+        </div>
+    </div>
+        <script type="application/ld+json">
+        {"@context":"http://schema.org","@type":"Article","name":["XenServer"],"alternateName":["XenServer"],"datePublished":"06-08-2025 05:12","dateModified":"06-08-2025 05:12","mainEntityOfPage":{"@type":"WebPage","url":"support.citrix.com/external/article/692513"},"keywords":["Reference","XenServer"],"url":"support.citrix.com/external/article/692513","about":[],"author":{"@type":"Person","name":"Citrix"},"headline":"Prepare for Citrix Hypervisor 8.2 Cumulative Update 1 End of Life","publisher":{"@type":"Organization","name":"Citrix","logo":{"@type":"ImageObject","url":"https://support.citrix.com/assets/images/company-logo.png"}},"aggregateRating":{}}</script>
+
+</body>
+<script>
+
+    var apiDomain = 'https://api-csm.citrix.com/';
+    var uiDomain = '';
+    var articleId = '692513';
+    var articleTitle = 'Prepare for Citrix Hypervisor 8.2 Cumulative Update 1 End of Life';
+    var articlePageUrl = uiDomain + '/wolken-support/article?articleId=';
+    var attachmentVos = '';
+    var kb_public_page_domain = 'support.citrix.com'
+    var kbDownloadDomain = 'support.citrix.com';
+    var kbParamsDetails = JSON.parse('{"modifiedData":[{"parameterId":1,"identifier":"articleTitle","alias":"Title","active":true,"mandatory":true,"sequence":1,"enabled":true,"createEnabled":true,"detailsEnabled":true,"searchEnabled":true,"editEnabled":true,"checkForDuplicate":true,"duplicateSearchFieldIdentifier":"searchQuery","documentEnabled":false,"searchSortable":false,"sortableSequence":0,"updatedTime":1684142370398,"updatedBy":79,"operationalIdentifier":"searchQuery","enableMultiSelect":false,"enduserPortalEnabled":true,"kbFieldTypeId":0,"kbFieldDetails":"","knowledgeBlock":false,"publicPageEnabled":true},{"parameterId":3,"identifier":"articleType","alias":"Article Record Type","active":true,"mandatory":true,"sequence":1,"enabled":false,"createEnabled":true,"detailsEnabled":true,"searchEnabled":false,"editEnabled":true,"checkForDuplicate":false,"duplicateSearchFieldIdentifier":"articleTypeId","documentEnabled":false,"searchSortable":false,"sortableSequence":0,"updatedTime":1684325797300,"updatedBy":24455,"operationalIdentifier":"articleTypeId","enableMultiSelect":false,"enduserPortalEnabled":true,"kbFieldTypeId":0,"kbFieldDetails":"","knowledgeBlock":false,"publicPageEnabled":true},{"parameterId":7,"identifier":"description","alias":"Details","active":true,"mandatory":true,"sequence":14,"enabled":true,"createEnabled":true,"detailsEnabled":true,"searchEnabled":false,"editEnabled":true,"checkForDuplicate":false,"duplicateSearchFieldIdentifier":"","documentEnabled":false,"searchSortable":false,"sortableSequence":0,"updatedTime":1678686982844,"updatedBy":25291,"operationalIdentifier":"","enableMultiSelect":false,"enduserPortalEnabled":true,"kbFieldTypeId":0,"kbFieldDetails":"","knowledgeBlock":false,"publicPageEnabled":true},{"parameterId":8,"identifier":"internalNotes","alias":"Internal Notes","active":true,"mandatory":false,"sequence":19,"enabled":true,"createEnabled":true,"detailsEnabled":true,"searchEnabled":false,"editEnabled":true,"checkForDuplicate":false,"duplicateSearchFieldIdentifier":"","documentEnabled":false,"searchSortable":false,"sortableSequence":0,"updatedTime":1675324102779,"updatedBy":24455,"enableMultiSelect":false,"enduserPortalEnabled":true,"kbFieldTypeId":0,"kbFieldDetails":"","knowledgeBlock":false,"publicPageEnabled":true},{"parameterId":9,"identifier":"attachments","alias":"Attachments","active":true,"mandatory":false,"sequence":21,"enabled":true,"createEnabled":true,"detailsEnabled":true,"searchEnabled":false,"editEnabled":true,"checkForDuplicate":false,"documentEnabled":false,"searchSortable":false,"enableMultiSelect":false,"enduserPortalEnabled":true,"kbFieldTypeId":0,"kbFieldDetails":"","knowledgeBlock":false,"publicPageEnabled":true},{"parameterId":20,"identifier":"status","alias":"Status","active":true,"mandatory":false,"sequence":5,"enabled":false,"createEnabled":false,"detailsEnabled":true,"searchEnabled":true,"editEnabled":false,"checkForDuplicate":false,"duplicateSearchFieldIdentifier":"statusId","documentEnabled":true,"searchSortable":false,"sortableSequence":0,"updatedTime":1676376985293,"updatedBy":24455,"operationalIdentifier":"statusId","enableMultiSelect":false,"enduserPortalEnabled":true,"kbFieldTypeId":0,"kbFieldDetails":"","knowledgeBlock":false,"publicPageEnabled":true},{"parameterId":24,"identifier":"updatedTime","alias":"Last Modified Date","active":true,"mandatory":false,"sequence":9,"enabled":true,"createEnabled":false,"detailsEnabled":true,"searchEnabled":true,"editEnabled":false,"checkForDuplicate":false,"documentEnabled":false,"searchSortable":true,"sortableIdentifier":"updatedTimestamp","sortableSequence":3,"operationalIdentifier":"updatedTimestamp","enableMultiSelect":false,"enduserPortalEnabled":true,"kbFieldTypeId":0,"kbFieldDetails":"","knowledgeBlock":false,"publicPageEnabled":true},{"parameterId":25,"identifier":"source","alias":"Source","active":true,"mandatory":false,"sequence":12,"enabled":false,"createEnabled":true,"detailsEnabled":true,"searchEnabled":false,"editEnabled":true,"checkForDuplicate":false,"duplicateSearchFieldIdentifier":"","documentEnabled":false,"searchSortable":false,"sortableSequence":0,"updatedTime":1675677599255,"updatedBy":24455,"enableMultiSelect":false,"enduserPortalEnabled":true,"kbFieldTypeId":0,"kbFieldDetails":"","knowledgeBlock":false,"publicPageEnabled":true},{"parameterId":30,"identifier":"articleId","alias":"Article Id","active":true,"mandatory":false,"sequence":4,"enabled":false,"createEnabled":false,"detailsEnabled":true,"searchEnabled":false,"editEnabled":true,"checkForDuplicate":false,"duplicateSearchFieldIdentifier":"","documentEnabled":false,"searchSortable":false,"sortableSequence":0,"updatedTime":1675234273655,"updatedBy":25291,"enableMultiSelect":false,"enduserPortalEnabled":true,"kbFieldTypeId":0,"kbFieldDetails":"","knowledgeBlock":false,"publicPageEnabled":true},{"parameterId":101,"identifier":"introduction","alias":"Summary","active":true,"mandatory":true,"sequence":13,"enabled":true,"createEnabled":true,"detailsEnabled":true,"searchEnabled":false,"editEnabled":true,"checkForDuplicate":false,"documentEnabled":true,"searchSortable":false,"createdTime":1684216671095,"createdBy":150,"updatedTime":1684216671095,"updatedBy":150,"enableMultiSelect":false,"enduserPortalEnabled":true,"kbFieldTypeId":0,"kbFieldDetails":"","knowledgeBlock":false,"publicPageEnabled":true},{"parameterId":102,"identifier":"environment","alias":"Disclaimer","active":true,"mandatory":false,"sequence":20,"enabled":true,"createEnabled":true,"detailsEnabled":true,"searchEnabled":false,"editEnabled":true,"checkForDuplicate":false,"documentEnabled":true,"searchSortable":false,"createdTime":1684216671095,"createdBy":150,"updatedTime":1684216671095,"updatedBy":150,"enableMultiSelect":false,"enduserPortalEnabled":true,"kbFieldTypeId":0,"kbFieldDetails":"","knowledgeBlock":false,"publicPageEnabled":true},{"parameterId":104,"identifier":"resolution","alias":"Resolution","active":true,"mandatory":false,"sequence":15,"enabled":true,"createEnabled":true,"detailsEnabled":true,"searchEnabled":false,"editEnabled":true,"checkForDuplicate":false,"documentEnabled":true,"searchSortable":false,"createdTime":1684216671095,"createdBy":150,"updatedTime":1684216671095,"updatedBy":150,"enableMultiSelect":false,"enduserPortalEnabled":true,"kbFieldTypeId":0,"kbFieldDetails":"","knowledgeBlock":false,"publicPageEnabled":true},{"parameterId":105,"identifier":"additionalInfo","alias":"Additional information / Reference","active":true,"mandatory":false,"sequence":18,"enabled":true,"createEnabled":true,"detailsEnabled":true,"searchEnabled":false,"editEnabled":true,"checkForDuplicate":false,"documentEnabled":true,"searchSortable":false,"createdTime":1684216671095,"createdBy":150,"updatedTime":1684216671095,"updatedBy":150,"enableMultiSelect":false,"enduserPortalEnabled":true,"kbFieldTypeId":0,"kbFieldDetails":"","knowledgeBlock":false,"publicPageEnabled":true},{"parameterId":112,"identifier":"restrictSubscriptionMail","alias":"Do Not Send Subscription Emails","active":true,"mandatory":false,"sequence":82,"enabled":true,"createEnabled":true,"detailsEnabled":true,"searchEnabled":false,"editEnabled":true,"checkForDuplicate":false,"documentEnabled":false,"searchSortable":false,"createdTime":1684216671095,"createdBy":150,"updatedTime":1684216671095,"updatedBy":150,"enableMultiSelect":false,"enduserPortalEnabled":true,"kbFieldTypeId":0,"kbFieldDetails":"","knowledgeBlock":false,"publicPageEnabled":true},{"parameterId":119,"identifier":"cause","alias":"Problem Cause","active":true,"mandatory":false,"sequence":16,"enabled":true,"createEnabled":true,"detailsEnabled":true,"searchEnabled":false,"editEnabled":true,"checkForDuplicate":false,"documentEnabled":false,"searchSortable":false,"enableMultiSelect":false,"enduserPortalEnabled":true,"kbFieldTypeId":0,"kbFieldDetails":"","knowledgeBlock":false,"publicPageEnabled":true},{"parameterId":120,"identifier":"publishedDate","alias":"Last Published Date","active":true,"mandatory":false,"sequence":18,"enabled":false,"createEnabled":false,"detailsEnabled":true,"searchEnabled":false,"editEnabled":true,"checkForDuplicate":false,"documentEnabled":false,"searchSortable":false,"enableMultiSelect":false,"enduserPortalEnabled":false,"kbFieldTypeId":0,"kbFieldDetails":"","knowledgeBlock":false,"publicPageEnabled":true},{"parameterId":121,"identifier":"firstPublishedDate","alias":"Created Date","active":true,"mandatory":false,"sequence":7,"enabled":false,"createEnabled":false,"detailsEnabled":true,"searchEnabled":false,"editEnabled":true,"checkForDuplicate":false,"documentEnabled":false,"searchSortable":false,"enableMultiSelect":false,"enduserPortalEnabled":true,"kbFieldTypeId":0,"kbFieldDetails":"","knowledgeBlock":false,"publicPageEnabled":true},{"parameterId":122,"identifier":"articleTypeLevelFlex","alias":"Flex on Article Type","active":true,"mandatory":false,"sequence":150,"enabled":true,"createEnabled":true,"detailsEnabled":true,"searchEnabled":false,"editEnabled":true,"checkForDuplicate":false,"duplicateSearchFieldIdentifier":"0","documentEnabled":false,"searchSortable":false,"sortableIdentifier":"0","enableMultiSelect":false,"enduserPortalEnabled":true,"kbFieldTypeId":0,"kbFieldDetails":"","knowledgeBlock":false,"publicPageEnabled":true}]}').modifiedData;
+    var regularAttachment = false;
+    var customProdWithRelease = 'true';
+    var productContainerHeight = '';
+    var imgPath = '';
+    imgPath = uiDomain !== '' ? 'https://' + uiDomain + '/assets/images/company-logo.png' : '';
+    document.getElementById('brand_logo').src = imgPath;
+
+    var feedbackConfigData = {};
+    var feedbackSuggestionOptionsData = {};
+    var selectedRating = 0;
+
+    const faviconURL = 'https://cdn.wolkenservicedesk.com/Citrix/Logos/company_logo/CitrixFavicon.ico';
+    const enduserAppURL = 'https://support.citrix.com/';
+    const link = document.createElement('link');
+    link.rel = 'icon';
+    link.type = 'image/x-icon'; 
+    link.href = faviconURL?faviconURL:enduserAppURL + '/favicon.ico';
+    document.head.appendChild(link);
+
+    if (document.getElementById('global-header')) {
+        document.getElementById('global-header').addEventListener('load', frameVisibilty);
+        setTimeout(function () {
+            document.getElementById('global-header').removeEventListener('load', frameVisibilty);
+            frameVisibilty();
+        }, 5000);
+    }
+
+    setThemeColors();
+    window.addEventListener('message', function (event) {
+    if (event && event.data && event.data.type === 'storeLocalStorage') {
+            const key = event.data.payload.key;
+            const value = event.data.payload.value;
+            localStorage.setItem(key, value);
+        }
+        else if (event.data.action === 'injectScript') {
+                if (!document.getElementById(event.data.scriptId)) {
+                    convertStringToFunction(event.data.scriptText, event.data.scriptId)
+                }
+            }
+        else if (event.data?.action === 'injectOneTimeScript') {
+        if (event.data.scriptText && event.data.scriptId && event.data.scriptFunctionName) {
+            if (!document.getElementById(event.data.scriptId)) {
+                convertStringToFunction(event.data.scriptText, event.data.scriptId);
+                }
+            try {
+                const func = window[event.data.scriptFunctionName];
+                if (typeof func === 'function') {
+                    func();
+                } else {
+                    console.error('Function ' + event.data.scriptFunctionName + ' not found');
+                }
+            } catch (error) {
+                console.error('Error injecting script:', error);
+            }
+        }
+        } 
+    });
+    const convertStringToFunction = (stringFn, identifier) => {
+    const ele = document.getElementById(identifier);
+    if (!ele) {
+    const source = stringFn;
+    const el = document.createElement("script");
+    el.id = identifier;
+    el.innerHTML = source;
+    el.type = "text/javascript";
+    document.head.appendChild(el);
+  }
+};
+
+    function setThemeColors() {
+        var themePrimary = '#2a6678';
+
+        var themePrimaryLight = '';
+
+        var themePrimaryComp = '';
+
+        var themeAccentComp = '';
+
+        const ele = document.documentElement;
+        if (themePrimary) {
+            ele.style.setProperty("--wolken-primary-color", themePrimary);
+        }
+        if (themePrimaryLight) {
+            ele.style.setProperty("--wolken-primary-color-light", themePrimaryLight);
+        }
+        if (themePrimaryComp) {
+            ele.style.setProperty("--wolken-primary-complimentory-color", themePrimaryComp);
+        }
+        if (themeAccentComp) {
+            ele.style.setProperty("--wolken-accent-complimentory-color", themeAccentComp);
+        }
+    }
+
+    function frameVisibilty() {
+
+        // setTimeout(function () {
+        //     document.getElementsByClassName('article-container')[0].style.display = 'flex';
+        //     document.getElementsByClassName('loader-container')[0].style.display = 'none';
+        // }, 1000);
+        var date = document.getElementById('date_time');
+        var d = '06-08-2025 05:12';
+        date.innerHTML = d;
+        date.innerHTML = d.split(' ')[0];
+        var showMoreProductLimit = '';
+        var arr = [];
+
+        if (customProdWithRelease) {
+            arr = document.getElementsByClassName("product-table-item");
+            productContainerHeight = productContainerHeight ? productContainerHeight : "26em";
+            showMoreProductLimit = showMoreProductLimit ? showMoreProductLimit : 10;
+        } else {
+            arr = document.getElementsByClassName("product-chip");
+            productContainerHeight = productContainerHeight ? productContainerHeight : "56px";
+            showMoreProductLimit = showMoreProductLimit ? showMoreProductLimit : 15;
+        }
+
+        if (arr.length > 0) {
+            if (arr.length > showMoreProductLimit) {
+                document.getElementsByClassName('product-container')[0].style.overflow = 'hidden';
+                document.getElementsByClassName('product-container')[0].style.height = productContainerHeight;
+                document.getElementsByClassName('show_more')[0].style.display = 'block';
+                document.getElementsByClassName('show_less')[0].style.display = 'none';
+            } else {
+                document.getElementsByClassName('product-container')[0].style.overflow = 'auto';
+                document.getElementsByClassName('product-container')[0].style.height = 'auto';
+                document.getElementsByClassName('show_more')[0].style.display = 'none';
+                document.getElementsByClassName('show_less')[0].style.display = 'none';
+            }
+        }
+
+    }
+    
+    function getAttachmentType() {
+        var getAttType = new XMLHttpRequest();
+        getAttType.open('GET', apiDomain + 'cau/attachment/get_type_of_attachment?moduleId=1');
+        getAttType.setRequestHeader("domain", kb_public_page_domain);
+
+        getAttType.send(getAttType);
+        getAttType.onload = function () {
+            if (getAttType.status == 200) {
+                var response = JSON.parse(getAttType.response);
+                return this.storageName = response?.data?.storageVO?.storageName;
+            }
+        };
+    }
+    function showMoreItems() {
+        document.getElementsByClassName('product-container')[0].style.overflow = 'auto';
+        document.getElementsByClassName('product-container')[0].style.height = 'auto';
+        document.getElementsByClassName('show_more')[0].style.display = 'none';
+        document.getElementsByClassName('show_less')[0].style.display = 'block';
+    }
+
+    function showLessItems() {
+        document.getElementsByClassName('product-container')[0].style.overflow = 'hidden';
+        document.getElementsByClassName('product-container')[0].style.height = productContainerHeight;
+        document.getElementsByClassName('show_more')[0].style.display = 'block';
+        document.getElementsByClassName('show_less')[0].style.display = 'none';
+    }
+
+    function downloadAttachment(uniquefileid, attachmentDetailes) {
+        var getAttType = new XMLHttpRequest();
+        getAttType.open('GET', apiDomain + 'cau/attachment/get_type_of_attachment?moduleId=1');
+        getAttType.setRequestHeader("domain", kb_public_page_domain);
+        getAttType.send(getAttType);
+        getAttType.onload = function () {
+            if (getAttType.status == 200) {
+                var response = JSON.parse(getAttType.response);
+                this.storageName = response?.data?.storageVO?.storageName;
+                if (this.storageName === 'S3') {
+                    let fPath = JSON.parse(attachmentDetailes).attachmentUrl.split('/');
+                    fPath = fPath.splice(4, fPath.length).join('/');
+                    const formData = new FormData();
+                    formData.append('data', JSON.stringify({
+                        "fileName": fPath,
+                        "fileUrl": JSON.parse(attachmentDetailes).attachmentUrl
+                    }));
+                    if (kb_public_page_domain) {
+                        var fileDownload = new XMLHttpRequest();
+                        fileDownload.open('POST', apiDomain + 'cau/attachment/preverify_attachment');
+                        fileDownload.setRequestHeader("domain", kb_public_page_domain);
+                        fileDownload.send(formData);
+                        fileDownload.onload = function () {
+                            if (fileDownload.status == 200) {
+                                var fileData = JSON.parse(fileDownload.response);
+                                window.open(fileData.data.preSignedURL, '');
+                            }
+                        };
+                    }
+                } else {
+                    var uniqueFileId = uniquefileid;
+                    var form = document.createElement('form');
+                    form.setAttribute('method', 'post');
+                    form.setAttribute('action', apiDomain + 'es/attachments/download_attachment?domain=' + kbDownloadDomain);
+                    form.setAttribute('target', '_self');
+                    var hiddenField = document.createElement('input');
+                    hiddenField.setAttribute('type', 'hidden');
+                    hiddenField.setAttribute('name', 'data');
+                    hiddenField.setAttribute('value', JSON.stringify({
+                        uniqueFileId: uniqueFileId
+                    }));
+                    form.appendChild(hiddenField);
+                    document.body.appendChild(form);
+                    window.open('', '_self');
+                    form.submit();
+                    form.parentNode.removeChild(form);
+            }
+                }
+            };
+    }
+
+
+    //     async  function downloadAttachment(uniqueFileId, attachmentDetails) {
+    //     try {
+    //         // Fetch attachment type
+    //         const getAttTypeResponse = await fetch(`${apiDomain}cau/attachment/get_type_of_attachment?moduleId=1`, {
+    //             method: 'GET',
+    //             headers: {
+    //                 "domain": kb_public_page_domain
+    //             }
+    //         });
+
+    //         if (!getAttTypeResponse.ok) throw new Error('Failed to fetch attachment type');
+
+    //         const attTypeData = await getAttTypeResponse.json();
+    //         const storageName = attTypeData?.data?.storageVO?.storageName;
+
+    //         // Handle S3 attachment
+    //         if (storageName === 'S3') {
+    //             const attachmentUrl = JSON.parse(attachmentDetails).attachmentUrl;
+    //             const filePath = attachmentUrl.split('/').slice(4).join('/');
+
+    //             const formData = new FormData();
+    //             formData.append('data', JSON.stringify({
+    //                 fileName: filePath,
+    //                 fileUrl: attachmentUrl
+    //             }));
+
+    //             const preVerifyResponse = await fetch(`${apiDomain}cau/attachment/preverify_attachment`, {
+    //                 method: 'POST',
+    //                 headers: {
+    //                     "domain": kb_public_page_domain
+    //                 },
+    //                 body: formData
+    //             });
+
+    //             if (!preVerifyResponse.ok) throw new Error('Failed to pre-verify attachment');
+
+    //             const preVerifyData = await preVerifyResponse.json();
+    //             const preSignedURL = preVerifyData?.data?.preSignedURL;
+
+    //             if (preSignedURL) {
+    //                 window.open(preSignedURL, '');
+    //             } else {
+    //                 console.error('Pre-signed URL not found');
+    //             }
+
+    //         } else {
+    //             // Handle non-S3 attachment (Download directly)
+    //             const form = document.createElement('form');
+    //             form.setAttribute('method', 'POST');
+    //             form.setAttribute('action', `${apiDomain}es/attachments/download_attachment?domain=${kbDownloadDomain}`);
+    //             form.setAttribute('target', '_self');
+
+    //             const hiddenField = document.createElement('input');
+    //             hiddenField.setAttribute('type', 'hidden');
+    //             hiddenField.setAttribute('name', 'data');
+    //             hiddenField.setAttribute('value', JSON.stringify({ uniqueFileId }));
+    //             form.appendChild(hiddenField);
+
+    //             document.body.appendChild(form);
+    //             form.submit();
+    //             form.remove();
+    //         }
+    //     } catch (error) {
+    //         console.error('Error during attachment download process:', error);
+    //     }
+    // }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        articleViewed();
+        getFeedbackConfig();
+        saveArticleViewCountHistory();
+        renderArticleDetails(kbParamsDetails);
+    });
+
+
+    function articleViewed() {
+        try {
+
+            gza("conversion", {
+                index: "server_ws_knowledge_article",
+                type: 'ws_knowledge_articles_doc',
+                id: articleId,
+                rank: 1,
+                convUrl: location.href,
+                convSub: articleTitle
+            });
+        } catch (error) {
+            console.log(error);
+        }
+
+        saveArticleCount('views');
+    }
+
+    function getFeedbackConfig() {
+        if (kb_public_page_domain) {
+            var articleFeedbackConfigRequest = new XMLHttpRequest();
+            articleFeedbackConfigRequest.open('GET', apiDomain + 'es/nau/feedback/config');
+            articleFeedbackConfigRequest.setRequestHeader("domain", kb_public_page_domain);
+            articleFeedbackConfigRequest.send();
+            articleFeedbackConfigRequest.onload = function () {
+                if (articleFeedbackConfigRequest.status == 200) {
+                    var response = JSON.parse(articleFeedbackConfigRequest.response);
+                    if (response && response.data && response.data.feedbackConfigData) {
+                        feedbackConfigData = response.data.feedbackConfigData;
+                        document.getElementById('feedback_actionMsg').innerHTML = feedbackConfigData.actionMsg;
+                        if(feedbackConfigData?.suggestionOptionMandatory){
+                            var spanRequired = document.createElement('span');
+                            spanRequired.className = 'text-red';
+                            spanRequired.textContent = '*';
+                            document.getElementById('suggestion-msg').appendChild(spanRequired);
+                        }
+                    } else {
+                        document.getElementsByClassName('feedback-section')[0].remove();
+                    }
+                    getFeedbackSuggestion();
+                }
+            };
+        }
+    }
+
+    function getFeedbackSuggestion() {
+        if (kb_public_page_domain && feedbackConfigData && feedbackConfigData.feedbackComment) {
+            var fbReq = new XMLHttpRequest();
+            fbReq.open('GET', apiDomain + 'es/nau/feedback/suggestion_options?active=true');
+            fbReq.setRequestHeader("domain", kb_public_page_domain);
+            fbReq.send();
+            fbReq.onload = function () {
+                if (fbReq.status == 200) {
+                    var response = JSON.parse(fbReq.response);
+                    if (response && response.data && response.data.feedbackSuggestionOptionsData) {
+                        feedbackSuggestionOptionsData = response.data.feedbackSuggestionOptionsData;
+                        setSuggestionData(response.data.feedbackSuggestionOptionsData);
+                    } else {
+                        document.getElementsByClassName('feedback-section')[0].remove();
+                    }
+                } 
+            };
+        }
+    }
+
+    function setSuggestionData(suggestionList) {
+        // suggestionList = [{"fbSuggestionOptId": 1,"desc": "Less Information","active": true}, {"fbSuggestionOptId": 2,"desc": "Not relevant info","active": true}, {"fbSuggestionOptId": 3,"desc": "No sufficient Images","active": true}];
+
+        if (suggestionList && suggestionList.length > 0) {
+            const checkboxTemp = document.getElementById('checkboxSection');
+            suggestionList.forEach(function (item) {
+                const checkboxContainer = document.createElement('div');
+                checkboxContainer.classList.add('checkbox-item','flex-row', 'row-gap-8', 'wolken-h5');
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.value = item.desc;
+                checkbox.innerText = item.desc;
+                checkbox.id = 'checkbox'+item.fbSuggestionOptId;
+                checkbox.name="suggestion";
+                const checkboxLabel = document.createElement('label');
+                checkboxLabel.innerText = item.desc;
+                checkboxLabel.htmlFor = 'checkbox'+item.fbSuggestionOptId;
+                checkboxContainer.appendChild(checkbox);
+                checkboxContainer.appendChild(checkboxLabel);
+                checkboxTemp.appendChild(checkboxContainer);
+            });
+        }
+    }
+    const form = document.getElementById('feedbackForm');
+   form.addEventListener('input', function(e) {
+    var feedbackValid = true;
+    var commentsField = document.getElementById('comment');
+    var selectedSuggestions = [];
+    var checkboxes = form.querySelectorAll('input[type="checkbox"]:checked');
+    for (var i = 0; i < checkboxes.length; i++) {
+        selectedSuggestions.push(checkboxes[i].value);
+    }
+    if (commentsField) {
+        if (feedbackConfigData.feedbackCommentMandatory) {
+            if (!commentsField.value || commentsField.value.length === 0) {
+                feedbackValid = false;
+            }
+        }
+        if (feedbackConfigData.feedbackCommentMinLimit) {
+            if (!commentsField.value || commentsField.value.length < feedbackConfigData.feedbackCommentMinLimit) {
+                feedbackValid = false;
+            }
+        }
+    }
+    if (feedbackConfigData.suggestionOptionMandatory) {
+        if (!selectedSuggestions || selectedSuggestions.length === 0) {
+            feedbackValid = false;
+        }
+    }
+    var submitBtn = document.getElementById('feedback-submit-button');
+    if (submitBtn) {
+        submitBtn.disabled = !feedbackValid;
+    }
+    });
+
+    function onSubmitSuggestionForm(event) {
+        event.preventDefault();
+        saveArticleCount(selectedRating === 1 ? 'likes' : 'dislikes');
+        
+        if(!event.target) {
+            return;
+        }
+        const form = event.target;
+
+        const email = form.elements['email'].value ? form.elements['email'].value : '';
+        let comment = form.elements['comment'];
+        if(comment && comment.value) {
+            comment = comment.value.trim();
+        } else {
+            comment = '';
+        }
+
+        const selectedSuggestions = [];
+        const checkboxes = form.querySelectorAll('input[type="checkbox"]:checked');
+        checkboxes.forEach(function (checkbox) {
+            selectedSuggestions.push(checkbox.value);
+        });
+
+        try {
+            const suggestionTemplate = `<section id="template"><div><ul class="points"></ul></div><p class="desc"></p></section>`;
+
+            const feedBackLayout = document.createElement("div");
+            feedBackLayout.innerHTML = suggestionTemplate.replace(new RegExp("\r?\n|\r", "g"),"");
+            
+            selectedSuggestions.forEach(function (s) {
+                const list = feedBackLayout.querySelector(".points");
+                const listItem = document.createElement("li");
+                listItem.textContent = s;
+                list.appendChild(listItem);
+            });
+            
+            feedBackLayout.querySelector(".desc").innerHTML = comment.replace(new RegExp("\r?\n|\r", "g"), "<br>").replaceAll("    ", "&emsp;").replaceAll("  ", "&ensp;").replaceAll(" ", "&nbsp;");
+
+            if (kb_public_page_domain) {
+                const formData = new FormData();
+                formData.append(
+                "data",
+                JSON.stringify({
+                    articleId: articleId,
+                    suggestion: feedBackLayout.innerHTML,
+                    like: selectedRating === 1 ? true : undefined,
+                    dislike: selectedRating === 1 ? undefined : true,
+                    userEmailId: email ? email : '',
+                    })
+                );
+                try {
+                    var suggestionRequest = new XMLHttpRequest();
+                    suggestionRequest.open('POST', apiDomain + 'es/nau/feedback/suggestion');
+                    suggestionRequest.setRequestHeader("domain", kb_public_page_domain);
+                    suggestionRequest.send(formData);
+                    suggestionRequest.onload = function () {
+                        if (suggestionRequest.status == 200) {
+                            afterRequestSentHelper();
+                        } else {
+                            afterRequestSentHelper();
+                        }
+                    };
+
+                    suggestionRequest.onerror = function () {
+                        afterRequestSentHelper();
+                    };
+                } catch (error) {
+                    afterRequestSentHelper();
+                }
+            }
+        } catch (error) {
+            return;
+        }
+    }
+    
+    function afterRequestSentHelper() {
+        document.getElementById('feedbackForm').style.display = 'none';
+        document.getElementById('feedback-success-msg').innerHTML = feedbackConfigData ? feedbackConfigData.fbSuccessMsg ? feedbackConfigData.fbSuccessMsg : 'Thanks for the feedback.' : 'Thanks for the feedback.';
+        const likeDislikeElem = document.getElementById('like-dislike-section');
+        if( likeDislikeElem) {
+            likeDislikeElem.remove();
+        }
+    }
+
+    function onCancelSuggestionForm() {
+        document.getElementById('feedbackForm').reset();
+        document.getElementById('feedbackForm').style.display = 'none';
+        document.getElementById('like-dislike-section').style.display = 'block';
+        document.getElementById('feedback_actionMsg').innerHTML = feedbackConfigData ? feedbackConfigData.actionMsg ? feedbackConfigData.actionMsg : 'Was this article helpful?' : 'Was this article helpful?';
+        const errorMessage = document.getElementById('comment-error');
+        if (errorMessage) {
+            errorMessage.remove();
+        }
+    }
+
+    function onResetSuggestionForm() {
+        document.getElementById('feedbackForm').reset();
+        const checkboxes = document.querySelectorAll('#checkboxSection input[type="checkbox"]');
+        if (checkboxes && checkboxes.length > 0) {
+            checkboxes.forEach(function (checkbox) {
+                checkbox.checked = false;
+            });
+        }
+        const errorMessage = document.getElementById('comment-error');
+        if (errorMessage) {
+            errorMessage.remove();
+        }
+    }
+
+    function saveArticleCount(countType) {
+        try {
+            gza("pageRating", {
+                referer: document.referrer,
+                url: window.location.href,
+                t: document.getElementsByTagName('title')[0] ? document.getElementsByTagName('title')[0].innerText : window.location.href,
+                uid: '1fd47e1f-f7d9-11ea-beba-0242ac12000b',
+                feedback: selectedRating
+            });
+        } catch (error) {
+            console.log(error);
+        }
+
+        var data = {
+            articleId: articleId
+        };
+
+        data[countType] = 1;
+
+        var formData = new FormData();
+        formData.append('data', JSON.stringify(data));
+
+        if (kb_public_page_domain) {
+            try {
+                var articleLikeRequest = new XMLHttpRequest();
+                articleLikeRequest.open('POST', apiDomain + 'es/nau/feedback/feedback_count');
+                articleLikeRequest.setRequestHeader("domain", kb_public_page_domain);
+                articleLikeRequest.send(formData);
+                articleLikeRequest.onload = function () {};
+            } catch (error) {
+                console.log(error);
+            }
+        }
+    }
+
+    function saveArticleViewCountHistory() {
+        let articleViewData = new FormData();
+        articleViewData.append('data', JSON.stringify({
+            "articleId": articleId,
+            "countType": "VIEWS"
+        }));
+
+        if (kb_public_page_domain) {
+            var articleViewRequest = new XMLHttpRequest();
+            articleViewRequest.open('POST', apiDomain + 'es/nau/count/save_article_count');
+            articleViewRequest.setRequestHeader("domain", kb_public_page_domain);
+            //articleViewRequest.withCredentials = true;
+            articleViewRequest.send(articleViewData);
+            articleViewRequest.onload = function () {};
+        }
+    }
+
+    function articleLikeDislikeHandler(ratingType) {
+        let showForm = true;
+        if (ratingType === 'like') {
+            selectedRating = 1;
+        } else {
+            selectedRating = 0;
+        }
+        try {
+            if (feedbackConfigData && feedbackConfigData.enableForPublicPage) {
+            const checkboxSection = document.getElementById('checkboxSection');
+            const emailElem = document.getElementById('email');
+            if (selectedRating === 1) {
+                if(feedbackConfigData && (feedbackConfigData.likeCommentEnabled || feedbackConfigData.likeSuggestionEnabled)) {
+                    if (feedbackConfigData && feedbackConfigData.likeCommentEnabled) {
+                        setUpCommentSection();
+                    } else {
+                        resetCommentSection();
+                    }
+                    if (feedbackConfigData && feedbackConfigData.likeSuggestionEnabled) {
+                        checkboxSection.style.display = 'flex';
+                    } else {
+                        checkboxSection.style.display = 'none';
+                    }
+                } else {
+                    showForm = false;
+                }
+            } else {
+                setUpCommentSection();
+                if(checkboxSection) {
+                    checkboxSection.style.display = 'flex';
+                    }
+                }
+            } else {
+                showForm = false;
+            }
+            if (showForm) {
+                if (selectedRating === 1) {
+                    document.getElementById('feedback-form-msg').innerHTML = feedbackConfigData ? feedbackConfigData.yesMsg ? feedbackConfigData.yesMsg : 'Thanks for the feedback.' : 'Please send us your feedback.';
+                } else {
+                    document.getElementById('feedback-form-msg').innerHTML = feedbackConfigData ? feedbackConfigData.noMsg ? feedbackConfigData.noMsg : 'Sorry! Please help us to improve the article.' : 'Please send us your feedback.';
+                }
+                document.getElementById('like-dislike-section').style.display = 'none';
+                document.getElementById('feedbackForm').style.display = 'block';
+                document.getElementById('email').focus();
+            } else {
+                afterRequestSentHelper();
+                if (selectedRating === 1) {
+                    saveArticleCount('likes');
+                } else {
+                    saveArticleCount('dislikes');
+                }
+            }
+        } catch (error) {
+            console.log('Error in handling feedback:', error);
+            document.getElementById('like-dislike-section').remove();
+            document.getElementById('feedback-success-msg').innerHTML = feedbackConfigData ? feedbackConfigData.fbSuccessMsg ? feedbackConfigData.fbSuccessMsg : 'Thanks for the feedback.' : 'Thanks for the feedback.';            
+        }
+
+        function resetCommentSection() {
+            const commentEl = document.getElementById('comment');
+            commentEl.removeAttribute('required');
+            commentEl.removeAttribute('minlength');
+            commentEl.setCustomValidity('');
+            commentEl.value = '';
+            commentEl.style.display = 'none'
+            const errorMessage = document.getElementById('comment-error');
+            if(errorMessage) {
+                errorMessage.remove();
+            }
+        }
+
+        function setUpCommentSection() {
+            const commentElem = document.getElementById('comment');
+            if (feedbackConfigData && feedbackConfigData.feedbackCommentMandatory) {
+                commentElem.setAttribute('required', true);
+                commentElem.setAttribute('placeholder',`Comment *`);
+            }
+            if (feedbackConfigData && feedbackConfigData.feedbackCommentMinLimit) {
+                commentElem.setAttribute('minlength', feedbackConfigData.feedbackCommentMinLimit);
+            }
+            if (commentElem.hasAttribute('required') || commentElem.hasAttribute('minlength')) {
+                commentElem.addEventListener('keyup', function () {
+                const errorMessage = document.getElementById('comment-error');
+                // Check for validation errors
+                if (commentElem.validity && !commentElem.validity.valid) {
+                    let errorText = '';
+                    if (commentElem.validity.valueMissing) {
+                        errorText = 'Comment is required.';
+                    } else if (commentElem.validity.tooShort) {
+                        errorText = `Comment must be at least ${commentElem.minLength} characters.`;
+                    }
+                    if (!errorMessage) {
+                        const error = document.createElement('div');
+                        error.id = 'comment-error';
+                        error.textContent = errorText;
+                        error.className="text-red";
+                        commentElem.parentElement.appendChild(error);
+                    } else {
+                        errorMessage.textContent = errorText;
+                    }
+                } else if (errorMessage) {
+                    errorMessage.remove();
+                }
+                });
+            }
+            commentElem.style.display = 'block';
+        }
+    }
+
+    function redirectToFeedbackPage() {
+        window.open(articlePageUrl + articleId + '&action=feedback', '_self');
+    }
+
+    function clearSearch() {
+        document.getElementById('searchBox').value = '';
+    }
+
+    function redirectOnSearch(e) {
+        if (e && e.keyCode === 13 || e === undefined) {
+            const searchText = document.getElementById('searchBox').value;
+            var redirectOnSearchUrl = '';
+
+            if (!redirectOnSearchUrl) {
+                console.log('Error! Search URL is not configured.');
+                return;
+            } else {
+                window.open(redirectOnSearchUrl + searchText, '_blank');
+            }
+        }
+    }
+
+    function renderArticleDetails(detailsKbParamData) {
+        if (detailsKbParamData && detailsKbParamData.length > 0) {
+            detailsKbParamData.forEach(function (param) {
+                if (param && param.identifier) {
+                    const paramName = param.identifier;
+                    let paramResKey = "";
+                    let headerSection = false;
+                    let icon = 'article';
+                    let paramValue = null;
+                    switch(paramName) {
+                        //For descriptive fields
+                        case 'description':
+                        case 'environment':
+                        case 'cause':
+                        case 'resolution':
+                        case 'introduction':
+                        case 'additionalInfo':
+                            const parentElem = document.getElementById(paramName);
+                            if(parentElem) {
+                                parentElem.style.display = 'block';
+                                const childTitle = parentElem.querySelector('.article-detail-card-header h4');
+                                parentElem.style.order = param.sequence ? param.sequence : initial;
+                                childTitle.innerText = param.alias;
+                            }
+                            break;
+                        // For meta data fields
+                        case 'createdBy':
+                            paramResKey = "createdByName";
+                            paramValue = 'Katherine Shann';
+                            headerSection = true;
+                            icon = 'account_circle';
+                            break;
+                        case 'createdTime':
+                            paramResKey = "createdTime";
+                            paramValue = '01-15-2025 05:17';
+                            headerSection = true;
+                            icon = 'calendar_today';
+                            break;
+                        case 'articleVersion':
+                            paramResKey = "articleOtherInfoVO.formattedVersion";
+                            paramValue = 'v.1.0';
+                            headerSection = true;
+                            break;
+                        case 'articleType':
+                            paramResKey = "articleTypeName";
+                            paramValue = 'Reference';
+                            headerSection = true;
+                            icon = 'timeline';
+                            break;
+                        case 'firstPublishedDate':
+                            paramResKey = "articleOtherInfoVO.firstPublishedDateVal";
+                            paramValue = '06-08-2025 12:12';
+                            headerSection = true;
+                            icon = 'calendar_today';
+                            break;
+                        case 'publishedDate':
+                            paramResKey = "articleOtherInfoVO.publishedDateVal";
+                            paramValue = '06-08-2025 12:12';
+                            headerSection = true;
+                            icon = 'calendar_today';
+                            break;
+                        };
+
+                    if (paramValue && paramValue.length > 0) {
+                         if(headerSection) {
+                            const container = document.getElementById('article-header-info');
+                            const newElement = document.createElement('div');
+                            newElement.classList.add("flex-row", "row-gap-8", "article-updated-time");
+                            newElement.style.order = param.sequence ? param.sequence : initial;
+                            newElement.innerHTML = 
+                            `<span class="material-icons article-updated-date-icon_cal">${icon}</span>
+                            <h4 class="wolken-h4">${param.alias}: <span>${paramValue}</span></h4>`;
+                            container.appendChild(newElement);
+                        }
+                    }
+                }
+            });
+        }
+        setLoadingPage(false);
+    }
+
+    function setLoadingPage(state) {
+        setTimeout(function () {
+            if (state) {
+                document.getElementsByClassName('article-container')[0].style.display = 'none';
+                document.getElementsByClassName('loader-container')[0].style.display = 'flex';
+            } else {
+                document.getElementsByClassName('article-container')[0].style.display = 'flex';
+                document.getElementsByClassName('loader-container')[0].style.display = 'none';
+            }
+        }, 1000);
+    }
+
+</script>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe title="No Script" src="https://www.googletagmanager.com/ns.html?id=GTM-KF7XWD" height="0" width="0"
+        style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<script type="text/javascript">
+    function loadErroredFile(file, path, isEdit) {
+        if (!isEdit) {
+            if (path) {
+                file.id = path;
+                if (file.id && document.getElementById(file.id)) {
+                    document.getElementById(file.id).style.display = 'none';
+                    document.getElementById(file.id).style.border = 'none';
+                }
+                if (!file.src.includes('X-Amz-Security-Token')) {
+                    const formData = new FormData();
+                    const input = new Object();
+                    input['fileName'] = path;
+                    input['fileUrl'] = file.src;
+                    formData.append('data', JSON.stringify(input));
+                    const fileRequest = new XMLHttpRequest();
+                    apiUrl = apiDomain + 'cau/attachment/preverify_attachment';
+                    fileRequest.open('POST', apiUrl, true);
+                    fileRequest.withCredentials = true;
+
+                    fileRequest.setRequestHeader('domain', kb_public_page_domain);
+                    fileRequest.send(formData);
+                    fileRequest.onload = function () {
+                        if (this.status === 200) {
+                            let response = this.response;
+                            if (typeof response === 'string') {
+                                response = JSON.parse(response);
+                            }
+                            success(response);
+                        }
+                    }
+
+                    let success = (response) => {
+                        if (response && response.data) {
+                            if (file && file.src) {
+                                file.src = response.data.preSignedURL;
+                                if (file.id && document.getElementById(file.id)) {
+                                    document.getElementById(file.id).style.display = '';
+                                }
+                            } else {
+                                file = response.data.preSignedURL;
+                                if (file.id && document.getElementById(file.id)) {
+                                    document.getElementById(file.id).style.display = '';
+                                }
+                            }
+                        }
+                    }
+                } else {
+                    if (file.id) {
+                        document.getElementById(file.id).style.display = '';
+                    }
+                }
+            }
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('img[data-ximg-check]').forEach((img) => {
+      if (!img.dataset.ximgChecked) {
+        img.onerror = function () {
+          if (!img.src) return;
+          try {
+            loadErroredFile(img, getFilePath(img.src));
+          } catch (err) {
+            console.error('Error handling failed image:', err);
+          }
+        };
+        img.dataset.ximgChecked = 'true';
+      }
+    });
+});
+
+  function getFilePath(path) {
+    const safePathPattern = /^[\w\-. ]+(?:\/[\w\-. ]+)*$/;
+    try {
+      const segments = path.split('/');
+      if (segments.length < 5) return null;
+      const fileName = segments.slice(4).join('/');
+      const decodedfileName = decodeURIComponent(fileName);
+      if (!safePathPattern.test(decodedfileName)) return null;
+      return decodedfileName;
+    } catch {
+      return null;
+    }
+  }
+</script>
+     
+        <script src="https://cdn.wolkenservicedesk.com/Citrix/JS_Files/wolkenInsight.js"></script>
+    
+    <script type="text/javascript">
+    var flexFields = JSON.parse('[]');
+    var flexDetails = JSON.parse('[]');
+    function mergeFieldsAndValues(fields, values) {
+        var merged = [];
+        var fieldMap = {};
+        var valueMap = {};
+        var allIdsMap = {};
+        for (var i = 0; i < fields.length; i++) {
+            fieldMap[fields[i].attributeId] = fields[i];
+            allIdsMap[fields[i].attributeId] = true;
+        }
+        for (var j = 0; j < values.length; j++) {
+            valueMap[values[j].attributeId] = values[j];
+            allIdsMap[values[j].attributeId] = true;
+        }
+        for (var attributeId in allIdsMap) {
+            if (
+                fieldMap[attributeId] &&
+                fieldMap[attributeId].attributeName &&
+                valueMap[attributeId] &&
+                (valueMap[attributeId].lovName || valueMap[attributeId].textValue)
+            ) {
+                merged.push({
+                id: attributeId,
+                name: fieldMap[attributeId]
+                ? fieldMap[attributeId].attributeName
+                : null,
+                value: valueMap[attributeId]
+                ? valueMap[attributeId].lovName
+                ? valueMap[attributeId].lovName
+                : valueMap[attributeId].textValue
+                : null,
+                sequence:valueMap[attributeId]?valueMap[attributeId].sequence+20:20  //fields should be at the end
+                });
+            }
+        }
+        return merged;
+    }
+    if(flexDetails && flexDetails.kbFlexMapValueList){
+        var flexValues = mergeFieldsAndValues(
+            flexFields,
+            flexDetails.kbFlexMapValueList
+        );
+        var container = document.getElementById('article-header-info');
+        flexValues.forEach(function (item) {
+            const newElement = document.createElement('div');
+            newElement.classList.add("flex-row", "row-gap-8", "article-updated-time");
+            newElement.style.order = item.sequence ? item.sequence : initial;
+            newElement.style.paddingLeft = '32px';
+            newElement.style.marginRight = '0';
+            newElement.innerHTML = `<h4 class="wolken-h4">${item.name}: <span>${item.value}</span></h4>`;
+            container.appendChild(newElement);
+        });
+    }
+        </script>
+        
+</html>

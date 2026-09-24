@@ -55,6 +55,16 @@ class RegistryContractTests(unittest.TestCase):
         self.assertEqual(sources.source("import-data").category, "software")
         for source_id in ("import-hardware", "import-opengear"):
             self.assertEqual(sources.source(source_id).category, "hardware")
+        # The XenServer collector is a separate software source from the
+        # NetScaler one: broadening NetScaler's parser to XenServer is exactly
+        # what the registry's per-verifier ownership is meant to prevent.
+        from engine import xenserver
+
+        self.assertEqual(sources.source("import-xenserver").verifier, xenserver.VERIFIER)
+        self.assertEqual(sources.source("import-xenserver").category, "software")
+        self.assertEqual(sources.source("import-xenserver").report, "xenserver-import.json")
+        self.assertNotEqual(sources.source("import-xenserver").verifier,
+                            sources.source("import-netscaler").verifier)
         # Validation lets researched-* verifiers through to the contribution
         # admission rules; that only holds while both modules agree on the prefix.
         from engine import contribute
