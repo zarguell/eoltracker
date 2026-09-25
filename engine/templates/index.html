@@ -3,17 +3,19 @@
 <section class="hero">
   <p class="eyebrow">Software and hardware lifecycle catalog</p>
   <h1 class="page-title">When does your software or hardware stop getting support?</h1>
-  <p class="lead">
-    General availability, end of sale, end of security support and end of life for
-    {{ plural(product_count, 'software product') }} — {{ release_count }} releases — alongside
-    {{ plural(hardware_count, 'hardware record') }} across {{ plural(hardware_vendors|length, 'vendor') }}: vendor
-    lifecycle rows that carry the milestones their source states, and exact vendor catalogue models that carry a
-    listing state instead of a support claim.
-    Software is normalized from endoflife.date; hardware records come from eosl.date, from
-    <a href="https://opengear.com/end-life-products" rel="noopener">Opengear's end-of-life product list</a>, and from
-    <a href="{{ catalog_source_site }}" rel="noopener">Opengear's product catalogue</a>.
-    Every date carries the record it came from; nothing here is estimated.
-  </p>
+<p class="lead">
+  General availability, end of sale, end of security support and end of life for
+  {{ plural(product_count, 'software product') }} — {{ release_count }} releases — alongside
+  {{ plural(hardware_count, 'hardware record') }} across {{ plural(hardware_vendors|length, 'vendor') }}: vendor
+  lifecycle rows that carry the milestones their source states, and exact vendor catalogue models that carry a
+  listing state instead of a support claim.
+</p>
+<p class="hero-sources">
+  Sources: <a href="{{ source_site }}" rel="noopener">endoflife.date</a> for software,
+  <a href="{{ hardware_source_site }}" rel="noopener">eosl.date</a> for vendor hardware tables, and
+  <a href="https://opengear.com/end-life-products" rel="noopener">Opengear</a> for lifecycle notices and catalog listings.
+  Every date keeps its source record; nothing here is estimated.
+</p>
   {% if researched_count or researched_hardware_count %}
   <p class="panel-note research-note">
     {% if researched_count %}{{ plural(researched_count, 'software product') }} here
