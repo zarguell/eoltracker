@@ -3,19 +3,18 @@
 <section class="hero">
   <p class="eyebrow">Software and hardware lifecycle catalog</p>
   <h1 class="page-title">When does your software or hardware stop getting support?</h1>
-<p class="lead">
-  General availability, end of sale, end of security support and end of life for
-  {{ plural(product_count, 'software product') }} — {{ release_count }} releases — alongside
-  {{ plural(hardware_count, 'hardware record') }} across {{ plural(hardware_vendors|length, 'vendor') }}: vendor
-  lifecycle rows that carry the milestones their source states, and exact vendor catalogue models that carry a
-  listing state instead of a support claim.
-</p>
-<p class="hero-sources">
-  Sources: <a href="{{ source_site }}" rel="noopener">endoflife.date</a> for software,
-  <a href="{{ hardware_source_site }}" rel="noopener">eosl.date</a> for vendor hardware tables, and
-  <a href="https://opengear.com/end-life-products" rel="noopener">Opengear</a> for lifecycle notices and catalog listings.
-  Every date keeps its source record; nothing here is estimated.
-</p>
+  <p class="lead">
+    General availability, end of sale, end of security support and end of life for
+    {{ plural(product_count, 'software product') }} — {{ release_count }} releases — alongside
+    {{ plural(hardware_count, 'hardware record') }} across {{ plural(hardware_vendors|length, 'vendor') }}: vendor
+    lifecycle rows that carry the milestones their source states, and exact vendor catalogue models that carry a
+    listing state instead of a support claim.
+  </p>
+  <p class="hero-sources">
+    Sources: public vendor lifecycle pages and product catalogues, the
+    <a href="{{ source_site }}" rel="noopener">endoflife.date</a> community catalog, and reviewed vendor notices.
+    Every date keeps its source record; see the <a href="{{ url_for('api/') }}">API mapping</a> for the normalization rules.
+  </p>
   {% if researched_count or researched_hardware_count %}
   <p class="panel-note research-note">
     {% if researched_count %}{{ plural(researched_count, 'software product') }} here
@@ -31,12 +30,11 @@
     <div class="stat"><span class="stat-num">{{ hardware_count }}</span><span class="stat-label">hardware records</span></div>
     <div class="stat"><span class="stat-num">{{ coverage|sum(attribute='known') + hardware_coverage|sum(attribute='known') }}</span><span class="stat-label">published milestone dates</span></div>
     <div class="stat"><span class="stat-num">{{ categories|length }}</span><span class="stat-label">software categories</span></div>
-  </div>
   <p class="hero-meta">
     Last refresh <time datetime="{{ refresh.iso }}">{{ refresh.human }}</time>.
     The {{ plural(excluded_count, 'hardware product') }} endoflife.date lists outside its own software catalog stay
-    excluded here and are named in the manifest; the hardware records below are those eosl.date publishes a vendor
-    lifecycle date for, plus Opengear's own lifecycle rows and the exact models its product catalogue lists.
+    excluded here and are named in the manifest; the hardware records below come from the registered hardware
+    sources, with lifecycle rows and exact catalogue models kept as separate record types.
   </p>
 </section>
 
