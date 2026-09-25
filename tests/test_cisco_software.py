@@ -128,6 +128,26 @@ class InventoryTests(unittest.TestCase):
         self.assertEqual(duplicates, 1)
         self.assertEqual({train["listing"] for train in trains}, {"hub", "catalog"})
 
+    def test_a_catalog_row_disagreeing_with_the_hub_about_the_train_page_refuses(self):
+        # The catalog names a different page for 15.3M&T than the hub does: the
+        # two vendor listings contradict each other about the train's identity,
+        # and the first-wins path would have published the hub's link silently.
+        catalog = CATALOG.replace(
+            'href="/c/en/us/support/ios-nx-os-software/ios-15-3m-t/series.html"',
+            'href="/c/en/us/support/ios-nx-os-software/ios-15-3m-t-eol/series.html"', 1)
+        with self.assertRaisesRegex(ValueError, "disagree about the train's page"):
+            cisco_software.ios_inventory(HUB, catalog)
+
+    def test_an_identical_restatement_across_the_listings_stays_a_duplicate(self):
+        # Control: the real fixtures name one page for the shared train, so the
+        # check above fires on a real contradiction, not on every duplicate.
+        trains, _, _, _, duplicates = cisco_software.ios_inventory(HUB, CATALOG)
+        self.assertEqual(duplicates, 1)
+        shared = next(train for train in trains if train["id"] == "15.3mt")
+        self.assertEqual(shared["url"],
+                         "https://www.cisco.com/c/en/us/support/ios-nx-os-software/"
+                         "ios-15-3m-t/series.html")
+
     def test_vendor_spellings_of_one_train_share_an_identity(self):
         self.assertEqual(cisco_software.train_id("15.3 M & T"),
                          cisco_software.train_id("Cisco IOS Software Releases 15.3M&T"))
@@ -157,6 +177,122 @@ class InventoryTests(unittest.TestCase):
         # A row in another section names that section.
         other = next(entry for key, entry in by_row.items() if key[0] == "Switches")
         self.assertIn("'Switches'", other["reason"])
+
+
+class TrainUrlTests(unittest.TestCase):
+    """A discovered href is vendor data: it is policy-checked before any fetch."""
+
+    def test_root_relative_and_vendor_https_links_resolve_to_cisco(self):
+        self.assertEqual(cisco_software.train_url("/c/en/us/support/x/series.html", "probe"),
+                         "https://www.cisco.com/c/en/us/support/x/series.html")
+        self.assertEqual(
+            cisco_software.train_url("https://www.cisco.com/c/en/us/support/x/series.html", "probe"),
+            "https://www.cisco.com/c/en/us/support/x/series.html")
+        # A bare cisco.com host is the vendor's too.
+        self.assertEqual(cisco_software.train_url("https://cisco.com/a.html", "probe"),
+                         "https://cisco.com/a.html")
+        # A protocol-relative link resolves to HTTPS against the vendor host.
+        self.assertEqual(cisco_software.train_url("//www.cisco.com/a.html", "probe"),
+                         "https://www.cisco.com/a.html")
+
+    def test_an_unsafe_or_foreign_destination_is_refused_before_the_fetch(self):
+        for href in ("http://www.cisco.com/c/en/us/support/x/series.html",
+                     "//evil.example.com/series.html",
+                     "https://evil.example.com/series.html",
+                     "https://cisco.com.evil.example.com/series.html",
+                     "https://user:secret@www.cisco.com/series.html",
+                     "https://www.cisco.com.evil.example/x.html",
+                     "ftp://www.cisco.com/x.html",
+                     "file:///etc/passwd",
+                     "https://www.cisco.com./x.html",
+                     "javascript:alert(1)",
+                     "https://127.0.0.1/series.html",
+                     "https://169.254.169.254/latest/meta-data/",
+                     "https://[::1]/series.html",
+                     "https://10.0.0.1/series.html",
+                     "https://www.cisco.com/series.html\nHost: evil.example.com",
+                     ""):
+            with self.subTest(href=href):
+                with self.assertRaises(ValueError):
+                    cisco_software.train_url(href, "probe")
+
+    def test_an_unsafe_row_link_is_excluded_and_never_fetched(self):
+        # The hub's own markup is mutated to carry a foreign link that still
+        # looks like a train page: the row is accounted with the reason, and no
+        # train is created for it, so import_ios never issues a request there.
+        hostile = ("https://evil.example.com/c/en/us/support/ios-nx-os-software/"
+                   "ios-15-7m-t/series.html")
+        hub = HUB.replace('href="/c/en/us/support/ios-nx-os-software/ios-15-7m-t/series.html"',
+                          f'href="{hostile}"', 1)
+        trains, _, _, excluded, _ = cisco_software.ios_inventory(hub, CATALOG)
+        self.assertNotIn("15.7mt", [train["id"] for train in trains])
+        entry = next(entry for entry in excluded if entry.get("id") == "15.7mt")
+        self.assertIn("not a page this source fetches", entry["reason"])
+        self.assertIn("evil.example.com", entry["reason"])
+        self.assertEqual(entry["href"], hostile)
+        self.assertFalse(any(hostile in train["url"] for train in trains))
+
+    def test_a_catalog_row_with_a_foreign_link_is_excluded_too(self):
+        hostile = "https://169.254.169.254/c/en/us/support/ios-nx-os-software/x/series.html"
+        catalog = CATALOG.replace('href="/c/en/us/support/ios-nx-os-software/ios-15-5m-t/series.html"',
+                                  f'href="{hostile}"', 1)
+        trains, _, _, excluded, _ = cisco_software.ios_inventory(HUB, catalog)
+        self.assertNotIn("15.5mt", [train["id"] for train in trains])
+        entry = next(entry for entry in excluded if entry.get("href") == hostile)
+        self.assertEqual(entry["listing"], "catalog")
+        self.assertIn("not a page this source fetches", entry["reason"])
+
+    def test_a_refused_row_link_keeps_the_report_arithmetic(self):
+        # The refused row is an inventoried train excluded with its reason, so
+        # the report's own sums still add up: a refused link is accounted for
+        # like any other train the source could not publish.
+        hostile = ("https://evil.example.com/c/en/us/support/ios-nx-os-software/"
+                   "ios-15-7m-t/series.html")
+        hub = HUB.replace('href="/c/en/us/support/ios-nx-os-software/ios-15-7m-t/series.html"',
+                          f'href="{hostile}"', 1)
+        trains, hub_rows, catalog_rows, excluded, duplicates = cisco_software.ios_inventory(
+            hub, CATALOG)
+        self.assertEqual(len(trains) + len(excluded) + duplicates,
+                         len(hub_rows) + len(catalog_rows))
+        self.assertIn("15.7mt", [entry.get("id") for entry in excluded])
+
+    def test_a_redirect_that_leaves_the_vendor_host_refuses_the_fetch(self):
+        with mock.patch.object(cisco_software.net, "get") as get:
+            get.return_value = _Response("https://169.254.169.254/secret", "<html></html>")
+            with self.assertRaises(ValueError):
+                cisco_software._page("https://www.cisco.com/c/en/us/support/x/series.html")
+        get.assert_called_once()
+
+    def test_a_same_host_redirect_is_followed_and_returned(self):
+        with mock.patch.object(cisco_software.net, "get") as get:
+            get.return_value = _Response(
+                "https://www.cisco.com/c/en/us/obsolete/ios-nx-os-software/x.html",
+                "<html>notice</html>")
+            final, text = cisco_software._page(
+                "https://www.cisco.com/c/en/us/support/x/series.html")
+        self.assertEqual(final, "https://www.cisco.com/c/en/us/obsolete/ios-nx-os-software/x.html")
+        self.assertEqual(text, "<html>notice</html>")
+
+    def test_the_shared_url_policy_applies_to_the_resolved_href(self):
+        # The vendor host is not the whole story: the shared policy also refuses
+        # a credential-shaped query, so a link that would carry a token into a
+        # fetched URL — or a citation this project could not publish — is refused.
+        for href in ("https://www.cisco.com/x.html?token=abc",
+                     "https://www.cisco.com/x.html?X-Amz-Signature=deadbeef",
+                     "https://www.cisco.com/x.html?access_key=abc"):
+            with self.subTest(href=href):
+                with self.assertRaisesRegex(ValueError, "not a safe HTTP URL"):
+                    cisco_software.train_url(href, "probe")
+        self.assertEqual(cisco_software.train_url("https://www.cisco.com/x.html?a=b", "probe"),
+                         "https://www.cisco.com/x.html?a=b")
+
+    def test_the_shared_url_rule_is_actually_installed_here(self):
+        # A silent fallback would make the test above vacuous, so the module the
+        # collector imported is pinned: engine/urls.py supplies the rule and the
+        # collector must be using it rather than its own copy.
+        from engine import urls
+
+        self.assertIs(cisco_software._safe_http_url, urls.safe_http_url)
 
 
 class SeriesPageTests(unittest.TestCase):
@@ -292,6 +428,36 @@ class NxOsPageTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             cisco_software.parse_lifecycle_page("<html><body><p>No tables</p></body></html>")
 
+    def nx_row(self, release, eoswm, security):
+        return (f'<tr><td><p>{release}</p></td><td><p>{eoswm}</p></td>'
+                f'<td><p>{security}</p></td></tr>')
+
+    def duplicate_row(self, page, row):
+        """``page`` with ``row`` appended to the milestones table's tbody."""
+        marker = "NX-OS EoL Milestones</a></p>"
+        start = page.index(marker)
+        end = page.index("</tbody>", start)
+        return page[:end] + row + page[end:]
+
+    def test_an_identical_duplicate_major_release_row_is_reconciled(self):
+        row = self.nx_row("10.2(x)", "Nov 30 2023", "Feb 28 2025/Aug 31 2025")
+        releases, excluded = cisco_software.parse_lifecycle_page(self.duplicate_row(NX_OS, row))
+        self.assertEqual([release["id"] for release in releases].count("10.2"), 1)
+        self.assertIn("duplicate train row for release '10.2'",
+                      [entry["reason"] for entry in excluded])
+
+    def test_a_duplicate_row_contradicting_a_lifecycle_cell_refuses_the_parse(self):
+        # The old path dropped the second row without reading its cells: a
+        # changed EoSWM or EoVSS/LDoS value is a vendor contradiction, not a
+        # duplicate, so the refresh must refuse rather than publish the first.
+        for eoswm, security in (("Nov 30 2024", "Feb 28 2025/Aug 31 2025"),
+                                ("Nov 30 2023", "Mar 28 2025/Aug 31 2025"),
+                                ("Nov 30 2023", "Feb 28 2025/Sep 30 2025")):
+            with self.subTest(eoswm=eoswm, security=security):
+                row = self.nx_row("10.2(x)", eoswm, security)
+                with self.assertRaisesRegex(ValueError, "stated twice with contradicting values"):
+                    cisco_software.parse_lifecycle_page(self.duplicate_row(NX_OS, row))
+
 
 class PublicationTests(unittest.TestCase):
     def setUp(self):
@@ -369,8 +535,6 @@ class PublicationTests(unittest.TestCase):
         self.refresh_ios("2026-09-17T01:00:00Z")
         before = json.loads((self.root / "products/cisco-ios.json").read_text())
         # Drop 15.9M&T's page: it is served as the generic category page instead.
-        original = fetch("https://www.cisco.com/c/en/us/support/ios-nx-os-software/ios-15-9m-t/series.html")
-
         def without(url):
             if url.endswith("ios-15-9m-t/series.html"):
                 return _Response(GENERIC_URL, GENERIC)

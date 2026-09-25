@@ -16,6 +16,12 @@ API = ENDOFLIFE_DATE_API
 # source the registry knows, so the collector reads its own id from there.
 VERIFIER = sources.source("import-data").verifier
 SOFTWARE_CATEGORIES = {"app", "database", "framework", "lang", "os", "server-app", "service", "standard"}
+# Cardinality caps for the upstream listing and one product's releases, set
+# comfortably above the real catalog (455 upstream products; the largest of the
+# committed records carries 150 releases) so a corrupted or adversarial listing
+# fails closed before it spends the request budget or the disk.
+MAX_PRODUCTS = 5000
+MAX_RELEASES = 2000
 
 
 def dump(path, value):
@@ -61,9 +67,9 @@ def milestones(release, labels):
         target = mapping.get(label)
         if target:
             result[target] = date_value(release.get(field + "From"))
-    # eoes is the upstream's explicit end of extended support. If there is no
-    # extended support, security support's end is the best known support end,
-    # not a claim that an undisclosed commercial contract cannot exist.
+    # eoes is the upstream's explicit end of extended support. Absent one, the
+    # best known *full* support end falls back to the primary column below; a
+    # security-only label is not a full support end and never becomes one.
     extended = date_value(release.get("eoesFrom"))
     # Extended security updates are security support too. Generic support dates
     # remain separate from security dates; an announced extension with unknown
@@ -74,10 +80,37 @@ def milestones(release, labels):
     if extended:
         result["eol"] = extended
     elif not extended_label:
+        # Only wording that states full/terminal support — or "end of life",
+        # which the mapping above already handles — fills eol from the primary
+        # column. "Security support" is deliberately absent: it is security-only,
+        # so it stops at eossec instead of republishing fixes-stop as the
+        # terminal support end (adonisjs publishes one date under that wording).
         support_label = (labels.get("eol") or "").lower()
-        if support_label in {"security support", "support", "support status", "supported", "end of life"}:
+        if support_label in {"support", "support status", "supported", "end of life"}:
             result["eol"] = date_value(release.get("eolFrom"))
     return result
+
+
+def _refuse_foreign_slugs(destination, slugs):
+    """Refuse an upstream slug a committed record this source does not own already uses.
+
+    A committed record whose verifier is not this source's belongs to another
+    registered pipeline (a vendor collector's shard of the software catalog) or
+    to a researched contribution. Re-deriving it from the endoflife.date listing
+    would delete that source's history, provenance and report-backed rows, and
+    the later collector would then abort on the ownership collision this refresh
+    created. The collision is detected before any file is staged, so the
+    committed record and every sidecar stay byte-for-byte as they were found.
+    """
+    products = Path(destination) / "products"
+    for slug in slugs:
+        path = products / (slug + ".json")
+        if not path.exists():
+            continue
+        verifier = json.loads(path.read_text(encoding="utf-8"))["provenance"]["verifier"]
+        if verifier != VERIFIER:
+            raise ValueError(f"endoflife.date source ownership collision: {slug} carries "
+                             f"{verifier}, not {VERIFIER}")
 
 
 def normalize(payload, checked):
@@ -87,6 +120,8 @@ def normalize(payload, checked):
         raise ValueError(f"Unsafe product slug: {slug!r}")
     if product["category"] not in SOFTWARE_CATEGORIES:
         raise ValueError(f"Unknown software category: {product['category']!r}")
+    if len(product["releases"]) > MAX_RELEASES:
+        raise ValueError(f"{slug}: upstream product exceeds {MAX_RELEASES} releases")
     labels = product.get("labels", {})
     releases = []
     for release in product["releases"]:
@@ -114,12 +149,22 @@ def import_data(directory=None):
     entries = listing["result"]
     if not entries or len(entries) != listing["total"]:
         raise ValueError("Incomplete upstream product listing")
+    # Fail before the detail fan-out: a listing that is larger than a real
+    # catalog (a hostile or corrupted upstream) must not spend the request
+    # budget on one detail fetch per advertised entry.
+    if len(entries) > MAX_PRODUCTS:
+        raise ValueError(f"Upstream listing exceeds {MAX_PRODUCTS} products: {len(entries)}")
     if len({p["name"] for p in entries}) != len(entries):
         raise ValueError("Duplicate upstream product IDs")
     unknown = {p["category"] for p in entries} - SOFTWARE_CATEGORIES - {"device"}
     if unknown:
         raise ValueError(f"Review new upstream categories before publishing: {unknown}")
     selected = sorted((p for p in entries if p["category"] != "device"), key=lambda p: p["name"])
+    destination = Path(directory) if directory is not None else ROOT / "data"
+    # The committed ownership check runs before the fan-out: a slug another
+    # registered source already owns aborts the refresh without fetching a
+    # single detail document, and without staging anything.
+    _refuse_foreign_slugs(destination, [p["name"] for p in selected])
     checked = datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
     # Fetch and normalize everything before touching the committed data directory.
     with ThreadPoolExecutor(max_workers=net.workers(API)) as pool:
@@ -127,7 +172,6 @@ def import_data(directory=None):
     records = [normalize(p, checked) for p in payloads]
     if [r["id"] for r in records] != [p["name"] for p in selected]:
         raise ValueError("Upstream listing/detail identities disagree")
-    destination = Path(directory) if directory is not None else ROOT / "data"
     with tempfile.TemporaryDirectory(prefix="eoltracker-") as temp:
         staged = Path(temp)
         for record in records:
@@ -156,13 +200,24 @@ def import_data(directory=None):
         # the staged snapshot verbatim: validate_data then checks what is about
         # to be published, keeping the refresh complete-or-nothing, while the
         # bytes and revision time of a record this source does not own survive
-        # untouched instead of being dropped or rewritten.
+        # untouched instead of being dropped or rewritten. A staged record can
+        # no longer shadow one of these: `_refuse_foreign_slugs` already
+        # aborted if the upstream listing used such a slug, so this loop only
+        # ever adds records nothing else would write.
         committed = destination / "products"
         for file in sorted(committed.glob("*.json")) if committed.exists() else ():
             if (staged / "products" / file.name).exists():
                 continue
             if json.loads(file.read_text())["provenance"]["verifier"] != VERIFIER:
                 shutil.copyfile(file, staged / "products" / file.name)
+        # Every registered source's sidecar is staged beside those records. A
+        # carried record's own report (AGENTS.md rule 6 accounting) must be
+        # present, or validate_data refuses the staged snapshot for a missing
+        # sidecar; staging the committed report keeps the internal validation
+        # from failing on a sibling source's records this refresh only carries.
+        for source in sources.all_sources():
+            if source.report and (destination / source.report).is_file():
+                shutil.copyfile(destination / source.report, staged / source.report)
         validate_data(staged)
         destination.mkdir(exist_ok=True)
         products = destination / "products"

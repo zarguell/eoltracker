@@ -1,6 +1,9 @@
 import copy
 import json
 import unittest
+from unittest import mock
+
+from engine import opengear
 
 from engine.opengear import (CATALOG_FAMILY, CONFIGURE_SOURCE, HEADERS, combine_records,
                              parse_catalog, parse_date, parse_page, validate_record)
@@ -181,6 +184,41 @@ class OpengearTests(unittest.TestCase):
                                                   'eol': '2014-04-30'})
         self.assertNotIn('evidence', next(r for r in combined if r['name'] == 'OM2200'))
         validate_record(retained)
+    def test_lifecycle_disappearance_keeps_catalog_date_coherent(self):
+        lifecycle, _, _ = parse_page(page(), CHECKED)
+        catalog, _ = parse_catalog(catalog_page('OM2216'), CHECKED, lifecycle)
+        previous = list(lifecycle) + list(catalog)
+        shorter = [record for record in lifecycle if record['name'] != 'OM2200']
+        fresh_catalog, _ = parse_catalog(catalog_page('OM2216'), '2026-10-01T00:00:00Z', shorter)
+        combined = combine_records(shorter, fresh_catalog, previous,
+                                   '2026-10-01T00:00:00Z', status_checked='2026-10-01T00:00:00Z')
+        current = next(record for record in combined if record['name'] == 'OM2216')
+        self.assertEqual(current['milestones']['eol'], '2031-06-30')
+        self.assertEqual(current['lifecycle']['listed'], True)
+        self.assertEqual(current['provenance']['last_checked'], '2026-10-01T00:00:00Z')
+        validate_record(current)
+
+    def test_retained_status_uses_current_evaluation_date(self):
+        lifecycle, _, _ = parse_page(lifecycle_page(hardware=(
+            ('OM2200', 'OM2216', '01 Oct 2026', '01 Oct 2026', 'CM8100', 'EoS Notice'),
+        )), CHECKED)
+        combined = combine_records([], [], list(lifecycle), '2026-11-01T00:00:00Z',
+                                   status_checked='2026-11-01T00:00:00Z')
+        retained = combined[0]
+        self.assertEqual(retained['status'], 'eol')
+        self.assertEqual(retained['status_as_of'], '2026-11-01T00:00:00Z')
+        self.assertEqual(retained['provenance']['last_checked'], CHECKED)
+        validate_record(retained)
+
+    def test_catalog_count_drift_fails_before_publication(self):
+        with mock.patch.object(opengear, 'fetch', return_value=''), \
+             mock.patch.object(opengear, 'parse_page', return_value=([], [], [])), \
+             mock.patch.object(opengear, 'parse_catalog', return_value=([{'id': 'one'}], ['one'])), \
+             mock.patch.object(opengear, 'get_records', return_value=[]), \
+             mock.patch.object(opengear, 'publish_records') as publish:
+            with self.assertRaisesRegex(ValueError, 'Review the change'):
+                opengear.import_opengear()
+        publish.assert_not_called()
 
     def test_conflicting_notices_do_not_silently_choose_a_date(self):
         """Two notices naming one SKU with different deadlines is a contradiction."""

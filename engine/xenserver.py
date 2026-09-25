@@ -128,7 +128,10 @@ class Table:
     (footnote asterisks and ``<br>`` line breaks folded away). ``eos``/``eol``
     name the columns that fill those milestones; a milestone whose column the
     table does not declare stays null rather than being read out of another
-    column.
+    column. ``optional`` names the declared columns a row may end before: the
+    CR table's oldest rows write no trailing ``EOES`` cell at all, so that is
+    the table's one declared optional trailing cell, while every other row must
+    still occupy every declared column exactly.
     """
 
     key: str
@@ -142,6 +145,7 @@ class Table:
     language: str = LANGUAGE
     eos: str | None = None
     eol: str | None = None
+    optional: tuple = ()
 
 
 CORE = (PRODUCT, VERSION, LANGUAGE)
@@ -156,7 +160,8 @@ TABLES = (
           products=("Citrix Hypervisor",), day_format="legacy", eol="EOL"),
     Table(key="XenServer tab / Current Release (CR) Lifecycle Dates", page=LEGACY_URL,
           tab="XenServer", headers=CORE + ("NSC", "EOS", "EOM", "EOL", "EOES"),
-          products=("XenServer",), day_format="legacy", eos="EOS", eol="EOL"),
+          products=("XenServer",), day_format="legacy", eos="EOS", eol="EOL",
+          optional=("EOES",)),
     Table(key="XenServer tab / Long Term Service Release (LTSR) Lifecycle Dates",
           page=LEGACY_URL, tab="XenServer", headers=CORE + ("NSC", "EOM", "EOL", "EOES", "Notes"),
           products=("XenServer",), day_format="legacy", eol="EOL"),
@@ -348,19 +353,47 @@ def _locate(current_html, legacy_html):
     return {spec.key: _find_table(pages[spec.page], spec) for spec in TABLES}
 
 
+def _span_columns(where, col, cell, width):
+    """The logical columns one cell claims, refusing a span past the declaration."""
+    if col + cell["cols"] > width:
+        raise ValueError(
+            f"{where}: a cell spans columns {col}..{col + cell['cols'] - 1}, past the table's "
+            f"{width} declared columns")
+    return range(col, col + cell["cols"])
+
+
 def _grid(table, spec):
     """The table's data rows as ``{declared header: text}`` dicts, rowspan carried.
 
     A group's product cell states its text on the group's first row and is
     declared with a ``rowspan`` covering the rest, so the grid carries it
     forward and every row reads with all its columns as the rendered page shows
-    them. A cell the vendor leaves out entirely (the earliest lines' ``EOES``)
-    is reported as the empty cell it is, never as a date read from another
-    column.
+    them. Spans are expanded into that logical grid, and each row must occupy
+    the table's declared columns *exactly*: a short row, an over-wide row, a
+    span that overruns the declaration, or two cells claiming one column is
+    refused by name, because a row one cell short would otherwise shift a date
+    into the column beside it and publish a milestone the vendor never stated.
+    A cell the vendor leaves out entirely (the earliest lines' ``EOES``) is
+    reported as the empty cell it is, never as a date read from another column.
     """
+    width = len(spec.headers)
+    # The trailing columns the vendor's own rows may end before, in the order
+    # they are declared. A row that ends one cell early can only be that row's
+    # own declared omission: the column it stops before must be optional, and
+    # the row must still fill every column up to it, so a value can never slide
+    # from one named column into another.
+    optional = tuple(spec.headers.index(header) for header in spec.optional)
     grid, pending = [], {}
-    for raw in table["rows"][1:]:
-        line, col, queue = {}, 0, list(raw)
+    for index, raw in enumerate(table["rows"][1:], start=2):
+        if not raw:
+            # A ``<tr>`` with no cell at all is the page's own spacing markup,
+            # not a source row: no value sits in it and no position can shift.
+            continue
+        where = f"{spec.key!r} row {index}"
+        # Every column a continuing rowspan already covers this row, so a
+        # ``colspan`` can be refused where it would collide with one.
+        blocked = {col: cell for col, (cell, _remaining) in pending.items()}
+        line, occupied, col, queue = {}, {}, 0, list(raw)
         while queue or col in pending:
             if col in pending:
                 cell, remaining = pending[col]
@@ -372,12 +405,25 @@ def _grid(table, spec):
                 cell = queue.pop(0)
                 if cell["rows"] > 1:
                     pending[col] = (cell, cell["rows"] - 1)
-            if col < len(spec.headers):
-                line[spec.headers[col]] = _spaced(cell["text"])
+            for position in _span_columns(where, col, cell, width):
+                if position in occupied or (position in blocked and blocked[position] is not cell):
+                    raise ValueError(
+                        f"{where}: two cells claim column {position}; the row's cells are "
+                        f"ambiguous and a value cannot be read from a named column")
+                occupied[position] = cell
+                line[spec.headers[position]] = _spaced(cell["text"])
             col += cell["cols"]
+        if col not in (width, *optional):
+            raise ValueError(
+                f"{where}: the row states {col} logical cells for the table's {width} declared "
+                f"columns; a shifted row would publish a date under the wrong column")
         for header in spec.headers:
             line.setdefault(header, "")
         grid.append(line)
+    if pending:
+        raise ValueError(
+            f"{spec.key!r}: a rowspan extends past the table's last row; the stated columns "
+            f"cannot be read")
     return grid
 
 

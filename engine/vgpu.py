@@ -148,6 +148,11 @@ def _tables(markdown):
     for heading in BRANCH_TABLES:
         if heading not in tables:
             raise ValueError(f"Missing vGPU branch table: {heading}")
+        if not tables[heading]:
+            # A required table with headers and no rows is a partial snapshot,
+            # not an empty catalog: the other table's rows would publish as the
+            # whole inventory. Refuse the refresh so the committed record stands.
+            raise ValueError(f"The {heading!r} table states no data rows")
     return tables
 
 
@@ -157,6 +162,19 @@ def _branch_type(cell, where):
     if text not in BRANCH_TYPES:
         raise ValueError(f"{where}: unknown vGPU branch type {cell!r}")
     return text
+
+
+def _stated(row):
+    """Every lifecycle-bearing cell of a row, for comparing two statements of it.
+
+    The release name is the row's identity, so its spelling is normalized rather
+    than compared; every other declared column is a claim about the branch —
+    its driver branch, its branch type, the latest release in it, and both
+    dates. Two rows claiming one branch while disagreeing about any of them are
+    the vendor contradicting itself, never a duplicate to deduplicate silently.
+    """
+    return {header: re.sub(r"\s+", " ", _cell(row, header)).strip()
+            for header in HEADERS if header != "vGPU Software Release"}
 
 
 def _release(release_id, row, heading):
@@ -181,8 +199,14 @@ def parse_branches(markdown):
     seen — is reported with the reason instead, so the accounting adds up. A row
     that states no EOL is still published, with a null milestone: an unannounced
     deadline stays absent.
+
+    A second row for a branch already seen is only a duplicate when it restates
+    the first with the same lifecycle cells; two rows claiming one branch while
+    disagreeing about a driver branch, a branch type, the latest release in it or
+    either date are the vendor contradicting itself, and the parse refuses rather
+    than publishing whichever row the page happened to list first.
     """
-    releases, excluded, seen = [], [], set()
+    releases, excluded, seen = [], [], {}
     for heading, rows in _tables(markdown).items():
         for row in rows:
             name = _cell(row, "vGPU Software Release")
@@ -193,10 +217,13 @@ def parse_branches(markdown):
                 continue
             release_id = number.group(1)
             if release_id in seen:
+                if seen[release_id] != _stated(row):
+                    raise ValueError(f"vGPU branch {release_id} is stated twice with contradicting "
+                                     f"values: {seen[release_id]} then {_stated(row)}")
                 excluded.append({"table": heading, "row": name,
                                  "reason": f"duplicate branch row for release {release_id!r}"})
                 continue
-            seen.add(release_id)
+            seen[release_id] = _stated(row)
             releases.append(_release(release_id, row, heading))
     if not releases:
         raise ValueError("The vGPU branch tables produced no releases")

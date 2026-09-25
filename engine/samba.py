@@ -35,6 +35,7 @@ from __future__ import annotations
 import re
 from datetime import datetime, timezone
 from html.parser import HTMLParser
+from pathlib import Path
 
 from . import net, sources, transaction
 from .contribute import page_text
@@ -183,6 +184,36 @@ def parse_releases(html):
     return releases
 
 
+def retained(release):
+    """A committed series the current table no longer states, marked as such.
+
+    The row is republished from its own stored cells, so retention can never
+    introduce a date the vendor did not publish; the marker says only that the
+    current planning table lacks the row. Absence from a table is not an end of
+    life, and a source-page cleanup must not cost a series its permalink.
+    """
+    return {**release, "upstream": {**release["upstream"], "in_source": False}}
+
+
+def combine_releases(fresh, committed):
+    """The complete planning snapshot: this fetch's rows plus retained history.
+
+    A series the vendor's current planning table no longer states keeps its
+    record rather than disappearing from the catalog, exactly as a row dropped
+    from a wiki table is not thereby a discontinued series. The retained row is
+    republished byte-for-byte from the committed record, so a second refresh of
+    the same page is idempotent.
+    """
+    if committed is None:
+        return list(fresh), []
+    ids = {release["id"] for release in fresh}
+    kept = [retained(release) for release in committed["releases"] if release["id"] not in ids]
+    return (fresh + kept,
+            [{"id": release["id"], "name": release["name"],
+              "reason": "the current Samba planning table does not state this release series; "
+                        "the committed row and its cells are retained"} for release in kept])
+
+
 def validate_record(record):
     """Rebuild every stored series from its own published cells, offline."""
     if record["provenance"]["verifier"] != VERIFIER:
@@ -194,6 +225,8 @@ def validate_record(record):
             raise ValueError(f"{record['id']}: release {release['id']} does not carry "
                              f"the vendor's declared columns {HEADERS}")
         where = f"{record['id']}: release {release['id']}"
+        if release["upstream"].get("in_source") not in (None, False):
+            raise ValueError(f"{where} carries an invalid retention marker")
         if release["id"] in seen:
             raise ValueError(f"Duplicate Samba series: {where}")
         seen.add(release["id"])
@@ -243,23 +276,34 @@ def forecast_rows(releases, column):
             if release["upstream"]["cells"][key].startswith("~")]
 
 
-def report_for(releases, checked):
-    """The per-row accounting this source publishes beside its record."""
-    started = forecast_rows(releases, STARTED)
-    discontinued = forecast_rows(releases, DISCONTINUED)
+def report_for(releases, kept, checked):
+    """The per-row accounting this source publishes beside its record.
+
+    ``rows.seen`` is what this fetch's table stated; the retained series are a
+    separate inventory carried from the committed snapshot and counted apart,
+    so a reader can add the report up rather than trust its arithmetic. The
+    forecast lists describe this fetch's rows only: a retained row's cells are
+    the ones the vendor published before it was dropped, not a statement about
+    the current page.
+    """
+    retained_ids = {entry["id"] for entry in kept}
+    fresh = [release for release in releases if release["id"] not in retained_ids]
+    started = forecast_rows(fresh, STARTED)
+    discontinued = forecast_rows(fresh, DISCONTINUED)
     return {
         "verifier": VERIFIER,
-        "rows": {"seen": len(releases), "published": len(releases),
-                 "retained": 0, "excluded": 0},
+        "rows": {"seen": len(fresh), "published": len(releases),
+                 "retained": len(kept), "excluded": 0},
         "milestones": {
-            "ga_stated": len(releases) - len(started),
+            "ga_stated": len(fresh) - len(started),
             "ga_forecast": len(started),
-            "eol_stated": sum(1 for release in releases
+            "eol_stated": sum(1 for release in fresh
                               if release["milestones"]["eol"] is not None),
             "eol_forecast": len(discontinued),
         },
         "forecast_ga": started,
         "forecast_eol": discontinued,
+        "retained": kept,
         "limitations": [
             "The vendor marks future dates '~': simple forecasts based on the "
             "historical release pattern. Forecasts are retained verbatim in "
@@ -268,6 +312,9 @@ def report_for(releases, checked):
             "security fixes continue until the realized 'discontinued (EOL)' "
             "date, so no eossec is published.",
             "Third-party Samba-AD packaging matrices are out of scope.",
+            "A series the current planning table no longer states is retained from the "
+            "committed snapshot and marked upstream.in_source false; a dropped row is not "
+            "a discontinued series.",
         ],
         "total_records": 1,
         "checked_at": checked,
@@ -282,17 +329,25 @@ def committed_record(root):
 
 
 def import_samba(directory=None):
-    """Fetch the planning table and publish the ``samba`` record and report."""
+    """Fetch the planning table and publish the ``samba`` record and report.
+
+    Complete-or-nothing: the fetched snapshot is combined with the series the
+    planning table no longer states, staged beside the committed catalog and
+    validated there before anything is written. A parse failure or an
+    inconsistent catalog leaves every committed file untouched.
+    """
     root = Path(directory) if directory is not None else ROOT / "data"
+    # The committed ownership check runs before the fetch: a file this source
+    # cannot publish aborts the run without a network call at all.
     committed = committed_record(root)
     html = net.get_text(SOURCE_URL)
-    releases = parse_releases(html)
+    fresh = parse_releases(html)
+    releases, kept = combine_releases(fresh, committed)
     checked = _now()
     record = record_for(releases, checked)
     validate_record(record)
-    report = report_for(releases, checked)
+    report = report_for(releases, kept, checked)
     transaction.publish_product_record(record, report, root,
                                        report_name=REPORT)
-    print(f"imported {len(releases)} Samba release series; "
-          f"retained {report['rows']['retained']} (data/{REPORT})")
-    return f"imported {len(releases)} Samba release series"
+    return (f"imported {len(fresh)} Samba release series; "
+            f"published {len(releases)} ({len(kept)} retained)")

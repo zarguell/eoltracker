@@ -54,11 +54,30 @@ def software_record(name="sample", verifier=sources.source("import-data").verifi
     return record
 
 
+def stage_sidecars(directory, records):
+    """Stage the accounting sidecar each written record's source owns.
+
+    Validation requires a source's report beside the records it owns, so a test
+    that writes a collector's record directly stages the minimal honest sidecar
+    (its verifier and record count) instead of bypassing the gate. The
+    import-data source publishes no sidecar, so it contributes none.
+    """
+    counts = {}
+    for record in records:
+        verifier = record["provenance"]["verifier"]
+        counts[verifier] = counts.get(verifier, 0) + 1
+    for verifier, count in counts.items():
+        report = sources.source_for(verifier).report
+        if report:
+            dump(directory / report, {"verifier": verifier, "total_records": count})
+
+
 def catalog_root(directory, records):
     """A data directory holding ``records`` and the manifest the importer writes."""
     (directory / "products").mkdir(parents=True, exist_ok=True)
     for record in records:
         dump(directory / "products" / (record["id"] + ".json"), record)
+    stage_sidecars(directory, records)
     counted = [record for record in records
                if record["provenance"]["verifier"] == sources.source("import-data").verifier]
     dump(directory / "manifest.json", {
@@ -219,6 +238,40 @@ class RefusalTests(unittest.TestCase):
                                                             "released": "2026-09-02"})
         with self.assertRaisesRegex(ValueError, "claim the same series"):
             ceph.parse_releases(self.render(collide), INDEX)
+
+    def test_an_index_series_contradicting_the_metadata_refuses_the_parse(self):
+        # The index says tentacle is series 20.2; the metadata says the branch
+        # under that slug is 21.2. The two sources disagree about the stable
+        # series a permalink is built from, so the refresh refuses rather than
+        # publishing whichever identity it read first.
+        index = INDEX.replace("Tentacle (v20.2.*)", "Tentacle (v21.2.*)", 1)
+        with self.assertRaisesRegex(ValueError, "stated as series '21.2'"):
+            ceph.parse_releases(DATA, index)
+
+    def test_an_index_slug_naming_another_branchs_series_refuses_the_parse(self):
+        # The index files the squid slug under the tentacle series: the slug and
+        # the record it resolves to are no longer the same branch.
+        index = INDEX.replace("Squid (v19.2.*)", "Squid (v20.2.*)", 1)
+        with self.assertRaisesRegex(ValueError, "contradict each other"):
+            ceph.parse_releases(DATA, index)
+
+    def test_an_index_label_contradicting_the_metadata_refuses_the_parse(self):
+        # The branch name is the published label; a renamed index label is the
+        # two sources contradicting each other about the branch's identity.
+        index = INDEX.replace("Quincy (v17.2.*)", "Quinxy (v17.2.*)", 1)
+        with self.assertRaisesRegex(ValueError, "named 'Quinxy'"):
+            ceph.parse_releases(DATA, index)
+
+    def test_every_documented_branch_that_the_metadata_states_reconciles(self):
+        # Control for the refusals above: the real fixtures agree, so the
+        # checks are a property of the sources, not of a parser that always
+        # fails. The three index-only branches stay accounted as exclusions.
+        releases, excluded = parsed()
+        documented = {entry["row"] for entry in excluded
+                      if entry["reason"].startswith("named in the release page's branch index")}
+        self.assertEqual(documented, {"Cuttlefish (0.61)", "Bobtail (0.56)", "Argonaut (0.48)"})
+        self.assertEqual(len(releases), 17)
+        self.assertEqual(ceph.parse_releases(DATA, INDEX), (releases, excluded))
 
 
 class RecordTests(unittest.TestCase):
@@ -498,6 +551,7 @@ class RegistryIntegrationTests(CatalogRootCase):
         if verifier:
             record["provenance"]["verifier"] = verifier
         dump(self.root / "products/ceph.json", record)
+        stage_sidecars(self.root, [record])
         return record
 
     def test_validate_data_dispatches_to_the_owning_sources_validator(self):

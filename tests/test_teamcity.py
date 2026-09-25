@@ -51,7 +51,7 @@ def policy(html=POLICY):
 
 def record(html=CATALOG, rules=POLICY):
     releases, _ = teamcity.parse_catalog(html)
-    rules, _ = teamcity.policy_rules(rules)
+    rules, _others, _rows = teamcity.policy_rules(rules)
     return teamcity.record_for(teamcity.with_derived_milestones(releases, rules), CHECKED)
 
 
@@ -212,7 +212,7 @@ class AbsentTriggerTests(unittest.TestCase):
 
     def test_a_catalog_of_one_major_line_derives_nothing(self):
         releases, _ = parsed(MINI_CATALOG)
-        rules, _ = policy(MINI_POLICY)
+        rules, _, _rows = policy(MINI_POLICY)
         derived_releases = teamcity.with_derived_milestones(releases, rules)
         # The minimal fixture's newest chapter is a bugfix line's parent; only
         # the lines whose triggers are present derive.
@@ -226,7 +226,7 @@ class AbsentTriggerTests(unittest.TestCase):
                          ["2026.2", "2026.1", "2025.11", "2025.07"])
         self.assertEqual([row["row"] for row in excluded],
                          ["TeamCity 2026.1.4", "TeamCity 2025.11.1"])
-        rules, _ = policy(MINI_POLICY)
+        rules, _, _rows = policy(MINI_POLICY)
         derived_releases = by_id(teamcity.with_derived_milestones(releases, rules))
         self.assertEqual(derived_releases["2026.2"]["milestones"]["eos"], None)
         self.assertEqual(derived_releases["2026.1"]["milestones"]["eos"], "2026-09-02")
@@ -293,6 +293,9 @@ class AccountingTests(unittest.TestCase):
         self.assertIsNotNone(table)
         rows = re.findall(r"<tr[^>]*>", table.group(0))
         source_rows = len(rows) - 1  # the header row is not a source row
+        # The count is the *parsed* table row count, and every parsed row is
+        # either a rule this record applies or a row it accounts for with a
+        # reason, so the total cannot look complete while a row is missing.
         self.assertEqual(report["policy"]["rows"]["seen"], source_rows)
         self.assertEqual(report["policy"]["rows"]["used"], 2)
         self.assertEqual(report["policy"]["rows"]["seen"],
@@ -302,7 +305,7 @@ class AccountingTests(unittest.TestCase):
             self.assertTrue(entry["reason"])
 
     def test_the_stored_rule_quotes_are_the_vendor_sentences_verbatim(self):
-        rules, others = policy()
+        rules, others, rows = policy()
         self.assertEqual(rules["eos"]["quote"], EOS_SENTENCE)
         self.assertEqual(rules["eol"]["quote"], EOL_SENTENCE)
         self.assertIn(EOS_SENTENCE, POLICY)
@@ -315,6 +318,10 @@ class AccountingTests(unittest.TestCase):
         self.assertEqual({entry["row"] for entry in others},
                          {"TeamCity Cloud Major Release",
                           "TeamCity On-Premises Major Release"})
+        self.assertEqual(rows, len(others) + 2)
+        self.assertEqual(tuple(rule["label"] for rule in (rules["eos"], rules["eol"]))
+                         + tuple(entry["row"] for entry in others),
+                         teamcity.POLICY_LABELS)
 
     def test_the_report_scope_names_what_is_derived(self):
         scope = self.report()["record_scope"]
@@ -345,6 +352,58 @@ class PolicyRefusalTests(unittest.TestCase):
     def test_a_missing_release_stage_table_refuses_the_parse(self):
         with self.assertRaises(ValueError):
             policy("<html><body><p>No tables</p></body></html>")
+
+    def test_an_unreviewed_release_stage_row_refuses_the_parse(self):
+        # A newly added stage can change support semantics. Recognizing only the
+        # two rule labels while silently dropping the rest would let the record
+        # keep deriving under stale rules and still claim complete row coverage.
+        block = ('<tr><td><p><span class="control">TeamCity On-Premises End of Life</span></p>'
+                 '</td><td><p>Occurs with the release of three newer major versions.</p></td></tr>')
+        html = POLICY.replace("</tbody>", block + "</tbody>")
+        self.assertNotEqual(html, POLICY)
+        with self.assertRaisesRegex(ValueError, "not reviewed"):
+            policy(html)
+
+    def test_a_reviewed_row_removed_from_the_page_refuses_the_parse(self):
+        html = POLICY.replace("TeamCity On-Premises Major Release",
+                              "TeamCity On-Premises Major Version")
+        with self.assertRaisesRegex(ValueError, "no longer states the reviewed"):
+            policy(html)
+
+    def test_the_parsed_policy_row_count_is_the_reports_seen_count(self):
+        # The count comes from the parsed table, not from the rows this function
+        # happens to return, so a filter that dropped a row could not still sum
+        # to a complete-looking total.
+        _rules, others, rows = policy()
+        self.assertEqual(rows, len(others) + 2)
+        self.assertGreaterEqual(rows, len(teamcity.POLICY_LABELS))
+
+
+class TriggerIdentityTests(unittest.TestCase):
+    """#106: triggers are chosen by version identity, not by date order."""
+
+    def test_the_newer_major_must_be_dated_later(self):
+        # A catalog that dated a newer major before an older one would pick the
+        # wrong trigger release while still re-deriving consistently.
+        html = CATALOG.replace("Release date: 2 September 2026", "Release date: 1 January 2020")
+        with self.assertRaisesRegex(ValueError, "not after"):
+            teamcity.with_derived_milestones(parsed(html)[0], policy()[0])
+
+    def test_the_version_order_is_what_selects_the_triggers(self):
+        releases = teamcity.with_derived_milestones(parsed()[0], policy()[0])
+        self.assertEqual([release["id"] for release in releases][:3], ["2026.2", "2026.1", "2025.11"])
+        self.assertEqual(teamcity.ordered_releases(releases),
+                         sorted(releases, key=lambda release: tuple(
+                             int(part) for part in release["id"].split(".")), reverse=True))
+
+    def test_a_record_whose_versions_and_dates_disagree_is_refused(self):
+        rec = record()
+        # Move one line's date past its newer neighbour's without moving the
+        # version: the stored cells still re-derive, but the order contradicts.
+        rec["releases"][1]["milestones"]["ga"] = "2026-10-01"
+        rec["releases"][1]["upstream"]["cells"]["Release date"] = "Release date: 1 October 2026"
+        with self.assertRaisesRegex(ValueError, "not after"):
+            teamcity.validate_record(rec)
 
 
 class CatalogRefusalTests(unittest.TestCase):
@@ -467,10 +526,10 @@ class ReDerivationTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "source identity"):
             teamcity.validate_record(rec)
 
-    def test_a_record_order_that_contradicts_the_dates_is_refused(self):
+    def test_a_record_order_that_contradicts_the_versions_is_refused(self):
         rec = record()
         rec["releases"][0], rec["releases"][1] = rec["releases"][1], rec["releases"][0]
-        with self.assertRaisesRegex(ValueError, "not ordered by the catalog's release dates"):
+        with self.assertRaisesRegex(ValueError, "not ordered by the catalog's release versions"):
             teamcity.validate_record(rec)
 
 

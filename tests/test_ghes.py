@@ -38,11 +38,30 @@ def software_record(name="sample", verifier=sources.source("import-data").verifi
     return record
 
 
+def stage_sidecars(directory, records):
+    """Stage the accounting sidecar each written record's source owns.
+
+    Validation requires a source's report beside the records it owns, so a test
+    that writes a collector's record directly stages the minimal honest sidecar
+    (its verifier and record count) instead of bypassing the gate. The
+    import-data source publishes no sidecar, so it contributes none.
+    """
+    counts = {}
+    for record in records:
+        verifier = record["provenance"]["verifier"]
+        counts[verifier] = counts.get(verifier, 0) + 1
+    for verifier, count in counts.items():
+        report = sources.source_for(verifier).report
+        if report:
+            dump(directory / report, {"verifier": verifier, "total_records": count})
+
+
 def catalog_root(directory, records):
     """A data directory holding ``records`` and the manifest the importer writes."""
     (directory / "products").mkdir(parents=True, exist_ok=True)
     for record in records:
         dump(directory / "products" / (record["id"] + ".json"), record)
+    stage_sidecars(directory, records)
     counted = [record for record in records
                if record["provenance"]["verifier"] == sources.source("import-data").verifier]
     dump(directory / "manifest.json", {
@@ -124,6 +143,44 @@ class ParseTests(unittest.TestCase):
         markdown = MARKDOWN.replace("| 2.16      | 2018-12-25 | 2019-01-22 | 2020-01-22        |",
                                     "| 2.16      | 2018-12-25 | 2019-01-22 | 2021-01-22        |", 1)
         with self.assertRaisesRegex(ValueError, "stated twice with contradicting values"):
+            ghes.parse_releases(markdown)
+
+    def test_a_restatement_contradicting_the_support_wording_refuses_the_parse(self):
+        # The support state is the vendor's own lifecycle claim about the line,
+        # not a decoration: a second row for 3.22 saying "Not supported" while
+        # the first says "Supported" must refuse, never let the first row win.
+        row = next(line for line in MARKDOWN.splitlines() if line.startswith("| 3.22 "))
+        self.assertIn('aria-label="Supported"', row)
+        contradicting = row.replace('aria-label="Supported"', 'aria-label="Not supported"', 1)
+        markdown = MARKDOWN.replace(row + "\n", row + "\n" + contradicting + "\n", 1)
+        with self.assertRaisesRegex(ValueError, "Supported"):
+            ghes.parse_releases(markdown)
+
+    def test_an_identical_restatement_of_a_supported_line_is_still_a_duplicate(self):
+        row = next(line for line in MARKDOWN.splitlines() if line.startswith("| 3.22 "))
+        markdown = MARKDOWN.replace(row + "\n", row + "\n" + row + "\n", 1)
+        releases, excluded, duplicated = ghes.parse_releases(markdown)
+        self.assertEqual([release["id"] for release in releases].count("3.22"), 1)
+        self.assertEqual([entry["row"] for entry in duplicated].count("3.22"), 1)
+        # The support wording is preserved on the published line.
+        published = {release["id"]: release for release in releases}["3.22"]
+        self.assertEqual(published["upstream"]["cells"]["Supported"], "Supported")
+
+    def test_a_header_only_releases_table_refuses_the_parse(self):
+        # A partial snapshot: the authoritative releases table keeps its header
+        # and states no lines, while the developer-documentation table still
+        # carries rows. Without this check those rows would publish as the whole
+        # inventory and a first-run refresh would report success for it.
+        lines = MARKDOWN.splitlines()
+        start = lines.index("## Releases of GitHub Enterprise Server")
+        end = lines.index("### Developer documentation that is closing down")
+        section = lines[start:end]
+        header = [index for index, line in enumerate(section) if line.strip().startswith("|")]
+        assert len(header) > 2
+        kept = [line for index, line in enumerate(section)
+                if not line.strip().startswith("|") or index in header[:2]]
+        markdown = "\n".join(lines[:start] + kept + lines[end:])
+        with self.assertRaisesRegex(ValueError, "states no release lines"):
             ghes.parse_releases(markdown)
 
     def test_the_vendors_support_wording_is_stored_verbatim_and_never_a_milestone(self):
@@ -304,6 +361,33 @@ class PublicationTests(CatalogRootCase):
                          ["sample.json"])
         self.assertFalse((self.root / ghes.REPORT).exists())
 
+    def test_a_header_only_current_table_refuses_both_the_first_run_and_a_refresh(self):
+        # The empty-authority case: on a first run there is no committed record
+        # to fall back on, and on a refresh the same refusal keeps the committed
+        # snapshot rather than replacing it with the tool tables' rows.
+        lines = MARKDOWN.splitlines()
+        start = lines.index("## Releases of GitHub Enterprise Server")
+        end = lines.index("### Developer documentation that is closing down")
+        section = lines[start:end]
+        header = [index for index, line in enumerate(section) if line.strip().startswith("|")]
+        kept = [line for index, line in enumerate(section)
+                if not line.strip().startswith("|") or index in header[:2]]
+        header_only = "\n".join(lines[:start] + kept + lines[end:])
+        with mock.patch.object(net, "get_text", return_value=header_only):
+            with self.assertRaisesRegex(ValueError, "states no release lines"):
+                ghes.import_ghes(self.root)
+        self.assertEqual(sorted(path.name for path in (self.root / "products").glob("*.json")),
+                         ["sample.json"])
+        self.assertFalse((self.root / ghes.REPORT).exists())
+        with mock.patch.object(net, "get_text", return_value=MARKDOWN):
+            ghes.import_ghes(self.root)
+        published = (self.root / "products/github-enterprise-server.json").read_bytes()
+        with mock.patch.object(net, "get_text", return_value=header_only):
+            with self.assertRaisesRegex(ValueError, "states no release lines"):
+                ghes.import_ghes(self.root)
+        self.assertEqual((self.root / "products/github-enterprise-server.json").read_bytes(),
+                         published)
+
     def test_import_publishes_the_record_and_its_registry_report(self):
         with mock.patch.object(net, "get_text", return_value=MARKDOWN) as fetch:
             detail = ghes.import_ghes(self.root)
@@ -340,6 +424,7 @@ class RegistryIntegrationTests(CatalogRootCase):
         if verifier:
             record["provenance"]["verifier"] = verifier
         dump(self.root / "products/github-enterprise-server.json", record)
+        stage_sidecars(self.root, [record])
         return record
 
     def test_validate_data_dispatches_to_the_owning_sources_validator(self):

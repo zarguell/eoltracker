@@ -168,7 +168,7 @@ def catalog_entry(cells):
             "thumbnail": cells["Thumbnail"]["text"], "short_desc": cells["Short Description"]["text"]}
 
 
-def make_record(section, cells, checked):
+def make_record(section, cells, checked, status_checked=None):
     headers = HEADERS[section]
     product, parts = cells[0]["text"], cells[1]["text"]
     eos, eol = parse_date(cells[2]["text"]), parse_date(cells[3]["text"])
@@ -185,13 +185,17 @@ def make_record(section, cells, checked):
                             "links": [urljoin(SOURCE, link) for link in cell.get("links", [])]}
     upstream["Policy"] = {"text": POLICY, "role": None, "value": None, "links": []}
     notices = list(dict.fromkeys(link for cell in upstream.values() for link in cell["links"]))
-    return {"$schema": RECORD_SCHEMA, "id": identity(section, product, parts), "name": product,
-            "category": "hardware", "vendor": "Opengear", "product_line": "Opengear",
-            "family": section, "model_number": parts,
-            "milestones": {"ga": None, "eos": eos, "eossec": None, "eol": eol},
-            "status": status_from(eol, checked), "upstream": upstream,
-            "provenance": {"source_urls": [SOURCE] + [u for u in notices if u != SOURCE],
-                           "verifier": VERIFIER, "last_checked": checked}}
+    status_date = status_checked or checked
+    record = {"$schema": RECORD_SCHEMA, "id": identity(section, product, parts), "name": product,
+              "category": "hardware", "vendor": "Opengear", "product_line": "Opengear",
+              "family": section, "model_number": parts,
+              "milestones": {"ga": None, "eos": eos, "eossec": None, "eol": eol},
+              "status": status_from(eol, status_date), "upstream": upstream,
+              "provenance": {"source_urls": [SOURCE] + [u for u in notices if u != SOURCE],
+                             "verifier": VERIFIER, "last_checked": checked}}
+    if status_checked and status_checked != checked:
+        record["status_as_of"] = status_checked
+    return record
 
 
 def announcement_reason(cells):
@@ -294,7 +298,8 @@ def validate_record(record):
         if any(header not in record["upstream"] for header in headers):
             raise ValueError(f"Opengear record without source cells: {record['id']}")
         cells = [record["upstream"][header] for header in headers]
-        expected = make_record(record["family"], cells, record["provenance"]["last_checked"])
+        expected = make_record(record["family"], cells, record["provenance"]["last_checked"],
+                                record.get("status_as_of"))
     else:
         raise ValueError(f"Invalid Opengear record family: {record['family']!r}")
     if marker is not None:
@@ -317,7 +322,8 @@ def rebuilt_catalog(record):
         raise ValueError(f"Opengear catalog record lifecycle flag contradicts its matches: {record['id']}")
     entry = catalog_entry(record["upstream"])
     notices = rebuild_notices(record["upstream"], matches)
-    return catalog_record_from(entry, record["provenance"]["last_checked"], notices, listed=catalog["listed"])
+    return catalog_record_from(entry, record["provenance"]["last_checked"], notices,
+                               listed=catalog["listed"], status_checked=record.get("status_as_of"))
 
 
 def notice_cells(record):
@@ -390,24 +396,28 @@ def catalog_upstream(entry, notices):
     return embed_notices(upstream, notices)
 
 
-def catalog_record_from(entry, checked, notices, listed=True):
+def catalog_record_from(entry, checked, notices, listed=True, status_checked=None):
     """Build one catalog record from configurator fields and embedded notices."""
     matches = [match for match, _ in notices]
     upstream = catalog_upstream(entry, notices)
     milestones = notice_milestones(notices)
     sources = [CONFIGURE_SOURCE] + ([SOURCE] if notices else [])
     sources += [url for url in notice_links(notices) if url not in sources]
-    return {"$schema": RECORD_SCHEMA, "id": catalog_identity(entry["sku"]), "name": entry["sku"],
-            "category": "hardware", "vendor": "Opengear", "product_line": "Opengear",
-            "family": CATALOG_FAMILY, "model_number": entry["sku"],
-            "milestones": milestones,
-            "status": status_from(milestones["eol"], checked), "upstream": upstream,
-            "catalog": {"listed": listed, "source_url": CONFIGURE_SOURCE},
-            "lifecycle": {"listed": bool(matches), "matches": matches},
-            "provenance": {"source_urls": sources, "verifier": VERIFIER, "last_checked": checked}}
+    status_date = status_checked or checked
+    record = {"$schema": RECORD_SCHEMA, "id": catalog_identity(entry["sku"]), "name": entry["sku"],
+              "category": "hardware", "vendor": "Opengear", "product_line": "Opengear",
+              "family": CATALOG_FAMILY, "model_number": entry["sku"],
+              "milestones": milestones,
+              "status": status_from(milestones["eol"], status_date), "upstream": upstream,
+              "catalog": {"listed": listed, "source_url": CONFIGURE_SOURCE},
+              "lifecycle": {"listed": bool(matches), "matches": matches},
+              "provenance": {"source_urls": sources, "verifier": VERIFIER, "last_checked": checked}}
+    if status_checked and status_checked != checked:
+        record["status_as_of"] = status_checked
+    return record
 
 
-def catalog_record(entry, checked, matches, listed=True):
+def catalog_record(entry, checked, matches, listed=True, status_checked=None):
     """The published record for one exact configurator SKU.
 
     Catalog presence is a listing fact: a record carries a date only when a
@@ -417,7 +427,7 @@ def catalog_record(entry, checked, matches, listed=True):
     """
     matches = sorted(matches, key=lambda record: record["id"])
     return catalog_record_from(entry, checked, [(record["id"], notice_cells(record)) for record in matches],
-                               listed)
+                               listed, status_checked=status_checked)
 
 
 def catalog_entry(cells):
@@ -468,7 +478,7 @@ def parse_catalog(html, checked, lifecycle):
     return sorted(records, key=lambda record: record["id"]), unmatched
 
 
-def retain_record(record, index):
+def retain_record(record, index, status_checked=None):
     """Re-publish a committed record its source no longer states, explicitly marked.
 
     The record is rebuilt from its own stored evidence exactly as
@@ -478,33 +488,45 @@ def retain_record(record, index):
     an absent row is not an end of life, and a SKU leaving the catalog is not
     one either. ``last_checked`` is carried over rather than refreshed: the
     source was not observed to state this row, so claiming a fresh check would
-    be false. A retained catalog record still takes its notice links from the
-    fresh lifecycle snapshot, so a notice naming a delisted SKU is not missed.
+    be false. ``status_as_of`` is separate and lets status reflect the current
+    evaluation date without pretending the old evidence was freshly observed.
     """
     checked = record["provenance"]["last_checked"]
     if record["family"] == CATALOG_FAMILY:
         entry = catalog_entry(record["upstream"])
-        return catalog_record(entry, checked, index.get(entry["sku"], []), listed=False)
+        return catalog_record(entry, checked, index.get(entry["sku"], []), listed=False,
+                              status_checked=status_checked)
     cells = [record["upstream"][header] for header in HEADERS[record["family"]]]
-    return {**make_record(record["family"], cells, checked), "evidence": {"in_source": False}}
+    return {**make_record(record["family"], cells, checked, status_checked=status_checked),
+            "evidence": {"in_source": False}}
 
 
-def combine_records(lifecycle, catalog, previous, checked):
+def combine_records(lifecycle, catalog, previous, checked, status_checked=None):
     """The complete Opengear snapshot: lifecycle rows plus exact-SKU listings.
 
     ``previous`` is the committed snapshot. A committed record the fresh sources
     do not repeat is retained and marked (``catalog.listed`` false for a listing,
     ``evidence.in_source`` false for a lifecycle row) rather than deleted, so a
-    published permalink never disappears because a vendor dropped a row.
+    published permalink never disappears because a vendor dropped a row. Fresh
+    catalog records are linked against both fresh and retained lifecycle rows so
+    a disappeared notice cannot leave one SKU simultaneously dated and undated.
     """
-    fresh = {}
-    for record in list(lifecycle) + list(catalog):
-        if record["id"] in fresh:
-            raise ValueError(f"Duplicate Opengear identity: {record['id']}")
-        fresh[record["id"]] = record
-    index = lifecycle_index(lifecycle)
-    retained = [retain_record(record, index) for record in previous if record["id"] not in fresh]
-    return sorted(list(fresh.values()) + retained, key=lambda record: record["id"])
+    fresh_ids = {record["id"] for record in lifecycle} | {record["id"] for record in catalog}
+    if len(fresh_ids) != len(lifecycle) + len(catalog):
+        raise ValueError("Duplicate Opengear identity in fresh snapshot")
+    retained_source = [record for record in previous
+                       if record["id"] not in fresh_ids and record.get("family") in HEADERS]
+    effective_lifecycle = list(lifecycle) + retained_source
+    index = lifecycle_index(effective_lifecycle)
+    fresh = list(lifecycle)
+    for record in catalog:
+        entry = catalog_entry(record["upstream"])
+        fresh.append(catalog_record(
+            entry, record["provenance"]["last_checked"], index.get(entry["sku"], []),
+            listed=record["catalog"]["listed"], status_checked=status_checked))
+    retained = [retain_record(record, index, status_checked=status_checked)
+                for record in previous if record["id"] not in fresh_ids]
+    return sorted(fresh + retained, key=lambda record: record["id"])
 
 
 def source_report(report, catalog, unmatched, records, previous):
@@ -574,20 +596,23 @@ def import_opengear(directory=None):
 
     checked = datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
     lifecycle, excluded, announced = parse_page(fetch(SOURCE), checked)
-    catalog, unmatched = parse_catalog(fetch(CONFIGURE_SOURCE), checked, lifecycle)
+    catalog_html = fetch(CONFIGURE_SOURCE)
     destination = Path(directory) if directory is not None else ROOT / "data"
     # Only this source's own records: a refresh never reasons about another
     # verifier's snapshot (eosl.date owns the rest of data/hardware/).
     previous = [record for record in get_records(destination)
                 if record["provenance"]["verifier"] == VERIFIER]
-    records = combine_records(lifecycle, catalog, previous, checked)
-    imported = publish_records(records, VERIFIER, destination)
-    # The ledger records what the published snapshot changed. Nothing is written
-    # before the records are: a ledger entry whose record is not on disk would
-    # claim an observation the catalog cannot show.
-    ledger_path = destination / LEDGER
-    history = update_history(previous, imported, checked, load_history(ledger_path))
-    dump(ledger_path, history)
+    fresh_ids = {record["id"] for record in lifecycle}
+    retained_lifecycle = [record for record in previous
+                          if record["id"] not in fresh_ids and record.get("family") in HEADERS]
+    # A catalog SKU must see retained lifecycle evidence as well as fresh rows;
+    # otherwise a disappeared notice produces a dated history record beside an
+    # undated catalog record for the same exact SKU.
+    catalog, unmatched = parse_catalog(catalog_html, checked, lifecycle + retained_lifecycle)
+    if len(catalog) != CATALOG_MODELS:
+        raise ValueError(f"Configurator publishes {len(catalog)} exact SKUs; this collector is built "
+                         f"against {CATALOG_MODELS}. Review the change before publishing.")
+    records = combine_records(lifecycle, catalog, previous, checked, status_checked=checked)
     report = {"source_url": SOURCE, "verifier": VERIFIER, "checked_at": checked,
               "record_scope": ("Opengear hardware lifecycle rows and part groups (dated retirements and "
                                "undated announcements, exact part strings) plus the current configurator's "
@@ -601,8 +626,15 @@ def import_opengear(directory=None):
                             "unknown_date_records": len(announced),
                             "excluded_rows": len(excluded),
                             "announcements": announced},
-              "imported_count": len(imported), "excluded_count": len(excluded), "excluded": excluded}
-    source_report(report, catalog, unmatched, imported, previous)
+              "imported_count": len(records), "excluded_count": len(excluded), "excluded": excluded}
+    source_report(report, catalog, unmatched, records, previous)
+    imported = publish_records(records, VERIFIER, destination, report=report)
+    # The ledger records what the published snapshot changed. Nothing is written
+    # before the records are: a ledger entry whose record is not on disk would
+    # claim an observation the catalog cannot show.
+    ledger_path = destination / LEDGER
+    history = update_history(previous, imported, checked, load_history(ledger_path))
+    dump(ledger_path, history)
     dump(destination / REPORT, report)
     counts = report["record_counts"]
     return (f"imported {len(imported)} Opengear records ({counts['hardware']} lifecycle hardware, "

@@ -63,9 +63,18 @@ from datetime import date, datetime, timezone
 from html import unescape
 from html.parser import HTMLParser
 from pathlib import Path
+from urllib.parse import urlparse
 
 from . import net, sources, transaction
 from .importer import ROOT
+
+# The shared presentation/URL policy. It is imported at module load with a
+# narrow fallback so this collector keeps working until that module lands; the
+# host and scheme policy below is self-contained and holds either way.
+try:  # pragma: no cover - exercised wherever engine/urls.py is installed
+    from .urls import safe_http_url as _safe_http_url
+except ImportError:  # pragma: no cover - only until engine/urls.py lands
+    _safe_http_url = None
 
 # The registry owns the ids and the pages: a record's provenance must name a
 # source this checkout installs, and each collector reads its own verifier and
@@ -161,13 +170,19 @@ def _text(value):
 def _page(url):
     """Fetch ``url`` through the shared HTTP layer; returns its final URL and text.
 
-    The final URL matters: the vendor answers a train it no longer documents
-    with a redirect to its generic category page, and following that silently
-    would publish an undated train as if the vendor had stated nothing.
+    The final URL matters twice. The vendor answers a train it no longer
+    documents with a redirect to its generic category page, and following that
+    silently would publish an undated train as if the vendor had stated nothing.
+    It is also re-checked against the host policy: a redirect that leaves
+    cisco.com is a destination this source never fetches, so a page that starts
+    redirecting elsewhere cannot pull the refresh off the vendor host.
     """
     response = net.get(url)
     response.encoding = "utf-8"
-    return response.url, response.text
+    final = response.url
+    if final != url:
+        train_url(final, f"{url} (redirect target)")
+    return final, response.text
 
 
 def day_value(text, where):
@@ -382,12 +397,18 @@ def ios_inventory(hub_page, catalog_page):
     hub's row wins, because it carries the vendor's current status wording as
     well as the train's own name.
 
+    A row in both listings is only a duplicate when the two pages agree about
+    the train's page URL: the listings are independent statements, and a catalog
+    row naming a page the hub's row does not is the vendor disagreeing with
+    itself about where the train lives, which refuses the parse rather than
+    silently preferring one statement.
+
     Every row of both listings is accounted for, and every row the hub files
     under another section or group is reported with the reason it states no
     classic IOS train lifecycle — the hub also inventories hardware families,
     collaboration endpoints and the other IOS software families (rule 6, rule 7).
     """
-    hub_rows, trains, seen, excluded = [], {}, {}, []
+    hub_rows, trains, excluded = [], {}, []
     for section in parse_hub(hub_page):
         for row in section["rows"]:
             hub_rows.append({**row, "section": section["id"]})
@@ -425,8 +446,17 @@ def ios_inventory(hub_page, catalog_page):
                                  "group": row["group"], "row": row["name"],
                                  "reason": f"duplicate hub row for train {identifier!r}"})
                 continue
+            try:
+                url = train_url(row["href"], f"Cisco IOS {identifier}")
+            except ValueError as error:
+                excluded.append({"id": identifier, "name": row["name"], "listing": "hub",
+                                 "section": section["id"], "group": row["group"],
+                                 "href": row["href"],
+                                 "reason": f"{error}: the row's link is not a page this source "
+                                           f"fetches"})
+                continue
             trains[identifier] = {"id": identifier, "name": row["name"], "listing": "hub",
-                                  "url": _absolute(row["href"]), "hub_status": row["status"]}
+                                  "url": url, "hub_status": row["status"]}
     catalog_rows = parse_catalog(catalog_page)
     duplicates = 0
     for row in catalog_rows:
@@ -435,21 +465,87 @@ def ios_inventory(hub_page, catalog_page):
             excluded.append({"listing": IOS_CATALOG_URL, "row": row["name"],
                              "reason": "the row states no release-train identity"})
             continue
-        seen[identifier] = seen.get(identifier, 0) + 1
         if identifier in trains:
+            # The two listings are independent statements about one train. The
+            # hub's row supplies the status wording, but the pages each name a
+            # URL for the train, and a catalog row pointing somewhere else is
+            # the vendor's own listings disagreeing about the train's page —
+            # reported instead of silently resolved to the hub's link.
+            try:
+                catalog_url = train_url(row["href"], f"Cisco IOS {identifier}")
+            except ValueError as error:
+                excluded.append({"id": identifier, "name": row["name"], "listing": "catalog",
+                                 "href": row["href"],
+                                 "reason": f"{error}: the row's link is not a page this source "
+                                           f"fetches"})
+                continue
+            if catalog_url != trains[identifier]["url"]:
+                raise ValueError(f"Cisco IOS train {identifier!r} is inventoried by the hub at "
+                                 f"{trains[identifier]['url']} and by the IOS releases listing "
+                                 f"at {catalog_url}; the two listings disagree about the train's "
+                                 f"page")
             duplicates += 1
             continue
+        try:
+            url = train_url(row["href"], f"Cisco IOS {identifier}")
+        except ValueError as error:
+            excluded.append({"id": identifier, "name": row["name"], "listing": "catalog",
+                             "href": row["href"],
+                             "reason": f"{error}: the row's link is not a page this source "
+                                       f"fetches"})
+            continue
         trains[identifier] = {"id": identifier, "name": row["name"], "listing": "catalog",
-                              "url": _absolute(row["href"]), "hub_status": ""}
+                              "url": url, "hub_status": ""}
     ordered = sorted(trains.values(), key=lambda train: (train["listing"] != "hub", train["id"]))
     return ordered, hub_rows, catalog_rows, excluded, duplicates
 
 
-def _absolute(href):
-    """A hub-relative link as an absolute cisco.com URL."""
-    if href.startswith("http"):
-        return href
-    return "https://www.cisco.com" + (href if href.startswith("/") else "/" + href)
+# The host every Cisco lifecycle page is served from. Both listings are read
+# from it, and the train links they state are resolved against it; a link that
+# names any other host is either a reshaped page or a compromised one.
+VENDOR_HOST = "cisco.com"
+
+
+def train_url(href, where):
+    """One discovered href -> the absolute, policy-checked URL the refresh may fetch.
+
+    A listing row's link is vendor-discovered data, not a trusted constant: the
+    hub and the catalog are fetched from cisco.com, and the hrefs they carry are
+    whatever those pages state. A link to another host, another scheme, or a URL
+    carrying credentials is therefore refused *before* any fetch, so a tampered
+    listing (or a compromised upstream page) can never induce a request to an
+    internal service or a third party. Relative links resolve against the vendor
+    host; the shared URL policy (``engine.urls.safe_http_url``, when the checkout
+    installs it) applies to the result as it does to every URL this project
+    publishes.
+    """
+    value = (href or "").strip()
+    if value.startswith("//"):
+        value = "https:" + value
+    elif value.startswith("http://") or value.startswith("https://"):
+        pass
+    elif value.startswith("/"):
+        value = "https://www." + VENDOR_HOST + value
+    else:
+        raise ValueError(f"{where}: href {href!r} is not an absolute or root-relative "
+                         f"Cisco URL")
+    if any(character.isspace() or ord(character) < 0x20 for character in value):
+        raise ValueError(f"{where}: href {href!r} states control or whitespace characters")
+    parsed = urlparse(value)
+    if parsed.scheme != "https":
+        raise ValueError(f"{where}: href {href!r} is not an HTTPS URL")
+    if parsed.username or parsed.password or "@" in parsed.netloc:
+        raise ValueError(f"{where}: href {href!r} carries credentials")
+    host = (parsed.hostname or "").lower()
+    if host != VENDOR_HOST and not host.endswith("." + VENDOR_HOST):
+        raise ValueError(f"{where}: href {href!r} names the host {host!r}, which is not "
+                         f"{VENDOR_HOST}")
+    if _safe_http_url is not None:
+        try:
+            _safe_http_url(value, f"{where}: href")
+        except ValueError as error:
+            raise ValueError(f"{where}: href {href!r} is not a safe HTTP URL: {error}") from None
+    return value
 
 
 def parse_series(page, where):
@@ -559,17 +655,31 @@ def validate_ios_record(record):
                              f"retention marker")
 
 
+def _nx_os_stated(cells):
+    """Every lifecycle-bearing cell of an NX-OS train row, for comparing two of them.
+
+    The major-release column is the row's identity, so it is normalized rather
+    than compared; the EoSWM date and the EoVSS/LDoS cell are the vendor's
+    lifecycle claims. Two rows naming one major release while disagreeing about
+    either are the vendor contradicting itself, never a duplicate to dedupe.
+    """
+    return {column: re.sub(r"\s+", " ", cells[column]).strip()
+            for column in NX_OS_HEADERS if column != RELEASE_COLUMN}
+
+
 def parse_lifecycle_page(page):
     """The NX-OS statement's tables -> ``(releases, excluded)``; no row is dropped.
 
     Only the ``NX-OS EoL Milestones`` table defines train lifecycle. The page's
     release-type taxonomy table is returned as excluded rows with the reason it
-    states no train dates, so both tables are accounted for.
+    states no train dates, so both tables are accounted for. A second row for a
+    major release is accounted as a duplicate only when it restates the first
+    with the same lifecycle cells; a contradicting row refuses the parse.
     """
     tables = _table_blocks(page)
     if not tables:
         raise ValueError(f"The Cisco NX-OS lifecycle statement states no tables: {NX_OS_URL}")
-    releases, excluded, seen = [], [], set()
+    releases, excluded, seen = [], [], {}
     found = False
     for table in tables:
         heading = table["caption"]
@@ -593,10 +703,13 @@ def parse_lifecycle_page(page):
             identifier = major_id(name)
             where = f"Cisco NX-OS {identifier}"
             if identifier in seen:
+                if seen[identifier] != _nx_os_stated(row):
+                    raise ValueError(f"{where} is stated twice with contradicting values: "
+                                     f"{seen[identifier]} then {_nx_os_stated(row)}")
                 excluded.append({"table": heading, "row": name,
                                  "reason": f"duplicate train row for release {identifier!r}"})
                 continue
-            seen.add(identifier)
+            seen[identifier] = _nx_os_stated(row)
             # EoSWM is validated as a stated date and retained verbatim; the
             # vendor states the train keeps receiving PSIRT fixes past it, so it
             # never becomes a milestone.

@@ -47,10 +47,16 @@ decode rather than returning a shorter release history.
 from __future__ import annotations
 
 import json
+import multiprocessing
 import re
 import zlib
 from datetime import date, datetime, timezone
 from pathlib import Path
+
+try:
+    import resource
+except ImportError:                                   # pragma: no cover - non-POSIX platform
+    resource = None
 
 from . import derived, net, sources, transaction
 from .importer import ROOT
@@ -746,33 +752,94 @@ PDF_STREAM = re.compile(rb"stream\r?\n")
 PDF_FONT = re.compile(rb"/Type\s*/Font\b")
 PDF_PAGE = re.compile(rb"/Type\s*/Page[^s]")
 
+# Hard bounds on the reader, stated as constants so a crafted or compromised
+# document refuses by name instead of consuming the refresh. Every one is far
+# above the white paper's own construction (≈5.2 MB, ≈10 600 objects, 95 pages,
+# ≈3.2 MB of decoded object/font/page streams) and far below what a
+# decompression bomb or an unbounded page-tree walk would need.
+MAX_PDF_BYTES = 32 * 1024 * 1024
+MAX_PDF_OBJECTS = 200_000
+MAX_PDF_PAGES = 20_000
+MAX_STREAM_BYTES = 16 * 1024 * 1024
+MAX_DECODED_BYTES = 64 * 1024 * 1024
+MAX_CMAP_ENTRIES = 100_000
+MAX_RANGE_SPAN = 10_000
+MAX_TREE_DEPTH = 64
+# The isolated parse's own wall-clock and hard resource ceilings. The reader
+# itself runs in a child process so a pathological document cannot exhaust the
+# refresh's memory or CPU, and so the parent survives whatever the child does.
+PDF_TIMEOUT = 60
+PDF_CPU_SECONDS = 60
+PDF_ADDRESS_SPACE = 768 * 1024 * 1024
 
-def _pdf_objects(data):
-    """Every indirect object of the document, with object streams expanded."""
+
+class _Budget:
+    """The one place the reader's cumulative resource bounds are spent."""
+
+    def __init__(self):
+        self.decoded = MAX_DECODED_BYTES
+
+    def spend(self, size, where):
+        """Charge ``size`` decoded bytes, refusing a document past the budget."""
+        if size > self.decoded:
+            raise ValueError(
+                f"{WHITEPAPER_URL}: the document's decoded streams exceed the "
+                f"{MAX_DECODED_BYTES}-byte budget while reading {where}; a decompression bomb "
+                f"is refused rather than expanded")
+        self.decoded -= size
+
+
+def _pdf_objects(data, budget):
+    """Every indirect object of the document, with object streams expanded.
+
+    The object count is bounded, and every object stream's expansion is charged
+    to the decode budget, so a document that declares a huge object count or
+    carries a decompression bomb refuses by name before it is expanded.
+    """
     objects = {}
     for match in PDF_OBJECT.finditer(data):
         end = data.find(b"endobj", match.end())
         if end >= 0:
             objects[int(match.group(1))] = data[match.end():end]
-    for body in list(objects.values()):
+            if len(objects) > MAX_PDF_OBJECTS:
+                raise ValueError(
+                    f"{WHITEPAPER_URL}: the document states more than {MAX_PDF_OBJECTS} indirect "
+                    f"objects; a crafted object table is refused rather than expanded")
+    for number, body in list(objects.items()):
         if b"/ObjStm" not in body:
             continue
-        raw = _deflate(body)
+        raw = _deflate(body, budget, f"object stream {number}")
         if raw is None:
             continue
         count = int(re.search(rb"/N\s+(\d+)", body).group(1))
         first = int(re.search(rb"/First\s+(\d+)", body).group(1))
+        if count > MAX_PDF_OBJECTS or first > len(raw):
+            raise ValueError(
+                f"{WHITEPAPER_URL}: object stream {number} declares {count} objects at offset "
+                f"{first} past its own {len(raw)} decoded bytes")
         header = raw[:first].split()
+        if len(header) < 2 * count:
+            raise ValueError(f"{WHITEPAPER_URL}: object stream {number} states {len(header) // 2} "
+                             f"of its declared {count} objects")
         pairs = [(int(header[2 * i]), int(header[2 * i + 1])) for i in range(count)]
-        for index, (number, offset) in enumerate(pairs):
+        for index, (object_number, offset) in enumerate(pairs):
             start = first + offset
             stop = first + pairs[index + 1][1] if index + 1 < len(pairs) else len(raw)
-            objects.setdefault(number, raw[start:stop])
+            objects.setdefault(object_number, raw[start:stop])
+            if len(objects) > MAX_PDF_OBJECTS:
+                raise ValueError(
+                    f"{WHITEPAPER_URL}: the document states more than {MAX_PDF_OBJECTS} indirect "
+                    f"objects; a crafted object table is refused rather than expanded")
     return objects
 
 
-def _deflate(body):
-    """One stream's decoded bytes, or ``None`` when it is no decodable stream."""
+def _deflate(body, budget, where):
+    """One stream's decoded bytes, bounded, or ``None`` when it is no stream.
+
+    Expansion is bounded by the remaining decode budget: ``decompress`` is given
+    a hard ``max_length``, so a stream that would expand past the budget returns
+    a bounded prefix and is refused by name rather than being materialized.
+    """
     match = PDF_STREAM.search(body)
     if match is None:
         return None
@@ -781,14 +848,22 @@ def _deflate(body):
     if end >= 0:
         raw = raw[:end]
     if b"FlateDecode" not in body[:match.start()]:
+        if len(raw) > MAX_STREAM_BYTES:
+            raise ValueError(f"{WHITEPAPER_URL}: the stream at {where} states {len(raw)} bytes, "
+                             f"past the {MAX_STREAM_BYTES}-byte stream bound")
+        budget.spend(len(raw), where)
         return raw
+    decoder = zlib.decompressobj()
     try:
-        return zlib.decompress(raw)
+        out = decoder.decompress(raw, budget.decoded + 1)
     except zlib.error:
-        try:
-            return zlib.decompressobj().decompress(raw)
-        except zlib.error:
-            return None
+        return None
+    if len(out) > budget.decoded:
+        raise ValueError(
+            f"{WHITEPAPER_URL}: the stream at {where} expands past the remaining decode budget; a "
+            f"decompression bomb is refused rather than expanded")
+    budget.spend(len(out), where)
+    return out
 
 
 def _hex_bytes(text):
@@ -796,24 +871,43 @@ def _hex_bytes(text):
 
 
 def _cmap(raw):
-    """One ToUnicode CMap as ``{source bytes: character}``."""
+    """One ToUnicode CMap as ``{source bytes: character}``.
+
+    Both the character pairs and the range spans are bounded: a range that
+    claims millions of codes is refused rather than expanded code by code, and
+    the table's own entry count is capped, so a crafted CMap cannot turn into an
+    algorithmic blow-up.
+    """
     table = {}
     for block in re.findall(rb"beginbfchar(.*?)endbfchar", raw, re.S):
         for source, target in re.findall(rb"<([0-9A-Fa-f]+)>\s*<([0-9A-Fa-f]+)>", block):
             table[_hex_bytes(source)] = _hex_bytes(target).decode("utf-16-be", "replace")
+            if len(table) > MAX_CMAP_ENTRIES:
+                raise ValueError(f"{WHITEPAPER_URL}: a ToUnicode CMap states more than "
+                                 f"{MAX_CMAP_ENTRIES} entries")
     for block in re.findall(rb"beginbfrange(.*?)endbfrange", raw, re.S):
         for low, high, target in re.findall(
                 rb"<([0-9A-Fa-f]+)>\s*<([0-9A-Fa-f]+)>\s*<([0-9A-Fa-f]+)>", block):
+            first_code, last_code = int(low, 16), int(high, 16)
+            if last_code < first_code:
+                raise ValueError(f"{WHITEPAPER_URL}: a ToUnicode CMap range ends before it starts")
+            if last_code - first_code + 1 > MAX_RANGE_SPAN:
+                raise ValueError(
+                    f"{WHITEPAPER_URL}: a ToUnicode CMap range spans "
+                    f"{last_code - first_code + 1} codes, past the {MAX_RANGE_SPAN}-code bound")
             width = len(_hex_bytes(low))
             base = _hex_bytes(target)
             first = int.from_bytes(base, "big")
-            for offset, code in enumerate(range(int(low, 16), int(high, 16) + 1)):
+            for offset, code in enumerate(range(first_code, last_code + 1)):
                 table[code.to_bytes(width, "big")] = (first + offset).to_bytes(
                     len(base), "big").decode("utf-16-be", "replace")
+                if len(table) > MAX_CMAP_ENTRIES:
+                    raise ValueError(f"{WHITEPAPER_URL}: a ToUnicode CMap states more than "
+                                     f"{MAX_CMAP_ENTRIES} entries")
     return table
 
 
-def _pdf_fonts(objects):
+def _pdf_fonts(objects, budget):
     """Every font's own text map, keyed by font object number."""
     fonts = {}
     for number, body in objects.items():
@@ -823,7 +917,7 @@ def _pdf_fonts(objects):
         if reference is None:
             fonts[number] = None
             continue
-        raw = _deflate(objects.get(int(reference.group(1)), b""))
+        raw = _deflate(objects.get(int(reference.group(1)), b""), budget, f"font {number} CMap")
         if raw is None:
             raise ValueError(f"{WHITEPAPER_URL}: a font states no decodable ToUnicode map")
         fonts[number] = _cmap(raw)
@@ -833,7 +927,13 @@ def _pdf_fonts(objects):
 
 
 def _pdf_page_order(objects):
-    """Every page object number, in the document's own page order."""
+    """Every page object number, in the document's own page order.
+
+    The walk is iterative, tracks the objects it has visited, and bounds its
+    depth and its page count: a cyclic ``/Kids`` chain or a page tree deeper
+    than the bound refuses by name instead of recursing until the interpreter
+    gives up.
+    """
     root = None
     for body in objects.values():
         if re.search(rb"/Type\s*/Catalog", body):
@@ -842,18 +942,29 @@ def _pdf_page_order(objects):
             break
     if root is None:
         raise ValueError(f"{WHITEPAPER_URL}: the document states no page tree")
-    order = []
-
-    def walk(number):
+    order, visited = [], set()
+    stack = [(root, 0)]
+    while stack:
+        number, depth = stack.pop()
+        if number in visited:
+            raise ValueError(f"{WHITEPAPER_URL}: the page tree names object {number} twice; a "
+                             f"cyclic page tree is refused")
+        if depth > MAX_TREE_DEPTH:
+            raise ValueError(f"{WHITEPAPER_URL}: the page tree is deeper than {MAX_TREE_DEPTH} "
+                             f"levels; a crafted tree is refused")
+        visited.add(number)
         body = objects.get(number, b"")
-        if PDF_PAGE.search(body):
+        if PDF_PAGE.search(body) and not re.search(rb"/Type\s*/Pages", body):
             order.append(number)
-            return
+            if len(order) > MAX_PDF_PAGES:
+                raise ValueError(f"{WHITEPAPER_URL}: the document states more than {MAX_PDF_PAGES} "
+                                 f"pages")
+            continue
         kids = re.search(rb"/Kids\s*\[(.*?)\]", body, re.S)
-        for kid in re.findall(rb"(\d+) 0 R", kids.group(1)) if kids else ():
-            walk(int(kid))
-
-    walk(root)
+        if kids is None:
+            raise ValueError(f"{WHITEPAPER_URL}: page tree node {number} states no /Kids array")
+        children = [int(kid) for kid in re.findall(rb"(\d+) 0 R", kids.group(1))]
+        stack.extend((child, depth + 1) for child in reversed(children))
     if not order:
         raise ValueError(f"{WHITEPAPER_URL}: the document's page tree states no pages")
     return order
@@ -944,7 +1055,7 @@ def _runs(raw, fonts, names):
     return runs
 
 
-def _page_text(objects, fonts, body, content):
+def _page_text(objects, fonts, body, content, budget):
     """One page's text, rebuilt from the positions its runs are shown at.
 
     Runs are grouped into lines by their vertical coordinate — a whole page's
@@ -953,7 +1064,7 @@ def _page_text(objects, fonts, body, content):
     do not become two lines. Words are separated where the layout puts a gap and
     nowhere else, because the strings a PDF shows carry their own spaces.
     """
-    raw = _deflate(objects.get(content, b""))
+    raw = _deflate(objects.get(content, b""), budget, f"page {content} content stream")
     if raw is None:
         raise ValueError(f"{WHITEPAPER_URL}: a page's content stream is not decodable")
     names = dict(re.findall(rb"/(F\d+)\s+(\d+) 0 R", body))
@@ -970,19 +1081,126 @@ def _page_text(objects, fonts, body, content):
     return "\n".join(out)
 
 
-def pdf_pages(document):
-    """Every page's text of the white paper's own PDF, in document order."""
-    objects = _pdf_objects(document)
+def _pdf_pages(document):
+    """Every page's text of the white paper's own PDF, in document order.
+
+    One decode budget covers the whole document, so the object streams, every
+    font's CMap and every page's content stream are bounded together and not
+    merely one at a time.
+    """
+    if not isinstance(document, (bytes, bytearray)):
+        raise ValueError(f"{WHITEPAPER_URL}: the white paper is not a byte document")
+    if len(document) > MAX_PDF_BYTES:
+        raise ValueError(f"{WHITEPAPER_URL}: the white paper states {len(document)} bytes, past "
+                         f"the {MAX_PDF_BYTES}-byte document bound")
+    budget = _Budget()
+    objects = _pdf_objects(document, budget)
     order = _pdf_page_order(objects)
-    fonts = _pdf_fonts(objects)
+    fonts = _pdf_fonts(objects, budget)
     pages = []
     for number in order:
         body = objects.get(number, b"")
         content = re.search(rb"/Contents (\d+) 0 R", body)
         if content is None:
             raise ValueError(f"{WHITEPAPER_URL}: a page states no content stream")
-        pages.append(_page_text(objects, fonts, body, int(content.group(1))))
+        pages.append(_page_text(objects, fonts, body, int(content.group(1)), budget))
     return pages
+
+
+def _pdf_worker(document, connection):
+    """The child entry point: hard resource ceilings, then the bounded reader.
+
+    The reader runs in its own process so a document that defeats the byte,
+    object, page and CMap bounds consumes the child's address space and CPU
+    rather than the refresh's, and the parent reports a named failure instead of
+    inheriting the cost. ``RLIMIT_AS`` caps the child's memory and ``RLIMIT_CPU``
+    its CPU; both are set only in the child.
+    """
+    try:
+        if resource is not None:
+            resource.setrlimit(resource.RLIMIT_AS, (PDF_ADDRESS_SPACE, PDF_ADDRESS_SPACE))
+            resource.setrlimit(resource.RLIMIT_CPU, (PDF_CPU_SECONDS, PDF_CPU_SECONDS))
+    except (ValueError, OSError):
+        # A platform without the limit still gets the bounded reader below.
+        pass
+    try:
+        connection.send(("ok", _pdf_pages(document)))
+    except BaseException as error:                    # noqa: BLE001 - reported to the parent
+        connection.send(("error", f"{type(error).__name__}: {error}"))
+    finally:
+        connection.close()
+
+
+class _NoProcess(Exception):
+    """The environment forbids creating the isolated reader at all."""
+
+
+def pdf_pages(document):
+    """Every page's text of the white paper's own PDF, in document order.
+
+    The reader itself is bounded, and it is run in an isolated, resource-limited
+    child process: a document that got past a bound fails that child by name —
+    its memory is capped by ``RLIMIT_AS`` and its CPU by ``RLIMIT_CPU`` — so the
+    refresh reports a refusal instead of inheriting the cost. The parent's wait
+    is bounded too, so a child that somehow never returns cannot stall the
+    refresh.
+
+    A child process is created with a *spawned* context (``forkserver``, else
+    ``spawn``), never a bare ``fork``: the collector may run beside threads, and
+    no state is inherited that could deadlock. Where the environment forbids
+    creating a process at all the bounded in-process reader still runs, so the
+    source never depends on process isolation for correctness.
+    """
+    context = _pdf_context()
+    if context is not None:
+        try:
+            return _isolated_pages(context, document)
+        except _NoProcess:
+            pass
+    return _pdf_pages(document)
+
+
+def _isolated_pages(context, document):
+    """Run ``_pdf_pages`` in a resource-limited child and return its result."""
+    parent, child = context.Pipe(duplex=False)
+    process = context.Process(target=_pdf_worker, args=(document, child))
+    try:
+        process.start()
+    except (OSError, RuntimeError, ImportError, AttributeError) as error:
+        parent.close()
+        child.close()
+        raise _NoProcess(str(error)) from error
+    child.close()
+    try:
+        # ``poll`` bounds the wait; a child killed by its own CPU ceiling closes
+        # the pipe without a result, which is the same refusal.
+        if not parent.poll(PDF_TIMEOUT):
+            raise ValueError(f"{WHITEPAPER_URL}: parsing the white paper exceeded "
+                             f"{PDF_TIMEOUT} seconds; the document is refused")
+        try:
+            status, payload = parent.recv()
+        except EOFError as error:
+            raise ValueError(f"{WHITEPAPER_URL}: the isolated PDF reader did not return a result; "
+                             f"the document is refused") from error
+    finally:
+        parent.close()
+        process.join(PDF_TIMEOUT)
+        if process.is_alive():
+            process.terminate()
+            process.join()
+    if status == "error":
+        raise ValueError(f"{WHITEPAPER_URL}: {payload}")
+    return payload
+
+
+def _pdf_context():
+    """A *spawning* process context for the isolated reader, or ``None``."""
+    for method in ("forkserver", "spawn"):
+        try:
+            return multiprocessing.get_context(method)
+        except ValueError:
+            continue
+    return None
 
 
 # --- assembling the record -------------------------------------------------
@@ -1166,17 +1384,37 @@ def combine_releases(fresh, committed):
     A release no current source states is republished from its own stored cells
     and marked as such: disappearance from a catalog is not an end of life, and
     the white paper's history is the community's own record of what it released.
+
+    Retention is reconciled by the *stable source identity* — the line, version
+    and flavour the community's own sources name — never by the generated record
+    id. The id embeds the catalog's current LTS flag, so a flag change (an
+    innovation release the community later marks LTS) renames the id without
+    renaming the release; comparing ids would then retain the old row *and*
+    publish the new one, so one release would appear twice with two different
+    ids, dates and LTS meanings. Comparing identities collapses them to the
+    fresh row and reports the id transition instead.
     """
     if committed is None:
-        return list(fresh), []
-    ids = {release["id"] for release in fresh}
-    kept = [{**release, "upstream": {**release["upstream"], "in_sources": False}}
-            for release in committed["releases"] if release["id"] not in ids]
+        return list(fresh), [], []
+    fresh_keys = {key_string(identity_of(release)[0]): release for release in fresh}
+    kept, transitions = [], []
+    for release in committed["releases"]:
+        key, _lts = identity_of(release)
+        current = fresh_keys.get(key_string(key))
+        if current is None:
+            kept.append({**release, "upstream": {**release["upstream"], "in_sources": False}})
+            continue
+        if current["id"] != release["id"]:
+            transitions.append({
+                "identity": key_string(key), "from": release["id"], "to": current["id"],
+                "reason": "the sources now state this release identity under a different generated "
+                          "id, which embeds the catalog's own LTS flag; the fresh row replaced the "
+                          "committed one rather than being published beside it"})
     return list(fresh) + kept, [
         {"id": release["id"], "name": release["name"],
          "reason": "no current openEuler source states this release; the committed row and its "
                    "dates are retained"}
-        for release in kept]
+        for release in kept], transitions
 
 
 def validate_record(record):
@@ -1195,7 +1433,7 @@ def validate_record(record):
         raise ValueError("Invalid openEuler source identity")
     if record["labels"] != LABELS:
         raise ValueError("Invalid openEuler label evidence")
-    releases, seen = [], set()
+    releases, seen, identities = [], set(), set()
     for release in record["releases"]:
         where = f"{PRODUCT_NAME} {release.get('id')}"
         if release["id"] in seen:
@@ -1241,6 +1479,13 @@ def validate_record(record):
             raise ValueError(f"{where}: publishes a general availability no source states")
         if key is None:
             raise ValueError(f"{where}: the release names no openEuler identity")
+        # The generated id embeds the catalog's LTS flag, so two rows can name
+        # one release identity under two ids. One community release is one row:
+        # the identity, not the id it happens to mint, is what may appear once.
+        if key_string(key) in identities:
+            raise ValueError(f"{where}: release identity {key_string(key)} is published twice; one "
+                             f"community release may not carry two generated ids")
+        identities.add(key_string(key))
         if release["id"] != release_id(key, lts) or release["name"] != display_name(key, lts):
             raise ValueError(f"{where}: release does not name the identity it stores")
         if card is not None:
@@ -1344,8 +1589,14 @@ def _listed(listing):
     return rows
 
 
-def report_for(releases, counts, sources, conflicts, checks, kept, checked):
-    """The per-row accounting this source publishes beside its record."""
+def report_for(releases, counts, sources, conflicts, checks, kept, checked, transitions=()):
+    """The per-row accounting this source publishes beside its record.
+
+    ``transitions`` names every release identity the sources now state under a
+    different generated id — an LTS-flag change renames the id, not the release
+    — so a reader can see that the committed row was replaced rather than
+    duplicated.
+    """
     retained_ids = {entry["id"] for entry in kept}
     fresh = [release for release in releases if release["id"] not in retained_ids]
     stated_eol = [release for release in releases if release["upstream"]["planned_eol"]]
@@ -1391,6 +1642,7 @@ def report_for(releases, counts, sources, conflicts, checks, kept, checked):
                      for release in held],
         "cross_checks": checks,
         "retained": kept,
+        "id_transitions": list(transitions),
         "policy": sources.policy,
         "total_records": 1,
         "limitations": [
@@ -1494,12 +1746,13 @@ def import_openeuler(directory=None):
     committed = committed_record(root)
     checked = _now()
     sources, conflicts = fetch()
-    releases, kept = build(sources, committed)
+    releases, kept, transitions = build(sources, committed)
     releases = ordered_releases(releases)
     record = record_for(releases, checked)
     counts = accounting(sources)
     checks = validate_record(record)
-    report = report_for(releases, counts, sources, conflicts, checks, kept, checked)
+    report = report_for(releases, counts, sources, conflicts, checks, kept, checked,
+                        transitions)
     transaction.publish_product_record(record, report, root, REPORT)
     rows = report["rows"]
     return (f"imported {rows['published']} openEuler releases of {rows['identities']} identities "

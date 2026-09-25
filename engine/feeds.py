@@ -34,10 +34,19 @@ that same string is the iCalendar `UID`. The tagging entity is the project's
 own authority name and the year it was assigned it; per RFC 4151 the tagging
 date is never derived from catalog data and never lies in the future, so an
 event dated 2099 is still `tag:eoltracker,2026:...`. The specific part holds
-five `:`-separated, percent-encoded fields — kind, product id, release or model
-id, milestone key and the full milestone date:
+four `:`-separated, percent-encoded *immutable namespace* fields — kind,
+product id, release or model id and milestone key:
 
-    tag:eoltracker,2026:software:python:3.14:eol:2030-10-31
+    tag:eoltracker,2026:software:python:3.14:eol
+
+None of those fields can change for an event that still exists: a source
+correction moves the milestone's *date*, which is the event's representation,
+not its identity. An earlier scheme appended the milestone date as a fifth
+field, which meant a correction re-minted the identifier and left feed readers
+holding an obsolete event and a duplicate reminder. `legacy_event_id()` still
+reproduces that date-bearing form so a consumer can translate the identifiers
+it already holds with `migrate_legacy_id()`; only the representation changes
+when a date is corrected.
 
 Encoding each field keeps the format injective, so no two events can ever mint
 the same identifier, and an event keeps that identifier for its whole life
@@ -54,13 +63,27 @@ import re
 from datetime import date, datetime, timezone
 from email.utils import format_datetime
 from pathlib import Path
-from urllib.parse import quote
+from urllib.parse import quote, urlsplit
 from xml.sax.saxutils import escape, quoteattr
 
 from .importer import ROOT
 from . import derived
 from .site_config import (MILESTONES, SCHEMA_VERSION, SITE_URL, human_date, is_month,
                           published_period, site_url)
+
+try:  # The core persistence slice owns the validator; presentation may lack it.
+    from .urls import safe_http_url_or_none
+except ImportError:  # pragma: no cover - exercised only without the core module
+    def safe_http_url_or_none(value):
+        """Fallback: keep only plain absolute http(s) URLs, no userinfo/controls."""
+        if not isinstance(value, str) or any(ord(ch) < 0x20 or ch == "\x7f" for ch in value):
+            return None
+        parsed = urlsplit(value.strip())
+        if parsed.scheme not in ("http", "https") or not parsed.netloc:
+            return None
+        if "@" in parsed.netloc or not parsed.hostname:
+            return None
+        return value
 
 DEFAULT_DATA = ROOT / "data"
 DEFAULT_OUT = ROOT / "_site"
@@ -141,6 +164,63 @@ def _specific(value):
     return quote(str(value), safe="")
 
 
+def _event_id(kind, product_id, release_id, milestone):
+    """The permanent identity of one event, from immutable namespace fields only.
+
+    Product id, release or model id and milestone key, colon separated and
+    percent encoded:
+      tag:eoltracker,2026:software:python:3.14:eol
+    The kind namespaces software against hardware, which is required: the same
+    product/release/milestone can exist in both catalogs. The milestone's date
+    is deliberately absent — a source correction moves the date, and an
+    identity that moved with it would re-mint the event and duplicate it in
+    every reader that already held the old one.
+    """
+    return TAG_PREFIX + ":".join(_specific(part) for part in (kind, product_id, release_id, milestone) if part)
+
+
+def legacy_event_id(kind, product_id, release_id, milestone, value):
+    """Reproduce the pre-2026-09 identity, which appended the mutable date.
+
+    Provided so a consumer can recognise the identifiers it already holds; this
+    module never mints one. The legacy specific part was hyphen joined and
+    carried no namespace, which is why `migrate_legacy_id` needs the event's
+    own fields to translate it.
+    """
+    specific = "-".join(_specific(part) for part in (product_id, release_id, milestone, value) if part)
+    return TAG_PREFIX + specific
+
+
+def migrate_legacy_id(kind, product_id, release_id, milestone, value):
+    """The permanent identity for the event a legacy date-bearing id named.
+
+    The legacy specific part was `<product>-<release>-<milestone>-<date>`, all
+    hyphen joined and with no namespace. That form is ambiguous — a product id
+    containing a hyphen is indistinguishable from a product/release boundary —
+    so the translation is not a pure string rewrite: it takes the event's own
+    namespace fields, which the consumer already holds from the entry, and maps
+    the *date-bearing* id it cached onto the permanent identity.
+
+    `value` must be that legacy id (or already the permanent one); anything else
+    raises `ValueError` rather than silently inventing a different event's
+    identity. The date in `value` is discarded: the milestone's date is the
+    representation, and the point of the migration is that correcting it must
+    not re-mint the event.
+    """
+    permanent = _event_id(kind, product_id, release_id, milestone)
+    if not isinstance(value, str) or not value.startswith(TAG_PREFIX):
+        raise ValueError(f"Not an event identifier: {value!r}")
+    specific = value[len(TAG_PREFIX):]
+    if specific == permanent[len(TAG_PREFIX):]:
+        return permanent
+    legacy_prefix = "-".join(_specific(part) for part in (product_id, release_id, milestone) if part)
+    if re.fullmatch(re.escape(legacy_prefix) + r"-(?:\d{4}-\d{2}|\d{4}-\d{2}-\d{2})", specific):
+        return permanent
+    raise ValueError(
+        f"{value!r} is not the identifier of {kind}/{product_id}/{release_id}/{milestone} "
+        f"in either the legacy date-bearing or the permanent form")
+
+
 def _event(kind, product_id, product_name, release_id, release_name, milestone, value, url, derived=None):
     """One upcoming milestone as a stable id plus the text every format prints.
 
@@ -162,12 +242,12 @@ def _event(kind, product_id, product_name, release_id, release_name, milestone, 
     # legible either way.
     human = human_date(value)
     stated = f"{human} (month precision)" if is_month(value) else f"{human} ({value})"
-    # Product id, release or model id, milestone key and the full milestone
-    # date, hyphen joined:
-    #   tag:eoltracker,2026:python-3.14-eol-2030-10-31
-    specific = "-".join(_specific(part) for part in (product_id, release_id, milestone, value) if part)
+    # Only a source page that is a plain absolute http(s) URL reaches a
+    # syndicated link or an iCalendar URL value; an unsafe scheme is dropped
+    # rather than republished as something a feed client might interpret.
+    safe_url = safe_http_url_or_none(url) or SITE_URL
     return {
-        "id": TAG_PREFIX + specific,
+        "id": _event_id(kind, product_id, release_id, milestone),
         "date": value,
         "month": is_month(value),
         "derived": derived or None,
@@ -179,8 +259,8 @@ def _event(kind, product_id, product_name, release_id, release_name, milestone, 
         "release_id": release_id,
         "release": release or name,
         "title": title,
-        "url": url,
-        "summary": f"{title} on {stated}. Full lifecycle: {url}",
+        "url": safe_url,
+        "summary": f"{title} on {stated}. Full lifecycle: {safe_url}",
     }
 
 
@@ -462,9 +542,17 @@ def atom_feed(events, updated):
 def rss_feed(events, updated):
     """RSS 2.0 document: one item per event.
 
-    The channel's `pubDate` and `lastBuildDate` are the snapshot time, while
-    each item's `pubDate` is the milestone date itself: readers sort and render
-    a date feed by when the event happens, not by when the catalog was rebuilt.
+    RSS 2.0 defines `pubDate` as *when the item was published*, not when the
+    event it describes occurs, so every date here is the snapshot time the
+    manifest states. The lifecycle date is not a publication date and never
+    becomes one: a future deadline would be a publication timestamp in the
+    future, which readers misorder or reject outright. The event's own date
+    stays in the representation instead — it is the `title`/`description`
+    text, the Atom `<category>`, and the iCalendar `DTSTART`. Because the item
+    is a snapshot of a live feed rather than an archival post, `pubDate` is
+    omitted: an unchanged event republished in a new snapshot has no single
+    publication instant, and `lastBuildDate` (with the feed-level `pubDate`)
+    already states when this document was produced.
     """
     stamp = format_datetime(updated, usegmt=True)
     lines = [
@@ -486,7 +574,6 @@ def rss_feed(events, updated):
             f"      <title>{escape(event['title'])}</title>",
             f"      <link>{escape(event['url'])}</link>",
             f'      <guid isPermaLink="false">{escape(event["id"])}</guid>',
-            f"      <pubDate>{_rfc822(event['date'])}</pubDate>",
             f"      <category>{escape(event['label'])}</category>",
             f"      <description>{escape(event['summary'])}</description>",
             "    </item>",

@@ -20,6 +20,15 @@ HEADERS = ("Version", "Release date", "Critical-Only updates", "End of Life")
 MONTHS = {name: index for index, name in enumerate(
     ("January", "February", "March", "April", "May", "June", "July", "August",
      "September", "October", "November", "December"), 1)}
+# Cells that state no date at all, reviewed against the vendor's own wording.
+# The table writes "EOL" for the scope whose dates PowerDNS never published, and
+# a routine edit can leave a blank, a dash or a plain no-date token in any of the
+# three columns. Each is the source saying "no date stated": it normalizes to a
+# null milestone while the raw cell stays verbatim under ``upstream.cells``.
+# Deliberately narrow — a value that only *looks* date-shaped (a bare year, an
+# impossible month or day, the vendor's day form with another separator) is not
+# in this vocabulary and refuses the refresh instead of passing as unknown.
+NO_DATE = frozenset({"", "-", "–", "—", "n/a", "n/a.", "na", "tbd", "tba", "unknown", "eol"})
 
 
 class _Tables(HTMLParser):
@@ -74,11 +83,30 @@ class _Tables(HTMLParser):
 
 
 def date_value(text):
-    """Exact days/months only. EOL and approximate dates stay undated."""
-    if text == "EOL":
+    """One dated cell at its stated precision; a no-date cell is ``None``.
+
+    Three cell shapes state a date: ``3rd of June 2026`` and ``June 2026`` at
+    the precision the vendor writes, and the ``EOL June 2026`` form, where the
+    ``EOL`` token marks the release as past its end of life and the date after
+    it is still the vendor's own statement. A ``~ ``-prefixed cell is the
+    vendor's approximation and is never a deadline.
+
+    Everything else has to be a date or a reviewed no-date token. The no-date
+    vocabulary (:data:`NO_DATE`) covers the raw spellings the table already uses
+    for "no date stated", including the bare ``EOL`` the grouped scope carries;
+    each normalizes to ``None`` while the cell stays verbatim in the record. A
+    date-shaped value outside both — a bare year, an impossible month or day, a
+    separator the vendor does not use — is a parse failure, so a genuinely
+    malformed cell can never be mistaken for an unknown one.
+    """
+    text = re.sub(r"\s+", " ", text or "").strip()
+    if text.lower() in NO_DATE:
         return None
     approximate = text.startswith("~ ")
-    value = text[2:] if approximate else text.removeprefix("EOL ")
+    if approximate:
+        value = text[2:]
+    else:
+        value = re.sub(r"^EOL\s+", "", text, flags=re.I)
     match = re.fullmatch(r"(?:(\d{1,2})(st|nd|rd|th) of )?([A-Za-z]+) (\d{4})", value)
     if not match or match[3] not in MONTHS:
         raise ValueError(f"Unrecognized PowerDNS date: {text!r}")
@@ -88,10 +116,15 @@ def date_value(text):
         suffix = "th" if 10 <= day % 100 <= 20 else {1: "st", 2: "nd", 3: "rd"}.get(day % 10, "th")
         if suffix != match[2]:
             raise ValueError(f"Invalid ordinal: {text!r}")
-        parsed = date(year, month, day).isoformat()
+        try:
+            parsed = date(year, month, day).isoformat()
+        except ValueError:
+            raise ValueError(f"Not a calendar date: {text!r}") from None
     else:
         parsed = f"{year:04d}-{month:02d}"
-    return None if approximate else parsed
+    if approximate:
+        return None
+    return parsed
 
 
 def release_for(cells):

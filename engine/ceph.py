@@ -233,13 +233,14 @@ def parse_releases(data_text, index_text):
     end-of-life date, and an absent date is not a date.
     """
     payload = _payload(data_text)
-    releases, excluded, seen = [], [], set()
+    releases, excluded, seen, by_branch = [], [], set(), {}
     for branch, info in payload["releases"].items():
         release = _release(branch, info)
         if release["id"] in seen:
             raise ValueError(f"Ceph branches claim the same series {release['id']!r}: "
                              f"{branch!r} and another")
         seen.add(release["id"])
+        by_branch[branch] = release
         releases.append(release)
     if not releases:
         raise ValueError("The Ceph release metadata produced no branches")
@@ -251,15 +252,28 @@ def parse_releases(data_text, index_text):
                       "release branch; the project's release-cycle document keeps these separate",
         })
     documented = _documented(index_text)
-    known = {branch for branch in payload["releases"]}
     for slug, (label, series) in documented.items():
-        if slug in known:
+        release = by_branch.get(slug)
+        if release is None:
+            excluded.append({
+                "row": f"{label} ({series})",
+                "reason": f"named in the release page's branch index ({INDEX_URL}) but the release "
+                          f"metadata states no lifecycle record for it, so it publishes no date",
+            })
             continue
-        excluded.append({
-            "row": f"{label} ({series})",
-            "reason": f"named in the release page's branch index ({INDEX_URL}) but the release "
-                      f"metadata states no lifecycle record for it, so it publishes no date",
-        })
+        # The index and the metadata are independent statements about one
+        # branch. A slug whose index series or label disagrees with the record
+        # the metadata states under that slug is the project contradicting
+        # itself about a stable-series identity — the one thing a permalink
+        # depends on — so the refresh refuses rather than choosing a statement.
+        if release["id"] != series:
+            raise ValueError(f"Ceph branch {slug!r} is stated as series {series!r} by the page's "
+                             f"branch index ({INDEX_URL}) and as {release['id']!r} by the release "
+                             f"metadata; the two sources contradict each other")
+        if release["name"] != label:
+            raise ValueError(f"Ceph branch {slug!r} is named {label!r} by the page's branch index "
+                             f"({INDEX_URL}) and {release['name']!r} by the release metadata; the "
+                             f"two sources contradict each other")
     return _ordered(releases), excluded
 
 

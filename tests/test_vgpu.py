@@ -37,11 +37,30 @@ def software_record(name="sample", verifier=sources.source("import-data").verifi
     return record
 
 
+def stage_sidecars(directory, records):
+    """Stage the accounting sidecar each written record's source owns.
+
+    Validation requires a source's report beside the records it owns, so a test
+    that writes a collector's record directly stages the minimal honest sidecar
+    (its verifier and record count) instead of bypassing the gate. The
+    import-data source publishes no sidecar, so it contributes none.
+    """
+    counts = {}
+    for record in records:
+        verifier = record["provenance"]["verifier"]
+        counts[verifier] = counts.get(verifier, 0) + 1
+    for verifier, count in counts.items():
+        report = sources.source_for(verifier).report
+        if report:
+            dump(directory / report, {"verifier": verifier, "total_records": count})
+
+
 def catalog_root(directory, records):
     """A data directory holding ``records`` and the manifest the importer writes."""
     (directory / "products").mkdir(parents=True, exist_ok=True)
     for record in records:
         dump(directory / "products" / (record["id"] + ".json"), record)
+    stage_sidecars(directory, records)
     counted = [record for record in records
                if record["provenance"]["verifier"] == sources.source("import-data").verifier]
     dump(directory / "manifest.json", {
@@ -184,6 +203,49 @@ class ParseTests(unittest.TestCase):
                          ["no branch number in the release name",
                           "duplicate branch row for release '16'"])
         self.assertEqual([entry["table"] for entry in excluded], [vgpu.ACTIVE, vgpu.ACTIVE])
+
+    def test_an_identical_duplicate_row_is_reconciled_and_every_cell_is_compared(self):
+        # An exact restatement is a duplicate, not a conflict: the branch is
+        # published once and the second row is accounted.
+        duplicate = [line for line in MARKDOWN.splitlines() if line.startswith("| [NVIDIA vGPU 19]")][0]
+        markdown = MARKDOWN.replace("#### Older", duplicate + "\n#### Older", 1)
+        releases, excluded = vgpu.parse_branches(markdown)
+        self.assertEqual([release["id"] for release in releases].count("19"), 1)
+        self.assertEqual([entry["reason"] for entry in excluded],
+                         ["duplicate branch row for release '19'"])
+        self.assertEqual(vgpu.parse_branches(markdown), vgpu.parse_branches(markdown))
+
+    def test_a_duplicate_row_contradicting_a_lifecycle_cell_refuses_the_parse(self):
+        # The driver branch is a lifecycle-bearing cell the old first-wins path
+        # never compared: a second row claiming 19 under another branch is the
+        # vendor contradicting itself about the branch, not a duplicate.
+        original = [line for line in MARKDOWN.splitlines() if line.startswith("| [NVIDIA vGPU 19]")][0]
+        for column, replacement in (
+                ("Driver Branch", original.replace("| R580 |", "| R560 |")),
+                ("vGPU Branch Type", original.replace("Long-Term Support", "Production")),
+                ("Latest Release in Branch", original.replace("| 19.1 |", "| 19.2 |")),
+                ("Release Date", original.replace("September 2025", "October 2025")),
+                ("EOL Date", original.replace("July 2028", "August 2028"))):
+            with self.subTest(column=column):
+                markdown = MARKDOWN.replace("#### Older", replacement + "\n#### Older", 1)
+                with self.assertRaisesRegex(ValueError, "stated twice with contradicting values"):
+                    vgpu.parse_branches(markdown)
+
+    def test_a_header_only_branch_table_refuses_the_refresh(self):
+        # A partial inventory is a table with its headers and no rows; without
+        # this check the other table's rows would publish as the whole catalog.
+        def header_only(markdown, heading):
+            lines = markdown.splitlines()
+            start = lines.index("#### " + heading)
+            index = start + 3  # the heading, the header row and the separator
+            while index < len(lines) and lines[index].strip().startswith("|"):
+                index += 1
+            return "\n".join(lines[:start + 3] + lines[index:])
+
+        with self.assertRaisesRegex(ValueError, "Active vGPU Software Releases.*no data rows"):
+            vgpu.parse_branches(header_only(MARKDOWN, vgpu.ACTIVE))
+        with self.assertRaisesRegex(ValueError, "Older vGPU Software Releases.*no data rows"):
+            vgpu.parse_branches(header_only(MARKDOWN, vgpu.OLDER))
 
     def test_reshaped_headers_refuse_the_parse(self):
         markdown = MARKDOWN.replace("| EOL Date |", "| End of Life |", 1)
@@ -328,6 +390,48 @@ class PublicationTests(CatalogRootCase):
                          ["sample.json"])
         self.assertFalse((self.root / vgpu.REPORT).exists())
 
+    def test_a_header_only_current_table_refuses_both_the_first_run_and_a_refresh(self):
+        # The required tables are authoritative; a header-only one is a partial
+        # snapshot, not a smaller catalog. On a first run there is no committed
+        # record to fall back on, and the same refusal keeps an existing snapshot
+        # rather than replacing it with the other table's rows.
+        def header_only(markdown, heading):
+            lines = markdown.splitlines()
+            start = lines.index("#### " + heading)
+            index = start + 3
+            while index < len(lines) and lines[index].strip().startswith("|"):
+                index += 1
+            return "\n".join(lines[:start + 3] + lines[index:])
+
+        partial = header_only(MARKDOWN, vgpu.ACTIVE)
+        with mock.patch.object(net, "get_text", return_value=partial):
+            with self.assertRaisesRegex(ValueError, "Active vGPU Software Releases.*no data rows"):
+                vgpu.import_vgpu(self.root)
+        self.assertEqual(sorted(path.name for path in (self.root / "products").glob("*.json")),
+                         ["sample.json"])
+        self.assertFalse((self.root / vgpu.REPORT).exists())
+        with mock.patch.object(net, "get_text", return_value=MARKDOWN):
+            vgpu.import_vgpu(self.root)
+        published = (self.root / "products/nvidia-vgpu.json").read_bytes()
+        with mock.patch.object(net, "get_text", return_value=partial):
+            with self.assertRaisesRegex(ValueError, "Active vGPU Software Releases.*no data rows"):
+                vgpu.import_vgpu(self.root)
+        self.assertEqual((self.root / "products/nvidia-vgpu.json").read_bytes(), published)
+
+    def test_a_contradicting_duplicate_row_refuses_the_refresh(self):
+        # The duplicate check is part of the fetch path, not only the parser: a
+        # contradicting row leaves the committed record and report untouched.
+        with mock.patch.object(net, "get_text", return_value=MARKDOWN):
+            vgpu.import_vgpu(self.root)
+        published = (self.root / "products/nvidia-vgpu.json").read_bytes()
+        row = next(line for line in MARKDOWN.splitlines() if line.startswith("| [NVIDIA vGPU 19]"))
+        conflicting = MARKDOWN.replace("| July 2028 |", "| August 2028 |", 1)
+        conflicting = conflicting.replace("#### Older", row + "\n#### Older", 1)
+        with mock.patch.object(net, "get_text", return_value=conflicting):
+            with self.assertRaisesRegex(ValueError, "stated twice with contradicting values"):
+                vgpu.import_vgpu(self.root)
+        self.assertEqual((self.root / "products/nvidia-vgpu.json").read_bytes(), published)
+
     def test_import_publishes_the_record_and_its_registry_report(self):
         with mock.patch.object(net, "get_text", return_value=MARKDOWN) as fetch:
             detail = vgpu.import_vgpu(self.root)
@@ -364,6 +468,7 @@ class RegistryIntegrationTests(CatalogRootCase):
         if verifier:
             record["provenance"]["verifier"] = verifier
         dump(self.root / "products/nvidia-vgpu.json", record)
+        stage_sidecars(self.root, [record])
         return record
 
     def test_validate_data_dispatches_to_the_owning_sources_validator(self):

@@ -116,26 +116,59 @@
     document.querySelectorAll("#hardware-vendor-chips .chip"));
   var catalogChips = Array.prototype.slice.call(
     document.querySelectorAll("#hardware-catalog-chips .chip"));
+  var pagination = document.getElementById("hardware-pagination");
+  var previousPage = document.getElementById("hardware-prev");
+  var nextPage = document.getElementById("hardware-next");
+  var pageLabel = document.getElementById("hardware-page-label");
+  var page = 0;
+  var PAGE_SIZE = 200;
 
-  var rows = Array.prototype.slice.call(body.querySelectorAll(".hardware-row"));
-  var total = rows.length;
-  rows.forEach(function (row) {
-    row.dataset.sortName = (row.querySelector(".hardware-name a").textContent || "").trim().toLowerCase();
+  // One plain-JavaScript record per row, holding every value the filters and
+  // the comparators need, read from the DOM once. Reading `dataset` inside a
+  // comparator went through the DOM string map on both sides of every one of
+  // the roughly 90,000 comparisons a sort of 6999 rows makes, and again once
+  // per row on every keystroke; these fields turn both into array access.
+  var records = Array.prototype.slice.call(body.querySelectorAll(".hardware-row"))
+    .map(function (row) {
+      return {
+        node: row,
+        id: row.id,
+        hidden: row.hidden,
+        name: (row.querySelector(".hardware-name a").textContent || "").trim().toLowerCase(),
+        search: row.dataset.search,
+        vendor: row.dataset.vendor,
+        status: row.dataset.status,
+        catalog: row.dataset.catalog,
+        statusOrder: Number(row.dataset.statusOrder),
+        catalogOrder: Number(row.dataset.catalogOrder),
+        eol: row.dataset.eol || "9999-12-31"
+      };
+    });
+  records.forEach(function (record) {
+    record.node.style.contentVisibility = "auto";
+    record.node.style.containIntrinsicSize = "0 3.5rem";
+    record.node.style.contain = "strict";
   });
+  var total = records.length;
+  // The order the document currently shows, one entry per record. Filtering
+  // never changes it, and `setOrder` rewrites it only when it actually moves
+  // rows, so it stays the truth about where each row sits.
+  var order = records.slice();
+  var sortedOrders = {};
 
   function plural(n, word) {
     return n + " " + word + (n === 1 ? "" : "s");
   }
 
-  function matches(row, text, vendorValue, statusValue, catalogValue) {
-    if (text && row.dataset.search.indexOf(text) === -1) return false;
-    if (vendorValue && row.dataset.vendor !== vendorValue) return false;
-    if (statusValue && row.dataset.status !== statusValue) return false;
+  function matches(record, text, vendorValue, statusValue, catalogValue) {
+    if (text && record.search.indexOf(text) === -1) return false;
+    if (vendorValue && record.vendor !== vendorValue) return false;
+    if (statusValue && record.status !== statusValue) return false;
     if (catalogValue === "lifecycle-row") {
       // A lifecycle row is one with no catalog state of its own: notice-table
       // records, which carry dates rather than a listing.
-      if (row.dataset.catalog) return false;
-    } else if (catalogValue && row.dataset.catalog !== catalogValue) {
+      if (record.catalog) return false;
+    } else if (catalogValue && record.catalog !== catalogValue) {
       return false;
     }
     return true;
@@ -143,30 +176,28 @@
 
   function comparator(value) {
     function byName(a, b) {
-      return a.dataset.sortName.localeCompare(b.dataset.sortName);
+      return a.name.localeCompare(b.name);
     }
     if (value === "vendor") {
       return function (a, b) {
-        return a.dataset.vendor.localeCompare(b.dataset.vendor) || byName(a, b);
+        return a.vendor.localeCompare(b.vendor) || byName(a, b);
       };
     }
     if (value === "status") {
       // Records with no status of their own sort last: the unknown key is
       // deliberately outside the documented status order.
       return function (a, b) {
-        return Number(a.dataset.statusOrder) - Number(b.dataset.statusOrder) || byName(a, b);
+        return a.statusOrder - b.statusOrder || byName(a, b);
       };
     }
     if (value === "catalog") {
       return function (a, b) {
-        return Number(a.dataset.catalogOrder) - Number(b.dataset.catalogOrder) || byName(a, b);
+        return a.catalogOrder - b.catalogOrder || byName(a, b);
       };
     }
     if (value === "eol") {
       return function (a, b) {
-        var left = a.dataset.eol || "9999-12-31";
-        var right = b.dataset.eol || "9999-12-31";
-        if (left !== right) return left < right ? -1 : 1;
+        if (a.eol !== b.eol) return a.eol < b.eol ? -1 : 1;
         return byName(a, b);
       };
     }
@@ -181,37 +212,62 @@
     });
   }
 
-  function apply(reorder) {
-    // Filtering only toggles `hidden`; rows are re-inserted through a detached
-    // fragment only when the sort order changes, so typing never moves 6910
-    // nodes. Filtering is order-independent, so a hidden row can stay where it
-    // is in the sorted sequence.
+  // The sorted order for a sort key, built once and reused: re-selecting a sort
+  // already visited costs no comparisons, and the sort itself is pure
+  // JavaScript over `records`.
+  function sortedOrder(value) {
+    if (!sortedOrders[value]) {
+      var next = records.slice();
+      next.sort(comparator(value));
+      sortedOrders[value] = next;
+    }
+    return sortedOrders[value];
+  }
+
+  // Keep the complete data set in JavaScript, but render only one bounded page
+  // of rows. Reordering 6,999 table rows forces a full table layout; moving at
+  // most PAGE_SIZE visible rows keeps filters and sorts responsive while the
+  // pagination controls expose the rest of the catalog.
+  function renderPage(next, resetPage) {
+    if (resetPage) page = 0;
     var text = (query.value || "").trim().toLowerCase();
     var vendorValue = vendor.value;
     var statusValue = status.value;
     var catalogValue = catalog ? catalog.value : "";
-    var shown = 0;
-
-    rows.forEach(function (row) {
-      var matched = matches(row, text, vendorValue, statusValue, catalogValue);
-      row.hidden = !matched;
-      if (matched) shown += 1;
+    var matching = next.filter(function (record) {
+      return matches(record, text, vendorValue, statusValue, catalogValue);
     });
+    var pages = Math.max(1, Math.ceil(matching.length / PAGE_SIZE));
+    if (page >= pages) page = pages - 1;
+    var visible = matching.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
+    var visibleRecords = visible.slice();
 
-    if (reorder) {
-      rows.slice().sort(comparator(sort.value)).forEach(function (row) {
-        fragment.appendChild(row);
-      });
-      body.appendChild(fragment);
-    }
+    records.forEach(function (record) {
+      var shouldHide = visibleRecords.indexOf(record) === -1;
+      if (record.hidden !== shouldHide) {
+        record.hidden = shouldHide;
+        record.node.hidden = shouldHide;
+      }
+    });
+    var fragment = document.createDocumentFragment();
+    visible.forEach(function (record) { fragment.appendChild(record.node); });
+    body.appendChild(fragment);
 
     if (count) {
-      var filtered = shown !== total;
-      count.textContent = filtered
-        ? "Showing " + plural(shown, "hardware record") + " of " + total
-        : plural(total, "hardware record");
+      if (pages > 1) {
+        count.textContent = "Showing " + plural(visible.length, "hardware record") +
+          " of " + matching.length + " (page " + (page + 1) + " of " + pages + ")";
+      } else if (matching.length !== total) {
+        count.textContent = "Showing " + plural(matching.length, "hardware record") + " of " + total;
+      } else {
+        count.textContent = plural(total, "hardware record");
+      }
     }
-    if (empty) empty.hidden = shown !== 0;
+    if (empty) empty.hidden = matching.length !== 0;
+    if (pagination) pagination.hidden = pages <= 1;
+    if (pageLabel) pageLabel.textContent = "Page " + (page + 1) + " of " + pages;
+    if (previousPage) previousPage.disabled = page === 0;
+    if (nextPage) nextPage.disabled = page >= pages - 1;
     syncChips(vendorChips, vendor, "vendor");
     if (catalog) syncChips(catalogChips, catalog, "catalog");
     if (form) {
@@ -220,34 +276,44 @@
     }
   }
 
-  var fragment = document.createDocumentFragment();
+  function apply(reorder, resetPage) {
+    var next = reorder ? sortedOrder(sort.value) : order;
+    if (reorder) order = next;
+    renderPage(next, resetPage !== false);
+  }
 
   vendorChips.forEach(function (chip) {
     chip.addEventListener("click", function () {
       vendor.value = vendor.value === chip.dataset.vendor ? "" : chip.dataset.vendor;
-      apply(false);
+      apply(false, true);
     });
   });
   catalogChips.forEach(function (chip) {
     chip.addEventListener("click", function () {
       if (!catalog) return;
       catalog.value = catalog.value === chip.dataset.catalog ? "" : chip.dataset.catalog;
-      apply(false);
+      apply(false, true);
     });
   });
-  form.addEventListener("input", function () { apply(false); });
+  form.addEventListener("input", function () { apply(false, true); });
   form.addEventListener("change", function (event) {
     // The sort control is the only one that changes which row goes where.
-    if (event.target === sort) apply(true);
-    else apply(false);
+    if (event.target === sort) apply(true, true);
+    else apply(false, true);
   });
   form.addEventListener("submit", function (event) {
     event.preventDefault();
   });
   form.addEventListener("reset", function () {
-    window.setTimeout(function () { apply(true); }, 0);
+    window.setTimeout(function () { apply(true, true); }, 0);
   });
-  apply(true);
+  if (previousPage) previousPage.addEventListener("click", function () {
+    if (page > 0) { page -= 1; renderPage(order, false); }
+  });
+  if (nextPage) nextPage.addEventListener("click", function () {
+    page += 1; renderPage(order, false);
+  });
+  apply(true, true);
 })();
 
 /* Catalog tabs on the homepage: two server-rendered panels, one visible. */

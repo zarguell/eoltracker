@@ -55,6 +55,21 @@ RULE_COLUMNS = ("Release Stage", "Description")
 # offline re-derivation re-derives from them without a network fetch.
 EOS_LABEL = "TeamCity On-Premises End of Sale"
 EOL_LABEL = "TeamCity On-Premises End of Support"
+# Every release-stage row the policy page is reviewed to state, and what each
+# one is: the two rules this record applies, and the two rows that state no
+# dated milestone. The set is complete on purpose — an unreviewed label refuses
+# the parse — because a newly added stage can change support semantics while the
+# record would otherwise keep deriving under stale ones and still claim complete
+# row coverage.
+NOT_DATED = (
+    ("TeamCity Cloud Major Release",
+     "TeamCity Cloud is a different product with its own subscription licensing; this record "
+     "covers On-Premises only"),
+    ("TeamCity On-Premises Major Release",
+     "a release-stage description, not a milestone: its 'usually released every four months' "
+     "is cadence, and a cadence is never converted into a date"),
+)
+POLICY_LABELS = (EOS_LABEL, EOL_LABEL) + tuple(label for label, _reason in NOT_DATED)
 EOS_QUOTE = "Occurs for the previous major version with the release of the next major version."
 EOL_QUOTE = "Occurs with the release of two newer major versions."
 RULES = {"eos": {"label": EOS_LABEL, "quote": EOS_QUOTE},
@@ -192,9 +207,16 @@ def policy_rules(html):
     the columns it declares and each rule row by its own label. The stored quote
     is the rule sentence itself, and it must appear in the page word for word:
     a reworded or renamed policy refuses instead of deriving under a rule the
-    vendor no longer states. The table's remaining rows are returned as the
-    accounting a reader can check the two rules against, so the policy page is
-    covered row by row rather than only where it was convenient.
+    vendor no longer states.
+
+    The table's labels are required to be *exactly* the reviewed set: every row
+    the policy is reviewed to state must be present, and any row it states that
+    this record has not reviewed refuses the parse. A newly added release stage
+    governs support as surely as the two rows this record applies, so silently
+    dropping it would let the record keep deriving under stale semantics while
+    still reporting complete row coverage. The rows that state no dated milestone
+    are returned, with the reason each licenses no date, as the accounting a
+    reader can check the two rules against.
     """
     parser = _Tables()
     parser.feed(html)
@@ -210,6 +232,14 @@ def policy_rules(html):
     stated = {}
     for row in rows:
         stated.setdefault(row[0], []).append(row[1])
+    missing = [label for label in POLICY_LABELS if label not in stated]
+    if missing:
+        raise ValueError(f"The TeamCity release cycle no longer states the reviewed release-stage "
+                         f"rows: {missing}")
+    unknown = [label for label in stated if label not in POLICY_LABELS]
+    if unknown:
+        raise ValueError(f"The TeamCity release cycle states release-stage rows this record has "
+                         f"not reviewed: {unknown}")
     rules = {}
     for key, label, quote in (("eos", EOS_LABEL, EOS_QUOTE), ("eol", EOL_LABEL, EOL_QUOTE)):
         if len(stated.get(label, [])) != 1:
@@ -221,15 +251,13 @@ def policy_rules(html):
     # Every row of the table that states no rule this record applies, with the
     # reason it does not: the two rules are the whole dated lifecycle the policy
     # publishes, and the rest of the page is either cadence prose or Cloud.
-    others = [{"row": label, "reason": reason} for label, reason in (
-        ("TeamCity Cloud Major Release",
-         "TeamCity Cloud is a different product with its own subscription licensing; this record "
-         "covers On-Premises only"),
-        ("TeamCity On-Premises Major Release",
-         "a release-stage description, not a milestone: its 'usually released every four months' "
-         "is cadence, and a cadence is never converted into a date"),
-    ) if label in stated]
-    return rules, others
+    others = [{"row": label, "reason": reason} for label, reason in NOT_DATED
+              if label in stated]
+    # The report's row count is the *parsed* table row count, taken here where
+    # the table was read, not recomputed from the rules and rows this function
+    # happens to return: a filter that dropped a row could otherwise still sum
+    # to a complete-looking total.
+    return rules, others, len(rows)
 
 
 def release_date(text, where):
@@ -323,10 +351,30 @@ def _version_key(version):
 
 
 def ordered_releases(releases):
-    """Newest major line first, by the release date the catalog states."""
-    return sorted(releases, key=lambda release: (release["milestones"]["ga"],
-                                                 _version_key(release["id"])),
-                  reverse=True)
+    """Newest major line first, by the version identity the catalog states.
+
+    The policy defines a transition by *the next* and *the second newer* major
+    version, so the order is the versions' own numeric identity. ``_check_order``
+    then requires that identity order and the release-date order to agree: a
+    catalog that dated a newer major before an older one would otherwise pick the
+    wrong trigger release while still re-deriving consistently.
+    """
+    return sorted(releases, key=lambda release: _version_key(release["id"]), reverse=True)
+
+
+def _check_order(ordered, where):
+    """Require the major versions' order and the release dates to agree."""
+    for index in range(len(ordered) - 1):
+        newer, older = ordered[index], ordered[index + 1]
+        newer_date = newer["milestones"]["ga"]
+        older_date = older["milestones"]["ga"]
+        if newer_date is None or older_date is None:
+            raise ValueError(f"{where}: a major line states no release date")
+        if newer_date <= older_date:
+            raise ValueError(
+                f"{where}: major {newer['id']} is newer than major {older['id']} but the catalog "
+                f"dates it {newer_date}, not after {older_date}; the policy's trigger would point "
+                f"at the wrong release")
 
 
 def derived_entry(key, release, trigger, rule):
@@ -374,9 +422,10 @@ def with_derived_milestones(releases, rules):
     a newly published major fills two older lines, and a rule that no longer
     applies leaves the milestone null rather than stale. Each derived date is
     labelled, and its provenance carries the base, the rule sentence and the
-    trigger release.
+    trigger release. The version order must agree with the release dates.
     """
     ordered = ordered_releases(releases)
+    _check_order(ordered, CATALOG_URL)
     for index, release in enumerate(ordered):
         milestones, provenance = derived_for(ordered, index, rules)
         release["milestones"] = milestones
@@ -418,8 +467,9 @@ def validate_record(record):
             raise ValueError(f"{where}: release carries an invalid retention marker")
         releases.append(release)
     if [release["id"] for release in releases] != [release["id"] for release in ordered_releases(releases)]:
-        raise ValueError("The TeamCity record is not ordered by the catalog's release dates")
+        raise ValueError("The TeamCity record is not ordered by the catalog's release versions")
     ordered = ordered_releases(releases)
+    _check_order(ordered, record["id"])
     for index, release in enumerate(ordered):
         where = f"{record['id']}: release {release['id']}"
         # The chapter is the base of everything else: its own heading and date
@@ -513,11 +563,11 @@ def report_for(releases, excluded, policy, kept, checked):
     ``seen`` is every catalog chapter this fetch read — the major lines it
     published plus the bugfix lines it accounted for instead, so the identity
     ``seen == published + excluded`` holds and no source row is dropped. The
-    policy page is accounted the same way: every row of its release-stage table
-    is either one of the two rules this record applies or a row that states no
-    dated milestone, with the reason.
+    policy page is accounted the same way: ``policy_rows`` is the release-stage
+    table's own parsed row count, so a row this record had not reviewed could
+    never be missing from the total.
     """
-    rules, others = policy
+    rules, others, policy_rows = policy
     retained_ids = {entry["id"] for entry in kept}
     fresh = [release for release in releases if release["id"] not in retained_ids]
     return {
@@ -539,7 +589,8 @@ def report_for(releases, excluded, policy, kept, checked):
             "url": POLICY_URL,
             "rules": [{"label": rules[key]["label"], "quote": rules[key]["quote"],
                        "text": rules[key]["text"]} for key in ("eos", "eol")],
-            "rows": {"seen": len(rules) + len(others), "used": len(rules),
+            "labels": list(POLICY_LABELS),
+            "rows": {"seen": policy_rows, "used": len(rules),
                      "not_dated": others},
         },
         "total_records": 1,

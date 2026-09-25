@@ -111,6 +111,15 @@
             ]
           }
         }
+        ,
+        "scope": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "product": {"type": "string", "minLength": 1},
+            "releases": {"type": "array", "items": {"type": "string", "minLength": 1}}
+          }
+        }
       }
     }
   },
@@ -173,6 +182,11 @@
     },
     "status": {
       "enum": ["supported", "expiring", "eol", "unknown"]
+    },
+    "status_as_of": {
+      "description": "Optional evaluation date for a retained record whose evidence was last checked earlier; it does not refresh provenance.last_checked.",
+      "type": "string",
+      "format": "date-time"
     },
     "catalog": {
       "description": "Opengear configurator listing evidence: whether the current catalog offers this exact SKU. Listing is not support entitlement, and removal from the catalog is not an end of life.",

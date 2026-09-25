@@ -3,6 +3,10 @@
 # Runs entirely against the catalog committed to the branch: no upstream
 # ingestion (`import-data` is never called) and no publication. Publication
 # belongs exclusively to .github/workflows/publish.yml.
+#
+# Actions are pinned to reviewed full commit SHAs and dependencies are installed
+# from the hash-locked requirements.lock with `--require-hashes` (issue #101), so
+# a PR run cannot execute a moved action tag or a substituted distribution.
 name: CI
 
 on:
@@ -24,16 +28,16 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: Check out repository
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # actions/checkout v7
 
       - name: Set up Python
-        uses: actions/setup-python@v7
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # actions/setup-python v7
         with:
           python-version: '3.14'
-          cache: pip
 
-      - name: Install dependencies
-        run: python -m pip install -r requirements.txt
+      - name: Install hash-locked dependencies
+        run: |
+          python -m pip install --require-hashes -r requirements.lock
 
       - name: Run unit tests
         run: python -m unittest discover -v

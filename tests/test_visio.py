@@ -790,6 +790,8 @@ class RegistryIntegrationTests(CatalogRootCase):
         if verifier:
             record["provenance"]["verifier"] = verifier
         dump(self.root / "products/visio.json", record)
+        if not verifier or verifier == visio.VERIFIER:
+            dump(self.root / visio.REPORT, report_of())
         return record
 
     def test_validate_data_dispatches_to_the_owning_sources_validator(self):

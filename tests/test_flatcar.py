@@ -200,6 +200,25 @@ class FeedRefusalTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "the same release date"):
             parsed(payload)
 
+    def test_a_newer_version_with_an_earlier_date_refuses_the_derivation(self):
+        # The rule names *the next major Stable version*, so the trigger is
+        # chosen by version identity. A feed that dated a newer major before an
+        # older one would otherwise select the wrong successor while still
+        # re-deriving consistently: the orders are required to agree.
+        payload = {key: row for key, row in FEED.items() if row["channel"] == flatcar.STABLE}
+        payload["9998.2.0"] = {"channel": flatcar.STABLE,
+                               "release_date": "2019-01-01 00:00:00 +0000"}
+        with self.assertRaisesRegex(ValueError, "not after"):
+            flatcar.with_derived_milestones(parsed(payload)[0], rules())
+
+    def test_the_version_order_is_what_selects_the_trigger(self):
+        # 4593's trigger is the 4757 stream, the next *newer version*, and the
+        # order is the version identity rather than the date column.
+        releases = flatcar.with_derived_milestones(parsed()[0], rules())
+        self.assertEqual([release["id"] for release in releases][:3], ["4757", "4593", "4459"])
+        self.assertEqual(flatcar.ordered_releases(releases),
+                         sorted(releases, key=lambda release: int(release["id"]), reverse=True))
+
 
 class AccountingTests(unittest.TestCase):
     def report(self, payload=FEED, kept=()):
@@ -369,10 +388,10 @@ class ReDerivationTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "source identity"):
             flatcar.validate_record(rec)
 
-    def test_a_record_order_that_contradicts_the_dates_is_refused(self):
+    def test_a_record_order_that_contradicts_the_versions_is_refused(self):
         rec = record()
         rec["releases"][0], rec["releases"][1] = rec["releases"][1], rec["releases"][0]
-        with self.assertRaisesRegex(ValueError, "not ordered by the feed's release dates"):
+        with self.assertRaisesRegex(ValueError, "not ordered by the feed's release version"):
             flatcar.validate_record(rec)
 
     def test_a_release_without_its_stored_row_is_refused(self):

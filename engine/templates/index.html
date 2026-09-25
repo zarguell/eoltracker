@@ -144,7 +144,7 @@
             {% endfor %}
           </ul>
           {% if product.next %}
-          <p class="product-next">Next deadline: <strong>{{ product.next.milestone }}</strong> on {{ product.next.human }}</p>
+          <p class="product-next">Next deadline: <strong>{{ product.next.milestone }}</strong> on <time datetime="{{ product.next.date }}">{{ product.next.human }}</time>{% if product.next.month %} <span class="tag tag-neutral" title="The source states this month only, so no day exists to show.">month precision</span>{% endif %}</p>
           {% endif %}
           <p class="product-links">
             <a href="{{ url_for('products/' ~ product.id ~ '/') }}">Lifecycle</a>

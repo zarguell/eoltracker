@@ -421,6 +421,71 @@ class InstallTests(ContributionCase):
             install_file(path, root=self.root, fetch=self.pages(QUOTE))
 
 
+
+
+class ResearchBoundaryTests(ContributionCase):
+    def test_derived_rule_quote_is_fetched_before_verified_install(self):
+        payload = copy.deepcopy(SYNOLOGY)
+        payload.update({"id": "researched-derived", "name": "Derived Test", "release": "1",
+                        "milestones": {"ga": "2020-10-01", "eol": "2025-10-01"}})
+        ordinary = "Derived Test was generally available on October 1, 2020."
+        rule = "Derived Test receives five years of support from general availability."
+        payload["evidence"] = [{"quote": ordinary, "source_url": NOTICE, "retrieved_at": "2026-09-17"}]
+        payload["milestone_provenance"] = {"eol": {
+            "kind": "derived", "method": "release-plus-duration",
+            "source_url": "https://example.com/derived-rule", "quote": rule,
+            "base_date": "2020-10-01", "base_label": "general availability",
+            "duration": {"value": 5, "unit": "year"}}}
+        path = self.contribution(payload, name="derived.json")
+        pages = {NOTICE: f"<p>{ordinary}</p>", "https://example.com/derived-rule": f"<p>{rule}</p>"}
+        report = install_file(path, root=self.root, fetch=self.fetch(pages))
+        self.assertTrue(report["verified"])
+
+    def test_missing_derived_rule_quote_is_refused(self):
+        payload = copy.deepcopy(SYNOLOGY)
+        payload.update({"id": "researched-missing-rule", "name": "Derived Test", "release": "1",
+                        "milestones": {"ga": "2020-10-01", "eol": "2025-10-01"}})
+        ordinary = "Derived Test was generally available on October 1, 2020."
+        rule = "Derived Test receives five years of support from general availability."
+        payload["evidence"] = [{"quote": ordinary, "source_url": NOTICE, "retrieved_at": "2026-09-17"}]
+        payload["milestone_provenance"] = {"eol": {
+            "kind": "derived", "method": "release-plus-duration",
+            "source_url": "https://example.com/derived-rule", "quote": rule,
+            "base_date": "2020-10-01", "base_label": "general availability",
+            "duration": {"value": 5, "unit": "year"}}}
+        path = self.contribution(payload, name="missing-rule.json")
+        with self.assertRaisesRegex(ValueError, "Quote not found"):
+            install_file(path, root=self.root,
+                         fetch=self.fetch({NOTICE: f"<p>{ordinary}</p>",
+                                          "https://example.com/derived-rule": "<p>different</p>"}))
+
+    def test_researched_record_cannot_shadow_deterministic_name(self):
+        payload = copy.deepcopy(SYNOLOGY)
+        payload.update({"id": "researched-sample-copy", "name": "Sample", "release": "1",
+                        "milestones": {"eol": "2024-10-01"}})
+        payload["evidence"] = [{"quote": "Sample reaches the end of life on October 1, 2024.",
+                                "source_url": NOTICE, "retrieved_at": "2026-09-17"}]
+        path = self.contribution(payload, name="shadow.json")
+        with self.assertRaisesRegex(ValueError, "shadows deterministic"):
+            install_file(path, root=self.root, fetch=self.pages(payload["evidence"][0]["quote"]))
+
+    def test_scoped_evidence_cannot_back_another_release(self):
+        payload = copy.deepcopy(SYNOLOGY)
+        del payload["milestones"]
+        del payload["release"]
+        payload["releases"] = [{"id": "1", "milestones": {"eol": "2024-10-01"}},
+                               {"id": "2", "milestones": {"eol": "2025-10-01"}}]
+        payload["evidence"] = [{"quote": "Product 2 reaches the end of life on October 1, 2025.",
+                                "source_url": NOTICE, "retrieved_at": "2026-09-17",
+                                "scope": {"releases": ["2"]}}]
+        with self.assertRaisesRegex(ValueError, "no stored quote states the end of life date"):
+            parse_contribution(payload)
+
+    def test_credential_bearing_citation_is_refused_and_redacted(self):
+        payload = copy.deepcopy(SYNOLOGY)
+        payload["evidence"][0]["source_url"] = "https://example.com/lifecycle?token=secret"
+        with self.assertRaisesRegex(ValueError, "credential"):
+            parse_contribution(payload)
 class ClobberTests(ContributionCase):
     def test_deterministic_record_is_never_replaced(self):
         path = self.contribution(SYNOLOGY)

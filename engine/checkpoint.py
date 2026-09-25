@@ -189,6 +189,19 @@ def _release(name, cells, heading):
     }
 
 
+def _stated(cells):
+    """Every lifecycle-bearing cell of a train row, for comparing two of them.
+
+    The major version is the row's identity, so it is normalized rather than
+    compared; the general-availability month, the affected-versions grouping and
+    the support-until month are the vendor's claims about the train. Two rows
+    naming one train while disagreeing about any of them are the vendor
+    contradicting itself, never a duplicate to deduplicate silently.
+    """
+    return {column: re.sub(r"\s+", " ", _cell(cells, column)).strip()
+            for column in HEADERS if column != "Major Version"}
+
+
 def parse_trains(page):
     """Every in-scope table row -> ``(releases, excluded)``; no row is dropped.
 
@@ -198,11 +211,15 @@ def parse_trains(page):
     reported with the section and heading it came from, so the accounting covers
     the whole page. A row that identifies no train is reported with its reason
     instead of being published.
+
+    A second row for a train already seen is accounted as a duplicate only when
+    it restates the first with the same lifecycle cells; a row that contradicts
+    the first refuses the parse rather than publishing whichever came first.
     """
     tables = _tables(page)
     if not any(_normalized(table["heading"]) == _normalized(TABLE_NAME) for table in tables):
         raise ValueError(f"Missing Check Point table: {TABLE_NAME}")
-    releases, excluded, seen = [], [], set()
+    releases, excluded, seen = [], [], {}
     for table in tables:
         heading = table["heading"]
         if (_normalized(heading) != _normalized(TABLE_NAME)
@@ -229,10 +246,13 @@ def parse_trains(page):
                                  "reason": "no release-train identity in the row"})
                 continue
             if release_id in seen:
+                if seen[release_id] != _stated(row):
+                    raise ValueError(f"Check Point {name!r} is stated twice with contradicting "
+                                     f"values: {seen[release_id]} then {_stated(row)}")
                 excluded.append({"section": table["section"], "table": heading, "row": name,
                                  "reason": f"duplicate train row for release {release_id!r}"})
                 continue
-            seen.add(release_id)
+            seen[release_id] = _stated(row)
             releases.append(_release(name, row, heading))
     if not releases:
         raise ValueError("The Check Point Security Gateway & Management table produced no releases")

@@ -143,7 +143,7 @@ class FeedExclusionTests(unittest.TestCase):
         entry = excluded["excluded"][0]
         self.assertEqual(entry["month"], MONTH)
         self.assertEqual(entry["human"], "July 2099")
-        self.assertEqual(entry["id"], "tag:eoltracker,2026:vgpu-1-eol-2099-07")
+        self.assertEqual(entry["id"], "tag:eoltracker,2026:software:vgpu:1:eol")
         self.assertEqual(entry["milestone"], "eol")
         self.assertIn("month", entry["reason"].lower())
 
@@ -154,7 +154,7 @@ class FeedExclusionTests(unittest.TestCase):
         self.assertEqual(excluded["excluded"], [])
         # The day event's permanent identity is in the feed, and the account
         # counts it on the feeds' side of the split rather than as an exclusion.
-        self.assertIn("eol-2099-07-15", self.documents()["atom"])
+        self.assertIn("tag:eoltracker,2026:software:vgpu:1:eol", self.documents()["atom"])
         self.assertEqual([excluded["counts"][key] for key in ("upcoming_events", "feeds", "excluded")], [1, 1, 0])
 
     def test_every_upcoming_event_lands_in_exactly_one_side(self):
@@ -166,19 +166,18 @@ class FeedExclusionTests(unittest.TestCase):
         self.assertEqual(excluded["counts"]["upcoming_events"], result["events"] + result["excluded"])
         ids = [entry["id"] for entry in excluded["excluded"]]
         self.assertEqual(len(ids), len(set(ids)))
-        # Day events keep their stable identity in the feed, months in the account.
-        self.assertTrue(ids[0].endswith("2099-07"))
+        # The month event's identity is permanent and carries no date; the month
+        # it states lives in the entry's own date field, and the event is in the
+        # account rather than in the feeds.
+        self.assertEqual(excluded["excluded"][0]["date"], MONTH)
         self.assertNotIn(ids[0], self.documents()["atom"])
 
     def test_a_month_event_still_competes_for_identifier_uniqueness(self):
-        # Same product id, release id, milestone and month in both catalogs: the
-        # software and hardware namespaces are separate, and the collision must
-        # still be refused even though only the account publishes the event.
-        hardware = [{"id": "a", "name": "Sample", "model_number": "1", "status": "unknown",
-                     "milestones": {"ga": None, "eos": None, "eossec": None, "eol": MONTH},
-                     "provenance": {"source_urls": []}}]
+        # Month events share the identifier space with day events even though
+        # only the exclusion document publishes them, so two records minting one
+        # id is refused rather than published as one merged deadline.
         with self.assertRaisesRegex(ValueError, "Duplicate event identifier"):
-            self.build([product("a", eol=MONTH)], hardware)
+            self.build([product("a", eol=MONTH), product("a", eol=MONTH)])
 
     def test_a_month_past_its_end_is_not_upcoming_and_not_excluded(self):
         products = [{"id": "a", "name": "Sample", "releases": [

@@ -1,13 +1,28 @@
 # Catalog refresh and publication.
 #
-# Every run installs dependencies, validates the catalog, runs the test suite
-# and builds the site into _site. Publication is redundant on purpose:
+# Order matters here, and it is the fix for issue #81. The job does, in order:
 #
-#   * _site is pushed to the `gh-pages` branch with peaceiris/actions-gh-pages
-#     (the branch deployment path for this public repository), and
-#   * the same _site is uploaded with actions/upload-pages-artifact and released
-#     through actions/deploy-pages, so Pages publishes even when a commit pushed
-#     by the runner's GITHUB_TOKEN would not kick off a legacy branch build.
+#   1. refresh the catalog from upstream (scheduled runs only),
+#   2. commit the refreshed data and REBASE it onto the latest main,
+#   3. validate the catalog and run the test suite,
+#   4. build `_site` — from the tree that was just synchronized,
+#   5. push that commit to main (a fast-forward push; see the guard below),
+#   6. publish the same `_site` tree to both Pages paths.
+#
+# The previous version built `_site` first and rebased afterwards, so a commit
+# landing on main mid-run published a site that did not correspond to the
+# commit it pushed. The authoritative validation, tests and build now all run
+# against the exact synchronized SHA, and both publication paths consume that
+# one tree, so the artifact and the pushed commit are the same revision by
+# construction.
+#
+# The push cannot silently mispublish either: `git push origin HEAD:main` is not
+# forced, so if main advanced after the rebase the push is rejected and the run
+# fails before either Pages path publishes anything.
+#
+# Split rationale: `deploy` holds the Pages/OIDC permissions and uploads the
+# artifact the build job produced; the write-capable `contents: write` grant
+# lives only in the build job, which is the only job that pushes.
 #
 # Triggers:
 #   * push to main      - build the catalog committed to main and publish it.
@@ -18,9 +33,8 @@
 #
 # Only main is ever published. A commit pushed with the runner's GITHUB_TOKEN
 # does not trigger further workflow runs, so writing data back to main cannot
-# loop back into this workflow, and publication never depends on that commit:
-# the same run publishes the site it just built. Generated output (_site) is
-# gitignored and never lands on main.
+# loop back into this workflow. Generated output (_site) is gitignored and
+# never lands on main.
 name: Publish
 
 on:
@@ -31,8 +45,9 @@ on:
     - cron: '23 5 * * *'
   workflow_dispatch:
 
-# No PAT and no repository secret are required: the runner-issued GITHUB_TOKEN
-# covers both publication paths.
+# Read-only by default; the build job grants itself `contents: write` because it
+# is the one job that pushes. Every job states its own permissions explicitly so
+# a future job cannot inherit a write token by accident (issue #101).
 permissions:
   contents: read
 
@@ -47,42 +62,68 @@ concurrency:
 
 jobs:
   build:
-    name: Refresh, build and publish files
+    name: Refresh, synchronize, validate, build and publish files
     runs-on: ubuntu-latest
     timeout-minutes: 45
-    # contents: write - commit refreshed data to main and push the gh-pages branch.
+    # contents: write - push the refreshed data commit and the gh-pages branch.
     permissions:
       contents: write
     steps:
       - name: Check out full source history
-        uses: actions/checkout@v7
+        # Actions are pinned to reviewed full commit SHAs (issue #101). The
+        # trailing comment records the readable tag; Renovate bumps the SHA and
+        # the comment together, never a floating tag.
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # actions/checkout v7
         with:
           fetch-depth: 0
 
       - name: Set up Python
-        uses: actions/setup-python@v7
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # actions/setup-python v7
         with:
           python-version: '3.14'
-          cache: pip
 
-      - name: Install dependencies
-        run: python -m pip install -r requirements.txt
+      - name: Install hash-locked dependencies
+        # `--require-hashes` refuses any distribution not in requirements.lock,
+        # so a compromised index or a hijacked transitive dependency cannot
+        # execute in a job that holds a write token (issue #101).
+        run: |
+          python -m pip install --require-hashes -r requirements.lock
 
       # Registry-driven refresh attempts every source independently. Each failed
       # source rolls back its writes, including reports and ledger; successful
-      # sources can publish. Total upstream failure exits nonzero. Catalog
-      # validation below remains mandatory after any partial success.
+      # sources keep their results. A partial refresh now exits nonzero (#87),
+      # so a broad upstream outage blocks publication instead of shipping a
+      # catalog whose timestamps promise more freshness than its contents have.
       - name: Refresh registered upstream sources
-        if: github.ref == 'refs/heads/main' && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch')
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         run: python -m engine refresh
 
+      # ---- synchronization, BEFORE anything authoritative runs (#81) -------
+      # Commit the refreshed data and rebase onto the newest main. Everything
+      # below validates and builds this exact revision.
+      - name: Commit refreshed data and synchronize with main
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          if [ -z "$(git status --porcelain -- data)" ]; then
+            echo 'No catalog changes to commit.'
+          else
+            git add --all -- data
+            git commit -m 'chore(data): refresh catalog from upstream'
+          fi
+          git fetch origin main
+          git rebase origin/main
+          echo "Synchronized commit: $(git rev-parse HEAD)"
+
+      # ---- authoritative validation and build -----------------------------
       - name: Validate catalog data
         run: python -m engine validate
 
       - name: Run unit tests
         run: python -m unittest discover -v
 
-      - name: Build static site
+      - name: Build the complete site
         run: python -m engine build
 
       # GitHub Pages serves from a ~1GB artifact budget. Failing here, on the
@@ -90,33 +131,43 @@ jobs:
       - name: Check published site size budget
         run: python -m engine.site_budget
 
-      # Only the normalized catalog is written back; the generated site stays
-      # out of main. An unchanged catalog is a success, not a failure.
-      - name: Commit refreshed data to main
-        if: github.ref == 'refs/heads/main' && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch')
+      # The exact commit the built tree corresponds to, written into the tree so
+      # the deployed site can be checked against the SHA that produced it
+      # (issue #81 verification). Every publication path carries this tree, so
+      # the marker travels with the artifact and the branch.
+      - name: Stamp the built tree with the commit it was built from
         run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email 'github-actions[bot]@users.noreply.github.com'
-          if [ -z "$(git status --porcelain -- data)" ]; then
-            echo 'No catalog changes to commit.'
+          printf '%s\n' "$(git rev-parse HEAD)" > _site/BUILD-COMMIT.txt
+          echo "Built $(cat _site/BUILD-COMMIT.txt)"
+
+      # Push only after the build succeeded, and never forced: if main advanced
+      # since the rebase above, this push is rejected and the run fails before
+      # either Pages path publishes, rather than publishing a tree that no
+      # commit on main corresponds to.
+      - name: Push the synchronized commit to main
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: |
+          ahead="$(git rev-list --count origin/main..HEAD)"
+          if [ "$ahead" = "0" ]; then
+            echo 'Nothing to push: the catalog matches main.'
             exit 0
           fi
-          git add --all -- data
-          git commit -m 'chore(data): refresh catalog from upstream'
-          git pull --rebase origin main
+          echo "Pushing $ahead commit(s) to main."
           git push origin HEAD:main
 
       # Hand the freshly built site to the Pages deployment job. _site only.
       - name: Upload Pages artifact
         if: github.ref == 'refs/heads/main'
-        uses: actions/upload-pages-artifact@v5
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # actions/upload-pages-artifact v5
         with:
           path: _site
 
-      # Branch deployment as well, so the site is served from gh-pages.
+      # Branch deployment as well, so the site is served from gh-pages. This
+      # publishes the tree built above — the same one the artifact carries — so
+      # both Pages paths describe one revision (issue #81).
       - name: Publish site to gh-pages branch
         if: github.ref == 'refs/heads/main'
-        uses: peaceiris/actions-gh-pages@v4
+        uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453 # peaceiris/actions-gh-pages v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
@@ -146,4 +197,4 @@ jobs:
     steps:
       - name: Deploy Pages artifact
         id: deployment
-        uses: actions/deploy-pages@v5
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # actions/deploy-pages v5

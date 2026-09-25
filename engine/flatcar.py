@@ -235,11 +235,10 @@ def parse_feed(payload):
                           f"published as that stream's general availability: a stream is one "
                           f"release, not one per build"})
     releases = [_release(major, entry) for major, entry in first.items()]
-    releases.sort(key=lambda release: (release["milestones"]["ga"],
-                                       int(release["id"])), reverse=True)
+    ordered = ordered_releases(releases)
     accounting = {"seen": len(payload), "published": len(releases), "excluded": len(excluded),
                   "channels": dict(sorted(channels.items()))}
-    return releases, excluded, accounting
+    return ordered, excluded, accounting
 
 
 def _release(major, entry):
@@ -255,9 +254,38 @@ def _release(major, entry):
 
 
 def ordered_releases(releases):
-    """Newest Stable major first, by the release date the feed states."""
-    return sorted(releases, key=lambda release: (release["milestones"]["ga"],
-                                                 int(release["id"])), reverse=True)
+    """Newest Stable major first, by the version identity the feed states.
+
+    The rule names *the next major Stable version*, so the order is the majors'
+    own numeric identity, not the release dates: a feed that published a newer
+    major with an earlier date would otherwise select the wrong successor as the
+    trigger while still re-deriving consistently. ``_check_order`` refuses such a
+    snapshot, so the version order and the date order can never disagree.
+    """
+    return sorted(releases, key=lambda release: int(release["id"]), reverse=True)
+
+
+def _check_order(ordered, where):
+    """Require the majors' version order and release-date order to agree.
+
+    ``ordered`` is newest version first. A stream's ``eol`` derives from the
+    *next* major's release, so the newer identity must also carry the later
+    release date; a snapshot where it does not — or where two majors share one
+    date — is refused rather than pointing the trigger at a release the feed
+    dates before or level with the stream it ends.
+    """
+    for index in range(len(ordered) - 1):
+        newer, older = ordered[index], ordered[index + 1]
+        newer_date = newer["milestones"]["ga"]
+        older_date = older["milestones"]["ga"]
+        if newer_date is None or older_date is None:
+            raise ValueError(f"{where}: a Stable major stream states no release date")
+        if newer_date <= older_date:
+            raise ValueError(
+                f"{where}: major {newer['id']} is newer than major {older['id']} but the feed "
+                f"dates it {newer_date}, not after {older_date}; the next-major Stable trigger "
+                f"would point at the wrong release")
+
 
 
 def derived_entry(release, trigger, rule):
@@ -300,9 +328,11 @@ def with_derived_milestones(releases, rule):
     A stored snapshot's derived dates are recomputed, never carried: the trigger
     a stream derives from is whichever major the feed now publishes, so a newly
     published major fills the previous stream's ``eol``, and a stream no newer
-    major has superseded keeps the null milestone rather than a stale date.
+    major has superseded keeps the null milestone rather than a stale date. The
+    version order is required to agree with the release dates it derives along.
     """
     ordered = ordered_releases(releases)
+    _check_order(ordered, FEED_URL)
     for index, release in enumerate(ordered):
         milestones, provenance = derived_for(ordered, index, rule)
         release["milestones"] = milestones
@@ -358,9 +388,11 @@ def validate_record(record):
         releases.append(release)
     if [release["id"] for release in releases] != [release["id"] for release in
                                                    ordered_releases(releases)]:
-        raise ValueError("The Flatcar record is not ordered by the feed's release dates")
+        raise ValueError("The Flatcar record is not ordered by the feed's release version "
+                         "identities")
     rule = {"quote": STABLE_RULE}
     ordered = ordered_releases(releases)
+    _check_order(ordered, record["id"])
     for index, release in enumerate(ordered):
         where = f"{PRODUCT_ID}: release {release['id']}"
         expected, expected_provenance = derived_for(ordered, index, rule)

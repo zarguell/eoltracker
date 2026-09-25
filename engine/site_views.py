@@ -27,6 +27,59 @@ from .site_config import (CATALOG_LISTING_STATES, CATALOG_NOTICE_STATES,
                           MILESTONES, OPENGEAR_VERIFIER, UPSTREAM_DATE_FIELDS, human_date, human_stamp,
                           is_month, published_period, site_url, version_key)
 
+try:  # The core persistence slice owns the validator; presentation may lack it.
+    from .urls import safe_http_url_or_none
+except ImportError:  # pragma: no cover - exercised only without the core module
+    from urllib.parse import urlsplit
+
+    def safe_http_url_or_none(value):
+        """Fallback: keep only plain absolute http(s) URLs, no userinfo/controls."""
+        if not isinstance(value, str) or any(ord(ch) < 0x20 or ch == "\x7f" for ch in value):
+            return None
+        parsed = urlsplit(value.strip())
+        if parsed.scheme not in ("http", "https") or not parsed.netloc:
+            return None
+        if "@" in parsed.netloc or not parsed.hostname:
+            return None
+        return value
+
+
+def safe_link(value):
+    """A URL field that is safe to render as ``href``, or None (#98).
+
+    Catalog and upstream URL fields are external input: a value like
+    ``javascript:`` or ``data:`` would execute when a published link is
+    clicked. Every presentation sink passes its URLs through here, so a
+    template only ever receives an absolute http(s) URL or nothing.
+    """
+    return safe_http_url_or_none(value)
+
+
+def safe_links(values):
+    """A link list with every unsafe or unusable entry dropped, order preserved."""
+    links = []
+    for value in values or ():
+        if isinstance(value, dict):
+            url, label = value.get("url"), value.get("label") or value.get("url")
+        else:
+            url, label = value, value
+        safe = safe_link(url)
+        if safe:
+            links.append({"url": safe, "label": label})
+    return links
+
+
+def safe_link_map(links):
+    """A `{label: url}` link object with unsafe values dropped (#98).
+
+    A record's `links` is an upstream object keyed by the vendor's own label
+    ("release policy", "icon"), and the page renders each value as an ``href``,
+    so unsafe schemes are removed while the label keys and order are kept.
+    """
+    if not isinstance(links, dict):
+        return {}
+    return {name: safe for name, value in links.items() if (safe := safe_link(value))}
+
 def vendor_cells(upstream):
     """A vendor collector's own raw row cells, as evidence rows, or an empty list.
 
@@ -99,7 +152,8 @@ def release_rows(record):
                 # row's own `name` cell instead, so only that shape falls back.
                 "name": latest.get("name") if not evidence else latest.get("name") or upstream.get("name"),
                 "date": latest.get("date"),
-                "link": latest.get("link"),
+                # The upstream download link is external input (#98).
+                "link": safe_link(latest.get("link")),
             },
             "raw": raw,
         })
@@ -183,7 +237,7 @@ def summarize(record, rows, today):
         "next": next_events[0] if next_events else None,
         "json": site_url(f"v1/products/{record['id']}.json"),
         "page": site_url(f"products/{record['id']}/"),
-        "source": record["provenance"]["source_url"],
+        "source": safe_link(record["provenance"]["source_url"]),
         # A consumer reading the index can tell a researched record apart from a
         # pipeline-derived one without fetching every record; the record itself
         # carries the citation and stays linked from here.
@@ -325,17 +379,23 @@ def derived_count(rows_by_id):
 
 
 def merge_links(values):
-    """Deduplicated link list, order preserved. Pairs a URL with its label once."""
+    """Deduplicated, safe link list, order preserved. Pairs a URL with its label once.
+
+    A raw upstream link list is external input, so it is filtered through the
+    shared safe-URL rule (#98) as it is merged: an unsafe scheme is dropped
+    rather than handed to a template that would render it as ``href``.
+    """
     merged, seen = [], set()
     for value in values:
         if isinstance(value, dict):
             url, label = value.get("url"), value.get("label") or value.get("url")
         else:
             url, label = value, value
-        if not url or url in seen:
+        safe = safe_link(url)
+        if not safe or safe in seen:
             continue
-        seen.add(url)
-        merged.append({"url": url, "label": label})
+        seen.add(safe)
+        merged.append({"url": safe, "label": label})
     return merged
 
 
@@ -362,20 +422,28 @@ def research_view(record, today):
     view = contribute.research_view(record, today)
     if not view:
         return None
+    # A citation URL is stored from a contribution and rendered as a link, so
+    # only a safe absolute http(s) value reaches the template (#98).
+    source_url = safe_link(view["source_url"])
     return {
         **view,
+        "source_url": source_url,
         "verifier": (record.get("provenance") or {}).get("verifier"),
         "stale_days": RESEARCH_STALE_DAYS,
-        "source_label": source_label(view["source_url"]) if view["source_url"] else None,
+        "source_label": source_label(source_url) if source_url else None,
         "retrieved_human": human_stamp(view["retrieved_at"]),
         "verified_human": human_stamp(view["verified_at"]),
         "checked_human": human_stamp(view["last_checked"]),
         "stale_after_human": human_stamp(view["stale_after"]),
-        "sources": [{**source,
-                     "source_label": source_label(source["source_url"]),
-                     "retrieved_human": human_stamp(source["retrieved_at"])}
-                    for source in view["sources"]],
+        "sources": [_safe_source(source) for source in view["sources"]],
     }
+
+
+def _safe_source(source):
+    """One researched evidence source with its citation URL filtered (#98)."""
+    url = safe_link(source.get("source_url"))
+    return {**source, "source_url": url, "source_label": source_label(url) if url else None,
+            "retrieved_human": human_stamp(source["retrieved_at"])}
 
 
 def has_research(record):
@@ -439,7 +507,7 @@ def catalog_identity(record):
         "notice": notice,
         "matched": matched,
         "matches": list(lifecycle.get("matches") or []) if lifecycle else [],
-        "source_url": (catalog or {}).get("source_url") or None,
+        "source_url": safe_link((catalog or {}).get("source_url")) or None,
         "state": (f"{listing['key']}-{notice['key']}" if listing else None),
     }
 
@@ -494,9 +562,10 @@ def opengear_index(records):
 
 
 def catalog_stats(records, hardware_index):
-    """Counts for the hardware coverage block, derived from the records read."""
-    catalog, lifecycle = hardware_index["catalog"], hardware_index["lifecycle"]
-    groups = hardware_index["groups"]
+    """Counts for the full hardware coverage block, derived from every record."""
+    catalog = [record for record in records if is_catalog_record(record)]
+    lifecycle = [record for record in records if not is_catalog_record(record)]
+    groups = sorted({record.get("family") for record in lifecycle if record.get("family")}, key=str)
     listed = sum(1 for record in catalog if (record.get("catalog") or {}).get("listed"))
     matched = sum(1 for record in catalog if (record.get("lifecycle") or {}).get("matches"))
     known_matches = sum(1 for record in catalog
@@ -556,8 +625,10 @@ def summarize_hardware(record, rows, today, hardware_index=None):
         "next": next_events[0] if next_events else None,
         "json": site_url(f"v1/hardware/{record['id']}.json"),
         "page": site_url(f"hardware/{record['id']}/"),
-        "source": source_urls[0],
-        "source_urls": source_urls,
+        # A record's source pages are external input; only safe absolute
+        # http(s) URLs reach the index and the table's `href` (#98).
+        "source": safe_link(source_urls[0]) if source_urls else None,
+        "source_urls": [safe for safe in (safe_link(url) for url in source_urls) if safe],
         "source_links": source_links(source_urls),
         "catalog": catalog,
         "research": has_research(record),

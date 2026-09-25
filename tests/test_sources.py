@@ -2,11 +2,17 @@
 
 The registry is what makes a record's ``provenance.verifier`` meaningful: it is
 the single place that says which pipelines exist, which catalog each owns and
-how each is refreshed. These tests pin the enforcement that the schema alone
-cannot express — a syntactically valid verifier that no source registered must
-not be publishable — and the drift-free wiring between the registry and the
-collectors it names.
+how each is refreshed. These tests pin the enforcement the schema alone cannot
+express — a syntactically valid verifier that no source registered must not be
+publishable, a registered source's report must account for the records it owns,
+and a registered collector's module/entry/validator must actually resolve — so a
+newly registered source cannot first fail during a scheduled refresh.
+
+Failures are asserted by type rather than by diagnostic wording: a message is for
+an operator reading a log, not a contract another module depends on (AGENTS.md
+"assert exception types rather than incidental Python wording").
 """
+import importlib.util
 import json
 import subprocess
 import sys
@@ -43,6 +49,40 @@ def software_record(verifier="deterministic-endoflife-date-v1"):
     return record
 
 
+def committed_verifier_counts():
+    """How many committed records carry each verifier, across both catalogs."""
+    counts = {}
+    for category in ("products", "hardware"):
+        for path in (ROOT / "data" / category).glob("*.json"):
+            verifier = json.loads(path.read_text())["provenance"]["verifier"]
+            counts[verifier] = counts.get(verifier, 0) + 1
+    return counts
+
+
+def resolve_source(source):
+    """Every callable a registered source names, resolved as a refresh would.
+
+    A source declares a module and the entry point that refreshes it, plus — for
+    a source that re-derives its records offline — a dotted validator callable.
+    Registration alone proves none of those exist: the misspelling only surfaces
+    when a scheduled refresh imports the module, which is far too late. Resolving
+    each here turns a typo into a failing test instead of a failed production run.
+    """
+    if not importlib.util.find_spec(source.module):
+        raise LookupError(f"{source.id}: module {source.module!r} does not exist")
+    module = importlib.import_module(source.module)
+    entry = getattr(module, source.entry, None)
+    if not callable(entry):
+        raise LookupError(f"{source.id}: {source.module}.{source.entry} is not callable")
+    if source.validator:
+        module_name, _, name = source.validator.rpartition(".")
+        if not module_name or not importlib.util.find_spec(module_name):
+            raise LookupError(f"{source.id}: validator module {module_name!r} does not exist")
+        if not callable(getattr(importlib.import_module(module_name), name, None)):
+            raise LookupError(f"{source.id}: {source.validator} is not callable")
+    return entry
+
+
 class RegistryContractTests(unittest.TestCase):
     def test_registry_agrees_with_the_collectors_it_names(self):
         # The registry is the source of truth for ids and provenance; each
@@ -71,12 +111,92 @@ class RegistryContractTests(unittest.TestCase):
 
         self.assertEqual(contribute.RESEARCHED_VERIFIER_PREFIX, sources.RESEARCHED_PREFIX)
 
-    def test_source_ids_are_the_cli_commands(self):
-        from engine.__main__ import COMMANDS
-
+    def test_every_registered_source_resolves_its_module_entry_and_validator(self):
+        # The table-driven registry matrix: each real source is exercised, not a
+        # hand-picked sample, so a newly registered collector whose module, entry
+        # or validator path is misspelled fails here rather than at refresh time.
         for source in sources.all_sources():
-            self.assertIn(source.id, COMMANDS)
-        self.assertIn("refresh", COMMANDS)
+            with self.subTest(source=source.id):
+                self.assertTrue(callable(resolve_source(source)))
+                self.assertIn(source.category, ("software", "hardware"))
+                self.assertTrue(source.verifier, "a source must own a verifier")
+                self.assertFalse(source.verifier.startswith(sources.RESEARCHED_PREFIX),
+                                 "a deterministic source may not claim the researched namespace")
+                self.assertTrue(source.name.strip(), "a source carries a display name")
+                self.assertTrue(source.attribution.strip(),
+                                "a source states the sentence the site credits it with")
+                # The source's own page is one of the pages it reads, which is
+                # what the site credits and what a reader opens to check a row.
+                self.assertTrue(source.pages, "a source reads at least one page")
+                self.assertIn(source.url, source.urls)
+                for page in source.pages:
+                    self.assertRegex(page.url, r"^https?://")
+                    self.assertTrue(page.label, "a registered page carries a label")
+                # `record_validator` is the lazy import path the registry
+                # promises for a source that re-derives offline: it must resolve
+                # to a callable for a validator-bearing source and to None for a
+                # source with no offline re-derivation.
+                if source.validator:
+                    self.assertTrue(callable(sources.record_validator(source)))
+                else:
+                    self.assertIsNone(sources.record_validator(source))
+
+    def test_report_bearing_sources_publish_a_committed_accounting_sidecar(self):
+        # A sidecar is how a source accounts for the rows it dropped (AGENTS.md
+        # rule 6). Declaring one in the registry without committing it would 404
+        # the documented URL and hide the exclusions, so the two must agree.
+        counts = committed_verifier_counts()
+        report_bearing = [source for source in sources.all_sources() if source.report]
+        self.assertTrue(report_bearing, "at least one source publishes a sidecar")
+        for source in report_bearing:
+            with self.subTest(source=source.id):
+                path = ROOT / "data" / source.report
+                self.assertTrue(path.is_file(), f"{source.report} is not committed")
+                report = json.loads(path.read_text())
+                self.assertIsInstance(report, dict)
+                self.assertEqual(report.get("verifier"), source.verifier)
+                self.assertEqual(report.get("total_records"), counts.get(source.verifier, 0))
+
+    def test_every_committed_deterministic_verifier_is_registered(self):
+        # The registry is the sole authority on which pipelines exist, so a
+        # verifier that appears in the committed catalog but not in the registry
+        # means a record claims a pipeline this checkout cannot run.
+        registered = {source.verifier for source in sources.all_sources()}
+        committed = {verifier for verifier in committed_verifier_counts()
+                     if not verifier.startswith(sources.RESEARCHED_PREFIX)}
+        self.assertNotEqual(committed, set())
+        self.assertEqual(committed - registered, set())
+
+    def test_the_matrix_catches_a_misspelled_registry_entry(self):
+        # The mutation the matrix is for: a source registered with a module that
+        # does not exist, an entry that is not callable, or a validator path that
+        # resolves to nothing must fail resolution before any refresh runs.
+        page = (sources.Page("https://x.example/", "X"),)
+        broken = (
+            dict(module="engine.collector_that_does_not_exist", entry="refresh", validator=""),
+            dict(module="engine.hardware", entry="refresh_misspelled", validator=""),
+            dict(module="engine.hardware", entry="publish_records", validator="engine.hardware.nope"),
+            dict(module="engine.hardware", entry="publish_records", validator="engine.nope.validate"),
+        )
+        for fields in broken:
+            with self.subTest(fields=fields):
+                source = sources.Source(
+                    id="import-mutation", verifier="deterministic-mutation", category="hardware",
+                    name="Mutation", url=page[0].url, pages=page, attribution="", **fields)
+                with self.assertRaises(LookupError):
+                    resolve_source(source)
+
+    def test_source_ids_are_the_cli_commands(self):
+        # The CLI's choices are derived from the registry, so importing COMMANDS
+        # and comparing it to the registry would prove nothing. Ask the real
+        # parser instead: `--help` runs no collector and prints what is accepted.
+        done = subprocess.run([sys.executable, "-m", "engine", "--help"],
+                              cwd=ROOT, capture_output=True, text=True)
+        self.assertEqual(done.returncode, 0, done.stderr)
+        for source in sources.all_sources():
+            self.assertIn(source.id, done.stdout)
+        for command in ("refresh", "validate", "contribute", "build"):
+            self.assertIn(command, done.stdout)
 
     def test_unknown_verifier_is_refused_by_lookup_and_by_validation(self):
         with self.assertRaises(sources.UnknownVerifier):
@@ -157,7 +277,7 @@ class ValidationEnforcementTests(unittest.TestCase):
     def test_hardware_record_with_an_unregistered_verifier_is_refused(self):
         # The schema's deterministic-* pattern admits it; the registry must not.
         self.save_hardware(hardware_record("deterministic-new-vendor"))
-        with self.assertRaisesRegex(sources.UnknownVerifier, "deterministic-new-vendor"):
+        with self.assertRaises(sources.UnknownVerifier):
             validation.validate_hardware(self.root)
 
     def test_hardware_record_claiming_the_software_source_is_refused(self):
@@ -172,7 +292,7 @@ class ValidationEnforcementTests(unittest.TestCase):
 
     def test_software_record_with_an_unregistered_verifier_is_refused(self):
         self.save_software(software_record("deterministic-nonesuch"))
-        with self.assertRaisesRegex(sources.UnknownVerifier, "deterministic-nonesuch"):
+        with self.assertRaises(sources.UnknownVerifier):
             validation.validate_data(self.root)
 
     def test_registered_software_record_validates(self):
@@ -190,8 +310,9 @@ class ValidationEnforcementTests(unittest.TestCase):
                                             "evidence": [{"quote": "q" * 20, "source_url": "https://example.com/",
                                                           "retrieved_at": "2026-09-17"}]}
         self.save_hardware(record)
+        # Not a registry failure: the researched admission rules decide, and they
+        # are the only place a researched record's dates are judged.
         with self.assertRaises(ValueError):
-            # Not a registry failure: the researched admission rules decide.
             validation.validate_hardware(self.root)
 
     def test_manifest_naming_a_foreign_source_is_refused(self):
@@ -199,8 +320,16 @@ class ValidationEnforcementTests(unittest.TestCase):
         manifest = json.loads((self.root / "manifest.json").read_text())
         manifest["source"] = "import-hardware"
         (self.root / "manifest.json").write_text(json.dumps(manifest))
-        with self.assertRaises(ValueError):
+        with self.assertRaises(validation.ManifestError):
             validation.validate_data(self.root)
+
+    def report_bearing_source(self, report_name="eosl-import.json"):
+        """A hardware source declaring a sidecar, standing in for a vendor collector."""
+        return sources.Source(
+            id="import-hardware", module="engine.hardware", entry="import_hardware",
+            verifier="deterministic-eosl-date", category="hardware", name="eosl.date",
+            url="https://eosl.date/", pages=(sources.Page("https://eosl.date/", "eosl.date"),),
+            attribution="", report=report_name)
 
     def test_source_sidecar_must_account_for_the_records_it_owns(self):
         # data/opengear-import.json states how many records the Opengear refresh
@@ -210,21 +339,34 @@ class ValidationEnforcementTests(unittest.TestCase):
         report = {"verifier": "deterministic-eosl-date", "total_records": 1,
                   "source_url": "https://eosl.date/"}
         (self.root / "eosl-import.json").write_text(json.dumps(report))
-        source = sources.Source(
-            id="import-hardware", module="engine.hardware", entry="import_hardware",
-            verifier="deterministic-eosl-date", category="hardware", name="eosl.date",
-            url="https://eosl.date/", pages=(sources.Page("https://eosl.date/", "eosl.date"),),
-            attribution="", report="eosl-import.json")
-        with mock.patch.object(sources, "all_sources", return_value=(source,)):
+        with mock.patch.object(sources, "all_sources", return_value=(self.report_bearing_source(),)):
             self.assertEqual(len(validation.validate_hardware(self.root)), 1)
-            report["total_records"] = 2
-            (self.root / "eosl-import.json").write_text(json.dumps(report))
-            with self.assertRaisesRegex(ValueError, "reports 2 records but 1 carry"):
+            (self.root / "eosl-import.json").write_text(
+                json.dumps(dict(report, total_records=2)))
+            with self.assertRaises(validation.ReportError):
                 validation.validate_hardware(self.root)
-            report["total_records"] = 1
-            report["verifier"] = "deterministic-opengear"
-            (self.root / "eosl-import.json").write_text(json.dumps(report))
-            with self.assertRaisesRegex(ValueError, "does not name the source"):
+            (self.root / "eosl-import.json").write_text(
+                json.dumps(dict(report, verifier="deterministic-opengear")))
+            with self.assertRaises(validation.ReportError):
+                validation.validate_hardware(self.root)
+
+    def test_a_missing_sidecar_for_an_owning_source_is_refused(self):
+        # #86: the sidecar is not optional while the source owns committed
+        # records — a successful validation would otherwise publish records whose
+        # dropped-row accounting, and the documented report URL, silently vanished.
+        self.save_hardware(hardware_record())
+        with mock.patch.object(sources, "all_sources", return_value=(self.report_bearing_source(),)):
+            with self.assertRaises(validation.ReportError):
+                validation.validate_hardware(self.root)
+            (self.root / "eosl-import.json").write_text(
+                json.dumps({"verifier": "deterministic-eosl-date", "total_records": 1}))
+            self.assertEqual(len(validation.validate_hardware(self.root)), 1)
+
+    def test_a_sidecar_that_is_not_an_object_is_refused(self):
+        self.save_hardware(hardware_record())
+        (self.root / "eosl-import.json").write_text(json.dumps(["not", "an", "object"]))
+        with mock.patch.object(sources, "all_sources", return_value=(self.report_bearing_source(),)):
+            with self.assertRaises(validation.ReportError):
                 validation.validate_hardware(self.root)
 
     def test_schema_admits_a_new_verifier_that_the_registry_refuses(self):

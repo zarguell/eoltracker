@@ -363,9 +363,61 @@ class BuildTests(unittest.TestCase):
                               out_dir=self.out)
         self.assertEqual(empty["events"], 0)
         self.assertEqual(empty["updated"], CHECKED)
-        feed = ET.fromstring((self.out / "v1/changes.atom").read_text(encoding="utf-8"))
+        feed = ET.fromstring((self.out / "v1" / "changes.atom").read_text(encoding="utf-8"))
         self.assertEqual(feed.findall(f"{ATOM}entry"), [])
-        self.assertEqual(json.loads((self.out / "v1/changes.json").read_text(encoding="utf-8"))["events"], [])
+        self.assertEqual(json.loads((self.out / "v1" / "changes.json").read_text(encoding="utf-8"))["events"], [])
+
+
+class LedgerValidationTests(unittest.TestCase):
+    """A ledger that would publish duplicate or unaddressable entries is refused (#114)."""
+
+    def setUp(self):
+        temp = tempfile.TemporaryDirectory()
+        self.addCleanup(temp.cleanup)
+        self.out = Path(temp.name)
+
+    def ledger(self):
+        row = lifecycle_record()
+        baseline = changes.update_history([], [row], CHECKED, None)
+        return changes.update_history([], [row], LATER, baseline)
+
+    def test_a_duplicate_event_id_is_refused_before_anything_is_written(self):
+        ledger = self.ledger()
+        duplicate = copy.deepcopy(ledger["events"][0])
+        ledger = {**ledger, "events": ledger["events"] + [duplicate]}
+        with self.assertRaisesRegex(ValueError, "Duplicate change ledger event id"):
+            changes.build(ledger, out_dir=self.out)
+        # Nothing was published: no duplicate Atom entry survives a failed build.
+        self.assertFalse((self.out / "v1" / "changes.atom").exists())
+        self.assertFalse((self.out / "v1" / "changes.json").exists())
+
+    def test_an_event_without_a_permanent_id_is_refused(self):
+        ledger = self.ledger()
+        ledger = {**ledger, "events": [{**ledger["events"][0], "id": "not-a-tag"}]}
+        with self.assertRaisesRegex(ValueError, "not a permanent tag URI"):
+            changes.build(ledger, out_dir=self.out)
+
+    def test_an_event_with_no_id_at_all_is_refused(self):
+        ledger = self.ledger()
+        event = {key: value for key, value in ledger["events"][0].items() if key != "id"}
+        with self.assertRaisesRegex(ValueError, "has no id"):
+            changes.build({**ledger, "events": [event]}, out_dir=self.out)
+
+    def test_a_wrong_ledger_version_is_refused(self):
+        ledger = {**self.ledger(), "version": changes.LEDGER_VERSION + 1}
+        with self.assertRaisesRegex(ValueError, "version"):
+            changes.build(ledger, out_dir=self.out)
+
+    def test_a_valid_ledger_still_publishes_distinct_entries(self):
+        result = changes.build(self.ledger(), out_dir=self.out)
+        document = json.loads((self.out / "v1" / "changes.json").read_text(encoding="utf-8"))
+        ids = [event["id"] for event in document["events"]]
+        self.assertEqual(len(ids), len(set(ids)))
+        self.assertEqual(len(ids), result["events"])
+        # The published Atom feed carries one entry per distinct id.
+        entries = ET.fromstring((self.out / "v1" / "changes.atom").read_text(encoding="utf-8")) \
+            .findall(f"{ATOM}entry")
+        self.assertEqual(sorted(entry.find(f"{ATOM}id").text for entry in entries), sorted(ids))
 
 
 if __name__ == "__main__":

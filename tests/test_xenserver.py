@@ -281,6 +281,116 @@ class DriftTests(unittest.TestCase):
             xenserver.parse_releases(LEGACY, LEGACY, STATEMENT)
 
 
+class RowWidthTests(unittest.TestCase):
+    """#105: a row one cell short must not shift a date into the next column."""
+
+    CR = xenserver.BY_KEY["XenServer tab / Current Release (CR) Lifecycle Dates"]
+
+    def cr_page(self, rows):
+        head = "".join(f"<th>{name}</th>" for name in self.CR.headers)
+        return f'<span class="tab-text ">{self.CR.tab}</span><table><tr>{head}</tr>{rows}</table>'
+
+    def cells(self, *values):
+        return "".join(f"<td>{value}</td>" for value in values)
+
+    def test_a_short_row_refuses_the_parse(self):
+        # Six logical cells for eight declared columns: the old reader would
+        # carry the missing columns forward as empty strings and publish the
+        # seventh cell's date under the column beside it.
+        page = self.cr_page("<tr>" + self.cells(
+            "9.9", "EN", "01-Jan-30", "N/A", "N/A", "31-Dec-30") + "</tr>")
+        with self.assertRaisesRegex(ValueError, "row states 6 logical cells"):
+            xenserver.parse_table(page, self.CR)
+
+    def test_a_row_with_one_extra_cell_refuses_the_parse(self):
+        page = self.cr_page("<tr>" + self.cells(
+            "9.9", "EN", "01-Jan-30", "N/A", "N/A", "31-Dec-30", "N/A", "spare", "extra") + "</tr>")
+        with self.assertRaisesRegex(ValueError, "past the table's 8 declared columns"):
+            xenserver.parse_table(page, self.CR)
+
+    def test_a_cell_spanning_past_the_declaration_refuses_the_parse(self):
+        page = self.cr_page('<tr><td colspan="9">9.9</td></tr>')
+        with self.assertRaisesRegex(ValueError, "past the table's 8 declared columns"):
+            xenserver.parse_table(page, self.CR)
+
+    def test_a_rowspan_carried_group_still_reads_every_declared_column(self):
+        # The group's product cell spans the following rows; a row under it
+        # still has to fill the remaining declared columns exactly, and the
+        # carried value is read from the group's own cell.
+        page = self.cr_page(
+            '<tr><td rowspan="2">XenServer</td>' + self.cells(
+                "9.9", "EN", "01-Jan-30", "N/A", "N/A", "31-Dec-30", "N/A") + "</tr>"
+            "<tr>" + self.cells("9.8", "EN", "02-Jan-30", "N/A", "N/A", "30-Dec-30", "N/A")
+            + "</tr>")
+        releases, excluded = xenserver.parse_table(page, self.CR)
+        self.assertEqual([release["id"] for release in releases], ["9.9", "9.8"])
+        self.assertEqual(releases[1]["upstream"]["cells"]["Product/Component Name"], "XenServer")
+        self.assertEqual(releases[1]["milestones"]["eol"], "2030-12-30")
+        self.assertEqual(excluded, [])
+
+    def test_a_row_under_a_carried_rowspan_that_is_short_refuses(self):
+        page = self.cr_page(
+            '<tr><td rowspan="2">XenServer</td>' + self.cells(
+                "9.9", "EN", "01-Jan-30", "N/A", "N/A", "31-Dec-30", "N/A") + "</tr>"
+            "<tr>" + self.cells("9.8", "EN", "02-Jan-30", "N/A", "31-Dec-30") + "</tr>")
+        # Five own cells plus the carried product cell is six of eight columns.
+        with self.assertRaisesRegex(ValueError, "row states 6 logical cells"):
+            xenserver.parse_table(page, self.CR)
+
+    def test_a_trailing_colspan_that_collides_with_the_declaration_refuses(self):
+        page = self.cr_page(
+            '<tr><td colspan="8">XenServer</td><td>9.9</td></tr>')
+        with self.assertRaisesRegex(ValueError, "past the table's 8 declared columns"):
+            xenserver.parse_table(page, self.CR)
+
+    def test_a_colspan_over_a_carried_rowspan_column_refuses(self):
+        # Row 1 carries its language cell on a rowspan; row 2's two-column span
+        # would claim that same column, so the row's cells are ambiguous and the
+        # column a value belongs to cannot be named.
+        page = self.cr_page(
+            "<tr><td>9.9</td><td rowspan=\"2\">EN</td>" + self.cells(
+                "01-Jan-30", "N/A", "N/A", "31-Dec-30", "N/A", "note") + "</tr>"
+            '<tr><td colspan="2">9.8</td>' + self.cells(
+                "02-Jan-30", "N/A", "N/A", "30-Dec-30", "N/A", "note") + "</tr>")
+        with self.assertRaisesRegex(ValueError, "two cells claim column"):
+            xenserver.parse_table(page, self.CR)
+
+    def test_a_grouping_row_that_leaves_a_gap_refuses_the_parse(self):
+        # A row may only end before its one declared optional column, and only
+        # after every other column is filled: a width that is neither the full
+        # declaration nor the declared omission is refused.
+        head = "".join(f"<th>{name}</th>" for name in self.CR.headers)
+        page = (f'<span class="tab-text ">{self.CR.tab}</span><table><tr>{head}</tr>'
+                '<tr><td>XenServer</td><td>9.9</td><td>EN</td><td>01-Jan-30</td>'
+                '<td>N/A</td><td>31-Dec-30</td></tr></table>')
+        with self.assertRaisesRegex(ValueError, "row states 6 logical cells"):
+            xenserver.parse_table(page, self.CR)
+
+    def test_the_vendors_own_short_rows_are_the_declared_omission_only(self):
+        # The legacy CR table's six oldest rows write no trailing EOES cell at
+        # all. That one declared optional cell is the only shape allowed to end
+        # early, and every other column is still exact.
+        releases, excluded = xenserver.parse_table(LEGACY, self.CR)
+        self.assertEqual(excluded, [])
+        five = next(release for release in releases if release["id"] == "5")
+        self.assertEqual(five["upstream"]["cells"]["EOES"], "")
+        self.assertEqual(five["milestones"]["eol"], "2013-09-15")
+        # An omitted *non-optional* trailing column is not licensed: dropping
+        # EOES from a row is fine, dropping EOL is a width error.
+        page = self.cr_page("<tr>" + self.cells(
+            "9.9", "EN", "01-Jan-30", "N/A", "N/A", "31-Dec-30") + "</tr>")
+        with self.assertRaisesRegex(ValueError, "row states 6 logical cells"):
+            xenserver.parse_table(page, self.CR)
+
+    def test_a_null_current_cell_never_becomes_an_empty_milestone(self):
+        # The current matrix's third row states an out-of-scope product; its
+        # cells still have to occupy the declared columns exactly.
+        page = current_page(current_row("8.4", product="XenCenter"))
+        releases, excluded = xenserver.parse_table(page, xenserver.TABLES[0])
+        self.assertEqual(releases, [])
+        self.assertIn("outside the XenServer hypervisor scope", excluded[0]["reason"])
+
+
 class ReDerivationTests(unittest.TestCase):
     def record(self):
         return xenserver.record_for(parsed()[0], "2026-09-23T00:00:00Z")

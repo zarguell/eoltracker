@@ -147,8 +147,21 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 .venv/bin/python -m engine import-data     # refresh software catalog from upstream
 .venv/bin/python -m engine import-hardware # refresh hardware catalog from upstream
 .venv/bin/python -m engine validate        # schema + integrity checks
-.venv/bin/python -m engine build           # build site, v1 endpoints, feeds into _site/
+.venv/bin/python -m engine build           # build EVERY publication stage into _site/ (atomic)
 .venv/bin/python -m unittest discover      # test suite
 ```
+
+CI and publication install from `requirements.lock` with
+`pip install --require-hashes`: `requirements.txt` names the direct dependencies
+and the lock pins every transitive distribution by version and SHA-256, so a
+compromised index cannot substitute a distribution in a job that holds a write
+token. Regenerate the lock after changing `requirements.txt` (see the header of
+the lock file).
+
+`python -m engine build` writes the whole publication — pages, v1 endpoints,
+OpenEoX, the three syndication feeds with their exclusion account, and the
+change ledger — into a sibling staging tree and replaces `_site/` only after
+every stage succeeds, so a failed stage leaves the previously published tree
+intact rather than a partial one.
 
 `_site/` is generated output and gitignored. Serve it locally with `python3 -m http.server 8765 --directory _site`.

@@ -44,7 +44,7 @@ from pathlib import Path
 from jsonschema import Draft202012Validator, FormatChecker
 
 from .site_config import is_month
-from . import derived
+from . import derived, sources
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE_BASE = "https://zarguell.github.io/eoltracker"
@@ -344,10 +344,69 @@ def _export_product(product):
     return entries, exclusions
 
 
-def _index(entries, exclusions, counts):
+def _provenance(products):
+    """The composite-catalog provenance the index publishes (#89).
+
+    The export spans the whole software catalog, which is not one upstream: the
+    endoflife.date importer owns most records, registered vendor collectors own
+    others, and researched records cite a one-time reading of a vendor notice.
+    Naming only the endoflife.date API would misstate where a record came from
+    and hide the real source mix, so every verifier family present is enumerated
+    with its registry name, attribution and record count, and the index states
+    that the catalog is composite rather than a single upstream's mirror.
+    """
+    families = {}
+    for product in products:
+        verifier = (product.get("provenance") or {}).get("verifier") or ""
+        families.setdefault(verifier, []).append(product.get("id"))
+    rows = []
+    for verifier in sorted(families, key=lambda value: (-len(families[value]), value)):
+        registered = sources.sources_for(verifier)
+        source = registered[0] if registered else None
+        researched = verifier.startswith(sources.RESEARCHED_PREFIX)
+        rows.append({
+            "verifier": verifier,
+            "name": source.name if source else ("researched contribution" if researched else None),
+            "category": source.category if source else None,
+            # A researched verifier names a contributor, not a pipeline, so its
+            # "source" is the citation the record itself carries, not a registry
+            # page: claiming a registry upstream here would be an invention.
+            "kind": "researched" if researched else ("registered" if source else "unregistered"),
+            "attribution": source.attribution if source else None,
+            "pages": [page.url for page in source.pages] if source else [],
+            "products": len(families[verifier]),
+        })
+    counts = {row["verifier"]: row["products"] for row in rows}
+    return {
+        "catalog": SITE_BASE + "/",
+        # Preserved key: the single upstream that feeds the label-mapping
+        # pipeline, still true of the records that pipeline owns. It is no
+        # longer presented as the export's only source — see `composite`.
+        "upstream": UPSTREAM,
+        "composite": True,
+        "statement": ("This export is derived from a composite software catalog: it covers every published "
+                      "software record, which is normalized from several upstreams and pipelines rather than "
+                      "from one API. `families` enumerates every verifier family present in the exported "
+                      "catalog with its registry name, provenance kind, attribution and record count, so a "
+                      "consumer can see the real source mix instead of a single named upstream."),
+        "families": rows,
+        "family_count": len(rows),
+        "counts_by_verifier": counts,
+        # The label-mapping pipeline's own upstream, kept separate and explicit
+        # so nothing reads `upstream` as the whole export's provenance.
+        "upstream_of": {
+            "verifier": sources.source("import-data").verifier,
+            "name": sources.source("import-data").name,
+            "url": UPSTREAM,
+            "products": counts.get(sources.source("import-data").verifier, 0),
+        },
+    }
+
+
+def _index(entries, exclusions, counts, products):
     return {
         "title": "OpenEoX Core records for the eoltracker software catalog",
-        "source": {"catalog": SITE_BASE + "/", "upstream": UPSTREAM},
+        "source": _provenance(products),
         "schema": {
             "name": "OpenEoX Core Schema Version 1.0",
             "draft_status": "OASIS Committee Specification Draft 01 (CSD01), dated 13 July 2026. A public-review "
@@ -429,7 +488,7 @@ def build(products, site=None):
         if errors:
             raise RuntimeError(f"Refusing to publish invalid OpenEoX record {entry['row']['path']}: {errors}")
     counts = {"products": len(products), "releases": releases, "exported": len(entries), "excluded": len(exclusions)}
-    index = _index(entries, exclusions, counts)
+    index = _index(entries, exclusions, counts, products)
     out_dir.mkdir(parents=True, exist_ok=True)
     published = {}
     for entry in entries:

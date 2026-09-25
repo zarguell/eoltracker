@@ -556,6 +556,39 @@ def atom_feed(events, updated):
     return "\n".join(lines) + "\n"
 
 
+def validate_ledger(ledger):
+    """Refuse a ledger that would publish duplicate or malformed entries (#114).
+
+    The published document is what consumers key on, so two events with one
+    identifier would be one event to every reader — a duplicate Atom `id`, a
+    duplicate JSON entry — and a missing or non-tag identifier would publish an
+    entry nothing can address. The ledger is validated before anything is
+    written, so a bad ledger fails the build instead of reaching `_site/`.
+
+    Returns the usable events in the ledger's stored order.
+    """
+    if ledger is None:
+        return []
+    if not isinstance(ledger, dict):
+        raise ValueError(f"Change ledger is not an object: {type(ledger).__name__}")
+    if "version" in ledger and ledger["version"] != LEDGER_VERSION:
+        raise ValueError(f"Change ledger version {ledger['version']!r} is not {LEDGER_VERSION}")
+    events = []
+    seen = {}
+    for index, event in enumerate(ledger.get("events") or ()):
+        if not isinstance(event, dict) or not event.get("id"):
+            raise ValueError(f"Change ledger event {index} has no id")
+        event_id = event["id"]
+        if not isinstance(event_id, str) or not event_id.startswith(TAG_PREFIX):
+            raise ValueError(f"Change ledger event {index} id is not a permanent tag URI: {event_id!r}")
+        if event_id in seen:
+            raise ValueError(f"Duplicate change ledger event id {event_id!r} at index {index} "
+                             f"(first at {seen[event_id]})")
+        seen[event_id] = index
+        events.append(event)
+    return events
+
+
 def _write(path, content):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(content, encoding="utf-8")
@@ -566,12 +599,15 @@ def build(history, out_dir=None):
 
     `history` is the ledger `update_history()` returned (the persisted
     `data/opengear-changes.json`), or an empty mapping when no run has been
-    recorded. Events are published newest first, with observation timestamps;
-    no snapshot time is invented when the ledger carries one. Returns the event
-    count, the update timestamp and the written paths.
+    recorded. The ledger is validated — version, identifier shape and
+    uniqueness — before either document is written, so a duplicate identifier
+    is refused rather than published as a duplicate Atom entry. Events are
+    published newest first, with observation timestamps; no snapshot time is
+    invented when the ledger carries one. Returns the event count, the update
+    timestamp and the written paths.
     """
     ledger = history if isinstance(history, dict) else {}
-    events = [event for event in (ledger.get("events") or ()) if isinstance(event, dict) and event.get("id")]
+    events = validate_ledger(ledger)
     events.sort(key=_order, reverse=True)
     updated = _updated(ledger, events)
     documents = {

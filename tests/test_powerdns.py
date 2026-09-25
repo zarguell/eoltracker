@@ -62,6 +62,59 @@ class ParseTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             powerdns.parse_releases(html)
 
+    def test_the_reviewed_no_date_vocabulary_normalizes_to_null(self):
+        # The vendor's own table writes EOL for its grouped no-date scope, and a
+        # routine edit can leave any of these tokens in a dated column. Each is
+        # the source stating no date, so it publishes a null milestone while the
+        # raw cell stays verbatim: an unknown date is not a reason to abort a
+        # refresh and freeze the shard.
+        for token in ("", "-", "—", "N/A", "N/A.", "NA", "TBD", "TBA", "Unknown", "EOL"):
+            self.assertIsNone(powerdns.date_value(token), token)
+
+    def test_an_unknown_cell_publishes_the_row_with_a_null_milestone_and_keeps_the_raw_cell(self):
+        # The release date is one of the three dated columns the parser reads.
+        html = fixture_text().replace("<p>22nd of August 2025</p>", "<p>TBD</p>", 1)
+        releases = {r["id"]: r for r in powerdns.parse_releases(html)}
+        self.assertEqual(len(releases), 11)
+        self.assertIsNone(releases["5.0"]["milestones"]["ga"])
+        self.assertEqual(releases["5.0"]["upstream"]["cells"]["Release date"], "TBD")
+        # Every other scope is untouched: one unknown cell does not change the
+        # reading of the rest of the table.
+        self.assertEqual(releases["5.1"]["milestones"]["ga"], "2026-06-03")
+
+    def test_a_blank_or_dashed_eol_keeps_the_release_and_its_other_dates(self):
+        html = fixture_text().replace("<p>EOL June 2026</p>", "<p>-</p>", 1)
+        releases = {r["id"]: r for r in powerdns.parse_releases(html)}
+        self.assertIsNone(releases["4.8"]["milestones"]["eol"])
+        self.assertEqual(releases["4.8"]["upstream"]["cells"]["End of Life"], "-")
+        # 4.8's release date is still published: only the unknown cell is null.
+        self.assertEqual(releases["4.8"]["milestones"]["ga"], "2023-06-01")
+
+    def test_the_critical_only_column_accepts_the_vocabulary_without_mapping_it(self):
+        # 4.8's Critical-Only updates cell specifically: the same wording also
+        # appears as 4.9's release date, so the row is targeted, not the first
+        # matching string.
+        start = fixture_text().index("<td><p>4.8</p></td>")
+        row_start = fixture_text().rindex("<tr", 0, start)
+        row_end = fixture_text().index("</tr>", start)
+        row = fixture_text()[row_start:row_end]
+        html = fixture_text()[:row_start] + row.replace(
+            "<p>15th of March 2024</p>", "<p>N/A</p>", 1) + fixture_text()[row_end:]
+        releases = {r["id"]: r for r in powerdns.parse_releases(html)}
+        self.assertEqual(releases["4.8"]["upstream"]["cells"]["Critical-Only updates"], "N/A")
+        self.assertIsNone(releases["4.8"]["milestones"]["eossec"])
+        # The scope's own release and end-of-life dates are untouched.
+        self.assertEqual(releases["4.8"]["milestones"]["ga"], "2023-06-01")
+        self.assertEqual(releases["4.8"]["milestones"]["eol"], "2026-06")
+
+    def test_malformed_date_shaped_values_still_refuse_the_parse(self):
+        # The no-date vocabulary is deliberately narrow: a value that only looks
+        # like a date is a reshaped table, never an "unknown" one.
+        for text in ("2026", "2026-06", "2026-06-03", "June 2026-01", "June, 2026",
+                     "15th of March, 2024", "31st of February 2026", "June 20266"):
+            with self.assertRaises(ValueError, msg=repr(text)):
+                powerdns.date_value(text)
+
     def test_missing_caption_or_table_refuses_the_parse(self):
         with self.assertRaises(ValueError):
             powerdns.parse_releases("<html><body><p>No tables</p></body></html>")
@@ -112,6 +165,34 @@ class PublicationTests(unittest.TestCase):
         report = json.loads((self.root / "powerdns-authoritative-import.json").read_text())
         self.assertEqual(report["rows"],
                          {"seen": 11, "published": 11, "retained": 0, "excluded": 0})
+
+    def test_an_unknown_date_cell_publishes_instead_of_freezing_the_shard(self):
+        # The point of the vocabulary: a routine upstream edit that leaves a
+        # "TBD" in a dated cell must not abort every PowerDNS update. The row
+        # publishes with a null milestone and the raw cell is kept.
+        self.refresh("2026-09-17T01:00:00Z")
+        html = fixture_text().replace("<p>22nd of August 2025</p>", "<p>TBD</p>", 1)
+        self.refresh("2026-09-17T02:00:00Z", html=html)
+        record = json.loads((self.root / "products/powerdns-authoritative.json").read_text())
+        published = {release["id"]: release for release in record["releases"]}["5.0"]
+        self.assertIsNone(published["milestones"]["ga"])
+        self.assertEqual(published["upstream"]["cells"]["Release date"], "TBD")
+        # The scope is still publishable and validation re-derives the null.
+        powerdns.validate_record(record)
+        report = json.loads((self.root / "powerdns-authoritative-import.json").read_text())
+        self.assertEqual(report["rows"],
+                         {"seen": 11, "published": 11, "retained": 0, "excluded": 0})
+
+    def test_a_malformed_date_shaped_cell_still_writes_nothing(self):
+        # The other half of the contract: a value that looks like a date but is
+        # not one is a reshaped table, so the refresh refuses and the committed
+        # shard keeps its bytes rather than publishing a misread.
+        self.refresh("2026-09-17T01:00:00Z")
+        before = self.snapshot()
+        html = fixture_text().replace("<p>22nd of August 2025</p>", "<p>2026-06</p>", 1)
+        with self.assertRaises(ValueError):
+            self.refresh("2026-09-17T02:00:00Z", html=html)
+        self.assertEqual(self.snapshot(), before)
 
     def test_missing_line_is_retained_and_marked(self):
         self.refresh("2026-09-17T01:00:00Z")

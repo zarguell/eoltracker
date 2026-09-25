@@ -16,6 +16,22 @@ that reads the registry's own `Source.pages` order rather than naming a page.
 from .site_config import EOSL_SOURCE
 from . import sources
 
+try:  # The core persistence slice owns the validator; presentation may lack it.
+    from .urls import safe_http_url_or_none
+except ImportError:  # pragma: no cover - exercised only without the core module
+    from urllib.parse import urlsplit
+
+    def safe_http_url_or_none(value):
+        """Fallback: keep only plain absolute http(s) URLs, no userinfo/controls."""
+        if not isinstance(value, str) or any(ord(ch) < 0x20 or ch == "\x7f" for ch in value):
+            return None
+        parsed = urlsplit(value.strip())
+        if parsed.scheme not in ("http", "https") or not parsed.netloc:
+            return None
+        if "@" in parsed.netloc or not parsed.hostname:
+            return None
+        return value
+
 
 def source_name(verifier):
     """The published name of the source behind one verifier.
@@ -48,8 +64,19 @@ def source_label(url):
 
 
 def source_links(urls):
-    """Page links for a record or a page that lists several sources."""
-    return [{"url": url, "label": source_label(url)} for url in urls]
+    """Page links for a record or a page that lists several sources.
+
+    A record's source URL is external input, so it is filtered through the
+    shared safe-URL rule (#98): an unsafe scheme yields no link rather than an
+    ``href`` a browser would execute.
+    """
+    return [{"url": safe, "label": source_label(safe)}
+            for safe in (safe_http_url_or_none(url) for url in urls) if safe]
+
+
+def source_url(url):
+    """One source URL when it is safe to render, else None (#98)."""
+    return safe_http_url_or_none(url)
 
 
 def is_catalog_record(record):

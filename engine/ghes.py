@@ -245,8 +245,34 @@ def _lifecycle_row(header, row, heading):
 
 
 def _stated(cells):
-    """The lifecycle columns a row states, for comparing two statements of it."""
-    return {column: re.sub(r"\s+", " ", cells[column]).strip() for column in LIFECYCLE_COLUMNS}
+    """Every lifecycle-bearing statement a row makes, for comparing two of them.
+
+    The four declared lifecycle columns are always included. The vendor's
+    support wording is included whenever the row states it: it is not a date, but
+    it is the vendor's own lifecycle claim about the line, so two tables
+    disagreeing about it — one saying ``Supported`` while the other says ``Not
+    supported`` — are contradicting each other and must refuse the parse rather
+    than let the first row chosen decide. A table that declares no support column
+    (the developer-documentation table) makes no such claim, so its rows compare
+    on the columns they do state.
+    """
+    stated = {column: re.sub(r"\s+", " ", cells[column]).strip() for column in LIFECYCLE_COLUMNS}
+    supported = _optional_cell(cells, "Supported")
+    if supported:
+        stated["Supported"] = _supported(supported, f"GitHub Enterprise Server {stated['Version']}")
+    return stated
+
+
+def _disagreements(first, second):
+    """The columns two statements of one release line state differently.
+
+    A column only one of the two rows declares is not a disagreement: a table
+    that states no support column makes no support claim, so its row is compared
+    on the columns it does state. Only a column both rows state — with different
+    values — is the vendor contradicting itself.
+    """
+    return sorted(column for column in set(first) & set(second)
+                  if first[column] != second[column])
 
 
 def parse_releases(markdown):
@@ -271,9 +297,17 @@ def parse_releases(markdown):
     """
     releases, excluded, duplicated, seen = [], [], [], {}
     tables = _tables(markdown)
-    if not any(heading == RELEASES_SECTION and _is_lifecycle(header)
-               for heading, header, _ in tables):
+    authoritative = [rows for heading, header, rows in tables
+                     if heading == RELEASES_SECTION and _is_lifecycle(header)]
+    if not authoritative:
         raise ValueError(f"Missing GitHub Enterprise Server table: {RELEASES_SECTION}")
+    if not any(authoritative):
+        # A header-only releases table is a partial snapshot, not an empty
+        # catalog: the developer-documentation table's rows would publish as the
+        # whole inventory, and a first-run refresh would report success for it.
+        # Refuse the parse so the refresh writes nothing.
+        raise ValueError(f"The GitHub Enterprise Server table {RELEASES_SECTION!r} states no "
+                         f"release lines")
     for heading, header, rows in tables:
         for row in rows:
             if not _is_lifecycle(header):
@@ -290,9 +324,12 @@ def parse_releases(markdown):
                 continue
             first = seen.get(version)
             if first is not None:
-                if first != _stated(cells):
+                second = _stated(cells)
+                contradicting = _disagreements(first, second)
+                if contradicting:
                     raise ValueError(f"GitHub Enterprise Server {version} is stated twice with "
-                                     f"contradicting values: {first} then {_stated(cells)}")
+                                     f"contradicting values ({', '.join(contradicting)}): "
+                                     f"{first} then {second}")
                 duplicated.append({"table": heading, "row": version,
                                    "reason": "another table on the page states this release line "
                                              "with the same values; the line is read once, and "

@@ -2,8 +2,11 @@
 
 Stage the record beside the committed catalog and validate before writing.
 Parse and validation failures leave committed files untouched. The two final
-writes are not an atomic filesystem transaction; refresh_source supplies
-snapshot rollback for write failures during orchestrated refreshes.
+writes are not an atomic filesystem transaction by themselves, so every entry
+point wraps this module in `engine.refresh`'s snapshot rollback: the registered
+`refresh` command and each direct `python -m engine import-<source>` command
+both run through `refresh.refresh_source`, which restores the data directory
+byte-for-byte if any write fails (AGENTS.md; issue #94).
 Call committed_product_record before fetching to enforce source ownership.
 Quiet product and report content independently preserve revision timestamps.
 """

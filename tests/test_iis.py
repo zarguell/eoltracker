@@ -105,13 +105,50 @@ class DirectRowTests(unittest.TestCase):
         # before it, and the raw cell is retained verbatim beside the date.
         self.assertEqual(iis.end_day("1/10/2029 6:59:59 AM", "test"), "2029-01-09")
         self.assertEqual(iis.start_day("11/13/2018 8:00:00 AM", "test"), "2018-11-13")
-        # A time that is not the end instant is the printed day itself: nothing
-        # is shifted that the source did not publish as an end-of-support moment.
-        self.assertEqual(iis.end_day("1/10/2029 12:00:00 AM", "test"), "2029-01-10")
+        # A time that is not the reviewed end instant would move the last
+        # supported day, so it refuses rather than becoming the printed day.
+        with self.assertRaisesRegex(ValueError, "unreviewed end-of-support clock"):
+            iis.end_day("1/10/2029 12:00:00 AM", "test")
+        with self.assertRaisesRegex(ValueError, "unreviewed end-of-support clock"):
+            iis.end_day("1/10/2029 7:00:00 AM", "test")
         self.assertIsNone(iis.end_day("", "test"))
         self.assertIsNone(iis.end_day("N/A", "test"))
         with self.assertRaises(ValueError):
             iis.end_day("31/02/2029 6:59:59 AM", "test")
+
+    def test_an_impossible_clock_refuses_rather_than_becoming_a_day(self):
+        # Every clock component is bounded. Before #107 the time was never
+        # validated, so `99:99:99 AM` was read as the printed calendar day and
+        # an impossible source value could move a support boundary silently.
+        for cell in ("1/10/2029 99:99:99 AM", "1/10/2029 13:00:00 PM",
+                     "1/10/2029 6:60:00 AM", "1/10/2029 6:59:60 AM",
+                     "1/10/2029 0:00:00 AM", "1/10/2029 12:60:00 AM"):
+            with self.assertRaisesRegex(ValueError, "impossible support clock"):
+                iis.instant(cell, "test")
+            with self.assertRaisesRegex(ValueError, "impossible support clock"):
+                iis.end_day(cell, "test")
+
+    def test_a_13_oclock_pm_cell_is_refused_at_the_hour_component(self):
+        # 13:00 is declared PM, which is no 12-hour clock value: it refuses by
+        # name rather than wrapping to 13:00 or reading as 1:00.
+        with self.assertRaisesRegex(ValueError, "impossible support clock"):
+            iis.instant("1/10/2029 13:00:00 PM", "test")
+
+    def test_a_seven_am_end_cell_is_an_unreviewed_convention(self):
+        # 7:00 AM is a real clock, so it passes the component bounds, but it is
+        # not the reviewed end instant: accepting it as the printed day would
+        # shift the last supported day by one.
+        with self.assertRaisesRegex(ValueError, "unreviewed end-of-support clock"):
+            iis.end_day("1/10/2029 7:00:00 AM", "test")
+        with self.assertRaisesRegex(ValueError, "unreviewed end-of-support clock"):
+            iis.end_day("1/10/2029 6:59:59 PM", "test")
+
+    def test_a_start_cell_still_accepts_its_reviewed_clock(self):
+        # The start convention (8:00:00 AM) is unchanged: the end convention is
+        # the one that was reviewed, and the start's own bound is the clock's.
+        self.assertEqual(iis.start_day("11/13/2018 8:00:00 AM", "test"), "2018-11-13")
+        with self.assertRaisesRegex(ValueError, "impossible support clock"):
+            iis.start_day("11/13/2018 8:00:99 AM", "test")
 
     def test_the_footnote_marker_is_not_part_of_a_version_name(self):
         # Three rows carry the page's ESU footnote asterisk; the marker belongs

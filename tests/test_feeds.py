@@ -51,9 +51,16 @@ def entry_ids(atom):
     return [entry.find(f"{ATOM}id").text for entry in atom_entries(atom)]
 
 
-def id_date(entry_id):
-    """The milestone date every event id ends with."""
-    return entry_id[-10:]
+def entry_date(entry):
+    """The milestone date an entry represents, read from its summary.
+
+    Identities are permanent and deliberately carry no date, so the event's own
+    date is taken from the representation the entry prints rather than from its
+    id. Only day-precision events reach these documents, so the parenthesized
+    ISO day is the date it states.
+    """
+    match = re.search(r"\((\d{4}-\d{2}-\d{2})\)", entry.find(f"{ATOM}summary").text)
+    return match.group(1) if match else None
 
 
 def unfold(text):
@@ -110,8 +117,8 @@ class FeedTests(unittest.TestCase):
             self.assertTrue(entry.find(f"{ATOM}id").text.startswith("tag:eoltracker,"))
             self.assertEqual(entry.find(f"{ATOM}link").get("rel"), "alternate")
             self.assertEqual(entry.find(f"{ATOM}updated").text, MANIFEST["generated_at"])
-        # Sorted by date, which every event id ends with.
-        days = [id_date(entry.find(f"{ATOM}id").text) for entry in atom_entries(document)]
+        # Sorted by the event date, which the entry prints in its summary.
+        days = [entry_date(entry) for entry in atom_entries(document)]
         self.assertEqual(days, sorted(days))
 
     def test_only_upcoming_milestones_are_published(self):
@@ -121,9 +128,9 @@ class FeedTests(unittest.TestCase):
         self.assertEqual(ids, ics_values(documents["ics"], "UID"))
         self.assertEqual(ids, rss_guids(documents["rss"]))
         self.assertEqual(ids, [
-            "tag:eoltracker,2026:routeros-7-eos-2099-01-31",
-            "tag:eoltracker,2026:python-3.14-eol-2099-10-31",
-            "tag:eoltracker,2026:python-3.14-eossec-2099-10-31",
+            "tag:eoltracker,2026:software:routeros:7:eos",
+            "tag:eoltracker,2026:software:python:3.14:eol",
+            "tag:eoltracker,2026:software:python:3.14:eossec",
         ])
 
     def test_event_ids_are_valid_permanent_tag_uris(self):
@@ -140,25 +147,39 @@ class FeedTests(unittest.TestCase):
             self.assertLessEqual(date.fromisoformat(match.group(1) + "-01-01"), TODAY)
             self.assertNotIn(" ", match.group(2))
             self.assertIsNone(re.search(r"%(?![0-9A-F]{2})", match.group(2)))
-        # Product, release, milestone and date, hyphen joined and encoded.
+        # Kind, product, release and milestone, colon joined and encoded; the
+        # mutable date is not part of the identity.
         self.assertEqual(ids, [
-            "tag:eoltracker,2026:python-3.14-eol-2099-10-31",
-            "tag:eoltracker,2026:python-1%20%28LTS%29%20%27name%27-eol-2099-11-30",
+            "tag:eoltracker,2026:software:python:3.14:eol",
+            "tag:eoltracker,2026:software:python:1%20%28LTS%29%20%27name%27:eol",
         ])
 
     def test_two_events_never_mint_one_identifier(self):
-        # Same product id, release id, milestone and date in both catalogs: the
-        # software and hardware namespaces are separate, so this is possible.
+        # Identity is (kind, product, release, milestone), so one product that
+        # carried the same release id twice would mint one id for two distinct
+        # deadlines. A duplicate UID would silently merge them in a calendar,
+        # so the collision is reported instead of being published.
+        products = [{"id": "edge", "name": "Edge", "releases": [
+            {"id": "1", "name": "1", "milestones": {"ga": None, "eos": None, "eossec": None, "eol": "2099-10-31"}},
+            {"id": "1", "name": "1 (again)", "milestones": {"ga": None, "eos": None, "eossec": None, "eol": "2099-11-30"}},
+        ]}]
+        with self.assertRaisesRegex(ValueError, "Duplicate event identifier"):
+            self.build(products=products)
+
+    def test_software_and_hardware_can_share_a_product_release_and_milestone(self):
+        # The kind namespaces the identity, so the same ids in both catalogs are
+        # two different deadlines rather than one collision.
         products = [{"id": "edge", "name": "Edge", "releases": [
             {"id": "1", "name": "1", "milestones": {"ga": None, "eos": None, "eossec": None, "eol": "2099-10-31"}},
         ]}]
         hardware = [{"id": "edge", "name": "Edge", "model_number": "1", "status": "expiring",
                      "milestones": {"ga": None, "eos": None, "eossec": None, "eol": "2099-10-31"},
                      "provenance": {"source_urls": []}}]
-        # A duplicate UID would silently merge two deadlines in a calendar, so
-        # the collision is reported instead of being published.
-        with self.assertRaisesRegex(ValueError, "Duplicate event identifier"):
-            self.build(products=products, hardware=hardware)
+        ids = entry_ids(self.build(products=products, hardware=hardware)["atom"])
+        # Both events share product, release and milestone; only the namespace
+        # distinguishes them, so both are published.
+        self.assertEqual(sorted(ids), ["tag:eoltracker,2026:hardware:edge:1:eol",
+                                       "tag:eoltracker,2026:software:edge:1:eol"])
 
     def test_events_are_ordered_by_date_then_title(self):
         products = [{"id": "b", "name": "Beta", "releases": [
@@ -182,9 +203,10 @@ class FeedTests(unittest.TestCase):
         self.assertEqual(upcoming(TODAY - timedelta(days=1)),
                          [(TODAY - timedelta(days=1)).isoformat(), TODAY.isoformat(), (TODAY + timedelta(days=1)).isoformat()])
         # `build` uses the same inclusive UTC window, so today's own event is present.
-        ids = entry_ids(self.build(products=products)["atom"])
-        self.assertNotIn((TODAY - timedelta(days=1)).isoformat(), "".join(ids))
-        self.assertIn(TODAY.isoformat(), "".join(ids))
+        entries = atom_entries(self.build(products=products)["atom"])
+        dates = [entry_date(entry) for entry in entries]
+        self.assertNotIn((TODAY - timedelta(days=1)).isoformat(), dates)
+        self.assertIn(TODAY.isoformat(), dates)
 
     def test_event_identifiers_are_stable_across_runs(self):
         first = self.build(hardware=hardware())
@@ -205,8 +227,7 @@ class FeedTests(unittest.TestCase):
         self.assertEqual([entry.find(f"{ATOM}title").text for entry in model],
                          ["Catalyst 9300 C9300-48P End of life", "Catalyst 9300 C9300-48P End of sale"])
         self.assertEqual([entry.find(f"{ATOM}category").get("term") for entry in model], ["eol", "eos"])
-        self.assertEqual([id_date(entry.find(f"{ATOM}id").text) for entry in model],
-                         ["2099-03-15", "2099-10-15"])
+        self.assertEqual([entry_date(entry) for entry in model], ["2099-03-15", "2099-10-15"])
 
     def test_xml_text_and_attributes_are_escaped(self):
         products = [{"id": "amp", "name": "A & B <c>\x07", "releases": [
@@ -292,7 +313,9 @@ class FeedTests(unittest.TestCase):
             self.assertTrue(item.find("link").text.startswith("https://"))
             self.assertEqual(item.find("guid").get("isPermaLink"), "false")
             self.assertIn(item.find("category").text, feeds.MILESTONE_LABELS.values())
-            self.assertEqual(parsedate_to_datetime(item.find("pubDate").text).tzinfo, timezone.utc)
+            # RSS `pubDate` is item publication time, not the event's date, so
+            # an item carries none rather than a future lifecycle deadline.
+            self.assertIsNone(item.find("pubDate"))
 
     def test_timestamps_come_from_the_snapshot_manifest(self):
         documents = self.build(manifest={"generated_at": "2031-02-03T04:05:06Z"})
@@ -316,6 +339,194 @@ class FeedTests(unittest.TestCase):
         self.assertEqual(rss_items(documents["rss"]), [])
         self.assertNotIn("BEGIN:VEVENT", documents["ics"])
         self.assertTrue(documents["ics"].endswith("END:VCALENDAR\r\n"))
+
+
+class IdentityStabilityTests(unittest.TestCase):
+    """A source correction changes the representation, never the identity (#80).
+
+    The date is the mutable half of an event; product, release and milestone
+    are the namespace. An identity that followed a correction would re-mint the
+    event, so every reader would hold the old one beside the new one.
+    """
+
+    def setUp(self):
+        self.temp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.temp.cleanup)
+        self.out = Path(self.temp.name)
+
+    def product(self, eol):
+        return [{"id": "python", "name": "Python", "releases": [
+            {"id": "3.14", "name": "3.14",
+             "milestones": {"ga": None, "eos": None, "eossec": None, "eol": eol}}]}]
+
+    def build(self, eol):
+        return feeds.build(self.product(eol), None, out_dir=self.out,
+                           manifest={"generated_at": "2026-09-17T11:51:01Z"})
+
+    def documents(self):
+        return {name: (self.out / path).read_text(encoding="utf-8", newline="")
+                for name, path in feeds.FEED_PATHS.items()}
+
+    def test_only_the_representation_changes_when_the_date_is_corrected(self):
+        before = self.build("2030-04-01")
+        entries_before = atom_entries(self.documents()["atom"])
+        after = self.build("2030-05-01")
+        entries_after = atom_entries(self.documents()["atom"])
+
+        # The identity, the guid and the iCalendar UID are all unchanged.
+        self.assertEqual([entry.find(f"{ATOM}id").text for entry in entries_before],
+                         [entry.find(f"{ATOM}id").text for entry in entries_after])
+        self.assertEqual(rss_guids(self.documents()["rss"]), entry_ids(self.documents()["atom"]))
+        self.assertEqual(ics_values(self.documents()["ics"], "UID"),
+                         ["tag:eoltracker,2026:software:python:3.14:eol"])
+        # All three wire formats carry the corrected day, and none carries the old one.
+        self.assertEqual([entry_date(entry) for entry in entries_after], ["2030-05-01"])
+        self.assertEqual(ics_values(self.documents()["ics"], "DTSTART;VALUE=DATE"), ["20300501"])
+        self.assertIn("May 1, 2030", self.documents()["rss"])
+        for name, text in self.documents().items():
+            self.assertNotIn("2030-04-01", text, name)
+            self.assertNotIn("20300401", text, name)
+
+    def test_the_permanent_identity_is_the_kind_product_release_milestone(self):
+        self.build("2030-04-01")
+        entry = atom_entries(self.documents()["atom"])[0]
+        self.assertEqual(entry.find(f"{ATOM}id").text, "tag:eoltracker,2026:software:python:3.14:eol")
+        # No date-shaped suffix survives anywhere in the identity.
+        self.assertIsNone(re.search(r"\d{4}-\d{2}-\d{2}", entry.find(f"{ATOM}id").text))
+
+    def test_a_legacy_date_bearing_id_translates_to_the_permanent_one(self):
+        self.build("2030-04-01")
+        permanent = entry_ids(self.documents()["atom"])[0]
+        legacy = feeds.legacy_event_id("software", "python", "3.14", "eol", "2030-04-01")
+        self.assertEqual(legacy, "tag:eoltracker,2026:python-3.14-eol-2030-04-01")
+        self.assertEqual(feeds.migrate_legacy_id("software", "python", "3.14", "eol", legacy), permanent)
+        # The corrected date-bearing id from the *same* event maps to the same
+        # identity, which is the whole point: the correction does not re-mint.
+        corrected = feeds.legacy_event_id("software", "python", "3.14", "eol", "2030-05-01")
+        self.assertEqual(feeds.migrate_legacy_id("software", "python", "3.14", "eol", corrected), permanent)
+        # A hyphen inside a component id is carried by the event fields, not
+        # guessed from the string, so it translates exactly.
+        hyphenated = "tag:eoltracker,2026:ubuntu-24.04-lts-eol-2030-04-01"
+        self.assertEqual(feeds.migrate_legacy_id("software", "ubuntu", "24.04-lts", "eol", hyphenated),
+                         "tag:eoltracker,2026:software:ubuntu:24.04-lts:eol")
+        # The permanent form is accepted unchanged (idempotent).
+        self.assertEqual(feeds.migrate_legacy_id("software", "python", "3.14", "eol", permanent), permanent)
+        # A month-precision legacy id translates the same way.
+        self.assertEqual(
+            feeds.migrate_legacy_id("software", "vgpu", "1", "eol", "tag:eoltracker,2026:vgpu-1-eol-2099-07"),
+            "tag:eoltracker,2026:software:vgpu:1:eol")
+        # The kind namespaces: the hardware identity is a different event.
+        self.assertEqual(
+            feeds.migrate_legacy_id("hardware", "m", "M1", "eol", "tag:eoltracker,2026:m-M1-eol-2030-04-01"),
+            "tag:eoltracker,2026:hardware:m:M1:eol")
+
+    def test_a_foreign_or_malformed_id_is_refused_not_reinterpreted(self):
+        # Translation never invents an identity: an id belonging to another
+        # event, or carrying no date at all, fails loudly.
+        for value in ("tag:eoltracker,2026:other-2-eol-2030-04-01",
+                      "tag:eoltracker,2026:python-3.14-eol",
+                      "not-a-tag", None):
+            with self.assertRaises(ValueError):
+                feeds.migrate_legacy_id("software", "python", "3.14", "eol", value)
+
+    def test_the_identity_does_not_move_when_a_month_becomes_a_day(self):
+        # A month-precision deadline being refined to a stated day moves the
+        # event between the feeds and their exclusion document; it must not
+        # also move the identity, or the refinement would duplicate the event.
+        month = self.build("2099-07")
+        month_excluded = json.loads((self.out / feeds.EXCLUSIONS_PATH).read_text())
+        month_id = month_excluded["excluded"][0]["id"]
+        self.assertEqual((month["events"], month["excluded"]), (0, 1))
+
+        day = self.build("2099-07-15")
+        self.assertEqual([entry.find(f"{ATOM}id").text for entry in atom_entries(self.documents()["atom"])], [month_id])
+        self.assertEqual((day["events"], day["excluded"]), (1, 0))
+
+
+class RssPublicationDateTests(unittest.TestCase):
+    """RSS `pubDate` is item publication time, never a lifecycle deadline (#90)."""
+
+    def setUp(self):
+        self.temp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.temp.cleanup)
+        self.out = Path(self.temp.name)
+
+    def build(self, eol, generated="2026-09-17T11:51:01Z"):
+        products = [{"id": "python", "name": "Python", "releases": [
+            {"id": "3.14", "name": "3.14",
+             "milestones": {"ga": None, "eos": None, "eossec": None, "eol": eol}}]}]
+        feeds.build(products, None, out_dir=self.out, manifest={"generated_at": generated})
+        return ET.fromstring((self.out / "v1/feed.rss").read_text(encoding="utf-8"))
+
+    def test_a_future_event_never_becomes_a_future_publication_date(self):
+        channel = self.build("2099-10-31").find("channel")
+        stamps = [parsedate_to_datetime(channel.find("pubDate").text),
+                  parsedate_to_datetime(channel.find("lastBuildDate").text)]
+        # Channel timestamps are the snapshot time, in UTC, and in the past.
+        self.assertEqual(set(stamps), {datetime(2026, 9, 17, 11, 51, 1, tzinfo=timezone.utc)})
+        for item in channel.findall("item"):
+            self.assertIsNone(item.find("pubDate"))
+        # The event's own date is retained in the representation.
+        self.assertIn("Oct 31, 2099 (2099-10-31)", channel.find("item").find("description").text)
+
+    def test_item_publication_dates_never_appear_at_all(self):
+        self.build("2099-10-31")
+        document = (self.out / "v1" / "feed.rss").read_text(encoding="utf-8")
+        # The channel states its own publication time once; no item states one.
+        self.assertEqual(document.count("<pubDate>"), 1)
+        item = document.split("<item>")[1].split("</item>")[0]
+        self.assertNotIn("<pubDate>", item)
+        # The lifecycle date is still in the representation, never as a stamp.
+        self.assertIn("2099-10-31", item)
+
+    def test_an_unchanged_event_republished_keeps_the_same_items(self):
+        first = self.build("2099-10-31", generated="2026-09-17T11:51:01Z")
+        first_items = ET.tostring(first.find("channel").find("item"))
+        second = self.build("2099-10-31", generated="2026-10-01T00:00:00Z")
+        second_items = ET.tostring(second.find("channel").find("item"))
+        # The snapshot stamp moves; the item itself does not.
+        self.assertEqual(first_items, second_items)
+        self.assertNotEqual(first.find("channel").find("lastBuildDate").text,
+                            second.find("channel").find("lastBuildDate").text)
+
+
+class FeedUrlSafetyTests(unittest.TestCase):
+    """Only plain absolute http(s) URLs reach a syndicated link or UID (#98)."""
+
+    def setUp(self):
+        self.temp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.temp.cleanup)
+        self.out = Path(self.temp.name)
+
+    def build(self, url):
+        hardware = [{"id": "m", "name": "Model", "model_number": "M1", "status": "expiring",
+                     "milestones": {"ga": None, "eos": None, "eossec": None, "eol": "2099-10-31"},
+                     "provenance": {"source_urls": [url]}}]
+        feeds.build([], hardware, out_dir=self.out, manifest={"generated_at": "2026-09-17T11:51:01Z"})
+        return {name: (self.out / path).read_text(encoding="utf-8", newline="")
+                for name, path in feeds.FEED_PATHS.items()}
+
+    def test_unsafe_schemes_never_reach_a_link_or_a_calendar_url(self):
+        for unsafe in ("javascript:alert(1)", "data:text/html;base64,PHNjcmlwdD4=",
+                       "ftp://example.test/x", "//example.test/x", "not a url",
+                       "https://user:pass@example.test/x", "https://example.test/\x01x"):
+            documents = self.build(unsafe)
+            for name, text in documents.items():
+                self.assertNotIn("javascript:", text, name)
+                self.assertNotIn("data:", text, name)
+                self.assertNotIn("user:pass", text, name)
+            # The event keeps its identity and falls back to the site itself.
+            self.assertIn("tag:eoltracker,2026:hardware:m:M1:eol", documents["atom"])
+            entry = atom_entries(documents["atom"])[0]
+            self.assertEqual(entry.find(f"{ATOM}link").get("href"), feeds.SITE_URL)
+            self.assertIn(f"URL:{feeds.SITE_URL}", documents["ics"])
+
+    def test_a_plain_https_source_still_reaches_every_format(self):
+        documents = self.build("https://vendor.example/lifecycle")
+        self.assertEqual(atom_entries(documents["atom"])[0].find(f"{ATOM}link").get("href"),
+                         "https://vendor.example/lifecycle")
+        self.assertIn("URL:https://vendor.example/lifecycle", documents["ics"])
+        self.assertIn("https://vendor.example/lifecycle", documents["rss"])
 
 
 if __name__ == "__main__":

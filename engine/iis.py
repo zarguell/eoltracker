@@ -178,7 +178,21 @@ DECLARED_SCOPE_RELEASES = {page: names for page, names in (
 # The vendor's end instant: ``1/10/2029 6:59:59 AM``, Pacific time. The time is
 # the moment support stops, so the final full day of support is the day before.
 INSTANT = re.compile(r"(\d{1,2})/(\d{1,2})/(\d{4})\s+(\d{1,2}):(\d{2}):(\d{2})\s*([AaPp]\.?[Mm]\.?)")
-LAST_FULL_DAY = ("6", "59", "59", "AM")
+# Every clock component is bounded so an impossible time refuses instead of
+# being read as a day: the hour is a 12-hour clock, the minute and second are
+# 0..59. Both the value and the width are checked, so ``99:99:99`` and a
+# two-digit hour both fail rather than shifting a support boundary.
+CLOCK_HOURS = range(1, 13)
+CLOCK_MINUTES = range(0, 60)
+CLOCK_SECONDS = range(0, 60)
+MERIDIEM = {"AM": 0, "PM": 12}
+# Microsoft's reviewed end instant, as ``(hour, minute, second, meridiem)`` in
+# 12-hour terms: the terminal day of support begins at ``6:59:59 AM`` Pacific.
+# The clock is *required*: any other stated end time is an unreviewed convention
+# that would move the last full day of support to a day the vendor's own
+# aggregate pages do not name, so it refuses rather than defaulting to the
+# printed day.
+LAST_FULL_DAY = (6, 59, 59, "AM")
 # A cell that states no date. None of these is a date, and none becomes one.
 NO_DATE = {"", "-", "—", "n/a", "na", "tbd", "tba", "unknown"}
 # The page marks ESU-eligible rows with a trailing footnote asterisk; the marker
@@ -373,7 +387,13 @@ def _sentences(text):
 
 
 def instant(text, where):
-    """One printed ``M/D/YYYY H:MM:SS AM`` cell, as its calendar day and clock."""
+    """One printed ``M/D/YYYY H:MM:SS AM`` cell, as its calendar day and clock.
+
+    Every component is bounded: the date must be a real calendar day, the hour
+    a 12-hour clock value, and the minute and second 0..59. A cell like
+    ``1/10/2029 99:99:99 AM`` states no instant Microsoft could print, so it
+    refuses here rather than being read as the printed day.
+    """
     match = INSTANT.fullmatch(text.strip())
     if match is None:
         raise ValueError(f"{where}: unrecognized Microsoft lifecycle cell {text!r}")
@@ -383,7 +403,11 @@ def instant(text, where):
     except ValueError as error:
         raise ValueError(f"{where}: {text!r} is not a real calendar day") from error
     # ``A.M.`` and ``AM`` are the same clock marker; the stored clock is folded.
-    return stated_day, (hour, minute, second, meridiem.replace(".", "").upper())
+    clock = (int(hour), int(minute), int(second), meridiem.replace(".", "").upper())
+    if clock[0] not in CLOCK_HOURS or clock[1] not in CLOCK_MINUTES or clock[2] not in CLOCK_SECONDS:
+        raise ValueError(f"{where}: {text!r} states an impossible support clock "
+                         f"{clock[0]:02d}:{clock[1]:02d}:{clock[2]:02d} {clock[3]}")
+    return stated_day, clock
 
 
 def start_day(text, where):
@@ -397,15 +421,19 @@ def end_day(text, where):
     Microsoft prints the instant support stops, in Pacific time. ``6:59:59 AM``
     on the printed day means the final full day of support is the calendar day
     before it — the day the catalog stores and the day the vendor's own aggregate
-    pages name. Any other stated time is taken as the printed day itself.
+    pages name. That clock is the only end convention this source has reviewed:
+    any other stated end time would move the last supported day, so it refuses
+    rather than being read as the printed day.
     """
     value = text.strip()
     if value.lower() in NO_DATE:
         return None
     stated_day, clock = instant(value, where)
-    if clock == LAST_FULL_DAY:
-        return (stated_day - timedelta(days=1)).isoformat()
-    return stated_day.isoformat()
+    if clock != LAST_FULL_DAY:
+        raise ValueError(f"{where}: unreviewed end-of-support clock "
+                         f"{clock[0]:02d}:{clock[1]:02d}:{clock[2]:02d} {clock[3]} in {text!r}; "
+                         f"Microsoft's support boundary is stated as 06:59:59 AM")
+    return (stated_day - timedelta(days=1)).isoformat()
 
 
 def release_id(name):

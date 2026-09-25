@@ -139,7 +139,12 @@ Hardware records are source-isolated by `provenance.verifier`
 (`deterministic-eosl-date`, `deterministic-opengear`): a refresh may only
 replace or prune records carrying its own verifier, must validate the
 complete snapshot before writing, and preserves `last_checked` when content
-is unchanged (`hardware.publish_records`).
+is unchanged (`hardware.publish_records`). When the registry names an
+accounting sidecar for the verifier, `publish_records` stages it — the
+prospective report when the caller passes `report=`, else the committed one —
+beside the staged records so `validate` checks the sidecar's record count
+against the snapshot before anything is written; a count disagreement aborts
+the refresh instead of publishing a catalog its own report does not describe.
 
 Milestone semantics (shared contract):
 
@@ -237,7 +242,17 @@ importer or in upstream.
 ### Known pitfalls
 
 - `engine/hardware.py` fetches live pages; use the saved sample pages in
-  tests instead of hitting eosl.date in the test suite.
+  `tests/fixtures/eosl-*.html` (plus the family sitemap copy) instead of hitting
+  eosl.date in the test suite. They are required: a missing fixture fails test
+  setup rather than skipping, so markup drift cannot pass CI unnoticed.
+- The eosl.date parser fails closed on drift: a row class that names no
+  lifecycle this mapper knows, a row whose declared width disagrees with the
+  header, a date-shaped milestone that is not a real calendar day, and a
+  dated row with no identity all raise. Rows the page legitimately does not
+  publish (advertisement/layout rows, blank separators) are counted and named
+  per page in the parse result's `accounting`; a family that stops publishing
+  models, or drops out of the sitemap, refuses the refresh instead of pruning
+  its committed records.
 - `data/manifest.json` counts must match the record files — `validate` checks
   this; a mismatch fails the build.
 - The OpenEoX export excludes records with unknown required dates and lists

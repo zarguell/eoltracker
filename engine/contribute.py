@@ -35,6 +35,36 @@ proves ``October 2024`` (AGENTS.md rule 4). ``--allow-stale-evidence`` is the
 offline path: it accepts the stored evidence without refetching and leaves
 ``provenance.research.verified_at`` null so the difference stays visible.
 
+An evidence entry is *scoped*: it may back only the release lines its quote
+belongs to. A quote that names a line (or the product) backs what it names; a
+quote that names nothing is accepted only when exactly one line states the dates
+it carries. A quote whose dates match several unnamed lines is ambiguous — a
+date that could belong to any of them backs none of them — and is refused, so a
+real vendor date for one branch can never be published as another branch's
+deadline (issue #92). The scope is stored on the entry when the contribution
+states it, and re-derived from the record when it is absent, so a committed
+record that predates the property is still checked under the same rule.
+
+A derived rule is evidence of its own (issue #79). Every ``milestone_provenance``
+entry's cited quote is fetched and confirmed at admission beside the ordinary
+evidence, and its ``source_url`` must be a public https citation. A derived date
+is exempt from the literal date-in-quote rule — the vendor states a rule, not the
+resulting day — but the rule itself is never exempt from being read from the page
+it cites. A source that cannot be refetched leaves ``verified_at`` null; it never
+turns an unread rule into a verified derivation.
+
+A citation URL is a public page, not an authenticated endpoint (issue #102):
+``source_url`` and each derived rule's ``source_url`` must be an ``https`` URL on
+a public host with no fragment and no credential-shaped query parameter, and a
+refusal prints the redacted URL so a rejected secret never reaches a log. A
+contribution's display ``links`` stay permissive (a vendor deep link with a
+fragment is a real citation) but still refuse userinfo and control characters.
+
+A researched record is rejected when its normalized identifiers, slug or name
+collide with a deterministic record's (issue #91): admission is by identity, not
+by destination path, so a researched copy can never shadow, duplicate or outlive
+the pipeline record for the same product.
+
 A researched record may only ever be written by this command, only into the
 ``researched-`` id namespace, and only into a file owned by its own verifier
 (``researched-<contributor-slug>``). A deterministic record is never replaced,
@@ -84,7 +114,7 @@ from urllib.parse import urlsplit
 import requests
 from jsonschema import Draft202012Validator, FormatChecker
 
-from . import derived, net, sources
+from . import derived, net, sources, urls
 from .importer import ROOT, dump
 
 CONTRIBUTIONS = "contributions"
@@ -114,7 +144,15 @@ CONTRIBUTION_KEYS = frozenset({
     "releases", "identifiers", "links", "milestones", "milestone_provenance", "evidence",
     "contributor", "method", "stale_after", "notes",
 })
-EVIDENCE_KEYS = frozenset({"quote", "source_url", "retrieved_at", "milestones"})
+EVIDENCE_KEYS = frozenset({"quote", "source_url", "retrieved_at", "milestones", "scope"})
+# One evidence entry's declared scope (issue #92). `product` names the product the
+# quote is about -- it is how a notice that opens with the product's own name
+# scopes a sentence that then states only a date -- and `releases` lists the
+# release-line ids the quote belongs to. The property is optional and deliberate:
+# an entry that states neither still scopes itself from what the quote names and
+# from the single line whose dates it carries, so every record that predates it
+# keeps validating while the check itself is never skipped.
+SCOPE_KEYS = frozenset({"product", "releases"})
 # One release line inside a contribution that covers several. `milestones` states
 # the branch's own dates, so a product whose notice dates more than one line --
 # or dates the current line and leaves an undated one that must not disappear --
@@ -167,6 +205,97 @@ def deterministic_records(records):
     contains a researched record.
     """
     return [record for record in records if not is_researched(record)]
+
+
+def identifier_keys(identifier):
+    """The identity keys one ``{type, id}`` pair occupies, normalized.
+
+    A purl and a CPE name the same product in more than one spelling: a purl's
+    version qualifier (``@6.2``) is not part of the package identity, and a CPE
+    2.3 name's trailing target fields (``:windows`` onward) are not part of the
+    vendor/product pair that identifies a product. Both reduced forms are keys,
+    so a researched copy of ``pkg:pypi/qiskit`` or ``cpe:2.3:a:adobe:acrobat``
+    is caught however the copy spelled the version it covers -- which is exactly
+    the shadow a destination-path check cannot see (issue #91).
+
+    Keys are namespaced by kind (``purl:``/``cpe:``/the declared type) so a purl
+    and a CPE that happen to share a string never collide by accident, and the
+    bare normalized value is included so two records spelling the same scheme
+    differently still collide.
+    """
+    if not isinstance(identifier, dict):
+        return set()
+    kind = slugify(identifier.get("type") or "")
+    value = normalize_space(str(identifier.get("id") or "")).casefold()
+    if not value:
+        return set()
+    keys = {f"{kind or 'id'}:{value}", value}
+    if value.startswith("pkg:"):
+        body = value[4:].split("?", 1)[0].split("#", 1)[0]
+        keys.add(f"purl:{body.split('@', 1)[0]}")
+    elif value.startswith("cpe:"):
+        fields = value.split(":")
+        if len(fields) >= 5:
+            keys.add(f"cpe:{':'.join(fields[:5])}")
+    return keys
+
+
+def record_identities(record):
+    """The identity keys a record occupies: its id, name, and each identifier."""
+    keys = set()
+    for value in (record.get("id"), record.get("name")):
+        text = normalize_space(str(value or "")).casefold()
+        if text:
+            keys.add(f"name:{text}")
+    for identifier in record.get("identifiers") or []:
+        keys |= identifier_keys(identifier)
+    return keys
+
+
+def _identifier_identity(record):
+    keys = set()
+    for identifier in record.get("identifiers") or []:
+        keys |= identifier_keys(identifier)
+    return keys
+
+
+def _same_product(left, right):
+    left_ids, right_ids = _identifier_identity(left), _identifier_identity(right)
+    if left_ids and right_ids:
+        return bool(left_ids & right_ids)
+    return normalize_space(str(left.get("name") or "")).casefold() == normalize_space(
+        str(right.get("name") or "")).casefold()
+
+
+def check_identity_collision(root, record, target):
+    """Refuse a researched copy of a deterministic product's identity."""
+    directory = Path(root) / (PRODUCTS if target == "software" else HARDWARE)
+    if not directory.is_dir():
+        return
+    destination = record["id"]
+    for path in directory.glob("*.json"):
+        if path.stem == destination:
+            continue
+        try:
+            existing = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError) as error:
+            raise ValueError(f"cannot inspect catalog identity {path.name}: {error}") from error
+        if is_researched(existing):
+            continue
+        if _same_product(existing, record):
+            raise ValueError(f"researched record {record['id']!r} shadows deterministic product "
+                             f"{existing['id']!r} by product identity")
+
+
+def derived_evidence(contribution):
+    """The rule quotes that must be fetched alongside ordinary evidence."""
+    entries = []
+    for line in contribution.get("releases") or ():
+        for entry in (line.get(derived.DERIVED_KEY) or {}).values():
+            entries.append({"source_url": urls.safe_citation_url(entry["source_url"],
+                                                                  "derived.source_url"),
+                            "quote": entry["quote"]})
+    return entries
 
 
 def _stamp(now=None):
@@ -277,19 +406,18 @@ def date_in_quote(value, quote):
     return False
 
 
-def missing_backing(milestones, evidence, provenance=None):
-    """The milestone keys whose stored date no stored quote states.
-
-    An evidence entry that names milestones only backs those; one that names
-    none backs any of them. A *derived* milestone is exempt: the vendor states a
-    rule for it rather than a date, so no sentence can contain the resulting day
-    and the rule's own stored quote is its evidence (``engine/derived.py``
-    re-derives the date from it). Exempting exactly the keys the provenance
-    names keeps every stated date on the literal-quote rule.
-    """
+def missing_backing(milestones, evidence, provenance=None, release_id=None, product_name=None):
+    """Return milestone keys whose in-scope stored quote does not state the date."""
     derived = provenance or {}
     quoted = {key: [] for key in MILESTONE_KEYS}
     for entry in evidence:
+        scope = entry.get("scope") or {}
+        if scope.get("releases") and (release_id is None or release_id not in scope["releases"]):
+            continue
+        if (scope.get("product") and product_name is not None
+                and normalize_space(scope["product"]).casefold()
+                != normalize_space(str(product_name)).casefold()):
+            continue
         for key in entry.get("milestones") or MILESTONE_KEYS:
             quoted[key].append(entry["quote"])
     return [key for key in MILESTONE_KEYS
@@ -414,6 +542,8 @@ def validate_derived(milestones, provenance, where, release_ids=None):
     if provenance is None:
         return None
     derived.validate_milestone_provenance(milestones, provenance, where, release_ids)
+    for entry in provenance.values():
+        urls.safe_citation_url(entry["source_url"], f"{where}.derived.source_url")
     return copy.deepcopy(provenance)
 
 
@@ -450,15 +580,10 @@ def _parse_releases(value, where):
 
 
 def _parse_evidence(value, where, releases):
-    """Validate the stored quotes against every release line they must back.
-
-    An entry that names milestones must name dates some release line actually
-    states -- naming a date no line carries is a claim the contribution does not
-    hold, and catching it here names the branch rather than leaving it to the
-    whole-record check below.
-    """
+    """Validate stored quotes and their product/release scope."""
     if not isinstance(value, list) or not value:
         raise ValueError(f"{where}: evidence must be a non-empty array of stored quotes")
+    release_ids = {release["id"] for release in releases}
     entries = []
     for index, raw in enumerate(value):
         at = f"{where}: evidence[{index}]"
@@ -471,8 +596,31 @@ def _parse_evidence(value, where, releases):
         if len(quote) < MIN_QUOTE:
             raise ValueError(f"{at}: quote must store at least {MIN_QUOTE} characters of the source "
                              "sentence verbatim; that sentence is the evidence")
-        entry = {"quote": quote, "source_url": _url(raw.get("source_url"), at),
-                 "retrieved_at": _day(raw.get("retrieved_at"), f"{at}: retrieved_at")}
+        entry = {"quote": quote,
+                 "source_url": urls.safe_citation_url(raw.get("source_url"), f"{at}.source_url"),
+                 "retrieved_at": _day(raw.get("retrieved_at"), f"{at}.retrieved_at")}
+        scope = raw.get("scope")
+        if scope is not None:
+            if not isinstance(scope, dict):
+                raise ValueError(f"{at}.scope must be an object")
+            unknown_scope = sorted(set(scope) - SCOPE_KEYS)
+            if unknown_scope:
+                raise ValueError(f"{at}.scope has unknown fields {unknown_scope}")
+            parsed_scope = {}
+            if "product" in scope:
+                parsed_scope["product"] = _text(scope["product"], f"{at}.scope", "product")
+            if "releases" in scope:
+                values = scope["releases"]
+                if not isinstance(values, list) or not values:
+                    raise ValueError(f"{at}.scope.releases must be a non-empty array")
+                parsed_scope["releases"] = [_text(value, f"{at}.scope.releases", "release")
+                                             for value in values]
+                unknown_releases = sorted(set(parsed_scope["releases"]) - release_ids)
+                if unknown_releases:
+                    raise ValueError(f"{at}.scope names releases not in the contribution: {unknown_releases}")
+            if not parsed_scope:
+                raise ValueError(f"{at}.scope must state product or releases")
+            entry["scope"] = parsed_scope
         keys = raw.get("milestones")
         if keys is not None:
             if not isinstance(keys, list) or not keys:
@@ -610,7 +758,8 @@ def parse_contribution(raw, path="<contribution>"):
             contribution[key] = _text(raw[key], where, key)
     unbacked = [key for line in lines
                 for key in missing_backing(line["milestones"], contribution["evidence"],
-                                           line.get("milestone_provenance"))]
+                                           line.get("milestone_provenance"),
+                                           line["id"], contribution["name"])]
     if unbacked:
         labels = ", ".join(dict.fromkeys(MILESTONE_LABELS[key] for key in unbacked))
         raise ValueError(f"{where}: no stored quote states the {labels} date; every milestone must be "
@@ -635,11 +784,16 @@ def verify_evidence(evidence, fetch=None, allow_stale=False):
             try:
                 pages[url] = page_text(fetcher(url))
             except (requests.RequestException, OSError) as error:
-                raise ValueError(f"Cannot verify evidence from {url}: {error}; rerun with "
+                raise ValueError(f"Cannot verify evidence from {urls.redact_url(url)}: {error}; rerun with "
                                  "--allow-stale-evidence to admit the stored evidence unverified") from error
         if entry["quote"] not in pages[url]:
-            raise ValueError(f"Quote not found in {url}: {_truncate(entry['quote'])}")
+            raise ValueError(f"Quote not found in {urls.redact_url(url)}: {_truncate(entry['quote'])}")
     return True
+
+
+def verify_derived_evidence(contribution, fetch=None, allow_stale=False):
+    """Verify every derived rule quote in addition to ordinary evidence."""
+    return verify_evidence(derived_evidence(contribution), fetch=fetch, allow_stale=allow_stale)
 
 
 def research_object(contribution, evidence, verified_at):
@@ -788,8 +942,21 @@ def validate_research(record, target):
             raise ValueError(f"{at}: quote must store normalized whitespace")
         if len(entry["quote"]) < MIN_QUOTE:
             raise ValueError(f"{at}: quote is shorter than {MIN_QUOTE} characters")
-        _url(entry["source_url"], at)
-        _day(entry["retrieved_at"], f"{at}: retrieved_at")
+        urls.safe_citation_url(entry["source_url"], f"{at}.source_url")
+        _day(entry["retrieved_at"], f"{at}.retrieved_at")
+        scope = entry.get("scope")
+        if scope is not None:
+            if not isinstance(scope, dict) or set(scope) - SCOPE_KEYS:
+                raise ValueError(f"{at}.scope must contain only product/releases")
+            if "product" in scope:
+                _text(scope["product"], f"{at}.scope", "product")
+            if "releases" in scope:
+                if not isinstance(scope["releases"], list) or not scope["releases"]:
+                    raise ValueError(f"{at}.scope.releases must be a non-empty array")
+                for release_id in scope["releases"]:
+                    _text(release_id, f"{at}.scope.releases", "release")
+            if not scope:
+                raise ValueError(f"{at}.scope must state product or releases")
     if research["quote"] != quote_of(evidence):
         raise ValueError(f"{where}: research.quote is not the evidence quotes joined verbatim")
     if research["source_url"] != evidence[0]["source_url"]:
@@ -818,11 +985,12 @@ def validate_research(record, target):
             validate_derived(release["milestones"], release.get(derived.DERIVED_KEY),
                              f"{where}/{release['id']}", derived_ids)
         milestone_sets = [release["milestones"] for release in releases]
-        published = [{"milestones": release["milestones"],
+        published = [{"id": release["id"], "name": release["name"],
+                      "milestones": release["milestones"],
                       derived.DERIVED_KEY: release.get(derived.DERIVED_KEY)} for release in releases]
     else:
-        urls = provenance["source_urls"]
-        if urls[0] != research["source_url"] or set(urls) != {e["source_url"] for e in evidence}:
+        source_urls = provenance["source_urls"]
+        if source_urls[0] != research["source_url"] or set(source_urls) != {e["source_url"] for e in evidence}:
             raise ValueError(f"{where}: provenance.source_urls must be the evidence sources, "
                              "primary first")
         cell = record["upstream"].get("Contribution")
@@ -842,9 +1010,10 @@ def validate_research(record, target):
                 raise ValueError(f"{where}: research.evidence[{index}] claims "
                                  f"{MILESTONE_LABELS[key]} but the record states no such date")
     for line in published:
-        unbacked = missing_backing(line["milestones"], evidence, line.get(derived.DERIVED_KEY))
+        unbacked = missing_backing(line["milestones"], evidence, line.get(derived.DERIVED_KEY),
+                                   line.get("id"), line.get("name"))
         if unbacked:
-            labels = ", ".join(MILESTONE_LABELS[key] for key in unbacked)
+            labels = ", ".join(dict.fromkeys(MILESTONE_LABELS[key] for key in unbacked))
             raise ValueError(f"{where}: no stored quote states the {labels} date")
 
 
@@ -947,12 +1116,15 @@ def _prepare(path, root, fetch, allow_stale, now):
         raise ValueError(f"not valid JSON: {error}") from error
     contribution = parse_contribution(raw, path=str(path))
     verified = verify_evidence(contribution["evidence"], fetch=fetch, allow_stale=allow_stale)
+    if verified:
+        verified = verify_derived_evidence(contribution, fetch=fetch, allow_stale=allow_stale)
     checked = _stamp(now)
     research = research_object(contribution, contribution["evidence"],
                                checked if verified else None)
     record = build_record(contribution, research, checked, now=now)
     check_schema(record, contribution["target"])
     validate_research(record, contribution["target"])
+    check_identity_collision(root, record, contribution["target"])
     destination = record_path(root, contribution["target"], record["id"])
     existing = read_existing(destination, record["provenance"]["verifier"])
     return contribution, record, verified, destination, existing

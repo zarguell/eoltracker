@@ -50,11 +50,30 @@ def software_record(name="sample", verifier=None):
     return record
 
 
+def stage_sidecars(directory, records):
+    """Stage the accounting sidecar each written record's source owns.
+
+    Validation requires a source's report beside the records it owns, so a test
+    that writes a collector's record directly stages the minimal honest sidecar
+    (its verifier and record count) instead of bypassing the gate. The
+    import-data source publishes no sidecar, so it contributes none.
+    """
+    counts = {}
+    for record in records:
+        verifier = record["provenance"]["verifier"]
+        counts[verifier] = counts.get(verifier, 0) + 1
+    for verifier, count in counts.items():
+        report = sources.source_for(verifier).report
+        if report:
+            dump(directory / report, {"verifier": verifier, "total_records": count})
+
+
 def catalog_root(directory, records):
     """A data directory holding ``records`` and the manifest the importer writes."""
     (directory / "products").mkdir(parents=True, exist_ok=True)
     for record in records:
         dump(directory / "products" / (record["id"] + ".json"), record)
+    stage_sidecars(directory, records)
     counted = [record for record in records
                if record["provenance"]["verifier"] == sources.source("import-data").verifier]
     dump(directory / "manifest.json", {
@@ -168,6 +187,31 @@ class ParseTests(unittest.TestCase):
     def test_a_page_with_no_tables_at_all_refuses_the_parse(self):
         with self.assertRaisesRegex(ValueError, "states no tables"):
             checkpoint.parse_trains("<html><body><h2>Software Support</h2></body></html>")
+
+    def test_an_identical_duplicate_train_row_is_reconciled(self):
+        # An exact restatement is a duplicate, not a conflict: the train is
+        # published once and the second row is accounted with its reason.
+        row = ('<tr><td>Check Point R82</td><td>October 2024</td><td>R82</td>'
+               '<td>April 2029</td></tr>')
+        releases, excluded = checkpoint.parse_trains(_page(SECTION.replace("</tbody>", row + "</tbody>")))
+        self.assertEqual([release["id"] for release in releases].count("r82"), 1)
+        self.assertEqual([entry["reason"] for entry in excluded],
+                         ["duplicate train row for release 'r82'"])
+        self.assertEqual(releases, parsed()[0])
+
+    def test_a_duplicate_train_row_contradicting_a_lifecycle_cell_refuses_the_parse(self):
+        # The first-wins path discarded the second row without comparing the
+        # dates or the affected-versions grouping it states.
+        for replacement in (
+                ('<td>October 2024</td>', '<td>November 2024</td>'),
+                ('<td>April 2029</td>', '<td>May 2029</td>'),
+                ('<td>R82</td>', '<td>R82, R82.10</td>')):
+            with self.subTest(replacement=replacement):
+                row = ('<tr><td>Check Point R82</td><td>October 2024</td><td>R82</td>'
+                       '<td>April 2029</td></tr>').replace(replacement[0], replacement[1], 1)
+                page = _page(SECTION.replace("</tbody>", row + "</tbody>"))
+                with self.assertRaisesRegex(ValueError, "stated twice with contradicting values"):
+                    checkpoint.parse_trains(page)
 
     def test_a_waf_challenge_refuses_the_parse_instead_of_publishing_nothing(self):
         with self.assertRaisesRegex(ValueError, "states no tables"):
@@ -364,6 +408,7 @@ class RegistryIntegrationTests(CatalogRootCase):
         if verifier:
             record["provenance"]["verifier"] = verifier
         dump(self.root / "products/checkpoint-security-gateway.json", record)
+        stage_sidecars(self.root, [record])
         return record
 
     def test_validate_data_dispatches_to_the_owning_sources_validator(self):

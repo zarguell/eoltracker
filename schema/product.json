@@ -220,6 +220,15 @@
             ]
           }
         }
+        ,
+        "scope": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "product": {"type": "string", "minLength": 1},
+            "releases": {"type": "array", "items": {"type": "string", "minLength": 1}}
+          }
+        }
       }
     }
   },

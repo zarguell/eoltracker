@@ -512,12 +512,13 @@ class RetentionTests(unittest.TestCase):
     def test_a_release_no_current_source_states_is_retained(self):
         dropped = next(release for release in released() if release["id"] == "20.09")
         committed = {"releases": [dropped]}
-        combined, kept = openeuler.combine_releases(released(), committed)
+        combined, kept, transitions = openeuler.combine_releases(released(), committed)
         self.assertEqual(kept, [])
+        self.assertEqual(transitions, [])
         # A release the current sources no longer state at all is republished
         # from its own stored cells and marked as such.
         fresh_without = [release for release in released() if release["id"] != "20.09"]
-        combined, kept = openeuler.combine_releases(fresh_without, committed)
+        combined, kept, transitions = openeuler.combine_releases(fresh_without, committed)
         self.assertEqual([entry["id"] for entry in kept], ["20.09"])
         held = next(release for release in combined if release["id"] == "20.09")
         self.assertFalse(held["upstream"]["in_sources"])
@@ -526,6 +527,60 @@ class RetentionTests(unittest.TestCase):
 
     def test_a_retained_release_is_recorded_in_the_report(self):
         self.assertEqual(openeuler.combine_releases(released(), None)[1], [])
+
+    def test_an_lts_flag_flip_replaces_the_row_instead_of_duplicating_it(self):
+        # The generated id embeds the catalog's own LTS flag. When the community
+        # starts marking a release LTS (or stops), the id changes while the
+        # source identity does not: reconciling by id would retain the committed
+        # row *and* publish the fresh one, so one release would appear twice with
+        # two ids, dates and LTS meanings. The identity is what may appear once.
+        fresh = released()
+        target = next(release for release in fresh if release["id"] == "25.09")
+        self.assertFalse(target["upstream"]["cells"]["LTS"])
+        committed = copy.deepcopy(target)
+        # A committed innovation row for the same identity, as an earlier
+        # catalog stated it (no `lts` in the id); the fresh catalog now marks it
+        # LTS, so the id gains the flag.
+        committed["id"] = openeuler.release_id(openeuler.identity_of(target)[0], False)
+        committed["name"] = openeuler.display_name(openeuler.identity_of(target)[0], False)
+        committed["upstream"]["cells"]["LTS"] = False
+        committed["upstream"]["in_catalog"] = True
+        # The fresh row is the LTS form of the same identity.
+        key, _lts = openeuler.identity_of(target)
+        target["id"] = openeuler.release_id(key, True)
+        target["name"] = openeuler.display_name(key, True)
+        target["upstream"]["cells"]["LTS"] = True
+        target["milestones"]["ga"] = "2025-09-30"
+        combined, kept, transitions = openeuler.combine_releases(fresh, {"releases": [committed]})
+        ids = [release["id"] for release in combined]
+        self.assertEqual(len(ids), len(set(ids)))
+        # One identity, one published row: the fresh LTS row, not the old one.
+        self.assertIn(target["id"], ids)
+        self.assertNotIn(committed["id"], ids)
+        self.assertEqual([release["id"] for release in combined
+                          if openeuler.key_string(openeuler.identity_of(release)[0])
+                          == openeuler.key_string(key)], [target["id"]])
+        self.assertEqual(kept, [])
+        self.assertEqual(transitions, [{
+            "identity": openeuler.key_string(key), "from": committed["id"], "to": target["id"],
+            "reason": transitions[0]["reason"]}])
+        self.assertIn("LTS", transitions[0]["reason"])
+
+    def test_a_record_publishing_one_identity_twice_is_refused(self):
+        rec = record()
+        target = next(release for release in rec["releases"] if release["id"] == "25.09")
+        duplicate = copy.deepcopy(target)
+        key, _lts = openeuler.identity_of(target)
+        # A second row for the same source identity under the other LTS-flag id.
+        duplicate["id"] = openeuler.release_id(key, True)
+        duplicate["name"] = openeuler.display_name(key, True)
+        duplicate["upstream"]["cells"]["LTS"] = True
+        target["upstream"]["cells"]["LTS"] = False
+        target["id"] = openeuler.release_id(key, False)
+        target["name"] = openeuler.display_name(key, False)
+        rec["releases"].append(duplicate)
+        with self.assertRaisesRegex(ValueError, "published twice"):
+            openeuler.validate_record(rec)
 
 
 class PublicationTests(unittest.TestCase):
@@ -695,6 +750,76 @@ class PDFTests(unittest.TestCase):
     def test_a_document_without_a_page_tree_refuses(self):
         with self.assertRaisesRegex(ValueError, "no page tree"):
             openeuler.pdf_pages(b"%PDF-1.7\n1 0 obj\n<< /Type /NotPages >>\nendobj\n")
+
+    def test_an_oversized_document_refuses_before_it_is_read(self):
+        with self.assertRaisesRegex(ValueError, "document bound"):
+            openeuler.pdf_pages(b"%PDF-1.7\n" + b" " * openeuler.MAX_PDF_BYTES)
+
+    def test_a_decompression_bomb_refuses_by_name(self):
+        # A tiny stream that expands far past the decode budget must refuse
+        # rather than being materialized. Before #100 it was handed to an
+        # unbounded ``zlib.decompress``.
+        import zlib as _zlib
+        bomb = _zlib.compress(b"\x00" * (openeuler.MAX_DECODED_BYTES + 1), 9)
+        self.assertLess(len(bomb), 1_000_000)
+        budget = openeuler._Budget()
+        body = (b"<< /Length " + str(len(bomb)).encode() + b" /Filter /FlateDecode >>\nstream\n"
+                + bomb + b"\nendstream")
+        with self.assertRaisesRegex(ValueError, "decompression bomb"):
+            openeuler._deflate(body, budget, "test stream")
+
+    def test_a_cmap_range_past_the_bound_refuses(self):
+        raw = (b"beginbfrange\n<0000> <FFFF> <0041>\nendbfrange\n")
+        with self.assertRaisesRegex(ValueError, "past the 10000-code bound"):
+            openeuler._cmap(raw)
+
+    def test_a_cmap_range_that_ends_before_it_starts_refuses(self):
+        with self.assertRaisesRegex(ValueError, "ends before it starts"):
+            openeuler._cmap(b"beginbfrange\n<0010> <0001> <0041>\nendbfrange\n")
+
+    def test_a_cyclic_page_tree_refuses(self):
+        # Node 2 lists itself as its own parent: before #100 the walk recursed
+        # until the interpreter's stack gave out.
+        document = (b"%PDF-1.7\n"
+                    b"1 0 obj\n<< /Type /Catalog /Pages 2 0 R >>\nendobj\n"
+                    b"2 0 obj\n<< /Type /Pages /Kids [2 0 R] >>\nendobj\n")
+        with self.assertRaisesRegex(ValueError, "cyclic page tree"):
+            openeuler.pdf_pages(document)
+
+    def test_a_page_tree_deeper_than_the_bound_refuses(self):
+        # A chain of page-tree nodes, one level per object, past the bound.
+        count = openeuler.MAX_TREE_DEPTH + 5
+        parts = [b"%PDF-1.7\n",
+                 b"1 0 obj\n<< /Type /Catalog /Pages 2 0 R >>\nendobj\n"]
+        for number in range(2, count + 2):
+            parts.append(f"{number} 0 obj\n<< /Type /Pages /Kids [{number + 1} 0 R] >>\nendobj\n"
+                         .encode())
+        parts.append(f"{count + 2} 0 obj\n<< /Type /Page >>\nendobj\n".encode())
+        with self.assertRaisesRegex(ValueError, "deeper than"):
+            openeuler.pdf_pages(b"".join(parts))
+
+    def test_a_document_stating_too_many_objects_refuses(self):
+        # Unique object numbers, so the count can only be caught by the bound.
+        body = b"".join(f"{number} 0 obj\n>>\nendobj\n".encode()
+                        for number in range(openeuler.MAX_PDF_OBJECTS + 1))
+        with self.assertRaisesRegex(ValueError, "indirect objects"):
+            openeuler._pdf_pages(b"%PDF-1.7\n" + body)
+
+    def test_the_real_white_paper_stays_inside_every_bound(self):
+        # The bounds are ceilings for crafted documents, not for the source's
+        # own: the real paper is far below each one, and its whole decode fits
+        # the document-wide budget with room to spare.
+        self.assertLess(len(WHITEPAPER), openeuler.MAX_PDF_BYTES)
+        budget = openeuler._Budget()
+        objects = openeuler._pdf_objects(WHITEPAPER, budget)
+        self.assertLess(len(objects), openeuler.MAX_PDF_OBJECTS)
+        self.assertTrue(openeuler.pdf_pages(WHITEPAPER))
+
+    def test_the_reader_runs_in_an_isolated_process(self):
+        # The parse is delegated to a spawned, resource-limited child; the
+        # parent gets back the same pages the in-process reader produces.
+        self.assertIsNotNone(openeuler._pdf_context())
+        self.assertEqual(openeuler.pdf_pages(WHITEPAPER), openeuler._pdf_pages(WHITEPAPER))
 
 
 class IdentityTests(unittest.TestCase):

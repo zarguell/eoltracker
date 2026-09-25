@@ -6,6 +6,7 @@ transaction and reports each outcome.
 """
 import argparse
 import os
+import sys
 
 from . import sources
 from .validation import validate_data, validate_hardware
@@ -18,9 +19,10 @@ def run_refresh():
     """Refresh every registered source; report each outcome and exit accordingly.
 
     A source that fails is rolled back to its committed records, the others
-    still refresh, and the run fails only when every source failed. The summary
-    goes to stdout and, when the workflow supplied one, to the run's step
-    summary as well.
+    still refresh, and the run fails when *any* source failed (#87): a partial
+    refresh is a partially stale catalog, and internal consistency validation
+    cannot tell. The summary goes to stdout and, when the workflow supplied one,
+    to the run's step summary as well.
     """
     from . import refresh
 
@@ -32,14 +34,31 @@ def run_refresh():
     if summary is not None and path:
         with open(path, "a", encoding="utf-8") as handle:
             handle.write(summary)
+    verdict = refresh.freshness(outcomes)
+    if verdict["blocking"]:
+        print(f"::error::Catalog refresh incomplete: {verdict['refreshed']}/{verdict['sources']} sources "
+              f"refreshed; failed: {', '.join(verdict['failed']) or 'none'}.")
     return refresh.exit_code(outcomes)
 
 
 def run_import(source_id):
-    """Refresh one registered source into the committed data directory."""
+    """Refresh one registered source into the committed data directory (#94).
+
+    The documented single-source commands write several files — records, the
+    manifest, and the source's own sidecar or ledger — so a failure partway
+    through must not leave a mixed catalog. They run through the same
+    `refresh.refresh_source` transaction the aggregate refresh uses, which
+    snapshots the data directory first and restores it byte-for-byte on any
+    failure, instead of the previous sequential writes with no rollback.
+    """
+    from . import refresh
+
     source = sources.source(source_id)
-    detail = source.run()
-    print(f"{source_id}: {detail}" if detail else source_id)
+    outcome = refresh.refresh_source(source)
+    if not outcome.ok:
+        print(outcome.line(), file=sys.stderr)
+        raise SystemExit(1)
+    print(outcome.line())
 
 
 def main(argv=None):
@@ -64,20 +83,15 @@ def main(argv=None):
         from . import contribute
         raise SystemExit(contribute.main(rest))
     else:
-        from . import changes, feeds, openeox, site
-        site.build()
-        openeox.build(validate_data())
-        manifest = None
-        manifest_path = site.ROOT / "data" / "manifest.json"
-        if manifest_path.exists():
-            import json
-            manifest = json.loads(manifest_path.read_text())
-        feeds.build(validate_data(), validate_hardware(), manifest=manifest)
-        history_path = site.ROOT / "data" / "opengear-changes.json"
-        if history_path.exists():
-            import json
-            changes.build(json.loads(history_path.read_text()), site.ROOT / "_site")
-        print("Built website, v1 endpoints and feeds in _site/")
+        from . import site
+        # `site.build` owns every publication stage — pages, v1 endpoints,
+        # OpenEoX, feeds and the change ledger — and publishes them together
+        # through its staging tree, so the CLI does not append stages to an
+        # already-visible `_site/` (#114).
+        result = site.build()
+        print(f"Built website, v1 endpoints, OpenEoX, feeds and changes in {result['out']}/ "
+              f"({result['records']} products, {result['hardware_records']} hardware records, "
+              f"{result['staging']['files']} files)")
 
 
 if __name__ == "__main__":

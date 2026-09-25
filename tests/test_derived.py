@@ -578,7 +578,7 @@ class FeedExclusionTests(unittest.TestCase):
         entry = excluded["excluded"][0]
         self.assertEqual(entry["code"], feeds.DERIVED_EXCLUSION_CODE)
         self.assertEqual(entry["date"], "2030-04-01")
-        self.assertEqual(entry["id"], "tag:eoltracker,2026:testcity-1-eol-2030-04-01")
+        self.assertEqual(entry["id"], "tag:eoltracker,2026:software:testcity:1:eol")
         self.assertEqual(entry["milestone"], "eol")
         # The rule travels with the exclusion, so a consumer can recompute it.
         self.assertEqual(entry["derived"]["method"], "release-plus-duration")
