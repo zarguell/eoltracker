@@ -1,7 +1,7 @@
 {
   "source_url": "https://learn.microsoft.com/en-us/lifecycle/products/azure-active-directory-ad-connect",
   "verifier": "deterministic-entra-connect",
-  "checked_at": "2026-09-23T17:37:34Z",
+  "checked_at": "2026-09-25T10:20:36Z",
   "page_urls": {
     "lifecycle": "https://learn.microsoft.com/en-us/lifecycle/products/azure-active-directory-ad-connect",
     "history": "https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/reference-connect-version-history",
@@ -9,22 +9,22 @@
   },
   "record_scope": "Microsoft Entra Connect: one software record with one release per published build (the supported table, the current release history and the archive) plus the Lifecycle 1.x and 2.x family scopes, each at the precision its own row states",
   "rows": {
-    "seen": 116,
-    "published": 97,
-    "fresh": 97,
+    "seen": 118,
+    "published": 98,
+    "fresh": 98,
     "retained": 0,
     "excluded": 1,
-    "duplicate_views": 18,
+    "duplicate_views": 19,
     "lifecycle_scopes": 2,
     "lifecycle_listing": 1,
-    "support_table": 17,
-    "release_history": 40,
+    "support_table": 18,
+    "release_history": 41,
     "archive": 55
   },
   "milestones": {
-    "ga_stated": 94,
+    "ga_stated": 95,
     "ga_unknown": 3,
-    "eol_stated": 16,
+    "eol_stated": 17,
     "eol_unknown": 81
   },
   "excluded": [
@@ -119,6 +119,11 @@
     },
     {
       "row": "2.6.91.0",
+      "page": "https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/reference-connect-version-history",
+      "reason": "the page's own section repeats the support-table row; the table's row is published because it is the one that states an end of support date"
+    },
+    {
+      "row": "2.6.92.0",
       "page": "https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/reference-connect-version-history",
       "reason": "the page's own section repeats the support-table row; the table's row is published because it is the one that states an end of support date"
     },
