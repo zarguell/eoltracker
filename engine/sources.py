@@ -60,6 +60,13 @@ OPENEULER_ANNOUNCEMENT_2403 = ("https://www.openeuler.org/en/news/20240612-openE
                                "LTS-The%20First%20AI-Native%20Open%20Source%20Operating%20System/")
 OPENEULER_ANNOUNCEMENT_SP4 = ("https://www.openeuler.org/en/news/20260701-openEuler%2024.03%20"
                               "LTS%20SP4/20260701-openEuler%2024.03%20LTS%20SP4.html")
+EXTREME_EOS_INDEX = ("https://www.extremenetworks.com/support/"
+                    "end-of-sale-and-end-of-support-products/")
+EXTREME_ATTRIBUTION = ("Extreme Networks product lifecycle published directly from the vendor's "
+                       "own end-of-sale and end-of-service-life spreadsheet extracts; the EOS date "
+                       "becomes eos and the EOSL date eol in the vendor's own definitions, EOSM is "
+                       "published verbatim and never mapped because it is a software-maintenance "
+                       "window, and no date is derived from the vendor's stated support rule.")
 BARRACUDA_FIREWALL_EOL = ("https://documentation.campus.barracuda.com/wiki/spaces/NGFEOL/"
                           "pages/5505036")
 BARRACUDA_ATTRIBUTION = ("Barracuda firewall lifecycle published directly by Barracuda's own "
@@ -634,6 +641,18 @@ SOURCES = (
         attribution=PROGRESS_ATTRIBUTION,
         validator="engine.progress.validate_sitefinity",
         report="progress-sitefinity-import.json",
+    ),
+    Source(
+        id="import-extreme",
+        module="engine.extreme",
+        entry="import_extreme",
+        verifier="deterministic-extreme",
+        category="hardware",
+        name="Extreme Networks",
+        url=EXTREME_EOS_INDEX,
+        pages=(Page(EXTREME_EOS_INDEX, "Extreme Networks end-of-sale and end-of-support products"),),
+        attribution=EXTREME_ATTRIBUTION,
+        report="extreme-import.json",
     ),
     Source(
         id="import-barracuda",

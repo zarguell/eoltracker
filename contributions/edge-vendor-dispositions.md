@@ -16,11 +16,11 @@ than from a fresh search.
 | Vendor | Verdict | Why |
 | --- | --- | --- |
 | **WatchGuard** | **Deterministic — published** | 170 products, day precision, one page. `deterministic-watchguard` |
-| **Palo Alto Networks** | Deterministic — not yet built | Public per-series end-of-life tables |
-| **Check Point** | Deterministic — not yet built | One page, dozens of tables, month precision mostly |
-| **Barracuda** | Deterministic — not yet built | One Confluence page per product space, ISO day precision |
-| **Extreme Networks** | Deterministic — not yet built | Vendor-hosted XLSX extracts |
-| **NETGEAR** | Deterministic — not yet built | One monthly-stamped PDF table |
+| **Palo Alto Networks** | **Deterministic — published** | 34 SKUs from the per-series end-of-life tables. `deterministic-paloalto` |
+| **Check Point** | **Deterministic — published** | 220 appliances from the lifecycle page, plus a 9-table date grammar. `deterministic-checkpoint-appliances` |
+| **Barracuda** | **Deterministic — published** | 120 appliances across all four dated product spaces. `deterministic-barracuda` |
+| **Extreme Networks** | **Deterministic — published** | 7,846 products from the vendor's two XLSX extracts. `deterministic-extreme` |
+| **NETGEAR** | **Absent** | The global EoS list is client-rendered — 0 dated rows in ~480 KB of server HTML. The only server-rendered table is the AU locale: AU-SKU, consumer-only, and every one of its 45 dates is the blanket 09/01/2029. See `netgear-eos-no-go.md` |
 | **Brocade / Broadcom** | Deterministic, additive | 98 records exist with community-catalog dates; the vendor's own dates are not yet used |
 | **Citrix NetScaler** | Already covered | `deterministic-netscaler` in `engine/netscaler.py` |
 | **Aruba / HPE networking** | Researched | Vendor's consolidated list frozen at 2020-05-06; live data behind a JS app |
@@ -53,6 +53,52 @@ here:
    sets** (five columns with a second product column, three with no migration
    path). None of them is read, and each is named in the report with its shape,
    so the page's full content is accounted for rather than silently skipped.
+
+**Extreme Networks** — the two spreadsheet extracts the vendor links from
+`https://www.extremenetworks.com/support/end-of-sale-and-end-of-support-products/`,
+verifier `deterministic-extreme`, report `extreme-import.json`, 7,846 products:
+1,779 from the EOS extract and 6,067 from the EOSL extract, sharing no part
+number between them — two different cuts of the catalog, and the vendor states no
+membership rule for either, so both are reported and neither is characterised. `EOS date` becomes `eos` and `EOSL date` becomes `eol` in
+the vendor's own definitions — the last date a product is available for sale,
+and the last date to receive service and support from the vendor's technical
+assistance team. Nothing is derived: the same index page states a five-year
+support window from the end of sale for hardware, and the collector applies it
+nowhere.
+
+Three properties of those files are worth carrying to any future spreadsheet
+source:
+
+1. **The dates are Excel serials, and the vendor documents no encoding.** The
+   reader is therefore explicit rather than lenient: a blank or zero cell is
+   absent, a serial at or below 59 is refused because Excel's 1900 epoch cannot
+   distinguish those days, a serial resolving outside 1990-2100 is refused
+   rather than published, and a non-numeric cell is refused. Each record keeps
+   the raw serial beside the day read, so a future re-derivation can be checked
+   against the vendor's own bytes.
+2. **`EOSM` is published and never mapped.** It is the date firmware and
+   applications stop receiving maintenance releases — a maintenance window, not
+   a stated security-support end — so `eossec` is null everywhere and the cell
+   travels verbatim with a note saying why.
+3. **The file's only version signal is its own `Run date` cell** ("Run date
+   December 16, 2025" on the live extracts). It is required, and a sheet that
+   states none refuses the run — a spreadsheet that reshapes usually re-dates
+   itself first.
+
+The file also contradicts itself about identity: it states `RPS9DC-I` and
+`RPS9DC+I`, which are different hardware that slugifies identically, and one
+product twice with two spellings (`SALSA-Ent-edition-XL` and
+`SALSA-Ent-edition XL`). Nothing is merged — fusing two real SKUs would be worse
+than publishing one product twice — so colliding part numbers take a digest of
+their exact spelling and the group is named in the report for a human.
+
+**NETGEAR** — no-go, with the evidence in `netgear-eos-no-go.md`. Its global
+End-of-Service list is a client-rendered application: 200 and roughly 480 KB of
+markup with zero dates and zero table cells, confirmed on all three lifecycle
+URLs the sitemap lists. The only server-rendered dated table is the AU locale,
+and it fails on scope twice — AU-region SKUs, consumer categories only, no
+business hardware — and on content, since all 45 of its dates are the single
+blanket `09/01/2029`.
 
 ## Why a vendor with no record is not a no-go
 
