@@ -82,6 +82,7 @@ as the contract Main registers (``engine.sources``) and are listed in
 from __future__ import annotations
 
 import re
+import zlib
 from dataclasses import dataclass
 from datetime import date, datetime, timezone
 from pathlib import Path
@@ -1332,3 +1333,734 @@ def import_sitefinity(directory=None):
     return (f"imported {len(releases)} Sitefinity versions from {accounting['rows']} rows "
             f"({accounting['grouped_rows']} grouped); excluded {accounting['control']} control "
             f"row, retained {len(kept)} (data/{SITEFINITY_REPORT})")
+
+
+# --- DataDirect drivers (issue #130) ----------------------------------------
+# One record per driver, not one per family: each driver carries its own release
+# streams and its own retirement, so a family record would flatten 93
+# independent lifecycles into one. Two streams per row are the vendor's own
+# vocabulary (policy section 2.4.3, "At any given time, for a given product,
+# Progress may support up to two release streams, an Active Release Stream, and
+# a Sunset Release Stream"), and a release stream is "a series of backward
+# compatible product releases" whose releases stay supported, so each stream's
+# latest release is a release of that product rather than a separate product.
+DATADIRECT = sources.source("import-progress-datadirect")
+DATADIRECT_URL = DATADIRECT.url
+# The policy and the discontinued-products notice are the vendor's own
+# definitions. The docs host serves them through a viewer page; the raw asset
+# is the document itself, and both are fetched as PDFs.
+DATADIRECT_POLICY_URL = ("https://docs-be.progress.com/bundle/datadirect-pdfs/raw/resource/enus/"
+                         "datadirect-life-cycle-policy.pdf")
+DATADIRECT_DIS_URL = ("https://www.progress.com/docs/default-source/datadirect/"
+                      "progress-datadirect-dis-products-eol---faq_final-02-20-24.pdf")
+DATADIRECT_VERIFIER = DATADIRECT.verifier
+DATADIRECT_REPORT = DATADIRECT.report
+
+# The vendor's own statements, each required verbatim before a date is mapped.
+# The PDF text is fragmented (a PDF stores text in positioned runs, and this
+# document interleaves ``en-US`` locale markers mid-sentence), so a PDF quote is
+# compared with whitespace removed and is stated here as the contiguous fragment
+# the document actually prints.
+DATADIRECT_STREAMS_QUOTE = ("At any given time, for a given product, Progress may support up to two "
+                            "release streams")
+DATADIRECT_ACTIVE_QUOTE = "The latest releases in Active Release Streams are fully supported"
+DATADIRECT_SUNSET_QUOTE = "the most recent release within this sunset release stream is considered in"
+DATADIRECT_RETIRED_QUOTE = "all the prior releases in that release stream are considered in"
+DATADIRECT_SUNSET_PHASE = "TOOL SUNSET Phase"
+DATADIRECT_RETIRED_PHASE = "TOOL RETIRED Phase"
+# The one sentence that decides what a stream retirement date is not: the stream
+# is given a target retirement date, and the latest release inside it is put in
+# the Sunset phase rather than the Retired one, so the date is a stream-level
+# target and not that release's terminal support end.
+DATADIRECT_RETIREMENT_QUOTE = ("target retirement date is set to one year from the date of this "
+                               "event")
+DATADIRECT_INTRO_QUOTE = "from General Availability (GA) to retirement"
+DATADIRECT_THIRD_PARTY_QUOTE = (
+    "The following table provides information for the latest builds of third-party components for "
+    "Progress DataDirect for ODBC Drivers that are built or modified by Progress DataDirect")
+DATADIRECT_THIRD_PARTY_NOTE = "is not a comprehensive list of third-party components"
+DATADIRECT_PLATFORM_QUOTE = ("is not applicable to Progress DataDirect products")
+# The discontinued-products notice names three DIS products and one date, and
+# defines what that date means: "Progress products that have entered End of Life
+# status will no longer be updated."
+DATADIRECT_DIS_QUOTE = ("officially announcing today the End of Life (EOL) of its Data Integration "
+                        "Suite (DIS) products")
+DATADIRECT_DIS_MEANING = "End of Life status will no longer be updated"
+DATADIRECT_DIS_PRODUCTS = ("DataDirect XML Converters", "DataDirect XQuery", "Stylus Studio XML")
+# The notice enumerates them in one sentence; this is that sentence's own list,
+# required verbatim so a notice that drops or reorders a product refuses.
+DATADIRECT_DIS_NAMES = "DataDirect XML Converters, DataDirect XQuery and Stylus Studio XML"
+# The name a notice-sourced release carries in ``upstream.table``, so a record can
+# say which document its one release came from.
+DATADIRECT_NOTICE_TABLE = "discontinued products notice"
+# The notice's own sentence, with whitespace optional throughout: a PDF splits a
+# sentence across positioned text runs, so "effective November 30, 2024" is
+# stored without the spaces between its words.
+DATADIRECT_DIS_DATE = re.compile(r"effective\s*(?P<month>[A-Za-z]+)\s*(?P<day>\d{1,2})"
+                                 r"\s*,\s*(?P<year>\d{4})")
+# The two product tables. The header groups each stream's two columns under
+# ``ACTIVE Release Stream`` / ``SUNSET Release Stream``, and the leaves differ
+# per table, so both leaf sets are declared and matched exactly.
+DATADIRECT_ACTIVE_HEADING = "ACTIVE Release Stream"
+DATADIRECT_SUNSET_HEADING = "SUNSET Release Stream"
+DATADIRECT_COLUMNS = (("Product Name", SUBJECT), ("Category", "category"),
+                      ("ACTIVE Latest Release", UPDATE), ("ACTIVE Latest Release Date", GA),
+                      ("Stream Retirement Date", VENDOR),
+                      ("SUNSET Latest Release", UPDATE), ("SUNSET Latest Release Date", GA))
+# The header groups each stream's columns: ``ACTIVE Release Stream`` spans two
+# leaves (the release and its date) and ``SUNSET Release Stream`` spans three
+# (the stream's retirement date, then the release and its date). The retirement
+# date is the one leaf that names itself, because it belongs to the stream rather
+# than to a release. Both header rows are declared and matched verbatim.
+DATADIRECT_TABLE_LABELS = ("Product Name", "Category", "ACTIVE Release Stream",
+                           "SUNSET Release Stream")
+DATADIRECT_LEAF_LABELS = ("Latest Release", "Latest Release Date", "Stream Retirement Date",
+                          "Latest Release", "Latest Release Date")
+DATADIRECT_GROUP_LEAVES = {DATADIRECT_ACTIVE_HEADING: 2, DATADIRECT_SUNSET_HEADING: 3}
+DATADIRECT_THIRD_PARTY_LABELS = ("ODBC Third-party Component", "Library Version",
+                                 "Build Version", "Build Number", "Release Date")
+# The ``**`` marker the page puts on four OpenAccess SDK rows is the vendor's
+# own footnote; the rows keep it in their cell and the footnote is required.
+DATADIRECT_FOOTNOTE_MARK = "**"
+DATADIRECT_FOOTNOTE_QUOTE = ("OpenAccess SDK 9.0 is supported only on Windows and Linux (both "
+                             "32-bit and 64-bit), and on AIX (64-bit only)")
+# A DataDirect date cell, at the precision the vendor writes. This page states
+# six shapes and they are all accepted verbatim from the table:
+# ``03-Jun-26``, ``02-Sep-26`` (day, two-digit year), ``01-July-25`` (day, spelled
+# month), ``1-May-23`` (unpadded day), ``10-Jun-2025``/``07-Sep-2026`` (day,
+# four-digit year), ``May-23`` (month only). ``May-23`` states a month and
+# publishes a month; it is never widened into a day (AGENTS.md rule 4).
+DATADIRECT_DAY = re.compile(r"(?P<day>\d{1,2})-(?P<month>[A-Za-z]+)-(?P<year>\d{2}|\d{4})\Z")
+DATADIRECT_MONTH = re.compile(r"(?P<month>[A-Za-z]+)-(?P<year>\d{2}|\d{4})\Z")
+# Progress writes two-digit years throughout this page, so a year is read in its
+# own century window: 20xx is the only century a 2026-dated vendor page can mean
+# for a driver release, and a two-digit year is never guessed into the 1900s.
+DATADIRECT_CENTURY = 2000
+
+
+def pdf_text(payload, where):
+    """The text layer of a text-based PDF, read with the standard library only.
+
+    Progress serves its policy and its EOL notice as PDFs, and this repository
+    has no PDF dependency, so the reader pulls the uncompressed text-showing
+    operators. It is deliberately narrow: a PDF this reader cannot read yields no
+    text, and every mapping below requires the vendor's own sentence to be
+    present, so a reshaped or image-only document refuses the run rather than
+    publishing a date nothing on the page supports.
+    """
+    if not isinstance(payload, bytes) or not payload[:5].startswith(b"%PDF"):
+        raise ValueError(f"{where}: the document is not a PDF (it is served through the "
+                         f"documentation viewer, not as the asset)")
+    out = []
+    for match in re.finditer(rb"stream\r?\n", payload):
+        start = match.end()
+        end = payload.find(b"endstream", start)
+        if end < 0:
+            continue
+        try:
+            raw = zlib.decompress(payload[start:end])
+        except zlib.error:
+            continue
+        if b"Tj" not in raw and b"TJ" not in raw:
+            continue
+        for shown in re.finditer(rb"\((?:\\.|[^()\\])*\)", raw):
+            text = re.sub(rb"\\([()\\])", rb"\1", shown.group(0)[1:-1])
+            text = text.replace(b"\\n", b" ").replace(b"\\r", b" ").replace(b"\\t", b" ")
+            if text.strip():
+                out.append(text.decode("latin-1"))
+    joined = "".join(out)
+    if not joined.strip():
+        raise ValueError(f"{where}: the PDF states no readable text layer")
+    return joined
+
+
+def _pdf_quote(text, quote, where):
+    """Require a PDF quote, comparing with whitespace removed.
+
+    A PDF stores text in positioned runs, so a sentence is split across operators
+    and the document's own ``en-US`` locale markers land inside it. Stripping all
+    whitespace compares the sentence as printed without depending on where the
+    runs break; a sentence the document no longer states still fails.
+    """
+    if re.sub(r"\s+", "", quote) not in re.sub(r"\s+", "", text):
+        raise ValueError(f"{where}: the document no longer states {quote!r}")
+
+
+def datadirect_date(text, where):
+    """One DataDirect date cell at the precision the vendor writes.
+
+    Six shapes are stated on this page and all six are accepted; a month-only
+    cell publishes a month and is never widened into a day, and a day the
+    calendar does not have refuses rather than passing as an unknown.
+    """
+    value = _fold(text)
+    if value.lower() in NO_DATE:
+        return None
+    match = DATADIRECT_DAY.fullmatch(value)
+    if match:
+        month = _month(match.group("month"), where)
+        year = int(match.group("year"))
+        if year < 100:
+            year += DATADIRECT_CENTURY
+        try:
+            return date(year, month, int(match.group("day"))).isoformat()
+        except ValueError:
+            raise ValueError(f"{where}: {value!r} is not a real calendar day") from None
+    match = DATADIRECT_MONTH.fullmatch(value)
+    if match:
+        year = int(match.group("year"))
+        if year < 100:
+            year += DATADIRECT_CENTURY
+        return f"{year:04d}-{_month(match.group('month'), where):02d}"
+    raise ValueError(f"{where}: unrecognized DataDirect date {value!r}")
+
+
+def _datadirect_identity(name, where):
+    """A driver identity in the vendor's own spelling, minus its marks.
+
+    The page writes ``Progress® DataDirect® XML Converters®``; the registered
+    mark is decoration on a name, and the notice that must be reconciled against
+    it writes the same product as ``DataDirect XML Converters``. Both reduce to
+    the same key, and the name the page prints stays verbatim in the record.
+    """
+    value = _fold(name).replace("®", "").replace("™", "").replace("Â", "").strip()
+    value = re.sub(r"\s+", " ", value)
+    if value.lower().startswith("progress "):
+        value = value[len("progress "):]
+    value = re.sub(r"^datadirect\s+", "", value, flags=re.I).strip()
+    if not value:
+        raise ValueError(f"{where}: row states no driver name")
+    return value
+
+
+def _datadirect_labels(block, where):
+    """One DataDirect table's seven columns, flattened to one label each.
+
+    ``Product Name`` and ``Category`` are stated once across both header rows, the
+    ACTIVE group carries two leaves and the SUNSET group three, so the flattened
+    order is fixed by the group widths. Every header cell's span and both rows'
+    labels are compared verbatim: a renamed leaf, a reordered group, or a stream
+    that gained or lost a column refuses the table instead of shifting a date
+    into another milestone.
+    """
+    headers, start = header_rows(block, where)
+    if len(headers) != 2:
+        raise ValueError(f"{where}: expected a grouped header with a leaf row, found "
+                         f"{len(headers)} header row(s)")
+    top, leaves = headers[0], headers[1]
+    if tuple(_fold(cell["text"]) for cell in top) != DATADIRECT_TABLE_LABELS:
+        raise ValueError(f"{where}: the table's grouped header changed to "
+                         f"{[_fold(cell['text']) for cell in top]!r}")
+    if tuple(_fold(cell["text"]) for cell in leaves) != DATADIRECT_LEAF_LABELS:
+        raise ValueError(f"{where}: the stream columns changed to "
+                         f"{[_fold(cell['text']) for cell in leaves]!r}")
+    if any(cell["span"] != (1, 1) for cell in leaves):
+        raise ValueError(f"{where}: a leaf column carries a span")
+    names = dict(zip(DATADIRECT_TABLE_LABELS, top))
+    # ``span`` is (rowspan, colspan): the two subject columns are stated once
+    # across both header rows, and each stream group covers its own leaves.
+    for name in ("Product Name", "Category"):
+        if names[name]["span"] != (2, 1):
+            raise ValueError(f"{where}: {name!r} spans {names[name]['span']} rather than the two "
+                             f"header rows")
+    for name, width in DATADIRECT_GROUP_LEAVES.items():
+        if names[name]["span"] != (1, width):
+            raise ValueError(f"{where}: {name!r} spans {names[name]['span']} rather than its "
+                             f"{width} columns")
+    labels = (("Product Name", "Product Name"), ("Category", "Category"),
+              ("ACTIVE", 0, 2), ("SUNSET", 2, 5))
+    flat = ["Product Name", "Category"]
+    for group, begin, end in labels[2:]:
+        for offset in range(begin, end):
+            leaf = _fold(leaves[offset]["text"])
+            # The retirement date is the stream's own date, not a release's, so
+            # it keeps the leaf's own name; the other four name their release.
+            flat.append(leaf if leaf == "Stream Retirement Date"
+                        else f"{group} {leaf}")
+    if tuple(flat) != tuple(name for name, _role in DATADIRECT_COLUMNS):
+        raise ValueError(f"{where}: the flattened columns {flat!r} no longer match the declared "
+                         f"table")
+    return tuple(flat), start, flat
+
+
+def _datadirect_row(cells, where, raw=None):
+    """One table row as ``(name, category, active, sunset, retirement, cells)``.
+
+    ``active`` and ``sunset`` are each ``(version, released)`` or ``None`` when the
+    vendor prints ``n/a`` for that stream. A stream is present when it states a
+    version, and a version without a date is a release the vendor dated not at
+    all, which publishes a null ``ga`` rather than a borrowed one.
+    """
+    name = _fold(cells["Product Name"])
+    if not name:
+        raise ValueError(f"{where}: row states no driver name")
+    category = _fold(cells["Category"])
+    retirement = datadirect_date(cells["Stream Retirement Date"],
+                                 f"{where} Stream Retirement Date")
+    active = sunset = None
+    for stream, key in (("ACTIVE", "active"), ("SUNSET", "sunset")):
+        version = _fold(cells[f"{stream} Latest Release"])
+        if not version or version.lower() in NO_DATE:
+            continue
+        released = datadirect_date(cells[f"{stream} Latest Release Date"],
+                                   f"{where} {stream} Latest Release Date")
+        if key == "active":
+            active = (version, released)
+        else:
+            sunset = (version, released)
+    if active is None and sunset is None:
+        raise ValueError(f"{where}: {name!r} states no release in either stream")
+    return name, category, active, sunset, retirement, dict(raw or cells)
+
+
+def _datadirect_spec(heading):
+    return Table(heading, DATADIRECT_COLUMNS)
+
+
+DATADIRECT_CURRENT = _datadirect_spec("current release streams")
+DATADIRECT_END_OF_SUPPORT = _datadirect_spec("end-of-support release streams")
+
+
+def parse_datadirect(html, policy_text, dis_text):
+    """The DataDirect life-cycle page as ``(drivers, excluded, accounting)``.
+
+    ``drivers`` is every stated driver keyed by its own identity, each with the
+    two releases its streams name and the stream retirement date the vendor
+    states. The mapping is the page's own vocabulary, and the two decisions that
+    could have gone wrong are pinned by the policy text:
+
+    * A stream's ``Latest Release Date`` is that release's own date, so it is the
+      only column that becomes a milestone. The page frames the stages it tracks
+      as running "from General Availability (GA) to retirement".
+    * ``Stream Retirement Date`` becomes no milestone at all. The policy gives it
+      a stream-level meaning ("its target retirement date is set to one year from
+      the date of this event") and then puts the latest release *inside* that
+      stream into the Sunset phase rather than the Retired one, with "all the
+      prior releases in that release stream" in the Retired phase. A sunset
+      release is therefore still in a supported phase, and the stream's target
+      date is not that release's terminal support end. It is retained verbatim as
+      the vendor's own cell.
+    """
+    doc = parse_document(html)
+    where = "DataDirect Product Life Cycle"
+    for quote in (DATADIRECT_INTRO_QUOTE, DATADIRECT_THIRD_PARTY_QUOTE,
+                  DATADIRECT_THIRD_PARTY_NOTE, DATADIRECT_FOOTNOTE_QUOTE):
+        require_quote(doc.page_text, quote, where)
+    for quote in (DATADIRECT_STREAMS_QUOTE, DATADIRECT_ACTIVE_QUOTE, DATADIRECT_SUNSET_QUOTE,
+                  DATADIRECT_RETIRED_QUOTE, DATADIRECT_SUNSET_PHASE, DATADIRECT_RETIRED_PHASE,
+                  DATADIRECT_RETIREMENT_QUOTE, DATADIRECT_PLATFORM_QUOTE):
+        _pdf_quote(policy_text, quote, "DataDirect Product Life Cycle Policy")
+
+    current, retired = _datadirect_tables(doc, where)
+    drivers, accounting = {}, []
+    for label, seen in ((DATADIRECT_CURRENT.heading, current),
+                        (DATADIRECT_END_OF_SUPPORT.heading, retired)):
+        for name, category, active, sunset, retirement, cells in seen:
+            key = _datadirect_identity(name, f"{where} {label} {name}")
+            if key in drivers:
+                raise ValueError(f"{where}: {name!r} is stated in both product tables")
+            drivers[key] = {"name": name, "category": category, "active": active,
+                            "sunset": sunset, "retirement": retirement, "cells": cells,
+                            "table": label}
+        accounting.append({"table": label, "rows": len(seen),
+                           "drivers": len({_datadirect_identity(row[0], where) for row in seen})})
+
+    # The page marks four OpenAccess SDK rows with ``**`` and footnotes the mark
+    # with a platform limitation. The mark is the vendor's only link between a
+    # row and that limitation, so a page that keeps the footnote but drops the
+    # mark has stated a limitation nothing refers to, and the run refuses.
+    marked = sorted(name for name, driver in drivers.items()
+                    if DATADIRECT_FOOTNOTE_MARK in driver["name"])
+    if not marked:
+        raise ValueError(f"{where}: no driver carries the {DATADIRECT_FOOTNOTE_MARK!r} footnote "
+                         f"mark, though the page still states the footnote it belongs to")
+    third_party = _datadirect_third_party(doc, where)
+    return drivers, third_party, accounting + [{"table": "platform footnote", "rows": len(marked),
+                                                "drivers": 0,
+                                                "marked": marked,
+                                                "quote": DATADIRECT_FOOTNOTE_QUOTE}]
+
+
+def _datadirect_tables(doc, where):
+    """The page's two product tables, as ``(current, end_of_support)`` rows.
+
+    The two tables have the same shape and the page gives neither a caption nor a
+    label, so they are taken in document order — the current release streams
+    first, the end-of-support streams second — and each one's own grouped header
+    is matched exactly. A page that gained or lost a product table changes the
+    count, so the count itself is required rather than inferred.
+    """
+    blocks = [block for block in doc.blocks
+              if tuple(_fold(cell["text"]) for cell in block["rows"][0]) == DATADIRECT_TABLE_LABELS]
+    if len(blocks) != 2:
+        raise ValueError(f"{where}: the page states {len(blocks)} driver tables, expected the two "
+                         f"it publishes (current release streams, then end-of-support release "
+                         f"streams)")
+    return (_datadirect_rows(blocks[0], where, DATADIRECT_CURRENT),
+            _datadirect_rows(blocks[1], where, DATADIRECT_END_OF_SUPPORT))
+
+
+def _datadirect_rows(block, where, table):
+    labels, start, _roles = _datadirect_labels(block, where)
+    body, controls = spanned_rows(block, labels, start)
+    if controls:
+        raise ValueError(f"{where}: the table states unrecognized control row(s) {controls}")
+    rows = []
+    for index, cells in enumerate(data_rows(body, where, table, labels), 1):
+        rows.append(_datadirect_row(cells, f"{where} {table} row {index}", cells))
+    return rows
+
+
+def _datadirect_third_party(doc, where):
+    """The third-party component table, excluded row by row.
+
+    Its six rows are ICU, Libcurl, OpenLDAP and OpenSSL builds — components
+    Progress's drivers bundle, not Progress products, which is what the page's
+    own sentence says and what its own note limits ("not a comprehensive list").
+    They are read, counted and named rather than published as driver lifecycles.
+    """
+    blocks = [block for block in doc.blocks if tables.th_header(block)]
+    third = [block for block in blocks
+             if tuple(_fold(cell["text"]) for cell in block["rows"][0])
+             == DATADIRECT_THIRD_PARTY_LABELS]
+    if not third:
+        raise ValueError(f"{where}: the third-party component table is absent")
+    excluded = []
+    for block in third:
+        for index, row in enumerate(block["rows"][1:], 1):
+            cells = [_fold(cell["text"]) for cell in row]
+            excluded.append({"table": "ODBC Third-party Components Compatibility Matrix",
+                             "context": "third-party component", "rows": 1,
+                             "component": cells[0], "library_version": cells[1],
+                             "build": cells[2], "build_number": cells[3],
+                             "release_date": datadirect_date(cells[4], f"{where} third-party "
+                                                                          f"row {index}"),
+                             "reason": "a third-party component bundled into Progress DataDirect "
+                                       "ODBC drivers, not a Progress product lifecycle: the "
+                                       "page's own sentence scopes this table to 'the latest "
+                                       "builds of third-party components for Progress DataDirect "
+                                       "for ODBC Drivers that are built or modified by Progress "
+                                       "DataDirect', and its own note limits it to a "
+                                       "non-comprehensive list"})
+    return excluded
+
+
+def _datadirect_dis(dis_text, where):
+    """The discontinued-products notice as ``(products, eol, notice)``.
+
+    The notice is the vendor's own terminal date for three Data Integration
+    Suite products, and it is the only place the vendor states one. Two of the
+    three appear in the life-cycle table as well, so both dates are kept: the
+    table's stream retirement target and the announced end of life are different
+    milestones and the notice's date is the terminal one.
+    """
+    for quote in (DATADIRECT_DIS_QUOTE, DATADIRECT_DIS_MEANING, DATADIRECT_DIS_NAMES):
+        _pdf_quote(dis_text, quote, where)
+    dated = DATADIRECT_DIS_DATE.search(dis_text)
+    if not dated:
+        raise ValueError(f"{where}: the notice states no effective date for the EOL")
+    month = _month(dated.group("month"), where)
+    eol = date(int(dated.group("year")), month, int(dated.group("day"))).isoformat()
+    notice = {
+        "title": "Progress DataDirect DIS Products End of Life Frequently Asked Questions",
+        "date_stated": "February 20, 2024",
+        "products": list(DATADIRECT_DIS_PRODUCTS),
+        "eol": eol,
+        "definition": DATADIRECT_DIS_MEANING,
+        "quote": DATADIRECT_DIS_QUOTE,
+    }
+    return notice, eol
+
+
+def _datadirect_releases(driver, eol, where):
+    """The releases one driver states, each carrying only what the page dates.
+
+    A release's ``ga`` is its own ``Latest Release Date``, read from the vendor's
+    raw cell. The stream retirement date belongs to the stream, not to a release,
+    so it travels on the sunset release as the vendor's own cell and fills
+    nothing. A driver named in the discontinued notice takes the announced
+    terminal date, and only that date, as its ``eol``.
+
+    Every cell is kept in the spelling the page prints (``03-Jun-26``,
+    ``01-July-25``, ``May-23``), so the offline validator re-derives each
+    milestone from the vendor's own bytes rather than from a value this module
+    wrote.
+    """
+    raw = driver["cells"]
+    releases = []
+    for stream, prefix in (("active", "ACTIVE"), ("sunset", "SUNSET")):
+        stated = driver[stream]
+        if stated is None:
+            continue
+        version, _released = stated
+        cells = {f"{prefix} Latest Release": raw[f"{prefix} Latest Release"],
+                 f"{prefix} Latest Release Date": raw[f"{prefix} Latest Release Date"]}
+        if stream == "sunset" and driver["retirement"]:
+            cells["Stream Retirement Date"] = raw["Stream Retirement Date"]
+        release = _release(version, version, _milestones(stated[1], eol), cells, driver["table"])
+        release["upstream"]["stream"] = (DATADIRECT_ACTIVE_HEADING if stream == "active"
+                                         else DATADIRECT_SUNSET_HEADING)
+        if stream == "sunset" and driver["retirement"]:
+            release["upstream"]["retirement_note"] = (
+                "the vendor's target retirement date for this release stream, not this release's "
+                "terminal support end: the policy sets it one year after the stream is "
+                "reclassified, and puts the stream's most recent release in the Sunset phase while "
+                "the prior releases enter the Retired phase, so the date is retained as the "
+                "vendor's own cell and fills no milestone")
+        if eol:
+            # The notice's date is a vendor-stated cell like any other, so the
+            # offline validator re-derives ``eol`` from it.
+            cells["announced end of life"] = eol
+            release["upstream"]["eol_source"] = (
+                "the vendor's discontinued-products notice, which states the product's terminal "
+                "end of life and defines it as the date from which the product is no longer "
+                "updated; it is kept alongside the stream retirement target because the two are "
+                "different milestones")
+        releases.append(release)
+    if not releases:
+        raise ValueError(f"{where}: {driver['name']!r} states no release")
+    return releases
+
+
+def _datadirect_id(key):
+    """The record id for a driver, in the catalog's own id grammar.
+
+    A driver name carries punctuation the schema's id does not allow — ``Aha!
+    JDBC`` and ``SequeLink® 6.0 JDBC Socket 32-bit`` — so it is folded to
+    lowercase words joined by single hyphens. The id is permanent, so the
+    collision check below refuses rather than letting two drivers share one.
+    """
+    slug = re.sub(r"-+", "-", re.sub(r"[^a-z0-9]+", "-", key.lower())).strip("-")
+    if not slug:
+        raise ValueError(f"{key!r} states no id characters the catalog allows")
+    return f"datadirect-{slug}"
+
+
+def datadirect_record(key, driver, releases, eol, checked):
+    """One published driver record."""
+    labels = {"ga": "Latest Release Date"}
+    if eol:
+        labels["eol"] = "the vendor's discontinued-products notice"
+    if driver["retirement"]:
+        labels["stream retirement"] = "Stream Retirement Date (vendor's own cell, no milestone)"
+    # The name is the one the page prints, verbatim: the vendor states some
+    # drivers with its own mark ("Progress® DataDirect® XML Converters®") and
+    # others bare ("Amazon Redshift JDBC"), and prefixing either one would invent
+    # a product name the vendor does not use.
+    record = _record(_datadirect_id(key), driver["name"], releases,
+                     DATADIRECT_URL, DATADIRECT_VERIFIER, checked, labels=labels,
+                     links={"html": DATADIRECT_URL, "life cycle policy": DATADIRECT_POLICY_URL,
+                            "discontinued products notice": DATADIRECT_DIS_URL})
+    if driver["category"]:
+        record["labels"]["category"] = driver["category"]
+    return record
+
+
+def _announced(cells, driver_id, release):
+    """The end-of-life date a release's own cells announce, or ``None``.
+
+    The notice's date is re-derived from the cell this module wrote for it rather
+    than from a second copy, so a hand-edited milestone and a hand-edited cell
+    cannot agree on a date the notice does not state. The notice itself is
+    required verbatim on every run, and its full text and date are published in
+    this source's report.
+    """
+    stated = cells.get("announced end of life")
+    if stated is None or not _fold(stated):
+        return None
+    value = _fold(stated)
+    if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", value):
+        raise ValueError(f"{driver_id}/{release['id']}: the announced end-of-life cell {value!r} "
+                         f"is not a day the notice stated")
+    return value
+
+
+def validate_datadirect(record):
+    """Rebuild one driver record from its own stored cells, offline.
+
+    Every milestone is re-derived from the cells the record carries, so a
+    hand-edited date fails the gate instead of being published. The two rules
+    that are easy to break by hand are checked explicitly: a stream retirement
+    target may never become a milestone, and a sunset release may never claim a
+    date its own cell does not state.
+    """
+    driver_id = record["id"]
+    if not driver_id.startswith("datadirect-"):
+        raise ValueError(f"{record['id']} is not a DataDirect driver record")
+    _check_identity(record, driver_id, DATADIRECT_VERIFIER, DATADIRECT_URL)
+    for release in record["releases"]:
+        _check_retained(release)
+        cells = release["upstream"].get("cells")
+        if not isinstance(cells, dict) or not cells:
+            raise ValueError(f"{driver_id}/{release['id']} carries no vendor cells")
+        stream = release["upstream"].get("stream")
+        table = release["upstream"].get("table")
+        if table == DATADIRECT_NOTICE_TABLE:
+            # A product the notice names and the life cycle page does not list.
+            # It has no stream and no version, so the only thing to re-derive is
+            # the announced date, which must be the cell the notice produced.
+            if stream is not None:
+                raise ValueError(f"{driver_id}/{release['id']} claims a release stream it does "
+                                 f"not have: the notice names no stream")
+            if release["id"] != _fold(cells.get("product", "")):
+                raise ValueError(f"{driver_id}/{release['id']} does not carry the notice's own "
+                                 f"product name")
+            if release["milestones"] != _milestones(None, _announced(cells, driver_id, release)):
+                raise ValueError(f"{driver_id}/{release['id']} milestones contradict the notice's "
+                                 f"own end-of-life date")
+            continue
+        if stream not in (DATADIRECT_ACTIVE_HEADING, DATADIRECT_SUNSET_HEADING):
+            raise ValueError(f"{driver_id}/{release['id']} does not name the stream it came from")
+        prefix = "ACTIVE" if stream == DATADIRECT_ACTIVE_HEADING else "SUNSET"
+        stated_version = _fold(cells.get(f"{prefix} Latest Release", ""))
+        if stated_version != release["id"]:
+            raise ValueError(f"{driver_id}/{release['id']} does not match its own version cell")
+        expected_ga = datadirect_date(cells.get(f"{prefix} Latest Release Date", ""),
+                                      f"{driver_id}/{release['id']}")
+        if release["milestones"]["ga"] != expected_ga:
+            raise ValueError(f"{driver_id}/{release['id']} claims a ga its own cell does not state")
+        if release["milestones"]["eos"] is not None or release["milestones"]["eossec"] is not None:
+            raise ValueError(f"{driver_id}/{release['id']} claims an eos or eossec this source "
+                             f"never states")
+        if release["milestones"]["eol"] != _announced(cells, driver_id, release):
+            raise ValueError(f"{driver_id}/{release['id']} claims an eol its own cells do not "
+                             f"state")
+        # The stream retirement target is the trap this source sets: it is a real
+        # vendor date, it sits in a terminal-looking column, and it is not a
+        # milestone. A record that fills eol from it is rejected here.
+        retirement = cells.get("Stream Retirement Date")
+        if retirement is not None:
+            if datadirect_date(retirement, f"{driver_id}/{release['id']}") is None:
+                raise ValueError(f"{driver_id}/{release['id']} carries a retirement cell that "
+                                 f"states no date")
+            if release["milestones"]["eol"] == retirement and not eol:
+                raise ValueError(f"{driver_id}/{release['id']} fills eol from the stream retirement "
+                                 f"target, which is not a support end")
+        if _announced(cells, driver_id, release) and not release["upstream"].get("eol_source"):
+            raise ValueError(f"{driver_id}/{release['id']} claims an announced eol without naming "
+                             f"the notice that states it")
+
+
+def import_datadirect(directory=None):
+    """Fetch the page, the policy and the notice; publish one record per driver."""
+    root = Path(directory) if directory is not None else ROOT / "data"
+    checked = _now()
+    committed = transaction.committed_product_records(
+        root, DATADIRECT_VERIFIER, validate_datadirect, "Progress DataDirect driver")
+    # The page's HTTP header declares ISO-8859-1 while its bytes are UTF-8, so
+    # the default decode turns every registered mark into "Â®". The bytes are
+    # authoritative and the encoding is stated here.
+    drivers, excluded, accounting = parse_datadirect(
+        net.get_text(DATADIRECT_URL, encoding="utf-8"),
+        pdf_text(net.get(DATADIRECT_POLICY_URL).content,
+                                               "DataDirect Product Life Cycle Policy"),
+        pdf_text(net.get(DATADIRECT_DIS_URL).content, "DataDirect DIS products notice"))
+    notice, announced = _datadirect_dis(
+        pdf_text(net.get(DATADIRECT_DIS_URL).content, "DataDirect DIS products notice"), "DataDirect")
+
+    records, retained, pdf_only = [], [], []
+    identities = {}
+    for key in sorted(drivers):
+        product_id = _datadirect_id(key)
+        if product_id in identities:
+            raise ValueError(f"DataDirect: {key!r} and {identities[product_id]!r} both publish as "
+                             f"{product_id}; the ids would collide and renumbering a published "
+                             f"id breaks its permalink")
+        identities[product_id] = key
+        driver = drivers[key]
+        eol = announced if _datadirect_identity(driver["name"], key) in {
+                _datadirect_identity(name, name) for name in DATADIRECT_DIS_PRODUCTS} else None
+        releases = _datadirect_releases(driver, eol, "DataDirect")
+        rows, kept = combine(releases, committed.get(product_id), key)
+        record = datadirect_record(key, driver, rows, eol, checked)
+        validate_datadirect(record)
+        records.append(record)
+        retained.extend(kept)
+    for name in DATADIRECT_DIS_PRODUCTS:
+        key = _datadirect_identity(name, name)
+        if key in drivers:
+            continue
+        # The notice names a product the life cycle page does not list. It is
+        # published from the notice, with the notice's own date, and named as a
+        # product that appears only there.
+        releases = [_release(name, name, _milestones(None, announced),
+                             {"product": name, "announced end of life": announced},
+                             DATADIRECT_NOTICE_TABLE)]
+        releases[0]["upstream"]["eol_source"] = (
+            "the vendor's discontinued-products notice, the only place the vendor states this "
+            "product's end of life; the notice names no version, so the product itself is the "
+            "unit the date belongs to")
+        releases[0]["upstream"]["stream"] = None
+        record = _record(_datadirect_id(key), name, releases,
+                         DATADIRECT_URL, DATADIRECT_VERIFIER, checked,
+                         labels={"eol": "the vendor's discontinued-products notice"},
+                         links={"html": DATADIRECT_URL, "discontinued products notice":
+                                DATADIRECT_DIS_URL})
+        validate_datadirect(record)
+        records.append(record)
+        pdf_only.append(name)
+
+    # Every source row the page states is either a published driver or a named
+    # exclusion. The notice-only products are not page rows at all: they come from
+    # a second document, so they are counted beside the page and never inside it.
+    driver_rows = sum(entry["rows"] for entry in accounting
+                      if entry["table"] != "platform footnote")
+    published = sum(entry["drivers"] for entry in accounting
+                    if entry["table"] != "platform footnote")
+    excluded_rows = sum(row["rows"] for row in excluded)
+    page_rows = driver_rows + excluded_rows
+    if page_rows != published + excluded_rows:
+        raise ValueError(f"DataDirect row accounting does not reconcile: {page_rows} page rows, "
+                         f"{published} drivers, {excluded_rows} excluded")
+    report = {
+        "verifier": DATADIRECT_VERIFIER, "checked_at": checked,
+        "source_url": DATADIRECT_URL, "policy_url": DATADIRECT_POLICY_URL,
+        "discontinued_url": DATADIRECT_DIS_URL,
+        "record_scope": ("Progress DataDirect drivers: one software record per driver the "
+                         "vendor's life cycle page states, plus the products named only in its "
+                         "discontinued-products notice, at the day or month precision each cell "
+                         "states"),
+        "rows": {"seen": page_rows, "published": published, "retained": len(retained),
+                 "excluded": excluded_rows, "notice_only": len(pdf_only)},
+        "tables": accounting + [{"table": "ODBC Third-party Components Compatibility Matrix",
+                                 "rows": excluded_rows, "drivers": 0}],
+        "excluded": excluded, "retained": retained,
+        "notice_only": pdf_only, "end_of_life_notice": notice,
+        "total_records": len(records),
+        "limitations": [
+            "A stream's Latest Release Date is that release's own date and is the only column "
+            "that becomes a milestone. The page frames the stages it tracks as running from "
+            "General Availability (GA) to retirement.",
+            "Stream Retirement Date becomes no milestone. The policy sets it one year after a "
+            "stream is reclassified and then puts that stream's most recent release in the Sunset "
+            "phase, with the prior releases in the Retired phase, so a sunset release is still in "
+            "a supported phase and the stream's target date is not its terminal support end. The "
+            "cell is retained verbatim.",
+            "The DataDirect page states six date shapes in one column and all six are accepted: a "
+            "two-digit year, a four-digit year, a spelled month, an unpadded day, a padded day, "
+            "and a month with no day at all. The month-only cell publishes a month and is never "
+            "widened into a day. An unrecognized shape refuses the run.",
+            "The table's stream retirement target and the notice's announced end of life are "
+            "different milestones and both are kept. The notice is the only place the vendor "
+            "states a terminal date, and it defines that date as the point after which the "
+            "product is no longer updated; it is the only eol this source publishes.",
+            "The third-party component table is excluded row by row: it lists the builds of ICU, "
+            "Libcurl, OpenLDAP and OpenSSL that Progress's ODBC drivers bundle, which the page's "
+            "own sentence scopes to third-party components and whose own note limits it to a "
+            "non-comprehensive list. They are not Progress product lifecycles.",
+            "The two product tables carry the same shape and the page gives neither a caption nor "
+            "a label, so they are read in document order and the count of two is required. A "
+            "driver stated in both would refuse the run rather than be published twice.",
+            "A driver's ``**`` platform footnote stays on the driver name that carries it, the "
+            "footnote text is required verbatim, and the run refuses if no driver still carries "
+            "the mark — the mark is the vendor's only link between a row and its platform "
+            "limitation, and a page keeping the footnote while dropping every mark would state a "
+            "limitation nothing refers to. The marked drivers are named in the report.",
+            "The vendor states no publication cadence for this page. It carries its own 'Last "
+            "Updated' date, which the refresh records but does not interpret.",
+        ],
+    }
+    transaction.publish_product_records(records, report, root, DATADIRECT_REPORT)
+    return (f"imported {len(records)} DataDirect drivers from {page_rows} page rows; excluded "
+            f"{excluded_rows} third-party component rows, retained {len(retained)}, published "
+            f"{len(pdf_only)} notice-only products (data/{DATADIRECT_REPORT})")

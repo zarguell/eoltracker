@@ -118,6 +118,13 @@ SOLARWINDS_ATTRIBUTION = ("SolarWinds product lifecycle published directly by So
                           "the terminal support end, and the EoL announcement and EoE effective "
                           "date stay the vendor's own cells because SolarWinds never states them "
                           "as a support end.")
+PROGRESS_DATADIRECT_LIFECYCLE = ("https://docs.progress.com/bundle/datadirect-product-life-cycle/"
+                                "page/topics/datadirect_life_cycle/"
+                                "datadirect-product-life-cycle.html")
+PROGRESS_DATADIRECT_POLICY = ("https://docs-be.progress.com/bundle/datadirect-pdfs/raw/resource/"
+                              "enus/datadirect-life-cycle-policy.pdf")
+PROGRESS_DATADIRECT_DIS = ("https://www.progress.com/docs/default-source/datadirect/"
+                           "progress-datadirect-dis-products-eol---faq_final-02-20-24.pdf")
 PROGRESS_ATTRIBUTION = ("Progress Software product lifecycle published directly by Progress's own "
                         "product life cycle guides; the Active and Retired columns become general "
                         "availability and end of life at the precision the vendor's own cell "
@@ -611,6 +618,26 @@ SOURCES = (
         attribution=PROGRESS_ATTRIBUTION,
         validator="engine.progress.validate_corticon",
         report="progress-corticon-import.json",
+    ),
+    Source(
+        id="import-progress-datadirect",
+        module="engine.progress",
+        entry="import_datadirect",
+        verifier="deterministic-progress-datadirect",
+        category="software",
+        name="Progress DataDirect drivers",
+        url=PROGRESS_DATADIRECT_LIFECYCLE,
+        # The life cycle page carries the release streams. The policy states what
+        # a release stream is and that a stream's target retirement date leaves
+        # its most recent release in the supported Sunset phase, and the
+        # discontinued-products notice is the only place the vendor states a
+        # terminal end of life for the DIS products. Both are required verbatim.
+        pages=(Page(PROGRESS_DATADIRECT_LIFECYCLE, "DataDirect product life cycle"),
+               Page(PROGRESS_DATADIRECT_POLICY, "DataDirect Product Life Cycle Policy Guide"),
+               Page(PROGRESS_DATADIRECT_DIS, "DataDirect DIS products end-of-life notice")),
+        attribution=PROGRESS_ATTRIBUTION,
+        validator="engine.progress.validate_datadirect",
+        report="progress-datadirect-import.json",
     ),
     Source(
         id="import-progress-whatsup-gold",
