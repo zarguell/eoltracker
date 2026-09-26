@@ -744,25 +744,36 @@ CISA_EOS_LIST = ("This list will include the IT product name, version number, an
 # record's own vendor field, so a vendor whose catalog name differs (Brocade
 # under Broadcom) is matched by every name it is known by rather than by a
 # substring that would also catch an unrelated vendor.
+# A target is (name, vendor aliases, product-line fragment). The fragment is
+# None where a whole vendor is the class — Palo Alto builds both firewalls and
+# VPN gateways, and Cisco both routers and controllers — and a phrase where only
+# one product line is, so "Barracuda" cannot fill a load-balancer class with
+# every one of the vendor's firewalls and web firewalls.
 PRIORITY_TARGETS = (
     {"class": "Firewalls and network security appliances",
-     "vendors": (("Fortinet", ("fortinet",)), ("Palo Alto Networks", ("paloalto",)),
-                 ("Check Point", ("checkpoint",)), ("WatchGuard", ("watchguard",)))},
+     "vendors": (("Fortinet", ("fortinet",), None),
+                 ("Palo Alto Networks", ("paloalto",), None),
+                 ("Check Point", ("checkpoint",), None),
+                 ("WatchGuard", ("watchguard",), None))},
     {"class": "Load balancers and application delivery controllers",
-     "vendors": (("F5", ("f5",)), ("Citrix NetScaler", ("citrix",)))},
+     "vendors": (("F5", ("f5",), None),
+                 ("Citrix NetScaler", ("citrix",), None),
+                 ("Barracuda Load Balancer ADC", ("barracuda",), "load balancer"))},
     {"class": "VPN gateways and remote access",
-     "vendors": (("Cisco ASA and AnyConnect", ("cisco",)), ("Ivanti", ("ivanti",)),
-                 ("Palo Alto GlobalProtect", ("paloalto",)), ("Citrix NetScaler Gateway", ("citrix",)))},
+     "vendors": (("Cisco ASA and AnyConnect", ("cisco",), "asa"),
+                 ("Ivanti", ("ivanti",), None),
+                 ("Palo Alto GlobalProtect", ("paloalto",), "firewall"),
+                 ("Citrix NetScaler Gateway", ("citrix",), None))},
     {"class": "Routers and switches",
-     "vendors": (("Juniper Networks", ("juniper",)), ("Cisco", ("cisco",)),
-                 ("Extreme Networks", ("extreme",)), ("Netgear", ("netgear",)),
-                 ("MikroTik", ("mikrotik",)))},
+     "vendors": (("Juniper Networks", ("juniper",), None), ("Cisco", ("cisco",), None),
+                 ("Extreme Networks", ("extreme",), None), ("Netgear", ("netgear",), None),
+                 ("MikroTik", ("mikrotik",), None))},
     {"class": "Wireless access points",
-     "vendors": (("Aruba and HPE networking", ("aruba", "hewlettpackardenterprisenetworking")),
-                 ("Cisco", ("cisco",)), ("Extreme Networks", ("extreme",)))},
+     "vendors": (("Aruba and HPE networking", ("aruba", "hewlettpackardenterprisenetworking"), None),
+                 ("Cisco", ("cisco",), None), ("Extreme Networks", ("extreme",), None))},
     {"class": "Email and web security appliances",
-     "vendors": (("Proofpoint", ("proofpoint",)), ("Barracuda", ("barracuda",)),
-                 ("Sophos", ("sophos",)), ("SonicWall", ("sonicwall",)))},
+     "vendors": (("Proofpoint", ("proofpoint",), None), ("Barracuda", ("barracuda",), None),
+                 ("Sophos", ("sophos",), None), ("SonicWall", ("sonicwall",), None))},
 )
 
 
@@ -788,11 +799,16 @@ def priority_coverage(records):
         if key:
             keys.setdefault(key, []).append(record)
 
-    def match(aliases):
+    def match(aliases, product_line=None):
         found = {}
         for key, group in keys.items():
-            if any(key.startswith(_vendor_key(alias)) for alias in aliases):
-                found.update((record["id"], record) for record in group)
+            if not any(key.startswith(_vendor_key(alias)) for alias in aliases):
+                continue
+            for record in group:
+                line = (record.get("product_line") or "").lower()
+                if product_line and product_line.lower() not in line:
+                    continue
+                found[record["id"]] = record
         return found
 
     classes = []
@@ -800,8 +816,8 @@ def priority_coverage(records):
     for group in PRIORITY_TARGETS:
         rows = []
         within = {}
-        for name, aliases in group["vendors"]:
-            matched = match(aliases)
+        for name, aliases, product_line in group["vendors"]:
+            matched = match(aliases, product_line)
             within.update(matched)
             rows.append({"name": name, "records": len(matched),
                          "dated": sum(1 for record in matched.values()
@@ -830,4 +846,5 @@ def priority_coverage(records):
             "dated": sum(1 for record in every.values()
                          if (record.get("milestones") or {}).get("eol")),
             "vendors_covered": len({(record.get("vendor") or "") for record in every.values()}),
-            "vendors_total": len({name for group in PRIORITY_TARGETS for name, _ in group["vendors"]})}
+            "vendors_total": len({name for group in PRIORITY_TARGETS
+                                 for name, _aliases, _line in group["vendors"]})}
