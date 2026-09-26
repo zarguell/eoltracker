@@ -269,7 +269,13 @@ class PublicationTests(unittest.TestCase):
                          ["December 16, 2025"])
         record = json.loads(published[0].read_text())
         self.assertEqual(record["vendor"], "Extreme Networks")
-        self.assertIn(extreme.INDEX_URL, record["provenance"]["source_urls"])
+        urls = record["provenance"]["source_urls"]
+        self.assertIn(extreme.INDEX_URL, urls)
+        # The index page is also the registered source URL, and each extract is
+        # published verbatim: a URL repeated in the list says nothing twice.
+        self.assertEqual(len(urls), len(set(urls)))
+        for sheet in extreme.FILES:
+            self.assertIn(extreme.FILES[sheet][0], urls)
 
     def test_a_quiet_refresh_republishes_byte_identical_files(self):
         self.refresh()

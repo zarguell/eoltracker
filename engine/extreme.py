@@ -315,8 +315,9 @@ def record_for(product, checked, identity=None):
         "milestones": milestones,
         "status": status_from(milestones["eol"], checked),
         "upstream": upstream,
-        "provenance": {"source_urls": [SOURCE_URL, INDEX_URL], "verifier": VERIFIER,
-                       "last_checked": checked},
+        "provenance": {"source_urls": [url for url in dict.fromkeys(
+            (SOURCE_URL, INDEX_URL, *(FILES[sheet][0] for sheet in sorted(FILES)))) if url],
+                       "verifier": VERIFIER, "last_checked": checked},
     }
 
 
