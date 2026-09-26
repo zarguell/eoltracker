@@ -132,12 +132,17 @@
   <p class="panel-note">
     The shape of that table is the finding. The vendors carrying it, in order,
     are
-    {% for vendor in priority.top_vendors %}<strong>{{ vendor['name'] }}</strong> ({{ vendor['records'] }}){{ ", " if not loop.last }}{% endfor %},
-    and the classes with no records at all are the next coverage work — not
-    because their dates are unknown, but because those vendors publish them
-    behind a login, a web-application firewall, or a page that renders
-    client-side. Coverage here follows whichever vendor published a page a
-    collector can read, not which device is most exposed.
+    {% for vendor in priority.top_vendors %}<strong>{{ vendor['name'] }}</strong> ({{ vendor['records'] }}){{ ", " if not loop.last }}{% endfor %}.
+    {% if priority.uncovered %}
+    {{ plural(priority.uncovered, 'class') }} with no records at all {% if priority.uncovered == 1 %}is{% else %}are{% endif %} the next coverage work —
+    not because their dates are unknown, but because those vendors publish them behind a login, a
+    web-application firewall, or a page that renders client-side.
+    {% else %}
+    Every class now has records, but most of the vendors each class names still contribute none.
+    Coverage here follows whichever vendor published a page a collector can read, not which device
+    is most exposed, and a (0) beside a vendor is a gap this catalog leaves visible rather than
+    fills with a date it cannot source.
+    {% endif %}
   </p>
 </section>
 
