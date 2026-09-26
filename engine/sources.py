@@ -60,6 +60,13 @@ OPENEULER_ANNOUNCEMENT_2403 = ("https://www.openeuler.org/en/news/20240612-openE
                                "LTS-The%20First%20AI-Native%20Open%20Source%20Operating%20System/")
 OPENEULER_ANNOUNCEMENT_SP4 = ("https://www.openeuler.org/en/news/20260701-openEuler%2024.03%20"
                               "LTS%20SP4/20260701-openEuler%2024.03%20LTS%20SP4.html")
+BARRACUDA_FIREWALL_EOL = ("https://documentation.campus.barracuda.com/wiki/spaces/NGFEOL/"
+                          "pages/5505036")
+BARRACUDA_ATTRIBUTION = ("Barracuda firewall lifecycle published directly by Barracuda's own "
+                        "end-of-support table; the EoS & EoHS column becomes eos and the EoFS "
+                        "(last supporting release) column becomes eol, and the record states "
+                        "that the latter is the model's end of firmware support rather than the "
+                        "product's total end of life, as Barracuda itself does.")
 PALOALTO_HARDWARE_EOL = ("https://www.paloaltonetworks.com/services/support/"
                          "end-of-life-announcements/hardware-end-of-life-dates")
 PALOALTO_ATTRIBUTION = ("Palo Alto Networks hardware lifecycle published directly by Palo Alto's "
@@ -627,6 +634,18 @@ SOURCES = (
         attribution=PROGRESS_ATTRIBUTION,
         validator="engine.progress.validate_sitefinity",
         report="progress-sitefinity-import.json",
+    ),
+    Source(
+        id="import-barracuda",
+        module="engine.barracuda",
+        entry="import_barracuda",
+        verifier="deterministic-barracuda",
+        category="hardware",
+        name="Barracuda firewalls",
+        url=BARRACUDA_FIREWALL_EOL,
+        pages=(Page(BARRACUDA_FIREWALL_EOL, "Barracuda firewall end-of-support table"),),
+        attribution=BARRACUDA_ATTRIBUTION,
+        report="barracuda-import.json",
     ),
     Source(
         id="import-paloalto",

@@ -1,14 +1,14 @@
 {
   "source_url": "https://www.checkpoint.com/support-services/support-life-cycle-policy/",
   "verifier": "deterministic-checkpoint-appliances",
-  "checked_at": "2026-09-26T18:53:27Z",
+  "checked_at": "2026-09-26T19:30:03Z",
   "record_scope": "Check Point appliances: one hardware record per appliance row of the vendor's support-lifecycle policy page, at the day or month precision the vendor's own cell states",
   "rows": {
     "seen": 315,
     "published": 298,
     "excluded": 17,
     "tables": 36,
-    "with_eol": 107,
+    "with_eol": 248,
     "month_precision": {
       "General Availability": 282,
       "End of Sale": 158,
@@ -24,7 +24,7 @@
       "End of Sale": 158,
       "End of Support": 141
     },
-    "withheld_cells": 736
+    "withheld_cells": 14
   },
   "excluded": [
     {
@@ -216,7 +216,7 @@
   "limitations": [
     "General Availability becomes ga, End of Sale becomes eos and End of Support becomes eol, each at the precision the vendor's cell states; this is the only vendor in the priority set that publishes all three separately.",
     "End of Engineering Support is published as a vendor cell and never mapped: Check Point defines it as maintenance releases until three years after end of sale, which is a maintenance window and not a security-support end, so eossec is null everywhere.",
-    "The page mixes day and month precision inside one column, and the hardware schema holds a calendar day only. A month-precision cell is therefore published in the row's own cells and counted here, but is not written as a milestone and never padded into a day: this is a limit of the hardware schema, not of the vendor. Extending the schema to month precision is tracked separately; until then the published ga, eos and eol counts are the day-precision cells and nothing else.",
+    "The page mixes day and month precision inside one column. Each cell is stored at the width the vendor stated and neither width is padded into the other; the report counts the day- and month-precision cells per column, and a month-precision milestone is published to the feed exclusion document rather than syndicated as an exact day.",
     "A cell stating a two-digit year publishes no milestone and is counted by name: the schema holds a four-digit year and the century is not stated, so choosing one would invent half the date.",
     "The vendor's Status column (Active, Successor Product Available, End of Support) is kept verbatim. Where the vendor states End of Support without a date, the status claim is published and no milestone is invented.",
     "The page also carries software and service schedules. They are reported here and read by engine.checkpoint, which publishes the Security Gateway & Management trains into the software catalog. Between the two reports every table on the page is accounted exactly once."

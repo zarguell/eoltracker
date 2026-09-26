@@ -36,12 +36,19 @@ before the parser was written:
   catalog's vocabulary, derived from the End of Support date, as it is for every
   other collector here.
 
-**Precision is whatever the cell states, never padded — and a month is not a
-milestone here yet.** This catalog's *hardware* schema admits a calendar day
-only, so a month-precision cell is published verbatim in the row's own cells,
-counted in the report, and left out of the milestone. That is a limit of the
-hardware schema rather than of the vendor, and it costs the most useful column
-for 141 of the 298 appliances here; extending the schema is issue #153.
+**Precision is whatever the cell states, never padded.** The page mixes widths
+inside one column — ``Oct-2011`` and ``31-Oct-2014`` — and a month is the whole
+width the vendor published, so it is stored as a month: this catalog's hardware
+schema admits a day or a month, and nothing here widens a month into a day
+(AGENTS.md rule 4). A month-precision milestone is not syndicated as an exact
+day by the feeds; it is published to the feed exclusion document with its
+identity and stored month, which is the treatment every software record's
+month-precision milestone already gets.
+
+A cell stating a **two-digit year** (``May-06``, ``31-Dec-18``) still publishes
+no milestone at all: the schema holds a four-digit year, and the century is not
+stated, so choosing one would invent half the date. Those cells are counted by
+name in the report.
  The page mixes widths
 inside one column: ``Oct-2011`` and ``Jan 2022`` are months, ``31-Oct-2014``
 and ``19-Sep-2023`` are days. The date reader accepts only the spellings the
@@ -245,18 +252,6 @@ def parse(html):
                 except NotRepresentable as error:
                     refused.append({"column": column, "reason": str(error)})
                     value, precision = None, None
-                if value is not None and precision != "day":
-                    # The hardware schema holds a calendar day and this catalog
-                    # will not widen it silently. A month the vendor states is
-                    # kept verbatim in the row's own cell, counted here, and
-                    # left out of the milestone rather than padded to a day the
-                    # vendor never printed (AGENTS.md rule 4).
-                    refused.append({"column": column,
-                                    "reason": f"the cell states {value!r} at month precision, and "
-                                              f"the hardware schema holds a calendar day; the "
-                                              f"vendor's own month is kept in this row's cells and "
-                                              f"is not padded into a day"})
-                    value = None
                 milestones[column] = value
                 precisions[column] = precision
             if (milestones[EOL] is None
@@ -355,12 +350,10 @@ def report_for(models, excluded, tables_seen, checked):
             "Point defines it as maintenance releases until three years after end of sale, which "
             "is a maintenance window and not a security-support end, so eossec is null "
             "everywhere.",
-            "The page mixes day and month precision inside one column, and the hardware schema "
-            "holds a calendar day only. A month-precision cell is therefore published in the row's "
-            "own cells and counted here, but is not written as a milestone and never padded into a "
-            "day: this is a limit of the hardware schema, not of the vendor. Extending the schema "
-            "to month precision is tracked separately; until then the published ga, eos and eol "
-            "counts are the day-precision cells and nothing else.",
+            "The page mixes day and month precision inside one column. Each cell is stored at the "
+            "width the vendor stated and neither width is padded into the other; the report counts "
+            "the day- and month-precision cells per column, and a month-precision milestone is "
+            "published to the feed exclusion document rather than syndicated as an exact day.",
             "A cell stating a two-digit year publishes no milestone and is counted by name: the "
             "schema holds a four-digit year and the century is not stated, so choosing one would "
             "invent half the date.",

@@ -78,12 +78,11 @@ class DateTests(unittest.TestCase):
 
 class MappingTests(unittest.TestCase):
     def test_the_three_columns_the_vendor_publishes_separately_stay_separate(self):
-        # 2200 states all three at month precision, so the parsed row shows the
-        # three values and the milestones withhold them; a day-precision row
-        # below is the one that publishes.
+        # 2200 states all three at month precision and each keeps its own value;
+        # a day-precision row is the other half of the same contract.
         entry = model("2200 Appliance")
-        self.assertEqual(entry["milestones"], {"ga": None, "eos": None,
-                                               "eossec": None, "eol": None})
+        self.assertEqual(entry["milestones"], {"ga": "2011-10", "eos": "2017-06",
+                                               "eossec": None, "eol": "2022-06"})
         self.assertEqual([entry["precisions"][c] for c in
                           ("General Availability", "End of Sale", "End of Support")],
                          ["month", "month", "month"])
@@ -99,25 +98,28 @@ class MappingTests(unittest.TestCase):
         # The cell is the vendor's own text; the parsed value is never a milestone.
         self.assertEqual(model("2200 Appliance")["engineering"], "Jun-2020")
 
-    def test_no_day_is_invented_from_a_month_cell(self):
-        # The hardware schema holds a calendar day, so a month-precision cell is
-        # withheld from the milestone rather than padded to a day the vendor never
-        # printed. Every published milestone is therefore a full day.
+    def test_a_month_is_never_padded_into_a_day_the_vendor_never_printed(self):
         import re
         for entry in parsed()[0]:
             for column, value in entry["milestones"].items():
-                if value:
-                    self.assertRegex(value, r"\d{4}-\d{2}-\d{2}", f"{entry['product']} {column}")
-        withheld_months = [entry for entry in parsed()[0]
-                           if any("month precision" in item["reason"] for item in entry["withheld"])]
-        self.assertTrue(withheld_months)
+                if not value:
+                    continue
+                # A day or a month, never a padded one: a month-precision value
+                # is exactly seven characters and nothing else.
+                self.assertRegex(value, r"^\d{4}-\d{2}(-\d{2})?$", f"{entry['product']} {column}")
+                if entry["precisions"].get(column.replace("ga", "General Availability")
+                                           .replace("eos", "End of Sale")
+                                           .replace("eol", "End of Support")) == "month":
+                    self.assertEqual(len(value), 7, f"{entry['product']} {column}")
+        months = [entry for entry in parsed()[0]
+                  if entry["precisions"].get("End of Support") == "month"]
+        self.assertTrue(months)
 
     def test_no_date_is_derived_from_the_vendors_four_year_rule(self):
         # The policy states a minimum support duration; nothing is computed from
-        # it, so a month-precision cell is withheld rather than turned into the
-        # date the rule would imply.
+        # it. The cell the vendor wrote is published as written.
         entry = model("3100 Appliance")
-        self.assertIsNone(entry["milestones"]["eol"])
+        self.assertEqual(entry["milestones"]["eol"], "2025-12")
         self.assertEqual(entry["precisions"]["End of Support"], "month")
 
     def test_the_vendor_status_column_is_kept_and_never_mapped(self):
@@ -171,18 +173,22 @@ class ShapeTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "unrecognized Status"):
             appliances.parse(tampered)
 
-    def test_two_digit_year_cells_are_published_as_withheld_not_as_dates(self):
+    def test_two_digit_year_cells_still_publish_nothing(self):
+        # The schema now admits a month, but a two-digit year is not a width it
+        # holds, so those cells are still withheld and counted.
         withheld = [entry for entry in parsed()[0] if entry["withheld"]]
         self.assertTrue(withheld)
+        checked = 0
         for entry in withheld:
-            reasons = " ".join(item["reason"] for item in entry["withheld"])
-            if "two-digit year" in reasons:
-                for column in ("General Availability", "End of Sale",
-                               "End of Engineering Support", "End of Support"):
-                    if any(item["column"] == column for item in entry["withheld"]):
-                        self.assertIsNone(entry["milestones"].get(
-                            "eol" if column == "End of Support" else "ga"
-                            if column == "General Availability" else "eos"))
+            for item in entry["withheld"]:
+                if "two-digit year" not in item["reason"]:
+                    continue
+                checked += 1
+                key = {"General Availability": "ga", "End of Sale": "eos",
+                       "End of Support": "eol"}.get(item["column"])
+                if key:
+                    self.assertIsNone(entry["milestones"][key], f"{entry['product']} {key}")
+        self.assertTrue(checked)
 
 
 class RecordTests(unittest.TestCase):
@@ -198,7 +204,9 @@ class RecordTests(unittest.TestCase):
         dated = next(entry for entry in parsed()[0]
                      if entry["family"] == "DDoS Protector" and entry["product"] == "X100")
         published = appliances.record_for(dated, CHECKED)["milestones"]
-        self.assertEqual(published, {"ga": None, "eos": "2026-02-15",
+        # This row mixes widths in one row: a day-precision sale and support
+        # end, and a month-precision general availability.
+        self.assertEqual(published, {"ga": "2023-01", "eos": "2026-02-15",
                                      "eossec": None, "eol": "2029-02-15"})
 
     def test_the_engineering_cell_is_published_with_the_reason_it_is_not_a_milestone(self):
@@ -236,7 +244,13 @@ class RecordTests(unittest.TestCase):
         absent = len(models) - rows["day_precision"][column] - rows["month_precision"][column]
         self.assertEqual(rows["day_precision"][column] + rows["month_precision"][column] + absent,
                          len(models))
-        self.assertEqual(rows["with_eol"], rows["day_precision"][column])
+        # Every row with a stated end of support is published, at whichever width
+        # the vendor used for it.
+        self.assertEqual(rows["with_eol"], rows["day_precision"][column]
+                         + rows["month_precision"][column])
+        self.assertEqual(rows["withheld_cells"], sum(
+            1 for entry in models for item in entry["withheld"]
+            if "two-digit year" in item["reason"]))
         self.assertTrue(report["limitations"])
 
 

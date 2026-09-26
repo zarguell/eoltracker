@@ -1,0 +1,50 @@
+{
+  "source_url": "https://documentation.campus.barracuda.com/wiki/spaces/NGFEOL/pages/5505036",
+  "space_index": "https://documentation.campus.barracuda.com/wiki/spaces/NGFEOL/pages/5505528",
+  "verifier": "deterministic-barracuda",
+  "checked_at": "2026-09-26T19:33:09Z",
+  "record_scope": "Barracuda CloudGen and NextGen firewall appliances: one hardware record per model-revision row of the vendor's end-of-support table, at the day precision the vendor's own cell states",
+  "rows": {
+    "seen": 51,
+    "published": 50,
+    "excluded": 1,
+    "tables": 2,
+    "with_eos": 35,
+    "with_eol": 35,
+    "revisions": 50
+  },
+  "excluded": [
+    {
+      "row": "Rev. C | ",
+      "reason": "the row has 2 cells where the table declares 6: it is a group label or a shape this reader does not know, so no milestone is read from it"
+    }
+  ],
+  "total_records": 50,
+  "other_spaces": [
+    {
+      "space": "BCC",
+      "product": "Cloud Control"
+    },
+    {
+      "space": "BWAFv76",
+      "product": "Web Application Firewall"
+    },
+    {
+      "space": "LBADCv50",
+      "product": "Load Balancer ADC"
+    },
+    {
+      "space": "SEPPI",
+      "product": "SecureEdge / Perimeter"
+    }
+  ],
+  "limitations": [
+    "EoS & EoHS becomes eos and EoFS (the last supporting release) becomes eol, in the vendor's own column definitions. EoHS is the end-of-hardware-support half of the same orderability date.",
+    "The EoFS date is this model's end of firmware support, not the product's total end of life: Barracuda states the product is not completely End-of-Life until that release itself reaches its end of support. That distinction is published beside the date rather than folded into the milestone.",
+    "ga and eossec are null: the table states neither an availability date nor a security-support date, and neither is inferred from the gap between the two dates it does state.",
+    "One record is one model revision. A model with Rev. A and Rev. B has two records, because the vendor gives the revisions different dates; the model name is carried forward from the row-spanned cell above, which is how the page states it.",
+    "A model cell naming several models ('SC20, SC21') is one vendor row with one pair of dates, so it is one record keeping the vendor's own label.",
+    "not set is the vendor's 'no date' cell and publishes nothing; it is never coerced into a sentinel date. The parenthesised firmware version in the EoFS cell is kept verbatim and never merged into the date.",
+    "Only the firewall space is read. Barracuda publishes end-of-support tables for its load balancer ADC, web application firewall, cloud control and SecureEdge products in separate spaces, and those spaces' page trees render client-side, so their dated pages cannot be enumerated from here; they are named in other_spaces rather than claimed as covered."
+  ]
+}

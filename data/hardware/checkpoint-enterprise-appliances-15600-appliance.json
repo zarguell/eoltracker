@@ -8,12 +8,12 @@
   "family": "Enterprise Appliances",
   "model_number": "15600 Appliance",
   "milestones": {
-    "ga": null,
-    "eos": null,
+    "ga": "2016-01",
+    "eos": "2020-12",
     "eossec": null,
-    "eol": null
+    "eol": "2025-12"
   },
-  "status": "unknown",
+  "status": "eol",
   "upstream": {
     "Appliance Product/Model": {
       "text": "15600 Appliance",
@@ -78,13 +78,6 @@
       "datetime": null,
       "role": null,
       "links": []
-    },
-    "not_published": {
-      "text": "General Availability: the cell states '2016-01' at month precision, and the hardware schema holds a calendar day; the vendor's own month is kept in this row's cells and is not padded into a day; End of Sale: the cell states '2020-12' at month precision, and the hardware schema holds a calendar day; the vendor's own month is kept in this row's cells and is not padded into a day; End of Engineering Support: the cell states '2024-06' at month precision, and the hardware schema holds a calendar day; the vendor's own month is kept in this row's cells and is not padded into a day; End of Support: the cell states '2025-12' at month precision, and the hardware schema holds a calendar day; the vendor's own month is kept in this row's cells and is not padded into a day",
-      "value": null,
-      "datetime": null,
-      "role": null,
-      "links": []
     }
   },
   "provenance": {
@@ -92,6 +85,6 @@
       "https://www.checkpoint.com/support-services/support-life-cycle-policy/"
     ],
     "verifier": "deterministic-checkpoint-appliances",
-    "last_checked": "2026-09-26T18:53:27Z"
+    "last_checked": "2026-09-26T19:30:03Z"
   }
 }
