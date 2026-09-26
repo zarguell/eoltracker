@@ -70,6 +70,25 @@ CISCO_ATTRIBUTION = ("Cisco IOS and NX-OS release-train lifecycle published dire
                      "end-of-sale/end-of-life listings and lifecycle support statements; dates carry "
                      "the day precision Cisco states, and the terminal Last Date of Support is the "
                      "stored end of life.")
+PROGRESS_OPENEDGE_LIFECYCLE = "https://docs.progress.com/bundle/openedge-life-cycle/page/OpenEdge-Life-Cycle.html"
+PROGRESS_CORTICON_LIFECYCLE = "https://docs.progress.com/bundle/corticon-life-cycle/page/Corticon-Life-Cycle.html"
+PROGRESS_CORTICON_JS_LIFECYCLE = ("https://docs.progress.com/bundle/corticon-js-life-cycle/page/"
+                                  "Corticon.js-Life-Cycle.html")
+PROGRESS_WHATSUP_LIFECYCLE = "https://docs.progress.com/bundle/whatsup-gold-life-cycle/page/Life-Cycle.html"
+PROGRESS_WHATSUP_EOS_POLICY = "https://docs.progress.com/bundle/product-eos-policy/page/Policy.html"
+PROGRESS_SITEFINITY_POLICY = "https://www.progress.com/support/sitefinity-lifecycle-policy"
+SOLARWINDS_SITEMAP = "https://documentation.solarwinds.com/sitemap.xml"
+SOLARWINDS_DOCS = "https://documentation.solarwinds.com/en/success_center/"
+SOLARWINDS_ATTRIBUTION = ("SolarWinds product lifecycle published directly by SolarWinds' own "
+                          "release-history and retired-product tables; the EoL effective date is "
+                          "the terminal support end, and the EoL announcement and EoE effective "
+                          "date stay the vendor's own cells because SolarWinds never states them "
+                          "as a support end.")
+PROGRESS_ATTRIBUTION = ("Progress Software product lifecycle published directly by Progress's own "
+                        "product life cycle guides; the Active and Retired columns become general "
+                        "availability and end of life at the precision the vendor's own cell "
+                        "states, and Sunset, Deprecated and the offering columns stay the vendor's "
+                        "own cells because Progress never states them as a support end.")
 
 # Attribution is published text (the site and the API docs print it verbatim):
 # eosl.date states no license for the data it republishes, so it is cited;
@@ -527,6 +546,85 @@ SOURCES = (
         attribution=OPENEULER_ATTRIBUTION,
         validator="engine.openeuler.validate_record",
         report="openeuler-import.json",
+    ),
+    Source(
+        id="import-progress-openedge",
+        module="engine.progress",
+        entry="import_openedge",
+        verifier="deterministic-progress-openedge",
+        category="software",
+        name="Progress OpenEdge",
+        url=PROGRESS_OPENEDGE_LIFECYCLE,
+        # One page carries all four tables: the two product lines' current
+        # schedules and their two retired histories.
+        pages=(Page(PROGRESS_OPENEDGE_LIFECYCLE, "OpenEdge product life cycle"),),
+        attribution=PROGRESS_ATTRIBUTION,
+        validator="engine.progress.validate_openedge",
+        report="progress-openedge-import.json",
+    ),
+    Source(
+        id="import-progress-corticon",
+        module="engine.progress",
+        entry="import_corticon",
+        verifier="deterministic-progress-corticon",
+        category="software",
+        name="Progress Corticon",
+        url=PROGRESS_CORTICON_LIFECYCLE,
+        # Two products, two pages: Corticon and Corticon.js publish the same
+        # table shape under their own bundles.
+        pages=(Page(PROGRESS_CORTICON_LIFECYCLE, "Corticon product life cycle"),
+               Page(PROGRESS_CORTICON_JS_LIFECYCLE, "Corticon.js product life cycle")),
+        attribution=PROGRESS_ATTRIBUTION,
+        validator="engine.progress.validate_corticon",
+        report="progress-corticon-import.json",
+    ),
+    Source(
+        id="import-progress-whatsup-gold",
+        module="engine.progress",
+        entry="import_whatsup",
+        verifier="deterministic-progress-whatsup-gold",
+        category="software",
+        name="Progress WhatsUp Gold",
+        url=PROGRESS_WHATSUP_LIFECYCLE,
+        # The life cycle page carries the release schedules; the End-of-Sale
+        # policy states what an offering's EoS date means, which the collector
+        # requires verbatim to exclude the offering rows on that basis.
+        pages=(Page(PROGRESS_WHATSUP_LIFECYCLE, "WhatsUp Gold product life cycle"),
+               Page(PROGRESS_WHATSUP_EOS_POLICY, "WhatsUp Gold End-of-Sale policy")),
+        attribution=PROGRESS_ATTRIBUTION,
+        validator="engine.progress.validate_whatsup",
+        report="progress-whatsup-gold-import.json",
+    ),
+    Source(
+        id="import-progress-sitefinity",
+        module="engine.progress",
+        entry="import_sitefinity",
+        verifier="deterministic-progress-sitefinity",
+        category="software",
+        name="Progress Sitefinity",
+        url=PROGRESS_SITEFINITY_POLICY,
+        pages=(Page(PROGRESS_SITEFINITY_POLICY, "Sitefinity lifecycle policy"),),
+        attribution=PROGRESS_ATTRIBUTION,
+        validator="engine.progress.validate_sitefinity",
+        report="progress-sitefinity-import.json",
+    ),
+    Source(
+        id="import-solarwinds",
+        module="engine.solarwinds",
+        entry="import_solarwinds",
+        verifier="deterministic-solarwinds",
+        category="software",
+        name="SolarWinds release histories",
+        url=SOLARWINDS_SITEMAP,
+        # The sitemap is the discovery surface: it states one release-history
+        # page per product family, which is what makes the family set complete
+        # without a hand-kept list. A family's own page is where its dates live.
+        pages=(Page(SOLARWINDS_SITEMAP, "SolarWinds documentation sitemap"),
+               Page(SOLARWINDS_DOCS + "ncm/content/release_notes/release_history.htm",
+                    "SolarWinds release histories")),
+        attribution=SOLARWINDS_ATTRIBUTION,
+        validator="engine.solarwinds.validate_history",
+        report="solarwinds-import.json",
     ),
 )
 
