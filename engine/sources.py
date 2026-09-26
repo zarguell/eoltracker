@@ -60,7 +60,21 @@ OPENEULER_ANNOUNCEMENT_2403 = ("https://www.openeuler.org/en/news/20240612-openE
                                "LTS-The%20First%20AI-Native%20Open%20Source%20Operating%20System/")
 OPENEULER_ANNOUNCEMENT_SP4 = ("https://www.openeuler.org/en/news/20260701-openEuler%2024.03%20"
                               "LTS%20SP4/20260701-openEuler%2024.03%20LTS%20SP4.html")
+PALOALTO_HARDWARE_EOL = ("https://www.paloaltonetworks.com/services/support/"
+                         "end-of-life-announcements/hardware-end-of-life-dates")
+PALOALTO_ATTRIBUTION = ("Palo Alto Networks hardware lifecycle published directly by Palo Alto's "
+                        "own hardware end-of-life table; the End-of-Sale Date and End-of-Life "
+                        "Date columns become eos and eol at the day precision each cell states, "
+                        "and Last Supported OS is published verbatim and never used to extend an "
+                        "end-of-life date.")
 CHECKPOINT_LIFECYCLE = "https://www.checkpoint.com/support-services/support-life-cycle-policy/"
+CHECKPOINT_APPLIANCE_ATTRIBUTION = ("Check Point appliance lifecycle published directly by Check "
+                                   "Point's own support-lifecycle policy page; General "
+                                   "Availability, End of Sale and End of Support become ga, eos "
+                                   "and eol at the precision each cell states, and End of "
+                                   "Engineering Support stays a vendor cell because Check Point "
+                                   "defines it as maintenance releases three years after end of "
+                                   "sale, not a security-support end.")
 ODOO_SUPPORT = "https://www.odoo.com/documentation/master/administration/standard_extended_support.html"
 SAMBA_RELEASE_PLANNING = "https://wiki.samba.org/index.php/Samba_Release_Planning"
 CISCO_EOL_INDEX = "https://www.cisco.com/c/en/us/support/eol/index.html"
@@ -613,6 +627,30 @@ SOURCES = (
         attribution=PROGRESS_ATTRIBUTION,
         validator="engine.progress.validate_sitefinity",
         report="progress-sitefinity-import.json",
+    ),
+    Source(
+        id="import-paloalto",
+        module="engine.paloalto",
+        entry="import_paloalto",
+        verifier="deterministic-paloalto",
+        category="hardware",
+        name="Palo Alto Networks hardware",
+        url=PALOALTO_HARDWARE_EOL,
+        pages=(Page(PALOALTO_HARDWARE_EOL, "Palo Alto Networks hardware end-of-life dates"),),
+        attribution=PALOALTO_ATTRIBUTION,
+        report="paloalto-import.json",
+    ),
+    Source(
+        id="import-checkpoint-appliances",
+        module="engine.checkpoint_appliances",
+        entry="import_checkpoint_appliances",
+        verifier="deterministic-checkpoint-appliances",
+        category="hardware",
+        name="Check Point appliances",
+        url=CHECKPOINT_LIFECYCLE,
+        pages=(Page(CHECKPOINT_LIFECYCLE, "Check Point support life cycle policy"),),
+        attribution=CHECKPOINT_APPLIANCE_ATTRIBUTION,
+        report="checkpoint-appliances-import.json",
     ),
     Source(
         id="import-watchguard",

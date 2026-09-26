@@ -1,0 +1,84 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "paloalto-pa-220",
+  "name": "PA-220",
+  "category": "hardware",
+  "vendor": "Palo Alto Networks",
+  "product_line": "PA-220",
+  "family": "Palo Alto Networks hardware",
+  "model_number": "PA-220",
+  "milestones": {
+    "ga": null,
+    "eos": "2023-01-31",
+    "eossec": null,
+    "eol": "2028-01-31"
+  },
+  "status": "expiring",
+  "upstream": {
+    "End-of-Sale Product": {
+      "text": "PA-220",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "End-of-Sale Date": {
+      "text": "January 31, 2023",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "End-of-Life Date": {
+      "text": "January 31, 2028",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "Resources": {
+      "text": "PA-220 Datasheet",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "Last Supported OS ^": {
+      "text": "PAN-OS 10.2 Standard Support: Until August 27, 2025 Extended Support: Until Hardware EOL January 31, 2028",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "Recommended Replacement": {
+      "text": "PA-400 Series, PA-500 Series",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "products": {
+      "text": "PA-220",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": [],
+      "note": "the product line the vendor heads this row with, and the SKUs it lists under it; one row is one line, not one SKU"
+    },
+    "Last Supported OS note": {
+      "text": "PAN-OS 10.2 Standard Support: Until August 27, 2025 Extended Support: Until Hardware EOL January 31, 2028",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": [],
+      "note": "this row's OS support window names a year later than the row's own End-of-Life Date. Both are the vendor's own statements and both are published; neither is recomputed from the other."
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates"
+    ],
+    "verifier": "deterministic-paloalto",
+    "last_checked": "2026-09-26T18:53:25Z"
+  }
+}

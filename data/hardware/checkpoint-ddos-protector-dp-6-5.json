@@ -1,0 +1,97 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "checkpoint-ddos-protector-dp-6-5",
+  "name": "DP 6-5",
+  "category": "hardware",
+  "vendor": "Check Point",
+  "product_line": "Check Point",
+  "family": "DDoS Protector",
+  "model_number": "DP 6-5",
+  "milestones": {
+    "ga": null,
+    "eos": null,
+    "eossec": null,
+    "eol": null
+  },
+  "status": "unknown",
+  "upstream": {
+    "Appliance Product/Model": {
+      "text": "DP 6-5",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "Status": {
+      "text": "Successor Product Available",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "General Availability": {
+      "text": "",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "End of Sale": {
+      "text": "Jan-2024",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "Successor Model": {
+      "text": "X10- 5G",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "Successor Product Availability": {
+      "text": "Jan-2023",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "End of Engineering Support": {
+      "text": "Jan-2026",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": [],
+      "note": "Check Point defines this as maintenance releases until three years after end of sale, which is not a security-support end; the cell is published and never mapped to eossec"
+    },
+    "End of Support": {
+      "text": "Jan-2027",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "Supported Software Versions": {
+      "text": "8.26.1.2",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "not_published": {
+      "text": "End of Sale: the cell states '2024-01' at month precision, and the hardware schema holds a calendar day; the vendor's own month is kept in this row's cells and is not padded into a day; End of Engineering Support: the cell states '2026-01' at month precision, and the hardware schema holds a calendar day; the vendor's own month is kept in this row's cells and is not padded into a day; End of Support: the cell states '2027-01' at month precision, and the hardware schema holds a calendar day; the vendor's own month is kept in this row's cells and is not padded into a day",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://www.checkpoint.com/support-services/support-life-cycle-policy/"
+    ],
+    "verifier": "deterministic-checkpoint-appliances",
+    "last_checked": "2026-09-26T18:53:27Z"
+  }
+}
