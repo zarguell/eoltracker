@@ -199,6 +199,60 @@ Step 5's product names are the vendor's own words, not ours; a query that pins a
 version is refused unless `--allow-version` is passed, and the reason is printed
 when it is.
 
+## What a real key actually returned
+
+A free Shodan account was used to run the probe on 2026-09-26, so the questions
+above have measured answers rather than only documented ones. The raw counts are
+deliberately **not** committed here: publishing Shodan aggregates is the step
+this document says needs written permission, and holding that line on my own
+output is the first test of it. What follows is the method and the verdicts,
+which are what change the design.
+
+**1. The vendor's product name is usually not a value in the index.** The obvious
+queries for the two most-exploited families named in CISA's guidance —
+`product:FortiOS` and `product:PAN-OS` — return **zero**, and zero is not a
+finding, it is a missing vocabulary. The nearest strings Shodan holds for
+Fortinet are *model* names (`Fortinet FortiGate-60F`), not the product family, so
+"how many FortiOS devices are exposed" is not a question this dataset can answer
+as asked. A catalogue that published either the zero or the naive alternative
+would be stating a falsehood with a timestamp on it.
+
+**2. A keyword query is off by roughly an order of magnitude, in the direction
+that flatters nobody.** Seeding on text that merely appears in a web page and
+faceting the result by product exposes the contamination directly: for one
+tracked family the seeded total is about nine times the count of that family's
+own product string, and the single largest facet in the seeded result belongs to
+an unrelated vendor's product, with a second large facet being a source-control
+tool that shares the vendor's name. Nothing about that number is a firewall.
+
+**3. Version-level counting is not merely imprecise — it is usually empty.** The
+probe refuses version-pinned queries, and the override confirms why: for three of
+the four families that a product string exists for, the `version` facet returns
+**no buckets at all**, and a version-pinned query for a release that plainly
+exists in the field returns **zero**. The fourth reports firmware *build* strings
+rather than product versions. So a version-level end-of-life join would publish
+"0" for nearly everything — the most dangerous possible output, because zero
+reads as a finding rather than as a gap.
+
+**4. The index moves while you look at it.** The same product string returned
+counts differing by ~150 between runs minutes apart. That is the right size of
+signal for a 30-day rolling window, and it is the reason a published figure
+needs its retrieval timestamp and a refresh cadence slower than the noise.
+
+### What this changes in the design
+
+Rule 1 (product-level only) is confirmed as necessary rather than cautious, and
+it needs a fourth clause:
+
+5. **A family with no verified product string is reported as uncounted, never as
+   zero.** "Shodan holds no product string for this vendor" is a true statement;
+   "0 devices are exposed" is not, and the two must never share a code path.
+
+And the per-family identifiability work in the design becomes a hard
+prerequisite, not a nicety: a product string has to be discovered, verified
+against a seed that cannot be contaminated, and reviewed — which is the same
+standard every collector in this repository already applies to a source it reads.
+
 ## What would change the decision
 
 * A written answer from Shodan permitting an attributed aggregate count to be
