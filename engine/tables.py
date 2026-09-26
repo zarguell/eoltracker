@@ -183,6 +183,21 @@ def header_rows(block, where):
     return rows[:1], 1
 
 
+def th_header(block):
+    """The table's first all-``<th>`` row and where its data rows begin.
+
+    Some vendor tables open with a caption or a note row before the header, so
+    the header is the first row every one of whose cells is a ``<th>``, wherever
+    that appears. Returns ``(headers, start)``, or ``None`` when the table
+    states no header at all — a layout table, which a caller either skips or
+    refuses, never reads as data.
+    """
+    for index, row in enumerate(block["rows"]):
+        if row and all(cell["th"] for cell in row):
+            return tuple(fold(cell["lead"] or cell["text"]) for cell in row), index + 1
+    return None
+
+
 def spanned_rows(block, labels, start):
     """A table's body split into its data rows and its full-width control rows.
 

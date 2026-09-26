@@ -749,3 +749,22 @@ details.raw-release pre { margin: 12px; max-height: 340px; }
   .masthead, .footer, .filters, .skip { display: none; }
   .panel, .hero { box-shadow: none; border-color: #999; }
 }
+
+/* The priority table carries a vendor list in one cell, so its columns are
+   sized rather than left to the content: the numeric columns stay narrow and
+   right-aligned, and the status chip never wraps mid-word. */
+.priority-table th:first-child,
+.priority-table td:first-child { width: 30%; }
+.priority-table td:nth-child(2) { font-size: 0.9rem; line-height: 1.7; }
+.priority-table th.num,
+.priority-table td.num { text-align: right; white-space: nowrap; width: 10%; padding-left: 1.4rem; }
+.priority-table th:last-child,
+.priority-table td:last-child { width: 13%; white-space: nowrap; }
+.priority-table .chip { white-space: nowrap; }
+@media (max-width: 720px) {
+  .priority-table th:first-child,
+  .priority-table td:first-child { width: auto; }
+  .priority-table .num { width: auto; }
+  .priority-table th:last-child,
+  .priority-table td:last-child { width: auto; }
+}

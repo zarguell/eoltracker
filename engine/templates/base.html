@@ -24,6 +24,7 @@
       <a href="{{ url_for() }}"{% if active == 'index' %} aria-current="page"{% endif %}>Software</a>
       <a href="{{ url_for('hardware/') }}"{% if active == 'hardware' %} aria-current="page"{% endif %}>Hardware</a>
       <a href="{{ url_for('api/') }}"{% if active == 'api' %} aria-current="page"{% endif %}>API &amp; data</a>
+      <a href="{{ url_for('why/') }}"{% if active == 'why' %} aria-current="page"{% endif %}>Why EOL</a>
       <a href="{{ source_site }}" rel="noopener">endoflife.date</a>
     </nav>
     <p class="masthead-meta">{{ plural(product_count, 'product') }} · {{ release_count }} releases · {{ hardware_count }} hardware records</p>

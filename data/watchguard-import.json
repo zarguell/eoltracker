@@ -1,0 +1,49 @@
+{
+  "source_url": "https://www.watchguard.com/wgrd-trust-center/end-of-life-policy",
+  "verifier": "deterministic-watchguard",
+  "checked_at": "2026-09-26T15:27:34Z",
+  "record_scope": "WatchGuard appliances: one hardware record per product row of the vendor's end-of-life policy page, at the day precision the page states",
+  "rows": {
+    "seen": 174,
+    "published": 170,
+    "excluded": 4,
+    "tables": 8,
+    "with_eos": 170,
+    "with_eol": 170
+  },
+  "excluded": [
+    {
+      "family": "Product Life Cycle Milestones",
+      "rows": 3,
+      "caption": "End-of-Sale Date",
+      "reason": "the table's rows are [2] cells wide where the page declares the 4 product columns ['Product', 'End of Sale (EOS)', 'End of Life (EOL)', 'Migration Path']; its cells are reported here and none of them is read"
+    },
+    {
+      "family": "WatchGuard Endpoint Security (includes Panda)",
+      "rows": 11,
+      "caption": "Exchange Server",
+      "reason": "the table's rows are [5] cells wide where the page declares the 4 product columns ['Product', 'End of Sale (EOS)', 'End of Life (EOL)', 'Migration Path']; its cells are reported here and none of them is read"
+    },
+    {
+      "family": "WatchGuard Endpoint Security (includes Panda)",
+      "rows": 6,
+      "caption": "",
+      "reason": "the table's rows are [5] cells wide where the page declares the 4 product columns ['Product', 'End of Sale (EOS)', 'End of Life (EOL)', 'Migration Path']; its cells are reported here and none of them is read"
+    },
+    {
+      "family": "Firebox Security Services",
+      "rows": 8,
+      "caption": "Data Loss Prevention (DLP)",
+      "reason": "the table's rows are [3] cells wide where the page declares the 4 product columns ['Product', 'End of Sale (EOS)', 'End of Life (EOL)', 'Migration Path']; its cells are reported here and none of them is read"
+    }
+  ],
+  "total_records": 170,
+  "limitations": [
+    "End of Sale becomes eos and End of Life becomes eol, in WatchGuard's own words: the last date a partner may purchase, and the conclusion of development and support.",
+    "ga and eossec are null: the page states no release date and has no engineering-end or security-support column.",
+    "No date is derived from the gap between the two columns. WatchGuard says end-of-sale dates are 'up to five years prior to product EOL', and rows exceed five years.",
+    "Rows whose date columns state availability prose rather than a date are excluded with their reason, not read as a deadline.",
+    "A product's regional qualifier (for example 'Excludes T80 in Singapore') is kept verbatim in the row's cells and is not part of the published name.",
+    "WatchGuard states no publication schedule for this page; the record's last_checked is the only freshness signal, and a quiet refresh keeps it byte-identical."
+  ]
+}

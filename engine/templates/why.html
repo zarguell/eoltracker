@@ -1,0 +1,197 @@
+{% extends "base.html" %}
+{% block content %}
+<nav class="crumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="{{ url_for() }}">Catalog</a></li>
+    <li aria-current="page">Why end-of-life dates</li>
+  </ol>
+</nav>
+
+<section class="hero">
+  <p class="eyebrow">Why this catalog exists</p>
+  <h1 class="page-title">Why end-of-life dates are worth tracking</h1>
+  <p class="lead">
+    A device that its manufacturer no longer updates is not a device that got old. It is a device
+    whose known vulnerabilities are never closed, sitting where traffic enters a network — and the
+    organizations that write national cybersecurity policy now treat that as the single most
+    urgent hardware problem they have. This page states the case, names the priority set that
+    case produces, and shows honestly how much of it this catalog covers today.
+  </p>
+  <div class="hero-stats">
+    <div class="stat"><span class="stat-num">{{ priority.covered }}</span><span class="stat-label">device classes with records</span></div>
+    <div class="stat"><span class="stat-num">{{ priority.uncovered }}</span><span class="stat-label">classes with none</span></div>
+    <div class="stat"><span class="stat-num">{{ priority.records }}</span><span class="stat-label">records in the priority set</span></div>
+    <div class="stat"><span class="stat-num">{{ priority.dated }}</span><span class="stat-label">of those with an end-of-life date</span></div>
+    <div class="stat"><span class="stat-num">{{ priority.vendors_covered }}/{{ priority.vendors_total }}</span><span class="stat-label">priority vendors represented</span></div>
+  </div>
+</section>
+
+<section class="panel">
+  <h2 class="panel-title">The evidence: national policy now treats unsupported edge devices as the priority</h2>
+  <p>
+    On 5 February 2026 CISA issued
+    <a href="{{ cisa_bod_url }}" rel="noopener">Binding Operational Directive 26-02, <em>Mitigating Risk
+    From End-of-Support Edge Devices</em></a>, developed in coordination with OMB. Its Background says
+    outright that unsupported devices "are often enabled by cyber campaigns that threaten both public
+    and private sectors", that exploitation of them is "widespread", and that federal agencies "can
+    remediate by following proven lifecycle management practices".
+  </p>
+  <p>
+    The directive is not advisory. It binds federal civilian agencies to decommission end-of-support
+    edge devices on four deadlines — an inventory within three months, decommissioning within twelve,
+    decommissioning everything within eighteen, and a standing discovery process within twenty-four —
+    and it implements OMB Circular A-130, which requires that "unsupported information systems and
+    system components are phased out as rapidly as possible". A federal agency that discovers an
+    unsupported device has a dated obligation attached to it. That is the entire reason a date is
+    worth publishing.
+  </p>
+  <p>
+    CISA, the FBI and the UK's National Cyber Security Centre say the same thing to everyone else in
+    their <a href="{{ cisa_fact_sheet_url }}" rel="noopener">joint fact sheet</a>: nation-state actors
+    "exploit end-of-support (EOS) edge devices—including, but not limited to, load balancers,
+    firewalls, routers, and virtual private network (VPN) gateways—to gain network access, maintain
+    presence, and compromise sensitive data", and they "urge all organizations" to act. CISA's Acting
+    Director put it as a hygiene point rather than a security one: "Practicing good cyber hygiene
+    starts with eliminating unsupported edge devices."
+  </p>
+  <p class="panel-note">
+    The commercial reading is the same argument. An unsupported device is one whose failures you can
+    neither patch nor replace against a published schedule, and whose next failure arrives on an
+    attacker's schedule instead of yours. A published end-of-life date converts that from a surprise
+    into a line item.
+  </p>
+</section>
+
+<section class="panel">
+  <h2 class="panel-title">What "end of support" means, in the words of the directive</h2>
+  <p>
+    CISA defines the condition without reference to a commercial milestone. Verbatim from the
+    directive's Definitions section:
+  </p>
+  <blockquote class="research-quote">{{ cisa_eos_definition }}</blockquote>
+  <p>
+    Two consequences follow, and this catalog is built on both.
+  </p>
+  <p>
+    <strong>Unsupported is a status, not a published date.</strong> A device can be end of support
+    while no vendor ever announced a day. The directive keys on update behaviour — "no longer receive
+    timely, supported updates" — so a missing date does not mean a supported product. This is why
+    every absent date on this site is published as <em>unknown</em> rather than quietly treated as
+    "still supported", and why a row that leaves from a vendor's table is retained rather than
+    deleted: a row disappearing is not an end of life, and neither is a row never appearing.
+  </p>
+  <p>
+    <strong>There is one condition here, not three.</strong> The directive uses "end of support"
+    throughout; "end of life" and "end of sale" do not appear in it. It treats a product that is still
+    for sale but no longer patched as in scope, and a product that cannot be bought but is still
+    patched as out of scope. That is a defensible security boundary and a different one from this
+    catalog's, which keeps end of sale, end of security support and end of life apart because
+    vendors state them separately. Where a vendor states only one of them, this catalog publishes
+    that one and leaves the others absent.
+  </p>
+</section>
+
+<section class="panel">
+  <h2 class="panel-title">The priority set, and how much of it is covered</h2>
+  <p>
+    The device classes below are the ones CISA's own guidance names. The counts are not an opinion:
+    each row is derived from the committed hardware catalog at build time, so a class the catalog
+    does not carry reads as a gap, and the page cannot claim coverage that does not exist. This is
+    the prioritization rationale made concrete — the ranking comes from CISA, the coverage comes from
+    the data.
+  </p>
+  <div class="table-scroll">
+    <table class="mapping-table priority-table">
+      <caption class="sr-only">CISA-prioritized edge device classes against this catalog's hardware records</caption>
+      <thead>
+        <tr>
+          <th scope="col">Device class</th>
+          <th scope="col">Vendors</th>
+          <th scope="col" class="num">Records</th>
+          <th scope="col" class="num">With a date</th>
+          <th scope="col">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for group in priority.classes %}
+        <tr>
+          <th scope="row">{{ group['class'] }}</th>
+          <td>
+            {% for vendor in group['vendors'] %}
+            {% if vendor['records'] %}<strong>{{ vendor['name'] }}</strong> ({{ vendor['records'] }}){% else %}{{ vendor['name'] }} (0){% endif %}{% if not loop.last %}<br>{% endif %}
+            {% endfor %}
+          </td>
+          <td class="num">{{ group['records'] }}</td>
+          <td class="num">{{ group['dated'] }}</td>
+          <td>{% if group['covered'] %}<span class="chip">partial</span>{% else %}<span class="chip chip-count">no coverage</span>{% endif %}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <p class="panel-note">
+    The shape of that table is the finding. The vendors carrying it, in order,
+    are
+    {% for vendor in priority.top_vendors %}<strong>{{ vendor['name'] }}</strong> ({{ vendor['records'] }}){{ ", " if not loop.last }}{% endfor %},
+    and the classes with no records at all are the next coverage work — not
+    because their dates are unknown, but because those vendors publish them
+    behind a login, a web-application firewall, or a page that renders
+    client-side. Coverage here follows whichever vendor published a page a
+    collector can read, not which device is most exposed.
+  </p>
+</section>
+
+<section class="panel">
+  <h2 class="panel-title">What CISA has committed to, and why it is not a source here yet</h2>
+  <p>
+    The same directive promises a dataset this catalog could use directly. CISA Action 1, verbatim:
+    "CISA will provide an initial list of EOS and soon-to-be EOS edge devices for Required Actions #2
+    and #3. {{ cisa_eos_list }}"
+  </p>
+  <p>
+    Product name, version number and an end-of-support date is exactly a release row. The list is not
+    published. It is named in the directive as plain text with no link, no attachment and no path;
+    it is absent from both of CISA's sitemaps, from CISA's own site search and from CISA's GitHub
+    organisation; the directive requires no publication by anyone, since every data obligation in it
+    runs from agencies to CISA; and CISA itself calls the list "a preliminary repository" that
+    agencies should stop relying on after three months, because after that they are expected to find
+    their own end-of-support devices.
+  </p>
+  <p>
+    So nothing is ingested from it, and nothing is written to look as though it were. Two other CISA
+    artifacts were checked and rejected for this purpose: the Known Exploited Vulnerabilities feed is
+    the only machine-readable feed CISA publishes and carries no version and no lifecycle field at
+    all, and its advisory text occasionally contains the hedged phrase "could be end-of-life" about
+    Linux kernel branches, which is not a lifecycle claim. The CISA advisory feeds can express
+    end-of-life in their schema but do not populate it.
+  </p>
+  <p class="panel-note">
+    If CISA publishes that list with a citation to each vendor notice behind a date, it becomes a
+    legitimate registered source — and the fifteen vendors with no records here would become the
+    natural first use of it, because for those it would be the only source available. Until then, the
+    vendors' own pages are the way in.
+  </p>
+</section>
+
+<section class="panel">
+  <h2 class="panel-title">What this catalog will not publish</h2>
+  <p>
+    The value of a date is entirely in whether it is real, so the rules that keep these dates real are
+    worth stating in public. Every milestone on this site is one of four things, and nothing else is
+    published as a date:
+  </p>
+  <ul>
+    <li><strong>A date the vendor stated</strong>, at the precision the vendor stated it. A month stays a month; it is never padded into a day.</li>
+    <li><strong>A date CISA stated</strong>, attributed to CISA rather than to the vendor, where a government source is the one that published it.</li>
+    <li><strong>A date a vendor's own explicit rule derives</strong> — a stated support duration or a named release trigger — labelled derived everywhere it appears, recomputed on every build, and excluded from the exact-day feeds and the OpenEoX export.</li>
+    <li><strong>Nothing.</strong> Where a vendor has not published a date, this catalog publishes none, and says so.</li>
+  </ul>
+  <p>
+    Specifically, this catalog never publishes a date inferred from a release cadence, from a
+    version number, from the age of a product, from the fact that a newer release exists, or from a
+    product's absence from a table. A generic support window never becomes an end-of-security-support
+    date. When two sources disagree about one date, that is published as a review to be resolved, not
+    merged into a value both sources would have to be wrong about.
+  </p>
+</section>
+{% endblock %}

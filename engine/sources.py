@@ -79,6 +79,12 @@ PROGRESS_WHATSUP_EOS_POLICY = "https://docs.progress.com/bundle/product-eos-poli
 PROGRESS_SITEFINITY_POLICY = "https://www.progress.com/support/sitefinity-lifecycle-policy"
 SOLARWINDS_SITEMAP = "https://documentation.solarwinds.com/sitemap.xml"
 SOLARWINDS_DOCS = "https://documentation.solarwinds.com/en/success_center/"
+WATCHGUARD_EOL_POLICY = "https://www.watchguard.com/wgrd-trust-center/end-of-life-policy"
+WATCHGUARD_ATTRIBUTION = ("WatchGuard appliance lifecycle published directly by WatchGuard's own "
+                          "end-of-life policy page; End of Sale is the last date a partner may "
+                          "purchase and End of Life the conclusion of development and support, and "
+                          "rows stating availability prose instead of a date are excluded rather "
+                          "than read as a deadline.")
 SOLARWINDS_ATTRIBUTION = ("SolarWinds product lifecycle published directly by SolarWinds' own "
                           "release-history and retired-product tables; the EoL effective date is "
                           "the terminal support end, and the EoL announcement and EoE effective "
@@ -607,6 +613,18 @@ SOURCES = (
         attribution=PROGRESS_ATTRIBUTION,
         validator="engine.progress.validate_sitefinity",
         report="progress-sitefinity-import.json",
+    ),
+    Source(
+        id="import-watchguard",
+        module="engine.watchguard",
+        entry="import_watchguard",
+        verifier="deterministic-watchguard",
+        category="hardware",
+        name="WatchGuard",
+        url=WATCHGUARD_EOL_POLICY,
+        pages=(Page(WATCHGUARD_EOL_POLICY, "WatchGuard end-of-life policy"),),
+        attribution=WATCHGUARD_ATTRIBUTION,
+        report="watchguard-import.json",
     ),
     Source(
         id="import-solarwinds",

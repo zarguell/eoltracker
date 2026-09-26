@@ -27,9 +27,11 @@ from .site_config import (CATALOG_STATES, CHANGES_ATOM, CHANGES_JSON, DEFAULT_DA
 from .site_sources import (source_attribution, source_links, source_name, source_order, source_url as safe_source_url)
 from .site_views import (catalog_categories, catalog_identity, catalog_stats, derived_count,
                          derived_rows, hardware_rows, hardware_statuses, hardware_vendor_shards,
-                         hardware_vendors, milestone_coverage, opengear_index, release_rows,
-                         report_families, research_count, research_view, RESEARCH_STALE_DAYS,
-                         safe_link_map, safe_links, summarize, summarize_hardware, upcoming_events)
+                         hardware_vendors, milestone_coverage, opengear_index, priority_coverage,
+                         release_rows, report_families, research_count, research_view,
+                         RESEARCH_STALE_DAYS, safe_link_map, safe_links, summarize,
+                         summarize_hardware, upcoming_events)
+from . import site_views as views
 from .importer import ROOT
 from . import changes, contribute, feeds, openeox, sources
 from .validation import validate_data, validate_hardware
@@ -529,6 +531,22 @@ def _render_tree(data_dir, out):
         sample_hardware=hardware[0]["id"] if hardware else None,
         vendor_shards=vendor_shards,
         openeox_url=url_for("v1/openeox/index.json"),
+    ))
+
+    write(out / "why" / "index.html", render(
+        "why.html",
+        **common,
+        active="why",
+        canonical=site_url("why/"),
+        title="Why end-of-life dates — EOL Tracker",
+        description=("The case for tracking end-of-life dates, the edge-device classes CISA's own "
+                     "guidance prioritizes, and how much of that priority set this catalog covers "
+                     "today."),
+        priority=priority_coverage(hardware),
+        cisa_bod_url=views.CISA_BOD,
+        cisa_fact_sheet_url=views.CISA_FACT_SHEET,
+        cisa_eos_definition=views.CISA_EOS_DEFINITION,
+        cisa_eos_list=views.CISA_EOS_LIST,
     ))
 
     write(out / "404.html", render(

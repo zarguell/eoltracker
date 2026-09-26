@@ -714,3 +714,120 @@ def hardware_vendor_shards(records, vendors):
             "records": groups[name],
         })
     return shards
+
+
+# --- The priority set CISA's own guidance defines ---------------------------
+# CISA's BOD 26-02 and the joint CISA/FBI/NCSC fact sheet name the device
+# classes that nation-state actors exploit once they are end of support, and
+# say which product families those classes are made of. That is an external,
+# citable prioritization of what to cover, so the page can rank the gap by it
+# rather than by which vendor happens to be easiest to parse.
+#
+# Each target is matched against the committed hardware catalog by vendor name,
+# and the count is derived from the records themselves: a target with no
+# records renders as uncovered, and the page cannot claim coverage the catalog
+# does not have. The directive's own definition of the condition is carried with
+# the list, verbatim, because it is the sentence that makes "no published date"
+# mean "unknown", not "supported".
+CISA_BOD = "https://www.cisa.gov/news-events/directives/bod-26-02-mitigating-risk-end-support-edge-devices"
+CISA_FACT_SHEET = ("https://www.cisa.gov/resources-tools/resources/"
+                   "reducing-attack-surface-end-support-edge-devices")
+CISA_EOS_DEFINITION = ("Hardware devices, firmware, and software versions that no longer receive "
+                       "timely, supported updates from the original equipment manufacturer, "
+                       "including patches for CVEs, security updates, software fixes (hotfixes), "
+                       "and defects.")
+CISA_EOS_LIST = ("This list will include the IT product name, version number, and end of support "
+                 "date.")
+
+# The classes the fact sheet names as the actively exploited set, and the
+# vendors that build them. `names` are matched case-insensitively against a
+# record's own vendor field, so a vendor whose catalog name differs (Brocade
+# under Broadcom) is matched by every name it is known by rather than by a
+# substring that would also catch an unrelated vendor.
+PRIORITY_TARGETS = (
+    {"class": "Firewalls and network security appliances",
+     "vendors": (("Fortinet", ("fortinet",)), ("Palo Alto Networks", ("paloalto",)),
+                 ("Check Point", ("checkpoint",)), ("WatchGuard", ("watchguard",)))},
+    {"class": "Load balancers and application delivery controllers",
+     "vendors": (("F5", ("f5",)), ("Citrix NetScaler", ("citrix",)))},
+    {"class": "VPN gateways and remote access",
+     "vendors": (("Cisco ASA and AnyConnect", ("cisco",)), ("Ivanti", ("ivanti",)),
+                 ("Palo Alto GlobalProtect", ("paloalto",)), ("Citrix NetScaler Gateway", ("citrix",)))},
+    {"class": "Routers and switches",
+     "vendors": (("Juniper Networks", ("juniper",)), ("Cisco", ("cisco",)),
+                 ("Extreme Networks", ("extreme",)), ("Netgear", ("netgear",)),
+                 ("MikroTik", ("mikrotik",)))},
+    {"class": "Wireless access points",
+     "vendors": (("Aruba and HPE networking", ("aruba", "hewlettpackardenterprisenetworking")),
+                 ("Cisco", ("cisco",)), ("Extreme Networks", ("extreme",)))},
+    {"class": "Email and web security appliances",
+     "vendors": (("Proofpoint", ("proofpoint",)), ("Barracuda", ("barracuda",)),
+                 ("Sophos", ("sophos",)), ("SonicWall", ("sonicwall",)))},
+)
+
+
+def _vendor_key(name):
+    """A vendor name reduced to letters and digits, for prefix matching."""
+    return "".join(character for character in name.lower() if character.isalnum())
+
+
+def priority_coverage(records):
+    """The CISA-prioritized device classes against the committed catalog.
+
+    A vendor matches when its catalog name *starts with* a known name for it —
+    "Juniper Networks" matches "juniper", "Extreme Networks" matches "extreme"
+    — so a vendor whose catalog name is longer than its brand still counts
+    without a substring rule that would also catch an unrelated vendor. Coverage
+    is counted from the records themselves: a class the catalog does not carry
+    renders as uncovered with the vendors that would fill it, which is the
+    honest state of a gap and the reason this view exists.
+    """
+    keys = {}
+    for record in records:
+        key = _vendor_key(record.get("vendor") or "")
+        if key:
+            keys.setdefault(key, []).append(record)
+
+    def match(aliases):
+        found = {}
+        for key, group in keys.items():
+            if any(key.startswith(_vendor_key(alias)) for alias in aliases):
+                found.update((record["id"], record) for record in group)
+        return found
+
+    classes = []
+    every = {}
+    for group in PRIORITY_TARGETS:
+        rows = []
+        within = {}
+        for name, aliases in group["vendors"]:
+            matched = match(aliases)
+            within.update(matched)
+            rows.append({"name": name, "records": len(matched),
+                         "dated": sum(1 for record in matched.values()
+                                      if (record.get("milestones") or {}).get("eol"))})
+        every.update(within)
+        classes.append({"class": group["class"], "vendors": rows,
+                        "records": len(within),
+                        "dated": sum(1 for record in within.values()
+                                     if (record.get("milestones") or {}).get("eol")),
+                        "covered": bool(within)})
+    # Which vendors carry the set, so the page names the ones that do rather
+    # than the page's author naming them: coverage follows who published a
+    # readable page, and that changes as collectors land.
+    per_vendor = {}
+    for record in every.values():
+        name = (record.get("vendor") or "").strip() or "Unattributed"
+        entry = per_vendor.setdefault(name, {"name": name, "records": 0, "dated": 0})
+        entry["records"] += 1
+        if (record.get("milestones") or {}).get("eol"):
+            entry["dated"] += 1
+    top = sorted(per_vendor.values(), key=lambda entry: (-entry["records"], entry["name"]))
+    return {"classes": classes, "top_vendors": top,
+            "covered": sum(1 for group in classes if group["covered"]),
+            "uncovered": sum(1 for group in classes if not group["covered"]),
+            "records": len(every),
+            "dated": sum(1 for record in every.values()
+                         if (record.get("milestones") or {}).get("eol")),
+            "vendors_covered": len({(record.get("vendor") or "") for record in every.values()}),
+            "vendors_total": len({name for group in PRIORITY_TARGETS for name, _ in group["vendors"]})}

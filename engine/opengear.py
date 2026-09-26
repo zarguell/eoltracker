@@ -21,7 +21,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urljoin
 
-from . import sources
+from . import hardware, sources
 from .hardware import _Tables, fetch, get_records, publish_records, slugify, RECORD_SCHEMA
 from .importer import ROOT, dump
 from .sources import OPENGEAR_CONFIGURE, OPENGEAR_LIFECYCLE
@@ -102,17 +102,9 @@ def catalog_identity(sku):
     return f"opengear-catalog-{slugify(sku)}-{digest}"
 
 
-def status_from(eol, checked):
-    """Status from the published support deadline; no deadline means unknown.
-
-    The vocabulary is the hardware catalog's: an announced deadline not yet
-    reached is ``expiring`` and a passed one is ``eol``. A row that publishes
-    no support deadline at all is ``unknown`` — neither a support claim nor an
-    end of life, since the source states neither.
-    """
-    if eol is None:
-        return "unknown"
-    return "eol" if eol < checked[:10] else "expiring"
+# The status rule is the hardware catalog's vocabulary and lives in
+# engine.hardware; Opengear's own name is kept for its callers and tests.
+status_from = hardware.status_from
 
 
 def part_tokens(text):

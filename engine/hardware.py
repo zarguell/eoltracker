@@ -173,6 +173,21 @@ def _text(value):
     return re.sub(r"\s+", " ", value).strip()
 
 
+def status_from(eol, checked):
+    """Status from the published support deadline; no deadline means unknown.
+
+    The vocabulary is the hardware catalog's: an announced deadline not yet
+    reached is ``expiring`` and a passed one is ``eol``. A row that publishes no
+    support deadline at all is ``unknown`` — neither a support claim nor an end
+    of life, since the source states neither. Every hardware collector derives
+    status this way rather than restating it, so a deadline is never read as a
+    claim the vendor did not make.
+    """
+    if eol is None:
+        return "unknown"
+    return "eol" if eol < checked[:10] else "expiring"
+
+
 def slugify(value):
     """An id slug: ASCII, lower case, hyphen separated and never empty.
 
@@ -987,6 +1002,20 @@ def publish_records(records, verifier, directory=None, report=None):
         staged_sidecar = False
         if sidecar:
             if report is not None:
+                # A quiet refresh republishes an unchanged report byte for byte:
+                # the sidecar's own `checked_at` is content like any other, so it
+                # keeps the committed value when nothing else changed. A report
+                # that says something new advances it.
+                committed_report = root / sidecar
+                if committed_report.exists():
+                    try:
+                        previous_report = json.loads(committed_report.read_text())
+                    except json.JSONDecodeError:
+                        previous_report = None
+                    if (previous_report is not None
+                            and {**report, "checked_at": previous_report.get("checked_at")}
+                            == previous_report):
+                        report = previous_report
                 dump(staged / sidecar, report)
                 staged_sidecar = True
             elif (root / sidecar).exists():
