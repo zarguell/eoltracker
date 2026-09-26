@@ -4,9 +4,11 @@ Recorded 2026-09-26. The question: can this catalog join its vendor-stated
 end-of-life dates to internet-scan data and publish a "this many are on the
 internet" tracker, and can that start from a free API key?
 
-**Short answer: yes, with one service, for one number per product, under
-conditions. No, not for the thing most people picture, and no, not on the
-service with the better data.** The three findings that decide it, in order of
+**Short answer: yes — as a *presence* signal, per product, tracked over time,
+from Shodan's free count endpoint. The thing that does not work is pinning a
+version, and measuring it is what shows why: not one of nine model names from
+this repository's own catalog appears in any page Shodan indexes. Censys remains
+excluded, on its terms rather than on its limits. The three findings that decide it, in order of
 how much they matter:
 
 1. **Censys cannot be used at all.** Its free tier has no search API, and its
@@ -16,13 +18,12 @@ how much they matter:
 2. **Shodan can produce the number free.** A free account with no card can call
    `GET /shodan/host/count`, which Shodan's own documentation says "does not
    consume query credits". Attribution to Shodan is required.
-3. **The number is weaker than it looks, and version-level counts are not
-   defensible at all.** Shodan counts *banner records over a rolling 30-day
-   index*, its crawlers "don't do sweeps of IP ranges the same way a network
-   scanner would", its `version` field is optional and parsed from an advertised
-   banner, and a patched device routinely reports an older version. Shodan
-   disclaims that "any information obtained by you as a result of your use of
-   the services will be accurate or reliable".
+3. **A version-pinned count is not merely imprecise; it is usually empty.** Shodan
+   counts *banner records over a rolling 30-day index*, its crawlers "don't do
+   sweeps of IP ranges the same way a network scanner would", and its `version`
+   field is optional and parsed from an advertised banner. Measured: the version
+   facet is empty for three of the four families that have a product string, and
+   a version-pinned query returns zero for a release that plainly exists.
 
 ## What you can get today, per service
 
@@ -137,67 +138,102 @@ Shodan's banner-based detections to be false positives".
 | Cisco IOS / ASA | SSH/Telnet/SNMP banners, or a published portal | Routers that leak a management interface — a small, non-random subset |
 | Fortinet, PAN-OS, F5, Check Point, Aruba, SonicWall, Extreme, NETGEAR | Admin UI, portal, or nothing | Nothing reliable at product level; a version-pinned count would be fiction |
 
-## The decision
+## The decision, revised: presence, not version
 
-**Build a Shodan product-level exposure layer, if and only if Shodan confirms
-in writing that an attributed aggregate count may be published. Nothing ships
-until it does.** The reasoning:
+The goal is smaller than "how many EOL devices are exposed", and the smaller goal
+is the one the data supports. **Publish, per product, how many internet-exposed
+instances Shodan observes advertising that product, tracked over time** — a
+prevalence and public-facing signal, not a lifecycle claim. Where a specific
+fingerprint genuinely pins a version, publish that too; it is never the default,
+because measurement says it cannot be.
 
-* The licence is genuinely ambiguous in the place that matters. The pricing
-  page blesses building products with attribution; the terms forbid
-  distributing "Content" without a separate agreement. A single attributed
-  integer is the lowest-risk artifact and is almost certainly what a free key
-  is for, but "almost certainly" is not the standard this repository holds
-  itself to, and a wrong reading is a takedown of the site, not a bug.
-* The measurement only supports one number per product, with its basis printed
-  beside it. Anything finer is not supportable.
-* The **version-pinned** case is refused outright, in code, not only in prose.
+### What the measurements changed
 
-### Rules any implementation must hold
+A free key was used on 2026-09-26, and the evidence settled four things that the
+documentation alone left open.
 
-1. **Product-level only.** No version-pinned counts. `tools/exposure_count.py`
-   refuses them unless explicitly overridden.
-2. **Aggregates only.** No IP addresses, no hostnames, no banners, no ASN or
-   organisation lists, no per-host anything. Shodan's terms forbid
-   redistributing that content, and a published host list is a targeting list
-   regardless of the licence.
-3. **Attribution and basis travel with every number**: "Data: Shodan", the
-   literal query, the retrieval timestamp, and the standing caveat that this is
-   a 30-day banner-record sample rather than a device census.
-4. **A separate layer, never inside a record.** An exposure count is an
-   observation at a time about instances worldwide. A record's milestones are
-   vendor-stated facts with per-release provenance. Mixing them would make a
-   changing scan number look like a lifecycle change, and would put a claim in a
-   place where the catalog's rules say only a vendor statement belongs. The
-   natural shape is a `/v1/exposure.json` endpoint and a small, heavily-caveated
-   panel on the priority page — not a field on a product, not a feed event, and
-   not in OpenEoX.
-5. **Say what it is for.** A global count is context for why a date matters. It
-   is *not* a statement about any reader's own estate, and the page must say so,
+**1. Version fingerprinting does not work, and the reason is not subtle.** Not one
+of nine model names taken from this repository's own 170 published WatchGuard
+products appears anywhere in the pages Shodan indexes — `http.html:"Firebox T15"`,
+`http.title:"WatchGuard AP225W"` and seven others all return **zero**. The
+`version` banner field is empty for the three families that do have a product
+string, and for the fourth (Citrix NetScaler) it holds firmware *build* strings
+such as `13.1-45.64` rather than product versions. So a version-pinned query
+returns zero for products that plainly exist, which is the worst possible failure
+mode: zero looks like a finding.
+
+What *is* measurable is the favicon hash. Shodan indexes it, facets on it, and the
+histograms cluster hard — for the WatchGuard admin UI, one favicon hash covers 64
+of 132 hosts with a long tail behind it; for a wider WatchGuard seed, one hash
+covers 3,045 of 7,204. So a hash isolates a **cohort of hosts running the same
+rendered asset**. What it cannot do is say *which model* that cohort is: mapping
+a hash to a model needs ground truth this catalog does not have, and a hash
+carries no name to look up. Published as "distinct exposed configurations
+observed", never as a model or a version.
+
+**2. Keyword seeds are fiction by an order of magnitude.** `http.html:"WatchGuard"`
+returns 7,204 against a `product:WatchGuard` count of 731 — a 9.9× overstatement.
+`http.html:"Check Point"` returns 251,678, of which the largest single facet is an
+unrelated vendor's product and the next is a source-control tool that merely
+shares the vendor's name. The product-facet string is the only defensible unit.
+
+**3. Some families have no product string at all, and zero is not the answer.**
+`product:FortiOS` and `product:PAN-OS` return zero because Shodan's fingerprints
+never emit those strings — the nearest Fortinet value is a *model* name. A
+published "0" for either would be a confident falsehood, so the design now
+separates **uncounted** from **zero** as a first-class state, and they must never
+share a code path.
+
+**4. A count is stable enough to track.** Five samples a minute apart for three
+products returned identical values to the digit (spread 0). Across a half-hour
+window the same product moved by about 150 records out of 198,000 — roughly
+0.08%. So the index is a stable quantity with a small drift, not a random number,
+and a weekly series can carry a real trend with an honest noise floor rather than
+noise masquerading as change.
+
+### The artefact this implies
+
+A **`/v1/exposure.json` endpoint and a small panel on `/why/`**, one entry per
+product, each carrying:
+
+* the verified Shodan product string, the literal query, and the retrieval
+  timestamp;
+* the count, labelled in the unit Shodan's own terms require: *banner records
+  observed, not devices*;
+* `state`: `observed` with a number, or `uncounted` with the reason (no product
+  string exists, or the query could not be run);
+* the series: previous samples with their timestamps, so a reader sees the trend
+  and the noise rather than one number pretending to be precise;
+* cohort detail where a favicon fingerprint is defensible — the number of
+  distinct exposed configurations, named as such;
+* the standing caveat, and "Data: Shodan" with a link.
+
+Five rules, revised from the evidence:
+
+1. **Presence only, at product level.** No version-pinned figure is ever
+   published. Rule 1 of the original decision, kept, and now justified by
+   measurement rather than caution.
+2. **Aggregates only.** No addresses, hostnames, banners, ASNs or organisation
+   lists. Shodan's terms forbid redistributing that content, and a published host
+   list is a targeting list whatever the licence says.
+3. **A family with no verified product string is `uncounted`, never `0`.**
+4. **Separate layer, never inside a record.** A presence count is an observation at
+   a time about instances worldwide; a record's milestones are vendor-stated
+   facts with per-release provenance. Keeping them apart is what stops a changing
+   scan number from reading as a lifecycle change.
+5. **Say what it is for.** A global count is context for why a date matters. It is
+   not a statement about any reader's own estate, and the panel must say so,
    because the natural misreading is "this many of yours".
 
-### What is deliberately not built here
+### What is not built, and why it still is not built
 
-* No collector, no registry entry, no site section, no data. Those need a key
-  and a written permission, and shipping a feature pointed at an unwritten
-  licence is the failure mode this repository's rules exist to prevent.
-* `tools/exposure_count.py` is a probe: it makes the number checkable by anyone
-  with a free key, in five minutes, and its shape is the shape a future
-  `/v1/exposure.json` entry would take.
-
-## The five-minute path to a real number
-
-```
-1. Register a free Shodan account      https://account.shodan.io/register
-2. Copy the API key                    https://account.shodan.io/
-3. export SHODAN_API_KEY=...            # no card, and counting costs no credits
-4. python3 tools/exposure_count.py --facets country:20,org:20 product:FortiOS
-5. python3 tools/exposure_count.py --facets country:20 product:"MikroTik RouterOS"
-```
-
-Step 5's product names are the vendor's own words, not ours; a query that pins a
-version is refused unless `--allow-version` is passed, and the reason is printed
-when it is.
+The goal got smaller, not larger, in one respect: there is now no claim to
+compute, so there is no risk of a wrong lifecycle date — but there is still a
+licence question, because the artefact is a published Shodan-derived aggregate.
+The same written permission is required, and it is a smaller and more obviously
+ordinary request than before: *may we publish attributed product-level counts,
+refreshed weekly?* Nothing here needs Shodan's banner data, their enrichment
+fields, or their bulk product.
 
 ## What a real key actually returned
 
