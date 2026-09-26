@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-c70-gen1",
+  "name": "C70 Gen1",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Elastic Cloud Storage (ECS)",
+  "family": "Elastic Cloud Storage (ECS)",
+  "model_number": "C70 Gen1",
+  "milestones": {
+    "ga": "2014-12-14",
+    "eos": "2016-05-30",
+    "eossec": null,
+    "eol": "2021-12-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "C70 Gen1",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "C70 Gen1",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Elastic Cloud Storage (ECS)",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2016-05-30",
+      "datetime": null,
+      "value": "2016-05-30",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Dec. 14, 2014",
+      "datetime": "2014-12-14",
+      "value": "2014-12-14",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2021-12-31",
+      "datetime": null,
+      "value": "2021-12-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/cloud-storage/vendor/dell-emc/elastic-cloud-storage-ecs/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

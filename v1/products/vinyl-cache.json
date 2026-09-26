@@ -1,0 +1,345 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "vinyl-cache",
+  "name": "Vinyl Cache",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "varnish"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:brew/varnish"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/library/varnish"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:varnish_cache_project:varnish_cache"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:varnish_cache_project:varnish_cache"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/vinyl-cache",
+    "releasePolicy": "https://vinyl-cache.org/releases/index.html"
+  },
+  "releases": [
+    {
+      "id": "9.0",
+      "name": "9.0",
+      "milestones": {
+        "ga": "2026-03-16",
+        "eos": null,
+        "eossec": "2027-03-16",
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.0",
+        "codename": null,
+        "label": "9.0",
+        "releaseDate": "2026-03-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-03-16",
+        "isMaintained": true,
+        "latest": {
+          "name": "9.0.2",
+          "date": "2026-09-16",
+          "link": "https://vinyl-cache.org/releases/rel9.0.2.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.0",
+      "name": "8.0",
+      "milestones": {
+        "ga": "2025-09-15",
+        "eos": null,
+        "eossec": "2026-09-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "8.0",
+        "codename": null,
+        "label": "8.0",
+        "releaseDate": "2025-09-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-09-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.0.2",
+          "date": "2026-05-18",
+          "link": "https://vinyl-cache.org/releases/rel8.0.2.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.7",
+      "name": "7.7",
+      "milestones": {
+        "ga": "2025-03-17",
+        "eos": null,
+        "eossec": "2026-03-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.7",
+        "codename": null,
+        "label": "7.7",
+        "releaseDate": "2025-03-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-03-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.7.3",
+          "date": "2025-08-20",
+          "link": "https://vinyl-cache.org/releases/rel7.7.3.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.6",
+      "name": "7.6",
+      "milestones": {
+        "ga": "2024-09-13",
+        "eos": null,
+        "eossec": "2025-09-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.6",
+        "codename": null,
+        "label": "7.6",
+        "releaseDate": "2024-09-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-09-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.6.5",
+          "date": "2025-08-20",
+          "link": "https://vinyl-cache.org/releases/rel7.6.5.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.5",
+      "name": "7.5",
+      "milestones": {
+        "ga": "2024-03-18",
+        "eos": null,
+        "eossec": "2025-03-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.5",
+        "codename": null,
+        "label": "7.5",
+        "releaseDate": "2024-03-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-03-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.5.0",
+          "date": "2024-03-18",
+          "link": "https://vinyl-cache.org/releases/rel7.5.0.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.4",
+      "name": "7.4",
+      "milestones": {
+        "ga": "2023-09-15",
+        "eos": null,
+        "eossec": "2024-09-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.4",
+        "codename": null,
+        "label": "7.4",
+        "releaseDate": "2023-09-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-09-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.4.3",
+          "date": "2024-03-18",
+          "link": "https://vinyl-cache.org/releases/rel7.4.3.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.3",
+      "name": "7.3",
+      "milestones": {
+        "ga": "2023-03-15",
+        "eos": null,
+        "eossec": "2024-03-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.3",
+        "codename": null,
+        "label": "7.3",
+        "releaseDate": "2023-03-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-03-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.3.2",
+          "date": "2024-03-18",
+          "link": "https://vinyl-cache.org/releases/rel7.3.2.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.2",
+      "name": "7.2",
+      "milestones": {
+        "ga": "2022-09-15",
+        "eos": null,
+        "eossec": "2023-09-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.2",
+        "codename": null,
+        "label": "7.2",
+        "releaseDate": "2022-09-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-09-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.2.1",
+          "date": "2022-10-11",
+          "link": "https://vinyl-cache.org/releases/rel7.2.1.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.1",
+      "name": "7.1",
+      "milestones": {
+        "ga": "2022-03-15",
+        "eos": null,
+        "eossec": "2023-03-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.1",
+        "codename": null,
+        "label": "7.1",
+        "releaseDate": "2022-03-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-03-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.1.2",
+          "date": "2022-10-10",
+          "link": "https://vinyl-cache.org/releases/rel7.1.2.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.0",
+      "name": "7.0",
+      "milestones": {
+        "ga": "2021-09-15",
+        "eos": null,
+        "eossec": "2022-09-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.0",
+        "codename": null,
+        "label": "7.0",
+        "releaseDate": "2021-09-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-09-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.0.3",
+          "date": "2022-08-05",
+          "link": "https://vinyl-cache.org/releases/rel7.0.3.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.0",
+      "name": "6.0 (LTS)",
+      "milestones": {
+        "ga": "2018-03-15",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.0",
+        "codename": null,
+        "label": "6.0 (LTS)",
+        "releaseDate": "2018-03-15",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "6.0.18",
+          "date": "2026-05-18",
+          "link": "https://vinyl-cache.org/releases/rel6.0.18.html"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/vinyl-cache/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-17T00:08:37+00:00"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-vmaxe",
+  "name": "VMAXe",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Symmetrix",
+  "family": "Symmetrix",
+  "model_number": "VMAXe",
+  "milestones": {
+    "ga": "2011-06-06",
+    "eos": "2012-05-09",
+    "eossec": null,
+    "eol": "2017-09-30"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "VMAXe",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "VMAXe",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Symmetrix",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2012-05-09",
+      "datetime": null,
+      "value": "2012-05-09",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Jun. 06, 2011",
+      "datetime": "2011-06-06",
+      "value": "2011-06-06",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2017-09-30",
+      "datetime": null,
+      "value": "2017-09-30",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/san-storage/vendor/dell-emc/symmetrix/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "apple-mojave-macos-10-14",
+  "name": "Mojave (macOS 10.14)",
+  "category": "hardware",
+  "vendor": "Apple",
+  "product_line": "Apple",
+  "family": "macOS",
+  "model_number": "Mojave (macOS 10.14)",
+  "milestones": {
+    "ga": "2018-09-24",
+    "eos": null,
+    "eossec": null,
+    "eol": "2021-10-25"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Build Number": {
+      "text": "18G9323",
+      "datetime": null,
+      "value": null,
+      "role": "build",
+      "links": []
+    },
+    "Version Number": {
+      "text": "Mojave (macOS 10.14)",
+      "datetime": null,
+      "value": null,
+      "role": "version",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Sep. 24, 2018",
+      "datetime": "2018-09-24",
+      "value": "2018-09-24",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support": {
+      "text": "2021-10-25",
+      "datetime": null,
+      "value": "2021-10-25",
+      "role": "eol",
+      "links": []
+    },
+    "Most Recent Version": {
+      "text": "10.14.6 (July 22, 2019)",
+      "datetime": null,
+      "value": null,
+      "role": null,
+      "links": [
+        "https://developer.apple.com/documentation/macos-release-notes/macos-mojave-10_14-release-notes"
+      ]
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/operating-system/vendor/apple/macos/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

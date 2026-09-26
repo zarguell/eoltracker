@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-vxrail-e665",
+  "name": "VxRail E665",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC VxRail",
+  "family": "VxRail",
+  "model_number": "VxRail E665",
+  "milestones": {
+    "ga": "2020-06-23",
+    "eos": "2024-06-04",
+    "eossec": null,
+    "eol": "2029-05-31"
+  },
+  "status": "supported",
+  "upstream": {
+    "Product": {
+      "text": "VxRail E665",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "VxRail E665",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC VxRail",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2024-06-04",
+      "datetime": null,
+      "value": "2024-06-04",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Jun. 23, 2020",
+      "datetime": "2020-06-23",
+      "value": "2020-06-23",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2029-05-31",
+      "datetime": null,
+      "value": "2029-05-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/hyper-converged/vendor/dell-emc/vxrail/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

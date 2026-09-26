@@ -1,0 +1,127 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "amazon-elasticache-redis",
+  "name": "Amazon ElastiCache for Redis OSS",
+  "category": "software",
+  "upstream_category": "service",
+  "identifiers": [],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Standard Support",
+    "eoes": "Extended Support"
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/amazonelasticache.svg",
+    "html": "https://endoflife.date/amazon-elasticache-redis",
+    "releasePolicy": "https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/engine-versions.html"
+  },
+  "releases": [
+    {
+      "id": "7",
+      "name": "7",
+      "milestones": {
+        "ga": "2022-04-12",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "7",
+        "codename": null,
+        "label": "7",
+        "releaseDate": "2022-04-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isEoes": false,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "6",
+      "name": "6",
+      "milestones": {
+        "ga": "2020-10-13",
+        "eos": null,
+        "eossec": null,
+        "eol": "2030-01-31"
+      },
+      "upstream": {
+        "name": "6",
+        "codename": null,
+        "label": "6",
+        "releaseDate": "2020-10-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-01-31",
+        "isEoes": false,
+        "eoesFrom": "2030-01-31",
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "5",
+      "name": "5",
+      "milestones": {
+        "ga": "2018-10-17",
+        "eos": null,
+        "eossec": null,
+        "eol": "2029-01-31"
+      },
+      "upstream": {
+        "name": "5",
+        "codename": null,
+        "label": "5",
+        "releaseDate": "2018-10-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-01-31",
+        "isEoes": false,
+        "eoesFrom": "2029-01-31",
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "4",
+      "name": "4",
+      "milestones": {
+        "ga": "2017-11-17",
+        "eos": null,
+        "eossec": null,
+        "eol": "2029-01-31"
+      },
+      "upstream": {
+        "name": "4",
+        "codename": null,
+        "label": "4",
+        "releaseDate": "2017-11-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-01-31",
+        "isEoes": false,
+        "eoesFrom": "2029-01-31",
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/amazon-elasticache-redis/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-05-01T09:58:42+00:00"
+  }
+}

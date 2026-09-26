@@ -1,0 +1,3394 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "chrome",
+  "name": "Google Chrome",
+  "category": "software",
+  "upstream_category": "app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "google-chrome"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:google:chrome"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/googlechrome.svg",
+    "html": "https://endoflife.date/chrome",
+    "releasePolicy": "https://developer.chrome.com/docs/web-platform/chrome-release-channels"
+  },
+  "releases": [
+    {
+      "id": "153",
+      "name": "153",
+      "milestones": {
+        "ga": "2026-09-08",
+        "eos": null,
+        "eossec": "2026-09-22",
+        "eol": null
+      },
+      "upstream": {
+        "name": "153",
+        "codename": null,
+        "label": "153",
+        "releaseDate": "2026-09-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2026-09-22",
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "152",
+      "name": "152",
+      "milestones": {
+        "ga": "2026-08-25",
+        "eos": null,
+        "eossec": "2026-09-08",
+        "eol": null
+      },
+      "upstream": {
+        "name": "152",
+        "codename": null,
+        "label": "152",
+        "releaseDate": "2026-08-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-09-08",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "151",
+      "name": "151",
+      "milestones": {
+        "ga": "2026-07-28",
+        "eos": null,
+        "eossec": "2026-08-25",
+        "eol": null
+      },
+      "upstream": {
+        "name": "151",
+        "codename": null,
+        "label": "151",
+        "releaseDate": "2026-07-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-08-25",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "150",
+      "name": "150",
+      "milestones": {
+        "ga": "2026-06-30",
+        "eos": null,
+        "eossec": "2026-07-28",
+        "eol": null
+      },
+      "upstream": {
+        "name": "150",
+        "codename": null,
+        "label": "150",
+        "releaseDate": "2026-06-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-07-28",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "149",
+      "name": "149",
+      "milestones": {
+        "ga": "2026-06-02",
+        "eos": null,
+        "eossec": "2026-06-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "149",
+        "codename": null,
+        "label": "149",
+        "releaseDate": "2026-06-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-06-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "148",
+      "name": "148",
+      "milestones": {
+        "ga": "2026-05-05",
+        "eos": null,
+        "eossec": "2026-06-02",
+        "eol": null
+      },
+      "upstream": {
+        "name": "148",
+        "codename": null,
+        "label": "148",
+        "releaseDate": "2026-05-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-06-02",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "147",
+      "name": "147",
+      "milestones": {
+        "ga": "2026-04-07",
+        "eos": null,
+        "eossec": "2026-05-05",
+        "eol": null
+      },
+      "upstream": {
+        "name": "147",
+        "codename": null,
+        "label": "147",
+        "releaseDate": "2026-04-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-05-05",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "146",
+      "name": "146",
+      "milestones": {
+        "ga": "2026-03-10",
+        "eos": null,
+        "eossec": "2026-04-07",
+        "eol": null
+      },
+      "upstream": {
+        "name": "146",
+        "codename": null,
+        "label": "146",
+        "releaseDate": "2026-03-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-04-07",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "145",
+      "name": "145",
+      "milestones": {
+        "ga": "2026-02-10",
+        "eos": null,
+        "eossec": "2026-03-10",
+        "eol": null
+      },
+      "upstream": {
+        "name": "145",
+        "codename": null,
+        "label": "145",
+        "releaseDate": "2026-02-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-03-10",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "144",
+      "name": "144",
+      "milestones": {
+        "ga": "2026-01-13",
+        "eos": null,
+        "eossec": "2026-02-10",
+        "eol": null
+      },
+      "upstream": {
+        "name": "144",
+        "codename": null,
+        "label": "144",
+        "releaseDate": "2026-01-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-02-10",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "143",
+      "name": "143",
+      "milestones": {
+        "ga": "2025-12-02",
+        "eos": null,
+        "eossec": "2026-01-13",
+        "eol": null
+      },
+      "upstream": {
+        "name": "143",
+        "codename": null,
+        "label": "143",
+        "releaseDate": "2025-12-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-01-13",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "142",
+      "name": "142",
+      "milestones": {
+        "ga": "2025-10-28",
+        "eos": null,
+        "eossec": "2025-12-02",
+        "eol": null
+      },
+      "upstream": {
+        "name": "142",
+        "codename": null,
+        "label": "142",
+        "releaseDate": "2025-10-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-12-02",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "141",
+      "name": "141",
+      "milestones": {
+        "ga": "2025-09-30",
+        "eos": null,
+        "eossec": "2025-10-28",
+        "eol": null
+      },
+      "upstream": {
+        "name": "141",
+        "codename": null,
+        "label": "141",
+        "releaseDate": "2025-09-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-10-28",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "140",
+      "name": "140",
+      "milestones": {
+        "ga": "2025-09-02",
+        "eos": null,
+        "eossec": "2025-09-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "140",
+        "codename": null,
+        "label": "140",
+        "releaseDate": "2025-09-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-09-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "139",
+      "name": "139",
+      "milestones": {
+        "ga": "2025-08-05",
+        "eos": null,
+        "eossec": "2025-09-02",
+        "eol": null
+      },
+      "upstream": {
+        "name": "139",
+        "codename": null,
+        "label": "139",
+        "releaseDate": "2025-08-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-09-02",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "138",
+      "name": "138",
+      "milestones": {
+        "ga": "2025-06-24",
+        "eos": null,
+        "eossec": "2025-08-05",
+        "eol": null
+      },
+      "upstream": {
+        "name": "138",
+        "codename": null,
+        "label": "138",
+        "releaseDate": "2025-06-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-08-05",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "137",
+      "name": "137",
+      "milestones": {
+        "ga": "2025-05-27",
+        "eos": null,
+        "eossec": "2025-06-24",
+        "eol": null
+      },
+      "upstream": {
+        "name": "137",
+        "codename": null,
+        "label": "137",
+        "releaseDate": "2025-05-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-06-24",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "136",
+      "name": "136",
+      "milestones": {
+        "ga": "2025-04-29",
+        "eos": null,
+        "eossec": "2025-05-27",
+        "eol": null
+      },
+      "upstream": {
+        "name": "136",
+        "codename": null,
+        "label": "136",
+        "releaseDate": "2025-04-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-05-27",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "135",
+      "name": "135",
+      "milestones": {
+        "ga": "2025-04-01",
+        "eos": null,
+        "eossec": "2025-04-29",
+        "eol": null
+      },
+      "upstream": {
+        "name": "135",
+        "codename": null,
+        "label": "135",
+        "releaseDate": "2025-04-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-04-29",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "134",
+      "name": "134",
+      "milestones": {
+        "ga": "2025-03-04",
+        "eos": null,
+        "eossec": "2025-04-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "134",
+        "codename": null,
+        "label": "134",
+        "releaseDate": "2025-03-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-04-01",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "133",
+      "name": "133",
+      "milestones": {
+        "ga": "2025-02-04",
+        "eos": null,
+        "eossec": "2025-03-04",
+        "eol": null
+      },
+      "upstream": {
+        "name": "133",
+        "codename": null,
+        "label": "133",
+        "releaseDate": "2025-02-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-03-04",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "132",
+      "name": "132",
+      "milestones": {
+        "ga": "2025-01-14",
+        "eos": null,
+        "eossec": "2025-02-04",
+        "eol": null
+      },
+      "upstream": {
+        "name": "132",
+        "codename": null,
+        "label": "132",
+        "releaseDate": "2025-01-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-02-04",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "131",
+      "name": "131",
+      "milestones": {
+        "ga": "2024-11-12",
+        "eos": null,
+        "eossec": "2025-01-14",
+        "eol": null
+      },
+      "upstream": {
+        "name": "131",
+        "codename": null,
+        "label": "131",
+        "releaseDate": "2024-11-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-01-14",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "130",
+      "name": "130",
+      "milestones": {
+        "ga": "2024-10-15",
+        "eos": null,
+        "eossec": "2024-11-12",
+        "eol": null
+      },
+      "upstream": {
+        "name": "130",
+        "codename": null,
+        "label": "130",
+        "releaseDate": "2024-10-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-11-12",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "129",
+      "name": "129",
+      "milestones": {
+        "ga": "2024-09-17",
+        "eos": null,
+        "eossec": "2024-10-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "129",
+        "codename": null,
+        "label": "129",
+        "releaseDate": "2024-09-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-10-15",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "128",
+      "name": "128",
+      "milestones": {
+        "ga": "2024-08-20",
+        "eos": null,
+        "eossec": "2024-09-17",
+        "eol": null
+      },
+      "upstream": {
+        "name": "128",
+        "codename": null,
+        "label": "128",
+        "releaseDate": "2024-08-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-09-17",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "127",
+      "name": "127",
+      "milestones": {
+        "ga": "2024-07-23",
+        "eos": null,
+        "eossec": "2024-08-20",
+        "eol": null
+      },
+      "upstream": {
+        "name": "127",
+        "codename": null,
+        "label": "127",
+        "releaseDate": "2024-07-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-08-20",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "126",
+      "name": "126",
+      "milestones": {
+        "ga": "2024-06-11",
+        "eos": null,
+        "eossec": "2024-07-23",
+        "eol": null
+      },
+      "upstream": {
+        "name": "126",
+        "codename": null,
+        "label": "126",
+        "releaseDate": "2024-06-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-07-23",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "125",
+      "name": "125",
+      "milestones": {
+        "ga": "2024-05-14",
+        "eos": null,
+        "eossec": "2024-06-11",
+        "eol": null
+      },
+      "upstream": {
+        "name": "125",
+        "codename": null,
+        "label": "125",
+        "releaseDate": "2024-05-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-06-11",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "124",
+      "name": "124",
+      "milestones": {
+        "ga": "2024-04-16",
+        "eos": null,
+        "eossec": "2024-05-14",
+        "eol": null
+      },
+      "upstream": {
+        "name": "124",
+        "codename": null,
+        "label": "124",
+        "releaseDate": "2024-04-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-05-14",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "123",
+      "name": "123",
+      "milestones": {
+        "ga": "2024-03-19",
+        "eos": null,
+        "eossec": "2024-04-16",
+        "eol": null
+      },
+      "upstream": {
+        "name": "123",
+        "codename": null,
+        "label": "123",
+        "releaseDate": "2024-03-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-04-16",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "122",
+      "name": "122",
+      "milestones": {
+        "ga": "2024-02-20",
+        "eos": null,
+        "eossec": "2024-03-19",
+        "eol": null
+      },
+      "upstream": {
+        "name": "122",
+        "codename": null,
+        "label": "122",
+        "releaseDate": "2024-02-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-03-19",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "121",
+      "name": "121",
+      "milestones": {
+        "ga": "2024-01-23",
+        "eos": null,
+        "eossec": "2024-02-20",
+        "eol": null
+      },
+      "upstream": {
+        "name": "121",
+        "codename": null,
+        "label": "121",
+        "releaseDate": "2024-01-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-02-20",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "120",
+      "name": "120",
+      "milestones": {
+        "ga": "2023-12-05",
+        "eos": null,
+        "eossec": "2024-01-23",
+        "eol": null
+      },
+      "upstream": {
+        "name": "120",
+        "codename": null,
+        "label": "120",
+        "releaseDate": "2023-12-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-01-23",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "119",
+      "name": "119",
+      "milestones": {
+        "ga": "2023-10-31",
+        "eos": null,
+        "eossec": "2023-12-05",
+        "eol": null
+      },
+      "upstream": {
+        "name": "119",
+        "codename": null,
+        "label": "119",
+        "releaseDate": "2023-10-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-12-05",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "118",
+      "name": "118",
+      "milestones": {
+        "ga": "2023-10-10",
+        "eos": null,
+        "eossec": "2023-10-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "118",
+        "codename": null,
+        "label": "118",
+        "releaseDate": "2023-10-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-10-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "117",
+      "name": "117",
+      "milestones": {
+        "ga": "2023-09-12",
+        "eos": null,
+        "eossec": "2023-10-10",
+        "eol": null
+      },
+      "upstream": {
+        "name": "117",
+        "codename": null,
+        "label": "117",
+        "releaseDate": "2023-09-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-10-10",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "116",
+      "name": "116",
+      "milestones": {
+        "ga": "2023-08-15",
+        "eos": null,
+        "eossec": "2023-09-12",
+        "eol": null
+      },
+      "upstream": {
+        "name": "116",
+        "codename": null,
+        "label": "116",
+        "releaseDate": "2023-08-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-09-12",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "115",
+      "name": "115",
+      "milestones": {
+        "ga": "2023-07-18",
+        "eos": null,
+        "eossec": "2023-08-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "115",
+        "codename": null,
+        "label": "115",
+        "releaseDate": "2023-07-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-08-15",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "114",
+      "name": "114",
+      "milestones": {
+        "ga": "2023-05-30",
+        "eos": null,
+        "eossec": "2023-07-18",
+        "eol": null
+      },
+      "upstream": {
+        "name": "114",
+        "codename": null,
+        "label": "114",
+        "releaseDate": "2023-05-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-07-18",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "113",
+      "name": "113",
+      "milestones": {
+        "ga": "2023-05-02",
+        "eos": null,
+        "eossec": "2023-05-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "113",
+        "codename": null,
+        "label": "113",
+        "releaseDate": "2023-05-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-05-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "112",
+      "name": "112",
+      "milestones": {
+        "ga": "2023-04-04",
+        "eos": null,
+        "eossec": "2023-05-02",
+        "eol": null
+      },
+      "upstream": {
+        "name": "112",
+        "codename": null,
+        "label": "112",
+        "releaseDate": "2023-04-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-05-02",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "111",
+      "name": "111",
+      "milestones": {
+        "ga": "2023-03-07",
+        "eos": null,
+        "eossec": "2023-04-04",
+        "eol": null
+      },
+      "upstream": {
+        "name": "111",
+        "codename": null,
+        "label": "111",
+        "releaseDate": "2023-03-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-04-04",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "110",
+      "name": "110",
+      "milestones": {
+        "ga": "2023-02-07",
+        "eos": null,
+        "eossec": "2023-03-07",
+        "eol": null
+      },
+      "upstream": {
+        "name": "110",
+        "codename": null,
+        "label": "110",
+        "releaseDate": "2023-02-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-03-07",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "109",
+      "name": "109",
+      "milestones": {
+        "ga": "2023-01-10",
+        "eos": null,
+        "eossec": "2023-02-07",
+        "eol": null
+      },
+      "upstream": {
+        "name": "109",
+        "codename": null,
+        "label": "109",
+        "releaseDate": "2023-01-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-02-07",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "108",
+      "name": "108",
+      "milestones": {
+        "ga": "2022-11-29",
+        "eos": null,
+        "eossec": "2023-01-10",
+        "eol": null
+      },
+      "upstream": {
+        "name": "108",
+        "codename": null,
+        "label": "108",
+        "releaseDate": "2022-11-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-01-10",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "107",
+      "name": "107",
+      "milestones": {
+        "ga": "2022-10-25",
+        "eos": null,
+        "eossec": "2022-11-29",
+        "eol": null
+      },
+      "upstream": {
+        "name": "107",
+        "codename": null,
+        "label": "107",
+        "releaseDate": "2022-10-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-11-29",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "106",
+      "name": "106",
+      "milestones": {
+        "ga": "2022-09-27",
+        "eos": null,
+        "eossec": "2022-10-25",
+        "eol": null
+      },
+      "upstream": {
+        "name": "106",
+        "codename": null,
+        "label": "106",
+        "releaseDate": "2022-09-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-10-25",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "105",
+      "name": "105",
+      "milestones": {
+        "ga": "2022-08-30",
+        "eos": null,
+        "eossec": "2022-09-27",
+        "eol": null
+      },
+      "upstream": {
+        "name": "105",
+        "codename": null,
+        "label": "105",
+        "releaseDate": "2022-08-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-09-27",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "104",
+      "name": "104",
+      "milestones": {
+        "ga": "2022-08-02",
+        "eos": null,
+        "eossec": "2022-08-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "104",
+        "codename": null,
+        "label": "104",
+        "releaseDate": "2022-08-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-08-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "103",
+      "name": "103",
+      "milestones": {
+        "ga": "2022-06-21",
+        "eos": null,
+        "eossec": "2022-08-02",
+        "eol": null
+      },
+      "upstream": {
+        "name": "103",
+        "codename": null,
+        "label": "103",
+        "releaseDate": "2022-06-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-08-02",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "102",
+      "name": "102",
+      "milestones": {
+        "ga": "2022-05-24",
+        "eos": null,
+        "eossec": "2022-06-21",
+        "eol": null
+      },
+      "upstream": {
+        "name": "102",
+        "codename": null,
+        "label": "102",
+        "releaseDate": "2022-05-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-06-21",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "101",
+      "name": "101",
+      "milestones": {
+        "ga": "2022-04-26",
+        "eos": null,
+        "eossec": "2022-05-24",
+        "eol": null
+      },
+      "upstream": {
+        "name": "101",
+        "codename": null,
+        "label": "101",
+        "releaseDate": "2022-04-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-05-24",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "100",
+      "name": "100",
+      "milestones": {
+        "ga": "2022-03-29",
+        "eos": null,
+        "eossec": "2022-04-26",
+        "eol": null
+      },
+      "upstream": {
+        "name": "100",
+        "codename": null,
+        "label": "100",
+        "releaseDate": "2022-03-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-04-26",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "99",
+      "name": "99",
+      "milestones": {
+        "ga": "2022-03-01",
+        "eos": null,
+        "eossec": "2022-03-29",
+        "eol": null
+      },
+      "upstream": {
+        "name": "99",
+        "codename": null,
+        "label": "99",
+        "releaseDate": "2022-03-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-03-29",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "98",
+      "name": "98",
+      "milestones": {
+        "ga": "2022-02-01",
+        "eos": null,
+        "eossec": "2022-03-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "98",
+        "codename": null,
+        "label": "98",
+        "releaseDate": "2022-02-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-03-01",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "97",
+      "name": "97",
+      "milestones": {
+        "ga": "2022-01-04",
+        "eos": null,
+        "eossec": "2022-02-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "97",
+        "codename": null,
+        "label": "97",
+        "releaseDate": "2022-01-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-02-01",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "96",
+      "name": "96",
+      "milestones": {
+        "ga": "2021-11-16",
+        "eos": null,
+        "eossec": "2022-01-04",
+        "eol": null
+      },
+      "upstream": {
+        "name": "96",
+        "codename": null,
+        "label": "96",
+        "releaseDate": "2021-11-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-01-04",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "95",
+      "name": "95",
+      "milestones": {
+        "ga": "2021-10-19",
+        "eos": null,
+        "eossec": "2021-11-16",
+        "eol": null
+      },
+      "upstream": {
+        "name": "95",
+        "codename": null,
+        "label": "95",
+        "releaseDate": "2021-10-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-11-16",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "94",
+      "name": "94",
+      "milestones": {
+        "ga": "2021-09-21",
+        "eos": null,
+        "eossec": "2021-10-19",
+        "eol": null
+      },
+      "upstream": {
+        "name": "94",
+        "codename": null,
+        "label": "94",
+        "releaseDate": "2021-09-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-10-19",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "93",
+      "name": "93",
+      "milestones": {
+        "ga": "2021-08-31",
+        "eos": null,
+        "eossec": "2021-09-21",
+        "eol": null
+      },
+      "upstream": {
+        "name": "93",
+        "codename": null,
+        "label": "93",
+        "releaseDate": "2021-08-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-09-21",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "92",
+      "name": "92",
+      "milestones": {
+        "ga": "2021-07-20",
+        "eos": null,
+        "eossec": "2021-08-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "92",
+        "codename": null,
+        "label": "92",
+        "releaseDate": "2021-07-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-08-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "91",
+      "name": "91",
+      "milestones": {
+        "ga": "2021-05-25",
+        "eos": null,
+        "eossec": "2021-07-20",
+        "eol": null
+      },
+      "upstream": {
+        "name": "91",
+        "codename": null,
+        "label": "91",
+        "releaseDate": "2021-05-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-07-20",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "90",
+      "name": "90",
+      "milestones": {
+        "ga": "2021-04-13",
+        "eos": null,
+        "eossec": "2021-05-25",
+        "eol": null
+      },
+      "upstream": {
+        "name": "90",
+        "codename": null,
+        "label": "90",
+        "releaseDate": "2021-04-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-05-25",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "89",
+      "name": "89",
+      "milestones": {
+        "ga": "2021-03-02",
+        "eos": null,
+        "eossec": "2021-04-13",
+        "eol": null
+      },
+      "upstream": {
+        "name": "89",
+        "codename": null,
+        "label": "89",
+        "releaseDate": "2021-03-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-04-13",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "88",
+      "name": "88",
+      "milestones": {
+        "ga": "2021-01-19",
+        "eos": null,
+        "eossec": "2021-03-02",
+        "eol": null
+      },
+      "upstream": {
+        "name": "88",
+        "codename": null,
+        "label": "88",
+        "releaseDate": "2021-01-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-03-02",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "87",
+      "name": "87",
+      "milestones": {
+        "ga": "2020-11-17",
+        "eos": null,
+        "eossec": "2021-01-19",
+        "eol": null
+      },
+      "upstream": {
+        "name": "87",
+        "codename": null,
+        "label": "87",
+        "releaseDate": "2020-11-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-01-19",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "86",
+      "name": "86",
+      "milestones": {
+        "ga": "2020-10-06",
+        "eos": null,
+        "eossec": "2020-11-17",
+        "eol": null
+      },
+      "upstream": {
+        "name": "86",
+        "codename": null,
+        "label": "86",
+        "releaseDate": "2020-10-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-11-17",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "85",
+      "name": "85",
+      "milestones": {
+        "ga": "2020-08-25",
+        "eos": null,
+        "eossec": "2020-10-06",
+        "eol": null
+      },
+      "upstream": {
+        "name": "85",
+        "codename": null,
+        "label": "85",
+        "releaseDate": "2020-08-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-10-06",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "84",
+      "name": "84",
+      "milestones": {
+        "ga": "2020-07-14",
+        "eos": null,
+        "eossec": "2020-08-25",
+        "eol": null
+      },
+      "upstream": {
+        "name": "84",
+        "codename": null,
+        "label": "84",
+        "releaseDate": "2020-07-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-08-25",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "83",
+      "name": "83",
+      "milestones": {
+        "ga": "2020-05-19",
+        "eos": null,
+        "eossec": "2020-07-14",
+        "eol": null
+      },
+      "upstream": {
+        "name": "83",
+        "codename": null,
+        "label": "83",
+        "releaseDate": "2020-05-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-07-14",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "81",
+      "name": "81",
+      "milestones": {
+        "ga": "2020-04-07",
+        "eos": null,
+        "eossec": "2020-05-19",
+        "eol": null
+      },
+      "upstream": {
+        "name": "81",
+        "codename": null,
+        "label": "81",
+        "releaseDate": "2020-04-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-05-19",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "80",
+      "name": "80",
+      "milestones": {
+        "ga": "2020-02-04",
+        "eos": null,
+        "eossec": "2020-04-07",
+        "eol": null
+      },
+      "upstream": {
+        "name": "80",
+        "codename": null,
+        "label": "80",
+        "releaseDate": "2020-02-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-04-07",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "79",
+      "name": "79",
+      "milestones": {
+        "ga": "2019-12-10",
+        "eos": null,
+        "eossec": "2020-02-04",
+        "eol": null
+      },
+      "upstream": {
+        "name": "79",
+        "codename": null,
+        "label": "79",
+        "releaseDate": "2019-12-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-02-04",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "78",
+      "name": "78",
+      "milestones": {
+        "ga": "2019-10-22",
+        "eos": null,
+        "eossec": "2019-12-10",
+        "eol": null
+      },
+      "upstream": {
+        "name": "78",
+        "codename": null,
+        "label": "78",
+        "releaseDate": "2019-10-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-12-10",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "77",
+      "name": "77",
+      "milestones": {
+        "ga": "2019-09-10",
+        "eos": null,
+        "eossec": "2019-10-22",
+        "eol": null
+      },
+      "upstream": {
+        "name": "77",
+        "codename": null,
+        "label": "77",
+        "releaseDate": "2019-09-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-10-22",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "76",
+      "name": "76",
+      "milestones": {
+        "ga": "2019-07-30",
+        "eos": null,
+        "eossec": "2019-09-10",
+        "eol": null
+      },
+      "upstream": {
+        "name": "76",
+        "codename": null,
+        "label": "76",
+        "releaseDate": "2019-07-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-09-10",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "75",
+      "name": "75",
+      "milestones": {
+        "ga": "2019-06-04",
+        "eos": null,
+        "eossec": "2019-07-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "75",
+        "codename": null,
+        "label": "75",
+        "releaseDate": "2019-06-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-07-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "74",
+      "name": "74",
+      "milestones": {
+        "ga": "2019-04-23",
+        "eos": null,
+        "eossec": "2019-06-04",
+        "eol": null
+      },
+      "upstream": {
+        "name": "74",
+        "codename": null,
+        "label": "74",
+        "releaseDate": "2019-04-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-06-04",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "73",
+      "name": "73",
+      "milestones": {
+        "ga": "2019-03-12",
+        "eos": null,
+        "eossec": "2019-04-23",
+        "eol": null
+      },
+      "upstream": {
+        "name": "73",
+        "codename": null,
+        "label": "73",
+        "releaseDate": "2019-03-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-04-23",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "72",
+      "name": "72",
+      "milestones": {
+        "ga": "2019-01-29",
+        "eos": null,
+        "eossec": "2019-03-12",
+        "eol": null
+      },
+      "upstream": {
+        "name": "72",
+        "codename": null,
+        "label": "72",
+        "releaseDate": "2019-01-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-03-12",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "71",
+      "name": "71",
+      "milestones": {
+        "ga": "2018-12-04",
+        "eos": null,
+        "eossec": "2019-01-29",
+        "eol": null
+      },
+      "upstream": {
+        "name": "71",
+        "codename": null,
+        "label": "71",
+        "releaseDate": "2018-12-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-01-29",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "70",
+      "name": "70",
+      "milestones": {
+        "ga": "2018-10-16",
+        "eos": null,
+        "eossec": "2018-12-04",
+        "eol": null
+      },
+      "upstream": {
+        "name": "70",
+        "codename": null,
+        "label": "70",
+        "releaseDate": "2018-10-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-12-04",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "69",
+      "name": "69",
+      "milestones": {
+        "ga": "2018-09-04",
+        "eos": null,
+        "eossec": "2018-10-16",
+        "eol": null
+      },
+      "upstream": {
+        "name": "69",
+        "codename": null,
+        "label": "69",
+        "releaseDate": "2018-09-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-10-16",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "68",
+      "name": "68",
+      "milestones": {
+        "ga": "2018-07-24",
+        "eos": null,
+        "eossec": "2018-09-04",
+        "eol": null
+      },
+      "upstream": {
+        "name": "68",
+        "codename": null,
+        "label": "68",
+        "releaseDate": "2018-07-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-09-04",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "67",
+      "name": "67",
+      "milestones": {
+        "ga": "2018-05-29",
+        "eos": null,
+        "eossec": "2018-07-24",
+        "eol": null
+      },
+      "upstream": {
+        "name": "67",
+        "codename": null,
+        "label": "67",
+        "releaseDate": "2018-05-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-07-24",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "66",
+      "name": "66",
+      "milestones": {
+        "ga": "2018-04-17",
+        "eos": null,
+        "eossec": "2018-05-29",
+        "eol": null
+      },
+      "upstream": {
+        "name": "66",
+        "codename": null,
+        "label": "66",
+        "releaseDate": "2018-04-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-05-29",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "65",
+      "name": "65",
+      "milestones": {
+        "ga": "2018-03-06",
+        "eos": null,
+        "eossec": "2018-04-17",
+        "eol": null
+      },
+      "upstream": {
+        "name": "65",
+        "codename": null,
+        "label": "65",
+        "releaseDate": "2018-03-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-04-17",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "64",
+      "name": "64",
+      "milestones": {
+        "ga": "2018-01-23",
+        "eos": null,
+        "eossec": "2018-03-06",
+        "eol": null
+      },
+      "upstream": {
+        "name": "64",
+        "codename": null,
+        "label": "64",
+        "releaseDate": "2018-01-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-03-06",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "63",
+      "name": "63",
+      "milestones": {
+        "ga": "2017-12-05",
+        "eos": null,
+        "eossec": "2018-01-23",
+        "eol": null
+      },
+      "upstream": {
+        "name": "63",
+        "codename": null,
+        "label": "63",
+        "releaseDate": "2017-12-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-01-23",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "62",
+      "name": "62",
+      "milestones": {
+        "ga": "2017-10-17",
+        "eos": null,
+        "eossec": "2017-12-05",
+        "eol": null
+      },
+      "upstream": {
+        "name": "62",
+        "codename": null,
+        "label": "62",
+        "releaseDate": "2017-10-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-12-05",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "61",
+      "name": "61",
+      "milestones": {
+        "ga": "2017-09-05",
+        "eos": null,
+        "eossec": "2017-10-17",
+        "eol": null
+      },
+      "upstream": {
+        "name": "61",
+        "codename": null,
+        "label": "61",
+        "releaseDate": "2017-09-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-10-17",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "60",
+      "name": "60",
+      "milestones": {
+        "ga": "2017-07-25",
+        "eos": null,
+        "eossec": "2017-09-05",
+        "eol": null
+      },
+      "upstream": {
+        "name": "60",
+        "codename": null,
+        "label": "60",
+        "releaseDate": "2017-07-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-09-05",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "59",
+      "name": "59",
+      "milestones": {
+        "ga": "2017-05-30",
+        "eos": null,
+        "eossec": "2017-07-25",
+        "eol": null
+      },
+      "upstream": {
+        "name": "59",
+        "codename": null,
+        "label": "59",
+        "releaseDate": "2017-05-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-07-25",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "58",
+      "name": "58",
+      "milestones": {
+        "ga": "2017-04-18",
+        "eos": null,
+        "eossec": "2017-05-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "58",
+        "codename": null,
+        "label": "58",
+        "releaseDate": "2017-04-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-05-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "57",
+      "name": "57",
+      "milestones": {
+        "ga": "2017-03-07",
+        "eos": null,
+        "eossec": "2017-04-18",
+        "eol": null
+      },
+      "upstream": {
+        "name": "57",
+        "codename": null,
+        "label": "57",
+        "releaseDate": "2017-03-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-04-18",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "56",
+      "name": "56",
+      "milestones": {
+        "ga": "2017-01-24",
+        "eos": null,
+        "eossec": "2017-03-07",
+        "eol": null
+      },
+      "upstream": {
+        "name": "56",
+        "codename": null,
+        "label": "56",
+        "releaseDate": "2017-01-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-03-07",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "55",
+      "name": "55",
+      "milestones": {
+        "ga": "2016-11-29",
+        "eos": null,
+        "eossec": "2017-01-24",
+        "eol": null
+      },
+      "upstream": {
+        "name": "55",
+        "codename": null,
+        "label": "55",
+        "releaseDate": "2016-11-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-01-24",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "54",
+      "name": "54",
+      "milestones": {
+        "ga": "2016-10-11",
+        "eos": null,
+        "eossec": "2016-11-29",
+        "eol": null
+      },
+      "upstream": {
+        "name": "54",
+        "codename": null,
+        "label": "54",
+        "releaseDate": "2016-10-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2016-11-29",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "53",
+      "name": "53",
+      "milestones": {
+        "ga": "2016-08-30",
+        "eos": null,
+        "eossec": "2016-10-11",
+        "eol": null
+      },
+      "upstream": {
+        "name": "53",
+        "codename": null,
+        "label": "53",
+        "releaseDate": "2016-08-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2016-10-11",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "52",
+      "name": "52",
+      "milestones": {
+        "ga": "2016-07-19",
+        "eos": null,
+        "eossec": "2016-08-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "52",
+        "codename": null,
+        "label": "52",
+        "releaseDate": "2016-07-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2016-08-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "51",
+      "name": "51",
+      "milestones": {
+        "ga": "2016-05-24",
+        "eos": null,
+        "eossec": "2016-07-19",
+        "eol": null
+      },
+      "upstream": {
+        "name": "51",
+        "codename": null,
+        "label": "51",
+        "releaseDate": "2016-05-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2016-07-19",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "50",
+      "name": "50",
+      "milestones": {
+        "ga": "2016-04-12",
+        "eos": null,
+        "eossec": "2016-05-24",
+        "eol": null
+      },
+      "upstream": {
+        "name": "50",
+        "codename": null,
+        "label": "50",
+        "releaseDate": "2016-04-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2016-05-24",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "49",
+      "name": "49",
+      "milestones": {
+        "ga": "2016-03-01",
+        "eos": null,
+        "eossec": "2016-04-12",
+        "eol": null
+      },
+      "upstream": {
+        "name": "49",
+        "codename": null,
+        "label": "49",
+        "releaseDate": "2016-03-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2016-04-12",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "48",
+      "name": "48",
+      "milestones": {
+        "ga": "2016-01-19",
+        "eos": null,
+        "eossec": "2016-03-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "48",
+        "codename": null,
+        "label": "48",
+        "releaseDate": "2016-01-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2016-03-01",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "47",
+      "name": "47",
+      "milestones": {
+        "ga": "2015-11-17",
+        "eos": null,
+        "eossec": "2016-01-19",
+        "eol": null
+      },
+      "upstream": {
+        "name": "47",
+        "codename": null,
+        "label": "47",
+        "releaseDate": "2015-11-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2016-01-19",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "46",
+      "name": "46",
+      "milestones": {
+        "ga": "2015-10-06",
+        "eos": null,
+        "eossec": "2015-11-17",
+        "eol": null
+      },
+      "upstream": {
+        "name": "46",
+        "codename": null,
+        "label": "46",
+        "releaseDate": "2015-10-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2015-11-17",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "45",
+      "name": "45",
+      "milestones": {
+        "ga": "2015-08-25",
+        "eos": null,
+        "eossec": "2015-10-06",
+        "eol": null
+      },
+      "upstream": {
+        "name": "45",
+        "codename": null,
+        "label": "45",
+        "releaseDate": "2015-08-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2015-10-06",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "44",
+      "name": "44",
+      "milestones": {
+        "ga": "2015-07-14",
+        "eos": null,
+        "eossec": "2015-08-25",
+        "eol": null
+      },
+      "upstream": {
+        "name": "44",
+        "codename": null,
+        "label": "44",
+        "releaseDate": "2015-07-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2015-08-25",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "43",
+      "name": "43",
+      "milestones": {
+        "ga": "2015-05-19",
+        "eos": null,
+        "eossec": "2015-07-14",
+        "eol": null
+      },
+      "upstream": {
+        "name": "43",
+        "codename": null,
+        "label": "43",
+        "releaseDate": "2015-05-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2015-07-14",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "42",
+      "name": "42",
+      "milestones": {
+        "ga": "2015-04-07",
+        "eos": null,
+        "eossec": "2015-05-19",
+        "eol": null
+      },
+      "upstream": {
+        "name": "42",
+        "codename": null,
+        "label": "42",
+        "releaseDate": "2015-04-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2015-05-19",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "41",
+      "name": "41",
+      "milestones": {
+        "ga": "2015-02-24",
+        "eos": null,
+        "eossec": "2015-04-07",
+        "eol": null
+      },
+      "upstream": {
+        "name": "41",
+        "codename": null,
+        "label": "41",
+        "releaseDate": "2015-02-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2015-04-07",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "40",
+      "name": "40",
+      "milestones": {
+        "ga": "2015-01-13",
+        "eos": null,
+        "eossec": "2015-02-24",
+        "eol": null
+      },
+      "upstream": {
+        "name": "40",
+        "codename": null,
+        "label": "40",
+        "releaseDate": "2015-01-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2015-02-24",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "39",
+      "name": "39",
+      "milestones": {
+        "ga": "2014-11-11",
+        "eos": null,
+        "eossec": "2015-01-13",
+        "eol": null
+      },
+      "upstream": {
+        "name": "39",
+        "codename": null,
+        "label": "39",
+        "releaseDate": "2014-11-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2015-01-13",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "38",
+      "name": "38",
+      "milestones": {
+        "ga": "2014-09-30",
+        "eos": null,
+        "eossec": "2014-11-11",
+        "eol": null
+      },
+      "upstream": {
+        "name": "38",
+        "codename": null,
+        "label": "38",
+        "releaseDate": "2014-09-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2014-11-11",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "37",
+      "name": "37",
+      "milestones": {
+        "ga": "2014-08-19",
+        "eos": null,
+        "eossec": "2014-09-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "37",
+        "codename": null,
+        "label": "37",
+        "releaseDate": "2014-08-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2014-09-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "36",
+      "name": "36",
+      "milestones": {
+        "ga": "2014-06-24",
+        "eos": null,
+        "eossec": "2014-08-19",
+        "eol": null
+      },
+      "upstream": {
+        "name": "36",
+        "codename": null,
+        "label": "36",
+        "releaseDate": "2014-06-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2014-08-19",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "35",
+      "name": "35",
+      "milestones": {
+        "ga": "2014-05-13",
+        "eos": null,
+        "eossec": "2014-06-24",
+        "eol": null
+      },
+      "upstream": {
+        "name": "35",
+        "codename": null,
+        "label": "35",
+        "releaseDate": "2014-05-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2014-06-24",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "34",
+      "name": "34",
+      "milestones": {
+        "ga": "2014-04-01",
+        "eos": null,
+        "eossec": "2014-05-13",
+        "eol": null
+      },
+      "upstream": {
+        "name": "34",
+        "codename": null,
+        "label": "34",
+        "releaseDate": "2014-04-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2014-05-13",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "33",
+      "name": "33",
+      "milestones": {
+        "ga": "2014-02-18",
+        "eos": null,
+        "eossec": "2014-04-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "33",
+        "codename": null,
+        "label": "33",
+        "releaseDate": "2014-02-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2014-04-01",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "32",
+      "name": "32",
+      "milestones": {
+        "ga": "2014-01-07",
+        "eos": null,
+        "eossec": "2014-02-18",
+        "eol": null
+      },
+      "upstream": {
+        "name": "32",
+        "codename": null,
+        "label": "32",
+        "releaseDate": "2014-01-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2014-02-18",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "31",
+      "name": "31",
+      "milestones": {
+        "ga": "2013-11-05",
+        "eos": null,
+        "eossec": "2014-01-07",
+        "eol": null
+      },
+      "upstream": {
+        "name": "31",
+        "codename": null,
+        "label": "31",
+        "releaseDate": "2013-11-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2014-01-07",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "30",
+      "name": "30",
+      "milestones": {
+        "ga": "2013-09-24",
+        "eos": null,
+        "eossec": "2013-11-05",
+        "eol": null
+      },
+      "upstream": {
+        "name": "30",
+        "codename": null,
+        "label": "30",
+        "releaseDate": "2013-09-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2013-11-05",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "29",
+      "name": "29",
+      "milestones": {
+        "ga": "2013-08-13",
+        "eos": null,
+        "eossec": "2013-09-24",
+        "eol": null
+      },
+      "upstream": {
+        "name": "29",
+        "codename": null,
+        "label": "29",
+        "releaseDate": "2013-08-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2013-09-24",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "28",
+      "name": "28",
+      "milestones": {
+        "ga": "2013-06-25",
+        "eos": null,
+        "eossec": "2013-08-13",
+        "eol": null
+      },
+      "upstream": {
+        "name": "28",
+        "codename": null,
+        "label": "28",
+        "releaseDate": "2013-06-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2013-08-13",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "27",
+      "name": "27",
+      "milestones": {
+        "ga": "2013-05-07",
+        "eos": null,
+        "eossec": "2013-06-25",
+        "eol": null
+      },
+      "upstream": {
+        "name": "27",
+        "codename": null,
+        "label": "27",
+        "releaseDate": "2013-05-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2013-06-25",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "26",
+      "name": "26",
+      "milestones": {
+        "ga": "2013-03-26",
+        "eos": null,
+        "eossec": "2013-05-07",
+        "eol": null
+      },
+      "upstream": {
+        "name": "26",
+        "codename": null,
+        "label": "26",
+        "releaseDate": "2013-03-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2013-05-07",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "25",
+      "name": "25",
+      "milestones": {
+        "ga": "2013-02-12",
+        "eos": null,
+        "eossec": "2013-03-26",
+        "eol": null
+      },
+      "upstream": {
+        "name": "25",
+        "codename": null,
+        "label": "25",
+        "releaseDate": "2013-02-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2013-03-26",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "24",
+      "name": "24",
+      "milestones": {
+        "ga": "2012-12-18",
+        "eos": null,
+        "eossec": "2013-02-12",
+        "eol": null
+      },
+      "upstream": {
+        "name": "24",
+        "codename": null,
+        "label": "24",
+        "releaseDate": "2012-12-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2013-02-12",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "23",
+      "name": "23",
+      "milestones": {
+        "ga": "2012-10-30",
+        "eos": null,
+        "eossec": "2012-12-18",
+        "eol": null
+      },
+      "upstream": {
+        "name": "23",
+        "codename": null,
+        "label": "23",
+        "releaseDate": "2012-10-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2012-12-18",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "22",
+      "name": "22",
+      "milestones": {
+        "ga": "2012-09-18",
+        "eos": null,
+        "eossec": "2012-10-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "22",
+        "codename": null,
+        "label": "22",
+        "releaseDate": "2012-09-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2012-10-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "21",
+      "name": "21",
+      "milestones": {
+        "ga": "2012-08-07",
+        "eos": null,
+        "eossec": "2012-09-18",
+        "eol": null
+      },
+      "upstream": {
+        "name": "21",
+        "codename": null,
+        "label": "21",
+        "releaseDate": "2012-08-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2012-09-18",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "20",
+      "name": "20",
+      "milestones": {
+        "ga": "2012-06-19",
+        "eos": null,
+        "eossec": "2012-08-07",
+        "eol": null
+      },
+      "upstream": {
+        "name": "20",
+        "codename": null,
+        "label": "20",
+        "releaseDate": "2012-06-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2012-08-07",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "19",
+      "name": "19",
+      "milestones": {
+        "ga": "2012-04-24",
+        "eos": null,
+        "eossec": "2012-06-19",
+        "eol": null
+      },
+      "upstream": {
+        "name": "19",
+        "codename": null,
+        "label": "19",
+        "releaseDate": "2012-04-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2012-06-19",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "18",
+      "name": "18",
+      "milestones": {
+        "ga": "2012-03-13",
+        "eos": null,
+        "eossec": "2012-04-24",
+        "eol": null
+      },
+      "upstream": {
+        "name": "18",
+        "codename": null,
+        "label": "18",
+        "releaseDate": "2012-03-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2012-04-24",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "17",
+      "name": "17",
+      "milestones": {
+        "ga": "2012-01-31",
+        "eos": null,
+        "eossec": "2012-03-13",
+        "eol": null
+      },
+      "upstream": {
+        "name": "17",
+        "codename": null,
+        "label": "17",
+        "releaseDate": "2012-01-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2012-03-13",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "16",
+      "name": "16",
+      "milestones": {
+        "ga": "2011-12-06",
+        "eos": null,
+        "eossec": "2012-01-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "16",
+        "codename": null,
+        "label": "16",
+        "releaseDate": "2011-12-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2012-01-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "15",
+      "name": "15",
+      "milestones": {
+        "ga": "2011-10-18",
+        "eos": null,
+        "eossec": "2011-12-06",
+        "eol": null
+      },
+      "upstream": {
+        "name": "15",
+        "codename": null,
+        "label": "15",
+        "releaseDate": "2011-10-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2011-12-06",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "14",
+      "name": "14",
+      "milestones": {
+        "ga": "2011-09-06",
+        "eos": null,
+        "eossec": "2011-10-18",
+        "eol": null
+      },
+      "upstream": {
+        "name": "14",
+        "codename": null,
+        "label": "14",
+        "releaseDate": "2011-09-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2011-10-18",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "13",
+      "name": "13",
+      "milestones": {
+        "ga": "2011-07-26",
+        "eos": null,
+        "eossec": "2011-09-06",
+        "eol": null
+      },
+      "upstream": {
+        "name": "13",
+        "codename": null,
+        "label": "13",
+        "releaseDate": "2011-07-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2011-09-06",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "12",
+      "name": "12",
+      "milestones": {
+        "ga": "2011-05-31",
+        "eos": null,
+        "eossec": "2011-07-26",
+        "eol": null
+      },
+      "upstream": {
+        "name": "12",
+        "codename": null,
+        "label": "12",
+        "releaseDate": "2011-05-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2011-07-26",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "11",
+      "name": "11",
+      "milestones": {
+        "ga": "2011-04-19",
+        "eos": null,
+        "eossec": "2011-05-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "11",
+        "codename": null,
+        "label": "11",
+        "releaseDate": "2011-04-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2011-05-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "10",
+      "name": "10",
+      "milestones": {
+        "ga": "2011-03-08",
+        "eos": null,
+        "eossec": "2011-04-19",
+        "eol": null
+      },
+      "upstream": {
+        "name": "10",
+        "codename": null,
+        "label": "10",
+        "releaseDate": "2011-03-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2011-04-19",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "9",
+      "name": "9",
+      "milestones": {
+        "ga": "2011-01-25",
+        "eos": null,
+        "eossec": "2011-03-08",
+        "eol": null
+      },
+      "upstream": {
+        "name": "9",
+        "codename": null,
+        "label": "9",
+        "releaseDate": "2011-01-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2011-03-08",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "8",
+      "name": "8",
+      "milestones": {
+        "ga": "2010-11-30",
+        "eos": null,
+        "eossec": "2011-01-25",
+        "eol": null
+      },
+      "upstream": {
+        "name": "8",
+        "codename": null,
+        "label": "8",
+        "releaseDate": "2010-11-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2011-01-25",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "7",
+      "name": "7",
+      "milestones": {
+        "ga": "2010-10-12",
+        "eos": null,
+        "eossec": "2010-11-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7",
+        "codename": null,
+        "label": "7",
+        "releaseDate": "2010-10-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2010-11-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/chrome/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-08T19:17:42+00:00"
+  }
+}

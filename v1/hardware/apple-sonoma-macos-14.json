@@ -1,0 +1,70 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "apple-sonoma-macos-14",
+  "name": "Sonoma (macOS 14)",
+  "category": "hardware",
+  "vendor": "Apple",
+  "product_line": "Apple",
+  "family": "macOS",
+  "model_number": "Sonoma (macOS 14)",
+  "milestones": {
+    "ga": "2023-09-26",
+    "eos": null,
+    "eossec": null,
+    "eol": "2026-09-26"
+  },
+  "status": "expiring",
+  "upstream": {
+    "Product": {
+      "text": "",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Build Number": {
+      "text": "23J319",
+      "datetime": null,
+      "value": null,
+      "role": "build",
+      "links": []
+    },
+    "Version Number": {
+      "text": "Sonoma (macOS 14)",
+      "datetime": null,
+      "value": null,
+      "role": "version",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Sep. 26, 2023",
+      "datetime": "2023-09-26",
+      "value": "2023-09-26",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support": {
+      "text": "2026-09-26",
+      "datetime": null,
+      "value": "2026-09-26",
+      "role": "eol",
+      "links": []
+    },
+    "Most Recent Version": {
+      "text": "14.8.4 (February 11, 2026)",
+      "datetime": null,
+      "value": null,
+      "role": null,
+      "links": [
+        "https://developer.apple.com/documentation/macos-release-notes/macos-14-release-notes"
+      ]
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/operating-system/vendor/apple/macos/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

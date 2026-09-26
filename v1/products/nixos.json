@@ -1,0 +1,611 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "nixos",
+  "name": "NixOS",
+  "category": "software",
+  "upstream_category": "os",
+  "identifiers": [
+    {
+      "type": "cpe",
+      "id": "cpe:/o:nixos:nixos"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:o:nixos:nixos"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/nixos.svg",
+    "html": "https://endoflife.date/nixos",
+    "releasePolicy": "https://nixos.org/blog/announcements.html"
+  },
+  "releases": [
+    {
+      "id": "26.05",
+      "name": "26.05 'Yarara'",
+      "milestones": {
+        "ga": "2026-05-30",
+        "eos": null,
+        "eossec": "2026-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "26.05",
+        "codename": "Yarara",
+        "label": "26.05 'Yarara'",
+        "releaseDate": "2026-05-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2026-12-31",
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "25.11",
+      "name": "25.11 'Xantusia'",
+      "milestones": {
+        "ga": "2025-11-30",
+        "eos": null,
+        "eossec": "2026-06-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "25.11",
+        "codename": "Xantusia",
+        "label": "25.11 'Xantusia'",
+        "releaseDate": "2025-11-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-06-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "25.05",
+      "name": "25.05 'Warbler'",
+      "milestones": {
+        "ga": "2025-05-23",
+        "eos": null,
+        "eossec": "2025-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "25.05",
+        "codename": "Warbler",
+        "label": "25.05 'Warbler'",
+        "releaseDate": "2025-05-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-12-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "24.11",
+      "name": "24.11 'Vicuña'",
+      "milestones": {
+        "ga": "2024-11-30",
+        "eos": null,
+        "eossec": "2025-06-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "24.11",
+        "codename": "Vicuña",
+        "label": "24.11 'Vicuña'",
+        "releaseDate": "2024-11-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-06-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "24.05",
+      "name": "24.05 'Uakari'",
+      "milestones": {
+        "ga": "2024-05-31",
+        "eos": null,
+        "eossec": "2024-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "24.05",
+        "codename": "Uakari",
+        "label": "24.05 'Uakari'",
+        "releaseDate": "2024-05-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-12-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "23.11",
+      "name": "23.11 'Tapir'",
+      "milestones": {
+        "ga": "2023-11-29",
+        "eos": null,
+        "eossec": "2024-06-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "23.11",
+        "codename": "Tapir",
+        "label": "23.11 'Tapir'",
+        "releaseDate": "2023-11-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-06-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "23.05",
+      "name": "23.05 'Stoat'",
+      "milestones": {
+        "ga": "2023-05-31",
+        "eos": null,
+        "eossec": "2023-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "23.05",
+        "codename": "Stoat",
+        "label": "23.05 'Stoat'",
+        "releaseDate": "2023-05-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-12-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "22.11",
+      "name": "22.11 'Raccoon'",
+      "milestones": {
+        "ga": "2022-11-30",
+        "eos": null,
+        "eossec": "2023-06-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "22.11",
+        "codename": "Raccoon",
+        "label": "22.11 'Raccoon'",
+        "releaseDate": "2022-11-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-06-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "22.05",
+      "name": "22.05 'Quokka'",
+      "milestones": {
+        "ga": "2022-05-30",
+        "eos": null,
+        "eossec": "2022-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "22.05",
+        "codename": "Quokka",
+        "label": "22.05 'Quokka'",
+        "releaseDate": "2022-05-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-12-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "21.11",
+      "name": "21.11 'Porcupine'",
+      "milestones": {
+        "ga": "2021-11-30",
+        "eos": null,
+        "eossec": "2022-06-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "21.11",
+        "codename": "Porcupine",
+        "label": "21.11 'Porcupine'",
+        "releaseDate": "2021-11-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-06-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "21.05",
+      "name": "21.05 'Okapi'",
+      "milestones": {
+        "ga": "2021-05-31",
+        "eos": null,
+        "eossec": "2021-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "21.05",
+        "codename": "Okapi",
+        "label": "21.05 'Okapi'",
+        "releaseDate": "2021-05-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-12-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "20.09",
+      "name": "20.09 'Nightingale'",
+      "milestones": {
+        "ga": "2020-10-27",
+        "eos": null,
+        "eossec": "2021-06-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "20.09",
+        "codename": "Nightingale",
+        "label": "20.09 'Nightingale'",
+        "releaseDate": "2020-10-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-06-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "20.03",
+      "name": "20.03 'Markhor'",
+      "milestones": {
+        "ga": "2020-04-20",
+        "eos": null,
+        "eossec": "2020-10-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "20.03",
+        "codename": "Markhor",
+        "label": "20.03 'Markhor'",
+        "releaseDate": "2020-04-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-10-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "19.09",
+      "name": "19.09 'Lori'",
+      "milestones": {
+        "ga": "2019-10-09",
+        "eos": null,
+        "eossec": "2020-04-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "19.09",
+        "codename": "Lori",
+        "label": "19.09 'Lori'",
+        "releaseDate": "2019-10-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-04-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "19.03",
+      "name": "19.03 'Koi'",
+      "milestones": {
+        "ga": "2019-04-11",
+        "eos": null,
+        "eossec": "2019-10-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "19.03",
+        "codename": "Koi",
+        "label": "19.03 'Koi'",
+        "releaseDate": "2019-04-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-10-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "18.09",
+      "name": "18.09 'Jellyfish'",
+      "milestones": {
+        "ga": "2018-10-05",
+        "eos": null,
+        "eossec": "2019-04-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "18.09",
+        "codename": "Jellyfish",
+        "label": "18.09 'Jellyfish'",
+        "releaseDate": "2018-10-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-04-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "18.03",
+      "name": "18.03 'Impala'",
+      "milestones": {
+        "ga": "2018-04-04",
+        "eos": null,
+        "eossec": "2018-10-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "18.03",
+        "codename": "Impala",
+        "label": "18.03 'Impala'",
+        "releaseDate": "2018-04-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-10-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "17.09",
+      "name": "17.09 'Hummingbird'",
+      "milestones": {
+        "ga": "2017-09-29",
+        "eos": null,
+        "eossec": "2018-04-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "17.09",
+        "codename": "Hummingbird",
+        "label": "17.09 'Hummingbird'",
+        "releaseDate": "2017-09-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-04-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "17.03",
+      "name": "17.03 'Gorilla'",
+      "milestones": {
+        "ga": "2017-03-31",
+        "eos": null,
+        "eossec": "2017-10-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "17.03",
+        "codename": "Gorilla",
+        "label": "17.03 'Gorilla'",
+        "releaseDate": "2017-03-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-10-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "16.09",
+      "name": "16.09 'Flounder'",
+      "milestones": {
+        "ga": "2016-09-30",
+        "eos": null,
+        "eossec": "2017-04-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "16.09",
+        "codename": "Flounder",
+        "label": "16.09 'Flounder'",
+        "releaseDate": "2016-09-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-04-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "16.03",
+      "name": "16.03 'Emu'",
+      "milestones": {
+        "ga": "2016-03-31",
+        "eos": null,
+        "eossec": "2016-10-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "16.03",
+        "codename": "Emu",
+        "label": "16.03 'Emu'",
+        "releaseDate": "2016-03-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2016-10-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "15.09",
+      "name": "15.09 'Dingo'",
+      "milestones": {
+        "ga": "2015-09-30",
+        "eos": null,
+        "eossec": "2016-04-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "15.09",
+        "codename": "Dingo",
+        "label": "15.09 'Dingo'",
+        "releaseDate": "2015-09-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2016-04-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "14.12",
+      "name": "14.12 'Caterpillar'",
+      "milestones": {
+        "ga": "2014-12-30",
+        "eos": null,
+        "eossec": "2015-09-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "14.12",
+        "codename": "Caterpillar",
+        "label": "14.12 'Caterpillar'",
+        "releaseDate": "2014-12-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2015-09-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "14.04",
+      "name": "14.04 'Baboon'",
+      "milestones": {
+        "ga": "2014-04-30",
+        "eos": null,
+        "eossec": "2015-01-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "14.04",
+        "codename": "Baboon",
+        "label": "14.04 'Baboon'",
+        "releaseDate": "2014-04-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2015-01-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "13.10",
+      "name": "13.10 'Aardvark'",
+      "milestones": {
+        "ga": "2013-10-31",
+        "eos": null,
+        "eossec": "2014-05-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "13.10",
+        "codename": "Aardvark",
+        "label": "13.10 'Aardvark'",
+        "releaseDate": "2013-10-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2014-05-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/nixos/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-05-28T21:31:44+00:00"
+  }
+}

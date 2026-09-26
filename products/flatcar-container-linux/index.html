@@ -1,0 +1,2045 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flatcar Container Linux lifecycle dates — EOL Tracker</title>
+<meta name="description" content="General availability, end-of-sale, security-support and end-of-life dates for every Flatcar Container Linux release, with raw source values and provenance.">
+<link rel="canonical" href="https://zarguell.github.io/eoltracker/products/flatcar-container-linux/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EOL Tracker">
+<meta property="og:title" content="Flatcar Container Linux lifecycle dates — EOL Tracker">
+<meta property="og:description" content="General availability, end-of-sale, security-support and end-of-life dates for every Flatcar Container Linux release, with raw source values and provenance.">
+<meta property="og:url" content="https://zarguell.github.io/eoltracker/products/flatcar-container-linux/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d1b2a'/%3E%3Cpath d='M7 20.5l5-6 4 4.5 4-6.5 5 8' fill='none' stroke='%234fd1c5' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/eoltracker/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="shell masthead-inner">
+    <a class="wordmark" href="/eoltracker/">EOL<span>Tracker</span></a>
+    <nav class="mainnav" aria-label="Primary">
+      <a href="/eoltracker/">Software</a>
+      <a href="/eoltracker/hardware/">Hardware</a>
+      <a href="/eoltracker/api/">API &amp; data</a>
+      <a href="/eoltracker/why/">Why EOL</a>
+      <a href="https://endoflife.date/" rel="noopener">endoflife.date</a>
+    </nav>
+    <p class="masthead-meta">542 products · 9171 releases · 7169 hardware records</p>
+  </div>
+</header>
+
+<main class="shell" id="main">
+<nav class="crumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/eoltracker/">Catalog</a></li>
+    <li aria-current="page">Flatcar Container Linux</li>
+  </ol>
+</nav>
+
+<section class="hero product-hero">
+  <p class="eyebrow">os · software · vendor collector</p>
+  <h1 class="page-title">Flatcar Container Linux</h1>
+  <p class="lead">
+    33 releases published by Flatcar Container Linux releases from the vendor's
+    own lifecycle table, with each row's cells kept verbatim beneath the normalized dates. Identifier for this
+    record: <code>flatcar-container-linux</code>.
+  </p>
+  <p class="hero-meta">
+    Verified Sep 24, 2026 at 01:06 UTC by <code>deterministic-flatcar</code>.
+Source: Flatcar Container Linux releases.    Upstream publishes no modification timestamp for this product.
+    Last catalog refresh <time datetime="2026-09-17T18:35:21Z">Sep 17, 2026 at 18:35 UTC</time>.
+  </p>
+  <p class="product-links">
+    <a class="button" href="/eoltracker/v1/products/flatcar-container-linux.json">JSON record</a>
+    <a class="button" href="https://www.flatcar.org/releases-json/releases.json" rel="noopener">Source: Flatcar Container Linux release feed</a>
+<a class="button" href="https://www.flatcar.org/releases-json/releases.json" rel="noopener">html</a><a class="button" href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">channel documentation</a>  </p>
+</section>
+
+<section class="panel" aria-labelledby="coverage-title">
+  <h2 class="panel-title" id="coverage-title">Data coverage</h2>
+  <p class="panel-note">
+    Upstream does not publish every milestone for every release. Empty cells are unknown dates, not implied support;
+    any calculated date is labeled derived and carries its rule above.
+  </p>
+  <ul class="bars">
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">General availability</span>
+        <span class="bar-value">33 / 33 releases (100%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="General availability: 33 of 33 releases have a published date">
+        <div class="bar-fill" style="width: 100%"></div>
+      </div>
+    </li>
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">End of sale</span>
+        <span class="bar-value">0 / 33 releases (0%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="End of sale: 0 of 33 releases have a published date">
+        <div class="bar-fill" style="width: 0%"></div>
+      </div>
+    </li>
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">End of security support</span>
+        <span class="bar-value">0 / 33 releases (0%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="End of security support: 0 of 33 releases have a published date">
+        <div class="bar-fill" style="width: 0%"></div>
+      </div>
+    </li>
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">End of life</span>
+        <span class="bar-value">32 / 33 releases (97%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="End of life: 32 of 33 releases have a published date">
+        <div class="bar-fill" style="width: 97%"></div>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section class="panel" aria-labelledby="legend-title">
+  <h2 class="panel-title" id="legend-title">How to read these dates</h2>
+  <p class="panel-note">
+    The milestone meanings below are the catalog's shared vocabulary. The endoflife.date label rules do not apply to
+    this record: dates are either mapped from the vendor's own cells or derived from an explicit vendor rule. Every
+    source row and every derivation input is retained for review.
+  </p>
+  <dl class="legend">
+    <div class="legend-row">
+      <dt>General availability</dt>
+      <dd>
+        <p>First public release. Taken from the upstream releaseDate.</p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>End of sale</dt>
+      <dd>
+        <p>Last day new licenses or units are sold. Only mapped from an upstream field whose label names an end of sale.</p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>End of security support</dt>
+      <dd>
+        <p>Last day security fixes are published. Mapped from eolFrom or eoesFrom only when the label names security support.</p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>End of life</dt>
+      <dd>
+        <p>End of all support. A published extended-support date wins; otherwise eolFrom when its label describes a full support end.</p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>Blank date</dt>
+      <dd><p>The source publishes no value for that milestone. A missing date is an absent announcement, not a claim that support ends or continues.</p></dd>
+    </div>
+    <div class="legend-row">
+      <dt>Derived date</dt>
+      <dd><p>A date marked <span class="tag tag-derived">derived</span> is computed from a rule the vendor states — an explicit duration, a release trigger, or a parent platform's lifecycle — applied to a published base date, never from release cadence. The method, base date, quote and source are printed in the <a href="#derived-title">derived dates</a> block, so the date can be recomputed. It is excluded from the upcoming-deadlines list, the day-precision feeds and the OpenEoX export, each with its reason published.</p></dd>
+    </div>
+  </dl>
+</section>
+
+<section class="panel derived-panel" aria-labelledby="derived-title">
+  <h2 class="panel-title" id="derived-title">Derived dates</h2>
+  <p class="panel-note">
+    These milestones are not dates the vendor states. Each one is computed from a rule the vendor
+    <em>does</em> state — an explicit support duration, the release that ends the line, or a parent
+    platform whose lifecycle this product follows — applied to a base date that is also published.
+    The base, the rule and the sentence it came from are quoted below, so every date here can be
+    recomputed and checked rather than taken on trust. They are labelled <span class="tag tag-derived">derived</span>
+    everywhere they appear, they are kept out of the upcoming-deadlines list above, and they are
+    excluded from the day-precision feeds and the OpenEoX export, both of which carry only days a
+    source states.
+  </p>
+  <ul class="derived-list">
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">Flatcar Container Linux 4593</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2026-09-14">Sep 14, 2026</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2026-04-27">Apr 27, 2026</time> — first Stable release.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 4757 of 2026-09-14.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>4757</code> — the next major Stable release, <time datetime="2026-09-14">Sep 14, 2026</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels">
+        <p>Any Stable major version remains supported until a new major Stable version is released.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">Flatcar Container Linux 4459</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2026-04-27">Apr 27, 2026</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2025-11-12">Nov 12, 2025</time> — first Stable release.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 4593 of 2026-04-27.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>4593</code> — the next major Stable release, <time datetime="2026-04-27">Apr 27, 2026</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels">
+        <p>Any Stable major version remains supported until a new major Stable version is released.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">Flatcar Container Linux 4230</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2025-11-12">Nov 12, 2025</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2025-06-24">Jun 24, 2025</time> — first Stable release.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 4459 of 2025-11-12.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>4459</code> — the next major Stable release, <time datetime="2025-11-12">Nov 12, 2025</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels">
+        <p>Any Stable major version remains supported until a new major Stable version is released.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">Flatcar Container Linux 4152</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2025-06-24">Jun 24, 2025</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2025-01-30">Jan 30, 2025</time> — first Stable release.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 4230 of 2025-06-24.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>4230</code> — the next major Stable release, <time datetime="2025-06-24">Jun 24, 2025</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels">
+        <p>Any Stable major version remains supported until a new major Stable version is released.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">Flatcar Container Linux 4081</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2025-01-30">Jan 30, 2025</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2024-11-13">Nov 13, 2024</time> — first Stable release.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 4152 of 2025-01-30.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>4152</code> — the next major Stable release, <time datetime="2025-01-30">Jan 30, 2025</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels">
+        <p>Any Stable major version remains supported until a new major Stable version is released.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">Flatcar Container Linux 3975</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2024-11-13">Nov 13, 2024</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2024-08-07">Aug 7, 2024</time> — first Stable release.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 4081 of 2024-11-13.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>4081</code> — the next major Stable release, <time datetime="2024-11-13">Nov 13, 2024</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels">
+        <p>Any Stable major version remains supported until a new major Stable version is released.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">Flatcar Container Linux 3815</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2024-08-07">Aug 7, 2024</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2024-02-14">Feb 14, 2024</time> — first Stable release.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 3975 of 2024-08-07.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>3975</code> — the next major Stable release, <time datetime="2024-08-07">Aug 7, 2024</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels">
+        <p>Any Stable major version remains supported until a new major Stable version is released.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">Flatcar Container Linux 3760</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2024-02-14">Feb 14, 2024</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2024-01-18">Jan 18, 2024</time> — first Stable release.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 3815 of 2024-02-14.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>3815</code> — the next major Stable release, <time datetime="2024-02-14">Feb 14, 2024</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels">
+        <p>Any Stable major version remains supported until a new major Stable version is released.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">Flatcar Container Linux 3602</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2024-01-18">Jan 18, 2024</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2023-10-05">Oct 5, 2023</time> — first Stable release.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 3760 of 2024-01-18.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>3760</code> — the next major Stable release, <time datetime="2024-01-18">Jan 18, 2024</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels">
+        <p>Any Stable major version remains supported until a new major Stable version is released.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">Flatcar Container Linux 3510</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2023-10-05">Oct 5, 2023</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2023-04-17">Apr 17, 2023</time> — first Stable release.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 3602 of 2023-10-05.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>3602</code> — the next major Stable release, <time datetime="2023-10-05">Oct 5, 2023</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels">
+        <p>Any Stable major version remains supported until a new major Stable version is released.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">Flatcar Container Linux 3374</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2023-04-17">Apr 17, 2023</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2022-11-17">Nov 17, 2022</time> — first Stable release.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 3510 of 2023-04-17.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>3510</code> — the next major Stable release, <time datetime="2023-04-17">Apr 17, 2023</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels">
+        <p>Any Stable major version remains supported until a new major Stable version is released.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">Flatcar Container Linux 3227</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2022-11-17">Nov 17, 2022</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2022-07-21">Jul 21, 2022</time> — first Stable release.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 3374 of 2022-11-17.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>3374</code> — the next major Stable release, <time datetime="2022-11-17">Nov 17, 2022</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels">
+        <p>Any Stable major version remains supported until a new major Stable version is released.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">Flatcar Container Linux 3139</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2022-07-21">Jul 21, 2022</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2022-04-07">Apr 7, 2022</time> — first Stable release.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 3227 of 2022-07-21.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>3227</code> — the next major Stable release, <time datetime="2022-07-21">Jul 21, 2022</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels">
+        <p>Any Stable major version remains supported until a new major Stable version is released.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">Flatcar Container Linux 3033</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2022-04-07">Apr 7, 2022</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2021-12-15">Dec 15, 2021</time> — first Stable release.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 3139 of 2022-04-07.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>3139</code> — the next major Stable release, <time datetime="2022-04-07">Apr 7, 2022</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels">
+        <p>Any Stable major version remains supported until a new major Stable version is released.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">Flatcar Container Linux 2983</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2021-12-15">Dec 15, 2021</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2021-11-09">Nov 9, 2021</time> — first Stable release.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 3033 of 2021-12-15.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>3033</code> — the next major Stable release, <time datetime="2021-12-15">Dec 15, 2021</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels">
+        <p>Any Stable major version remains supported until a new major Stable version is released.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">Flatcar Container Linux 2905</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2021-11-09">Nov 9, 2021</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2021-07-28">Jul 28, 2021</time> — first Stable release.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2983 of 2021-11-09.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2983</code> — the next major Stable release, <time datetime="2021-11-09">Nov 9, 2021</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels">
+        <p>Any Stable major version remains supported until a new major Stable version is released.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">Flatcar Container Linux 2765</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2021-07-28">Jul 28, 2021</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2021-03-03">Mar 3, 2021</time> — first Stable release.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2905 of 2021-07-28.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2905</code> — the next major Stable release, <time datetime="2021-07-28">Jul 28, 2021</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels">
+        <p>Any Stable major version remains supported until a new major Stable version is released.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">Flatcar Container Linux 2605</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2021-03-03">Mar 3, 2021</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2020-09-22">Sep 22, 2020</time> — first Stable release.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2765 of 2021-03-03.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2765</code> — the next major Stable release, <time datetime="2021-03-03">Mar 3, 2021</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels">
+        <p>Any Stable major version remains supported until a new major Stable version is released.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">Flatcar Container Linux 2512</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2020-09-22">Sep 22, 2020</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2020-05-26">May 26, 2020</time> — first Stable release.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2605 of 2020-09-22.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2605</code> — the next major Stable release, <time datetime="2020-09-22">Sep 22, 2020</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels">
+        <p>Any Stable major version remains supported until a new major Stable version is released.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">Flatcar Container Linux 2345</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2020-05-26">May 26, 2020</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2020-03-02">Mar 2, 2020</time> — first Stable release.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2512 of 2020-05-26.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2512</code> — the next major Stable release, <time datetime="2020-05-26">May 26, 2020</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels">
+        <p>Any Stable major version remains supported until a new major Stable version is released.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">Flatcar Container Linux 2303</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2020-03-02">Mar 2, 2020</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2019-12-05">Dec 5, 2019</time> — first Stable release.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2345 of 2020-03-02.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2345</code> — the next major Stable release, <time datetime="2020-03-02">Mar 2, 2020</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels">
+        <p>Any Stable major version remains supported until a new major Stable version is released.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">Flatcar Container Linux 2247</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2019-12-05">Dec 5, 2019</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2019-10-17">Oct 17, 2019</time> — first Stable release.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2303 of 2019-12-05.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2303</code> — the next major Stable release, <time datetime="2019-12-05">Dec 5, 2019</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels">
+        <p>Any Stable major version remains supported until a new major Stable version is released.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">Flatcar Container Linux 2191</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2019-10-17">Oct 17, 2019</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2019-08-16">Aug 16, 2019</time> — first Stable release.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2247 of 2019-10-17.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2247</code> — the next major Stable release, <time datetime="2019-10-17">Oct 17, 2019</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels">
+        <p>Any Stable major version remains supported until a new major Stable version is released.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">Flatcar Container Linux 2135</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2019-08-16">Aug 16, 2019</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2019-07-01">Jul 1, 2019</time> — first Stable release.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2191 of 2019-08-16.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2191</code> — the next major Stable release, <time datetime="2019-08-16">Aug 16, 2019</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels">
+        <p>Any Stable major version remains supported until a new major Stable version is released.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">Flatcar Container Linux 2079</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2019-07-01">Jul 1, 2019</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2019-04-24">Apr 24, 2019</time> — first Stable release.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2135 of 2019-07-01.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2135</code> — the next major Stable release, <time datetime="2019-07-01">Jul 1, 2019</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels">
+        <p>Any Stable major version remains supported until a new major Stable version is released.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">Flatcar Container Linux 2023</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2019-04-24">Apr 24, 2019</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2019-02-27">Feb 27, 2019</time> — first Stable release.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2079 of 2019-04-24.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2079</code> — the next major Stable release, <time datetime="2019-04-24">Apr 24, 2019</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels">
+        <p>Any Stable major version remains supported until a new major Stable version is released.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">Flatcar Container Linux 1967</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2019-02-27">Feb 27, 2019</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2019-01-28">Jan 28, 2019</time> — first Stable release.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2023 of 2019-02-27.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2023</code> — the next major Stable release, <time datetime="2019-02-27">Feb 27, 2019</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels">
+        <p>Any Stable major version remains supported until a new major Stable version is released.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">Flatcar Container Linux 1911</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2019-01-28">Jan 28, 2019</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2018-11-08">Nov 8, 2018</time> — first Stable release.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 1967 of 2019-01-28.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>1967</code> — the next major Stable release, <time datetime="2019-01-28">Jan 28, 2019</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels">
+        <p>Any Stable major version remains supported until a new major Stable version is released.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">Flatcar Container Linux 1855</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2018-11-08">Nov 8, 2018</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2018-09-14">Sep 14, 2018</time> — first Stable release.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 1911 of 2018-11-08.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>1911</code> — the next major Stable release, <time datetime="2018-11-08">Nov 8, 2018</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels">
+        <p>Any Stable major version remains supported until a new major Stable version is released.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">Flatcar Container Linux 1800</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2018-09-14">Sep 14, 2018</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2018-07-26">Jul 26, 2018</time> — first Stable release.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 1855 of 2018-09-14.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>1855</code> — the next major Stable release, <time datetime="2018-09-14">Sep 14, 2018</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels">
+        <p>Any Stable major version remains supported until a new major Stable version is released.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">Flatcar Container Linux 1745</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2018-07-26">Jul 26, 2018</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2018-05-26">May 26, 2018</time> — first Stable release.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 1800 of 2018-07-26.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>1800</code> — the next major Stable release, <time datetime="2018-07-26">Jul 26, 2018</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels">
+        <p>Any Stable major version remains supported until a new major Stable version is released.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">Flatcar Container Linux 1688</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2018-05-26">May 26, 2018</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2018-04-25">Apr 25, 2018</time> — first Stable release.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 1745 of 2018-05-26.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>1745</code> — the next major Stable release, <time datetime="2018-05-26">May 26, 2018</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels">
+        <p>Any Stable major version remains supported until a new major Stable version is released.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels" rel="noopener">Flatcar Container Linux channel documentation</a></footer>
+      </blockquote>
+    </li>
+  </ul>
+</section>
+
+
+<section class="releases" aria-labelledby="releases-title">
+  <div class="catalog-head">
+    <h2 class="panel-title" id="releases-title">Release lifecycle</h2>
+    <p class="catalog-count">33 releases</p>
+  </div>
+  <p class="panel-note">
+    Newest first. Cells show normalized dates; a secondary line shows the raw upstream field and label when the
+    normalized date differs from, or is absent despite, a published value.
+  </p>
+
+  <div class="table-scroll">
+    <table class="release-table">
+      <caption class="sr-only">Lifecycle dates for each Flatcar Container Linux release</caption>
+      <thead>
+        <tr>
+          <th scope="col">Release</th>
+          <th scope="col">General availability</th>
+          <th scope="col">End of sale</th>
+          <th scope="col">End of security support</th>
+          <th scope="col">End of life</th>
+          <th scope="col">Upstream status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Flatcar Container Linux 4757</span>
+<code class="release-raw">4757</code>          </th>
+          <td class="milestone">
+            <time datetime="2026-09-14">Sep 14, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag">4757.2.0</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Flatcar Container Linux 4593</span>
+<code class="release-raw">4593</code>          </th>
+          <td class="milestone">
+            <time datetime="2026-04-27">Apr 27, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2026-09-14">Sep 14, 2026</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">4593.2.0</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Flatcar Container Linux 4459</span>
+<code class="release-raw">4459</code>          </th>
+          <td class="milestone">
+            <time datetime="2025-11-12">Nov 12, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2026-04-27">Apr 27, 2026</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">4459.2.0</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Flatcar Container Linux 4230</span>
+<code class="release-raw">4230</code>          </th>
+          <td class="milestone">
+            <time datetime="2025-06-24">Jun 24, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2025-11-12">Nov 12, 2025</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">4230.2.0</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Flatcar Container Linux 4152</span>
+<code class="release-raw">4152</code>          </th>
+          <td class="milestone">
+            <time datetime="2025-01-30">Jan 30, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2025-06-24">Jun 24, 2025</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">4152.2.0</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Flatcar Container Linux 4081</span>
+<code class="release-raw">4081</code>          </th>
+          <td class="milestone">
+            <time datetime="2024-11-13">Nov 13, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2025-01-30">Jan 30, 2025</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">4081.2.0</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Flatcar Container Linux 3975</span>
+<code class="release-raw">3975</code>          </th>
+          <td class="milestone">
+            <time datetime="2024-08-07">Aug 7, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2024-11-13">Nov 13, 2024</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">3975.2.0</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Flatcar Container Linux 3815</span>
+<code class="release-raw">3815</code>          </th>
+          <td class="milestone">
+            <time datetime="2024-02-14">Feb 14, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2024-08-07">Aug 7, 2024</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">3815.2.0</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Flatcar Container Linux 3760</span>
+<code class="release-raw">3760</code>          </th>
+          <td class="milestone">
+            <time datetime="2024-01-18">Jan 18, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2024-02-14">Feb 14, 2024</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">3760.2.0</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Flatcar Container Linux 3602</span>
+<code class="release-raw">3602</code>          </th>
+          <td class="milestone">
+            <time datetime="2023-10-05">Oct 5, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2024-01-18">Jan 18, 2024</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">3602.2.0</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Flatcar Container Linux 3510</span>
+<code class="release-raw">3510</code>          </th>
+          <td class="milestone">
+            <time datetime="2023-04-17">Apr 17, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2023-10-05">Oct 5, 2023</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">3510.2.0</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Flatcar Container Linux 3374</span>
+<code class="release-raw">3374</code>          </th>
+          <td class="milestone">
+            <time datetime="2022-11-17">Nov 17, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2023-04-17">Apr 17, 2023</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">3374.2.0</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Flatcar Container Linux 3227</span>
+<code class="release-raw">3227</code>          </th>
+          <td class="milestone">
+            <time datetime="2022-07-21">Jul 21, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2022-11-17">Nov 17, 2022</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">3227.2.0</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Flatcar Container Linux 3139</span>
+<code class="release-raw">3139</code>          </th>
+          <td class="milestone">
+            <time datetime="2022-04-07">Apr 7, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2022-07-21">Jul 21, 2022</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">3139.2.0</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Flatcar Container Linux 3033</span>
+<code class="release-raw">3033</code>          </th>
+          <td class="milestone">
+            <time datetime="2021-12-15">Dec 15, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2022-04-07">Apr 7, 2022</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">3033.2.0</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Flatcar Container Linux 2983</span>
+<code class="release-raw">2983</code>          </th>
+          <td class="milestone">
+            <time datetime="2021-11-09">Nov 9, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2021-12-15">Dec 15, 2021</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">2983.2.0</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Flatcar Container Linux 2905</span>
+<code class="release-raw">2905</code>          </th>
+          <td class="milestone">
+            <time datetime="2021-07-28">Jul 28, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2021-11-09">Nov 9, 2021</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">2905.2.0</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Flatcar Container Linux 2765</span>
+<code class="release-raw">2765</code>          </th>
+          <td class="milestone">
+            <time datetime="2021-03-03">Mar 3, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2021-07-28">Jul 28, 2021</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">2765.2.0</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Flatcar Container Linux 2605</span>
+<code class="release-raw">2605</code>          </th>
+          <td class="milestone">
+            <time datetime="2020-09-22">Sep 22, 2020</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2021-03-03">Mar 3, 2021</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">2605.5.0</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Flatcar Container Linux 2512</span>
+<code class="release-raw">2512</code>          </th>
+          <td class="milestone">
+            <time datetime="2020-05-26">May 26, 2020</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2020-09-22">Sep 22, 2020</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">2512.2.0</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Flatcar Container Linux 2345</span>
+<code class="release-raw">2345</code>          </th>
+          <td class="milestone">
+            <time datetime="2020-03-02">Mar 2, 2020</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2020-05-26">May 26, 2020</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">2345.3.0</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Flatcar Container Linux 2303</span>
+<code class="release-raw">2303</code>          </th>
+          <td class="milestone">
+            <time datetime="2019-12-05">Dec 5, 2019</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2020-03-02">Mar 2, 2020</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">2303.3.0</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Flatcar Container Linux 2247</span>
+<code class="release-raw">2247</code>          </th>
+          <td class="milestone">
+            <time datetime="2019-10-17">Oct 17, 2019</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2019-12-05">Dec 5, 2019</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">2247.5.0</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Flatcar Container Linux 2191</span>
+<code class="release-raw">2191</code>          </th>
+          <td class="milestone">
+            <time datetime="2019-08-16">Aug 16, 2019</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2019-10-17">Oct 17, 2019</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">2191.4.0</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Flatcar Container Linux 2135</span>
+<code class="release-raw">2135</code>          </th>
+          <td class="milestone">
+            <time datetime="2019-07-01">Jul 1, 2019</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2019-08-16">Aug 16, 2019</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">2135.4.0</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Flatcar Container Linux 2079</span>
+<code class="release-raw">2079</code>          </th>
+          <td class="milestone">
+            <time datetime="2019-04-24">Apr 24, 2019</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2019-07-01">Jul 1, 2019</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">2079.3.0</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Flatcar Container Linux 2023</span>
+<code class="release-raw">2023</code>          </th>
+          <td class="milestone">
+            <time datetime="2019-02-27">Feb 27, 2019</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2019-04-24">Apr 24, 2019</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">2023.4.0</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Flatcar Container Linux 1967</span>
+<code class="release-raw">1967</code>          </th>
+          <td class="milestone">
+            <time datetime="2019-01-28">Jan 28, 2019</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2019-02-27">Feb 27, 2019</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">1967.3.1</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Flatcar Container Linux 1911</span>
+<code class="release-raw">1911</code>          </th>
+          <td class="milestone">
+            <time datetime="2018-11-08">Nov 8, 2018</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2019-01-28">Jan 28, 2019</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">1911.3.0</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Flatcar Container Linux 1855</span>
+<code class="release-raw">1855</code>          </th>
+          <td class="milestone">
+            <time datetime="2018-09-14">Sep 14, 2018</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2018-11-08">Nov 8, 2018</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">1855.4.0</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Flatcar Container Linux 1800</span>
+<code class="release-raw">1800</code>          </th>
+          <td class="milestone">
+            <time datetime="2018-07-26">Jul 26, 2018</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2018-09-14">Sep 14, 2018</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">1800.4.0</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Flatcar Container Linux 1745</span>
+<code class="release-raw">1745</code>          </th>
+          <td class="milestone">
+            <time datetime="2018-05-26">May 26, 2018</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2018-07-26">Jul 26, 2018</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">1745.3.1</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Flatcar Container Linux 1688</span>
+<code class="release-raw">1688</code>          </th>
+          <td class="milestone">
+            <time datetime="2018-04-25">Apr 25, 2018</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2018-05-26">May 26, 2018</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">1688.5.3</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="panel" aria-labelledby="source-title">
+  <h2 class="panel-title" id="source-title">Source and upstream values</h2>
+  <p class="panel-note">
+    This record is a normalization of vendor-published lifecycle data, read by
+    Flatcar Container Linux releases. Direct mappings use the vendor's own cells; derived dates use an
+    explicit vendor duration, trigger, or parent-support rule and retain every input. The endoflife.date label rules
+    and license do not apply.
+  </p>
+  <dl class="facts">
+    <div><dt>Upstream record</dt><dd><a href="https://www.flatcar.org/releases-json/releases.json" rel="noopener">https://www.flatcar.org/releases-json/releases.json</a></dd></div>
+    <div><dt>Source attribution</dt><dd>Flatcar Container Linux Stable stream lifecycle published directly by the Flatcar project&#39;s release feed and channel documentation; each stream&#39;s end of life is derived from the documented next-major-Stable-release trigger and labelled as such.</dd></div>
+    <div><dt>Verifier</dt><dd><code>deterministic-flatcar</code></dd></div>
+    <div><dt>Last checked</dt><dd>Sep 24, 2026 at 01:06 UTC</dd></div>
+    <div><dt>Upstream modified</dt><dd>not published upstream</dd></div>
+    <div><dt>JSON record</dt><dd><a href="https://zarguell.github.io/eoltracker/v1/products/flatcar-container-linux.json">https://zarguell.github.io/eoltracker/v1/products/flatcar-container-linux.json</a></dd></div>
+    <div><dt>Schema</dt><dd><a href="https://zarguell.github.io/eoltracker/v1/schema/product.json">v1/schema/product.json</a></dd></div>
+  </dl>
+
+
+  <h3 class="sub-title">Upstream label semantics</h3>
+  <p class="panel-note">
+    endoflife.date labels decide which raw date fields become which normalized milestone. These are this product's
+    label texts and the rule each one triggers.
+  </p>
+  <dl class="label-rules">
+    <div>
+      <dt><code>eoas</code> = not set</dt>
+      <dd>End-of-sale date when the text names an end of sale.</dd>
+    </div>
+    <div>
+      <dt><code>discontinued</code> = not set</dt>
+      <dd>End-of-sale date when the text names an end of sale; otherwise recorded only, never turned into a date.</dd>
+    </div>
+    <div>
+      <dt><code>eol</code> = not set</dt>
+      <dd>End of security support when the text names security support; end of life only when no extended-support label is set and the text describes a full support end.</dd>
+    </div>
+    <div>
+      <dt><code>eoes</code> = not set</dt>
+      <dd>Extended support. A published date also sets end of life, and a security-support text supersedes end of security support.</dd>
+    </div>
+  </dl>
+
+  <h3 class="sub-title">Vendor row cells</h3>
+  <p class="panel-note">
+    The vendor's own columns, as the source publishes them. A normalized milestone is mapped directly from these
+    cells or derived under the explicit rule shown above; no value is inferred from cadence or silence.
+  </p>
+  <div class="table-scroll">
+    <table class="release-table">
+      <thead>
+        <tr>
+          <th scope="col">Release</th>
+<th scope="col">version</th><th scope="col">channel</th><th scope="col">release_date</th>        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Flatcar Container Linux 4757</span></th>
+<td>4757.2.0</td><td>stable</td><td>2026-09-14 12:19:07 +0000</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Flatcar Container Linux 4593</span></th>
+<td>4593.2.0</td><td>stable</td><td>2026-04-27 10:26:25 +0000</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Flatcar Container Linux 4459</span></th>
+<td>4459.2.0</td><td>stable</td><td>2025-11-12 15:00:55 +0000</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Flatcar Container Linux 4230</span></th>
+<td>4230.2.0</td><td>stable</td><td>2025-06-24 11:58:22 +0000</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Flatcar Container Linux 4152</span></th>
+<td>4152.2.0</td><td>stable</td><td>2025-01-30 16:25:47 +0000</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Flatcar Container Linux 4081</span></th>
+<td>4081.2.0</td><td>stable</td><td>2024-11-13 12:29:46 +0000</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Flatcar Container Linux 3975</span></th>
+<td>3975.2.0</td><td>stable</td><td>2024-08-07 10:56:37 +0000</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Flatcar Container Linux 3815</span></th>
+<td>3815.2.0</td><td>stable</td><td>2024-02-14 04:35:10 +0000</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Flatcar Container Linux 3760</span></th>
+<td>3760.2.0</td><td>stable</td><td>2024-01-18 15:15:58 +0000</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Flatcar Container Linux 3602</span></th>
+<td>3602.2.0</td><td>stable</td><td>2023-10-05 10:02:27 +0000</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Flatcar Container Linux 3510</span></th>
+<td>3510.2.0</td><td>stable</td><td>2023-04-17 13:19:22 +0000</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Flatcar Container Linux 3374</span></th>
+<td>3374.2.0</td><td>stable</td><td>2022-11-17 07:03:54 +0000</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Flatcar Container Linux 3227</span></th>
+<td>3227.2.0</td><td>stable</td><td>2022-07-21 15:45:09 +0000</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Flatcar Container Linux 3139</span></th>
+<td>3139.2.0</td><td>stable</td><td>2022-04-07 12:05:52 +0000</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Flatcar Container Linux 3033</span></th>
+<td>3033.2.0</td><td>stable</td><td>2021-12-15 19:36:24 +0000</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Flatcar Container Linux 2983</span></th>
+<td>2983.2.0</td><td>stable</td><td>2021-11-09 08:18:14 +0000</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Flatcar Container Linux 2905</span></th>
+<td>2905.2.0</td><td>stable</td><td>2021-07-28 08:25:15 +0000</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Flatcar Container Linux 2765</span></th>
+<td>2765.2.0</td><td>stable</td><td>2021-03-03 14:58:35 +0000</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Flatcar Container Linux 2605</span></th>
+<td>2605.5.0</td><td>stable</td><td>2020-09-22 08:20:39 +0000</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Flatcar Container Linux 2512</span></th>
+<td>2512.2.0</td><td>stable</td><td>2020-05-26 16:58:25 +0000</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Flatcar Container Linux 2345</span></th>
+<td>2345.3.0</td><td>stable</td><td>2020-03-02 14:03:06 +0000</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Flatcar Container Linux 2303</span></th>
+<td>2303.3.0</td><td>stable</td><td>2019-12-05 06:33:04 +0000</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Flatcar Container Linux 2247</span></th>
+<td>2247.5.0</td><td>stable</td><td>2019-10-17 18:54:06 +0000</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Flatcar Container Linux 2191</span></th>
+<td>2191.4.0</td><td>stable</td><td>2019-08-16 09:42:56 +0000</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Flatcar Container Linux 2135</span></th>
+<td>2135.4.0</td><td>stable</td><td>2019-07-01 10:47:02 +0000</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Flatcar Container Linux 2079</span></th>
+<td>2079.3.0</td><td>stable</td><td>2019-04-24 10:00:10 +0000</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Flatcar Container Linux 2023</span></th>
+<td>2023.4.0</td><td>stable</td><td>2019-02-27 08:52:33 +0000</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Flatcar Container Linux 1967</span></th>
+<td>1967.3.1</td><td>stable</td><td>2019-01-28 10:32:57 +0000</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Flatcar Container Linux 1911</span></th>
+<td>1911.3.0</td><td>stable</td><td>2018-11-08 16:14:37 +0000</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Flatcar Container Linux 1855</span></th>
+<td>1855.4.0</td><td>stable</td><td>2018-09-14 09:59:47 +0000</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Flatcar Container Linux 1800</span></th>
+<td>1800.4.0</td><td>stable</td><td>2018-07-26 09:38:46 +0000</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Flatcar Container Linux 1745</span></th>
+<td>1745.3.1</td><td>stable</td><td>2018-05-26 15:29:48 +0000</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Flatcar Container Linux 1688</span></th>
+<td>1688.5.3</td><td>stable</td><td>2018-04-25 14:36:41 +0000</td>        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <details class="raw">
+    <summary>Raw upstream release objects (33)</summary>
+    <p class="panel-note">Verbatim <code>releases[]</code> entries: each release's stored <code>upstream</code> object, including the vendor's own row cells, unmodified.</p>
+    <details class="raw-release">
+      <summary><code>4757</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;channel&#34;: &#34;stable&#34;,
+    &#34;release_date&#34;: &#34;2026-09-14 12:19:07 +0000&#34;,
+    &#34;version&#34;: &#34;4757.2.0&#34;
+  },
+  &#34;name&#34;: &#34;4757.2.0&#34;,
+  &#34;table&#34;: &#34;releases.json&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>4593</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;channel&#34;: &#34;stable&#34;,
+    &#34;release_date&#34;: &#34;2026-04-27 10:26:25 +0000&#34;,
+    &#34;version&#34;: &#34;4593.2.0&#34;
+  },
+  &#34;name&#34;: &#34;4593.2.0&#34;,
+  &#34;table&#34;: &#34;releases.json&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>4459</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;channel&#34;: &#34;stable&#34;,
+    &#34;release_date&#34;: &#34;2025-11-12 15:00:55 +0000&#34;,
+    &#34;version&#34;: &#34;4459.2.0&#34;
+  },
+  &#34;name&#34;: &#34;4459.2.0&#34;,
+  &#34;table&#34;: &#34;releases.json&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>4230</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;channel&#34;: &#34;stable&#34;,
+    &#34;release_date&#34;: &#34;2025-06-24 11:58:22 +0000&#34;,
+    &#34;version&#34;: &#34;4230.2.0&#34;
+  },
+  &#34;name&#34;: &#34;4230.2.0&#34;,
+  &#34;table&#34;: &#34;releases.json&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>4152</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;channel&#34;: &#34;stable&#34;,
+    &#34;release_date&#34;: &#34;2025-01-30 16:25:47 +0000&#34;,
+    &#34;version&#34;: &#34;4152.2.0&#34;
+  },
+  &#34;name&#34;: &#34;4152.2.0&#34;,
+  &#34;table&#34;: &#34;releases.json&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>4081</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;channel&#34;: &#34;stable&#34;,
+    &#34;release_date&#34;: &#34;2024-11-13 12:29:46 +0000&#34;,
+    &#34;version&#34;: &#34;4081.2.0&#34;
+  },
+  &#34;name&#34;: &#34;4081.2.0&#34;,
+  &#34;table&#34;: &#34;releases.json&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3975</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;channel&#34;: &#34;stable&#34;,
+    &#34;release_date&#34;: &#34;2024-08-07 10:56:37 +0000&#34;,
+    &#34;version&#34;: &#34;3975.2.0&#34;
+  },
+  &#34;name&#34;: &#34;3975.2.0&#34;,
+  &#34;table&#34;: &#34;releases.json&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3815</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;channel&#34;: &#34;stable&#34;,
+    &#34;release_date&#34;: &#34;2024-02-14 04:35:10 +0000&#34;,
+    &#34;version&#34;: &#34;3815.2.0&#34;
+  },
+  &#34;name&#34;: &#34;3815.2.0&#34;,
+  &#34;table&#34;: &#34;releases.json&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3760</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;channel&#34;: &#34;stable&#34;,
+    &#34;release_date&#34;: &#34;2024-01-18 15:15:58 +0000&#34;,
+    &#34;version&#34;: &#34;3760.2.0&#34;
+  },
+  &#34;name&#34;: &#34;3760.2.0&#34;,
+  &#34;table&#34;: &#34;releases.json&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3602</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;channel&#34;: &#34;stable&#34;,
+    &#34;release_date&#34;: &#34;2023-10-05 10:02:27 +0000&#34;,
+    &#34;version&#34;: &#34;3602.2.0&#34;
+  },
+  &#34;name&#34;: &#34;3602.2.0&#34;,
+  &#34;table&#34;: &#34;releases.json&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3510</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;channel&#34;: &#34;stable&#34;,
+    &#34;release_date&#34;: &#34;2023-04-17 13:19:22 +0000&#34;,
+    &#34;version&#34;: &#34;3510.2.0&#34;
+  },
+  &#34;name&#34;: &#34;3510.2.0&#34;,
+  &#34;table&#34;: &#34;releases.json&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3374</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;channel&#34;: &#34;stable&#34;,
+    &#34;release_date&#34;: &#34;2022-11-17 07:03:54 +0000&#34;,
+    &#34;version&#34;: &#34;3374.2.0&#34;
+  },
+  &#34;name&#34;: &#34;3374.2.0&#34;,
+  &#34;table&#34;: &#34;releases.json&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3227</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;channel&#34;: &#34;stable&#34;,
+    &#34;release_date&#34;: &#34;2022-07-21 15:45:09 +0000&#34;,
+    &#34;version&#34;: &#34;3227.2.0&#34;
+  },
+  &#34;name&#34;: &#34;3227.2.0&#34;,
+  &#34;table&#34;: &#34;releases.json&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3139</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;channel&#34;: &#34;stable&#34;,
+    &#34;release_date&#34;: &#34;2022-04-07 12:05:52 +0000&#34;,
+    &#34;version&#34;: &#34;3139.2.0&#34;
+  },
+  &#34;name&#34;: &#34;3139.2.0&#34;,
+  &#34;table&#34;: &#34;releases.json&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3033</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;channel&#34;: &#34;stable&#34;,
+    &#34;release_date&#34;: &#34;2021-12-15 19:36:24 +0000&#34;,
+    &#34;version&#34;: &#34;3033.2.0&#34;
+  },
+  &#34;name&#34;: &#34;3033.2.0&#34;,
+  &#34;table&#34;: &#34;releases.json&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2983</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;channel&#34;: &#34;stable&#34;,
+    &#34;release_date&#34;: &#34;2021-11-09 08:18:14 +0000&#34;,
+    &#34;version&#34;: &#34;2983.2.0&#34;
+  },
+  &#34;name&#34;: &#34;2983.2.0&#34;,
+  &#34;table&#34;: &#34;releases.json&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2905</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;channel&#34;: &#34;stable&#34;,
+    &#34;release_date&#34;: &#34;2021-07-28 08:25:15 +0000&#34;,
+    &#34;version&#34;: &#34;2905.2.0&#34;
+  },
+  &#34;name&#34;: &#34;2905.2.0&#34;,
+  &#34;table&#34;: &#34;releases.json&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2765</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;channel&#34;: &#34;stable&#34;,
+    &#34;release_date&#34;: &#34;2021-03-03 14:58:35 +0000&#34;,
+    &#34;version&#34;: &#34;2765.2.0&#34;
+  },
+  &#34;name&#34;: &#34;2765.2.0&#34;,
+  &#34;table&#34;: &#34;releases.json&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2605</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;channel&#34;: &#34;stable&#34;,
+    &#34;release_date&#34;: &#34;2020-09-22 08:20:39 +0000&#34;,
+    &#34;version&#34;: &#34;2605.5.0&#34;
+  },
+  &#34;name&#34;: &#34;2605.5.0&#34;,
+  &#34;table&#34;: &#34;releases.json&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2512</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;channel&#34;: &#34;stable&#34;,
+    &#34;release_date&#34;: &#34;2020-05-26 16:58:25 +0000&#34;,
+    &#34;version&#34;: &#34;2512.2.0&#34;
+  },
+  &#34;name&#34;: &#34;2512.2.0&#34;,
+  &#34;table&#34;: &#34;releases.json&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2345</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;channel&#34;: &#34;stable&#34;,
+    &#34;release_date&#34;: &#34;2020-03-02 14:03:06 +0000&#34;,
+    &#34;version&#34;: &#34;2345.3.0&#34;
+  },
+  &#34;name&#34;: &#34;2345.3.0&#34;,
+  &#34;table&#34;: &#34;releases.json&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2303</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;channel&#34;: &#34;stable&#34;,
+    &#34;release_date&#34;: &#34;2019-12-05 06:33:04 +0000&#34;,
+    &#34;version&#34;: &#34;2303.3.0&#34;
+  },
+  &#34;name&#34;: &#34;2303.3.0&#34;,
+  &#34;table&#34;: &#34;releases.json&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2247</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;channel&#34;: &#34;stable&#34;,
+    &#34;release_date&#34;: &#34;2019-10-17 18:54:06 +0000&#34;,
+    &#34;version&#34;: &#34;2247.5.0&#34;
+  },
+  &#34;name&#34;: &#34;2247.5.0&#34;,
+  &#34;table&#34;: &#34;releases.json&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2191</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;channel&#34;: &#34;stable&#34;,
+    &#34;release_date&#34;: &#34;2019-08-16 09:42:56 +0000&#34;,
+    &#34;version&#34;: &#34;2191.4.0&#34;
+  },
+  &#34;name&#34;: &#34;2191.4.0&#34;,
+  &#34;table&#34;: &#34;releases.json&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2135</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;channel&#34;: &#34;stable&#34;,
+    &#34;release_date&#34;: &#34;2019-07-01 10:47:02 +0000&#34;,
+    &#34;version&#34;: &#34;2135.4.0&#34;
+  },
+  &#34;name&#34;: &#34;2135.4.0&#34;,
+  &#34;table&#34;: &#34;releases.json&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2079</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;channel&#34;: &#34;stable&#34;,
+    &#34;release_date&#34;: &#34;2019-04-24 10:00:10 +0000&#34;,
+    &#34;version&#34;: &#34;2079.3.0&#34;
+  },
+  &#34;name&#34;: &#34;2079.3.0&#34;,
+  &#34;table&#34;: &#34;releases.json&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2023</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;channel&#34;: &#34;stable&#34;,
+    &#34;release_date&#34;: &#34;2019-02-27 08:52:33 +0000&#34;,
+    &#34;version&#34;: &#34;2023.4.0&#34;
+  },
+  &#34;name&#34;: &#34;2023.4.0&#34;,
+  &#34;table&#34;: &#34;releases.json&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>1967</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;channel&#34;: &#34;stable&#34;,
+    &#34;release_date&#34;: &#34;2019-01-28 10:32:57 +0000&#34;,
+    &#34;version&#34;: &#34;1967.3.1&#34;
+  },
+  &#34;name&#34;: &#34;1967.3.1&#34;,
+  &#34;table&#34;: &#34;releases.json&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>1911</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;channel&#34;: &#34;stable&#34;,
+    &#34;release_date&#34;: &#34;2018-11-08 16:14:37 +0000&#34;,
+    &#34;version&#34;: &#34;1911.3.0&#34;
+  },
+  &#34;name&#34;: &#34;1911.3.0&#34;,
+  &#34;table&#34;: &#34;releases.json&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>1855</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;channel&#34;: &#34;stable&#34;,
+    &#34;release_date&#34;: &#34;2018-09-14 09:59:47 +0000&#34;,
+    &#34;version&#34;: &#34;1855.4.0&#34;
+  },
+  &#34;name&#34;: &#34;1855.4.0&#34;,
+  &#34;table&#34;: &#34;releases.json&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>1800</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;channel&#34;: &#34;stable&#34;,
+    &#34;release_date&#34;: &#34;2018-07-26 09:38:46 +0000&#34;,
+    &#34;version&#34;: &#34;1800.4.0&#34;
+  },
+  &#34;name&#34;: &#34;1800.4.0&#34;,
+  &#34;table&#34;: &#34;releases.json&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>1745</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;channel&#34;: &#34;stable&#34;,
+    &#34;release_date&#34;: &#34;2018-05-26 15:29:48 +0000&#34;,
+    &#34;version&#34;: &#34;1745.3.1&#34;
+  },
+  &#34;name&#34;: &#34;1745.3.1&#34;,
+  &#34;table&#34;: &#34;releases.json&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>1688</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;channel&#34;: &#34;stable&#34;,
+    &#34;release_date&#34;: &#34;2018-04-25 14:36:41 +0000&#34;,
+    &#34;version&#34;: &#34;1688.5.3&#34;
+  },
+  &#34;name&#34;: &#34;1688.5.3&#34;,
+  &#34;table&#34;: &#34;releases.json&#34;
+}</code></pre>
+    </details>
+  </details>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="shell footer-inner">
+    <div class="footer-col">
+      <p class="footer-title">EOL Tracker</p>
+      <p class="footer-note">
+        Software lifecycle dates are republished from the
+        <a href="https://endoflife.date/" rel="noopener">endoflife.date</a> community catalog and vendor-specific public
+        lifecycle sources. Each record names its source; community-catalog data is licensed
+        <a href="https://github.com/endoflife-date/endoflife.date/blob/master/LICENSE" rel="noopener">MIT</a>.
+      </p>
+      <p class="footer-note">
+        Hardware lifecycle data comes from
+        <a href="https://eosl.date/" rel="noopener">eosl.date</a> by Subash Geetha Krishnan,
+        which aggregates public vendor announcements, and from
+        <a href="https://opengear.com/end-life-products" rel="noopener">Opengear's end-of-life product list</a>.
+        Attribution here is credit by name and link, not a licence to the source material: nothing is reproduced as
+        licensed material. This catalog is an independent normalization, not affiliated with endoflife.date, eosl.date,
+        Opengear or any vendor listed here.
+      </p>
+      <p class="footer-note">
+        Last catalog refresh Sep 17, 2026 at 18:35 UTC.
+      </p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-title">Data</p>
+      <ul class="footer-links">
+        <li><a href="/eoltracker/v1/feed.json">Feed (JSON)</a></li>
+        <li><a href="/eoltracker/v1/feed.atom">Deadlines (Atom)</a></li>
+        <li><a href="/eoltracker/v1/calendar.ics">Deadlines (iCal)</a></li>
+        <li><a href="/eoltracker/v1/products.json">Product summaries</a></li>
+        <li><a href="/eoltracker/v1/hardware.json">Hardware summaries</a></li>
+        <li><a href="/eoltracker/v1/changes.atom">Changes (Atom)</a></li>
+        <li><a href="/eoltracker/v1/changes.json">Changes (JSON)</a></li>
+        <li><a href="/eoltracker/hardware/">Hardware catalog</a></li>
+        <li><a href="/eoltracker/api/">Endpoints &amp; mapping</a></li>
+        <li><a href="/eoltracker/v1/schema/product.json">Record schema</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <p class="footer-title">Project</p>
+      <ul class="footer-links">
+        <li><a href="https://github.com/zarguell/eoltracker" rel="noopener">Source on GitHub</a></li>
+        <li><a href="https://endoflife.date/" rel="noopener">Upstream source</a></li>
+        <li><a href="/eoltracker/THIRD-PARTY-NOTICES.txt">THIRD-PARTY-NOTICES.txt</a></li>
+        <li><a href="/eoltracker/OASIS-NOTICE.txt">OASIS-NOTICE.txt</a></li>
+        <li><a href="/eoltracker/404.html">Not found page</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script src="/eoltracker/app.js" defer></script>
+</body>
+</html>

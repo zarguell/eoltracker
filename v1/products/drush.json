@@ -1,0 +1,310 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "drush",
+  "name": "Drush",
+  "category": "software",
+  "upstream_category": "app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "drush"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:composer/drush/drush"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/drush-ops/drush"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/drupal.svg",
+    "html": "https://endoflife.date/drush",
+    "releasePolicy": "https://www.drush.org/latest/install/#drupal-compatibility"
+  },
+  "releases": [
+    {
+      "id": "13",
+      "name": "13",
+      "milestones": {
+        "ga": "2024-08-02",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "13",
+        "codename": null,
+        "label": "13",
+        "releaseDate": "2024-08-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "13.8.0",
+          "date": "2026-09-08",
+          "link": "https://github.com/drush-ops/drush/releases/tag/13.8.0"
+        },
+        "custom": {
+          "supportedPhpVersions": "8.3+",
+          "supportedDrupalVersions": "10.2 - 11"
+        }
+      }
+    },
+    {
+      "id": "12",
+      "name": "12",
+      "milestones": {
+        "ga": "2023-06-03",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "12",
+        "codename": null,
+        "label": "12",
+        "releaseDate": "2023-06-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "12.5.3",
+          "date": "2024-08-02",
+          "link": "https://github.com/drush-ops/drush/releases/tag/12.5.3"
+        },
+        "custom": {
+          "supportedPhpVersions": "8.1+",
+          "supportedDrupalVersions": "10"
+        }
+      }
+    },
+    {
+      "id": "11",
+      "name": "11",
+      "milestones": {
+        "ga": "2022-01-11",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-11-30"
+      },
+      "upstream": {
+        "name": "11",
+        "codename": null,
+        "label": "11",
+        "releaseDate": "2022-01-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-11-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "11.6.0",
+          "date": "2023-06-06",
+          "link": "https://github.com/drush-ops/drush/releases/tag/11.6.0"
+        },
+        "custom": {
+          "supportedPhpVersions": "7.4+",
+          "supportedDrupalVersions": "9 - 10"
+        }
+      }
+    },
+    {
+      "id": "10",
+      "name": "10",
+      "milestones": {
+        "ga": "2019-10-31",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-01-31"
+      },
+      "upstream": {
+        "name": "10",
+        "codename": null,
+        "label": "10",
+        "releaseDate": "2019-10-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-01-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "10.6.2",
+          "date": "2021-12-15",
+          "link": "https://github.com/drush-ops/drush/releases/tag/10.6.2"
+        },
+        "custom": {
+          "supportedPhpVersions": "7.1+ (not 8)",
+          "supportedDrupalVersions": "8 - 9"
+        }
+      }
+    },
+    {
+      "id": "9",
+      "name": "9",
+      "milestones": {
+        "ga": "2018-01-24",
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-05-31"
+      },
+      "upstream": {
+        "name": "9",
+        "codename": null,
+        "label": "9",
+        "releaseDate": "2018-01-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-05-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.7.3",
+          "date": "2021-03-22",
+          "link": "https://github.com/drush-ops/drush/releases/tag/9.7.3"
+        },
+        "custom": {
+          "supportedPhpVersions": "5.6+",
+          "supportedDrupalVersions": "8"
+        }
+      }
+    },
+    {
+      "id": "8",
+      "name": "8",
+      "milestones": {
+        "ga": "2015-11-19",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-01-31"
+      },
+      "upstream": {
+        "name": "8",
+        "codename": null,
+        "label": "8",
+        "releaseDate": "2015-11-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-01-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.5.0",
+          "date": "2024-11-26",
+          "link": "https://github.com/drush-ops/drush/releases/tag/8.5.0"
+        },
+        "custom": {
+          "supportedPhpVersions": "5.4.5+",
+          "supportedDrupalVersions": "6 - 8"
+        }
+      }
+    },
+    {
+      "id": "7",
+      "name": "7",
+      "milestones": {
+        "ga": "2015-05-20",
+        "eos": null,
+        "eossec": null,
+        "eol": "2017-07-31"
+      },
+      "upstream": {
+        "name": "7",
+        "codename": null,
+        "label": "7",
+        "releaseDate": "2015-05-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-07-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.4.2",
+          "date": "2022-03-25",
+          "link": "https://github.com/drush-ops/drush/releases/tag/7.4.2"
+        },
+        "custom": {
+          "supportedPhpVersions": "5.3.0+",
+          "supportedDrupalVersions": "6 - 7"
+        }
+      }
+    },
+    {
+      "id": "6",
+      "name": "6",
+      "milestones": {
+        "ga": "2013-08-16",
+        "eos": null,
+        "eossec": null,
+        "eol": "2015-12-31"
+      },
+      "upstream": {
+        "name": "6",
+        "codename": null,
+        "label": "6",
+        "releaseDate": "2013-08-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2015-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.7.0",
+          "date": "2015-12-02",
+          "link": "https://github.com/drush-ops/drush/releases/tag/6.7.0"
+        },
+        "custom": {
+          "supportedPhpVersions": "5.3.0+",
+          "supportedDrupalVersions": "6 - 7"
+        }
+      }
+    },
+    {
+      "id": "5",
+      "name": "5",
+      "milestones": {
+        "ga": "2012-03-23",
+        "eos": null,
+        "eossec": null,
+        "eol": "2015-05-31"
+      },
+      "upstream": {
+        "name": "5",
+        "codename": null,
+        "label": "5",
+        "releaseDate": "2012-03-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2015-05-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.11.0",
+          "date": "2014-05-22",
+          "link": "https://github.com/drush-ops/drush/releases/tag/5.11.0"
+        },
+        "custom": {
+          "supportedPhpVersions": "5.2.0+",
+          "supportedDrupalVersions": "6 - 7"
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/drush/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-09T00:07:20+00:00"
+  }
+}

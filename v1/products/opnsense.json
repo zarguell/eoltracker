@@ -1,0 +1,684 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "opnsense",
+  "name": "OPNsense",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "cpe",
+      "id": "cpe:/a:opnsense:opnsense"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:opnsense:opnsense"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/opnsense.svg",
+    "html": "https://endoflife.date/opnsense",
+    "releasePolicy": "https://opnsense.org/about/road-map/"
+  },
+  "releases": [
+    {
+      "id": "26.7",
+      "name": "26.7 'Xenial Xenops'",
+      "milestones": {
+        "ga": "2026-07-15",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "26.7",
+        "codename": "Xenial Xenops",
+        "label": "26.7 'Xenial Xenops'",
+        "releaseDate": "2026-07-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "26.7.4",
+          "date": "2026-09-15",
+          "link": "https://docs.opnsense.org/releases/CE_26.7.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "26.1",
+      "name": "26.1 'Witty Woodpecker'",
+      "milestones": {
+        "ga": "2026-01-28",
+        "eos": null,
+        "eossec": "2026-07-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "26.1",
+        "codename": "Witty Woodpecker",
+        "label": "26.1 'Witty Woodpecker'",
+        "releaseDate": "2026-01-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-07-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "26.1.11",
+          "date": "2026-07-01",
+          "link": "https://docs.opnsense.org/releases/CE_26.1.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "25.7",
+      "name": "25.7 'Visionary Viper'",
+      "milestones": {
+        "ga": "2025-07-22",
+        "eos": null,
+        "eossec": "2026-01-28",
+        "eol": null
+      },
+      "upstream": {
+        "name": "25.7",
+        "codename": "Visionary Viper",
+        "label": "25.7 'Visionary Viper'",
+        "releaseDate": "2025-07-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-01-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "25.7.11",
+          "date": "2026-01-15",
+          "link": "https://docs.opnsense.org/releases/CE_25.7.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "25.1",
+      "name": "25.1 'Ultimate Unicorn'",
+      "milestones": {
+        "ga": "2025-01-28",
+        "eos": null,
+        "eossec": "2025-07-23",
+        "eol": null
+      },
+      "upstream": {
+        "name": "25.1",
+        "codename": "Ultimate Unicorn",
+        "label": "25.1 'Ultimate Unicorn'",
+        "releaseDate": "2025-01-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-07-23",
+        "isMaintained": false,
+        "latest": {
+          "name": "25.1.12",
+          "date": "2025-07-21",
+          "link": "https://docs.opnsense.org/releases/CE_25.1.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "24.7",
+      "name": "24.7 'Thriving Tiger'",
+      "milestones": {
+        "ga": "2024-07-23",
+        "eos": null,
+        "eossec": "2025-01-28",
+        "eol": null
+      },
+      "upstream": {
+        "name": "24.7",
+        "codename": "Thriving Tiger",
+        "label": "24.7 'Thriving Tiger'",
+        "releaseDate": "2024-07-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-01-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "24.7.12",
+          "date": "2025-01-14",
+          "link": "https://docs.opnsense.org/releases/CE_24.7.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "24.1",
+      "name": "24.1 'Savvy Shark'",
+      "milestones": {
+        "ga": "2024-01-26",
+        "eos": null,
+        "eossec": "2024-07-25",
+        "eol": null
+      },
+      "upstream": {
+        "name": "24.1",
+        "codename": "Savvy Shark",
+        "label": "24.1 'Savvy Shark'",
+        "releaseDate": "2024-01-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-07-25",
+        "isMaintained": false,
+        "latest": {
+          "name": "24.1.10",
+          "date": "2024-07-11",
+          "link": "https://docs.opnsense.org/releases/CE_24.1.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "23.7",
+      "name": "23.7 'Restless Roadrunner'",
+      "milestones": {
+        "ga": "2023-07-28",
+        "eos": null,
+        "eossec": "2024-01-26",
+        "eol": null
+      },
+      "upstream": {
+        "name": "23.7",
+        "codename": "Restless Roadrunner",
+        "label": "23.7 'Restless Roadrunner'",
+        "releaseDate": "2023-07-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-01-26",
+        "isMaintained": false,
+        "latest": {
+          "name": "23.7.12",
+          "date": "2024-01-16",
+          "link": "https://docs.opnsense.org/releases/CE_23.7.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "23.1",
+      "name": "23.1 'Quintessential Quail'",
+      "milestones": {
+        "ga": "2023-01-25",
+        "eos": null,
+        "eossec": "2023-07-28",
+        "eol": null
+      },
+      "upstream": {
+        "name": "23.1",
+        "codename": "Quintessential Quail",
+        "label": "23.1 'Quintessential Quail'",
+        "releaseDate": "2023-01-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-07-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "23.1.11",
+          "date": "2023-06-27",
+          "link": "https://docs.opnsense.org/releases/CE_23.1.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "22.7",
+      "name": "22.7 'Powerful Panther'",
+      "milestones": {
+        "ga": "2022-07-25",
+        "eos": null,
+        "eossec": "2023-01-25",
+        "eol": null
+      },
+      "upstream": {
+        "name": "22.7",
+        "codename": "Powerful Panther",
+        "label": "22.7 'Powerful Panther'",
+        "releaseDate": "2022-07-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-01-25",
+        "isMaintained": false,
+        "latest": {
+          "name": "22.7.11",
+          "date": "2023-01-17",
+          "link": "https://docs.opnsense.org/releases/CE_22.7.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "22.1",
+      "name": "22.1 'Observant Owl'",
+      "milestones": {
+        "ga": "2022-01-25",
+        "eos": null,
+        "eossec": "2022-07-25",
+        "eol": null
+      },
+      "upstream": {
+        "name": "22.1",
+        "codename": "Observant Owl",
+        "label": "22.1 'Observant Owl'",
+        "releaseDate": "2022-01-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-07-25",
+        "isMaintained": false,
+        "latest": {
+          "name": "22.1.10",
+          "date": "2022-07-06",
+          "link": "https://docs.opnsense.org/releases/CE_22.1.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "21.7",
+      "name": "21.7 'Noble Nightingale'",
+      "milestones": {
+        "ga": "2021-07-23",
+        "eos": null,
+        "eossec": "2022-01-25",
+        "eol": null
+      },
+      "upstream": {
+        "name": "21.7",
+        "codename": "Noble Nightingale",
+        "label": "21.7 'Noble Nightingale'",
+        "releaseDate": "2021-07-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-01-25",
+        "isMaintained": false,
+        "latest": {
+          "name": "21.7.8",
+          "date": "2022-01-27",
+          "link": "https://docs.opnsense.org/releases/CE_21.7.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "21.1",
+      "name": "21.1 'Marvelous Meerkat'",
+      "milestones": {
+        "ga": "2021-01-26",
+        "eos": null,
+        "eossec": "2021-07-23",
+        "eol": null
+      },
+      "upstream": {
+        "name": "21.1",
+        "codename": "Marvelous Meerkat",
+        "label": "21.1 'Marvelous Meerkat'",
+        "releaseDate": "2021-01-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-07-23",
+        "isMaintained": false,
+        "latest": {
+          "name": "21.1.9",
+          "date": "2021-07-26",
+          "link": "https://docs.opnsense.org/releases/CE_21.1.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "20.7",
+      "name": "20.7 'Legendary Lion'",
+      "milestones": {
+        "ga": "2020-07-28",
+        "eos": null,
+        "eossec": "2021-01-26",
+        "eol": null
+      },
+      "upstream": {
+        "name": "20.7",
+        "codename": "Legendary Lion",
+        "label": "20.7 'Legendary Lion'",
+        "releaseDate": "2020-07-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-01-26",
+        "isMaintained": false,
+        "latest": {
+          "name": "20.7.8",
+          "date": "2021-01-18",
+          "link": "https://docs.opnsense.org/releases/CE_20.7.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "20.1",
+      "name": "20.1 'Keen Kingfisher'",
+      "milestones": {
+        "ga": "2020-01-29",
+        "eos": null,
+        "eossec": "2020-07-28",
+        "eol": null
+      },
+      "upstream": {
+        "name": "20.1",
+        "codename": "Keen Kingfisher",
+        "label": "20.1 'Keen Kingfisher'",
+        "releaseDate": "2020-01-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-07-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "20.1.9",
+          "date": "2020-07-23",
+          "link": "https://docs.opnsense.org/releases/CE_20.1.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "19.7",
+      "name": "19.7 'Jazzy Jaguar'",
+      "milestones": {
+        "ga": "2019-07-15",
+        "eos": null,
+        "eossec": "2020-01-29",
+        "eol": null
+      },
+      "upstream": {
+        "name": "19.7",
+        "codename": "Jazzy Jaguar",
+        "label": "19.7 'Jazzy Jaguar'",
+        "releaseDate": "2019-07-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-01-29",
+        "isMaintained": false,
+        "latest": {
+          "name": "19.7.10",
+          "date": "2020-01-27",
+          "link": "https://docs.opnsense.org/releases/CE_19.7.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "19.1",
+      "name": "19.1 'Inspiring Iguana'",
+      "milestones": {
+        "ga": "2019-01-28",
+        "eos": null,
+        "eossec": "2019-07-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "19.1",
+        "codename": "Inspiring Iguana",
+        "label": "19.1 'Inspiring Iguana'",
+        "releaseDate": "2019-01-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-07-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "19.1.10",
+          "date": "2019-07-02",
+          "link": "https://docs.opnsense.org/releases/CE_19.1.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.7",
+      "name": "18.7 'Happy Hippo'",
+      "milestones": {
+        "ga": "2018-07-29",
+        "eos": null,
+        "eossec": "2019-01-28",
+        "eol": null
+      },
+      "upstream": {
+        "name": "18.7",
+        "codename": "Happy Hippo",
+        "label": "18.7 'Happy Hippo'",
+        "releaseDate": "2018-07-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-01-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.7.10",
+          "date": "2019-01-06",
+          "link": "https://docs.opnsense.org/releases/CE_18.7.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.1",
+      "name": "18.1 'Groovy Gecko'",
+      "milestones": {
+        "ga": "2018-01-26",
+        "eos": null,
+        "eossec": "2018-07-29",
+        "eol": null
+      },
+      "upstream": {
+        "name": "18.1",
+        "codename": "Groovy Gecko",
+        "label": "18.1 'Groovy Gecko'",
+        "releaseDate": "2018-01-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-07-29",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.1.13",
+          "date": "2018-07-23",
+          "link": "https://docs.opnsense.org/releases/CE_18.1.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "17.7",
+      "name": "17.7 'Free Fox'",
+      "milestones": {
+        "ga": "2017-07-26",
+        "eos": null,
+        "eossec": "2018-01-26",
+        "eol": null
+      },
+      "upstream": {
+        "name": "17.7",
+        "codename": "Free Fox",
+        "label": "17.7 'Free Fox'",
+        "releaseDate": "2017-07-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-01-26",
+        "isMaintained": false,
+        "latest": {
+          "name": "17.7.12",
+          "date": "2018-01-17",
+          "link": "https://docs.opnsense.org/releases/CE_17.7.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "17.1",
+      "name": "17.1 'Eclectic Eagle'",
+      "milestones": {
+        "ga": "2017-01-27",
+        "eos": null,
+        "eossec": "2017-07-26",
+        "eol": null
+      },
+      "upstream": {
+        "name": "17.1",
+        "codename": "Eclectic Eagle",
+        "label": "17.1 'Eclectic Eagle'",
+        "releaseDate": "2017-01-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-07-26",
+        "isMaintained": false,
+        "latest": {
+          "name": "17.1.11",
+          "date": "2017-07-24",
+          "link": "https://docs.opnsense.org/releases/CE_17.1.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "16.7",
+      "name": "16.7 'Dancing Dolphin'",
+      "milestones": {
+        "ga": "2016-07-26",
+        "eos": null,
+        "eossec": "2017-01-27",
+        "eol": null
+      },
+      "upstream": {
+        "name": "16.7",
+        "codename": "Dancing Dolphin",
+        "label": "16.7 'Dancing Dolphin'",
+        "releaseDate": "2016-07-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-01-27",
+        "isMaintained": false,
+        "latest": {
+          "name": "16.7.14",
+          "date": "2017-01-24",
+          "link": "https://docs.opnsense.org/releases/CE_16.7.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "16.1",
+      "name": "16.1 'Crafty Coyote'",
+      "milestones": {
+        "ga": "2016-01-28",
+        "eos": null,
+        "eossec": "2016-07-26",
+        "eol": null
+      },
+      "upstream": {
+        "name": "16.1",
+        "codename": "Crafty Coyote",
+        "label": "16.1 'Crafty Coyote'",
+        "releaseDate": "2016-01-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2016-07-26",
+        "isMaintained": false,
+        "latest": {
+          "name": "16.1.20",
+          "date": "2016-07-22",
+          "link": "https://docs.opnsense.org/releases/CE_16.1.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "15.7",
+      "name": "15.7 'Brave Badger'",
+      "milestones": {
+        "ga": "2015-07-02",
+        "eos": null,
+        "eossec": "2016-01-28",
+        "eol": null
+      },
+      "upstream": {
+        "name": "15.7",
+        "codename": "Brave Badger",
+        "label": "15.7 'Brave Badger'",
+        "releaseDate": "2015-07-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2016-01-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "15.7.25",
+          "date": "2016-01-18",
+          "link": "https://docs.opnsense.org/releases/CE_15.7.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "15.1",
+      "name": "15.1 'Ascending Albatross'",
+      "milestones": {
+        "ga": "2015-01-02",
+        "eos": null,
+        "eossec": "2015-07-02",
+        "eol": null
+      },
+      "upstream": {
+        "name": "15.1",
+        "codename": "Ascending Albatross",
+        "label": "15.1 'Ascending Albatross'",
+        "releaseDate": "2015-01-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2015-07-02",
+        "isMaintained": false,
+        "latest": {
+          "name": "15.1.12",
+          "date": "2015-06-17",
+          "link": "https://docs.opnsense.org/releases/CE_15.1.html"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/opnsense/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-16T00:07:55+00:00"
+  }
+}

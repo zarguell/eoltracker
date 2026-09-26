@@ -1,0 +1,1320 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "emberjs",
+  "name": "Ember",
+  "category": "software",
+  "upstream_category": "framework",
+  "identifiers": [
+    {
+      "type": "purl",
+      "id": "pkg:github/emberjs/ember.js"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:npm/ember-source"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:emberjs:ember.js"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:emberjs:ember.js"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/emberdotjs.svg",
+    "html": "https://endoflife.date/emberjs",
+    "releasePolicy": "https://emberjs.com/releases/"
+  },
+  "releases": [
+    {
+      "id": "7.2",
+      "name": "7.2",
+      "milestones": {
+        "ga": "2026-09-08",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.2",
+        "codename": null,
+        "label": "7.2",
+        "releaseDate": "2026-09-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "7.2.1",
+          "date": "2026-09-14",
+          "link": "https://blog.emberjs.com/ember-released-7-2/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.1",
+      "name": "7.1",
+      "milestones": {
+        "ga": "2026-07-26",
+        "eos": null,
+        "eossec": "2026-09-08",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.1",
+        "codename": null,
+        "label": "7.1",
+        "releaseDate": "2026-07-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-09-08",
+        "isEol": true,
+        "eolFrom": "2026-09-08",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.1.0",
+          "date": "2026-06-22",
+          "link": "https://blog.emberjs.com/ember-released-7-1/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.0",
+      "name": "7.0",
+      "milestones": {
+        "ga": "2026-05-29",
+        "eos": null,
+        "eossec": "2026-07-26",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.0",
+        "codename": null,
+        "label": "7.0",
+        "releaseDate": "2026-05-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-07-26",
+        "isEol": true,
+        "eolFrom": "2026-07-26",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.0.0",
+          "date": "2026-05-12",
+          "link": "https://blog.emberjs.com/ember-released-7-0/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.12",
+      "name": "6.12 (LTS)",
+      "milestones": {
+        "ga": "2026-05-01",
+        "eos": null,
+        "eossec": "2027-05-25",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.12",
+        "codename": null,
+        "label": "6.12 (LTS)",
+        "releaseDate": "2026-05-01",
+        "isLts": true,
+        "ltsFrom": "2026-05-12",
+        "isEoas": false,
+        "eoasFrom": "2026-12-08",
+        "isEol": false,
+        "eolFrom": "2027-05-25",
+        "isMaintained": true,
+        "latest": {
+          "name": "6.12.0",
+          "date": "2026-03-31",
+          "link": "https://blog.emberjs.com/ember-released-6-12/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.11",
+      "name": "6.11",
+      "milestones": {
+        "ga": "2026-03-06",
+        "eos": null,
+        "eossec": "2026-05-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.11",
+        "codename": null,
+        "label": "6.11",
+        "releaseDate": "2026-03-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-05-01",
+        "isEol": true,
+        "eolFrom": "2026-05-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.11.1",
+          "date": "2026-03-27",
+          "link": "https://blog.emberjs.com/ember-released-6-11/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.10",
+      "name": "6.10",
+      "milestones": {
+        "ga": "2026-02-06",
+        "eos": null,
+        "eossec": "2026-03-06",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.10",
+        "codename": null,
+        "label": "6.10",
+        "releaseDate": "2026-02-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-03-06",
+        "isEol": true,
+        "eolFrom": "2026-03-06",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.10.1",
+          "date": "2026-02-03",
+          "link": "https://blog.emberjs.com/ember-released-6-10/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.9",
+      "name": "6.9",
+      "milestones": {
+        "ga": "2026-01-09",
+        "eos": null,
+        "eossec": "2026-02-06",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.9",
+        "codename": null,
+        "label": "6.9",
+        "releaseDate": "2026-01-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-02-06",
+        "isEol": true,
+        "eolFrom": "2026-02-06",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.9.0",
+          "date": "2025-11-25",
+          "link": "https://blog.emberjs.com/ember-released-6-9/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.8",
+      "name": "6.8 (LTS)",
+      "milestones": {
+        "ga": "2025-10-25",
+        "eos": null,
+        "eossec": "2026-12-08",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.8",
+        "codename": null,
+        "label": "6.8 (LTS)",
+        "releaseDate": "2025-10-25",
+        "isLts": true,
+        "ltsFrom": "2025-11-25",
+        "isEoas": true,
+        "eoasFrom": "2026-06-23",
+        "isEol": false,
+        "eolFrom": "2026-12-08",
+        "isMaintained": true,
+        "latest": {
+          "name": "6.8.4",
+          "date": "2026-03-27",
+          "link": "https://blog.emberjs.com/ember-released-6-8/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.7",
+      "name": "6.7",
+      "milestones": {
+        "ga": "2025-09-01",
+        "eos": null,
+        "eossec": "2025-10-25",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.7",
+        "codename": null,
+        "label": "6.7",
+        "releaseDate": "2025-09-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-10-25",
+        "isEol": true,
+        "eolFrom": "2025-10-25",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.7.0",
+          "date": "2025-09-01",
+          "link": "https://blog.emberjs.com/ember-released-6-7/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.6",
+      "name": "6.6",
+      "milestones": {
+        "ga": "2025-07-21",
+        "eos": null,
+        "eossec": "2025-09-03",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.6",
+        "codename": null,
+        "label": "6.6",
+        "releaseDate": "2025-07-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-09-03",
+        "isEol": true,
+        "eolFrom": "2025-09-03",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.6.0",
+          "date": "2025-07-21",
+          "link": "https://blog.emberjs.com/ember-released-6-6/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.5",
+      "name": "6.5",
+      "milestones": {
+        "ga": "2025-06-09",
+        "eos": null,
+        "eossec": "2025-09-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.5",
+        "codename": null,
+        "label": "6.5",
+        "releaseDate": "2025-06-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-09-01",
+        "isEol": true,
+        "eolFrom": "2025-09-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.5.0",
+          "date": "2025-06-09",
+          "link": "https://blog.emberjs.com/ember-released-6-5/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.4",
+      "name": "6.4 (LTS)",
+      "milestones": {
+        "ga": "2025-04-28",
+        "eos": null,
+        "eossec": "2026-06-22",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.4",
+        "codename": null,
+        "label": "6.4 (LTS)",
+        "releaseDate": "2025-04-28",
+        "isLts": true,
+        "ltsFrom": "2025-06-09",
+        "isEoas": true,
+        "eoasFrom": "2026-01-05",
+        "isEol": true,
+        "eolFrom": "2026-06-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.4.0",
+          "date": "2025-04-28",
+          "link": "https://blog.emberjs.com/ember-released-6-4/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.3",
+      "name": "6.3",
+      "milestones": {
+        "ga": "2025-03-17",
+        "eos": null,
+        "eossec": "2025-05-26",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.3",
+        "codename": null,
+        "label": "6.3",
+        "releaseDate": "2025-03-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-05-26",
+        "isEol": true,
+        "eolFrom": "2025-05-26",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.3.0",
+          "date": "2025-03-17",
+          "link": "https://blog.emberjs.com/ember-released-6-3/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.2",
+      "name": "6.2",
+      "milestones": {
+        "ga": "2025-02-03",
+        "eos": null,
+        "eossec": "2025-03-28",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.2",
+        "codename": null,
+        "label": "6.2",
+        "releaseDate": "2025-02-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-03-28",
+        "isEol": true,
+        "eolFrom": "2025-03-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.2.0",
+          "date": "2025-02-03",
+          "link": "https://blog.emberjs.com/ember-released-6-2/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.1",
+      "name": "6.1",
+      "milestones": {
+        "ga": "2024-12-23",
+        "eos": null,
+        "eossec": "2025-02-22",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.1",
+        "codename": null,
+        "label": "6.1",
+        "releaseDate": "2024-12-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-02-22",
+        "isEol": true,
+        "eolFrom": "2025-02-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.1.0",
+          "date": "2024-12-23",
+          "link": "https://blog.emberjs.com/ember-released-6-1/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.0",
+      "name": "6.0",
+      "milestones": {
+        "ga": "2024-11-12",
+        "eos": null,
+        "eossec": "2024-12-28",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.0",
+        "codename": null,
+        "label": "6.0",
+        "releaseDate": "2024-11-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-12-28",
+        "isEol": true,
+        "eolFrom": "2024-12-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.0.1",
+          "date": "2024-11-15",
+          "link": "https://blog.emberjs.com/ember-6-0-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.12",
+      "name": "5.12 (LTS)",
+      "milestones": {
+        "ga": "2024-09-30",
+        "eos": null,
+        "eossec": "2025-10-13",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.12",
+        "codename": null,
+        "label": "5.12 (LTS)",
+        "releaseDate": "2024-09-30",
+        "isLts": true,
+        "ltsFrom": "2024-09-30",
+        "isEoas": true,
+        "eoasFrom": "2025-04-28",
+        "isEol": true,
+        "eolFrom": "2025-10-13",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.12.0",
+          "date": "2024-09-30",
+          "link": "https://github.com/emberjs/ember.js/releases/tag/v5.12.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.11",
+      "name": "5.11",
+      "milestones": {
+        "ga": "2024-08-19",
+        "eos": null,
+        "eossec": "2024-10-04",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.11",
+        "codename": null,
+        "label": "5.11",
+        "releaseDate": "2024-08-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-10-04",
+        "isEol": true,
+        "eolFrom": "2024-10-04",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.11.1",
+          "date": "2024-09-23",
+          "link": "https://github.com/emberjs/ember.js/releases/tag/v5.11.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.10",
+      "name": "5.10",
+      "milestones": {
+        "ga": "2024-07-08",
+        "eos": null,
+        "eossec": "2024-08-19",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.10",
+        "codename": null,
+        "label": "5.10",
+        "releaseDate": "2024-07-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-08-19",
+        "isEol": true,
+        "eolFrom": "2024-08-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.10.2",
+          "date": "2024-08-06",
+          "link": "https://github.com/emberjs/ember.js/releases/tag/v5.10.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.9",
+      "name": "5.9",
+      "milestones": {
+        "ga": "2024-06-03",
+        "eos": null,
+        "eossec": "2024-07-08",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.9",
+        "codename": null,
+        "label": "5.9",
+        "releaseDate": "2024-06-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-07-08",
+        "isEol": true,
+        "eolFrom": "2024-07-08",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.9.0",
+          "date": "2024-06-03",
+          "link": "https://github.com/emberjs/ember.js/releases/tag/v5.9.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.8",
+      "name": "5.8 (LTS)",
+      "milestones": {
+        "ga": "2024-04-15",
+        "eos": null,
+        "eossec": "2025-06-16",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.8",
+        "codename": null,
+        "label": "5.8 (LTS)",
+        "releaseDate": "2024-04-15",
+        "isLts": true,
+        "ltsFrom": "2024-06-03",
+        "isEoas": true,
+        "eoasFrom": "2024-12-30",
+        "isEol": true,
+        "eolFrom": "2025-06-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.8.0",
+          "date": "2024-04-15",
+          "link": "https://github.com/emberjs/ember.js/releases/tag/v5.8.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.7",
+      "name": "5.7",
+      "milestones": {
+        "ga": "2024-03-04",
+        "eos": null,
+        "eossec": "2024-04-20",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.7",
+        "codename": null,
+        "label": "5.7",
+        "releaseDate": "2024-03-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-04-20",
+        "isEol": true,
+        "eolFrom": "2024-04-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.7.0",
+          "date": "2024-03-04",
+          "link": "https://github.com/emberjs/ember.js/releases/tag/v5.7.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.6",
+      "name": "5.6",
+      "milestones": {
+        "ga": "2024-01-22",
+        "eos": null,
+        "eossec": "2024-03-04",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.6",
+        "codename": null,
+        "label": "5.6",
+        "releaseDate": "2024-01-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-03-04",
+        "isEol": true,
+        "eolFrom": "2024-03-04",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.6.0",
+          "date": "2024-01-22",
+          "link": "https://github.com/emberjs/ember.js/releases/tag/v5.6.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.5",
+      "name": "5.5",
+      "milestones": {
+        "ga": "2023-12-11",
+        "eos": null,
+        "eossec": "2024-01-22",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.5",
+        "codename": null,
+        "label": "5.5",
+        "releaseDate": "2023-12-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-01-22",
+        "isEol": true,
+        "eolFrom": "2024-01-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.5.0",
+          "date": "2023-12-11",
+          "link": "https://github.com/emberjs/ember.js/releases/tag/v5.5.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.4",
+      "name": "5.4 (LTS)",
+      "milestones": {
+        "ga": "2023-10-30",
+        "eos": null,
+        "eossec": "2024-12-23",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.4",
+        "codename": null,
+        "label": "5.4 (LTS)",
+        "releaseDate": "2023-10-30",
+        "isLts": true,
+        "ltsFrom": "2023-12-11",
+        "isEoas": true,
+        "eoasFrom": "2024-07-08",
+        "isEol": true,
+        "eolFrom": "2024-12-23",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.4.1",
+          "date": "2024-01-22",
+          "link": "https://github.com/emberjs/ember.js/releases/tag/v5.4.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.3",
+      "name": "5.3",
+      "milestones": {
+        "ga": "2023-09-18",
+        "eos": null,
+        "eossec": "2024-12-22",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.3",
+        "codename": null,
+        "label": "5.3",
+        "releaseDate": "2023-09-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-07-07",
+        "isEol": true,
+        "eolFrom": "2024-12-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.3.0",
+          "date": "2023-09-18",
+          "link": "https://github.com/emberjs/ember.js/releases/tag/v5.3.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.2",
+      "name": "5.2",
+      "milestones": {
+        "ga": "2023-08-07",
+        "eos": null,
+        "eossec": "2023-09-21",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.2",
+        "codename": null,
+        "label": "5.2",
+        "releaseDate": "2023-08-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-09-21",
+        "isEol": true,
+        "eolFrom": "2023-09-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.2.0",
+          "date": "2023-08-07",
+          "link": "https://github.com/emberjs/ember.js/releases/tag/v5.2.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.1",
+      "name": "5.1",
+      "milestones": {
+        "ga": "2023-06-26",
+        "eos": null,
+        "eossec": "2023-08-07",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.1",
+        "codename": null,
+        "label": "5.1",
+        "releaseDate": "2023-06-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-08-07",
+        "isEol": true,
+        "eolFrom": "2023-08-07",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.1.2",
+          "date": "2023-06-30",
+          "link": "https://github.com/emberjs/ember.js/releases/tag/v5.1.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.0",
+      "name": "5.0",
+      "milestones": {
+        "ga": "2023-05-15",
+        "eos": null,
+        "eossec": "2023-07-08",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.0",
+        "codename": null,
+        "label": "5.0",
+        "releaseDate": "2023-05-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-07-08",
+        "isEol": true,
+        "eolFrom": "2023-07-08",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.0.0",
+          "date": "2023-05-15",
+          "link": "https://github.com/emberjs/ember.js/releases/tag/v5.0.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.12",
+      "name": "4.12 (LTS)",
+      "milestones": {
+        "ga": "2023-04-03",
+        "eos": null,
+        "eossec": "2024-05-26",
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.12",
+        "codename": null,
+        "label": "4.12 (LTS)",
+        "releaseDate": "2023-04-03",
+        "isLts": true,
+        "ltsFrom": "2023-05-14",
+        "isEoas": true,
+        "eoasFrom": "2023-12-10",
+        "isEol": true,
+        "eolFrom": "2024-05-26",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.12.4",
+          "date": "2024-01-22",
+          "link": "https://github.com/emberjs/ember.js/releases/tag/v4.12.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.8",
+      "name": "4.8 (LTS)",
+      "milestones": {
+        "ga": "2022-10-17",
+        "eos": null,
+        "eossec": "2023-12-21",
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.8",
+        "codename": null,
+        "label": "4.8 (LTS)",
+        "releaseDate": "2022-10-17",
+        "isLts": true,
+        "ltsFrom": "2022-12-08",
+        "isEoas": true,
+        "eoasFrom": "2023-07-06",
+        "isEol": true,
+        "eolFrom": "2023-12-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.8.6",
+          "date": "2023-06-12",
+          "link": "https://github.com/emberjs/ember.js/releases/tag/v4.8.6"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.4",
+      "name": "4.4 (LTS)",
+      "milestones": {
+        "ga": "2022-05-03",
+        "eos": null,
+        "eossec": "2023-07-26",
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.4",
+        "codename": null,
+        "label": "4.4 (LTS)",
+        "releaseDate": "2022-05-03",
+        "isLts": true,
+        "ltsFrom": "2022-07-13",
+        "isEoas": true,
+        "eoasFrom": "2023-02-08",
+        "isEol": true,
+        "eolFrom": "2023-07-26",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.4.5",
+          "date": "2023-05-04",
+          "link": "https://github.com/emberjs/ember.js/releases/tag/v4.4.5"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.28",
+      "name": "3.28 (LTS)",
+      "milestones": {
+        "ga": "2021-08-10",
+        "eos": null,
+        "eossec": "2023-01-02",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.28",
+        "codename": null,
+        "label": "3.28 (LTS)",
+        "releaseDate": "2021-08-10",
+        "isLts": true,
+        "ltsFrom": "2021-12-20",
+        "isEoas": true,
+        "eoasFrom": "2022-07-18",
+        "isEol": true,
+        "eolFrom": "2023-01-02",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.28.12",
+          "date": "2023-05-04",
+          "link": "https://github.com/emberjs/ember.js/releases/tag/v3.28.12"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.24",
+      "name": "3.24 (LTS)",
+      "milestones": {
+        "ga": "2020-12-28",
+        "eos": null,
+        "eossec": "2022-03-10",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.24",
+        "codename": null,
+        "label": "3.24 (LTS)",
+        "releaseDate": "2020-12-28",
+        "isLts": true,
+        "ltsFrom": "2021-02-25",
+        "isEoas": true,
+        "eoasFrom": "2021-09-23",
+        "isEol": true,
+        "eolFrom": "2022-03-10",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.24.7",
+          "date": "2022-11-02",
+          "link": "https://github.com/emberjs/ember.js/releases/tag/v3.24.7"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.20",
+      "name": "3.20 (LTS)",
+      "milestones": {
+        "ga": "2020-07-13",
+        "eos": null,
+        "eossec": "2021-09-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.20",
+        "codename": null,
+        "label": "3.20 (LTS)",
+        "releaseDate": "2020-07-13",
+        "isLts": true,
+        "ltsFrom": "2020-09-02",
+        "isEoas": true,
+        "eoasFrom": "2021-03-31",
+        "isEol": true,
+        "eolFrom": "2021-09-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.20.7",
+          "date": "2021-06-03",
+          "link": "https://github.com/emberjs/ember.js/releases/tag/v3.20.7"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.16",
+      "name": "3.16 (LTS)",
+      "milestones": {
+        "ga": "2020-01-20",
+        "eos": null,
+        "eossec": "2021-03-29",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.16",
+        "codename": null,
+        "label": "3.16 (LTS)",
+        "releaseDate": "2020-01-20",
+        "isLts": true,
+        "ltsFrom": "2020-03-16",
+        "isEoas": true,
+        "eoasFrom": "2020-10-12",
+        "isEol": true,
+        "eolFrom": "2021-03-29",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.16.10",
+          "date": "2020-08-05",
+          "link": "https://github.com/emberjs/ember.js/releases/tag/v3.16.10"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.12",
+      "name": "3.12 (LTS)",
+      "milestones": {
+        "ga": "2019-08-06",
+        "eos": null,
+        "eossec": "2020-10-07",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.12",
+        "codename": null,
+        "label": "3.12 (LTS)",
+        "releaseDate": "2019-08-06",
+        "isLts": true,
+        "ltsFrom": "2019-09-25",
+        "isEoas": true,
+        "eoasFrom": "2020-04-22",
+        "isEol": true,
+        "eolFrom": "2020-10-07",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.12.4",
+          "date": "2020-05-21",
+          "link": "https://github.com/emberjs/ember.js/releases/tag/v3.12.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.8",
+      "name": "3.8 (LTS)",
+      "milestones": {
+        "ga": "2019-02-18",
+        "eos": null,
+        "eossec": "2020-04-22",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.8",
+        "codename": null,
+        "label": "3.8 (LTS)",
+        "releaseDate": "2019-02-18",
+        "isLts": true,
+        "ltsFrom": "2019-04-10",
+        "isEoas": true,
+        "eoasFrom": "2019-11-06",
+        "isEol": true,
+        "eolFrom": "2020-04-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.8.3",
+          "date": "2019-06-28",
+          "link": "https://github.com/emberjs/ember.js/releases/tag/v3.8.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.4",
+      "name": "3.4 (LTS)",
+      "milestones": {
+        "ga": "2018-08-28",
+        "eos": null,
+        "eossec": "2019-10-28",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.4",
+        "codename": null,
+        "label": "3.4 (LTS)",
+        "releaseDate": "2018-08-28",
+        "isLts": true,
+        "ltsFrom": "2018-10-15",
+        "isEoas": true,
+        "eoasFrom": "2019-05-13",
+        "isEol": true,
+        "eolFrom": "2019-10-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.4.8",
+          "date": "2019-01-22",
+          "link": "https://github.com/emberjs/ember.js/releases/tag/v3.4.8"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.18",
+      "name": "2.18 (LTS)",
+      "milestones": {
+        "ga": "2018-01-01",
+        "eos": null,
+        "eossec": "2019-02-27",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.18",
+        "codename": null,
+        "label": "2.18 (LTS)",
+        "releaseDate": "2018-01-01",
+        "isLts": true,
+        "ltsFrom": "2018-02-14",
+        "isEoas": true,
+        "eoasFrom": "2018-09-12",
+        "isEol": true,
+        "eolFrom": "2019-02-27",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.18.3",
+          "date": "2026-01-30",
+          "link": "https://github.com/emberjs/ember.js/releases/tag/v2.18.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.16",
+      "name": "2.16 (LTS)",
+      "milestones": {
+        "ga": "2017-10-10",
+        "eos": null,
+        "eossec": "2018-12-03",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.16",
+        "codename": null,
+        "label": "2.16 (LTS)",
+        "releaseDate": "2017-10-10",
+        "isLts": true,
+        "ltsFrom": "2017-11-20",
+        "isEoas": true,
+        "eoasFrom": "2018-06-18",
+        "isEol": true,
+        "eolFrom": "2018-12-03",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.16.4",
+          "date": "2018-02-14",
+          "link": "https://github.com/emberjs/ember.js/releases/tag/v2.16.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.12",
+      "name": "2.12 (LTS)",
+      "milestones": {
+        "ga": "2017-03-15",
+        "eos": null,
+        "eossec": "2018-05-12",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.12",
+        "codename": null,
+        "label": "2.12 (LTS)",
+        "releaseDate": "2017-03-15",
+        "isLts": true,
+        "ltsFrom": "2017-04-29",
+        "isEoas": true,
+        "eoasFrom": "2017-11-25",
+        "isEol": true,
+        "eolFrom": "2018-05-12",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.12.2",
+          "date": "2017-04-27",
+          "link": "https://github.com/emberjs/ember.js/releases/tag/v2.12.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.8",
+      "name": "2.8 (LTS)",
+      "milestones": {
+        "ga": "2016-09-09",
+        "eos": null,
+        "eossec": "2017-10-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.8",
+        "codename": null,
+        "label": "2.8 (LTS)",
+        "releaseDate": "2016-09-09",
+        "isLts": true,
+        "ltsFrom": "2016-10-17",
+        "isEoas": true,
+        "eoasFrom": "2017-05-15",
+        "isEol": true,
+        "eolFrom": "2017-10-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.8.3",
+          "date": "2016-11-01",
+          "link": "https://github.com/emberjs/ember.js/releases/tag/v2.8.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.4",
+      "name": "2.4 (LTS)",
+      "milestones": {
+        "ga": "2016-02-29",
+        "eos": null,
+        "eossec": "2017-04-24",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.4",
+        "codename": null,
+        "label": "2.4 (LTS)",
+        "releaseDate": "2016-02-29",
+        "isLts": true,
+        "ltsFrom": "2016-04-11",
+        "isEoas": true,
+        "eoasFrom": "2016-11-07",
+        "isEol": true,
+        "eolFrom": "2017-04-24",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.4.6",
+          "date": "2016-06-05",
+          "link": "https://github.com/emberjs/ember.js/releases/tag/v2.4.6"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/emberjs/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-17T00:08:37+00:00"
+  }
+}

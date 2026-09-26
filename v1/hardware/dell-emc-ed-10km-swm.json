@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-ed-10km-swm",
+  "name": "ED-10KM-SWM",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Connectrix - McData",
+  "family": "Connectrix - McData",
+  "model_number": "ED-10KM-SWM",
+  "milestones": {
+    "ga": "2005-05-01",
+    "eos": "2008-07-31",
+    "eossec": null,
+    "eol": "2013-07-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "ED-10KM-SWM",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "ED-10KM-SWM",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Connectrix - McData",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2008-07-31",
+      "datetime": null,
+      "value": "2008-07-31",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "May. 01, 2005",
+      "datetime": "2005-05-01",
+      "value": "2005-05-01",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2013-07-31",
+      "datetime": null,
+      "value": "2013-07-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/san-switches/vendor/dell-emc/connectrix-mcdata/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

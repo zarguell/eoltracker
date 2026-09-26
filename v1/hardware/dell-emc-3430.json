@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-3430",
+  "name": "3430",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Symmetrix",
+  "family": "Symmetrix",
+  "model_number": "3430",
+  "milestones": {
+    "ga": "1997-02-01",
+    "eos": "2002-07-31",
+    "eossec": null,
+    "eol": "2011-03-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "3430",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "3430",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Symmetrix",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2002-07-31",
+      "datetime": null,
+      "value": "2002-07-31",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Feb. 01, 1997",
+      "datetime": "1997-02-01",
+      "value": "1997-02-01",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2011-03-31",
+      "datetime": null,
+      "value": "2011-03-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/san-storage/vendor/dell-emc/symmetrix/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

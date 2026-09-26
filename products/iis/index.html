@@ -1,0 +1,967 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Internet Information Services (IIS) lifecycle dates — EOL Tracker</title>
+<meta name="description" content="General availability, end-of-sale, security-support and end-of-life dates for every Internet Information Services (IIS) release, with raw source values and provenance.">
+<link rel="canonical" href="https://zarguell.github.io/eoltracker/products/iis/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EOL Tracker">
+<meta property="og:title" content="Internet Information Services (IIS) lifecycle dates — EOL Tracker">
+<meta property="og:description" content="General availability, end-of-sale, security-support and end-of-life dates for every Internet Information Services (IIS) release, with raw source values and provenance.">
+<meta property="og:url" content="https://zarguell.github.io/eoltracker/products/iis/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d1b2a'/%3E%3Cpath d='M7 20.5l5-6 4 4.5 4-6.5 5 8' fill='none' stroke='%234fd1c5' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/eoltracker/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="shell masthead-inner">
+    <a class="wordmark" href="/eoltracker/">EOL<span>Tracker</span></a>
+    <nav class="mainnav" aria-label="Primary">
+      <a href="/eoltracker/">Software</a>
+      <a href="/eoltracker/hardware/">Hardware</a>
+      <a href="/eoltracker/api/">API &amp; data</a>
+      <a href="/eoltracker/why/">Why EOL</a>
+      <a href="https://endoflife.date/" rel="noopener">endoflife.date</a>
+    </nav>
+    <p class="masthead-meta">542 products · 9171 releases · 7169 hardware records</p>
+  </div>
+</header>
+
+<main class="shell" id="main">
+<nav class="crumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/eoltracker/">Catalog</a></li>
+    <li aria-current="page">Internet Information Services (IIS)</li>
+  </ol>
+</nav>
+
+<section class="hero product-hero">
+  <p class="eyebrow">server-app · software · vendor collector</p>
+  <h1 class="page-title">Internet Information Services (IIS)</h1>
+  <p class="lead">
+    14 releases published by Microsoft IIS lifecycle from the vendor's
+    own lifecycle table, with each row's cells kept verbatim beneath the normalized dates. Identifier for this
+    record: <code>iis</code>.
+  </p>
+  <p class="hero-meta">
+    Verified Sep 23, 2026 at 17:39 UTC by <code>deterministic-microsoft-iis</code>.
+Source: Microsoft IIS lifecycle.    Upstream publishes no modification timestamp for this product.
+    Last catalog refresh <time datetime="2026-09-17T18:35:21Z">Sep 17, 2026 at 18:35 UTC</time>.
+  </p>
+  <p class="product-links">
+    <a class="button" href="/eoltracker/v1/products/iis.json">JSON record</a>
+    <a class="button" href="https://learn.microsoft.com/en-us/lifecycle/products/internet-information-services-iis" rel="noopener">Source: Microsoft Lifecycle: IIS</a>
+<a class="button" href="https://learn.microsoft.com/en-us/lifecycle/products/internet-information-services-iis" rel="noopener">html</a><a class="button" href="https://learn.microsoft.com/en-us/lifecycle/faq/fixed-policy" rel="noopener">releasePolicy</a>  </p>
+</section>
+
+<section class="panel" aria-labelledby="coverage-title">
+  <h2 class="panel-title" id="coverage-title">Data coverage</h2>
+  <p class="panel-note">
+    Upstream does not publish every milestone for every release. Empty cells are unknown dates, not implied support;
+    any calculated date is labeled derived and carries its rule above.
+  </p>
+  <ul class="bars">
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">General availability</span>
+        <span class="bar-value">0 / 14 releases (0%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="General availability: 0 of 14 releases have a published date">
+        <div class="bar-fill" style="width: 0%"></div>
+      </div>
+    </li>
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">End of sale</span>
+        <span class="bar-value">0 / 14 releases (0%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="End of sale: 0 of 14 releases have a published date">
+        <div class="bar-fill" style="width: 0%"></div>
+      </div>
+    </li>
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">End of security support</span>
+        <span class="bar-value">0 / 14 releases (0%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="End of security support: 0 of 14 releases have a published date">
+        <div class="bar-fill" style="width: 0%"></div>
+      </div>
+    </li>
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">End of life</span>
+        <span class="bar-value">13 / 14 releases (93%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="End of life: 13 of 14 releases have a published date">
+        <div class="bar-fill" style="width: 93%"></div>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section class="panel" aria-labelledby="legend-title">
+  <h2 class="panel-title" id="legend-title">How to read these dates</h2>
+  <p class="panel-note">
+    The milestone meanings below are the catalog's shared vocabulary. The endoflife.date label rules do not apply to
+    this record: dates are either mapped from the vendor's own cells or derived from an explicit vendor rule. Every
+    source row and every derivation input is retained for review.
+  </p>
+  <dl class="legend">
+    <div class="legend-row">
+      <dt>General availability</dt>
+      <dd>
+        <p>First public release. Taken from the upstream releaseDate.</p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>End of sale</dt>
+      <dd>
+        <p>Last day new licenses or units are sold. Only mapped from an upstream field whose label names an end of sale.</p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>End of security support</dt>
+      <dd>
+        <p>Last day security fixes are published. Mapped from eolFrom or eoesFrom only when the label names security support.</p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>End of life</dt>
+      <dd>
+        <p>End of all support. A published extended-support date wins; otherwise eolFrom when its label describes a full support end.</p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>Blank date</dt>
+      <dd><p>The source publishes no value for that milestone. A missing date is an absent announcement, not a claim that support ends or continues.</p></dd>
+    </div>
+    <div class="legend-row">
+      <dt>Derived date</dt>
+      <dd><p>A date marked <span class="tag tag-derived">derived</span> is computed from a rule the vendor states — an explicit duration, a release trigger, or a parent platform's lifecycle — applied to a published base date, never from release cadence. The method, base date, quote and source are printed in the <a href="#derived-title">derived dates</a> block, so the date can be recomputed. It is excluded from the upcoming-deadlines list, the day-precision feeds and the OpenEoX export, each with its reason published.</p></dd>
+    </div>
+  </dl>
+</section>
+
+<section class="panel derived-panel" aria-labelledby="derived-title">
+  <h2 class="panel-title" id="derived-title">Derived dates</h2>
+  <p class="panel-note">
+    These milestones are not dates the vendor states. Each one is computed from a rule the vendor
+    <em>does</em> state — an explicit support duration, the release that ends the line, or a parent
+    platform whose lifecycle this product follows — applied to a base date that is also published.
+    The base, the rule and the sentence it came from are quoted below, so every date here can be
+    recomputed and checked rather than taken on trust. They are labelled <span class="tag tag-derived">derived</span>
+    everywhere they appear, they are kept out of the upcoming-deadlines list above, and they are
+    excluded from the day-precision feeds and the OpenEoX export, both of which carry only days a
+    source states.
+  </p>
+  <ul class="derived-list">
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">Web Server (IIS) on Windows Server 2025</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2034-11-14">Nov 14, 2034</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>support-inheritance</code> — the vendor states that this component follows its parent&#39;s lifecycle.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2034-11-14">Nov 14, 2034</time> — Windows Server 2025 Extended End Date.</dd></div>
+        <div><dt>Calculation</dt><dd>the parent&#39;s eol of 2034-11-14.</dd></div>
+        <div><dt>Parent</dt><dd>Windows Server 2025 (<code>windows-server/2025</code>), whose eol of <time datetime="2034-11-14">2034-11-14</time> this record follows.
+          <a href="https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2025" rel="noopener">parent source</a></dd></div>
+        <div><dt>Source</dt><dd><a href="https://learn.microsoft.com/en-us/lifecycle/faq/fixed-policy" rel="noopener">Microsoft Fixed Lifecycle Policy: component support</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://learn.microsoft.com/en-us/lifecycle/faq/fixed-policy">
+        <p>A component receives the same support as its parent product or platform. When a parent product or platform is in Mainstream, or Extended Support, so is the component. When a parent product or platform reaches the end of support, so does the component.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://learn.microsoft.com/en-us/lifecycle/faq/fixed-policy" rel="noopener">Microsoft Fixed Lifecycle Policy: component support</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">IIS 10 on Windows Server 2022</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2031-10-14">Oct 14, 2031</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>support-inheritance</code> — the vendor states that this component follows its parent&#39;s lifecycle.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2031-10-14">Oct 14, 2031</time> — Windows Server 2022 Extended End Date.</dd></div>
+        <div><dt>Calculation</dt><dd>the parent&#39;s eol of 2031-10-14.</dd></div>
+        <div><dt>Parent</dt><dd>Windows Server 2022 (<code>windows-server/2022</code>), whose eol of <time datetime="2031-10-14">2031-10-14</time> this record follows.
+          <a href="https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2022" rel="noopener">parent source</a></dd></div>
+        <div><dt>Source</dt><dd><a href="https://learn.microsoft.com/en-us/lifecycle/faq/fixed-policy" rel="noopener">Microsoft Fixed Lifecycle Policy: component support</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://learn.microsoft.com/en-us/lifecycle/faq/fixed-policy">
+        <p>A component receives the same support as its parent product or platform. When a parent product or platform is in Mainstream, or Extended Support, so is the component. When a parent product or platform reaches the end of support, so does the component.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://learn.microsoft.com/en-us/lifecycle/faq/fixed-policy" rel="noopener">Microsoft Fixed Lifecycle Policy: component support</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">IIS 10 on Windows 10 Pro</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2025-10-14">Oct 14, 2025</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>support-inheritance</code> — the vendor states that this component follows its parent&#39;s lifecycle.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2025-10-14">Oct 14, 2025</time> — Windows 10 Home and Pro Retirement Date.</dd></div>
+        <div><dt>Calculation</dt><dd>the parent&#39;s eol of 2025-10-14.</dd></div>
+        <div><dt>Parent</dt><dd>Windows 10 Home and Pro (<code>windows-10-home-and-pro/windows-10-home-and-pro</code>), whose eol of <time datetime="2025-10-14">2025-10-14</time> this record follows.
+          <a href="https://learn.microsoft.com/en-us/lifecycle/products/windows-10-home-and-pro" rel="noopener">parent source</a></dd></div>
+        <div><dt>Source</dt><dd><a href="https://learn.microsoft.com/en-us/lifecycle/products/internet-information-services-iis" rel="noopener">Microsoft Lifecycle: IIS</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://learn.microsoft.com/en-us/lifecycle/products/internet-information-services-iis">
+        <p>Internet Information Services (IIS) is a component of the Windows operating system and follows the same lifecycle.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://learn.microsoft.com/en-us/lifecycle/products/internet-information-services-iis" rel="noopener">Microsoft Lifecycle: IIS</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">IIS 10 on Windows 10, Enterprise and Education</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2025-10-14">Oct 14, 2025</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>support-inheritance</code> — the vendor states that this component follows its parent&#39;s lifecycle.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2025-10-14">Oct 14, 2025</time> — Windows 10 Enterprise and Education Retirement Date.</dd></div>
+        <div><dt>Calculation</dt><dd>the parent&#39;s eol of 2025-10-14.</dd></div>
+        <div><dt>Parent</dt><dd>Windows 10 Enterprise and Education (<code>windows-10-enterprise-and-education/windows-10-enterprise-and-education</code>), whose eol of <time datetime="2025-10-14">2025-10-14</time> this record follows.
+          <a href="https://learn.microsoft.com/en-us/lifecycle/products/windows-10-enterprise-and-education" rel="noopener">parent source</a></dd></div>
+        <div><dt>Source</dt><dd><a href="https://learn.microsoft.com/en-us/lifecycle/products/internet-information-services-iis" rel="noopener">Microsoft Lifecycle: IIS</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://learn.microsoft.com/en-us/lifecycle/products/internet-information-services-iis">
+        <p>Internet Information Services (IIS) is a component of the Windows operating system and follows the same lifecycle.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://learn.microsoft.com/en-us/lifecycle/products/internet-information-services-iis" rel="noopener">Microsoft Lifecycle: IIS</a></footer>
+      </blockquote>
+    </li>
+  </ul>
+</section>
+
+<section class="panel" aria-labelledby="next-title">
+  <h2 class="panel-title" id="next-title">Upcoming published deadlines</h2>
+  <ul class="events">
+    <li>
+      <span class="event-release">IIS 10 on Windows Server 2016</span>
+      <span class="event-milestone">End of life</span>
+      <span class="event-date"><time datetime="2027-01-12">Jan 12, 2027</time>        <span class="event-days">in 117 days</span></span>
+    </li>
+    <li>
+      <span class="event-release">IIS 10 on Windows Server 2019</span>
+      <span class="event-milestone">End of life</span>
+      <span class="event-date"><time datetime="2029-01-09">Jan 9, 2029</time>        <span class="event-days">in 845 days</span></span>
+    </li>
+  </ul>
+</section>
+
+<section class="releases" aria-labelledby="releases-title">
+  <div class="catalog-head">
+    <h2 class="panel-title" id="releases-title">Release lifecycle</h2>
+    <p class="catalog-count">14 releases</p>
+  </div>
+  <p class="panel-note">
+    Newest first. Cells show normalized dates; a secondary line shows the raw upstream field and label when the
+    normalized date differs from, or is absent despite, a published value.
+  </p>
+
+  <div class="table-scroll">
+    <table class="release-table">
+      <caption class="sr-only">Lifecycle dates for each Internet Information Services (IIS) release</caption>
+      <thead>
+        <tr>
+          <th scope="col">Release</th>
+          <th scope="col">General availability</th>
+          <th scope="col">End of sale</th>
+          <th scope="col">End of security support</th>
+          <th scope="col">End of life</th>
+          <th scope="col">Upstream status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Web Server (IIS) on Windows Server 2025</span>
+<code class="release-raw">web-server-iis-windows-server-2025</code>          </th>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2034-11-14">Nov 14, 2034</time><span class="tag tag-derived" title="the vendor states that this component follows its parent&#39;s lifecycle; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">Web Server (IIS) on Windows Server 2025</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">IIS 10 on Windows Server (Semi-Annual Channel)</span>
+<code class="release-raw">iis-10-windows-server-semi-annual-channel</code>          </th>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag">IIS 10 on Windows Server (Semi-Annual Channel)</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">IIS 10 on Windows Server 2022</span>
+<code class="release-raw">iis-10-windows-server-2022</code>          </th>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2031-10-14">Oct 14, 2031</time><span class="tag tag-derived" title="the vendor states that this component follows its parent&#39;s lifecycle; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">IIS 10 on Windows Server 2022</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">IIS 10 on Windows Server 2019</span>
+<code class="release-raw">iis-10-windows-server-2019</code>          </th>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2029-01-09">Jan 9, 2029</time>          </td>
+          <td class="upstream-status">
+<span class="tag">IIS 10 on Windows Server 2019</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">IIS 10 on Windows Server 2016</span>
+<code class="release-raw">iis-10-windows-server-2016</code>          </th>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2027-01-12">Jan 12, 2027</time>          </td>
+          <td class="upstream-status">
+<span class="tag">IIS 10 on Windows Server 2016</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">IIS 10 on Windows 10 Pro</span>
+<code class="release-raw">iis-10-windows-10-pro</code>          </th>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2025-10-14">Oct 14, 2025</time><span class="tag tag-derived" title="the vendor states that this component follows its parent&#39;s lifecycle; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">IIS 10 on Windows 10 Pro</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">IIS 10 on Windows 10, Enterprise and Education</span>
+<code class="release-raw">iis-10-windows-10-enterprise-and-education</code>          </th>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2025-10-14">Oct 14, 2025</time><span class="tag tag-derived" title="the vendor states that this component follows its parent&#39;s lifecycle; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">IIS 10 on Windows 10, Enterprise and Education</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">IIS 8 on Windows Server 2012</span>
+<code class="release-raw">iis-8-windows-server-2012</code>          </th>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2023-10-10">Oct 10, 2023</time>          </td>
+          <td class="upstream-status">
+<span class="tag">IIS 8 on Windows Server 2012</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">IIS 8.5 on Windows Server 2012 R2</span>
+<code class="release-raw">iis-8-5-windows-server-2012-r2</code>          </th>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2023-10-10">Oct 10, 2023</time>          </td>
+          <td class="upstream-status">
+<span class="tag">IIS 8.5 on Windows Server 2012 R2</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">IIS 8.5 on Windows 8.1</span>
+<code class="release-raw">iis-8-5-windows-8-1</code>          </th>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2023-01-10">Jan 10, 2023</time>          </td>
+          <td class="upstream-status">
+<span class="tag">IIS 8.5 on Windows 8.1</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">IIS 7.5 on Windows Server 2008 R2</span>
+<code class="release-raw">iis-7-5-windows-server-2008-r2</code>          </th>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2020-01-14">Jan 14, 2020</time>          </td>
+          <td class="upstream-status">
+<span class="tag">IIS 7.5 on Windows Server 2008 R2*</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">IIS 7.5 on Windows 7</span>
+<code class="release-raw">iis-7-5-windows-7</code>          </th>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2020-01-14">Jan 14, 2020</time>          </td>
+          <td class="upstream-status">
+<span class="tag">IIS 7.5 on Windows 7*</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">IIS 7.0 on Windows Server 2008</span>
+<code class="release-raw">iis-7-0-windows-server-2008</code>          </th>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2020-01-14">Jan 14, 2020</time>          </td>
+          <td class="upstream-status">
+<span class="tag">IIS 7.0 on Windows Server 2008*</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">IIS 6.0 on Windows Server 2003</span>
+<code class="release-raw">iis-6-0-windows-server-2003</code>          </th>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2015-07-14">Jul 14, 2015</time>          </td>
+          <td class="upstream-status">
+<span class="tag">IIS 6.0 on Windows Server 2003</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="panel" aria-labelledby="source-title">
+  <h2 class="panel-title" id="source-title">Source and upstream values</h2>
+  <p class="panel-note">
+    This record is a normalization of vendor-published lifecycle data, read by
+    Microsoft IIS lifecycle. Direct mappings use the vendor's own cells; derived dates use an
+    explicit vendor duration, trigger, or parent-support rule and retain every input. The endoflife.date label rules
+    and license do not apply.
+  </p>
+  <dl class="facts">
+    <div><dt>Upstream record</dt><dd><a href="https://learn.microsoft.com/en-us/lifecycle/products/internet-information-services-iis" rel="noopener">https://learn.microsoft.com/en-us/lifecycle/products/internet-information-services-iis</a></dd></div>
+    <div><dt>Source attribution</dt><dd>Microsoft IIS lifecycle dates published directly by Microsoft; omitted platform scopes inherit only the explicitly named parent platform&#39;s terminal support date, with the rule and parent retained as provenance.</dd></div>
+    <div><dt>Verifier</dt><dd><code>deterministic-microsoft-iis</code></dd></div>
+    <div><dt>Last checked</dt><dd>Sep 23, 2026 at 17:39 UTC</dd></div>
+    <div><dt>Upstream modified</dt><dd>not published upstream</dd></div>
+    <div><dt>JSON record</dt><dd><a href="https://zarguell.github.io/eoltracker/v1/products/iis.json">https://zarguell.github.io/eoltracker/v1/products/iis.json</a></dd></div>
+    <div><dt>Schema</dt><dd><a href="https://zarguell.github.io/eoltracker/v1/schema/product.json">v1/schema/product.json</a></dd></div>
+  </dl>
+
+
+  <h3 class="sub-title">Upstream label semantics</h3>
+  <p class="panel-note">
+    endoflife.date labels decide which raw date fields become which normalized milestone. These are this product's
+    label texts and the rule each one triggers.
+  </p>
+  <dl class="label-rules">
+    <div>
+      <dt><code>eoas</code> = not set</dt>
+      <dd>End-of-sale date when the text names an end of sale.</dd>
+    </div>
+    <div>
+      <dt><code>discontinued</code> = not set</dt>
+      <dd>End-of-sale date when the text names an end of sale; otherwise recorded only, never turned into a date.</dd>
+    </div>
+    <div>
+      <dt><code>eol</code> = “End Date”</dt>
+      <dd>End of security support when the text names security support; end of life only when no extended-support label is set and the text describes a full support end.</dd>
+    </div>
+    <div>
+      <dt><code>eoes</code> = not set</dt>
+      <dd>Extended support. A published date also sets end of life, and a security-support text supersedes end of security support.</dd>
+    </div>
+  </dl>
+
+  <h3 class="sub-title">Vendor row cells</h3>
+  <p class="panel-note">
+    The vendor's own columns, as the source publishes them. A normalized milestone is mapped directly from these
+    cells or derived under the explicit rule shown above; no value is inferred from cadence or silence.
+  </p>
+  <div class="table-scroll">
+    <table class="release-table">
+      <thead>
+        <tr>
+          <th scope="col">Release</th>
+<th scope="col">Listing</th><th scope="col">Start Date</th><th scope="col">Mainstream End Date</th><th scope="col">Extended End Date</th>        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">Web Server (IIS) on Windows Server 2025</span></th>
+<td>Windows Server 2025</td><td>11/1/2024 8:00:00 AM</td><td>11/14/2029 6:59:59 AM</td><td>11/15/2034 6:59:59 AM</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">IIS 10 on Windows Server (Semi-Annual Channel)</span></th>
+<td>IIS 10 on Windows Server (Semi-Annual Channel)</td><td>10/17/2017 8:00:00 AM</td><td></td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">IIS 10 on Windows Server 2022</span></th>
+<td>Windows Server 2022</td><td>8/18/2021 8:00:00 AM</td><td>10/14/2026 6:59:59 AM</td><td>10/15/2031 6:59:59 AM</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">IIS 10 on Windows Server 2019</span></th>
+<td>IIS 10 on Windows Server 2019</td><td>11/13/2018 8:00:00 AM</td><td>1/10/2029 6:59:59 AM</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">IIS 10 on Windows Server 2016</span></th>
+<td>IIS 10 on Windows Server 2016</td><td>10/15/2016 8:00:00 AM</td><td>1/13/2027 6:59:59 AM</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">IIS 10 on Windows 10 Pro</span></th>
+<td>IIS 10 on Windows 10 Pro</td><td>7/29/2015 8:00:00 AM</td><td></td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">IIS 10 on Windows 10, Enterprise and Education</span></th>
+<td>IIS 10 on Windows 10, Enterprise and Education</td><td>7/29/2015 8:00:00 AM</td><td></td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">IIS 8 on Windows Server 2012</span></th>
+<td>IIS 8 on Windows Server 2012</td><td>10/30/2012 8:00:00 AM</td><td>10/11/2023 6:59:59 AM</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">IIS 8.5 on Windows Server 2012 R2</span></th>
+<td>IIS 8.5 on Windows Server 2012 R2</td><td>11/25/2013 8:00:00 AM</td><td>10/11/2023 6:59:59 AM</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">IIS 8.5 on Windows 8.1</span></th>
+<td>IIS 8.5 on Windows 8.1</td><td>11/13/2013 8:00:00 AM</td><td>1/11/2023 6:59:59 AM</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">IIS 7.5 on Windows Server 2008 R2</span></th>
+<td>IIS 7.5 on Windows Server 2008 R2*</td><td>10/22/2009 8:00:00 AM</td><td>1/15/2020 6:59:59 AM</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">IIS 7.5 on Windows 7</span></th>
+<td>IIS 7.5 on Windows 7*</td><td>10/22/2009 8:00:00 AM</td><td>1/15/2020 6:59:59 AM</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">IIS 7.0 on Windows Server 2008</span></th>
+<td>IIS 7.0 on Windows Server 2008*</td><td>5/6/2008 8:00:00 AM</td><td>1/15/2020 6:59:59 AM</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">IIS 6.0 on Windows Server 2003</span></th>
+<td>IIS 6.0 on Windows Server 2003</td><td>5/28/2003 8:00:00 AM</td><td>7/15/2015 6:59:59 AM</td>        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <details class="raw">
+    <summary>Raw upstream release objects (14)</summary>
+    <p class="panel-note">Verbatim <code>releases[]</code> entries: each release's stored <code>upstream</code> object, including the vendor's own row cells, unmodified.</p>
+    <details class="raw-release">
+      <summary><code>web-server-iis-windows-server-2025</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;Extended End Date&#34;: &#34;11/15/2034 6:59:59 AM&#34;,
+    &#34;Listing&#34;: &#34;Windows Server 2025&#34;,
+    &#34;Mainstream End Date&#34;: &#34;11/14/2029 6:59:59 AM&#34;,
+    &#34;Start Date&#34;: &#34;11/1/2024 8:00:00 AM&#34;
+  },
+  &#34;name&#34;: &#34;Web Server (IIS) on Windows Server 2025&#34;,
+  &#34;parent&#34;: {
+    &#34;cells&#34;: {
+      &#34;Extended End Date&#34;: &#34;11/15/2034 6:59:59 AM&#34;,
+      &#34;Listing&#34;: &#34;Windows Server 2025&#34;,
+      &#34;Mainstream End Date&#34;: &#34;11/14/2029 6:59:59 AM&#34;,
+      &#34;Start Date&#34;: &#34;11/1/2024 8:00:00 AM&#34;
+    },
+    &#34;end_cell&#34;: &#34;11/15/2034 6:59:59 AM&#34;,
+    &#34;end_column&#34;: &#34;Extended End Date&#34;,
+    &#34;listing&#34;: &#34;Windows Server 2025&#34;,
+    &#34;milestone&#34;: &#34;eol&#34;,
+    &#34;page&#34;: &#34;https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2025&#34;,
+    &#34;policy&#34;: &#34;Fixed Lifecycle Policy&#34;
+  },
+  &#34;scope&#34;: {
+    &#34;label&#34;: &#34;Web Server (IIS) role on Windows Server 2025&#34;,
+    &#34;page&#34;: &#34;https://learn.microsoft.com/en-us/powershell/module/servermanager/install-windowsfeature?view=windowsserver2025-ps&#34;,
+    &#34;quote&#34;: &#34;This example shows what is installed with Web Server (IIS), including all role services, on a computer named Server1.&#34;
+  },
+  &#34;table&#34;: &#34;Support Dates&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>iis-10-windows-server-semi-annual-channel</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;End Date&#34;: &#34;&#34;,
+    &#34;Start Date&#34;: &#34;10/17/2017 8:00:00 AM&#34;,
+    &#34;Version&#34;: &#34;IIS 10 on Windows Server (Semi-Annual Channel)&#34;
+  },
+  &#34;name&#34;: &#34;IIS 10 on Windows Server (Semi-Annual Channel)&#34;,
+  &#34;table&#34;: &#34;Releases&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>iis-10-windows-server-2022</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;Extended End Date&#34;: &#34;10/15/2031 6:59:59 AM&#34;,
+    &#34;Listing&#34;: &#34;Windows Server 2022&#34;,
+    &#34;Mainstream End Date&#34;: &#34;10/14/2026 6:59:59 AM&#34;,
+    &#34;Start Date&#34;: &#34;8/18/2021 8:00:00 AM&#34;
+  },
+  &#34;name&#34;: &#34;IIS 10 on Windows Server 2022&#34;,
+  &#34;parent&#34;: {
+    &#34;cells&#34;: {
+      &#34;Extended End Date&#34;: &#34;10/15/2031 6:59:59 AM&#34;,
+      &#34;Listing&#34;: &#34;Windows Server 2022&#34;,
+      &#34;Mainstream End Date&#34;: &#34;10/14/2026 6:59:59 AM&#34;,
+      &#34;Start Date&#34;: &#34;8/18/2021 8:00:00 AM&#34;
+    },
+    &#34;end_cell&#34;: &#34;10/15/2031 6:59:59 AM&#34;,
+    &#34;end_column&#34;: &#34;Extended End Date&#34;,
+    &#34;listing&#34;: &#34;Windows Server 2022&#34;,
+    &#34;milestone&#34;: &#34;eol&#34;,
+    &#34;page&#34;: &#34;https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2022&#34;,
+    &#34;policy&#34;: &#34;Fixed Lifecycle Policy&#34;
+  },
+  &#34;scope&#34;: {
+    &#34;label&#34;: &#34;IIS 10.0 on Windows Server 2022&#34;,
+    &#34;page&#34;: &#34;https://learn.microsoft.com/en-us/windows-server/administration/performance-tuning/role/web-server/tuning-iis-10&#34;,
+    &#34;quote&#34;: &#34;Internet Information Services (IIS) 10.0 is included with Windows Server 2022.&#34;
+  },
+  &#34;table&#34;: &#34;Support Dates&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>iis-10-windows-server-2019</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;End Date&#34;: &#34;1/10/2029 6:59:59 AM&#34;,
+    &#34;Start Date&#34;: &#34;11/13/2018 8:00:00 AM&#34;,
+    &#34;Version&#34;: &#34;IIS 10 on Windows Server 2019&#34;
+  },
+  &#34;name&#34;: &#34;IIS 10 on Windows Server 2019&#34;,
+  &#34;table&#34;: &#34;Releases&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>iis-10-windows-server-2016</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;End Date&#34;: &#34;1/13/2027 6:59:59 AM&#34;,
+    &#34;Start Date&#34;: &#34;10/15/2016 8:00:00 AM&#34;,
+    &#34;Version&#34;: &#34;IIS 10 on Windows Server 2016&#34;
+  },
+  &#34;name&#34;: &#34;IIS 10 on Windows Server 2016&#34;,
+  &#34;table&#34;: &#34;Releases&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>iis-10-windows-10-pro</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;End Date&#34;: &#34;&#34;,
+    &#34;Start Date&#34;: &#34;7/29/2015 8:00:00 AM&#34;,
+    &#34;Version&#34;: &#34;IIS 10 on Windows 10 Pro&#34;
+  },
+  &#34;name&#34;: &#34;IIS 10 on Windows 10 Pro&#34;,
+  &#34;parent&#34;: {
+    &#34;cells&#34;: {
+      &#34;Listing&#34;: &#34;Windows 10 Home and Pro&#34;,
+      &#34;Retirement Date&#34;: &#34;10/15/2025 6:59:59 AM&#34;,
+      &#34;Start Date&#34;: &#34;7/29/2015 8:00:00 AM&#34;
+    },
+    &#34;end_cell&#34;: &#34;10/15/2025 6:59:59 AM&#34;,
+    &#34;end_column&#34;: &#34;Retirement Date&#34;,
+    &#34;listing&#34;: &#34;Windows 10 Home and Pro&#34;,
+    &#34;milestone&#34;: &#34;eol&#34;,
+    &#34;page&#34;: &#34;https://learn.microsoft.com/en-us/lifecycle/products/windows-10-home-and-pro&#34;,
+    &#34;policy&#34;: &#34;Modern Lifecycle Policy&#34;
+  },
+  &#34;scope&#34;: {
+    &#34;label&#34;: &#34;Microsoft Lifecycle: IIS&#34;,
+    &#34;page&#34;: &#34;https://learn.microsoft.com/en-us/lifecycle/products/internet-information-services-iis&#34;,
+    &#34;quote&#34;: &#34;Internet Information Services (IIS) is a component of the Windows operating system and follows the same lifecycle.&#34;
+  },
+  &#34;table&#34;: &#34;Releases&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>iis-10-windows-10-enterprise-and-education</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;End Date&#34;: &#34;&#34;,
+    &#34;Start Date&#34;: &#34;7/29/2015 8:00:00 AM&#34;,
+    &#34;Version&#34;: &#34;IIS 10 on Windows 10, Enterprise and Education&#34;
+  },
+  &#34;name&#34;: &#34;IIS 10 on Windows 10, Enterprise and Education&#34;,
+  &#34;parent&#34;: {
+    &#34;cells&#34;: {
+      &#34;Listing&#34;: &#34;Windows 10 Enterprise and Education&#34;,
+      &#34;Retirement Date&#34;: &#34;10/15/2025 6:59:59 AM&#34;,
+      &#34;Start Date&#34;: &#34;7/29/2015 8:00:00 AM&#34;
+    },
+    &#34;end_cell&#34;: &#34;10/15/2025 6:59:59 AM&#34;,
+    &#34;end_column&#34;: &#34;Retirement Date&#34;,
+    &#34;listing&#34;: &#34;Windows 10 Enterprise and Education&#34;,
+    &#34;milestone&#34;: &#34;eol&#34;,
+    &#34;page&#34;: &#34;https://learn.microsoft.com/en-us/lifecycle/products/windows-10-enterprise-and-education&#34;,
+    &#34;policy&#34;: &#34;Modern Lifecycle Policy&#34;
+  },
+  &#34;scope&#34;: {
+    &#34;label&#34;: &#34;Microsoft Lifecycle: IIS&#34;,
+    &#34;page&#34;: &#34;https://learn.microsoft.com/en-us/lifecycle/products/internet-information-services-iis&#34;,
+    &#34;quote&#34;: &#34;Internet Information Services (IIS) is a component of the Windows operating system and follows the same lifecycle.&#34;
+  },
+  &#34;table&#34;: &#34;Releases&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>iis-8-windows-server-2012</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;End Date&#34;: &#34;10/11/2023 6:59:59 AM&#34;,
+    &#34;Start Date&#34;: &#34;10/30/2012 8:00:00 AM&#34;,
+    &#34;Version&#34;: &#34;IIS 8 on Windows Server 2012&#34;
+  },
+  &#34;name&#34;: &#34;IIS 8 on Windows Server 2012&#34;,
+  &#34;table&#34;: &#34;Releases&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>iis-8-5-windows-server-2012-r2</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;End Date&#34;: &#34;10/11/2023 6:59:59 AM&#34;,
+    &#34;Start Date&#34;: &#34;11/25/2013 8:00:00 AM&#34;,
+    &#34;Version&#34;: &#34;IIS 8.5 on Windows Server 2012 R2&#34;
+  },
+  &#34;name&#34;: &#34;IIS 8.5 on Windows Server 2012 R2&#34;,
+  &#34;table&#34;: &#34;Releases&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>iis-8-5-windows-8-1</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;End Date&#34;: &#34;1/11/2023 6:59:59 AM&#34;,
+    &#34;Start Date&#34;: &#34;11/13/2013 8:00:00 AM&#34;,
+    &#34;Version&#34;: &#34;IIS 8.5 on Windows 8.1&#34;
+  },
+  &#34;name&#34;: &#34;IIS 8.5 on Windows 8.1&#34;,
+  &#34;table&#34;: &#34;Releases&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>iis-7-5-windows-server-2008-r2</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;End Date&#34;: &#34;1/15/2020 6:59:59 AM&#34;,
+    &#34;Start Date&#34;: &#34;10/22/2009 8:00:00 AM&#34;,
+    &#34;Version&#34;: &#34;IIS 7.5 on Windows Server 2008 R2*&#34;
+  },
+  &#34;name&#34;: &#34;IIS 7.5 on Windows Server 2008 R2*&#34;,
+  &#34;table&#34;: &#34;Releases&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>iis-7-5-windows-7</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;End Date&#34;: &#34;1/15/2020 6:59:59 AM&#34;,
+    &#34;Start Date&#34;: &#34;10/22/2009 8:00:00 AM&#34;,
+    &#34;Version&#34;: &#34;IIS 7.5 on Windows 7*&#34;
+  },
+  &#34;name&#34;: &#34;IIS 7.5 on Windows 7*&#34;,
+  &#34;table&#34;: &#34;Releases&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>iis-7-0-windows-server-2008</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;End Date&#34;: &#34;1/15/2020 6:59:59 AM&#34;,
+    &#34;Start Date&#34;: &#34;5/6/2008 8:00:00 AM&#34;,
+    &#34;Version&#34;: &#34;IIS 7.0 on Windows Server 2008*&#34;
+  },
+  &#34;name&#34;: &#34;IIS 7.0 on Windows Server 2008*&#34;,
+  &#34;table&#34;: &#34;Releases&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>iis-6-0-windows-server-2003</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;End Date&#34;: &#34;7/15/2015 6:59:59 AM&#34;,
+    &#34;Start Date&#34;: &#34;5/28/2003 8:00:00 AM&#34;,
+    &#34;Version&#34;: &#34;IIS 6.0 on Windows Server 2003&#34;
+  },
+  &#34;name&#34;: &#34;IIS 6.0 on Windows Server 2003&#34;,
+  &#34;table&#34;: &#34;Releases&#34;
+}</code></pre>
+    </details>
+  </details>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="shell footer-inner">
+    <div class="footer-col">
+      <p class="footer-title">EOL Tracker</p>
+      <p class="footer-note">
+        Software lifecycle dates are republished from the
+        <a href="https://endoflife.date/" rel="noopener">endoflife.date</a> community catalog and vendor-specific public
+        lifecycle sources. Each record names its source; community-catalog data is licensed
+        <a href="https://github.com/endoflife-date/endoflife.date/blob/master/LICENSE" rel="noopener">MIT</a>.
+      </p>
+      <p class="footer-note">
+        Hardware lifecycle data comes from
+        <a href="https://eosl.date/" rel="noopener">eosl.date</a> by Subash Geetha Krishnan,
+        which aggregates public vendor announcements, and from
+        <a href="https://opengear.com/end-life-products" rel="noopener">Opengear's end-of-life product list</a>.
+        Attribution here is credit by name and link, not a licence to the source material: nothing is reproduced as
+        licensed material. This catalog is an independent normalization, not affiliated with endoflife.date, eosl.date,
+        Opengear or any vendor listed here.
+      </p>
+      <p class="footer-note">
+        Last catalog refresh Sep 17, 2026 at 18:35 UTC.
+      </p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-title">Data</p>
+      <ul class="footer-links">
+        <li><a href="/eoltracker/v1/feed.json">Feed (JSON)</a></li>
+        <li><a href="/eoltracker/v1/feed.atom">Deadlines (Atom)</a></li>
+        <li><a href="/eoltracker/v1/calendar.ics">Deadlines (iCal)</a></li>
+        <li><a href="/eoltracker/v1/products.json">Product summaries</a></li>
+        <li><a href="/eoltracker/v1/hardware.json">Hardware summaries</a></li>
+        <li><a href="/eoltracker/v1/changes.atom">Changes (Atom)</a></li>
+        <li><a href="/eoltracker/v1/changes.json">Changes (JSON)</a></li>
+        <li><a href="/eoltracker/hardware/">Hardware catalog</a></li>
+        <li><a href="/eoltracker/api/">Endpoints &amp; mapping</a></li>
+        <li><a href="/eoltracker/v1/schema/product.json">Record schema</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <p class="footer-title">Project</p>
+      <ul class="footer-links">
+        <li><a href="https://github.com/zarguell/eoltracker" rel="noopener">Source on GitHub</a></li>
+        <li><a href="https://endoflife.date/" rel="noopener">Upstream source</a></li>
+        <li><a href="/eoltracker/THIRD-PARTY-NOTICES.txt">THIRD-PARTY-NOTICES.txt</a></li>
+        <li><a href="/eoltracker/OASIS-NOTICE.txt">OASIS-NOTICE.txt</a></li>
+        <li><a href="/eoltracker/404.html">Not found page</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script src="/eoltracker/app.js" defer></script>
+</body>
+</html>

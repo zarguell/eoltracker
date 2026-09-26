@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-505-data-mover",
+  "name": "505 Data Mover",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Celerra File Server",
+  "family": "Celerra File Server",
+  "model_number": "505 Data Mover",
+  "milestones": {
+    "ga": "1990-01-05",
+    "eos": "1999-08-30",
+    "eossec": null,
+    "eol": "2004-10-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "505 Data Mover",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "505 Data Mover",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Celerra File Server",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "1999-08-30",
+      "datetime": null,
+      "value": "1999-08-30",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Jan. 05, 1990",
+      "datetime": "1990-01-05",
+      "value": "1990-01-05",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2004-10-31",
+      "datetime": null,
+      "value": "2004-10-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/nas-storage/vendor/dell-emc/celerra-file-server/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

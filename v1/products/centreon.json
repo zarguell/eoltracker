@@ -1,0 +1,438 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "centreon",
+  "name": "Centreon",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:centreon:centreon"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "OSS Support",
+    "eoes": "Commercial Support"
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/centreon",
+    "releasePolicy": "https://docs.centreon.com/docs/releases/lifecycle/"
+  },
+  "releases": [
+    {
+      "id": "25.10",
+      "name": "25.10",
+      "milestones": {
+        "ga": "2025-11-04",
+        "eos": null,
+        "eossec": null,
+        "eol": "2027-04-30"
+      },
+      "upstream": {
+        "name": "25.10",
+        "codename": null,
+        "label": "25.10",
+        "releaseDate": "2025-11-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-04-30",
+        "isEoes": false,
+        "eoesFrom": "2027-04-30",
+        "isMaintained": true,
+        "latest": {
+          "name": "25.10.17",
+          "date": "2026-09-02",
+          "link": "https://docs.centreon.com/docs/releases/centreon-os/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "24.10",
+      "name": "24.10",
+      "milestones": {
+        "ga": "2024-10-31",
+        "eos": null,
+        "eossec": null,
+        "eol": "2027-10-31"
+      },
+      "upstream": {
+        "name": "24.10",
+        "codename": null,
+        "label": "24.10",
+        "releaseDate": "2024-10-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-10-31",
+        "isEoes": false,
+        "eoesFrom": "2027-10-31",
+        "isMaintained": true,
+        "latest": {
+          "name": "24.10.30",
+          "date": "2026-09-03",
+          "link": "https://docs.centreon.com/docs/24.10/releases/centreon-os/#241030"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "24.04",
+      "name": "24.04",
+      "milestones": {
+        "ga": "2024-04-22",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-04-30"
+      },
+      "upstream": {
+        "name": "24.04",
+        "codename": null,
+        "label": "24.04",
+        "releaseDate": "2024-04-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-04-30",
+        "isEoes": true,
+        "eoesFrom": "2026-04-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "24.04.26",
+          "date": "2026-05-11",
+          "link": "https://docs.centreon.com/docs/24.04/releases/centreon-os/#240426"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "23.10",
+      "name": "23.10",
+      "milestones": {
+        "ga": "2023-10-30",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-10-31"
+      },
+      "upstream": {
+        "name": "23.10",
+        "codename": null,
+        "label": "23.10",
+        "releaseDate": "2023-10-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-10-31",
+        "isEoes": true,
+        "eoesFrom": "2025-10-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "23.10.29",
+          "date": "2025-11-17",
+          "link": "https://docs.centreon.com/docs/23.10/releases/centreon-os/#231029"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "23.04",
+      "name": "23.04",
+      "milestones": {
+        "ga": "2023-04-26",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-04-30"
+      },
+      "upstream": {
+        "name": "23.04",
+        "codename": null,
+        "label": "23.04",
+        "releaseDate": "2023-04-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-04-30",
+        "isEoes": true,
+        "eoesFrom": "2025-04-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "23.04.30",
+          "date": "2025-06-16",
+          "link": "https://docs.centreon.com/docs/23.04/releases/centreon-os/#230430"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "22.10",
+      "name": "22.10",
+      "milestones": {
+        "ga": "2022-10-26",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-10-31"
+      },
+      "upstream": {
+        "name": "22.10",
+        "codename": null,
+        "label": "22.10",
+        "releaseDate": "2022-10-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-10-31",
+        "isEoes": true,
+        "eoesFrom": "2024-10-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "22.10.31",
+          "date": "2025-07-24",
+          "link": "https://docs.centreon.com/docs/22.10/releases/centreon-os/#221031"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "22.04",
+      "name": "22.04",
+      "milestones": {
+        "ga": "2022-05-18",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-05-31"
+      },
+      "upstream": {
+        "name": "22.04",
+        "codename": null,
+        "label": "22.04",
+        "releaseDate": "2022-05-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-05-31",
+        "isEoes": true,
+        "eoesFrom": "2024-05-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "22.04.22",
+          "date": "2024-03-14",
+          "link": "https://docs.centreon.com/docs/22.04/releases/centreon-core/#220422"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "21.10",
+      "name": "21.10",
+      "milestones": {
+        "ga": "2021-11-02",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-11-30"
+      },
+      "upstream": {
+        "name": "21.10",
+        "codename": null,
+        "label": "21.10",
+        "releaseDate": "2021-11-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-11-30",
+        "isEoes": true,
+        "eoesFrom": "2023-11-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "21.10.17",
+          "date": "2023-11-17",
+          "link": "https://archives-docs.centreon.com/21.10/docs/releases/centreon-core/#211017"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "21.04",
+      "name": "21.04",
+      "milestones": {
+        "ga": "2021-04-21",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-10-31"
+      },
+      "upstream": {
+        "name": "21.04",
+        "codename": null,
+        "label": "21.04",
+        "releaseDate": "2021-04-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-10-31",
+        "isEoes": true,
+        "eoesFrom": "2022-10-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "21.04.20",
+          "date": "2022-10-12",
+          "link": "https://archives-docs.centreon.com/21.04/docs/releases/centreon-core/#210420"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "20.10",
+      "name": "20.10",
+      "milestones": {
+        "ga": "2020-10-19",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-05-31"
+      },
+      "upstream": {
+        "name": "20.10",
+        "codename": null,
+        "label": "20.10",
+        "releaseDate": "2020-10-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-05-31",
+        "isEoes": true,
+        "eoesFrom": "2022-05-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "20.10.18",
+          "date": "2022-06-09",
+          "link": "https://archives-docs.centreon.com/20.10/docs/releases/centreon-core/#201018"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "20.04",
+      "name": "20.04",
+      "milestones": {
+        "ga": "2020-04-20",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-10-31"
+      },
+      "upstream": {
+        "name": "20.04",
+        "codename": null,
+        "label": "20.04",
+        "releaseDate": "2020-04-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-10-31",
+        "isEoes": true,
+        "eoesFrom": "2021-10-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "20.04.20",
+          "date": "2021-11-19",
+          "link": "https://archives-docs.centreon.com/20.04/docs/releases/centreon-core/#200420"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "19.10",
+      "name": "19.10",
+      "milestones": {
+        "ga": "2019-10-15",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-04-30"
+      },
+      "upstream": {
+        "name": "19.10",
+        "codename": null,
+        "label": "19.10",
+        "releaseDate": "2019-10-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-04-30",
+        "isEoes": true,
+        "eoesFrom": "2021-04-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "19.10.23",
+          "date": "2021-05-04",
+          "link": "https://docs-older.centreon.com/docs/centreon/en/latest/release_notes/centreon-19.10.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "19.04",
+      "name": "19.04",
+      "milestones": {
+        "ga": "2019-04-24",
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-10-31"
+      },
+      "upstream": {
+        "name": "19.04",
+        "codename": null,
+        "label": "19.04",
+        "releaseDate": "2019-04-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-10-31",
+        "isEoes": true,
+        "eoesFrom": "2020-10-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "19.04.20",
+          "date": "2020-11-19",
+          "link": "https://docs-older.centreon.com/docs/centreon/en/latest/release_notes/centreon-19.04.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.10",
+      "name": "18.10",
+      "milestones": {
+        "ga": "2018-10-24",
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-04-30"
+      },
+      "upstream": {
+        "name": "18.10",
+        "codename": null,
+        "label": "18.10",
+        "releaseDate": "2018-10-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-04-30",
+        "isEoes": true,
+        "eoesFrom": "2020-04-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.10.12",
+          "date": "2020-02-24",
+          "link": "https://docs-older.centreon.com/docs/centreon/en/latest/release_notes/centreon-18.10.html"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/centreon/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-04T00:07:10+00:00"
+  }
+}

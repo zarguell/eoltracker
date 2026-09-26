@@ -1,0 +1,2134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Microsoft Windows lifecycle dates — EOL Tracker</title>
+<meta name="description" content="General availability, end-of-sale, security-support and end-of-life dates for every Microsoft Windows release, with raw source values and provenance.">
+<link rel="canonical" href="https://zarguell.github.io/eoltracker/products/windows/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EOL Tracker">
+<meta property="og:title" content="Microsoft Windows lifecycle dates — EOL Tracker">
+<meta property="og:description" content="General availability, end-of-sale, security-support and end-of-life dates for every Microsoft Windows release, with raw source values and provenance.">
+<meta property="og:url" content="https://zarguell.github.io/eoltracker/products/windows/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d1b2a'/%3E%3Cpath d='M7 20.5l5-6 4 4.5 4-6.5 5 8' fill='none' stroke='%234fd1c5' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/eoltracker/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="shell masthead-inner">
+    <a class="wordmark" href="/eoltracker/">EOL<span>Tracker</span></a>
+    <nav class="mainnav" aria-label="Primary">
+      <a href="/eoltracker/">Software</a>
+      <a href="/eoltracker/hardware/">Hardware</a>
+      <a href="/eoltracker/api/">API &amp; data</a>
+      <a href="/eoltracker/why/">Why EOL</a>
+      <a href="https://endoflife.date/" rel="noopener">endoflife.date</a>
+    </nav>
+    <p class="masthead-meta">542 products · 9171 releases · 7169 hardware records</p>
+  </div>
+</header>
+
+<main class="shell" id="main">
+<nav class="crumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/eoltracker/">Catalog</a></li>
+    <li aria-current="page">Microsoft Windows</li>
+  </ol>
+</nav>
+
+<section class="hero product-hero">
+  <p class="eyebrow">os · software</p>
+  <h1 class="page-title">Microsoft Windows</h1>
+  <p class="lead">
+    47 releases published by endoflife.date, with each normalized milestone and the raw
+    upstream values behind it. Identifier for this record: <code>windows</code>.
+  </p>
+  <p class="hero-meta">
+    Verified Sep 17, 2026 at 11:51 UTC by <code>deterministic-endoflife-date-v1</code>.
+Source: endoflife.date.    Upstream modified May 1, 2026 at 09:58 UTC.
+    Last catalog refresh <time datetime="2026-09-17T18:35:21Z">Sep 17, 2026 at 18:35 UTC</time>.
+  </p>
+  <p class="product-links">
+    <a class="button" href="/eoltracker/v1/products/windows.json">JSON record</a>
+    <a class="button" href="https://endoflife.date/api/v1/products/windows/" rel="noopener">Source on endoflife.date</a>
+<a class="button" href="https://endoflife.date/windows" rel="noopener">html</a><a class="button" href="https://learn.microsoft.com/lifecycle/products/?terms=Windows" rel="noopener">releasePolicy</a>  </p>
+</section>
+
+<section class="panel" aria-labelledby="coverage-title">
+  <h2 class="panel-title" id="coverage-title">Data coverage</h2>
+  <p class="panel-note">
+    Upstream does not publish every milestone for every release. Empty cells are unknown dates, not implied support;
+    any calculated date is labeled derived and carries its rule above.
+  </p>
+  <ul class="bars">
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">General availability</span>
+        <span class="bar-value">47 / 47 releases (100%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="General availability: 47 of 47 releases have a published date">
+        <div class="bar-fill" style="width: 100%"></div>
+      </div>
+    </li>
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">End of sale</span>
+        <span class="bar-value">0 / 47 releases (0%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="End of sale: 0 of 47 releases have a published date">
+        <div class="bar-fill" style="width: 0%"></div>
+      </div>
+    </li>
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">End of security support</span>
+        <span class="bar-value">1 / 47 releases (2%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="End of security support: 1 of 47 releases have a published date">
+        <div class="bar-fill" style="width: 2%"></div>
+      </div>
+    </li>
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">End of life</span>
+        <span class="bar-value">1 / 47 releases (2%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="End of life: 1 of 47 releases have a published date">
+        <div class="bar-fill" style="width: 2%"></div>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section class="panel" aria-labelledby="legend-title">
+  <h2 class="panel-title" id="legend-title">How to read these dates</h2>
+  <dl class="legend">
+    <div class="legend-row">
+      <dt>General availability</dt>
+      <dd>
+        <p>First public release. Taken from the upstream releaseDate.</p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>End of sale</dt>
+      <dd>
+        <p>Last day new licenses or units are sold. Only mapped from an upstream field whose label names an end of sale.</p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>End of security support</dt>
+      <dd>
+        <p>Last day security fixes are published. Mapped from eolFrom or eoesFrom only when the label names security support.</p>
+        <p>
+          Extended support counts as security support: when upstream publishes an extended-support date, it replaces
+          the standard security-support deadline here.
+        </p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>End of life</dt>
+      <dd>
+        <p>End of all support. A published extended-support date wins; otherwise eolFrom when its label describes a full support end.</p>
+        <p>
+          An announced extended-support period with no published end date leaves end of life blank — the earlier
+          <code>eolFrom</code> value stays visible in the table rather than being promoted into a deadline upstream
+          never set.
+        </p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>Blank date</dt>
+      <dd><p>The source publishes no value for that milestone. A missing date is an absent announcement, not a claim that support ends or continues.</p></dd>
+    </div>
+  </dl>
+</section>
+
+
+<section class="panel" aria-labelledby="next-title">
+  <h2 class="panel-title" id="next-title">Upcoming published deadlines</h2>
+  <ul class="events">
+    <li>
+      <span class="event-release">10 22H2</span>
+      <span class="event-milestone">End of security support</span>
+      <span class="event-date"><time datetime="2028-10-10">Oct 10, 2028</time>        <span class="event-days">in 754 days</span></span>
+    </li>
+    <li>
+      <span class="event-release">10 22H2</span>
+      <span class="event-milestone">End of life</span>
+      <span class="event-date"><time datetime="2028-10-10">Oct 10, 2028</time>        <span class="event-days">in 754 days</span></span>
+    </li>
+  </ul>
+</section>
+
+<section class="releases" aria-labelledby="releases-title">
+  <div class="catalog-head">
+    <h2 class="panel-title" id="releases-title">Release lifecycle</h2>
+    <p class="catalog-count">47 releases</p>
+  </div>
+  <p class="panel-note">
+    Newest first. Cells show normalized dates; a secondary line shows the raw upstream field and label when the
+    normalized date differs from, or is absent despite, a published value.
+  </p>
+
+  <div class="table-scroll">
+    <table class="release-table">
+      <caption class="sr-only">Lifecycle dates for each Microsoft Windows release</caption>
+      <thead>
+        <tr>
+          <th scope="col">Release</th>
+          <th scope="col">General availability</th>
+          <th scope="col">End of sale</th>
+          <th scope="col">End of security support</th>
+          <th scope="col">End of life</th>
+          <th scope="col">Upstream status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">11 26H1 (W)</span>
+<code class="release-raw">11-26h1-w</code>          </th>
+          <td class="milestone">
+            <time datetime="2026-02-10">Feb 10, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2028-03-14 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2028-03-14 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2028-03-14 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://learn.microsoft.com/windows/release-health/windows11-release-information" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">11 26H1 (E)</span>
+<code class="release-raw">11-26h1-e</code>          </th>
+          <td class="milestone">
+            <time datetime="2026-02-10">Feb 10, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2029-03-13 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2029-03-13 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2029-03-13 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://learn.microsoft.com/windows/release-health/windows11-release-information" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">11 25H2 (W)</span>
+<code class="release-raw">11-25h2-w</code>          </th>
+          <td class="milestone">
+            <time datetime="2025-09-30">Sep 30, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2027-10-12 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-10-12 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-10-12 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://learn.microsoft.com/windows/release-health/windows11-release-information" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">11 25H2 (E)</span>
+<code class="release-raw">11-25h2-e</code>          </th>
+          <td class="milestone">
+            <time datetime="2025-09-30">Sep 30, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2028-10-10 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2028-10-10 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2028-10-10 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://learn.microsoft.com/windows/release-health/windows11-release-information" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">11 24H2 (W)</span>
+<code class="release-raw">11-24h2-w</code>          </th>
+          <td class="milestone">
+            <time datetime="2024-10-01">Oct 1, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2026-10-13 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-10-13 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-10-13 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://learn.microsoft.com/windows/release-health/windows11-release-information" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">11 24H2 IoT (LTS)</span>
+<code class="release-raw">11-24h2-iot-lts</code>          </th>
+          <td class="milestone">
+            <time datetime="2024-10-01">Oct 1, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2029-10-09 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2034-10-10 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2034-10-10 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag">LTS</span><span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://learn.microsoft.com/windows/release-health/windows11-release-information#enterprise-and-iot-enterprise-ltsc-editions" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">11 24H2 (E) (LTS)</span>
+<code class="release-raw">11-24h2-e-lts</code>          </th>
+          <td class="milestone">
+            <time datetime="2024-10-01">Oct 1, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2029-10-09 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2029-10-09 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2029-10-09 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag">LTS</span><span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://learn.microsoft.com/windows/release-health/windows11-release-information#enterprise-and-iot-enterprise-ltsc-editions" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">11 24H2 (E)</span>
+<code class="release-raw">11-24h2-e</code>          </th>
+          <td class="milestone">
+            <time datetime="2024-10-01">Oct 1, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2027-10-12 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-10-12 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-10-12 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://learn.microsoft.com/windows/release-health/windows11-release-information" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">11 23H2 (W)</span>
+<code class="release-raw">11-23h2-w</code>          </th>
+          <td class="milestone">
+            <time datetime="2023-10-31">Oct 31, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2025-11-11 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-11-11 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-11-11 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://learn.microsoft.com/windows/release-health/windows11-release-information" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">11 23H2 (E)</span>
+<code class="release-raw">11-23h2-e</code>          </th>
+          <td class="milestone">
+            <time datetime="2023-10-31">Oct 31, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2026-11-10 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-11-10 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-11-10 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://learn.microsoft.com/windows/release-health/windows11-release-information" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">10 22H2</span>
+<code class="release-raw">10-22h2</code>          </th>
+          <td class="milestone">
+            <time datetime="2022-10-18">Oct 18, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2025-10-14 (Active Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2028-10-10">Oct 10, 2028</time><span class="cell-note">eolFrom 2025-10-14 (Security Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2028-10-10">Oct 10, 2028</time><span class="cell-note">eolFrom 2025-10-14 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span><span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://learn.microsoft.com/windows/release-health/release-information" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">11 22H2 (W)</span>
+<code class="release-raw">11-22h2-w</code>          </th>
+          <td class="milestone">
+            <time datetime="2022-09-20">Sep 20, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2024-10-08 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-10-08 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-10-08 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://learn.microsoft.com/windows/release-health/windows11-release-information" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">11 22H2 (E)</span>
+<code class="release-raw">11-22h2-e</code>          </th>
+          <td class="milestone">
+            <time datetime="2022-09-20">Sep 20, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2025-10-14 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-10-14 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-10-14 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://learn.microsoft.com/windows/release-health/windows11-release-information" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">10 21H2 (W)</span>
+<code class="release-raw">10-21h2-w</code>          </th>
+          <td class="milestone">
+            <time datetime="2021-11-16">Nov 16, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2023-06-13 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-06-13 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-06-13 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://learn.microsoft.com/windows/release-health/release-information" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">10 21H2 IoT (LTS)</span>
+<code class="release-raw">10-21h2-iot-lts</code>          </th>
+          <td class="milestone">
+            <time datetime="2021-11-16">Nov 16, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2027-01-12 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2032-01-13 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2032-01-13 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag">LTS</span><span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://learn.microsoft.com/windows/release-health/release-information#enterprise-and-iot-enterprise-ltsbltsc-editions" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">10 21H2 (E) (LTS)</span>
+<code class="release-raw">10-21h2-e-lts</code>          </th>
+          <td class="milestone">
+            <time datetime="2021-11-16">Nov 16, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2027-01-12 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-01-12 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-01-12 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag">LTS</span><span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://learn.microsoft.com/windows/release-health/release-information#enterprise-and-iot-enterprise-ltsbltsc-editions" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">10 21H2 (E)</span>
+<code class="release-raw">10-21h2-e</code>          </th>
+          <td class="milestone">
+            <time datetime="2021-11-16">Nov 16, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2024-06-11 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-06-11 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-06-11 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://learn.microsoft.com/lifecycle/products/windows-10-enterprise-and-education" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">11 21H2 (W)</span>
+<code class="release-raw">11-21h2-w</code>          </th>
+          <td class="milestone">
+            <time datetime="2021-10-04">Oct 4, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2023-10-10 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-10-10 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-10-10 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://learn.microsoft.com/windows/release-health/windows11-release-information" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">11 21H2 (E)</span>
+<code class="release-raw">11-21h2-e</code>          </th>
+          <td class="milestone">
+            <time datetime="2021-10-04">Oct 4, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2024-10-08 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-10-08 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-10-08 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://learn.microsoft.com/windows/release-health/windows11-release-information" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">10 21H1</span>
+<code class="release-raw">10-21h1</code>          </th>
+          <td class="milestone">
+            <time datetime="2021-05-18">May 18, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2022-12-13 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2022-12-13 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2022-12-13 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://learn.microsoft.com/windows/release-health/status-windows-10-21h1" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">10 20H2 (W)</span>
+<code class="release-raw">10-20h2-w</code>          </th>
+          <td class="milestone">
+            <time datetime="2020-10-20">Oct 20, 2020</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2022-05-10 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2022-05-10 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2022-05-10 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://learn.microsoft.com/windows/release-health/status-windows-10-20h2" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">10 20H2 (E)</span>
+<code class="release-raw">10-20h2-e</code>          </th>
+          <td class="milestone">
+            <time datetime="2020-10-20">Oct 20, 2020</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2023-05-09 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-05-09 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-05-09 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://learn.microsoft.com/windows/release-health/status-windows-10-20h2" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">10 2004</span>
+<code class="release-raw">10-2004</code>          </th>
+          <td class="milestone">
+            <time datetime="2020-05-27">May 27, 2020</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2021-12-14 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2021-12-14 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2021-12-14 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://learn.microsoft.com/lifecycle/announcements/windows-10-version-2004-end-of-servicing" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">10 1909 (W)</span>
+<code class="release-raw">10-1909-w</code>          </th>
+          <td class="milestone">
+            <time datetime="2019-11-12">Nov 12, 2019</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2021-05-11 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2021-05-11 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2021-05-11 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://learn.microsoft.com/lifecycle/announcements/windows-10-1909-end-of-servicing" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">10 1909 (E)</span>
+<code class="release-raw">10-1909-e</code>          </th>
+          <td class="milestone">
+            <time datetime="2019-11-12">Nov 12, 2019</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2022-05-10 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2022-05-10 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2022-05-10 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://learn.microsoft.com/lifecycle/announcements/windows-10-1909-enterprise-education-eos" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">10 1903</span>
+<code class="release-raw">10-1903</code>          </th>
+          <td class="milestone">
+            <time datetime="2019-05-21">May 21, 2019</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2020-12-08 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2020-12-08 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2020-12-08 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://learn.microsoft.com/lifecycle/announcements/windows-10-1903-end-of-servicing" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">10 1809 (W)</span>
+<code class="release-raw">10-1809-w</code>          </th>
+          <td class="milestone">
+            <time datetime="2018-11-13">Nov 13, 2018</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2020-11-10 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2020-11-10 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2020-11-10 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://learn.microsoft.com/lifecycle/announcements/windows-10-1809-end-of-servicing" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">10 1809 (E) (LTS)</span>
+<code class="release-raw">10-1809-e-lts</code>          </th>
+          <td class="milestone">
+            <time datetime="2018-11-13">Nov 13, 2018</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2024-01-09 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2029-01-09 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2029-01-09 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag">LTS</span><span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client#enterprise-and-iot-enterprise-ltsbltsc-editions" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">10 1809 (E)</span>
+<code class="release-raw">10-1809-e</code>          </th>
+          <td class="milestone">
+            <time datetime="2018-11-13">Nov 13, 2018</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2021-05-11 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2021-05-11 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2021-05-11 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://learn.microsoft.com/lifecycle/announcements/windows-10-1803-1809-end-of-servicing" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">10 1803 (W)</span>
+<code class="release-raw">10-1803-w</code>          </th>
+          <td class="milestone">
+            <time datetime="2018-04-30">Apr 30, 2018</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2019-11-12 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2019-11-12 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2019-11-12 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://learn.microsoft.com/lifecycle/announcements/windows-10-1803-end-of-servicing" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">10 1803 (E)</span>
+<code class="release-raw">10-1803-e</code>          </th>
+          <td class="milestone">
+            <time datetime="2018-04-30">Apr 30, 2018</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2020-05-11 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2021-05-11 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2021-05-11 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://learn.microsoft.com/lifecycle/announcements/windows-10-1803-1809-end-of-servicing" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">10 1709 (W)</span>
+<code class="release-raw">10-1709-w</code>          </th>
+          <td class="milestone">
+            <time datetime="2017-10-17">Oct 17, 2017</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2019-04-09 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2019-04-09 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2019-04-09 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://learn.microsoft.com/lifecycle/announcements/windows-10-1709-end-of-servicing" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">10 1709 (E)</span>
+<code class="release-raw">10-1709-e</code>          </th>
+          <td class="milestone">
+            <time datetime="2017-10-17">Oct 17, 2017</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2020-10-13 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2020-10-13 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2020-10-13 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://learn.microsoft.com/lifecycle/announcements/windows-10-1709-end-of-servicing" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">10 1703 (W)</span>
+<code class="release-raw">10-1703-w</code>          </th>
+          <td class="milestone">
+            <time datetime="2017-04-11">Apr 11, 2017</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2018-10-09 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2018-10-09 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2018-10-09 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://techcommunity.microsoft.com/t5/windows-it-pro-blog/end-of-service-reminders-for-windows-10-versions-1703-and-1803/ba-p/903715" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">10 1703 (E)</span>
+<code class="release-raw">10-1703-e</code>          </th>
+          <td class="milestone">
+            <time datetime="2017-04-11">Apr 11, 2017</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2019-10-08 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2019-10-08 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2019-10-08 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://techcommunity.microsoft.com/t5/windows-it-pro-blog/end-of-service-reminders-for-windows-10-versions-1703-and-1803/ba-p/903715" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">10 1607 (W)</span>
+<code class="release-raw">10-1607-w</code>          </th>
+          <td class="milestone">
+            <time datetime="2016-08-02">Aug 2, 2016</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2018-04-10 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2018-04-10 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2018-04-10 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">10 1607 (E) (LTS)</span>
+<code class="release-raw">10-1607-e-lts</code>          </th>
+          <td class="milestone">
+            <time datetime="2016-08-02">Aug 2, 2016</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2021-10-12 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-10-13 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-10-13 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag">LTS</span><span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client#enterprise-and-iot-enterprise-ltsbltsc-editions" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">10 1607 (E)</span>
+<code class="release-raw">10-1607-e</code>          </th>
+          <td class="milestone">
+            <time datetime="2016-08-02">Aug 2, 2016</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2019-04-09 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2019-04-09 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2019-04-09 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://learn.microsoft.com/lifecycle/announcements/windows-10-1607-end-of-servicing" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">10 1511</span>
+<code class="release-raw">10-1511</code>          </th>
+          <td class="milestone">
+            <time datetime="2015-11-10">Nov 10, 2015</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2017-10-10 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2017-10-10 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2017-10-10 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://learn.microsoft.com/lifecycle/announcements/windows-10-1511-end-of-servicing" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">10 1507 (E) (LTS)</span>
+<code class="release-raw">10-1507-e-lts</code>          </th>
+          <td class="milestone">
+            <time datetime="2015-07-29">Jul 29, 2015</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2020-10-13 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-10-14 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-10-14 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag">LTS</span><span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client#enterprise-and-iot-enterprise-ltsbltsc-editions" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">10 1507</span>
+<code class="release-raw">10-1507</code>          </th>
+          <td class="milestone">
+            <time datetime="2015-07-29">Jul 29, 2015</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2017-05-09 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2017-05-09 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2017-05-09 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://learn.microsoft.com/lifecycle/announcements/windows-10-1507-cb-cbb-end-of-servicing" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">10 1507 IOT</span>
+<code class="release-raw">10-1507-iot</code>          </th>
+          <td class="milestone">
+            <time datetime="2015-04-29">Apr 29, 2015</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2020-11-10 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2020-11-10 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2020-11-10 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://learn.microsoft.com/en-us/lifecycle/products/windows-10-iot-core" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">8.1</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2013-11-13">Nov 13, 2013</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2018-01-09 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-01-10 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-01-10 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://learn.microsoft.com/lifecycle/products/windows-81" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">8</span>
+          </th>
+          <td class="milestone">
+            <time datetime="2012-10-30">Oct 30, 2012</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2016-01-12 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2016-01-12 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2016-01-12 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://learn.microsoft.com/lifecycle/products/windows-8" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">7 SP1</span>
+<code class="release-raw">7-sp1</code>          </th>
+          <td class="milestone">
+            <time datetime="2011-02-22">Feb 22, 2011</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2015-01-13 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2020-01-14 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2020-01-14 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://learn.microsoft.com/lifecycle/products/windows-7" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Vista SP2</span>
+<code class="release-raw">6-sp2</code>          </th>
+          <td class="milestone">
+            <time datetime="2009-04-29">Apr 29, 2009</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2012-04-10 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2017-04-11 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2017-04-11 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://learn.microsoft.com/lifecycle/products/windows-vista" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">XP SP3</span>
+<code class="release-raw">5-sp3</code>          </th>
+          <td class="milestone">
+            <time datetime="2008-04-21">Apr 21, 2008</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2009-04-14 (Active Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2014-04-08 (Security Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2014-04-08 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://learn.microsoft.com/lifecycle/products/windows-xp" rel="noopener">latest release</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="panel" aria-labelledby="source-title">
+  <h2 class="panel-title" id="source-title">Source and upstream values</h2>
+  <p class="panel-note">
+    This record is a normalization of endoflife.date data, licensed MIT. Raw upstream values are
+    retained in full so the mapping below can be checked value by value.
+  </p>
+  <dl class="facts">
+    <div><dt>Upstream record</dt><dd><a href="https://endoflife.date/api/v1/products/windows/" rel="noopener">https://endoflife.date/api/v1/products/windows/</a></dd></div>
+    <div><dt>Source license</dt><dd><a href="https://github.com/endoflife-date/endoflife.date/blob/master/LICENSE" rel="noopener">endoflife.date — MIT</a></dd></div>
+    <div><dt>Verifier</dt><dd><code>deterministic-endoflife-date-v1</code></dd></div>
+    <div><dt>Last checked</dt><dd>Sep 17, 2026 at 11:51 UTC</dd></div>
+    <div><dt>Upstream modified</dt><dd>May 1, 2026 at 09:58 UTC</dd></div>
+    <div><dt>JSON record</dt><dd><a href="https://zarguell.github.io/eoltracker/v1/products/windows.json">https://zarguell.github.io/eoltracker/v1/products/windows.json</a></dd></div>
+    <div><dt>Schema</dt><dd><a href="https://zarguell.github.io/eoltracker/v1/schema/product.json">v1/schema/product.json</a></dd></div>
+  </dl>
+
+  <h3 class="sub-title">Identifiers</h3>
+  <ul class="chips">
+<li><span class="tag">cpe</span> <code>cpe:2.3:o:microsoft:windows</code></li><li><span class="tag">cpe</span> <code>cpe:/o:microsoft:windows</code></li>  </ul>
+
+  <h3 class="sub-title">Upstream label semantics</h3>
+  <p class="panel-note">
+    endoflife.date labels decide which raw date fields become which normalized milestone. These are this product's
+    label texts and the rule each one triggers.
+  </p>
+  <dl class="label-rules">
+    <div>
+      <dt><code>eoas</code> = “Active Support”</dt>
+      <dd>End-of-sale date when the text names an end of sale.</dd>
+    </div>
+    <div>
+      <dt><code>discontinued</code> = not set</dt>
+      <dd>End-of-sale date when the text names an end of sale; otherwise recorded only, never turned into a date.</dd>
+    </div>
+    <div>
+      <dt><code>eol</code> = “Security Support”</dt>
+      <dd>End of security support when the text names security support; end of life only when no extended-support label is set and the text describes a full support end.</dd>
+    </div>
+    <div>
+      <dt><code>eoes</code> = “Extended Security Updates”</dt>
+      <dd>Extended support. A published date also sets end of life, and a security-support text supersedes end of security support.</dd>
+    </div>
+  </dl>
+
+
+  <details class="raw">
+    <summary>Raw upstream release objects (47)</summary>
+    <p class="panel-note">Verbatim <code>releases[]</code> entries from the upstream record, unmodified.</p>
+    <details class="raw-release">
+      <summary><code>11-26h1-w</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2026-02-10&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2028-03-14&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2028-03-14&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>11-26h1-e</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2026-02-10&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2029-03-13&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2029-03-13&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>11-25h2-w</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-09-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2027-10-12&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2027-10-12&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>11-25h2-e</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-09-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2028-10-10&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2028-10-10&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>11-24h2-w</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-10-01&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2026-10-13&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2026-10-13&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>11-24h2-iot-lts</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-10-01&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2029-10-09&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2034-10-10&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>11-24h2-e-lts</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-10-01&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2029-10-09&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2029-10-09&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>11-24h2-e</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-10-01&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2027-10-12&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2027-10-12&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>11-23h2-w</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-10-31&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2025-11-11&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2025-11-11&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>11-23h2-e</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-10-31&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2026-11-10&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2026-11-10&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>10-22h2</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-10-18&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2025-10-14&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2025-10-14&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoesFrom&#34;,
+    &#34;label&#34;: &#34;Extended Security Updates&#34;,
+    &#34;value&#34;: &#34;2028-10-10&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>11-22h2-w</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-09-20&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2024-10-08&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2024-10-08&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>11-22h2-e</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-09-20&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2025-10-14&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2025-10-14&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>10-21h2-w</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2021-11-16&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2023-06-13&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2023-06-13&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>10-21h2-iot-lts</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2021-11-16&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2027-01-12&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2032-01-13&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>10-21h2-e-lts</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2021-11-16&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2027-01-12&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2027-01-12&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>10-21h2-e</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2021-11-16&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2024-06-11&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2024-06-11&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>11-21h2-w</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2021-10-04&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2023-10-10&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2023-10-10&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>11-21h2-e</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2021-10-04&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2024-10-08&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2024-10-08&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>10-21h1</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2021-05-18&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2022-12-13&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2022-12-13&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>10-20h2-w</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2020-10-20&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2022-05-10&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2022-05-10&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>10-20h2-e</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2020-10-20&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2023-05-09&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2023-05-09&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>10-2004</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2020-05-27&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2021-12-14&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2021-12-14&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>10-1909-w</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2019-11-12&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2021-05-11&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2021-05-11&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>10-1909-e</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2019-11-12&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2022-05-10&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2022-05-10&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>10-1903</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2019-05-21&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2020-12-08&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2020-12-08&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>10-1809-w</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2018-11-13&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2020-11-10&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2020-11-10&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>10-1809-e-lts</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2018-11-13&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2024-01-09&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2029-01-09&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>10-1809-e</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2018-11-13&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2021-05-11&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2021-05-11&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>10-1803-w</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2018-04-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2019-11-12&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2019-11-12&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>10-1803-e</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2018-04-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2020-05-11&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2021-05-11&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>10-1709-w</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2017-10-17&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2019-04-09&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2019-04-09&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>10-1709-e</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2017-10-17&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2020-10-13&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2020-10-13&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>10-1703-w</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2017-04-11&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2018-10-09&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2018-10-09&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>10-1703-e</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2017-04-11&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2019-10-08&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2019-10-08&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>10-1607-w</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2016-08-02&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2018-04-10&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2018-04-10&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>10-1607-e-lts</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2016-08-02&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2021-10-12&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2026-10-13&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>10-1607-e</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2016-08-02&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2019-04-09&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2019-04-09&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>10-1511</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2015-11-10&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2017-10-10&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2017-10-10&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>10-1507-e-lts</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2015-07-29&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2020-10-13&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2025-10-14&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>10-1507</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2015-07-29&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2017-05-09&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2017-05-09&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>10-1507-iot</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2015-04-29&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2020-11-10&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2020-11-10&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>8.1</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2013-11-13&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2018-01-09&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2023-01-10&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>8</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2012-10-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2016-01-12&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2016-01-12&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>7-sp1</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2011-02-22&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2015-01-13&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2020-01-14&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>6-sp2</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2009-04-29&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2012-04-10&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2017-04-11&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>5-sp3</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2008-04-21&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2009-04-14&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2014-04-08&#34;
+  }
+]</code></pre>
+    </details>
+  </details>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="shell footer-inner">
+    <div class="footer-col">
+      <p class="footer-title">EOL Tracker</p>
+      <p class="footer-note">
+        Software lifecycle dates are republished from the
+        <a href="https://endoflife.date/" rel="noopener">endoflife.date</a> community catalog and vendor-specific public
+        lifecycle sources. Each record names its source; community-catalog data is licensed
+        <a href="https://github.com/endoflife-date/endoflife.date/blob/master/LICENSE" rel="noopener">MIT</a>.
+      </p>
+      <p class="footer-note">
+        Hardware lifecycle data comes from
+        <a href="https://eosl.date/" rel="noopener">eosl.date</a> by Subash Geetha Krishnan,
+        which aggregates public vendor announcements, and from
+        <a href="https://opengear.com/end-life-products" rel="noopener">Opengear's end-of-life product list</a>.
+        Attribution here is credit by name and link, not a licence to the source material: nothing is reproduced as
+        licensed material. This catalog is an independent normalization, not affiliated with endoflife.date, eosl.date,
+        Opengear or any vendor listed here.
+      </p>
+      <p class="footer-note">
+        Last catalog refresh Sep 17, 2026 at 18:35 UTC.
+      </p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-title">Data</p>
+      <ul class="footer-links">
+        <li><a href="/eoltracker/v1/feed.json">Feed (JSON)</a></li>
+        <li><a href="/eoltracker/v1/feed.atom">Deadlines (Atom)</a></li>
+        <li><a href="/eoltracker/v1/calendar.ics">Deadlines (iCal)</a></li>
+        <li><a href="/eoltracker/v1/products.json">Product summaries</a></li>
+        <li><a href="/eoltracker/v1/hardware.json">Hardware summaries</a></li>
+        <li><a href="/eoltracker/v1/changes.atom">Changes (Atom)</a></li>
+        <li><a href="/eoltracker/v1/changes.json">Changes (JSON)</a></li>
+        <li><a href="/eoltracker/hardware/">Hardware catalog</a></li>
+        <li><a href="/eoltracker/api/">Endpoints &amp; mapping</a></li>
+        <li><a href="/eoltracker/v1/schema/product.json">Record schema</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <p class="footer-title">Project</p>
+      <ul class="footer-links">
+        <li><a href="https://github.com/zarguell/eoltracker" rel="noopener">Source on GitHub</a></li>
+        <li><a href="https://endoflife.date/" rel="noopener">Upstream source</a></li>
+        <li><a href="/eoltracker/THIRD-PARTY-NOTICES.txt">THIRD-PARTY-NOTICES.txt</a></li>
+        <li><a href="/eoltracker/OASIS-NOTICE.txt">OASIS-NOTICE.txt</a></li>
+        <li><a href="/eoltracker/404.html">Not found page</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script src="/eoltracker/app.js" defer></script>
+</body>
+</html>

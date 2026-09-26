@@ -1,0 +1,769 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "graylog",
+  "name": "Graylog",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "graylog"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:graylog:graylog"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:graylog:graylog"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/graylog.svg",
+    "html": "https://endoflife.date/graylog",
+    "releasePolicy": null
+  },
+  "releases": [
+    {
+      "id": "7.1",
+      "name": "7.1",
+      "milestones": {
+        "ga": "2026-05-04",
+        "eos": null,
+        "eossec": null,
+        "eol": "2027-05-04"
+      },
+      "upstream": {
+        "name": "7.1",
+        "codename": null,
+        "label": "7.1",
+        "releaseDate": "2026-05-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-05-04",
+        "isMaintained": true,
+        "latest": {
+          "name": "7.1.9",
+          "date": "2026-09-02",
+          "link": "https://go2docs.graylog.org/current/changelogs/changelog.html#Graylog719"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.0",
+      "name": "7.0",
+      "milestones": {
+        "ga": "2025-11-03",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-11-03"
+      },
+      "upstream": {
+        "name": "7.0",
+        "codename": null,
+        "label": "7.0",
+        "releaseDate": "2025-11-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2026-11-03",
+        "isMaintained": true,
+        "latest": {
+          "name": "7.0.13",
+          "date": "2026-09-02",
+          "link": "https://go2docs.graylog.org/current/changelogs/changelog.html#Graylog7013"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.3",
+      "name": "6.3",
+      "milestones": {
+        "ga": "2025-06-30",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-06-30"
+      },
+      "upstream": {
+        "name": "6.3",
+        "codename": null,
+        "label": "6.3",
+        "releaseDate": "2025-06-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-06-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.3.15",
+          "date": "2026-08-05",
+          "link": "https://go2docs.graylog.org/current/changelogs/changelog.html#Graylog6315"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.2",
+      "name": "6.2",
+      "milestones": {
+        "ga": "2025-04-28",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-04-28"
+      },
+      "upstream": {
+        "name": "6.2",
+        "codename": null,
+        "label": "6.2",
+        "releaseDate": "2025-04-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-04-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.2.14",
+          "date": "2026-04-01",
+          "link": "https://go2docs.graylog.org/current/changelogs/changelog.html#Graylog6214"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.1",
+      "name": "6.1",
+      "milestones": {
+        "ga": "2024-10-20",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-10-20"
+      },
+      "upstream": {
+        "name": "6.1",
+        "codename": null,
+        "label": "6.1",
+        "releaseDate": "2024-10-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-10-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.1.16",
+          "date": "2025-10-01",
+          "link": "https://go2docs.graylog.org/current/changelogs/changelog.html#Graylog6116"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.0",
+      "name": "6.0",
+      "milestones": {
+        "ga": "2024-05-07",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-05-08"
+      },
+      "upstream": {
+        "name": "6.0",
+        "codename": null,
+        "label": "6.0",
+        "releaseDate": "2024-05-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-05-08",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.0.14",
+          "date": "2025-04-03",
+          "link": "https://go2docs.graylog.org/current/changelogs/changelog.html#Graylog6014"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.2",
+      "name": "5.2",
+      "milestones": {
+        "ga": "2023-11-01",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-11-01"
+      },
+      "upstream": {
+        "name": "5.2",
+        "codename": null,
+        "label": "5.2",
+        "releaseDate": "2023-11-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-11-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.2.12",
+          "date": "2024-10-02",
+          "link": "https://go2docs.graylog.org/current/changelogs/changelog.html#Graylog5212"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.1",
+      "name": "5.1",
+      "milestones": {
+        "ga": "2023-05-17",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-05-17"
+      },
+      "upstream": {
+        "name": "5.1",
+        "codename": null,
+        "label": "5.1",
+        "releaseDate": "2023-05-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-05-17",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.1.13",
+          "date": "2024-04-03",
+          "link": "https://go2docs.graylog.org/current/changelogs/changelog.html#Graylog5113"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.0",
+      "name": "5.0",
+      "milestones": {
+        "ga": "2022-12-06",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-12-06"
+      },
+      "upstream": {
+        "name": "5.0",
+        "codename": null,
+        "label": "5.0",
+        "releaseDate": "2022-12-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-12-06",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.0.13",
+          "date": "2023-10-12",
+          "link": "https://go2docs.graylog.org/current/changelogs/changelog.html#Graylog5013"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.3",
+      "name": "4.3",
+      "milestones": {
+        "ga": "2022-05-25",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-05-25"
+      },
+      "upstream": {
+        "name": "4.3",
+        "codename": null,
+        "label": "4.3",
+        "releaseDate": "2022-05-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-05-25",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.3.15",
+          "date": "2023-05-03",
+          "link": "https://go2docs.graylog.org/current/changelogs/changelog.html#Graylog4315"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.2",
+      "name": "4.2",
+      "milestones": {
+        "ga": "2021-10-13",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-11-30"
+      },
+      "upstream": {
+        "name": "4.2",
+        "codename": null,
+        "label": "4.2",
+        "releaseDate": "2021-10-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-11-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.2.13",
+          "date": "2022-09-16",
+          "link": "https://go2docs.graylog.org/current/changelogs/changelog.html#Graylog4213"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.1",
+      "name": "4.1",
+      "milestones": {
+        "ga": "2021-06-23",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-05-17"
+      },
+      "upstream": {
+        "name": "4.1",
+        "codename": null,
+        "label": "4.1",
+        "releaseDate": "2021-06-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-05-17",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.1.14",
+          "date": "2022-04-12",
+          "link": "https://go2docs.graylog.org/current/changelogs/changelog.html#Graylog4114"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.0",
+      "name": "4.0",
+      "milestones": {
+        "ga": "2020-11-17",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-10-13"
+      },
+      "upstream": {
+        "name": "4.0",
+        "codename": null,
+        "label": "4.0",
+        "releaseDate": "2020-11-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-10-13",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.0.17",
+          "date": "2022-07-06",
+          "link": "https://go2docs.graylog.org/current/changelogs/changelog.html#Graylog4017"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.3",
+      "name": "3.3",
+      "milestones": {
+        "ga": "2020-05-20",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-04-12"
+      },
+      "upstream": {
+        "name": "3.3",
+        "codename": null,
+        "label": "3.3",
+        "releaseDate": "2020-05-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-04-12",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.3.17",
+          "date": "2022-04-12",
+          "link": "https://go2docs.graylog.org/current/changelogs/changelog.html#Graylog3317"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.2",
+      "name": "3.2",
+      "milestones": {
+        "ga": "2020-01-31",
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-05-20"
+      },
+      "upstream": {
+        "name": "3.2",
+        "codename": null,
+        "label": "3.2",
+        "releaseDate": "2020-01-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-05-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.2.6",
+          "date": "2020-06-10",
+          "link": "https://graylog.org/post/announcing-graylog-v3-2-6/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.1",
+      "name": "3.1",
+      "milestones": {
+        "ga": "2019-08-15",
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-01-31"
+      },
+      "upstream": {
+        "name": "3.1",
+        "codename": null,
+        "label": "3.1",
+        "releaseDate": "2019-08-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-01-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.1.4",
+          "date": "2020-01-14",
+          "link": "https://graylog.org/post/announcing-graylog-3-1-4/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.0",
+      "name": "3.0",
+      "milestones": {
+        "ga": "2019-02-11",
+        "eos": null,
+        "eossec": null,
+        "eol": "2019-08-15"
+      },
+      "upstream": {
+        "name": "3.0",
+        "codename": null,
+        "label": "3.0",
+        "releaseDate": "2019-02-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-08-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.0.2",
+          "date": "2019-05-03",
+          "link": "https://graylog.org/post/announcing-graylog-3-0-2/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.5",
+      "name": "2.5",
+      "milestones": {
+        "ga": "2018-12-01",
+        "eos": null,
+        "eossec": null,
+        "eol": "2019-02-11"
+      },
+      "upstream": {
+        "name": "2.5",
+        "codename": null,
+        "label": "2.5",
+        "releaseDate": "2018-12-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-02-11",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.5.2",
+          "date": "2019-03-15",
+          "link": "https://graylog.org/post/announcing-graylog-v2-5/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.4",
+      "name": "2.4",
+      "milestones": {
+        "ga": "2017-12-22",
+        "eos": null,
+        "eossec": null,
+        "eol": "2019-03-01"
+      },
+      "upstream": {
+        "name": "2.4",
+        "codename": null,
+        "label": "2.4",
+        "releaseDate": "2017-12-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-03-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.4.7",
+          "date": "2019-03-01",
+          "link": "https://graylog.org/post/announcing-the-release-of-graylog-2-4-6/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.3",
+      "name": "2.3",
+      "milestones": {
+        "ga": "2017-07-26",
+        "eos": null,
+        "eossec": null,
+        "eol": "2017-12-22"
+      },
+      "upstream": {
+        "name": "2.3",
+        "codename": null,
+        "label": "2.3",
+        "releaseDate": "2017-07-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-12-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.3.2",
+          "date": "2017-10-19",
+          "link": "https://graylog.org/post/announcing-graylog-v2-3-2/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.2",
+      "name": "2.2",
+      "milestones": {
+        "ga": "2017-02-09",
+        "eos": null,
+        "eossec": null,
+        "eol": "2017-07-26"
+      },
+      "upstream": {
+        "name": "2.2",
+        "codename": null,
+        "label": "2.2",
+        "releaseDate": "2017-02-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-07-26",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.2.3",
+          "date": "2017-04-04",
+          "link": "https://graylog.org/post/announcing-graylog-v2-2-3/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.1",
+      "name": "2.1",
+      "milestones": {
+        "ga": "2016-09-01",
+        "eos": null,
+        "eossec": null,
+        "eol": "2017-02-09"
+      },
+      "upstream": {
+        "name": "2.1",
+        "codename": null,
+        "label": "2.1",
+        "releaseDate": "2016-09-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-02-09",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.1.3",
+          "date": "2017-01-26",
+          "link": "https://graylog.org/post/announcing-graylog-2-1-3/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.0",
+      "name": "2.0",
+      "milestones": {
+        "ga": "2016-04-26",
+        "eos": null,
+        "eossec": null,
+        "eol": "2016-09-01"
+      },
+      "upstream": {
+        "name": "2.0",
+        "codename": null,
+        "label": "2.0",
+        "releaseDate": "2016-04-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2016-09-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.0.3",
+          "date": "2016-06-20",
+          "link": "https://graylog.org/post/graylog-v2-0-3-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.3",
+      "name": "1.3",
+      "milestones": {
+        "ga": "2015-12-08",
+        "eos": null,
+        "eossec": null,
+        "eol": "2016-04-26"
+      },
+      "upstream": {
+        "name": "1.3",
+        "codename": null,
+        "label": "1.3",
+        "releaseDate": "2015-12-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2016-04-26",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.3.4",
+          "date": "2016-03-16",
+          "link": "https://graylog.org/post/graylog-1-3-4-is-now-available/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.2",
+      "name": "1.2",
+      "milestones": {
+        "ga": "2015-09-14",
+        "eos": null,
+        "eossec": null,
+        "eol": "2015-12-08"
+      },
+      "upstream": {
+        "name": "1.2",
+        "codename": null,
+        "label": "1.2",
+        "releaseDate": "2015-09-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2015-12-08",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.2.2",
+          "date": "2015-10-26",
+          "link": "https://graylog.org/post/graylog-1-2-2-is-now-available/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.1",
+      "name": "1.1",
+      "milestones": {
+        "ga": "2015-06-04",
+        "eos": null,
+        "eossec": null,
+        "eol": "2015-09-14"
+      },
+      "upstream": {
+        "name": "1.1",
+        "codename": null,
+        "label": "1.1",
+        "releaseDate": "2015-06-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2015-09-14",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.1.6",
+          "date": "2015-08-06",
+          "link": "https://graylog.org/post/graylog-1-1-6-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.0",
+      "name": "1.0",
+      "milestones": {
+        "ga": "2015-02-17",
+        "eos": null,
+        "eossec": null,
+        "eol": "2015-06-04"
+      },
+      "upstream": {
+        "name": "1.0",
+        "codename": null,
+        "label": "1.0",
+        "releaseDate": "2015-02-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2015-06-04",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.0.2",
+          "date": "2015-04-28",
+          "link": null
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/graylog/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-03T00:07:10+00:00"
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "apache-http-server",
+  "name": "Apache HTTP Server",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "apache"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:apache:http_server"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:apache:http_server"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/apache/httpd"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:rpm/fedora/httpd"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:rpm/redhat/httpd"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/apache.svg",
+    "html": "https://endoflife.date/apache-http-server",
+    "releasePolicy": "https://httpd.apache.org/dev/release.html"
+  },
+  "releases": [
+    {
+      "id": "2.4",
+      "name": "2.4",
+      "milestones": {
+        "ga": "2012-02-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.4",
+        "codename": null,
+        "label": "2.4",
+        "releaseDate": "2012-02-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "2.4.68",
+          "date": "2026-06-08",
+          "link": "https://downloads.apache.org/httpd/CHANGES_2.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.2",
+      "name": "2.2",
+      "milestones": {
+        "ga": "2005-12-01",
+        "eos": null,
+        "eossec": "2017-07-11",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.2",
+        "codename": null,
+        "label": "2.2",
+        "releaseDate": "2005-12-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-07-11",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.2.34",
+          "date": "2017-07-11",
+          "link": "https://archive.apache.org/dist/httpd/CHANGES_2.2.34"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.0",
+      "name": "2.0",
+      "milestones": {
+        "ga": "2002-04-05",
+        "eos": null,
+        "eossec": "2013-07-10",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.0",
+        "codename": null,
+        "label": "2.0",
+        "releaseDate": "2002-04-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2013-07-10",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.0.65",
+          "date": "2013-07-09",
+          "link": "https://archive.apache.org/dist/httpd/CHANGES_2.0.65"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.3",
+      "name": "1.3",
+      "milestones": {
+        "ga": "1998-06-01",
+        "eos": null,
+        "eossec": "2010-02-03",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.3",
+        "codename": null,
+        "label": "1.3",
+        "releaseDate": "1998-06-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2010-02-03",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.3.42",
+          "date": "2010-02-02",
+          "link": "https://archive.apache.org/dist/httpd/CHANGES_1.3.42"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/apache-http-server/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-07-14T11:07:48+00:00"
+  }
+}

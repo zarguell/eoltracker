@@ -1,0 +1,738 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "podman",
+  "name": "Podman",
+  "category": "software",
+  "upstream_category": "app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "podman"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:podman_project:podman"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/podman.svg",
+    "html": "https://endoflife.date/podman",
+    "releasePolicy": null
+  },
+  "releases": [
+    {
+      "id": "6.1",
+      "name": "6.1",
+      "milestones": {
+        "ga": "2026-08-12",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.1",
+        "codename": null,
+        "label": "6.1",
+        "releaseDate": "2026-08-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "6.1.2",
+          "date": "2026-09-15",
+          "link": "https://github.com/containers/podman/releases/tag/v6.1.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.0",
+      "name": "6.0",
+      "milestones": {
+        "ga": "2026-06-24",
+        "eos": null,
+        "eossec": "2026-08-12",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.0",
+        "codename": null,
+        "label": "6.0",
+        "releaseDate": "2026-06-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-08-12",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.0.2",
+          "date": "2026-07-21",
+          "link": "https://github.com/containers/podman/releases/tag/v6.0.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.8",
+      "name": "5.8",
+      "milestones": {
+        "ga": "2026-02-12",
+        "eos": null,
+        "eossec": "2026-09-26",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.8",
+        "codename": null,
+        "label": "5.8",
+        "releaseDate": "2026-02-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2026-09-26",
+        "isMaintained": true,
+        "latest": {
+          "name": "5.8.7",
+          "date": "2026-09-16",
+          "link": "https://github.com/containers/podman/releases/tag/v5.8.7"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.7",
+      "name": "5.7",
+      "milestones": {
+        "ga": "2025-11-11",
+        "eos": null,
+        "eossec": "2026-02-12",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.7",
+        "codename": null,
+        "label": "5.7",
+        "releaseDate": "2025-11-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-02-12",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.7.1",
+          "date": "2025-12-09",
+          "link": "https://github.com/containers/podman/releases/tag/v5.7.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.6",
+      "name": "5.6",
+      "milestones": {
+        "ga": "2025-08-15",
+        "eos": null,
+        "eossec": "2025-11-11",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.6",
+        "codename": null,
+        "label": "5.6",
+        "releaseDate": "2025-08-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-11-11",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.6.2",
+          "date": "2025-09-30",
+          "link": "https://github.com/containers/podman/releases/tag/v5.6.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.5",
+      "name": "5.5",
+      "milestones": {
+        "ga": "2025-05-13",
+        "eos": null,
+        "eossec": "2025-08-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.5",
+        "codename": null,
+        "label": "5.5",
+        "releaseDate": "2025-05-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-08-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.5.2",
+          "date": "2025-06-24",
+          "link": "https://github.com/containers/podman/releases/tag/v5.5.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.4",
+      "name": "5.4",
+      "milestones": {
+        "ga": "2025-02-11",
+        "eos": null,
+        "eossec": "2025-05-13",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.4",
+        "codename": null,
+        "label": "5.4",
+        "releaseDate": "2025-02-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-05-13",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.4.2",
+          "date": "2025-04-02",
+          "link": "https://github.com/containers/podman/releases/tag/v5.4.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.3",
+      "name": "5.3",
+      "milestones": {
+        "ga": "2024-11-12",
+        "eos": null,
+        "eossec": "2025-02-11",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.3",
+        "codename": null,
+        "label": "5.3",
+        "releaseDate": "2024-11-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-02-11",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.3.2",
+          "date": "2025-01-21",
+          "link": "https://github.com/containers/podman/releases/tag/v5.3.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.2",
+      "name": "5.2",
+      "milestones": {
+        "ga": "2024-08-01",
+        "eos": null,
+        "eossec": "2024-11-12",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.2",
+        "codename": null,
+        "label": "5.2",
+        "releaseDate": "2024-08-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-11-12",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.2.5",
+          "date": "2024-10-18",
+          "link": "https://github.com/containers/podman/releases/tag/v5.2.5"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.1",
+      "name": "5.1",
+      "milestones": {
+        "ga": "2024-05-29",
+        "eos": null,
+        "eossec": "2024-08-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.1",
+        "codename": null,
+        "label": "5.1",
+        "releaseDate": "2024-05-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-08-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.1.2",
+          "date": "2024-07-10",
+          "link": "https://github.com/containers/podman/releases/tag/v5.1.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.0",
+      "name": "5.0",
+      "milestones": {
+        "ga": "2024-03-19",
+        "eos": null,
+        "eossec": "2024-05-29",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.0",
+        "codename": null,
+        "label": "5.0",
+        "releaseDate": "2024-03-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-05-29",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.0.3",
+          "date": "2024-05-10",
+          "link": "https://github.com/containers/podman/releases/tag/v5.0.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.9",
+      "name": "4.9",
+      "milestones": {
+        "ga": "2024-01-22",
+        "eos": null,
+        "eossec": "2024-05-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.9",
+        "codename": null,
+        "label": "4.9",
+        "releaseDate": "2024-01-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-05-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.9.5",
+          "date": "2024-05-30",
+          "link": "https://github.com/containers/podman/releases/tag/v4.9.5"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.8",
+      "name": "4.8",
+      "milestones": {
+        "ga": "2023-11-27",
+        "eos": null,
+        "eossec": "2024-01-03",
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.8",
+        "codename": null,
+        "label": "4.8",
+        "releaseDate": "2023-11-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-01-03",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.8.3",
+          "date": "2024-01-03",
+          "link": "https://github.com/containers/podman/releases/tag/v4.8.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.7",
+      "name": "4.7",
+      "milestones": {
+        "ga": "2023-09-27",
+        "eos": null,
+        "eossec": "2023-10-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.7",
+        "codename": null,
+        "label": "4.7",
+        "releaseDate": "2023-09-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-10-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.7.2",
+          "date": "2023-10-31",
+          "link": "https://github.com/containers/podman/releases/tag/v4.7.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.6",
+      "name": "4.6",
+      "milestones": {
+        "ga": "2023-07-20",
+        "eos": null,
+        "eossec": "2023-08-28",
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.6",
+        "codename": null,
+        "label": "4.6",
+        "releaseDate": "2023-07-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-08-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.6.2",
+          "date": "2023-08-28",
+          "link": "https://github.com/containers/podman/releases/tag/v4.6.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.5",
+      "name": "4.5",
+      "milestones": {
+        "ga": "2023-04-14",
+        "eos": null,
+        "eossec": "2023-05-26",
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.5",
+        "codename": null,
+        "label": "4.5",
+        "releaseDate": "2023-04-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-05-26",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.5.1",
+          "date": "2023-05-26",
+          "link": "https://github.com/containers/podman/releases/tag/v4.5.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.4",
+      "name": "4.4",
+      "milestones": {
+        "ga": "2023-02-01",
+        "eos": null,
+        "eossec": "2023-03-27",
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.4",
+        "codename": null,
+        "label": "4.4",
+        "releaseDate": "2023-02-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-03-27",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.4.4",
+          "date": "2023-03-27",
+          "link": "https://github.com/containers/podman/releases/tag/v4.4.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.3",
+      "name": "4.3",
+      "milestones": {
+        "ga": "2022-10-18",
+        "eos": null,
+        "eossec": "2022-11-10",
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.3",
+        "codename": null,
+        "label": "4.3",
+        "releaseDate": "2022-10-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-11-10",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.3.1",
+          "date": "2022-11-10",
+          "link": "https://github.com/containers/podman/releases/tag/v4.3.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.2",
+      "name": "4.2",
+      "milestones": {
+        "ga": "2022-08-10",
+        "eos": null,
+        "eossec": "2022-09-06",
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.2",
+        "codename": null,
+        "label": "4.2",
+        "releaseDate": "2022-08-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-09-06",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.2.1",
+          "date": "2022-09-06",
+          "link": "https://github.com/containers/podman/releases/tag/v4.2.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.1",
+      "name": "4.1",
+      "milestones": {
+        "ga": "2022-05-05",
+        "eos": null,
+        "eossec": "2022-06-14",
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.1",
+        "codename": null,
+        "label": "4.1",
+        "releaseDate": "2022-05-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-06-14",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.1.1",
+          "date": "2022-06-14",
+          "link": "https://github.com/containers/podman/releases/tag/v4.1.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.0",
+      "name": "4.0",
+      "milestones": {
+        "ga": "2022-02-17",
+        "eos": null,
+        "eossec": "2022-04-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.0",
+        "codename": null,
+        "label": "4.0",
+        "releaseDate": "2022-02-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-04-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.0.3",
+          "date": "2022-04-01",
+          "link": "https://github.com/containers/podman/releases/tag/v4.0.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.4",
+      "name": "3.4",
+      "milestones": {
+        "ga": "2021-09-30",
+        "eos": null,
+        "eossec": "2022-04-20",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.4",
+        "codename": null,
+        "label": "3.4",
+        "releaseDate": "2021-09-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-04-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.4.7",
+          "date": "2022-04-20",
+          "link": "https://github.com/containers/podman/releases/tag/v3.4.7"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.3",
+      "name": "3.3",
+      "milestones": {
+        "ga": "2021-08-20",
+        "eos": null,
+        "eossec": "2021-08-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.3",
+        "codename": null,
+        "label": "3.3",
+        "releaseDate": "2021-08-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-08-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.3.1",
+          "date": "2021-08-30",
+          "link": "https://github.com/containers/podman/releases/tag/v3.3.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.2",
+      "name": "3.2",
+      "milestones": {
+        "ga": "2021-06-03",
+        "eos": null,
+        "eossec": "2021-07-16",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.2",
+        "codename": null,
+        "label": "3.2",
+        "releaseDate": "2021-06-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-07-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.2.3",
+          "date": "2021-07-16",
+          "link": "https://github.com/containers/podman/releases/tag/v3.2.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.1",
+      "name": "3.1",
+      "milestones": {
+        "ga": "2021-03-29",
+        "eos": null,
+        "eossec": "2021-04-21",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.1",
+        "codename": null,
+        "label": "3.1",
+        "releaseDate": "2021-03-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-04-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.1.2",
+          "date": "2021-04-21",
+          "link": "https://github.com/containers/podman/releases/tag/v3.1.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.0",
+      "name": "3.0",
+      "milestones": {
+        "ga": "2021-02-11",
+        "eos": null,
+        "eossec": "2022-05-16",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.0",
+        "codename": null,
+        "label": "3.0",
+        "releaseDate": "2021-02-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-05-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.0.2",
+          "date": "2022-05-16",
+          "link": "https://github.com/containers/podman/releases/tag/v3.0.2"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/podman/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-17T00:08:37+00:00"
+  }
+}

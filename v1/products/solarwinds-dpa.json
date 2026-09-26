@@ -1,0 +1,62 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "solarwinds-dpa",
+  "name": "SolarWinds DPA",
+  "category": "software",
+  "upstream_category": "app",
+  "identifiers": [],
+  "labels": {
+    "eol": "EoL effective date"
+  },
+  "links": {
+    "html": "https://documentation.solarwinds.com/en/success_center/dpa/content/release_notes/release_history.htm"
+  },
+  "releases": [
+    {
+      "id": "2024.2",
+      "name": "2024.2",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2027-06-30"
+      },
+      "upstream": {
+        "name": "2024.2",
+        "cells": {
+          "version": "2024.2",
+          "announcement": "March 10, 2026 End-of-Life (EoL) announcement - Customers on DPA version 2024.2 or earlier should begin transitioning to the latest version of DPA.",
+          "eoe": "June 30, 2026 End-of-Engineering (EoE) - Service releases, bug fixes, workarounds, and service packs for DPA version  2024.2  or earlier will no longer actively be supported by SolarWinds.",
+          "eol": "June 30, 2027 End-of-Life (EoL) - SolarWinds will no longer provide technical support for DPA version  2024.2  or earlier."
+        },
+        "table": "Supported versions with end-of-life announcements"
+      }
+    },
+    {
+      "id": "2023.4.300",
+      "name": "2023.4.300",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2027-02-18"
+      },
+      "upstream": {
+        "name": "2023.4.300",
+        "cells": {
+          "version": "2023.4.300",
+          "announcement": "November 18, 2025 End-of-Life (EoL) announcement - Customers on DPA version 2023.4 or earlier should begin transitioning to the latest version of DPA.",
+          "eoe": "February 18, 2026 End-of-Engineering (EoE) - Service releases, bug fixes, workarounds, and service packs for DPA version 2023.4  or earlier will no longer actively be supported by SolarWinds.",
+          "eol": "February 18, 2027 End-of-Life (EoL) - SolarWinds will no longer provide technical support for DPA version 2023.4  or earlier."
+        },
+        "table": "Supported versions with end-of-life announcements"
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://documentation.solarwinds.com/en/success_center/dpa/content/release_notes/release_history.htm",
+    "verifier": "deterministic-solarwinds",
+    "last_checked": "2026-09-26T14:46:40Z",
+    "upstream_modified": null
+  }
+}

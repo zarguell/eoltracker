@@ -1,0 +1,2849 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TeamCity On-Premises lifecycle dates — EOL Tracker</title>
+<meta name="description" content="General availability, end-of-sale, security-support and end-of-life dates for every TeamCity On-Premises release, with raw source values and provenance.">
+<link rel="canonical" href="https://zarguell.github.io/eoltracker/products/teamcity/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EOL Tracker">
+<meta property="og:title" content="TeamCity On-Premises lifecycle dates — EOL Tracker">
+<meta property="og:description" content="General availability, end-of-sale, security-support and end-of-life dates for every TeamCity On-Premises release, with raw source values and provenance.">
+<meta property="og:url" content="https://zarguell.github.io/eoltracker/products/teamcity/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d1b2a'/%3E%3Cpath d='M7 20.5l5-6 4 4.5 4-6.5 5 8' fill='none' stroke='%234fd1c5' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/eoltracker/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="shell masthead-inner">
+    <a class="wordmark" href="/eoltracker/">EOL<span>Tracker</span></a>
+    <nav class="mainnav" aria-label="Primary">
+      <a href="/eoltracker/">Software</a>
+      <a href="/eoltracker/hardware/">Hardware</a>
+      <a href="/eoltracker/api/">API &amp; data</a>
+      <a href="/eoltracker/why/">Why EOL</a>
+      <a href="https://endoflife.date/" rel="noopener">endoflife.date</a>
+    </nav>
+    <p class="masthead-meta">542 products · 9171 releases · 7169 hardware records</p>
+  </div>
+</header>
+
+<main class="shell" id="main">
+<nav class="crumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/eoltracker/">Catalog</a></li>
+    <li aria-current="page">TeamCity On-Premises</li>
+  </ol>
+</nav>
+
+<section class="hero product-hero">
+  <p class="eyebrow">server-app · software · vendor collector</p>
+  <h1 class="page-title">TeamCity On-Premises</h1>
+  <p class="lead">
+    36 releases published by JetBrains TeamCity release cycle from the vendor's
+    own lifecycle table, with each row's cells kept verbatim beneath the normalized dates. Identifier for this
+    record: <code>teamcity</code>.
+  </p>
+  <p class="hero-meta">
+    Verified Sep 23, 2026 at 17:32 UTC by <code>deterministic-teamcity</code>.
+Source: JetBrains TeamCity release cycle.    Upstream publishes no modification timestamp for this product.
+    Last catalog refresh <time datetime="2026-09-17T18:35:21Z">Sep 17, 2026 at 18:35 UTC</time>.
+  </p>
+  <p class="product-links">
+    <a class="button" href="/eoltracker/v1/products/teamcity.json">JSON record</a>
+    <a class="button" href="https://www.jetbrains.com/help/teamcity/previous-releases-downloads.html" rel="noopener">Source: TeamCity On-Premises releases</a>
+<a class="button" href="https://www.jetbrains.com/help/teamcity/previous-releases-downloads.html" rel="noopener">html</a><a class="button" href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">release cycle policy</a>  </p>
+</section>
+
+<section class="panel" aria-labelledby="coverage-title">
+  <h2 class="panel-title" id="coverage-title">Data coverage</h2>
+  <p class="panel-note">
+    Upstream does not publish every milestone for every release. Empty cells are unknown dates, not implied support;
+    any calculated date is labeled derived and carries its rule above.
+  </p>
+  <ul class="bars">
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">General availability</span>
+        <span class="bar-value">36 / 36 releases (100%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="General availability: 36 of 36 releases have a published date">
+        <div class="bar-fill" style="width: 100%"></div>
+      </div>
+    </li>
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">End of sale</span>
+        <span class="bar-value">35 / 36 releases (97%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="End of sale: 35 of 36 releases have a published date">
+        <div class="bar-fill" style="width: 97%"></div>
+      </div>
+    </li>
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">End of security support</span>
+        <span class="bar-value">0 / 36 releases (0%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="End of security support: 0 of 36 releases have a published date">
+        <div class="bar-fill" style="width: 0%"></div>
+      </div>
+    </li>
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">End of life</span>
+        <span class="bar-value">34 / 36 releases (94%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="End of life: 34 of 36 releases have a published date">
+        <div class="bar-fill" style="width: 94%"></div>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section class="panel" aria-labelledby="legend-title">
+  <h2 class="panel-title" id="legend-title">How to read these dates</h2>
+  <p class="panel-note">
+    The milestone meanings below are the catalog's shared vocabulary. The endoflife.date label rules do not apply to
+    this record: dates are either mapped from the vendor's own cells or derived from an explicit vendor rule. Every
+    source row and every derivation input is retained for review.
+  </p>
+  <dl class="legend">
+    <div class="legend-row">
+      <dt>General availability</dt>
+      <dd>
+        <p>First public release. Taken from the upstream releaseDate.</p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>End of sale</dt>
+      <dd>
+        <p>Last day new licenses or units are sold. Only mapped from an upstream field whose label names an end of sale.</p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>End of security support</dt>
+      <dd>
+        <p>Last day security fixes are published. Mapped from eolFrom or eoesFrom only when the label names security support.</p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>End of life</dt>
+      <dd>
+        <p>End of all support. A published extended-support date wins; otherwise eolFrom when its label describes a full support end.</p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>Blank date</dt>
+      <dd><p>The source publishes no value for that milestone. A missing date is an absent announcement, not a claim that support ends or continues.</p></dd>
+    </div>
+    <div class="legend-row">
+      <dt>Derived date</dt>
+      <dd><p>A date marked <span class="tag tag-derived">derived</span> is computed from a rule the vendor states — an explicit duration, a release trigger, or a parent platform's lifecycle — applied to a published base date, never from release cadence. The method, base date, quote and source are printed in the <a href="#derived-title">derived dates</a> block, so the date can be recomputed. It is excluded from the upcoming-deadlines list, the day-precision feeds and the OpenEoX export, each with its reason published.</p></dd>
+    </div>
+  </dl>
+</section>
+
+<section class="panel derived-panel" aria-labelledby="derived-title">
+  <h2 class="panel-title" id="derived-title">Derived dates</h2>
+  <p class="panel-note">
+    These milestones are not dates the vendor states. Each one is computed from a rule the vendor
+    <em>does</em> state — an explicit support duration, the release that ends the line, or a parent
+    platform whose lifecycle this product follows — applied to a base date that is also published.
+    The base, the rule and the sentence it came from are quoted below, so every date here can be
+    recomputed and checked rather than taken on trust. They are labelled <span class="tag tag-derived">derived</span>
+    everywhere they appear, they are kept out of the upcoming-deadlines list above, and they are
+    excluded from the day-precision feeds and the OpenEoX export, both of which carry only days a
+    source states.
+  </p>
+  <ul class="derived-list">
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 2026.1</span>
+        <span class="derived-milestone">eos</span>
+        <time datetime="2026-09-02">Sep 2, 2026</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2026-05-11">May 11, 2026</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2026.2 of 2026-09-02.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2026.2</code> — the next major version, <time datetime="2026-09-02">Sep 2, 2026</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs for the previous major version with the release of the next major version.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 2025.11</span>
+        <span class="derived-milestone">eos</span>
+        <time datetime="2026-05-11">May 11, 2026</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2025-11-27">Nov 27, 2025</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2026.1 of 2026-05-11.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2026.1</code> — the next major version, <time datetime="2026-05-11">May 11, 2026</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs for the previous major version with the release of the next major version.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 2025.11</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2026-09-02">Sep 2, 2026</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2025-11-27">Nov 27, 2025</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2026.2 of 2026-09-02.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2026.2</code> — the second newer major version, <time datetime="2026-09-02">Sep 2, 2026</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs with the release of two newer major versions.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 2025.07</span>
+        <span class="derived-milestone">eos</span>
+        <time datetime="2025-11-27">Nov 27, 2025</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2025-07-23">Jul 23, 2025</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2025.11 of 2025-11-27.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2025.11</code> — the next major version, <time datetime="2025-11-27">Nov 27, 2025</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs for the previous major version with the release of the next major version.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 2025.07</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2026-05-11">May 11, 2026</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2025-07-23">Jul 23, 2025</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2026.1 of 2026-05-11.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2026.1</code> — the second newer major version, <time datetime="2026-05-11">May 11, 2026</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs with the release of two newer major versions.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 2025.03</span>
+        <span class="derived-milestone">eos</span>
+        <time datetime="2025-07-23">Jul 23, 2025</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2025-03-20">Mar 20, 2025</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2025.07 of 2025-07-23.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2025.07</code> — the next major version, <time datetime="2025-07-23">Jul 23, 2025</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs for the previous major version with the release of the next major version.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 2025.03</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2025-11-27">Nov 27, 2025</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2025-03-20">Mar 20, 2025</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2025.11 of 2025-11-27.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2025.11</code> — the second newer major version, <time datetime="2025-11-27">Nov 27, 2025</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs with the release of two newer major versions.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 2024.12</span>
+        <span class="derived-milestone">eos</span>
+        <time datetime="2025-03-20">Mar 20, 2025</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2024-12-05">Dec 5, 2024</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2025.03 of 2025-03-20.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2025.03</code> — the next major version, <time datetime="2025-03-20">Mar 20, 2025</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs for the previous major version with the release of the next major version.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 2024.12</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2025-07-23">Jul 23, 2025</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2024-12-05">Dec 5, 2024</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2025.07 of 2025-07-23.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2025.07</code> — the second newer major version, <time datetime="2025-07-23">Jul 23, 2025</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs with the release of two newer major versions.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 2024.07</span>
+        <span class="derived-milestone">eos</span>
+        <time datetime="2024-12-05">Dec 5, 2024</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2024-07-18">Jul 18, 2024</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2024.12 of 2024-12-05.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2024.12</code> — the next major version, <time datetime="2024-12-05">Dec 5, 2024</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs for the previous major version with the release of the next major version.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 2024.07</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2025-03-20">Mar 20, 2025</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2024-07-18">Jul 18, 2024</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2025.03 of 2025-03-20.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2025.03</code> — the second newer major version, <time datetime="2025-03-20">Mar 20, 2025</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs with the release of two newer major versions.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 2024.03</span>
+        <span class="derived-milestone">eos</span>
+        <time datetime="2024-07-18">Jul 18, 2024</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2024-03-27">Mar 27, 2024</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2024.07 of 2024-07-18.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2024.07</code> — the next major version, <time datetime="2024-07-18">Jul 18, 2024</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs for the previous major version with the release of the next major version.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 2024.03</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2024-12-05">Dec 5, 2024</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2024-03-27">Mar 27, 2024</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2024.12 of 2024-12-05.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2024.12</code> — the second newer major version, <time datetime="2024-12-05">Dec 5, 2024</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs with the release of two newer major versions.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 2023.11</span>
+        <span class="derived-milestone">eos</span>
+        <time datetime="2024-03-27">Mar 27, 2024</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2023-11-28">Nov 28, 2023</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2024.03 of 2024-03-27.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2024.03</code> — the next major version, <time datetime="2024-03-27">Mar 27, 2024</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs for the previous major version with the release of the next major version.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 2023.11</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2024-07-18">Jul 18, 2024</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2023-11-28">Nov 28, 2023</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2024.07 of 2024-07-18.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2024.07</code> — the second newer major version, <time datetime="2024-07-18">Jul 18, 2024</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs with the release of two newer major versions.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 2023.05</span>
+        <span class="derived-milestone">eos</span>
+        <time datetime="2023-11-28">Nov 28, 2023</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2023-05-26">May 26, 2023</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2023.11 of 2023-11-28.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2023.11</code> — the next major version, <time datetime="2023-11-28">Nov 28, 2023</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs for the previous major version with the release of the next major version.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 2023.05</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2024-03-27">Mar 27, 2024</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2023-05-26">May 26, 2023</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2024.03 of 2024-03-27.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2024.03</code> — the second newer major version, <time datetime="2024-03-27">Mar 27, 2024</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs with the release of two newer major versions.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 2022.10</span>
+        <span class="derived-milestone">eos</span>
+        <time datetime="2023-05-26">May 26, 2023</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2022-10-27">Oct 27, 2022</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2023.05 of 2023-05-26.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2023.05</code> — the next major version, <time datetime="2023-05-26">May 26, 2023</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs for the previous major version with the release of the next major version.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 2022.10</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2023-11-28">Nov 28, 2023</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2022-10-27">Oct 27, 2022</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2023.11 of 2023-11-28.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2023.11</code> — the second newer major version, <time datetime="2023-11-28">Nov 28, 2023</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs with the release of two newer major versions.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 2022.04</span>
+        <span class="derived-milestone">eos</span>
+        <time datetime="2022-10-27">Oct 27, 2022</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2022-04-28">Apr 28, 2022</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2022.10 of 2022-10-27.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2022.10</code> — the next major version, <time datetime="2022-10-27">Oct 27, 2022</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs for the previous major version with the release of the next major version.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 2022.04</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2023-05-26">May 26, 2023</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2022-04-28">Apr 28, 2022</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2023.05 of 2023-05-26.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2023.05</code> — the second newer major version, <time datetime="2023-05-26">May 26, 2023</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs with the release of two newer major versions.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 2021.2</span>
+        <span class="derived-milestone">eos</span>
+        <time datetime="2022-04-28">Apr 28, 2022</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2021-10-25">Oct 25, 2021</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2022.04 of 2022-04-28.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2022.04</code> — the next major version, <time datetime="2022-04-28">Apr 28, 2022</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs for the previous major version with the release of the next major version.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 2021.2</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2022-10-27">Oct 27, 2022</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2021-10-25">Oct 25, 2021</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2022.10 of 2022-10-27.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2022.10</code> — the second newer major version, <time datetime="2022-10-27">Oct 27, 2022</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs with the release of two newer major versions.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 2021.1</span>
+        <span class="derived-milestone">eos</span>
+        <time datetime="2021-10-25">Oct 25, 2021</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2021-05-20">May 20, 2021</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2021.2 of 2021-10-25.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2021.2</code> — the next major version, <time datetime="2021-10-25">Oct 25, 2021</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs for the previous major version with the release of the next major version.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 2021.1</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2022-04-28">Apr 28, 2022</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2021-05-20">May 20, 2021</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2022.04 of 2022-04-28.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2022.04</code> — the second newer major version, <time datetime="2022-04-28">Apr 28, 2022</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs with the release of two newer major versions.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 2020.2</span>
+        <span class="derived-milestone">eos</span>
+        <time datetime="2021-05-20">May 20, 2021</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2020-11-23">Nov 23, 2020</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2021.1 of 2021-05-20.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2021.1</code> — the next major version, <time datetime="2021-05-20">May 20, 2021</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs for the previous major version with the release of the next major version.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 2020.2</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2021-10-25">Oct 25, 2021</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2020-11-23">Nov 23, 2020</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2021.2 of 2021-10-25.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2021.2</code> — the second newer major version, <time datetime="2021-10-25">Oct 25, 2021</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs with the release of two newer major versions.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 2020.1</span>
+        <span class="derived-milestone">eos</span>
+        <time datetime="2020-11-23">Nov 23, 2020</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2020-05-18">May 18, 2020</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2020.2 of 2020-11-23.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2020.2</code> — the next major version, <time datetime="2020-11-23">Nov 23, 2020</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs for the previous major version with the release of the next major version.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 2020.1</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2021-05-20">May 20, 2021</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2020-05-18">May 18, 2020</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2021.1 of 2021-05-20.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2021.1</code> — the second newer major version, <time datetime="2021-05-20">May 20, 2021</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs with the release of two newer major versions.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 2019.2</span>
+        <span class="derived-milestone">eos</span>
+        <time datetime="2020-05-18">May 18, 2020</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2019-12-09">Dec 9, 2019</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2020.1 of 2020-05-18.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2020.1</code> — the next major version, <time datetime="2020-05-18">May 18, 2020</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs for the previous major version with the release of the next major version.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 2019.2</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2020-11-23">Nov 23, 2020</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2019-12-09">Dec 9, 2019</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2020.2 of 2020-11-23.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2020.2</code> — the second newer major version, <time datetime="2020-11-23">Nov 23, 2020</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs with the release of two newer major versions.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 2019.1</span>
+        <span class="derived-milestone">eos</span>
+        <time datetime="2019-12-09">Dec 9, 2019</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2019-05-23">May 23, 2019</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2019.2 of 2019-12-09.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2019.2</code> — the next major version, <time datetime="2019-12-09">Dec 9, 2019</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs for the previous major version with the release of the next major version.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 2019.1</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2020-05-18">May 18, 2020</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2019-05-23">May 23, 2019</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2020.1 of 2020-05-18.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2020.1</code> — the second newer major version, <time datetime="2020-05-18">May 18, 2020</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs with the release of two newer major versions.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 2018.2</span>
+        <span class="derived-milestone">eos</span>
+        <time datetime="2019-05-23">May 23, 2019</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2018-12-06">Dec 6, 2018</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2019.1 of 2019-05-23.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2019.1</code> — the next major version, <time datetime="2019-05-23">May 23, 2019</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs for the previous major version with the release of the next major version.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 2018.2</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2019-12-09">Dec 9, 2019</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2018-12-06">Dec 6, 2018</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2019.2 of 2019-12-09.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2019.2</code> — the second newer major version, <time datetime="2019-12-09">Dec 9, 2019</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs with the release of two newer major versions.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 2018.1</span>
+        <span class="derived-milestone">eos</span>
+        <time datetime="2018-12-06">Dec 6, 2018</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2018-06-21">Jun 21, 2018</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2018.2 of 2018-12-06.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2018.2</code> — the next major version, <time datetime="2018-12-06">Dec 6, 2018</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs for the previous major version with the release of the next major version.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 2018.1</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2019-05-23">May 23, 2019</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2018-06-21">Jun 21, 2018</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2019.1 of 2019-05-23.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2019.1</code> — the second newer major version, <time datetime="2019-05-23">May 23, 2019</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs with the release of two newer major versions.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 2017.2</span>
+        <span class="derived-milestone">eos</span>
+        <time datetime="2018-06-21">Jun 21, 2018</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2017-11-27">Nov 27, 2017</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2018.1 of 2018-06-21.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2018.1</code> — the next major version, <time datetime="2018-06-21">Jun 21, 2018</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs for the previous major version with the release of the next major version.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 2017.2</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2018-12-06">Dec 6, 2018</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2017-11-27">Nov 27, 2017</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2018.2 of 2018-12-06.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2018.2</code> — the second newer major version, <time datetime="2018-12-06">Dec 6, 2018</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs with the release of two newer major versions.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 2017.1</span>
+        <span class="derived-milestone">eos</span>
+        <time datetime="2017-11-27">Nov 27, 2017</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2017-04-10">Apr 10, 2017</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2017.2 of 2017-11-27.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2017.2</code> — the next major version, <time datetime="2017-11-27">Nov 27, 2017</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs for the previous major version with the release of the next major version.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 2017.1</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2018-06-21">Jun 21, 2018</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2017-04-10">Apr 10, 2017</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2018.1 of 2018-06-21.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2018.1</code> — the second newer major version, <time datetime="2018-06-21">Jun 21, 2018</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs with the release of two newer major versions.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 10.0</span>
+        <span class="derived-milestone">eos</span>
+        <time datetime="2017-04-10">Apr 10, 2017</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2016-07-21">Jul 21, 2016</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2017.1 of 2017-04-10.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2017.1</code> — the next major version, <time datetime="2017-04-10">Apr 10, 2017</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs for the previous major version with the release of the next major version.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 10.0</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2017-11-27">Nov 27, 2017</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2016-07-21">Jul 21, 2016</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2017.2 of 2017-11-27.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2017.2</code> — the second newer major version, <time datetime="2017-11-27">Nov 27, 2017</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs with the release of two newer major versions.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 9.1</span>
+        <span class="derived-milestone">eos</span>
+        <time datetime="2016-07-21">Jul 21, 2016</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2015-07-15">Jul 15, 2015</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 10.0 of 2016-07-21.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>10.0</code> — the next major version, <time datetime="2016-07-21">Jul 21, 2016</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs for the previous major version with the release of the next major version.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 9.1</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2017-04-10">Apr 10, 2017</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2015-07-15">Jul 15, 2015</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 2017.1 of 2017-04-10.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>2017.1</code> — the second newer major version, <time datetime="2017-04-10">Apr 10, 2017</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs with the release of two newer major versions.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 9.0</span>
+        <span class="derived-milestone">eos</span>
+        <time datetime="2015-07-15">Jul 15, 2015</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2014-12-11">Dec 11, 2014</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 9.1 of 2015-07-15.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>9.1</code> — the next major version, <time datetime="2015-07-15">Jul 15, 2015</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs for the previous major version with the release of the next major version.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 9.0</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2016-07-21">Jul 21, 2016</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2014-12-11">Dec 11, 2014</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 10.0 of 2016-07-21.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>10.0</code> — the second newer major version, <time datetime="2016-07-21">Jul 21, 2016</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs with the release of two newer major versions.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 8.1</span>
+        <span class="derived-milestone">eos</span>
+        <time datetime="2014-12-11">Dec 11, 2014</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2014-02-12">Feb 12, 2014</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 9.0 of 2014-12-11.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>9.0</code> — the next major version, <time datetime="2014-12-11">Dec 11, 2014</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs for the previous major version with the release of the next major version.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 8.1</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2015-07-15">Jul 15, 2015</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2014-02-12">Feb 12, 2014</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 9.1 of 2015-07-15.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>9.1</code> — the second newer major version, <time datetime="2015-07-15">Jul 15, 2015</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs with the release of two newer major versions.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 8.0</span>
+        <span class="derived-milestone">eos</span>
+        <time datetime="2014-02-12">Feb 12, 2014</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2013-06-20">Jun 20, 2013</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 8.1 of 2014-02-12.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>8.1</code> — the next major version, <time datetime="2014-02-12">Feb 12, 2014</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs for the previous major version with the release of the next major version.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 8.0</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2014-12-11">Dec 11, 2014</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2013-06-20">Jun 20, 2013</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 9.0 of 2014-12-11.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>9.0</code> — the second newer major version, <time datetime="2014-12-11">Dec 11, 2014</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs with the release of two newer major versions.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 7.1</span>
+        <span class="derived-milestone">eos</span>
+        <time datetime="2013-06-20">Jun 20, 2013</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2012-08-07">Aug 7, 2012</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 8.0 of 2013-06-20.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>8.0</code> — the next major version, <time datetime="2013-06-20">Jun 20, 2013</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs for the previous major version with the release of the next major version.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 7.1</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2014-02-12">Feb 12, 2014</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2012-08-07">Aug 7, 2012</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 8.1 of 2014-02-12.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>8.1</code> — the second newer major version, <time datetime="2014-02-12">Feb 12, 2014</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs with the release of two newer major versions.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 7.0</span>
+        <span class="derived-milestone">eos</span>
+        <time datetime="2012-08-07">Aug 7, 2012</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2012-02-22">Feb 22, 2012</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 7.1 of 2012-08-07.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>7.1</code> — the next major version, <time datetime="2012-08-07">Aug 7, 2012</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs for the previous major version with the release of the next major version.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 7.0</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2013-06-20">Jun 20, 2013</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2012-02-22">Feb 22, 2012</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 8.0 of 2013-06-20.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>8.0</code> — the second newer major version, <time datetime="2013-06-20">Jun 20, 2013</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs with the release of two newer major versions.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 6.5</span>
+        <span class="derived-milestone">eos</span>
+        <time datetime="2012-02-22">Feb 22, 2012</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2011-05-24">May 24, 2011</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 7.0 of 2012-02-22.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>7.0</code> — the next major version, <time datetime="2012-02-22">Feb 22, 2012</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs for the previous major version with the release of the next major version.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 6.5</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2012-08-07">Aug 7, 2012</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2011-05-24">May 24, 2011</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 7.1 of 2012-08-07.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>7.1</code> — the second newer major version, <time datetime="2012-08-07">Aug 7, 2012</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs with the release of two newer major versions.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 6.0</span>
+        <span class="derived-milestone">eos</span>
+        <time datetime="2011-05-24">May 24, 2011</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2010-11-30">Nov 30, 2010</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 6.5 of 2011-05-24.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>6.5</code> — the next major version, <time datetime="2011-05-24">May 24, 2011</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs for the previous major version with the release of the next major version.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 6.0</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2012-02-22">Feb 22, 2012</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2010-11-30">Nov 30, 2010</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 7.0 of 2012-02-22.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>7.0</code> — the second newer major version, <time datetime="2012-02-22">Feb 22, 2012</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs with the release of two newer major versions.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 5.1</span>
+        <span class="derived-milestone">eos</span>
+        <time datetime="2010-11-30">Nov 30, 2010</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2010-04-21">Apr 21, 2010</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 6.0 of 2010-11-30.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>6.0</code> — the next major version, <time datetime="2010-11-30">Nov 30, 2010</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs for the previous major version with the release of the next major version.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 5.1</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2011-05-24">May 24, 2011</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2010-04-21">Apr 21, 2010</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 6.5 of 2011-05-24.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>6.5</code> — the second newer major version, <time datetime="2011-05-24">May 24, 2011</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs with the release of two newer major versions.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 5.0</span>
+        <span class="derived-milestone">eos</span>
+        <time datetime="2010-04-21">Apr 21, 2010</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2009-12-02">Dec 2, 2009</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 5.1 of 2010-04-21.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>5.1</code> — the next major version, <time datetime="2010-04-21">Apr 21, 2010</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs for the previous major version with the release of the next major version.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 5.0</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2010-11-30">Nov 30, 2010</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2009-12-02">Dec 2, 2009</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 6.0 of 2010-11-30.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>6.0</code> — the second newer major version, <time datetime="2010-11-30">Nov 30, 2010</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs with the release of two newer major versions.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 4.5</span>
+        <span class="derived-milestone">eos</span>
+        <time datetime="2009-12-02">Dec 2, 2009</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2009-04-23">Apr 23, 2009</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 5.0 of 2009-12-02.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>5.0</code> — the next major version, <time datetime="2009-12-02">Dec 2, 2009</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs for the previous major version with the release of the next major version.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 4.5</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2010-04-21">Apr 21, 2010</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2009-04-23">Apr 23, 2009</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 5.1 of 2010-04-21.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>5.1</code> — the second newer major version, <time datetime="2010-04-21">Apr 21, 2010</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs with the release of two newer major versions.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 4.0</span>
+        <span class="derived-milestone">eos</span>
+        <time datetime="2009-04-23">Apr 23, 2009</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2008-12-10">Dec 10, 2008</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 4.5 of 2009-04-23.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>4.5</code> — the next major version, <time datetime="2009-04-23">Apr 23, 2009</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs for the previous major version with the release of the next major version.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 4.0</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2009-12-02">Dec 2, 2009</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2008-12-10">Dec 10, 2008</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 5.0 of 2009-12-02.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>5.0</code> — the second newer major version, <time datetime="2009-12-02">Dec 2, 2009</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs with the release of two newer major versions.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 3.1</span>
+        <span class="derived-milestone">eos</span>
+        <time datetime="2008-12-10">Dec 10, 2008</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2008-03-04">Mar 4, 2008</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 4.0 of 2008-12-10.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>4.0</code> — the next major version, <time datetime="2008-12-10">Dec 10, 2008</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs for the previous major version with the release of the next major version.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+    <li class="derived-item">
+      <p class="derived-head">
+        <span class="release-name">TeamCity On-Premises 3.1</span>
+        <span class="derived-milestone">eol</span>
+        <time datetime="2009-04-23">Apr 23, 2009</time>
+        <span class="tag tag-derived">derived</span>
+      </p>
+      <dl class="facts">
+        <div><dt>Method</dt><dd><code>release-trigger</code> — the vendor states which release ends this one&#39;s support.</dd></div>
+        <div><dt>Base date</dt><dd><time datetime="2008-03-04">Mar 4, 2008</time> — general availability.</dd></div>
+        <div><dt>Calculation</dt><dd>the release 4.5 of 2009-04-23.</dd></div>
+        <div><dt>Triggering release</dt><dd><code>4.5</code> — the second newer major version, <time datetime="2009-04-23">Apr 23, 2009</time>.</dd></div>
+        <div><dt>Source</dt><dd><a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></dd></div>
+      </dl>
+      <blockquote class="research-quote" cite="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html">
+        <p>Occurs with the release of two newer major versions.</p>
+        <footer>— the rule this date is derived from, stored verbatim from
+          <a href="https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html" rel="noopener">TeamCity On-Premises release cycle</a></footer>
+      </blockquote>
+    </li>
+  </ul>
+</section>
+
+
+<section class="releases" aria-labelledby="releases-title">
+  <div class="catalog-head">
+    <h2 class="panel-title" id="releases-title">Release lifecycle</h2>
+    <p class="catalog-count">36 releases</p>
+  </div>
+  <p class="panel-note">
+    Newest first. Cells show normalized dates; a secondary line shows the raw upstream field and label when the
+    normalized date differs from, or is absent despite, a published value.
+  </p>
+
+  <div class="table-scroll">
+    <table class="release-table">
+      <caption class="sr-only">Lifecycle dates for each TeamCity On-Premises release</caption>
+      <thead>
+        <tr>
+          <th scope="col">Release</th>
+          <th scope="col">General availability</th>
+          <th scope="col">End of sale</th>
+          <th scope="col">End of security support</th>
+          <th scope="col">End of life</th>
+          <th scope="col">Upstream status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">TeamCity On-Premises 2026.2</span>
+<code class="release-raw">2026.2</code>          </th>
+          <td class="milestone">
+            <time datetime="2026-09-02">Sep 2, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag">2026.2</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">TeamCity On-Premises 2026.1</span>
+<code class="release-raw">2026.1</code>          </th>
+          <td class="milestone">
+            <time datetime="2026-05-11">May 11, 2026</time>          </td>
+          <td class="milestone is-derived">
+            <time datetime="2026-09-02">Sep 2, 2026</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag">2026.1</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">TeamCity On-Premises 2025.11</span>
+<code class="release-raw">2025.11</code>          </th>
+          <td class="milestone">
+            <time datetime="2025-11-27">Nov 27, 2025</time>          </td>
+          <td class="milestone is-derived">
+            <time datetime="2026-05-11">May 11, 2026</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2026-09-02">Sep 2, 2026</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">2025.11</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">TeamCity On-Premises 2025.07</span>
+<code class="release-raw">2025.07</code>          </th>
+          <td class="milestone">
+            <time datetime="2025-07-23">Jul 23, 2025</time>          </td>
+          <td class="milestone is-derived">
+            <time datetime="2025-11-27">Nov 27, 2025</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2026-05-11">May 11, 2026</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">2025.07</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">TeamCity On-Premises 2025.03</span>
+<code class="release-raw">2025.03</code>          </th>
+          <td class="milestone">
+            <time datetime="2025-03-20">Mar 20, 2025</time>          </td>
+          <td class="milestone is-derived">
+            <time datetime="2025-07-23">Jul 23, 2025</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2025-11-27">Nov 27, 2025</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">2025.03</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">TeamCity On-Premises 2024.12</span>
+<code class="release-raw">2024.12</code>          </th>
+          <td class="milestone">
+            <time datetime="2024-12-05">Dec 5, 2024</time>          </td>
+          <td class="milestone is-derived">
+            <time datetime="2025-03-20">Mar 20, 2025</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2025-07-23">Jul 23, 2025</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">2024.12</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">TeamCity On-Premises 2024.07</span>
+<code class="release-raw">2024.07</code>          </th>
+          <td class="milestone">
+            <time datetime="2024-07-18">Jul 18, 2024</time>          </td>
+          <td class="milestone is-derived">
+            <time datetime="2024-12-05">Dec 5, 2024</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2025-03-20">Mar 20, 2025</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">2024.07</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">TeamCity On-Premises 2024.03</span>
+<code class="release-raw">2024.03</code>          </th>
+          <td class="milestone">
+            <time datetime="2024-03-27">Mar 27, 2024</time>          </td>
+          <td class="milestone is-derived">
+            <time datetime="2024-07-18">Jul 18, 2024</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2024-12-05">Dec 5, 2024</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">2024.03</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">TeamCity On-Premises 2023.11</span>
+<code class="release-raw">2023.11</code>          </th>
+          <td class="milestone">
+            <time datetime="2023-11-28">Nov 28, 2023</time>          </td>
+          <td class="milestone is-derived">
+            <time datetime="2024-03-27">Mar 27, 2024</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2024-07-18">Jul 18, 2024</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">2023.11</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">TeamCity On-Premises 2023.05</span>
+<code class="release-raw">2023.05</code>          </th>
+          <td class="milestone">
+            <time datetime="2023-05-26">May 26, 2023</time>          </td>
+          <td class="milestone is-derived">
+            <time datetime="2023-11-28">Nov 28, 2023</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2024-03-27">Mar 27, 2024</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">2023.05</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">TeamCity On-Premises 2022.10</span>
+<code class="release-raw">2022.10</code>          </th>
+          <td class="milestone">
+            <time datetime="2022-10-27">Oct 27, 2022</time>          </td>
+          <td class="milestone is-derived">
+            <time datetime="2023-05-26">May 26, 2023</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2023-11-28">Nov 28, 2023</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">2022.10</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">TeamCity On-Premises 2022.04</span>
+<code class="release-raw">2022.04</code>          </th>
+          <td class="milestone">
+            <time datetime="2022-04-28">Apr 28, 2022</time>          </td>
+          <td class="milestone is-derived">
+            <time datetime="2022-10-27">Oct 27, 2022</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2023-05-26">May 26, 2023</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">2022.04</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">TeamCity On-Premises 2021.2</span>
+<code class="release-raw">2021.2</code>          </th>
+          <td class="milestone">
+            <time datetime="2021-10-25">Oct 25, 2021</time>          </td>
+          <td class="milestone is-derived">
+            <time datetime="2022-04-28">Apr 28, 2022</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2022-10-27">Oct 27, 2022</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">2021.2</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">TeamCity On-Premises 2021.1</span>
+<code class="release-raw">2021.1</code>          </th>
+          <td class="milestone">
+            <time datetime="2021-05-20">May 20, 2021</time>          </td>
+          <td class="milestone is-derived">
+            <time datetime="2021-10-25">Oct 25, 2021</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2022-04-28">Apr 28, 2022</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">2021.1</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">TeamCity On-Premises 2020.2</span>
+<code class="release-raw">2020.2</code>          </th>
+          <td class="milestone">
+            <time datetime="2020-11-23">Nov 23, 2020</time>          </td>
+          <td class="milestone is-derived">
+            <time datetime="2021-05-20">May 20, 2021</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2021-10-25">Oct 25, 2021</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">2020.2</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">TeamCity On-Premises 2020.1</span>
+<code class="release-raw">2020.1</code>          </th>
+          <td class="milestone">
+            <time datetime="2020-05-18">May 18, 2020</time>          </td>
+          <td class="milestone is-derived">
+            <time datetime="2020-11-23">Nov 23, 2020</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2021-05-20">May 20, 2021</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">2020.1</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">TeamCity On-Premises 2019.2</span>
+<code class="release-raw">2019.2</code>          </th>
+          <td class="milestone">
+            <time datetime="2019-12-09">Dec 9, 2019</time>          </td>
+          <td class="milestone is-derived">
+            <time datetime="2020-05-18">May 18, 2020</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2020-11-23">Nov 23, 2020</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">2019.2</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">TeamCity On-Premises 2019.1</span>
+<code class="release-raw">2019.1</code>          </th>
+          <td class="milestone">
+            <time datetime="2019-05-23">May 23, 2019</time>          </td>
+          <td class="milestone is-derived">
+            <time datetime="2019-12-09">Dec 9, 2019</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2020-05-18">May 18, 2020</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">2019.1</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">TeamCity On-Premises 2018.2</span>
+<code class="release-raw">2018.2</code>          </th>
+          <td class="milestone">
+            <time datetime="2018-12-06">Dec 6, 2018</time>          </td>
+          <td class="milestone is-derived">
+            <time datetime="2019-05-23">May 23, 2019</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2019-12-09">Dec 9, 2019</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">2018.2</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">TeamCity On-Premises 2018.1</span>
+<code class="release-raw">2018.1</code>          </th>
+          <td class="milestone">
+            <time datetime="2018-06-21">Jun 21, 2018</time>          </td>
+          <td class="milestone is-derived">
+            <time datetime="2018-12-06">Dec 6, 2018</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2019-05-23">May 23, 2019</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">2018.1</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">TeamCity On-Premises 2017.2</span>
+<code class="release-raw">2017.2</code>          </th>
+          <td class="milestone">
+            <time datetime="2017-11-27">Nov 27, 2017</time>          </td>
+          <td class="milestone is-derived">
+            <time datetime="2018-06-21">Jun 21, 2018</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2018-12-06">Dec 6, 2018</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">2017.2</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">TeamCity On-Premises 2017.1</span>
+<code class="release-raw">2017.1</code>          </th>
+          <td class="milestone">
+            <time datetime="2017-04-10">Apr 10, 2017</time>          </td>
+          <td class="milestone is-derived">
+            <time datetime="2017-11-27">Nov 27, 2017</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2018-06-21">Jun 21, 2018</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">2017.1</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">TeamCity On-Premises 10.0</span>
+<code class="release-raw">10.0</code>          </th>
+          <td class="milestone">
+            <time datetime="2016-07-21">Jul 21, 2016</time>          </td>
+          <td class="milestone is-derived">
+            <time datetime="2017-04-10">Apr 10, 2017</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2017-11-27">Nov 27, 2017</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">10.0</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">TeamCity On-Premises 9.1</span>
+<code class="release-raw">9.1</code>          </th>
+          <td class="milestone">
+            <time datetime="2015-07-15">Jul 15, 2015</time>          </td>
+          <td class="milestone is-derived">
+            <time datetime="2016-07-21">Jul 21, 2016</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2017-04-10">Apr 10, 2017</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">9.1</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">TeamCity On-Premises 9.0</span>
+<code class="release-raw">9.0</code>          </th>
+          <td class="milestone">
+            <time datetime="2014-12-11">Dec 11, 2014</time>          </td>
+          <td class="milestone is-derived">
+            <time datetime="2015-07-15">Jul 15, 2015</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2016-07-21">Jul 21, 2016</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">9.0</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">TeamCity On-Premises 8.1</span>
+<code class="release-raw">8.1</code>          </th>
+          <td class="milestone">
+            <time datetime="2014-02-12">Feb 12, 2014</time>          </td>
+          <td class="milestone is-derived">
+            <time datetime="2014-12-11">Dec 11, 2014</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2015-07-15">Jul 15, 2015</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">8.1</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">TeamCity On-Premises 8.0</span>
+<code class="release-raw">8.0</code>          </th>
+          <td class="milestone">
+            <time datetime="2013-06-20">Jun 20, 2013</time>          </td>
+          <td class="milestone is-derived">
+            <time datetime="2014-02-12">Feb 12, 2014</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2014-12-11">Dec 11, 2014</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">8.0</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">TeamCity On-Premises 7.1</span>
+<code class="release-raw">7.1</code>          </th>
+          <td class="milestone">
+            <time datetime="2012-08-07">Aug 7, 2012</time>          </td>
+          <td class="milestone is-derived">
+            <time datetime="2013-06-20">Jun 20, 2013</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2014-02-12">Feb 12, 2014</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">7.1</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">TeamCity On-Premises 7.0</span>
+<code class="release-raw">7.0</code>          </th>
+          <td class="milestone">
+            <time datetime="2012-02-22">Feb 22, 2012</time>          </td>
+          <td class="milestone is-derived">
+            <time datetime="2012-08-07">Aug 7, 2012</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2013-06-20">Jun 20, 2013</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">7.0</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">TeamCity On-Premises 6.5</span>
+<code class="release-raw">6.5</code>          </th>
+          <td class="milestone">
+            <time datetime="2011-05-24">May 24, 2011</time>          </td>
+          <td class="milestone is-derived">
+            <time datetime="2012-02-22">Feb 22, 2012</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2012-08-07">Aug 7, 2012</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">6.5</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">TeamCity On-Premises 6.0</span>
+<code class="release-raw">6.0</code>          </th>
+          <td class="milestone">
+            <time datetime="2010-11-30">Nov 30, 2010</time>          </td>
+          <td class="milestone is-derived">
+            <time datetime="2011-05-24">May 24, 2011</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2012-02-22">Feb 22, 2012</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">6.0</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">TeamCity On-Premises 5.1</span>
+<code class="release-raw">5.1</code>          </th>
+          <td class="milestone">
+            <time datetime="2010-04-21">Apr 21, 2010</time>          </td>
+          <td class="milestone is-derived">
+            <time datetime="2010-11-30">Nov 30, 2010</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2011-05-24">May 24, 2011</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">5.1</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">TeamCity On-Premises 5.0</span>
+<code class="release-raw">5.0</code>          </th>
+          <td class="milestone">
+            <time datetime="2009-12-02">Dec 2, 2009</time>          </td>
+          <td class="milestone is-derived">
+            <time datetime="2010-04-21">Apr 21, 2010</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2010-11-30">Nov 30, 2010</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">5.0</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">TeamCity On-Premises 4.5</span>
+<code class="release-raw">4.5</code>          </th>
+          <td class="milestone">
+            <time datetime="2009-04-23">Apr 23, 2009</time>          </td>
+          <td class="milestone is-derived">
+            <time datetime="2009-12-02">Dec 2, 2009</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2010-04-21">Apr 21, 2010</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">4.5</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">TeamCity On-Premises 4.0</span>
+<code class="release-raw">4.0</code>          </th>
+          <td class="milestone">
+            <time datetime="2008-12-10">Dec 10, 2008</time>          </td>
+          <td class="milestone is-derived">
+            <time datetime="2009-04-23">Apr 23, 2009</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2009-12-02">Dec 2, 2009</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">4.0</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">TeamCity On-Premises 3.1</span>
+<code class="release-raw">3.1</code>          </th>
+          <td class="milestone">
+            <time datetime="2008-03-04">Mar 4, 2008</time>          </td>
+          <td class="milestone is-derived">
+            <time datetime="2008-12-10">Dec 10, 2008</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-derived">
+            <time datetime="2009-04-23">Apr 23, 2009</time><span class="tag tag-derived" title="the vendor states which release ends this one&#39;s support; see the derived dates block below for the rule, the base date and the quote.">derived</span>          </td>
+          <td class="upstream-status">
+<span class="tag">3.1</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="panel" aria-labelledby="source-title">
+  <h2 class="panel-title" id="source-title">Source and upstream values</h2>
+  <p class="panel-note">
+    This record is a normalization of vendor-published lifecycle data, read by
+    JetBrains TeamCity release cycle. Direct mappings use the vendor's own cells; derived dates use an
+    explicit vendor duration, trigger, or parent-support rule and retain every input. The endoflife.date label rules
+    and license do not apply.
+  </p>
+  <dl class="facts">
+    <div><dt>Upstream record</dt><dd><a href="https://www.jetbrains.com/help/teamcity/previous-releases-downloads.html" rel="noopener">https://www.jetbrains.com/help/teamcity/previous-releases-downloads.html</a></dd></div>
+    <div><dt>Source attribution</dt><dd>TeamCity On-Premises lifecycle from JetBrains&#39; release-cycle policy and release catalog; EOS/EOS dates derived from the dated triggering releases are labeled as such.</dd></div>
+    <div><dt>Verifier</dt><dd><code>deterministic-teamcity</code></dd></div>
+    <div><dt>Last checked</dt><dd>Sep 23, 2026 at 17:32 UTC</dd></div>
+    <div><dt>Upstream modified</dt><dd>not published upstream</dd></div>
+    <div><dt>JSON record</dt><dd><a href="https://zarguell.github.io/eoltracker/v1/products/teamcity.json">https://zarguell.github.io/eoltracker/v1/products/teamcity.json</a></dd></div>
+    <div><dt>Schema</dt><dd><a href="https://zarguell.github.io/eoltracker/v1/schema/product.json">v1/schema/product.json</a></dd></div>
+  </dl>
+
+
+  <h3 class="sub-title">Upstream label semantics</h3>
+  <p class="panel-note">
+    endoflife.date labels decide which raw date fields become which normalized milestone. These are this product's
+    label texts and the rule each one triggers.
+  </p>
+  <dl class="label-rules">
+    <div>
+      <dt><code>eoas</code> = not set</dt>
+      <dd>End-of-sale date when the text names an end of sale.</dd>
+    </div>
+    <div>
+      <dt><code>discontinued</code> = not set</dt>
+      <dd>End-of-sale date when the text names an end of sale; otherwise recorded only, never turned into a date.</dd>
+    </div>
+    <div>
+      <dt><code>eol</code> = “TeamCity On-Premises End of Support”</dt>
+      <dd>End of security support when the text names security support; end of life only when no extended-support label is set and the text describes a full support end.</dd>
+    </div>
+    <div>
+      <dt><code>eoes</code> = not set</dt>
+      <dd>Extended support. A published date also sets end of life, and a security-support text supersedes end of security support.</dd>
+    </div>
+  </dl>
+
+  <h3 class="sub-title">Vendor row cells</h3>
+  <p class="panel-note">
+    The vendor's own columns, as the source publishes them. A normalized milestone is mapped directly from these
+    cells or derived under the explicit rule shown above; no value is inferred from cadence or silence.
+  </p>
+  <div class="table-scroll">
+    <table class="release-table">
+      <thead>
+        <tr>
+          <th scope="col">Release</th>
+<th scope="col">Heading</th><th scope="col">Release date</th>        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">TeamCity On-Premises 2026.2</span></th>
+<td>Current version: TeamCity 2026.2</td><td>Release date: 2 September 2026
+Build number: 238924</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">TeamCity On-Premises 2026.1</span></th>
+<td>TeamCity 2026.1</td><td>Release date: 11 May 2026
+Build number: 222521</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">TeamCity On-Premises 2025.11</span></th>
+<td>TeamCity 2025.11</td><td>Release date: 27 November 2025
+Build number: 207946</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">TeamCity On-Premises 2025.07</span></th>
+<td>TeamCity 2025.07</td><td>Release date: 23 July 2025
+Build number: 197242</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">TeamCity On-Premises 2025.03</span></th>
+<td>TeamCity 2025.03</td><td>Release date: 20 March 2025
+Build 186049</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">TeamCity On-Premises 2024.12</span></th>
+<td>TeamCity 2024.12</td><td>Release date: 5 December 2024
+Build 174331</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">TeamCity On-Premises 2024.07</span></th>
+<td>TeamCity 2024.07</td><td>Release date: 18 July 2024
+Build 160569</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">TeamCity On-Premises 2024.03</span></th>
+<td>TeamCity 2024.03</td><td>Release date: 27 March 2024
+Build 156166</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">TeamCity On-Premises 2023.11</span></th>
+<td>TeamCity 2023.11</td><td>Release date: 28 November 2023
+Build 147331</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">TeamCity On-Premises 2023.05</span></th>
+<td>TeamCity 2023.05</td><td>Release date: 26 May 2023
+Build 129203</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">TeamCity On-Premises 2022.10</span></th>
+<td>TeamCity 2022.10</td><td>Release date: 27 October 2022
+Build 116751</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">TeamCity On-Premises 2022.04</span></th>
+<td>TeamCity 2022.04</td><td>Release date: 28 April 2022
+Build 108502</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">TeamCity On-Premises 2021.2</span></th>
+<td>TeamCity 2021.2</td><td>Release date: 25 October 2021
+Build 99542</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">TeamCity On-Premises 2021.1</span></th>
+<td>TeamCity 2021.1</td><td>Release date: 20 May 2021
+Build 92597</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">TeamCity On-Premises 2020.2</span></th>
+<td>TeamCity 2020.2</td><td>Release date: 23 November 2020
+Build 85487</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">TeamCity On-Premises 2020.1</span></th>
+<td>TeamCity 2020.1</td><td>Release date: 18 May 2020
+Build 78475</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">TeamCity On-Premises 2019.2</span></th>
+<td>TeamCity 2019.2</td><td>Release date: 9 December 2019
+Build 71499</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">TeamCity On-Premises 2019.1</span></th>
+<td>TeamCity 2019.1</td><td>**Release date: 23 May 2019
+**Build 65998</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">TeamCity On-Premises 2018.2</span></th>
+<td>TeamCity 2018.2</td><td>Release date: 06 December 2018
+Build 60925</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">TeamCity On-Premises 2018.1</span></th>
+<td>TeamCity 2018.1</td><td>Release date: 21 June 2018
+Build 58245</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">TeamCity On-Premises 2017.2</span></th>
+<td>TeamCity 2017.2</td><td>Release date: 27 November 2017
+Build 50574</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">TeamCity On-Premises 2017.1</span></th>
+<td>TeamCity 2017.1</td><td>Release date: 10 April 2017
+Build 46533</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">TeamCity On-Premises 10.0</span></th>
+<td>TeamCity 10.0</td><td>Release date: 21 July 2016
+Build 42002</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">TeamCity On-Premises 9.1</span></th>
+<td>TeamCity 9.1</td><td>Release date: 15 July 2015
+Build 36973</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">TeamCity On-Premises 9.0</span></th>
+<td>TeamCity 9.0</td><td>Release date: 11 December 2014
+Build 32060</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">TeamCity On-Premises 8.1</span></th>
+<td>TeamCity 8.1</td><td>Release date: 12 February 2014
+Build 29879</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">TeamCity On-Premises 8.0</span></th>
+<td>TeamCity 8.0</td><td>Release date: 20 June 2013
+Build 27402</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">TeamCity On-Premises 7.1</span></th>
+<td>TeamCity 7.1</td><td>Release date: 7 August 2012
+Build 23907</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">TeamCity On-Premises 7.0</span></th>
+<td>TeamCity 7.0</td><td>Release date: 22 February 2012
+Build 21241</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">TeamCity On-Premises 6.5</span></th>
+<td>TeamCity 6.5</td><td>Release date: 24 May 2011
+Build 17795</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">TeamCity On-Premises 6.0</span></th>
+<td>TeamCity 6.0</td><td>Release date: 30 November 2010
+Build 15772</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">TeamCity On-Premises 5.1</span></th>
+<td>TeamCity 5.1</td><td>Release date: 21 April 2010
+Build 13360</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">TeamCity On-Premises 5.0</span></th>
+<td>TeamCity 5.0</td><td>Release date: 02 December 2009
+Build 10669</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">TeamCity On-Premises 4.5</span></th>
+<td>TeamCity 4.5</td><td>Release date: 23 April 2009
+Build 8944</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">TeamCity On-Premises 4.0</span></th>
+<td>TeamCity 4.0</td><td>Release date: 10 December 2008
+Build 8080</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">TeamCity On-Premises 3.1</span></th>
+<td>TeamCity 3.1</td><td>Release date: 4 March 2008</td>        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <details class="raw">
+    <summary>Raw upstream release objects (36)</summary>
+    <p class="panel-note">Verbatim <code>releases[]</code> entries: each release's stored <code>upstream</code> object, including the vendor's own row cells, unmodified.</p>
+    <details class="raw-release">
+      <summary><code>2026.2</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;Heading&#34;: &#34;Current version: TeamCity 2026.2&#34;,
+    &#34;Release date&#34;: &#34;Release date: 2 September 2026\nBuild number: 238924&#34;
+  },
+  &#34;name&#34;: &#34;2026.2&#34;,
+  &#34;table&#34;: &#34;Previous Releases Downloads&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2026.1</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;Heading&#34;: &#34;TeamCity 2026.1&#34;,
+    &#34;Release date&#34;: &#34;Release date: 11 May 2026\nBuild number: 222521&#34;
+  },
+  &#34;name&#34;: &#34;2026.1&#34;,
+  &#34;table&#34;: &#34;Previous Releases Downloads&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2025.11</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;Heading&#34;: &#34;TeamCity 2025.11&#34;,
+    &#34;Release date&#34;: &#34;Release date: 27 November 2025\nBuild number: 207946&#34;
+  },
+  &#34;name&#34;: &#34;2025.11&#34;,
+  &#34;table&#34;: &#34;Previous Releases Downloads&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2025.07</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;Heading&#34;: &#34;TeamCity 2025.07&#34;,
+    &#34;Release date&#34;: &#34;Release date: 23 July 2025\nBuild number: 197242&#34;
+  },
+  &#34;name&#34;: &#34;2025.07&#34;,
+  &#34;table&#34;: &#34;Previous Releases Downloads&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2025.03</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;Heading&#34;: &#34;TeamCity 2025.03&#34;,
+    &#34;Release date&#34;: &#34;Release date: 20 March 2025\nBuild 186049&#34;
+  },
+  &#34;name&#34;: &#34;2025.03&#34;,
+  &#34;table&#34;: &#34;Previous Releases Downloads&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2024.12</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;Heading&#34;: &#34;TeamCity 2024.12&#34;,
+    &#34;Release date&#34;: &#34;Release date: 5 December 2024\nBuild 174331&#34;
+  },
+  &#34;name&#34;: &#34;2024.12&#34;,
+  &#34;table&#34;: &#34;Previous Releases Downloads&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2024.07</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;Heading&#34;: &#34;TeamCity 2024.07&#34;,
+    &#34;Release date&#34;: &#34;Release date: 18 July 2024\nBuild 160569&#34;
+  },
+  &#34;name&#34;: &#34;2024.07&#34;,
+  &#34;table&#34;: &#34;Previous Releases Downloads&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2024.03</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;Heading&#34;: &#34;TeamCity 2024.03&#34;,
+    &#34;Release date&#34;: &#34;Release date: 27 March 2024\nBuild 156166&#34;
+  },
+  &#34;name&#34;: &#34;2024.03&#34;,
+  &#34;table&#34;: &#34;Previous Releases Downloads&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2023.11</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;Heading&#34;: &#34;TeamCity 2023.11&#34;,
+    &#34;Release date&#34;: &#34;Release date: 28 November 2023\nBuild 147331&#34;
+  },
+  &#34;name&#34;: &#34;2023.11&#34;,
+  &#34;table&#34;: &#34;Previous Releases Downloads&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2023.05</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;Heading&#34;: &#34;TeamCity 2023.05&#34;,
+    &#34;Release date&#34;: &#34;Release date: 26 May 2023\nBuild 129203&#34;
+  },
+  &#34;name&#34;: &#34;2023.05&#34;,
+  &#34;table&#34;: &#34;Previous Releases Downloads&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2022.10</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;Heading&#34;: &#34;TeamCity 2022.10&#34;,
+    &#34;Release date&#34;: &#34;Release date: 27 October 2022\nBuild 116751&#34;
+  },
+  &#34;name&#34;: &#34;2022.10&#34;,
+  &#34;table&#34;: &#34;Previous Releases Downloads&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2022.04</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;Heading&#34;: &#34;TeamCity 2022.04&#34;,
+    &#34;Release date&#34;: &#34;Release date: 28 April 2022\nBuild 108502&#34;
+  },
+  &#34;name&#34;: &#34;2022.04&#34;,
+  &#34;table&#34;: &#34;Previous Releases Downloads&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2021.2</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;Heading&#34;: &#34;TeamCity 2021.2&#34;,
+    &#34;Release date&#34;: &#34;Release date: 25 October 2021\nBuild 99542&#34;
+  },
+  &#34;name&#34;: &#34;2021.2&#34;,
+  &#34;table&#34;: &#34;Previous Releases Downloads&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2021.1</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;Heading&#34;: &#34;TeamCity 2021.1&#34;,
+    &#34;Release date&#34;: &#34;Release date: 20 May 2021\nBuild 92597&#34;
+  },
+  &#34;name&#34;: &#34;2021.1&#34;,
+  &#34;table&#34;: &#34;Previous Releases Downloads&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2020.2</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;Heading&#34;: &#34;TeamCity 2020.2&#34;,
+    &#34;Release date&#34;: &#34;Release date: 23 November 2020\nBuild 85487&#34;
+  },
+  &#34;name&#34;: &#34;2020.2&#34;,
+  &#34;table&#34;: &#34;Previous Releases Downloads&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2020.1</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;Heading&#34;: &#34;TeamCity 2020.1&#34;,
+    &#34;Release date&#34;: &#34;Release date: 18 May 2020\nBuild 78475&#34;
+  },
+  &#34;name&#34;: &#34;2020.1&#34;,
+  &#34;table&#34;: &#34;Previous Releases Downloads&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2019.2</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;Heading&#34;: &#34;TeamCity 2019.2&#34;,
+    &#34;Release date&#34;: &#34;Release date: 9 December 2019\nBuild 71499&#34;
+  },
+  &#34;name&#34;: &#34;2019.2&#34;,
+  &#34;table&#34;: &#34;Previous Releases Downloads&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2019.1</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;Heading&#34;: &#34;TeamCity 2019.1&#34;,
+    &#34;Release date&#34;: &#34;**Release date: 23 May 2019\n**Build 65998&#34;
+  },
+  &#34;name&#34;: &#34;2019.1&#34;,
+  &#34;table&#34;: &#34;Previous Releases Downloads&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2018.2</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;Heading&#34;: &#34;TeamCity 2018.2&#34;,
+    &#34;Release date&#34;: &#34;Release date: 06 December 2018\nBuild 60925&#34;
+  },
+  &#34;name&#34;: &#34;2018.2&#34;,
+  &#34;table&#34;: &#34;Previous Releases Downloads&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2018.1</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;Heading&#34;: &#34;TeamCity 2018.1&#34;,
+    &#34;Release date&#34;: &#34;Release date: 21 June 2018\nBuild 58245&#34;
+  },
+  &#34;name&#34;: &#34;2018.1&#34;,
+  &#34;table&#34;: &#34;Previous Releases Downloads&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2017.2</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;Heading&#34;: &#34;TeamCity 2017.2&#34;,
+    &#34;Release date&#34;: &#34;Release date: 27 November 2017\nBuild 50574&#34;
+  },
+  &#34;name&#34;: &#34;2017.2&#34;,
+  &#34;table&#34;: &#34;Previous Releases Downloads&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>2017.1</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;Heading&#34;: &#34;TeamCity 2017.1&#34;,
+    &#34;Release date&#34;: &#34;Release date: 10 April 2017\nBuild 46533&#34;
+  },
+  &#34;name&#34;: &#34;2017.1&#34;,
+  &#34;table&#34;: &#34;Previous Releases Downloads&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>10.0</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;Heading&#34;: &#34;TeamCity 10.0&#34;,
+    &#34;Release date&#34;: &#34;Release date: 21 July 2016\nBuild 42002&#34;
+  },
+  &#34;name&#34;: &#34;10.0&#34;,
+  &#34;table&#34;: &#34;Previous Releases Downloads&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>9.1</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;Heading&#34;: &#34;TeamCity 9.1&#34;,
+    &#34;Release date&#34;: &#34;Release date: 15 July 2015\nBuild 36973&#34;
+  },
+  &#34;name&#34;: &#34;9.1&#34;,
+  &#34;table&#34;: &#34;Previous Releases Downloads&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>9.0</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;Heading&#34;: &#34;TeamCity 9.0&#34;,
+    &#34;Release date&#34;: &#34;Release date: 11 December 2014\nBuild 32060&#34;
+  },
+  &#34;name&#34;: &#34;9.0&#34;,
+  &#34;table&#34;: &#34;Previous Releases Downloads&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>8.1</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;Heading&#34;: &#34;TeamCity 8.1&#34;,
+    &#34;Release date&#34;: &#34;Release date: 12 February 2014\nBuild 29879&#34;
+  },
+  &#34;name&#34;: &#34;8.1&#34;,
+  &#34;table&#34;: &#34;Previous Releases Downloads&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>8.0</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;Heading&#34;: &#34;TeamCity 8.0&#34;,
+    &#34;Release date&#34;: &#34;Release date: 20 June 2013\nBuild 27402&#34;
+  },
+  &#34;name&#34;: &#34;8.0&#34;,
+  &#34;table&#34;: &#34;Previous Releases Downloads&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>7.1</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;Heading&#34;: &#34;TeamCity 7.1&#34;,
+    &#34;Release date&#34;: &#34;Release date: 7 August 2012\nBuild 23907&#34;
+  },
+  &#34;name&#34;: &#34;7.1&#34;,
+  &#34;table&#34;: &#34;Previous Releases Downloads&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>7.0</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;Heading&#34;: &#34;TeamCity 7.0&#34;,
+    &#34;Release date&#34;: &#34;Release date: 22 February 2012\nBuild 21241&#34;
+  },
+  &#34;name&#34;: &#34;7.0&#34;,
+  &#34;table&#34;: &#34;Previous Releases Downloads&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>6.5</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;Heading&#34;: &#34;TeamCity 6.5&#34;,
+    &#34;Release date&#34;: &#34;Release date: 24 May 2011\nBuild 17795&#34;
+  },
+  &#34;name&#34;: &#34;6.5&#34;,
+  &#34;table&#34;: &#34;Previous Releases Downloads&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>6.0</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;Heading&#34;: &#34;TeamCity 6.0&#34;,
+    &#34;Release date&#34;: &#34;Release date: 30 November 2010\nBuild 15772&#34;
+  },
+  &#34;name&#34;: &#34;6.0&#34;,
+  &#34;table&#34;: &#34;Previous Releases Downloads&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>5.1</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;Heading&#34;: &#34;TeamCity 5.1&#34;,
+    &#34;Release date&#34;: &#34;Release date: 21 April 2010\nBuild 13360&#34;
+  },
+  &#34;name&#34;: &#34;5.1&#34;,
+  &#34;table&#34;: &#34;Previous Releases Downloads&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>5.0</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;Heading&#34;: &#34;TeamCity 5.0&#34;,
+    &#34;Release date&#34;: &#34;Release date: 02 December 2009\nBuild 10669&#34;
+  },
+  &#34;name&#34;: &#34;5.0&#34;,
+  &#34;table&#34;: &#34;Previous Releases Downloads&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>4.5</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;Heading&#34;: &#34;TeamCity 4.5&#34;,
+    &#34;Release date&#34;: &#34;Release date: 23 April 2009\nBuild 8944&#34;
+  },
+  &#34;name&#34;: &#34;4.5&#34;,
+  &#34;table&#34;: &#34;Previous Releases Downloads&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>4.0</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;Heading&#34;: &#34;TeamCity 4.0&#34;,
+    &#34;Release date&#34;: &#34;Release date: 10 December 2008\nBuild 8080&#34;
+  },
+  &#34;name&#34;: &#34;4.0&#34;,
+  &#34;table&#34;: &#34;Previous Releases Downloads&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.1</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;Heading&#34;: &#34;TeamCity 3.1&#34;,
+    &#34;Release date&#34;: &#34;Release date: 4 March 2008&#34;
+  },
+  &#34;name&#34;: &#34;3.1&#34;,
+  &#34;table&#34;: &#34;Previous Releases Downloads&#34;
+}</code></pre>
+    </details>
+  </details>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="shell footer-inner">
+    <div class="footer-col">
+      <p class="footer-title">EOL Tracker</p>
+      <p class="footer-note">
+        Software lifecycle dates are republished from the
+        <a href="https://endoflife.date/" rel="noopener">endoflife.date</a> community catalog and vendor-specific public
+        lifecycle sources. Each record names its source; community-catalog data is licensed
+        <a href="https://github.com/endoflife-date/endoflife.date/blob/master/LICENSE" rel="noopener">MIT</a>.
+      </p>
+      <p class="footer-note">
+        Hardware lifecycle data comes from
+        <a href="https://eosl.date/" rel="noopener">eosl.date</a> by Subash Geetha Krishnan,
+        which aggregates public vendor announcements, and from
+        <a href="https://opengear.com/end-life-products" rel="noopener">Opengear's end-of-life product list</a>.
+        Attribution here is credit by name and link, not a licence to the source material: nothing is reproduced as
+        licensed material. This catalog is an independent normalization, not affiliated with endoflife.date, eosl.date,
+        Opengear or any vendor listed here.
+      </p>
+      <p class="footer-note">
+        Last catalog refresh Sep 17, 2026 at 18:35 UTC.
+      </p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-title">Data</p>
+      <ul class="footer-links">
+        <li><a href="/eoltracker/v1/feed.json">Feed (JSON)</a></li>
+        <li><a href="/eoltracker/v1/feed.atom">Deadlines (Atom)</a></li>
+        <li><a href="/eoltracker/v1/calendar.ics">Deadlines (iCal)</a></li>
+        <li><a href="/eoltracker/v1/products.json">Product summaries</a></li>
+        <li><a href="/eoltracker/v1/hardware.json">Hardware summaries</a></li>
+        <li><a href="/eoltracker/v1/changes.atom">Changes (Atom)</a></li>
+        <li><a href="/eoltracker/v1/changes.json">Changes (JSON)</a></li>
+        <li><a href="/eoltracker/hardware/">Hardware catalog</a></li>
+        <li><a href="/eoltracker/api/">Endpoints &amp; mapping</a></li>
+        <li><a href="/eoltracker/v1/schema/product.json">Record schema</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <p class="footer-title">Project</p>
+      <ul class="footer-links">
+        <li><a href="https://github.com/zarguell/eoltracker" rel="noopener">Source on GitHub</a></li>
+        <li><a href="https://endoflife.date/" rel="noopener">Upstream source</a></li>
+        <li><a href="/eoltracker/THIRD-PARTY-NOTICES.txt">THIRD-PARTY-NOTICES.txt</a></li>
+        <li><a href="/eoltracker/OASIS-NOTICE.txt">OASIS-NOTICE.txt</a></li>
+        <li><a href="/eoltracker/404.html">Not found page</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script src="/eoltracker/app.js" defer></script>
+</body>
+</html>

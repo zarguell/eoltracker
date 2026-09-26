@@ -1,0 +1,2242 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AWS Lambda lifecycle dates — EOL Tracker</title>
+<meta name="description" content="General availability, end-of-sale, security-support and end-of-life dates for every AWS Lambda release, with raw source values and provenance.">
+<link rel="canonical" href="https://zarguell.github.io/eoltracker/products/aws-lambda/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EOL Tracker">
+<meta property="og:title" content="AWS Lambda lifecycle dates — EOL Tracker">
+<meta property="og:description" content="General availability, end-of-sale, security-support and end-of-life dates for every AWS Lambda release, with raw source values and provenance.">
+<meta property="og:url" content="https://zarguell.github.io/eoltracker/products/aws-lambda/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d1b2a'/%3E%3Cpath d='M7 20.5l5-6 4 4.5 4-6.5 5 8' fill='none' stroke='%234fd1c5' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/eoltracker/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="shell masthead-inner">
+    <a class="wordmark" href="/eoltracker/">EOL<span>Tracker</span></a>
+    <nav class="mainnav" aria-label="Primary">
+      <a href="/eoltracker/">Software</a>
+      <a href="/eoltracker/hardware/">Hardware</a>
+      <a href="/eoltracker/api/">API &amp; data</a>
+      <a href="/eoltracker/why/">Why EOL</a>
+      <a href="https://endoflife.date/" rel="noopener">endoflife.date</a>
+    </nav>
+    <p class="masthead-meta">542 products · 9171 releases · 7169 hardware records</p>
+  </div>
+</header>
+
+<main class="shell" id="main">
+<nav class="crumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/eoltracker/">Catalog</a></li>
+    <li aria-current="page">AWS Lambda</li>
+  </ol>
+</nav>
+
+<section class="hero product-hero">
+  <p class="eyebrow">service · software</p>
+  <h1 class="page-title">AWS Lambda</h1>
+  <p class="lead">
+    52 releases published by endoflife.date, with each normalized milestone and the raw
+    upstream values behind it. Identifier for this record: <code>aws-lambda</code>.
+  </p>
+  <p class="hero-meta">
+    Verified Sep 17, 2026 at 11:51 UTC by <code>deterministic-endoflife-date-v1</code>.
+Source: endoflife.date.    Upstream modified Aug 16, 2026 at 00:06 UTC.
+    Last catalog refresh <time datetime="2026-09-17T18:35:21Z">Sep 17, 2026 at 18:35 UTC</time>.
+  </p>
+  <p class="product-links">
+    <a class="button" href="/eoltracker/v1/products/aws-lambda.json">JSON record</a>
+    <a class="button" href="https://endoflife.date/api/v1/products/aws-lambda/" rel="noopener">Source on endoflife.date</a>
+<a class="button" href="https://cdn.jsdelivr.net/npm/simple-icons/icons/awslambda.svg" rel="noopener">icon</a><a class="button" href="https://endoflife.date/aws-lambda" rel="noopener">html</a><a class="button" href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html" rel="noopener">releasePolicy</a>  </p>
+</section>
+
+<section class="panel" aria-labelledby="coverage-title">
+  <h2 class="panel-title" id="coverage-title">Data coverage</h2>
+  <p class="panel-note">
+    Upstream does not publish every milestone for every release. Empty cells are unknown dates, not implied support;
+    any calculated date is labeled derived and carries its rule above.
+  </p>
+  <ul class="bars">
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">General availability</span>
+        <span class="bar-value">52 / 52 releases (100%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="General availability: 52 of 52 releases have a published date">
+        <div class="bar-fill" style="width: 100%"></div>
+      </div>
+    </li>
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">End of sale</span>
+        <span class="bar-value">0 / 52 releases (0%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="End of sale: 0 of 52 releases have a published date">
+        <div class="bar-fill" style="width: 0%"></div>
+      </div>
+    </li>
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">End of security support</span>
+        <span class="bar-value">0 / 52 releases (0%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="End of security support: 0 of 52 releases have a published date">
+        <div class="bar-fill" style="width: 0%"></div>
+      </div>
+    </li>
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">End of life</span>
+        <span class="bar-value">0 / 52 releases (0%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="End of life: 0 of 52 releases have a published date">
+        <div class="bar-fill" style="width: 0%"></div>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section class="panel" aria-labelledby="legend-title">
+  <h2 class="panel-title" id="legend-title">How to read these dates</h2>
+  <dl class="legend">
+    <div class="legend-row">
+      <dt>General availability</dt>
+      <dd>
+        <p>First public release. Taken from the upstream releaseDate.</p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>End of sale</dt>
+      <dd>
+        <p>Last day new licenses or units are sold. Only mapped from an upstream field whose label names an end of sale.</p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>End of security support</dt>
+      <dd>
+        <p>Last day security fixes are published. Mapped from eolFrom or eoesFrom only when the label names security support.</p>
+        <p>
+          Extended support counts as security support: when upstream publishes an extended-support date, it replaces
+          the standard security-support deadline here.
+        </p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>End of life</dt>
+      <dd>
+        <p>End of all support. A published extended-support date wins; otherwise eolFrom when its label describes a full support end.</p>
+        <p>
+          An announced extended-support period with no published end date leaves end of life blank — the earlier
+          <code>eolFrom</code> value stays visible in the table rather than being promoted into a deadline upstream
+          never set.
+        </p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>Blank date</dt>
+      <dd><p>The source publishes no value for that milestone. A missing date is an absent announcement, not a claim that support ends or continues.</p></dd>
+    </div>
+  </dl>
+</section>
+
+
+
+<section class="releases" aria-labelledby="releases-title">
+  <div class="catalog-head">
+    <h2 class="panel-title" id="releases-title">Release lifecycle</h2>
+    <p class="catalog-count">52 releases</p>
+  </div>
+  <p class="panel-note">
+    Newest first. Cells show normalized dates; a secondary line shows the raw upstream field and label when the
+    normalized date differs from, or is absent despite, a published value.
+  </p>
+
+  <div class="table-scroll">
+    <table class="release-table">
+      <caption class="sr-only">Lifecycle dates for each AWS Lambda release</caption>
+      <thead>
+        <tr>
+          <th scope="col">Release</th>
+          <th scope="col">General availability</th>
+          <th scope="col">End of sale</th>
+          <th scope="col">End of security support</th>
+          <th scope="col">End of life</th>
+          <th scope="col">Upstream status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Java 17 (AL2023)</span>
+<code class="release-raw">java17.al2023</code>          </th>
+          <td class="milestone">
+            <time datetime="2026-07-31">Jul 31, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2029-06-30 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2029-08-31 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2029-08-31 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Java 11 (AL2023)</span>
+<code class="release-raw">java11.al2023</code>          </th>
+          <td class="milestone">
+            <time datetime="2026-07-31">Jul 31, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2029-06-30 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2029-08-31 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2029-08-31 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Java 8 (AL2023)</span>
+<code class="release-raw">java8.al2023</code>          </th>
+          <td class="milestone">
+            <time datetime="2026-07-31">Jul 31, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2029-06-30 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2029-08-31 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2029-08-31 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Ruby 4.0</span>
+<code class="release-raw">ruby4.0</code>          </th>
+          <td class="milestone">
+            <time datetime="2026-04-30">Apr 30, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2029-03-31 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2029-05-31 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2029-05-31 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">.NET 10</span>
+<code class="release-raw">dotnet10</code>          </th>
+          <td class="milestone">
+            <time datetime="2026-01-08">Jan 8, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2028-11-14 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2029-01-15 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2029-01-15 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Node.js 24</span>
+<code class="release-raw">nodejs24.x</code>          </th>
+          <td class="milestone">
+            <time datetime="2025-11-25">Nov 25, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2028-04-30 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2028-07-01 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2028-07-01 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Python 3.14</span>
+<code class="release-raw">python3.14</code>          </th>
+          <td class="milestone">
+            <time datetime="2025-11-18">Nov 18, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2029-06-30 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2029-08-31 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2029-08-31 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Java 25</span>
+<code class="release-raw">java25</code>          </th>
+          <td class="milestone">
+            <time datetime="2025-11-14">Nov 14, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2029-06-30 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2029-08-31 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2029-08-31 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Ruby 3.4</span>
+<code class="release-raw">ruby3.4</code>          </th>
+          <td class="milestone">
+            <time datetime="2025-03-27">Mar 27, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2028-03-31 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2028-05-31 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2028-05-31 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">.NET 9 (container only)</span>
+<code class="release-raw">dotnet9</code>          </th>
+          <td class="milestone">
+            <time datetime="2024-12-09">Dec 9, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2026-11-10 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Node.js 22</span>
+<code class="release-raw">nodejs22.x</code>          </th>
+          <td class="milestone">
+            <time datetime="2024-11-22">Nov 22, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2027-04-30 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-07-01 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-07-01 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Python 3.13</span>
+<code class="release-raw">python3.13</code>          </th>
+          <td class="milestone">
+            <time datetime="2024-11-14">Nov 14, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2029-06-30 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2029-08-31 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2029-08-31 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Ruby 3.3</span>
+<code class="release-raw">ruby3.3</code>          </th>
+          <td class="milestone">
+            <time datetime="2024-04-04">Apr 4, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2027-03-31 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-05-31 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-05-31 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">.NET 8</span>
+<code class="release-raw">dotnet8</code>          </th>
+          <td class="milestone">
+            <time datetime="2024-02-22">Feb 22, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2026-11-10 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-03-03 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-03-03 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Python 3.12</span>
+<code class="release-raw">python3.12</code>          </th>
+          <td class="milestone">
+            <time datetime="2023-12-14">Dec 14, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2028-10-31 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2029-01-10 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2029-01-10 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Java 21</span>
+<code class="release-raw">java21</code>          </th>
+          <td class="milestone">
+            <time datetime="2023-11-17">Nov 17, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2029-06-30 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2029-08-31 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2029-08-31 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Node.js 20</span>
+<code class="release-raw">nodejs20.x</code>          </th>
+          <td class="milestone">
+            <time datetime="2023-11-15">Nov 15, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2026-04-30 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-03-03 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-03-03 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Custom Runtime (AL2023)</span>
+<code class="release-raw">provided.al2023</code>          </th>
+          <td class="milestone">
+            <time datetime="2023-11-10">Nov 10, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2029-06-30 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2029-08-31 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2029-08-31 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Python 3.11</span>
+<code class="release-raw">python3.11</code>          </th>
+          <td class="milestone">
+            <time datetime="2023-07-27">Jul 27, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2027-06-30 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-08-31 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-08-31 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Ruby 3.2</span>
+<code class="release-raw">ruby3.2</code>          </th>
+          <td class="milestone">
+            <time datetime="2023-06-07">Jun 7, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2026-03-31 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-03-03 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-03-03 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Java 17</span>
+<code class="release-raw">java17</code>          </th>
+          <td class="milestone">
+            <time datetime="2023-04-27">Apr 27, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2027-06-30 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-08-31 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-08-31 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Python 3.10</span>
+<code class="release-raw">python3.10</code>          </th>
+          <td class="milestone">
+            <time datetime="2023-04-18">Apr 18, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2026-10-31 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-03-03 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-03-03 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Node.js 18</span>
+<code class="release-raw">nodejs18.x</code>          </th>
+          <td class="milestone">
+            <time datetime="2022-11-18">Nov 18, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2025-09-01 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-03-03 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-03-03 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">.NET 7 (container-only)</span>
+<code class="release-raw">dotnet7</code>          </th>
+          <td class="milestone">
+            <time datetime="2022-11-15">Nov 15, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2024-05-14 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Node.js 16</span>
+<code class="release-raw">nodejs16.x</code>          </th>
+          <td class="milestone">
+            <time datetime="2022-05-12">May 12, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2024-06-12 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-03-03 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-03-03 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">.NET 6</span>
+<code class="release-raw">dotnet6</code>          </th>
+          <td class="milestone">
+            <time datetime="2022-02-24">Feb 24, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2024-12-20 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-03-03 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-03-03 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Python 3.9</span>
+<code class="release-raw">python3.9</code>          </th>
+          <td class="milestone">
+            <time datetime="2021-08-16">Aug 16, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2025-12-15 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-03-03 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-03-03 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Node.js 14</span>
+<code class="release-raw">nodejs14.x</code>          </th>
+          <td class="milestone">
+            <time datetime="2021-02-03">Feb 3, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2023-12-04 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-03-03 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-03-03 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">.NET 5 (container-only)</span>
+<code class="release-raw">dotnet5.0</code>          </th>
+          <td class="milestone">
+            <time datetime="2020-12-02">Dec 2, 2020</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2022-05-10 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Custom Runtime (AL2)</span>
+<code class="release-raw">provided.al2</code>          </th>
+          <td class="milestone">
+            <time datetime="2020-08-12">Aug 12, 2020</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2026-07-31 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-03-03 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-03-03 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Java 8 (AL2)</span>
+<code class="release-raw">java8.al2</code>          </th>
+          <td class="milestone">
+            <time datetime="2020-08-12">Aug 12, 2020</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2027-06-30 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-08-31 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-08-31 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">.NET Core 3.1</span>
+<code class="release-raw">dotnetcore3.1</code>          </th>
+          <td class="milestone">
+            <time datetime="2020-03-31">Mar 31, 2020</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2023-04-03 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-05-03 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-05-03 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Ruby 2.7</span>
+<code class="release-raw">ruby2.7</code>          </th>
+          <td class="milestone">
+            <time datetime="2020-02-19">Feb 19, 2020</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2023-12-07 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-03-03 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-03-03 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Python 3.8</span>
+<code class="release-raw">python3.8</code>          </th>
+          <td class="milestone">
+            <time datetime="2019-11-18">Nov 18, 2019</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2024-10-14 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-03-03 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-03-03 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Node.js 12</span>
+<code class="release-raw">nodejs12.x</code>          </th>
+          <td class="milestone">
+            <time datetime="2019-11-18">Nov 18, 2019</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2023-03-31 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-04-30 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-04-30 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Java 11</span>
+<code class="release-raw">java11</code>          </th>
+          <td class="milestone">
+            <time datetime="2019-11-18">Nov 18, 2019</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2027-06-30 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-08-31 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-08-31 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Node.js 10</span>
+<code class="release-raw">nodejs10.x</code>          </th>
+          <td class="milestone">
+            <time datetime="2019-05-15">May 15, 2019</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2021-07-30 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2022-02-14 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2022-02-14 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Ruby 2.5</span>
+<code class="release-raw">ruby2.5</code>          </th>
+          <td class="milestone">
+            <time datetime="2018-11-29">Nov 29, 2018</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2021-07-30 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2022-03-31 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2022-03-31 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Custom Runtime (AL1)</span>
+<code class="release-raw">provided</code>          </th>
+          <td class="milestone">
+            <time datetime="2018-11-29">Nov 29, 2018</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2024-01-08 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-03-03 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-03-03 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Python 3.7</span>
+<code class="release-raw">python3.7</code>          </th>
+          <td class="milestone">
+            <time datetime="2018-11-19">Nov 19, 2018</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2023-12-04 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-03-03 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-03-03 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">.NET Core 2.1</span>
+<code class="release-raw">dotnetcore2.1</code>          </th>
+          <td class="milestone">
+            <time datetime="2018-07-09">Jul 9, 2018</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2022-01-05 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2022-04-13 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2022-04-13 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Node.js 8.10</span>
+<code class="release-raw">nodejs8.10</code>          </th>
+          <td class="milestone">
+            <time datetime="2018-04-02">Apr 2, 2018</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2020-03-06 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2020-03-06 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2020-03-06 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Go 1.x</span>
+<code class="release-raw">go1.x</code>          </th>
+          <td class="milestone">
+            <time datetime="2018-01-15">Jan 15, 2018</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2024-01-08 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-03-03 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-03-03 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">.NET Core 2.0</span>
+<code class="release-raw">dotnetcore2.0</code>          </th>
+          <td class="milestone">
+            <time datetime="2018-01-15">Jan 15, 2018</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2019-05-30 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2019-05-30 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2019-05-30 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Node.js 4.3 edge</span>
+<code class="release-raw">nodejs4.3-edge</code>          </th>
+          <td class="milestone">
+            <time datetime="2017-07-17">Jul 17, 2017</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2020-03-05 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2020-04-30 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2020-04-30 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Python 3.6</span>
+<code class="release-raw">python3.6</code>          </th>
+          <td class="milestone">
+            <time datetime="2017-04-18">Apr 18, 2017</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2022-07-18 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2022-08-29 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2022-08-29 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Node.js 6.10</span>
+<code class="release-raw">nodejs6.10</code>          </th>
+          <td class="milestone">
+            <time datetime="2017-03-22">Mar 22, 2017</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2019-08-12 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2019-08-12 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2019-08-12 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">.NET Core 1.0</span>
+<code class="release-raw">dotnetcore1.0</code>          </th>
+          <td class="milestone">
+            <time datetime="2016-12-01">Dec 1, 2016</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2019-06-27 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2019-07-30 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2019-07-30 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Node.js 4.3</span>
+<code class="release-raw">nodejs4.3</code>          </th>
+          <td class="milestone">
+            <time datetime="2016-04-07">Apr 7, 2016</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2020-03-05 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2020-03-05 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2020-03-05 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Python 2.7</span>
+<code class="release-raw">python2.7</code>          </th>
+          <td class="milestone">
+            <time datetime="2015-10-08">Oct 8, 2015</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2021-07-15 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2022-05-30 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2022-05-30 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Java 8 (AL1)</span>
+<code class="release-raw">java8</code>          </th>
+          <td class="milestone">
+            <time datetime="2015-06-15">Jun 15, 2015</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2024-01-08 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-03-03 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-03-03 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Node.js 0.10</span>
+<code class="release-raw">nodejs</code>          </th>
+          <td class="milestone">
+            <time datetime="2014-11-13">Nov 13, 2014</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2016-08-30 (Standard Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2016-10-31 (Deprecated Support)</span>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2016-10-31 (Deprecated Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="panel" aria-labelledby="source-title">
+  <h2 class="panel-title" id="source-title">Source and upstream values</h2>
+  <p class="panel-note">
+    This record is a normalization of endoflife.date data, licensed MIT. Raw upstream values are
+    retained in full so the mapping below can be checked value by value.
+  </p>
+  <dl class="facts">
+    <div><dt>Upstream record</dt><dd><a href="https://endoflife.date/api/v1/products/aws-lambda/" rel="noopener">https://endoflife.date/api/v1/products/aws-lambda/</a></dd></div>
+    <div><dt>Source license</dt><dd><a href="https://github.com/endoflife-date/endoflife.date/blob/master/LICENSE" rel="noopener">endoflife.date — MIT</a></dd></div>
+    <div><dt>Verifier</dt><dd><code>deterministic-endoflife-date-v1</code></dd></div>
+    <div><dt>Last checked</dt><dd>Sep 17, 2026 at 11:51 UTC</dd></div>
+    <div><dt>Upstream modified</dt><dd>Aug 16, 2026 at 00:06 UTC</dd></div>
+    <div><dt>JSON record</dt><dd><a href="https://zarguell.github.io/eoltracker/v1/products/aws-lambda.json">https://zarguell.github.io/eoltracker/v1/products/aws-lambda.json</a></dd></div>
+    <div><dt>Schema</dt><dd><a href="https://zarguell.github.io/eoltracker/v1/schema/product.json">v1/schema/product.json</a></dd></div>
+  </dl>
+
+
+  <h3 class="sub-title">Upstream label semantics</h3>
+  <p class="panel-note">
+    endoflife.date labels decide which raw date fields become which normalized milestone. These are this product's
+    label texts and the rule each one triggers.
+  </p>
+  <dl class="label-rules">
+    <div>
+      <dt><code>eoas</code> = “Standard Support”</dt>
+      <dd>End-of-sale date when the text names an end of sale.</dd>
+    </div>
+    <div>
+      <dt><code>discontinued</code> = not set</dt>
+      <dd>End-of-sale date when the text names an end of sale; otherwise recorded only, never turned into a date.</dd>
+    </div>
+    <div>
+      <dt><code>eol</code> = “Deprecated Support”</dt>
+      <dd>End of security support when the text names security support; end of life only when no extended-support label is set and the text describes a full support end.</dd>
+    </div>
+    <div>
+      <dt><code>eoes</code> = not set</dt>
+      <dd>Extended support. A published date also sets end of life, and a security-support text supersedes end of security support.</dd>
+    </div>
+  </dl>
+
+
+  <details class="raw">
+    <summary>Raw upstream release objects (52)</summary>
+    <p class="panel-note">Verbatim <code>releases[]</code> entries from the upstream record, unmodified.</p>
+    <details class="raw-release">
+      <summary><code>java17.al2023</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2026-07-31&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2029-06-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2029-08-31&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>java11.al2023</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2026-07-31&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2029-06-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2029-08-31&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>java8.al2023</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2026-07-31&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2029-06-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2029-08-31&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>ruby4.0</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2026-04-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2029-03-31&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2029-05-31&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>dotnet10</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2026-01-08&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2028-11-14&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2029-01-15&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>nodejs24.x</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-11-25&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2028-04-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2028-07-01&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>python3.14</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-11-18&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2029-06-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2029-08-31&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>java25</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-11-14&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2029-06-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2029-08-31&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>ruby3.4</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-03-27&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2028-03-31&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2028-05-31&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>dotnet9</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-12-09&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2026-11-10&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>nodejs22.x</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-11-22&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2027-04-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2027-07-01&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>python3.13</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-11-14&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2029-06-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2029-08-31&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>ruby3.3</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-04-04&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2027-03-31&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2027-05-31&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>dotnet8</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-02-22&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2026-11-10&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2027-03-03&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>python3.12</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-12-14&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2028-10-31&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2029-01-10&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>java21</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-11-17&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2029-06-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2029-08-31&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>nodejs20.x</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-11-15&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2026-04-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2027-03-03&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>provided.al2023</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-11-10&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2029-06-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2029-08-31&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>python3.11</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-07-27&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2027-06-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2027-08-31&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>ruby3.2</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-06-07&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2026-03-31&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2027-03-03&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>java17</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-04-27&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2027-06-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2027-08-31&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>python3.10</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-04-18&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2026-10-31&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2027-03-03&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>nodejs18.x</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-11-18&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2025-09-01&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2027-03-03&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>dotnet7</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-11-15&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2024-05-14&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>nodejs16.x</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-05-12&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2024-06-12&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2027-03-03&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>dotnet6</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-02-24&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2024-12-20&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2027-03-03&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>python3.9</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2021-08-16&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2025-12-15&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2027-03-03&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>nodejs14.x</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2021-02-03&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2023-12-04&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2027-03-03&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>dotnet5.0</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2020-12-02&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2022-05-10&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>provided.al2</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2020-08-12&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2026-07-31&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2027-03-03&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>java8.al2</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2020-08-12&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2027-06-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2027-08-31&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>dotnetcore3.1</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2020-03-31&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2023-04-03&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2023-05-03&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>ruby2.7</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2020-02-19&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2023-12-07&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2027-03-03&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>python3.8</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2019-11-18&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2024-10-14&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2027-03-03&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>nodejs12.x</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2019-11-18&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2023-03-31&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2023-04-30&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>java11</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2019-11-18&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2027-06-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2027-08-31&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>nodejs10.x</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2019-05-15&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2021-07-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2022-02-14&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>ruby2.5</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2018-11-29&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2021-07-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2022-03-31&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>provided</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2018-11-29&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2024-01-08&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2027-03-03&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>python3.7</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2018-11-19&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2023-12-04&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2027-03-03&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>dotnetcore2.1</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2018-07-09&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2022-01-05&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2022-04-13&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>nodejs8.10</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2018-04-02&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2020-03-06&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2020-03-06&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>go1.x</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2018-01-15&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2024-01-08&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2027-03-03&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>dotnetcore2.0</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2018-01-15&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2019-05-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2019-05-30&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>nodejs4.3-edge</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2017-07-17&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2020-03-05&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2020-04-30&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>python3.6</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2017-04-18&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2022-07-18&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2022-08-29&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>nodejs6.10</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2017-03-22&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2019-08-12&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2019-08-12&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>dotnetcore1.0</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2016-12-01&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2019-06-27&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2019-07-30&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>nodejs4.3</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2016-04-07&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2020-03-05&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2020-03-05&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>python2.7</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2015-10-08&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2021-07-15&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2022-05-30&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>java8</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2015-06-15&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2024-01-08&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2027-03-03&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>nodejs</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2014-11-13&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Standard Support&#34;,
+    &#34;value&#34;: &#34;2016-08-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Deprecated Support&#34;,
+    &#34;value&#34;: &#34;2016-10-31&#34;
+  }
+]</code></pre>
+    </details>
+  </details>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="shell footer-inner">
+    <div class="footer-col">
+      <p class="footer-title">EOL Tracker</p>
+      <p class="footer-note">
+        Software lifecycle dates are republished from the
+        <a href="https://endoflife.date/" rel="noopener">endoflife.date</a> community catalog and vendor-specific public
+        lifecycle sources. Each record names its source; community-catalog data is licensed
+        <a href="https://github.com/endoflife-date/endoflife.date/blob/master/LICENSE" rel="noopener">MIT</a>.
+      </p>
+      <p class="footer-note">
+        Hardware lifecycle data comes from
+        <a href="https://eosl.date/" rel="noopener">eosl.date</a> by Subash Geetha Krishnan,
+        which aggregates public vendor announcements, and from
+        <a href="https://opengear.com/end-life-products" rel="noopener">Opengear's end-of-life product list</a>.
+        Attribution here is credit by name and link, not a licence to the source material: nothing is reproduced as
+        licensed material. This catalog is an independent normalization, not affiliated with endoflife.date, eosl.date,
+        Opengear or any vendor listed here.
+      </p>
+      <p class="footer-note">
+        Last catalog refresh Sep 17, 2026 at 18:35 UTC.
+      </p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-title">Data</p>
+      <ul class="footer-links">
+        <li><a href="/eoltracker/v1/feed.json">Feed (JSON)</a></li>
+        <li><a href="/eoltracker/v1/feed.atom">Deadlines (Atom)</a></li>
+        <li><a href="/eoltracker/v1/calendar.ics">Deadlines (iCal)</a></li>
+        <li><a href="/eoltracker/v1/products.json">Product summaries</a></li>
+        <li><a href="/eoltracker/v1/hardware.json">Hardware summaries</a></li>
+        <li><a href="/eoltracker/v1/changes.atom">Changes (Atom)</a></li>
+        <li><a href="/eoltracker/v1/changes.json">Changes (JSON)</a></li>
+        <li><a href="/eoltracker/hardware/">Hardware catalog</a></li>
+        <li><a href="/eoltracker/api/">Endpoints &amp; mapping</a></li>
+        <li><a href="/eoltracker/v1/schema/product.json">Record schema</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <p class="footer-title">Project</p>
+      <ul class="footer-links">
+        <li><a href="https://github.com/zarguell/eoltracker" rel="noopener">Source on GitHub</a></li>
+        <li><a href="https://endoflife.date/" rel="noopener">Upstream source</a></li>
+        <li><a href="/eoltracker/THIRD-PARTY-NOTICES.txt">THIRD-PARTY-NOTICES.txt</a></li>
+        <li><a href="/eoltracker/OASIS-NOTICE.txt">OASIS-NOTICE.txt</a></li>
+        <li><a href="/eoltracker/404.html">Not found page</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script src="/eoltracker/app.js" defer></script>
+</body>
+</html>

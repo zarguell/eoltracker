@@ -1,0 +1,96 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "amazon-mq-rabbitmq",
+  "name": "Amazon MQ for RabbitMQ",
+  "category": "software",
+  "upstream_category": "service",
+  "identifiers": [],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/amazon-mq-rabbitmq",
+    "releasePolicy": "https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/rabbitmq-version-support.html"
+  },
+  "releases": [
+    {
+      "id": "4.2",
+      "name": "4.2",
+      "milestones": {
+        "ga": "2025-10-27",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.2",
+        "codename": null,
+        "label": "4.2",
+        "releaseDate": "2025-10-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "3.13",
+      "name": "3.13",
+      "milestones": {
+        "ga": "2024-02-22",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.13",
+        "codename": null,
+        "label": "3.13",
+        "releaseDate": "2024-02-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "3.12",
+      "name": "3.12",
+      "milestones": {
+        "ga": "2023-06-01",
+        "eos": null,
+        "eossec": "2025-03-17",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.12",
+        "codename": null,
+        "label": "3.12",
+        "releaseDate": "2023-06-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-03-17",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/amazon-mq-rabbitmq/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-08-23T19:39:46+00:00"
+  }
+}

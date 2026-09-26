@@ -1,0 +1,500 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "ansible",
+  "name": "Ansible",
+  "category": "software",
+  "upstream_category": "app",
+  "identifiers": [
+    {
+      "type": "purl",
+      "id": "pkg:pypi/ansible"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:deb/debian/ansible"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:apk/alpine/ansible"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/ansible/ansible"
+    },
+    {
+      "type": "repology",
+      "id": "ansible"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:redhat:ansible"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Supported",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/ansible.svg",
+    "html": "https://endoflife.date/ansible",
+    "releasePolicy": "https://docs.ansible.com/projects/ansible/devel/reference_appendices/release_and_maintenance.html"
+  },
+  "releases": [
+    {
+      "id": "14",
+      "name": "14",
+      "milestones": {
+        "ga": "2026-06-02",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "14",
+        "codename": null,
+        "label": "14",
+        "releaseDate": "2026-06-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "14.4.0",
+          "date": "2026-09-08",
+          "link": "https://github.com/ansible-community/ansible-build-data/blob/main/14/CHANGELOG-v14.rst"
+        },
+        "custom": {
+          "ansibleCoreVersion": "2.21",
+          "pythonVersionsControlNode": "3.12 - 3.14",
+          "pythonVersionsManagedNode": "3.9 - 3.14",
+          "powershellVersionsManagedNode": "5.1 - 7"
+        }
+      }
+    },
+    {
+      "id": "13",
+      "name": "13",
+      "milestones": {
+        "ga": "2025-11-19",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-06-18"
+      },
+      "upstream": {
+        "name": "13",
+        "codename": null,
+        "label": "13",
+        "releaseDate": "2025-11-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-06-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "13.8.0",
+          "date": "2026-06-18",
+          "link": "https://github.com/ansible-community/ansible-build-data/blob/main/13/CHANGELOG-v13.rst"
+        },
+        "custom": {
+          "ansibleCoreVersion": "2.20",
+          "pythonVersionsControlNode": "3.12 - 3.14",
+          "pythonVersionsManagedNode": "3.9 - 3.14",
+          "powershellVersionsManagedNode": "5.1"
+        }
+      }
+    },
+    {
+      "id": "12",
+      "name": "12",
+      "milestones": {
+        "ga": "2025-09-09",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-12-09"
+      },
+      "upstream": {
+        "name": "12",
+        "codename": null,
+        "label": "12",
+        "releaseDate": "2025-09-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-12-09",
+        "isMaintained": false,
+        "latest": {
+          "name": "12.3.0",
+          "date": "2025-12-09",
+          "link": "https://github.com/ansible-community/ansible-build-data/blob/main/12/CHANGELOG-v12.rst"
+        },
+        "custom": {
+          "ansibleCoreVersion": "2.19",
+          "pythonVersionsControlNode": "3.11 - 3.13",
+          "pythonVersionsManagedNode": "3.8 - 3.13",
+          "powershellVersionsManagedNode": "5.1"
+        }
+      }
+    },
+    {
+      "id": "11",
+      "name": "11",
+      "milestones": {
+        "ga": "2024-11-19",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-12-09"
+      },
+      "upstream": {
+        "name": "11",
+        "codename": null,
+        "label": "11",
+        "releaseDate": "2024-11-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-12-09",
+        "isMaintained": false,
+        "latest": {
+          "name": "11.13.0",
+          "date": "2025-12-09",
+          "link": "https://github.com/ansible-community/ansible-build-data/blob/main/11/CHANGELOG-v11.rst"
+        },
+        "custom": {
+          "ansibleCoreVersion": "2.18",
+          "pythonVersionsControlNode": "3.11 - 3.13",
+          "pythonVersionsManagedNode": "3.8 - 3.13",
+          "powershellVersionsManagedNode": "5.1"
+        }
+      }
+    },
+    {
+      "id": "10",
+      "name": "10",
+      "milestones": {
+        "ga": "2024-06-04",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-12-03"
+      },
+      "upstream": {
+        "name": "10",
+        "codename": null,
+        "label": "10",
+        "releaseDate": "2024-06-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-12-03",
+        "isMaintained": false,
+        "latest": {
+          "name": "10.7.0",
+          "date": "2024-12-03",
+          "link": "https://github.com/ansible-community/ansible-build-data/blob/main/10/CHANGELOG-v10.rst"
+        },
+        "custom": {
+          "ansibleCoreVersion": "2.17",
+          "pythonVersionsControlNode": "3.10 - 3.12",
+          "pythonVersionsManagedNode": "3.7 - 3.12",
+          "powershellVersionsManagedNode": "3 - 5.1"
+        }
+      }
+    },
+    {
+      "id": "9",
+      "name": "9",
+      "milestones": {
+        "ga": "2023-11-21",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-12-03"
+      },
+      "upstream": {
+        "name": "9",
+        "codename": null,
+        "label": "9",
+        "releaseDate": "2023-11-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-12-03",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.13.0",
+          "date": "2024-12-03",
+          "link": "https://github.com/ansible-community/ansible-build-data/blob/main/9/CHANGELOG-v9.rst"
+        },
+        "custom": {
+          "ansibleCoreVersion": "2.16",
+          "pythonVersionsControlNode": "3.10 - 3.12",
+          "pythonVersionsManagedNode": "2.7 / 3.6 - 3.12",
+          "powershellVersionsManagedNode": "3 - 5.1"
+        }
+      }
+    },
+    {
+      "id": "8",
+      "name": "8",
+      "milestones": {
+        "ga": "2023-05-30",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-12-06"
+      },
+      "upstream": {
+        "name": "8",
+        "codename": null,
+        "label": "8",
+        "releaseDate": "2023-05-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-12-06",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.7.0",
+          "date": "2023-12-06",
+          "link": "https://github.com/ansible-community/ansible-build-data/blob/main/8/CHANGELOG-v8.rst"
+        },
+        "custom": {
+          "ansibleCoreVersion": "2.15",
+          "pythonVersionsControlNode": "3.9 - 3.11",
+          "pythonVersionsManagedNode": "2.7 / 3.5 - 3.11",
+          "powershellVersionsManagedNode": "3 - 5.1"
+        }
+      }
+    },
+    {
+      "id": "7",
+      "name": "7",
+      "milestones": {
+        "ga": "2022-11-22",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-06-22"
+      },
+      "upstream": {
+        "name": "7",
+        "codename": null,
+        "label": "7",
+        "releaseDate": "2022-11-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-06-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.7.0",
+          "date": "2023-06-22",
+          "link": "https://github.com/ansible-community/ansible-build-data/blob/main/7/CHANGELOG-v7.rst"
+        },
+        "custom": {
+          "ansibleCoreVersion": "2.14",
+          "pythonVersionsControlNode": "3.9 - 3.11",
+          "pythonVersionsManagedNode": "2.7 / 3.5 - 3.11",
+          "powershellVersionsManagedNode": "3 - 5.1"
+        }
+      }
+    },
+    {
+      "id": "6",
+      "name": "6",
+      "milestones": {
+        "ga": "2022-06-21",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-12-06"
+      },
+      "upstream": {
+        "name": "6",
+        "codename": null,
+        "label": "6",
+        "releaseDate": "2022-06-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-12-06",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.7.0",
+          "date": "2022-12-06",
+          "link": "https://github.com/ansible-community/ansible-build-data/blob/main/6/CHANGELOG-v6.rst"
+        },
+        "custom": {
+          "ansibleCoreVersion": "2.13",
+          "pythonVersionsControlNode": "3.8 - 3.10",
+          "pythonVersionsManagedNode": "2.7 / 3.5 - 3.10",
+          "powershellVersionsManagedNode": "3 - 5.1"
+        }
+      }
+    },
+    {
+      "id": "5",
+      "name": "5",
+      "milestones": {
+        "ga": "2021-12-02",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-06-08"
+      },
+      "upstream": {
+        "name": "5",
+        "codename": null,
+        "label": "5",
+        "releaseDate": "2021-12-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-06-08",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.10.0",
+          "date": "2022-06-28",
+          "link": "https://github.com/ansible-community/ansible-build-data/blob/main/5/CHANGELOG-v5.rst"
+        },
+        "custom": {
+          "ansibleCoreVersion": "2.12",
+          "pythonVersionsControlNode": "3.8 - 3.10",
+          "pythonVersionsManagedNode": "2.6 - 2.7 / 3.5 - 3.10",
+          "powershellVersionsManagedNode": "3 - 5.1"
+        }
+      }
+    },
+    {
+      "id": "4",
+      "name": "4",
+      "milestones": {
+        "ga": "2021-05-18",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-12-14"
+      },
+      "upstream": {
+        "name": "4",
+        "codename": null,
+        "label": "4",
+        "releaseDate": "2021-05-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-12-14",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.10.0",
+          "date": "2021-12-14",
+          "link": "https://github.com/ansible-community/ansible-build-data/blob/main/4/CHANGELOG-v4.rst"
+        },
+        "custom": {
+          "ansibleCoreVersion": "2.11",
+          "pythonVersionsControlNode": "2.7 / 3.5 - 3.9",
+          "pythonVersionsManagedNode": "2.6 - 2.7 / 3.5 - 3.9",
+          "powershellVersionsManagedNode": "3 - 5.1"
+        }
+      }
+    },
+    {
+      "id": "3",
+      "name": "3",
+      "milestones": {
+        "ga": "2021-02-18",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-05-11"
+      },
+      "upstream": {
+        "name": "3",
+        "codename": null,
+        "label": "3",
+        "releaseDate": "2021-02-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-05-11",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.4.0",
+          "date": "2021-05-11",
+          "link": "https://github.com/ansible-community/ansible-build-data/blob/main/3/CHANGELOG-v3.rst"
+        },
+        "custom": {
+          "ansibleCoreVersion": "2.10",
+          "pythonVersionsControlNode": "2.7 / 3.5 - 3.9",
+          "pythonVersionsManagedNode": "2.6 - 2.7 / 3.5 - 3.9",
+          "powershellVersionsManagedNode": "3 - 5.1"
+        }
+      }
+    },
+    {
+      "id": "2.10",
+      "name": "2.10",
+      "milestones": {
+        "ga": "2020-09-22",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-02-09"
+      },
+      "upstream": {
+        "name": "2.10",
+        "codename": null,
+        "label": "2.10",
+        "releaseDate": "2020-09-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-02-09",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.10.7",
+          "date": "2021-02-09",
+          "link": "https://github.com/ansible-community/ansible-build-data/blob/main/2.10/CHANGELOG-v2.10.rst"
+        },
+        "custom": {
+          "ansibleCoreVersion": "2.10",
+          "pythonVersionsControlNode": "2.7 / 3.5 - 3.9",
+          "pythonVersionsManagedNode": "2.6 - 2.7 / 3.5 - 3.9",
+          "powershellVersionsManagedNode": "3 - 5.1"
+        }
+      }
+    },
+    {
+      "id": "2.9",
+      "name": "2.9",
+      "milestones": {
+        "ga": "2019-10-31",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-05-23"
+      },
+      "upstream": {
+        "name": "2.9",
+        "codename": null,
+        "label": "2.9",
+        "releaseDate": "2019-10-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-05-23",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.9.27",
+          "date": "2021-10-11",
+          "link": "https://github.com/ansible/ansible/blob/stable-2.9/changelogs/CHANGELOG-v2.9.rst"
+        },
+        "custom": {
+          "ansibleCoreVersion": "2.9",
+          "pythonVersionsControlNode": "2.7 / 3.5 - 3.8",
+          "pythonVersionsManagedNode": "2.6 - 2.7 / 3.5 - 3.8",
+          "powershellVersionsManagedNode": "3 - 5.1"
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/ansible/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-09T00:07:20+00:00"
+  }
+}

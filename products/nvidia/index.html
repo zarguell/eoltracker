@@ -1,0 +1,2060 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NVIDIA Driver lifecycle dates — EOL Tracker</title>
+<meta name="description" content="General availability, end-of-sale, security-support and end-of-life dates for every NVIDIA Driver release, with raw source values and provenance.">
+<link rel="canonical" href="https://zarguell.github.io/eoltracker/products/nvidia/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EOL Tracker">
+<meta property="og:title" content="NVIDIA Driver lifecycle dates — EOL Tracker">
+<meta property="og:description" content="General availability, end-of-sale, security-support and end-of-life dates for every NVIDIA Driver release, with raw source values and provenance.">
+<meta property="og:url" content="https://zarguell.github.io/eoltracker/products/nvidia/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d1b2a'/%3E%3Cpath d='M7 20.5l5-6 4 4.5 4-6.5 5 8' fill='none' stroke='%234fd1c5' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/eoltracker/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="shell masthead-inner">
+    <a class="wordmark" href="/eoltracker/">EOL<span>Tracker</span></a>
+    <nav class="mainnav" aria-label="Primary">
+      <a href="/eoltracker/">Software</a>
+      <a href="/eoltracker/hardware/">Hardware</a>
+      <a href="/eoltracker/api/">API &amp; data</a>
+      <a href="/eoltracker/why/">Why EOL</a>
+      <a href="https://endoflife.date/" rel="noopener">endoflife.date</a>
+    </nav>
+    <p class="masthead-meta">542 products · 9171 releases · 7169 hardware records</p>
+  </div>
+</header>
+
+<main class="shell" id="main">
+<nav class="crumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/eoltracker/">Catalog</a></li>
+    <li aria-current="page">NVIDIA Driver</li>
+  </ol>
+</nav>
+
+<section class="hero product-hero">
+  <p class="eyebrow">app · software</p>
+  <h1 class="page-title">NVIDIA Driver</h1>
+  <p class="lead">
+    48 releases published by endoflife.date, with each normalized milestone and the raw
+    upstream values behind it. Identifier for this record: <code>nvidia</code>.
+  </p>
+  <p class="hero-meta">
+    Verified Sep 17, 2026 at 11:51 UTC by <code>deterministic-endoflife-date-v1</code>.
+Source: endoflife.date.    Upstream modified Sep 14, 2026 at 20:01 UTC.
+    Last catalog refresh <time datetime="2026-09-17T18:35:21Z">Sep 17, 2026 at 18:35 UTC</time>.
+  </p>
+  <p class="product-links">
+    <a class="button" href="/eoltracker/v1/products/nvidia.json">JSON record</a>
+    <a class="button" href="https://endoflife.date/api/v1/products/nvidia/" rel="noopener">Source on endoflife.date</a>
+<a class="button" href="https://cdn.jsdelivr.net/npm/simple-icons/icons/nvidia.svg" rel="noopener">icon</a><a class="button" href="https://endoflife.date/nvidia" rel="noopener">html</a><a class="button" href="https://www.nvidia.com/Download/index.aspx" rel="noopener">releasePolicy</a>  </p>
+</section>
+
+<section class="panel" aria-labelledby="coverage-title">
+  <h2 class="panel-title" id="coverage-title">Data coverage</h2>
+  <p class="panel-note">
+    Upstream does not publish every milestone for every release. Empty cells are unknown dates, not implied support;
+    any calculated date is labeled derived and carries its rule above.
+  </p>
+  <ul class="bars">
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">General availability</span>
+        <span class="bar-value">48 / 48 releases (100%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="General availability: 48 of 48 releases have a published date">
+        <div class="bar-fill" style="width: 100%"></div>
+      </div>
+    </li>
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">End of sale</span>
+        <span class="bar-value">0 / 48 releases (0%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="End of sale: 0 of 48 releases have a published date">
+        <div class="bar-fill" style="width: 0%"></div>
+      </div>
+    </li>
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">End of security support</span>
+        <span class="bar-value">48 / 48 releases (100%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="End of security support: 48 of 48 releases have a published date">
+        <div class="bar-fill" style="width: 100%"></div>
+      </div>
+    </li>
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">End of life</span>
+        <span class="bar-value">0 / 48 releases (0%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="End of life: 0 of 48 releases have a published date">
+        <div class="bar-fill" style="width: 0%"></div>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section class="panel" aria-labelledby="legend-title">
+  <h2 class="panel-title" id="legend-title">How to read these dates</h2>
+  <dl class="legend">
+    <div class="legend-row">
+      <dt>General availability</dt>
+      <dd>
+        <p>First public release. Taken from the upstream releaseDate.</p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>End of sale</dt>
+      <dd>
+        <p>Last day new licenses or units are sold. Only mapped from an upstream field whose label names an end of sale.</p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>End of security support</dt>
+      <dd>
+        <p>Last day security fixes are published. Mapped from eolFrom or eoesFrom only when the label names security support.</p>
+        <p>
+          Extended support counts as security support: when upstream publishes an extended-support date, it replaces
+          the standard security-support deadline here.
+        </p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>End of life</dt>
+      <dd>
+        <p>End of all support. A published extended-support date wins; otherwise eolFrom when its label describes a full support end.</p>
+        <p>
+          An announced extended-support period with no published end date leaves end of life blank — the earlier
+          <code>eolFrom</code> value stays visible in the table rather than being promoted into a deadline upstream
+          never set.
+        </p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>Blank date</dt>
+      <dd><p>The source publishes no value for that milestone. A missing date is an absent announcement, not a claim that support ends or continues.</p></dd>
+    </div>
+  </dl>
+</section>
+
+
+<section class="panel" aria-labelledby="next-title">
+  <h2 class="panel-title" id="next-title">Upcoming published deadlines</h2>
+  <ul class="events">
+    <li>
+      <span class="event-release">R590-Linux (NFB)</span>
+      <span class="event-milestone">End of security support</span>
+      <span class="event-date"><time datetime="2026-12-22">Dec 22, 2026</time>        <span class="event-days">in 96 days</span></span>
+    </li>
+    <li>
+      <span class="event-release">R590-Windows (NFB)</span>
+      <span class="event-milestone">End of security support</span>
+      <span class="event-date"><time datetime="2026-12-22">Dec 22, 2026</time>        <span class="event-days">in 96 days</span></span>
+    </li>
+    <li>
+      <span class="event-release">R595-Linux (PB)</span>
+      <span class="event-milestone">End of security support</span>
+      <span class="event-date"><time datetime="2027-03-24">Mar 24, 2027</time>        <span class="event-days">in 188 days</span></span>
+    </li>
+    <li>
+      <span class="event-release">R595-Windows (PB)</span>
+      <span class="event-milestone">End of security support</span>
+      <span class="event-date"><time datetime="2027-03-24">Mar 24, 2027</time>        <span class="event-days">in 188 days</span></span>
+    </li>
+    <li>
+      <span class="event-release">R610-Linux (NFB)</span>
+      <span class="event-milestone">End of security support</span>
+      <span class="event-date"><time datetime="2027-08-03">Aug 3, 2027</time>        <span class="event-days">in 320 days</span></span>
+    </li>
+    <li>
+      <span class="event-release">R610-Windows (NFB)</span>
+      <span class="event-milestone">End of security support</span>
+      <span class="event-date"><time datetime="2027-08-03">Aug 3, 2027</time>        <span class="event-days">in 320 days</span></span>
+    </li>
+    <li>
+      <span class="event-release">R615-Windows (NFB)</span>
+      <span class="event-milestone">End of security support</span>
+      <span class="event-date"><time datetime="2027-09-09">Sep 9, 2027</time>        <span class="event-days">in 357 days</span></span>
+    </li>
+    <li>
+      <span class="event-release">R615-Windows (NFB)</span>
+      <span class="event-milestone">End of security support</span>
+      <span class="event-date"><time datetime="2027-09-09">Sep 9, 2027</time>        <span class="event-days">in 357 days</span></span>
+    </li>
+  </ul>
+</section>
+
+<section class="releases" aria-labelledby="releases-title">
+  <div class="catalog-head">
+    <h2 class="panel-title" id="releases-title">Release lifecycle</h2>
+    <p class="catalog-count">48 releases</p>
+  </div>
+  <p class="panel-note">
+    Newest first. Cells show normalized dates; a secondary line shows the raw upstream field and label when the
+    normalized date differs from, or is absent despite, a published value.
+  </p>
+
+  <div class="table-scroll">
+    <table class="release-table">
+      <caption class="sr-only">Lifecycle dates for each NVIDIA Driver release</caption>
+      <thead>
+        <tr>
+          <th scope="col">Release</th>
+          <th scope="col">General availability</th>
+          <th scope="col">End of sale</th>
+          <th scope="col">End of security support</th>
+          <th scope="col">End of life</th>
+          <th scope="col">Upstream status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R615-Windows (NFB)</span>
+<code class="release-raw">r615-windows</code>          </th>
+          <td class="milestone">
+            <time datetime="2026-09-09">Sep 9, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2027-09-09">Sep 9, 2027</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-09-09 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-615-71-09/index.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R615-Windows (NFB)</span>
+<code class="release-raw">r615-linux</code>          </th>
+          <td class="milestone">
+            <time datetime="2026-09-09">Sep 9, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2027-09-09">Sep 9, 2027</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-09-09 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-615-71-09/index.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R610-Windows (NFB)</span>
+<code class="release-raw">r610-windows</code>          </th>
+          <td class="milestone">
+            <time datetime="2026-08-03">Aug 3, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2027-08-03">Aug 3, 2027</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-08-03 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-610-57-04/index.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R610-Linux (NFB)</span>
+<code class="release-raw">r610-linux</code>          </th>
+          <td class="milestone">
+            <time datetime="2026-08-03">Aug 3, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2027-08-03">Aug 3, 2027</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-08-03 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-610-57-04/index.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R595-Windows (PB)</span>
+<code class="release-raw">r595-windows</code>          </th>
+          <td class="milestone">
+            <time datetime="2026-03-24">Mar 24, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2027-03-24 (Active Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2027-03-24">Mar 24, 2027</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-03-24 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-595-91-07/index.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R595-Linux (PB)</span>
+<code class="release-raw">r595-linux</code>          </th>
+          <td class="milestone">
+            <time datetime="2026-03-24">Mar 24, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2027-03-24 (Active Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2027-03-24">Mar 24, 2027</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2027-03-24 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-595-91-07/index.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R590-Windows (NFB)</span>
+<code class="release-raw">r590-windows</code>          </th>
+          <td class="milestone">
+            <time datetime="2025-12-22">Dec 22, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2026-12-22">Dec 22, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-12-22 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-590-48-01/index.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R590-Linux (NFB)</span>
+<code class="release-raw">r590-linux</code>          </th>
+          <td class="milestone">
+            <time datetime="2025-12-22">Dec 22, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2026-12-22">Dec 22, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-12-22 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-590-48-01/index.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R580-Linux (LTSB)</span>
+<code class="release-raw">r580-linux</code>          </th>
+          <td class="milestone">
+            <time datetime="2025-08-04">Aug 4, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2026-08-04 (Active Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2028-08-04">Aug 4, 2028</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2028-08-04 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag">LTS</span><span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-580-178-04/index.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R580-Windows (LTSB)</span>
+<code class="release-raw">r580-windows</code>          </th>
+          <td class="milestone">
+            <time datetime="2025-06-03">Jun 3, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2026-08-04 (Active Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2028-08-04">Aug 4, 2028</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2028-08-04 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag">LTS</span><span class="tag tag-ok">maintained</span>            <a class="release-download" href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-580-178-04/index.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R575-Windows (NFB)</span>
+<code class="release-raw">r575-windows</code>          </th>
+          <td class="milestone">
+            <time datetime="2025-06-03">Jun 3, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2026-06-03">Jun 3, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-06-03 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-575-57-08/index.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R575-Linux (NFB)</span>
+<code class="release-raw">r575-linux</code>          </th>
+          <td class="milestone">
+            <time datetime="2025-06-03">Jun 3, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2026-06-03">Jun 3, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-06-03 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-575-57-08/index.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R570-Windows (PB)</span>
+<code class="release-raw">r570-windows</code>          </th>
+          <td class="milestone">
+            <time datetime="2025-01-27">Jan 27, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2026-01-27 (Active Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2026-01-27">Jan 27, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-01-27 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-570-195-03/index.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R570-Linux (PB)</span>
+<code class="release-raw">r570-linux</code>          </th>
+          <td class="milestone">
+            <time datetime="2025-01-27">Jan 27, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2026-01-27 (Active Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2026-01-27">Jan 27, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-01-27 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-570-211-01/index.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R565-Linux (PB)</span>
+<code class="release-raw">r565-linux</code>          </th>
+          <td class="milestone">
+            <time datetime="2024-10-29">Oct 29, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2025-10-01 (Active Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2025-10-01">Oct 1, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-10-01 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-565-57-01/index.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R565-Windows (PB)</span>
+<code class="release-raw">r565-windows</code>          </th>
+          <td class="milestone">
+            <time datetime="2024-10-22">Oct 22, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2025-10-01 (Active Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2025-10-01">Oct 1, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-10-01 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-565-57-01/index.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R560-Linux (PB)</span>
+<code class="release-raw">r560-linux</code>          </th>
+          <td class="milestone">
+            <time datetime="2024-08-22">Aug 22, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2025-08-22 (Active Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2025-08-22">Aug 22, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-08-22 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-560-35-03/index.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R560-Windows (PB)</span>
+<code class="release-raw">r560-windows</code>          </th>
+          <td class="milestone">
+            <time datetime="2024-07-30">Jul 30, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2025-07-30 (Active Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2025-07-30">Jul 30, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-07-30 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-560-35-03/index.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R555-Windows (NFB)</span>
+<code class="release-raw">r555-windows</code>          </th>
+          <td class="milestone">
+            <time datetime="2024-06-04">Jun 4, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2025-06-01">Jun 1, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-06-01 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://www.nvidia.com/download/driverResults.aspx/228179/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R555-Linux (NFB)</span>
+<code class="release-raw">r555-linux</code>          </th>
+          <td class="milestone">
+            <time datetime="2024-06-04">Jun 4, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2025-06-01">Jun 1, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-06-01 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://www.nvidia.com/Download/driverResults.aspx/228410/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R550-Linux (PB)</span>
+<code class="release-raw">r550-linux</code>          </th>
+          <td class="milestone">
+            <time datetime="2024-02-23">Feb 23, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2025-02-01 (Active Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2025-04-17">Apr 17, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-04-17 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-550-163-01/index.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R550-Windows (PB)</span>
+<code class="release-raw">r550-windows</code>          </th>
+          <td class="milestone">
+            <time datetime="2024-02-22">Feb 22, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2025-02-01 (Active Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2025-04-17">Apr 17, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2025-04-17 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-550-163-01/index.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R545-Linux (NFB)</span>
+<code class="release-raw">r545-linux</code>          </th>
+          <td class="milestone">
+            <time datetime="2023-10-31">Oct 31, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2024-10-01">Oct 1, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-10-01 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://www.nvidia.com/download/driverResults.aspx/216530/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R545-Windows (NFB)</span>
+<code class="release-raw">r545-windows</code>          </th>
+          <td class="milestone">
+            <time datetime="2023-10-17">Oct 17, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2024-10-01">Oct 1, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-10-01 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://www.nvidia.com/Download/driverResults.aspx/216365/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R535-Linux (LTSB)</span>
+<code class="release-raw">r535-linux</code>          </th>
+          <td class="milestone">
+            <time datetime="2023-06-14">Jun 14, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2024-06-01 (Active Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2026-06-01">Jun 1, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-06-01 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag">LTS</span><span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-535-309-01/index.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R535-Windows (LTSB)</span>
+<code class="release-raw">r535-windows</code>          </th>
+          <td class="milestone">
+            <time datetime="2023-05-30">May 30, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2024-06-01 (Active Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2026-06-01">Jun 1, 2026</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2026-06-01 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag">LTS</span><span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-535-309-01/index.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R530-Linux (NFB)</span>
+<code class="release-raw">r530-linux</code>          </th>
+          <td class="milestone">
+            <time datetime="2023-03-23">Mar 23, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2023-06-24">Jun 24, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-06-24 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://www.nvidia.com/Download/driverResults.aspx/200481/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R530-Windows (NFB)</span>
+<code class="release-raw">r530-windows</code>          </th>
+          <td class="milestone">
+            <time datetime="2023-02-28">Feb 28, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2023-06-24">Jun 24, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-06-24 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://www.nvidia.com/Download/driverResults.aspx/204772/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R525-Windows (PB)</span>
+<code class="release-raw">r525-windows</code>          </th>
+          <td class="milestone">
+            <time datetime="2022-11-10">Nov 10, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2023-12-01 (Active Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2023-12-01">Dec 1, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-12-01 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-525-147-05/index.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R525-Linux (PB)</span>
+<code class="release-raw">r525-linux</code>          </th>
+          <td class="milestone">
+            <time datetime="2022-11-10">Nov 10, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2023-12-01 (Active Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2023-12-01">Dec 1, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-12-01 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-525-147-05/index.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R520-Linux (NFB)</span>
+<code class="release-raw">r520-linux</code>          </th>
+          <td class="milestone">
+            <time datetime="2022-10-12">Oct 12, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2023-10-01">Oct 1, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-10-01 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://download.nvidia.com/XFree86/Linux-x86_64/520.56.06/README/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R515-Windows (PB)</span>
+<code class="release-raw">r515-windows</code>          </th>
+          <td class="milestone">
+            <time datetime="2022-05-11">May 11, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2023-05-01 (Active Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2023-05-01">May 1, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-05-01 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-515-105-01/index.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R515-Linux (PB)</span>
+<code class="release-raw">r515-linux</code>          </th>
+          <td class="milestone">
+            <time datetime="2022-05-11">May 11, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2023-05-01 (Active Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2023-05-01">May 1, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-05-01 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-515-105-01/index.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R510-Windows (PB)</span>
+<code class="release-raw">r510-windows</code>          </th>
+          <td class="milestone">
+            <time datetime="2022-01-14">Jan 14, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2023-01-01 (Active Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2023-01-01">Jan 1, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-01-01 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://www.nvidia.com/download/driverResults.aspx/197675/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R510-Linux (PB)</span>
+<code class="release-raw">r510-linux</code>          </th>
+          <td class="milestone">
+            <time datetime="2022-01-14">Jan 14, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2023-01-01 (Active Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2023-01-01">Jan 1, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-01-01 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-510-108-03/index.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R495-Linux (NFB)</span>
+<code class="release-raw">r495-linux</code>          </th>
+          <td class="milestone">
+            <time datetime="2021-10-26">Oct 26, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2022-10-12">Oct 12, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2022-10-12 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://www.nvidia.com/Download/driverResults.aspx/184248/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R495-Windows (NFB)</span>
+<code class="release-raw">r495-windows</code>          </th>
+          <td class="milestone">
+            <time datetime="2021-10-12">Oct 12, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2022-01-14">Jan 14, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2022-01-14 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://www.nvidia.com/Download/driverResults.aspx/184717/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R470-Linux (LTSB)</span>
+<code class="release-raw">r470-linux</code>          </th>
+          <td class="milestone">
+            <time datetime="2021-07-19">Jul 19, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2021-10-26 (Active Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2024-07-20">Jul 20, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-07-20 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag">LTS</span><span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-470-256-02/index.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R470-Windows (LTSB)</span>
+<code class="release-raw">r470-windows</code>          </th>
+          <td class="milestone">
+            <time datetime="2021-06-22">Jun 22, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2021-09-20 (Active Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2024-07-09">Jul 9, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2024-07-09 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag">LTS</span><span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-475-14/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R465-Linux (NFB)</span>
+<code class="release-raw">r465-linux</code>          </th>
+          <td class="milestone">
+            <time datetime="2021-04-19">Apr 19, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2022-04-19">Apr 19, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2022-04-19 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://download.nvidia.com/XFree86/Linux-x86_64/465.24.02/README/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R460-Linux (PB)</span>
+<code class="release-raw">r460-linux</code>          </th>
+          <td class="milestone">
+            <time datetime="2021-01-07">Jan 7, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2021-07-19 (Active Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2022-01-01">Jan 1, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2022-01-01 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-460-106-00/index.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R460-Windows (PB)</span>
+<code class="release-raw">r460-windows</code>          </th>
+          <td class="milestone">
+            <time datetime="2020-12-15">Dec 15, 2020</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2021-06-23 (Active Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2022-01-01">Jan 1, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2022-01-01 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-460-106-00/index.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R450-Windows (LTSB)</span>
+<code class="release-raw">r450-windows</code>          </th>
+          <td class="milestone">
+            <time datetime="2020-06-24">Jun 24, 2020</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2020-12-15 (Active Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2023-07-01">Jul 1, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-07-01 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag">LTS</span><span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-450-248-02/index.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R450-Linux (LTSB)</span>
+<code class="release-raw">r450-linux</code>          </th>
+          <td class="milestone">
+            <time datetime="2020-06-24">Jun 24, 2020</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2020-10-07 (Active Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2023-07-01">Jul 1, 2023</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2023-07-01 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag">LTS</span><span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-450-248-02/index.html" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R418-Windows (LTSB)</span>
+<code class="release-raw">r418-windows</code>          </th>
+          <td class="milestone">
+            <time datetime="2019-02-04">Feb 4, 2019</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2019-04-23 (Active Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2022-03-01">Mar 1, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2022-03-01 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag">LTS</span><span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-418-19702/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R418-Linux (LTSB)</span>
+<code class="release-raw">r418-linux</code>          </th>
+          <td class="milestone">
+            <time datetime="2019-01-30">Jan 30, 2019</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2019-03-20 (Active Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2022-03-01">Mar 1, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2022-03-01 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag">LTS</span><span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-418-19702/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R390-Windows (LTSB)</span>
+<code class="release-raw">r390-windows</code>          </th>
+          <td class="milestone">
+            <time datetime="2018-01-08">Jan 8, 2018</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2018-07-31 (Active Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2021-10-26">Oct 26, 2021</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2021-10-26 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag">LTS</span><span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://www.nvidia.com/download/driverResults.aspx/181267/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">R390-Linux (LTSB)</span>
+<code class="release-raw">r390-linux</code>          </th>
+          <td class="milestone">
+            <time datetime="2018-01-04">Jan 4, 2018</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eoasFrom 2018-03-10 (Active Support)</span>          </td>
+          <td class="milestone">
+            <time datetime="2022-11-22">Nov 22, 2022</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+<span class="cell-note">eolFrom 2022-11-22 (Security Support)</span>          </td>
+          <td class="upstream-status">
+<span class="tag">LTS</span><span class="tag tag-warn">upstream marks end of life</span>            <a class="release-download" href="https://www.nvidia.com/Download/driverResults.aspx/196214/" rel="noopener">latest release</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="panel" aria-labelledby="source-title">
+  <h2 class="panel-title" id="source-title">Source and upstream values</h2>
+  <p class="panel-note">
+    This record is a normalization of endoflife.date data, licensed MIT. Raw upstream values are
+    retained in full so the mapping below can be checked value by value.
+  </p>
+  <dl class="facts">
+    <div><dt>Upstream record</dt><dd><a href="https://endoflife.date/api/v1/products/nvidia/" rel="noopener">https://endoflife.date/api/v1/products/nvidia/</a></dd></div>
+    <div><dt>Source license</dt><dd><a href="https://github.com/endoflife-date/endoflife.date/blob/master/LICENSE" rel="noopener">endoflife.date — MIT</a></dd></div>
+    <div><dt>Verifier</dt><dd><code>deterministic-endoflife-date-v1</code></dd></div>
+    <div><dt>Last checked</dt><dd>Sep 17, 2026 at 11:51 UTC</dd></div>
+    <div><dt>Upstream modified</dt><dd>Sep 14, 2026 at 20:01 UTC</dd></div>
+    <div><dt>JSON record</dt><dd><a href="https://zarguell.github.io/eoltracker/v1/products/nvidia.json">https://zarguell.github.io/eoltracker/v1/products/nvidia.json</a></dd></div>
+    <div><dt>Schema</dt><dd><a href="https://zarguell.github.io/eoltracker/v1/schema/product.json">v1/schema/product.json</a></dd></div>
+  </dl>
+
+
+  <h3 class="sub-title">Upstream label semantics</h3>
+  <p class="panel-note">
+    endoflife.date labels decide which raw date fields become which normalized milestone. These are this product's
+    label texts and the rule each one triggers.
+  </p>
+  <dl class="label-rules">
+    <div>
+      <dt><code>eoas</code> = “Active Support”</dt>
+      <dd>End-of-sale date when the text names an end of sale.</dd>
+    </div>
+    <div>
+      <dt><code>discontinued</code> = not set</dt>
+      <dd>End-of-sale date when the text names an end of sale; otherwise recorded only, never turned into a date.</dd>
+    </div>
+    <div>
+      <dt><code>eol</code> = “Security Support”</dt>
+      <dd>End of security support when the text names security support; end of life only when no extended-support label is set and the text describes a full support end.</dd>
+    </div>
+    <div>
+      <dt><code>eoes</code> = not set</dt>
+      <dd>Extended support. A published date also sets end of life, and a security-support text supersedes end of security support.</dd>
+    </div>
+  </dl>
+
+
+  <details class="raw">
+    <summary>Raw upstream release objects (48)</summary>
+    <p class="panel-note">Verbatim <code>releases[]</code> entries from the upstream record, unmodified.</p>
+    <details class="raw-release">
+      <summary><code>r615-windows</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2026-09-09&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2027-09-09&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r615-linux</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2026-09-09&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2027-09-09&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r610-windows</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2026-08-03&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2027-08-03&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r610-linux</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2026-08-03&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2027-08-03&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r595-windows</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2026-03-24&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2027-03-24&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2027-03-24&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r595-linux</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2026-03-24&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2027-03-24&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2027-03-24&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r590-windows</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-12-22&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2026-12-22&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r590-linux</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-12-22&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2026-12-22&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r580-linux</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-08-04&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2026-08-04&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2028-08-04&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r580-windows</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-06-03&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2026-08-04&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2028-08-04&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r575-windows</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-06-03&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2026-06-03&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r575-linux</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-06-03&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2026-06-03&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r570-windows</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-01-27&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2026-01-27&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2026-01-27&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r570-linux</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2025-01-27&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2026-01-27&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2026-01-27&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r565-linux</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-10-29&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2025-10-01&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2025-10-01&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r565-windows</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-10-22&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2025-10-01&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2025-10-01&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r560-linux</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-08-22&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2025-08-22&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2025-08-22&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r560-windows</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-07-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2025-07-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2025-07-30&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r555-windows</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-06-04&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2025-06-01&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r555-linux</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-06-04&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2025-06-01&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r550-linux</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-02-23&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2025-02-01&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2025-04-17&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r550-windows</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2024-02-22&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2025-02-01&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2025-04-17&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r545-linux</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-10-31&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2024-10-01&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r545-windows</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-10-17&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2024-10-01&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r535-linux</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-06-14&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2024-06-01&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2026-06-01&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r535-windows</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-05-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2024-06-01&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2026-06-01&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r530-linux</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-03-23&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2023-06-24&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r530-windows</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2023-02-28&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2023-06-24&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r525-windows</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-11-10&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2023-12-01&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2023-12-01&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r525-linux</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-11-10&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2023-12-01&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2023-12-01&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r520-linux</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-10-12&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2023-10-01&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r515-windows</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-05-11&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2023-05-01&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2023-05-01&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r515-linux</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-05-11&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2023-05-01&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2023-05-01&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r510-windows</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-01-14&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2023-01-01&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2023-01-01&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r510-linux</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2022-01-14&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2023-01-01&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2023-01-01&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r495-linux</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2021-10-26&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2022-10-12&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r495-windows</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2021-10-12&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2022-01-14&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r470-linux</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2021-07-19&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2021-10-26&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2024-07-20&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r470-windows</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2021-06-22&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2021-09-20&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2024-07-09&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r465-linux</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2021-04-19&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2022-04-19&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r460-linux</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2021-01-07&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2021-07-19&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2022-01-01&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r460-windows</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2020-12-15&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2021-06-23&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2022-01-01&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r450-windows</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2020-06-24&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2020-12-15&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2023-07-01&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r450-linux</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2020-06-24&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2020-10-07&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2023-07-01&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r418-windows</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2019-02-04&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2019-04-23&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2022-03-01&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r418-linux</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2019-01-30&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2019-03-20&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2022-03-01&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r390-windows</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2018-01-08&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2018-07-31&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2021-10-26&#34;
+  }
+]</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>r390-linux</code></summary>
+      <pre><code>[
+  {
+    &#34;field&#34;: &#34;releaseDate&#34;,
+    &#34;label&#34;: null,
+    &#34;value&#34;: &#34;2018-01-04&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eoasFrom&#34;,
+    &#34;label&#34;: &#34;Active Support&#34;,
+    &#34;value&#34;: &#34;2018-03-10&#34;
+  },
+  {
+    &#34;field&#34;: &#34;eolFrom&#34;,
+    &#34;label&#34;: &#34;Security Support&#34;,
+    &#34;value&#34;: &#34;2022-11-22&#34;
+  }
+]</code></pre>
+    </details>
+  </details>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="shell footer-inner">
+    <div class="footer-col">
+      <p class="footer-title">EOL Tracker</p>
+      <p class="footer-note">
+        Software lifecycle dates are republished from the
+        <a href="https://endoflife.date/" rel="noopener">endoflife.date</a> community catalog and vendor-specific public
+        lifecycle sources. Each record names its source; community-catalog data is licensed
+        <a href="https://github.com/endoflife-date/endoflife.date/blob/master/LICENSE" rel="noopener">MIT</a>.
+      </p>
+      <p class="footer-note">
+        Hardware lifecycle data comes from
+        <a href="https://eosl.date/" rel="noopener">eosl.date</a> by Subash Geetha Krishnan,
+        which aggregates public vendor announcements, and from
+        <a href="https://opengear.com/end-life-products" rel="noopener">Opengear's end-of-life product list</a>.
+        Attribution here is credit by name and link, not a licence to the source material: nothing is reproduced as
+        licensed material. This catalog is an independent normalization, not affiliated with endoflife.date, eosl.date,
+        Opengear or any vendor listed here.
+      </p>
+      <p class="footer-note">
+        Last catalog refresh Sep 17, 2026 at 18:35 UTC.
+      </p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-title">Data</p>
+      <ul class="footer-links">
+        <li><a href="/eoltracker/v1/feed.json">Feed (JSON)</a></li>
+        <li><a href="/eoltracker/v1/feed.atom">Deadlines (Atom)</a></li>
+        <li><a href="/eoltracker/v1/calendar.ics">Deadlines (iCal)</a></li>
+        <li><a href="/eoltracker/v1/products.json">Product summaries</a></li>
+        <li><a href="/eoltracker/v1/hardware.json">Hardware summaries</a></li>
+        <li><a href="/eoltracker/v1/changes.atom">Changes (Atom)</a></li>
+        <li><a href="/eoltracker/v1/changes.json">Changes (JSON)</a></li>
+        <li><a href="/eoltracker/hardware/">Hardware catalog</a></li>
+        <li><a href="/eoltracker/api/">Endpoints &amp; mapping</a></li>
+        <li><a href="/eoltracker/v1/schema/product.json">Record schema</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <p class="footer-title">Project</p>
+      <ul class="footer-links">
+        <li><a href="https://github.com/zarguell/eoltracker" rel="noopener">Source on GitHub</a></li>
+        <li><a href="https://endoflife.date/" rel="noopener">Upstream source</a></li>
+        <li><a href="/eoltracker/THIRD-PARTY-NOTICES.txt">THIRD-PARTY-NOTICES.txt</a></li>
+        <li><a href="/eoltracker/OASIS-NOTICE.txt">OASIS-NOTICE.txt</a></li>
+        <li><a href="/eoltracker/404.html">Not found page</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script src="/eoltracker/app.js" defer></script>
+</body>
+</html>

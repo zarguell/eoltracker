@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Qiskit SDK lifecycle dates — EOL Tracker</title>
+<meta name="description" content="General availability, end-of-sale, security-support and end-of-life dates for every Qiskit SDK release, with raw source values and provenance.">
+<link rel="canonical" href="https://zarguell.github.io/eoltracker/products/researched-qiskit/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EOL Tracker">
+<meta property="og:title" content="Qiskit SDK lifecycle dates — EOL Tracker">
+<meta property="og:description" content="General availability, end-of-sale, security-support and end-of-life dates for every Qiskit SDK release, with raw source values and provenance.">
+<meta property="og:url" content="https://zarguell.github.io/eoltracker/products/researched-qiskit/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d1b2a'/%3E%3Cpath d='M7 20.5l5-6 4 4.5 4-6.5 5 8' fill='none' stroke='%234fd1c5' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/eoltracker/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="shell masthead-inner">
+    <a class="wordmark" href="/eoltracker/">EOL<span>Tracker</span></a>
+    <nav class="mainnav" aria-label="Primary">
+      <a href="/eoltracker/">Software</a>
+      <a href="/eoltracker/hardware/">Hardware</a>
+      <a href="/eoltracker/api/">API &amp; data</a>
+      <a href="/eoltracker/why/">Why EOL</a>
+      <a href="https://endoflife.date/" rel="noopener">endoflife.date</a>
+    </nav>
+    <p class="masthead-meta">542 products · 9171 releases · 7169 hardware records</p>
+  </div>
+</header>
+
+<main class="shell" id="main">
+<nav class="crumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/eoltracker/">Catalog</a></li>
+    <li aria-current="page">Qiskit SDK</li>
+  </ol>
+</nav>
+
+<section class="hero product-hero">
+  <p class="eyebrow">framework · software · researched record</p>
+  <h1 class="page-title">Qiskit SDK</h1>
+  <p class="lead">
+    3 releases with dates researched from the vendor notices quoted below, because no
+    refreshable catalog publishes this product's lifecycle. Stated dates are backed by those quotes; any calculated
+    date carries its own rule and base. Identifier for this record: <code>researched-qiskit</code>.
+  </p>
+  <p class="hero-meta">
+    Reading contributed Sep 23, 2026 by <strong>eoltracker-agent</strong>, verified in the
+    catalog by <code>researched-eoltracker-agent</code> on Sep 23, 2026 at 22:57 UTC — a one-time reading, not
+    a pipeline that re-derives these dates. Last catalog refresh
+    <time datetime="2026-09-17T18:35:21Z">Sep 17, 2026 at 18:35 UTC</time>.
+  </p>
+  <p class="product-links">
+    <a class="button" href="/eoltracker/v1/products/researched-qiskit.json">JSON record</a>
+    <a class="button" href="https://quantum.cloud.ibm.com/docs/en/guides/qiskit-sdk-version-strategy" rel="noopener">Source: quantum.cloud.ibm.com</a>
+<a class="button" href="https://www.ibm.com/quantum/qiskit" rel="noopener">about</a><a class="button" href="https://quantum.cloud.ibm.com/docs" rel="noopener">documentation</a><a class="button" href="https://quantum.cloud.ibm.com/docs/en/api/qiskit/release-notes" rel="noopener">releaseNotes</a><a class="button" href="https://quantum.cloud.ibm.com/docs/en/guides/qiskit-sdk-version-strategy" rel="noopener">versionStrategy</a><a class="button" href="https://github.com/Qiskit/qiskit" rel="noopener">repository</a><a class="button" href="https://github.com/Qiskit/qiskit/milestones" rel="noopener">milestones</a><a class="button" href="https://pypi.org/project/qiskit/" rel="noopener">pypi</a>  </p>
+</section>
+<section class="panel research-panel" aria-labelledby="research-title">
+  <h2 class="panel-title" id="research-title">Research contribution</h2>
+  <p class="panel-note">
+    This record is not produced by a refreshable pipeline: no deterministic source publishes these dates, so they were
+    read once from the vendor notices quoted below. Every stated date must appear in a stored quote; a calculated date
+    instead carries its own explicit rule, base, source, and exact vendor sentence. Nothing here re-reads the source,
+    so the reading date below is what the record's freshness rests on.
+  </p>
+
+  <p class="research-head">
+    <span class="tag tag-research">Researched contribution</span>
+    <span>Contributed by <strong>eoltracker-agent</strong></span>
+<span>read <time datetime="2026-09-23">Sep 23, 2026</time></span>    <span>agent research, gathered by an agent</span>
+  </p>
+
+
+
+  <h3 class="sub-title">Verbatim quote from the source</h3>
+  <blockquote class="research-quote" cite="https://quantum.cloud.ibm.com/docs/en/guides/qiskit-sdk-version-strategy">
+    <p>A final patch version is published when support is dropped, and that release also documents the end of support for that major version series. With the release of a new major version, the previous major version is supported for at least six months with only bug fixes, and one year for security fixes. The minimum period between major version releases is one year. The 0.46.0 release is the final minor version release for the 0.x series. The 0.46.x release series will continue to be supported and recieve bugfix and security fixes via patch releases for 6 months after this release. Qiskit 0.46.3 is a minor bugfix and backport release for the 0.46 series. It is also the last release of the 0.46 minor version, marking its end-of-life. the 0.46.x release will continue to be supported, with periodic patch releases that contain bug fixes, for 6 months after the release of 1.0. That is, 0.46.x will be supported until 2024-08. The v1.4.x release series will continue to be supported and receive bugfixes for 6 months and security fixes for 1 year after this release. Qiskit v1.4.5 is the last bugfix release in the 1.4 series and marks the end-of-life of the series. Support for security fixes in the 1.4 series will be continued until March 31st, 2026. Qiskit v1.4.6 is a security-only release, and the final release in the Qiskit v1.x series. Qiskit v1.x is no longer maintained in any form. The removed APIs are still supported in the Qiskit v1.4.x release which will receive bug fixes for another six months and will have security updates for one year. There will be further feature releases of Qiskit in the 2.x series; we do not expect to release Qiskit 3.0 until much later in 2026, as there is currently no need for breaking changes. An open-source SDK for working with quantum computers at the level of extended quantum circuits, operators, and primitives. This library is the core component of Qiskit, which contains the building blocks for creating and working with quantum circuits, quantum operators, and primitive functions (Sampler and Estimator). &#34;published_at&#34;:&#34;2024-02-01T20:26:30Z&#34; &#34;published_at&#34;:&#34;2024-09-23T09:58:02Z&#34; This is the final release in the 0.x release series marking the end-of-life of the release series. &#34;published_at&#34;:&#34;2024-02-15T20:42:34Z&#34; &#34;published_at&#34;:&#34;2025-10-13T11:07:03Z&#34; &#34;published_at&#34;:&#34;2026-06-12T17:37:39Z&#34; &#34;published_at&#34;:&#34;2025-03-31T19:17:28Z&#34; &#34;due_on&#34;:null,&#34;closed_at&#34;:null</p>
+    <footer>
+      — <a href="https://quantum.cloud.ibm.com/docs/en/guides/qiskit-sdk-version-strategy" rel="noopener">quantum.cloud.ibm.com</a>
+<span class="muted">read Sep 23, 2026</span>    </footer>
+  </blockquote>
+
+  <dl class="facts">
+    <div><dt>Contributor</dt><dd>eoltracker-agent</dd></div>
+    <div><dt>Research method</dt><dd>agent — the quote was gathered by an agent and stored verbatim.</dd></div>
+    <div><dt>Source</dt><dd><a href="https://quantum.cloud.ibm.com/docs/en/guides/qiskit-sdk-version-strategy" rel="noopener">https://quantum.cloud.ibm.com/docs/en/guides/qiskit-sdk-version-strategy</a></dd></div>
+    <div>
+      <dt>Research date</dt>
+      <dd>
+<time datetime="2026-09-23">Sep 23, 2026</time> · verified against the source Sep 23, 2026 at 22:57 UTC      </dd>
+    </div>
+    <div>
+      <dt>Review window</dt>
+      <dd>
+        The source states this reading should be reviewed after <time datetime="2027-03-22">Mar 22, 2027</time>.
+      </dd>
+    </div>
+    <div><dt>Verifier</dt><dd><code>researched-eoltracker-agent</code> — researched record, not a deterministic pipeline.</dd></div>
+    <div><dt>Last checked</dt><dd>Sep 23, 2026 at 22:57 UTC</dd></div>
+  </dl>
+
+  <h3 class="sub-title">Evidence quoted for this record</h3>
+  <ul class="research-sources">
+    <li>
+      <a href="https://quantum.cloud.ibm.com/docs/en/guides/qiskit-sdk-version-strategy" rel="noopener">quantum.cloud.ibm.com</a>
+<span class="muted">read Sep 23, 2026</span>      <blockquote class="research-quote">A final patch version is published when support is dropped, and that release also documents the end of support for that major version series.</blockquote>
+    </li>
+    <li>
+      <a href="https://quantum.cloud.ibm.com/docs/en/guides/qiskit-sdk-version-strategy" rel="noopener">quantum.cloud.ibm.com</a>
+<span class="muted">read Sep 23, 2026</span>      <blockquote class="research-quote">With the release of a new major version, the previous major version is supported for at least six months with only bug fixes, and one year for security fixes.</blockquote>
+    </li>
+    <li>
+      <a href="https://quantum.cloud.ibm.com/docs/en/guides/qiskit-sdk-version-strategy" rel="noopener">quantum.cloud.ibm.com</a>
+<span class="muted">read Sep 23, 2026</span>      <blockquote class="research-quote">The minimum period between major version releases is one year.</blockquote>
+    </li>
+    <li>
+      <a href="https://quantum.cloud.ibm.com/docs/en/api/qiskit/release-notes/0.46" rel="noopener">quantum.cloud.ibm.com</a>
+<span class="muted">read Sep 23, 2026</span>      <blockquote class="research-quote">The 0.46.0 release is the final minor version release for the 0.x series.</blockquote>
+    </li>
+    <li>
+      <a href="https://quantum.cloud.ibm.com/docs/en/api/qiskit/release-notes/0.46" rel="noopener">quantum.cloud.ibm.com</a>
+<span class="muted">read Sep 23, 2026</span>      <blockquote class="research-quote">The 0.46.x release series will continue to be supported and recieve bugfix and security fixes via patch releases for 6 months after this release.</blockquote>
+    </li>
+    <li>
+      <a href="https://quantum.cloud.ibm.com/docs/en/api/qiskit/release-notes/0.46" rel="noopener">quantum.cloud.ibm.com</a>
+<span class="muted">read Sep 23, 2026</span>      <blockquote class="research-quote">Qiskit 0.46.3 is a minor bugfix and backport release for the 0.46 series. It is also the last release of the 0.46 minor version, marking its end-of-life.</blockquote>
+    </li>
+    <li>
+      <a href="https://quantum.cloud.ibm.com/docs/en/api/qiskit/release-notes/1.0" rel="noopener">quantum.cloud.ibm.com</a>
+<span class="muted">read Sep 23, 2026</span>      <blockquote class="research-quote">the 0.46.x release will continue to be supported, with periodic patch releases that contain bug fixes, for 6 months after the release of 1.0. That is, 0.46.x will be supported until 2024-08.</blockquote>
+    </li>
+    <li>
+      <a href="https://quantum.cloud.ibm.com/docs/en/api/qiskit/release-notes/1.4" rel="noopener">quantum.cloud.ibm.com</a>
+<span class="muted">read Sep 23, 2026</span>      <blockquote class="research-quote">The v1.4.x release series will continue to be supported and receive bugfixes for 6 months and security fixes for 1 year after this release.</blockquote>
+    </li>
+    <li>
+      <a href="https://quantum.cloud.ibm.com/docs/en/api/qiskit/release-notes/1.4" rel="noopener">quantum.cloud.ibm.com</a>
+<span class="muted">read Sep 23, 2026</span>      <blockquote class="research-quote">Qiskit v1.4.5 is the last bugfix release in the 1.4 series and marks the end-of-life of the series. Support for security fixes in the 1.4 series will be continued until March 31st, 2026.</blockquote>
+    </li>
+    <li>
+      <a href="https://quantum.cloud.ibm.com/docs/en/api/qiskit/release-notes/1.4" rel="noopener">quantum.cloud.ibm.com</a>
+<span class="muted">read Sep 23, 2026</span>      <blockquote class="research-quote">Qiskit v1.4.6 is a security-only release, and the final release in the Qiskit v1.x series.</blockquote>
+    </li>
+    <li>
+      <a href="https://quantum.cloud.ibm.com/docs/en/api/qiskit/release-notes/1.4" rel="noopener">quantum.cloud.ibm.com</a>
+<span class="muted">read Sep 23, 2026</span>      <blockquote class="research-quote">Qiskit v1.x is no longer maintained in any form.</blockquote>
+    </li>
+    <li>
+      <a href="https://quantum.cloud.ibm.com/docs/en/api/qiskit/release-notes/2.0" rel="noopener">quantum.cloud.ibm.com</a>
+<span class="muted">read Sep 23, 2026</span>      <blockquote class="research-quote">The removed APIs are still supported in the Qiskit v1.4.x release which will receive bug fixes for another six months and will have security updates for one year.</blockquote>
+    </li>
+    <li>
+      <a href="https://quantum.cloud.ibm.com/docs/en/api/qiskit/release-notes/2.3" rel="noopener">quantum.cloud.ibm.com</a>
+<span class="muted">read Sep 23, 2026</span>      <blockquote class="research-quote">There will be further feature releases of Qiskit in the 2.x series; we do not expect to release Qiskit 3.0 until much later in 2026, as there is currently no need for breaking changes.</blockquote>
+    </li>
+    <li>
+      <a href="https://pypi.org/project/qiskit/" rel="noopener">pypi.org</a>
+<span class="muted">read Sep 23, 2026</span>      <blockquote class="research-quote">An open-source SDK for working with quantum computers at the level of extended quantum circuits, operators, and primitives.</blockquote>
+    </li>
+    <li>
+      <a href="https://pypi.org/project/qiskit/" rel="noopener">pypi.org</a>
+<span class="muted">read Sep 23, 2026</span>      <blockquote class="research-quote">This library is the core component of Qiskit, which contains the building blocks for creating and working with quantum circuits, quantum operators, and primitive functions (Sampler and Estimator).</blockquote>
+    </li>
+    <li>
+      <a href="https://api.github.com/repos/Qiskit/qiskit/releases/tags/0.46.0" rel="noopener">api.github.com</a>
+<span class="muted">read Sep 23, 2026</span>      <blockquote class="research-quote">&#34;published_at&#34;:&#34;2024-02-01T20:26:30Z&#34;</blockquote>
+    </li>
+    <li>
+      <a href="https://api.github.com/repos/Qiskit/qiskit/releases/tags/0.46.3" rel="noopener">api.github.com</a>
+<span class="muted">read Sep 23, 2026</span>      <blockquote class="research-quote">&#34;published_at&#34;:&#34;2024-09-23T09:58:02Z&#34;</blockquote>
+    </li>
+    <li>
+      <a href="https://api.github.com/repos/Qiskit/qiskit/releases/tags/0.46.3" rel="noopener">api.github.com</a>
+<span class="muted">read Sep 23, 2026</span>      <blockquote class="research-quote">This is the final release in the 0.x release series marking the end-of-life of the release series.</blockquote>
+    </li>
+    <li>
+      <a href="https://api.github.com/repos/Qiskit/qiskit/releases/tags/1.0.0" rel="noopener">api.github.com</a>
+<span class="muted">read Sep 23, 2026</span>      <blockquote class="research-quote">&#34;published_at&#34;:&#34;2024-02-15T20:42:34Z&#34;</blockquote>
+    </li>
+    <li>
+      <a href="https://api.github.com/repos/Qiskit/qiskit/releases/tags/1.4.5" rel="noopener">api.github.com</a>
+<span class="muted">read Sep 23, 2026</span>      <blockquote class="research-quote">&#34;published_at&#34;:&#34;2025-10-13T11:07:03Z&#34;</blockquote>
+    </li>
+    <li>
+      <a href="https://api.github.com/repos/Qiskit/qiskit/releases/tags/1.4.6" rel="noopener">api.github.com</a>
+<span class="muted">read Sep 23, 2026</span>      <blockquote class="research-quote">&#34;published_at&#34;:&#34;2026-06-12T17:37:39Z&#34;</blockquote>
+    </li>
+    <li>
+      <a href="https://api.github.com/repos/Qiskit/qiskit/releases/tags/2.0.0" rel="noopener">api.github.com</a>
+<span class="muted">read Sep 23, 2026</span>      <blockquote class="research-quote">&#34;published_at&#34;:&#34;2025-03-31T19:17:28Z&#34;</blockquote>
+    </li>
+    <li>
+      <a href="https://api.github.com/repos/Qiskit/qiskit/milestones/76" rel="noopener">api.github.com</a>
+<span class="muted">read Sep 23, 2026</span>      <blockquote class="research-quote">&#34;due_on&#34;:null,&#34;closed_at&#34;:null</blockquote>
+    </li>
+  </ul>
+</section>
+
+<section class="panel" aria-labelledby="coverage-title">
+  <h2 class="panel-title" id="coverage-title">Data coverage</h2>
+  <p class="panel-note">
+    The quoted notices state only the deadlines they state. Any derived date is computed from an explicit vendor rule
+    and shown separately with its calculation. Empty cells are dates this record does not carry, not implied support.
+  </p>
+  <ul class="bars">
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">General availability</span>
+        <span class="bar-value">3 / 3 releases (100%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="General availability: 3 of 3 releases have a published date">
+        <div class="bar-fill" style="width: 100%"></div>
+      </div>
+    </li>
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">End of sale</span>
+        <span class="bar-value">0 / 3 releases (0%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="End of sale: 0 of 3 releases have a published date">
+        <div class="bar-fill" style="width: 0%"></div>
+      </div>
+    </li>
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">End of security support</span>
+        <span class="bar-value">2 / 3 releases (67%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="End of security support: 2 of 3 releases have a published date">
+        <div class="bar-fill" style="width: 67%"></div>
+      </div>
+    </li>
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">End of life</span>
+        <span class="bar-value">2 / 3 releases (67%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="End of life: 2 of 3 releases have a published date">
+        <div class="bar-fill" style="width: 67%"></div>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section class="panel" aria-labelledby="legend-title">
+  <h2 class="panel-title" id="legend-title">How to read these dates</h2>
+  <p class="panel-note">
+    The milestone meanings below are the catalog's shared vocabulary. The endoflife.date label rules do not apply to
+    this record: stated dates come from the quoted vendor notices, while any derived date carries its own explicit
+    vendor rule, base, source, and calculation.
+  </p>
+  <dl class="legend">
+    <div class="legend-row">
+      <dt>General availability</dt>
+      <dd>
+        <p>First public release. Taken from the upstream releaseDate.</p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>End of sale</dt>
+      <dd>
+        <p>Last day new licenses or units are sold. Only mapped from an upstream field whose label names an end of sale.</p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>End of security support</dt>
+      <dd>
+        <p>Last day security fixes are published. Mapped from eolFrom or eoesFrom only when the label names security support.</p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>End of life</dt>
+      <dd>
+        <p>End of all support. A published extended-support date wins; otherwise eolFrom when its label describes a full support end.</p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>Blank date</dt>
+      <dd><p>The quoted notice publishes no value for that milestone. A missing date is an absent announcement, not a claim that support ends or continues.</p></dd>
+    </div>
+  </dl>
+</section>
+
+
+
+<section class="releases" aria-labelledby="releases-title">
+  <div class="catalog-head">
+    <h2 class="panel-title" id="releases-title">Release lifecycle</h2>
+    <p class="catalog-count">3 releases</p>
+  </div>
+  <p class="panel-note">
+    Newest first. Cells show normalized dates; a secondary line shows the raw upstream field and label when the
+    normalized date differs from, or is absent despite, a published value.
+  </p>
+
+  <div class="table-scroll">
+    <table class="release-table">
+      <caption class="sr-only">Lifecycle dates for each Qiskit SDK release</caption>
+      <thead>
+        <tr>
+          <th scope="col">Release</th>
+          <th scope="col">General availability</th>
+          <th scope="col">End of sale</th>
+          <th scope="col">End of security support</th>
+          <th scope="col">End of life</th>
+          <th scope="col">Upstream status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Qiskit SDK 2.x (current)</span>
+<code class="release-raw">2.x</code>          </th>
+          <td class="milestone">
+            <time datetime="2025-03-31">Mar 31, 2025</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="upstream-status">
+            <span class="tag tag-research">researched</span>
+            <span class="release-raw">dates quoted from the source below; no upstream release object exists</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Qiskit SDK 1.x</span>
+<code class="release-raw">1.x</code>          </th>
+          <td class="milestone">
+            <time datetime="2024-02-15">Feb 15, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2026-06-12">Jun 12, 2026</time>          </td>
+          <td class="milestone">
+            <time datetime="2026-06-12">Jun 12, 2026</time>          </td>
+          <td class="upstream-status">
+            <span class="tag tag-research">researched</span>
+            <span class="release-raw">dates quoted from the source below; no upstream release object exists</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">Qiskit SDK 0.46.x (final 0.x series)</span>
+<code class="release-raw">0.46</code>          </th>
+          <td class="milestone">
+            <time datetime="2024-02-01">Feb 1, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2024-09-23">Sep 23, 2024</time>          </td>
+          <td class="milestone">
+            <time datetime="2024-09-23">Sep 23, 2024</time>          </td>
+          <td class="upstream-status">
+            <span class="tag tag-research">researched</span>
+            <span class="release-raw">dates quoted from the source below; no upstream release object exists</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="panel" aria-labelledby="source-title">
+  <h2 class="panel-title" id="source-title">Source and upstream values</h2>
+  <p class="panel-note">
+    This record is not a normalization of endoflife.date data: no upstream catalog publishes this product. Stated
+    dates come from the vendor notices quoted above; derived dates retain their separate rule, base, and source.
+    The raw contribution is shown below so every value can be checked.
+  </p>
+  <dl class="facts">
+    <div><dt>Researched source</dt><dd><a href="https://quantum.cloud.ibm.com/docs/en/guides/qiskit-sdk-version-strategy" rel="noopener">https://quantum.cloud.ibm.com/docs/en/guides/qiskit-sdk-version-strategy</a></dd></div>
+    <div><dt>Contributor</dt><dd>eoltracker-agent (agent research, read Sep 23, 2026)</dd></div>
+    <div><dt>Verifier</dt><dd><code>researched-eoltracker-agent</code></dd></div>
+    <div><dt>Last checked</dt><dd>Sep 23, 2026 at 22:57 UTC</dd></div>
+    <div><dt>Upstream modified</dt><dd>not published upstream</dd></div>
+    <div><dt>JSON record</dt><dd><a href="https://zarguell.github.io/eoltracker/v1/products/researched-qiskit.json">https://zarguell.github.io/eoltracker/v1/products/researched-qiskit.json</a></dd></div>
+    <div><dt>Schema</dt><dd><a href="https://zarguell.github.io/eoltracker/v1/schema/product.json">v1/schema/product.json</a></dd></div>
+  </dl>
+
+  <h3 class="sub-title">Identifiers</h3>
+  <ul class="chips">
+<li><span class="tag">purl</span> <code>pkg:pypi/qiskit</code></li>  </ul>
+
+
+
+  <details class="raw">
+    <summary>Contribution evidence as stored (3)</summary>
+    <p class="panel-note">Verbatim <code>releases[]</code> entries from the contribution, including the quoted evidence the dates were checked against. These are not endoflife.date objects — no upstream catalog publishes this product.</p>
+    <details class="raw-release">
+      <summary><code>2.x</code></summary>
+      <pre><code>{
+  &#34;Contribution&#34;: {
+    &#34;datetime&#34;: null,
+    &#34;links&#34;: [
+      &#34;https://quantum.cloud.ibm.com/docs/en/guides/qiskit-sdk-version-strategy&#34;,
+      &#34;https://quantum.cloud.ibm.com/docs/en/api/qiskit/release-notes/0.46&#34;,
+      &#34;https://quantum.cloud.ibm.com/docs/en/api/qiskit/release-notes/1.0&#34;,
+      &#34;https://quantum.cloud.ibm.com/docs/en/api/qiskit/release-notes/1.4&#34;,
+      &#34;https://quantum.cloud.ibm.com/docs/en/api/qiskit/release-notes/2.0&#34;,
+      &#34;https://quantum.cloud.ibm.com/docs/en/api/qiskit/release-notes/2.3&#34;,
+      &#34;https://pypi.org/project/qiskit/&#34;,
+      &#34;https://api.github.com/repos/Qiskit/qiskit/releases/tags/0.46.0&#34;,
+      &#34;https://api.github.com/repos/Qiskit/qiskit/releases/tags/0.46.3&#34;,
+      &#34;https://api.github.com/repos/Qiskit/qiskit/releases/tags/1.0.0&#34;,
+      &#34;https://api.github.com/repos/Qiskit/qiskit/releases/tags/1.4.5&#34;,
+      &#34;https://api.github.com/repos/Qiskit/qiskit/releases/tags/1.4.6&#34;,
+      &#34;https://api.github.com/repos/Qiskit/qiskit/releases/tags/2.0.0&#34;,
+      &#34;https://api.github.com/repos/Qiskit/qiskit/milestones/76&#34;
+    ],
+    &#34;role&#34;: null,
+    &#34;text&#34;: &#34;A final patch version is published when support is dropped, and that release also documents the end of support for that major version series. With the release of a new major version, the previous major version is supported for at least six months with only bug fixes, and one year for security fixes. The minimum period between major version releases is one year. The 0.46.0 release is the final minor version release for the 0.x series. The 0.46.x release series will continue to be supported and recieve bugfix and security fixes via patch releases for 6 months after this release. Qiskit 0.46.3 is a minor bugfix and backport release for the 0.46 series. It is also the last release of the 0.46 minor version, marking its end-of-life. the 0.46.x release will continue to be supported, with periodic patch releases that contain bug fixes, for 6 months after the release of 1.0. That is, 0.46.x will be supported until 2024-08. The v1.4.x release series will continue to be supported and receive bugfixes for 6 months and security fixes for 1 year after this release. Qiskit v1.4.5 is the last bugfix release in the 1.4 series and marks the end-of-life of the series. Support for security fixes in the 1.4 series will be continued until March 31st, 2026. Qiskit v1.4.6 is a security-only release, and the final release in the Qiskit v1.x series. Qiskit v1.x is no longer maintained in any form. The removed APIs are still supported in the Qiskit v1.4.x release which will receive bug fixes for another six months and will have security updates for one year. There will be further feature releases of Qiskit in the 2.x series; we do not expect to release Qiskit 3.0 until much later in 2026, as there is currently no need for breaking changes. An open-source SDK for working with quantum computers at the level of extended quantum circuits, operators, and primitives. This library is the core component of Qiskit, which contains the building blocks for creating and working with quantum circuits, quantum operators, and primitive functions (Sampler and Estimator). \&#34;published_at\&#34;:\&#34;2024-02-01T20:26:30Z\&#34; \&#34;published_at\&#34;:\&#34;2024-09-23T09:58:02Z\&#34; This is the final release in the 0.x release series marking the end-of-life of the release series. \&#34;published_at\&#34;:\&#34;2024-02-15T20:42:34Z\&#34; \&#34;published_at\&#34;:\&#34;2025-10-13T11:07:03Z\&#34; \&#34;published_at\&#34;:\&#34;2026-06-12T17:37:39Z\&#34; \&#34;published_at\&#34;:\&#34;2025-03-31T19:17:28Z\&#34; \&#34;due_on\&#34;:null,\&#34;closed_at\&#34;:null&#34;,
+    &#34;value&#34;: null
+  },
+  &#34;name&#34;: &#34;Qiskit SDK 2.x (current)&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>1.x</code></summary>
+      <pre><code>{
+  &#34;Contribution&#34;: {
+    &#34;datetime&#34;: null,
+    &#34;links&#34;: [
+      &#34;https://quantum.cloud.ibm.com/docs/en/guides/qiskit-sdk-version-strategy&#34;,
+      &#34;https://quantum.cloud.ibm.com/docs/en/api/qiskit/release-notes/0.46&#34;,
+      &#34;https://quantum.cloud.ibm.com/docs/en/api/qiskit/release-notes/1.0&#34;,
+      &#34;https://quantum.cloud.ibm.com/docs/en/api/qiskit/release-notes/1.4&#34;,
+      &#34;https://quantum.cloud.ibm.com/docs/en/api/qiskit/release-notes/2.0&#34;,
+      &#34;https://quantum.cloud.ibm.com/docs/en/api/qiskit/release-notes/2.3&#34;,
+      &#34;https://pypi.org/project/qiskit/&#34;,
+      &#34;https://api.github.com/repos/Qiskit/qiskit/releases/tags/0.46.0&#34;,
+      &#34;https://api.github.com/repos/Qiskit/qiskit/releases/tags/0.46.3&#34;,
+      &#34;https://api.github.com/repos/Qiskit/qiskit/releases/tags/1.0.0&#34;,
+      &#34;https://api.github.com/repos/Qiskit/qiskit/releases/tags/1.4.5&#34;,
+      &#34;https://api.github.com/repos/Qiskit/qiskit/releases/tags/1.4.6&#34;,
+      &#34;https://api.github.com/repos/Qiskit/qiskit/releases/tags/2.0.0&#34;,
+      &#34;https://api.github.com/repos/Qiskit/qiskit/milestones/76&#34;
+    ],
+    &#34;role&#34;: null,
+    &#34;text&#34;: &#34;A final patch version is published when support is dropped, and that release also documents the end of support for that major version series. With the release of a new major version, the previous major version is supported for at least six months with only bug fixes, and one year for security fixes. The minimum period between major version releases is one year. The 0.46.0 release is the final minor version release for the 0.x series. The 0.46.x release series will continue to be supported and recieve bugfix and security fixes via patch releases for 6 months after this release. Qiskit 0.46.3 is a minor bugfix and backport release for the 0.46 series. It is also the last release of the 0.46 minor version, marking its end-of-life. the 0.46.x release will continue to be supported, with periodic patch releases that contain bug fixes, for 6 months after the release of 1.0. That is, 0.46.x will be supported until 2024-08. The v1.4.x release series will continue to be supported and receive bugfixes for 6 months and security fixes for 1 year after this release. Qiskit v1.4.5 is the last bugfix release in the 1.4 series and marks the end-of-life of the series. Support for security fixes in the 1.4 series will be continued until March 31st, 2026. Qiskit v1.4.6 is a security-only release, and the final release in the Qiskit v1.x series. Qiskit v1.x is no longer maintained in any form. The removed APIs are still supported in the Qiskit v1.4.x release which will receive bug fixes for another six months and will have security updates for one year. There will be further feature releases of Qiskit in the 2.x series; we do not expect to release Qiskit 3.0 until much later in 2026, as there is currently no need for breaking changes. An open-source SDK for working with quantum computers at the level of extended quantum circuits, operators, and primitives. This library is the core component of Qiskit, which contains the building blocks for creating and working with quantum circuits, quantum operators, and primitive functions (Sampler and Estimator). \&#34;published_at\&#34;:\&#34;2024-02-01T20:26:30Z\&#34; \&#34;published_at\&#34;:\&#34;2024-09-23T09:58:02Z\&#34; This is the final release in the 0.x release series marking the end-of-life of the release series. \&#34;published_at\&#34;:\&#34;2024-02-15T20:42:34Z\&#34; \&#34;published_at\&#34;:\&#34;2025-10-13T11:07:03Z\&#34; \&#34;published_at\&#34;:\&#34;2026-06-12T17:37:39Z\&#34; \&#34;published_at\&#34;:\&#34;2025-03-31T19:17:28Z\&#34; \&#34;due_on\&#34;:null,\&#34;closed_at\&#34;:null&#34;,
+    &#34;value&#34;: null
+  },
+  &#34;name&#34;: &#34;Qiskit SDK 1.x&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>0.46</code></summary>
+      <pre><code>{
+  &#34;Contribution&#34;: {
+    &#34;datetime&#34;: null,
+    &#34;links&#34;: [
+      &#34;https://quantum.cloud.ibm.com/docs/en/guides/qiskit-sdk-version-strategy&#34;,
+      &#34;https://quantum.cloud.ibm.com/docs/en/api/qiskit/release-notes/0.46&#34;,
+      &#34;https://quantum.cloud.ibm.com/docs/en/api/qiskit/release-notes/1.0&#34;,
+      &#34;https://quantum.cloud.ibm.com/docs/en/api/qiskit/release-notes/1.4&#34;,
+      &#34;https://quantum.cloud.ibm.com/docs/en/api/qiskit/release-notes/2.0&#34;,
+      &#34;https://quantum.cloud.ibm.com/docs/en/api/qiskit/release-notes/2.3&#34;,
+      &#34;https://pypi.org/project/qiskit/&#34;,
+      &#34;https://api.github.com/repos/Qiskit/qiskit/releases/tags/0.46.0&#34;,
+      &#34;https://api.github.com/repos/Qiskit/qiskit/releases/tags/0.46.3&#34;,
+      &#34;https://api.github.com/repos/Qiskit/qiskit/releases/tags/1.0.0&#34;,
+      &#34;https://api.github.com/repos/Qiskit/qiskit/releases/tags/1.4.5&#34;,
+      &#34;https://api.github.com/repos/Qiskit/qiskit/releases/tags/1.4.6&#34;,
+      &#34;https://api.github.com/repos/Qiskit/qiskit/releases/tags/2.0.0&#34;,
+      &#34;https://api.github.com/repos/Qiskit/qiskit/milestones/76&#34;
+    ],
+    &#34;role&#34;: null,
+    &#34;text&#34;: &#34;A final patch version is published when support is dropped, and that release also documents the end of support for that major version series. With the release of a new major version, the previous major version is supported for at least six months with only bug fixes, and one year for security fixes. The minimum period between major version releases is one year. The 0.46.0 release is the final minor version release for the 0.x series. The 0.46.x release series will continue to be supported and recieve bugfix and security fixes via patch releases for 6 months after this release. Qiskit 0.46.3 is a minor bugfix and backport release for the 0.46 series. It is also the last release of the 0.46 minor version, marking its end-of-life. the 0.46.x release will continue to be supported, with periodic patch releases that contain bug fixes, for 6 months after the release of 1.0. That is, 0.46.x will be supported until 2024-08. The v1.4.x release series will continue to be supported and receive bugfixes for 6 months and security fixes for 1 year after this release. Qiskit v1.4.5 is the last bugfix release in the 1.4 series and marks the end-of-life of the series. Support for security fixes in the 1.4 series will be continued until March 31st, 2026. Qiskit v1.4.6 is a security-only release, and the final release in the Qiskit v1.x series. Qiskit v1.x is no longer maintained in any form. The removed APIs are still supported in the Qiskit v1.4.x release which will receive bug fixes for another six months and will have security updates for one year. There will be further feature releases of Qiskit in the 2.x series; we do not expect to release Qiskit 3.0 until much later in 2026, as there is currently no need for breaking changes. An open-source SDK for working with quantum computers at the level of extended quantum circuits, operators, and primitives. This library is the core component of Qiskit, which contains the building blocks for creating and working with quantum circuits, quantum operators, and primitive functions (Sampler and Estimator). \&#34;published_at\&#34;:\&#34;2024-02-01T20:26:30Z\&#34; \&#34;published_at\&#34;:\&#34;2024-09-23T09:58:02Z\&#34; This is the final release in the 0.x release series marking the end-of-life of the release series. \&#34;published_at\&#34;:\&#34;2024-02-15T20:42:34Z\&#34; \&#34;published_at\&#34;:\&#34;2025-10-13T11:07:03Z\&#34; \&#34;published_at\&#34;:\&#34;2026-06-12T17:37:39Z\&#34; \&#34;published_at\&#34;:\&#34;2025-03-31T19:17:28Z\&#34; \&#34;due_on\&#34;:null,\&#34;closed_at\&#34;:null&#34;,
+    &#34;value&#34;: null
+  },
+  &#34;name&#34;: &#34;Qiskit SDK 0.46.x (final 0.x series)&#34;
+}</code></pre>
+    </details>
+  </details>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="shell footer-inner">
+    <div class="footer-col">
+      <p class="footer-title">EOL Tracker</p>
+      <p class="footer-note">
+        Software lifecycle dates are republished from the
+        <a href="https://endoflife.date/" rel="noopener">endoflife.date</a> community catalog and vendor-specific public
+        lifecycle sources. Each record names its source; community-catalog data is licensed
+        <a href="https://github.com/endoflife-date/endoflife.date/blob/master/LICENSE" rel="noopener">MIT</a>.
+      </p>
+      <p class="footer-note">
+        Hardware lifecycle data comes from
+        <a href="https://eosl.date/" rel="noopener">eosl.date</a> by Subash Geetha Krishnan,
+        which aggregates public vendor announcements, and from
+        <a href="https://opengear.com/end-life-products" rel="noopener">Opengear's end-of-life product list</a>.
+        Attribution here is credit by name and link, not a licence to the source material: nothing is reproduced as
+        licensed material. This catalog is an independent normalization, not affiliated with endoflife.date, eosl.date,
+        Opengear or any vendor listed here.
+      </p>
+      <p class="footer-note">
+        Last catalog refresh Sep 17, 2026 at 18:35 UTC.
+      </p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-title">Data</p>
+      <ul class="footer-links">
+        <li><a href="/eoltracker/v1/feed.json">Feed (JSON)</a></li>
+        <li><a href="/eoltracker/v1/feed.atom">Deadlines (Atom)</a></li>
+        <li><a href="/eoltracker/v1/calendar.ics">Deadlines (iCal)</a></li>
+        <li><a href="/eoltracker/v1/products.json">Product summaries</a></li>
+        <li><a href="/eoltracker/v1/hardware.json">Hardware summaries</a></li>
+        <li><a href="/eoltracker/v1/changes.atom">Changes (Atom)</a></li>
+        <li><a href="/eoltracker/v1/changes.json">Changes (JSON)</a></li>
+        <li><a href="/eoltracker/hardware/">Hardware catalog</a></li>
+        <li><a href="/eoltracker/api/">Endpoints &amp; mapping</a></li>
+        <li><a href="/eoltracker/v1/schema/product.json">Record schema</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <p class="footer-title">Project</p>
+      <ul class="footer-links">
+        <li><a href="https://github.com/zarguell/eoltracker" rel="noopener">Source on GitHub</a></li>
+        <li><a href="https://endoflife.date/" rel="noopener">Upstream source</a></li>
+        <li><a href="/eoltracker/THIRD-PARTY-NOTICES.txt">THIRD-PARTY-NOTICES.txt</a></li>
+        <li><a href="/eoltracker/OASIS-NOTICE.txt">OASIS-NOTICE.txt</a></li>
+        <li><a href="/eoltracker/404.html">Not found page</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script src="/eoltracker/app.js" defer></script>
+</body>
+</html>

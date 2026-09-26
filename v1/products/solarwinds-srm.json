@@ -1,0 +1,522 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "solarwinds-srm",
+  "name": "SolarWinds SRM",
+  "category": "software",
+  "upstream_category": "app",
+  "identifiers": [],
+  "labels": {
+    "eol": "EoL effective date"
+  },
+  "links": {
+    "html": "https://documentation.solarwinds.com/en/success_center/srm/content/release_notes/release_history.htm"
+  },
+  "releases": [
+    {
+      "id": "2024.2",
+      "name": "2024.2",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2027-07-09"
+      },
+      "upstream": {
+        "name": "2024.2",
+        "cells": {
+          "version": "2024.2",
+          "announcement": "June 9, 2026: End-of-Life (EoL) announcement – Customers on SRM 2024.2 should begin transitioning to the latest version of SRM.",
+          "eoe": "July 9, 2026: End-of-Engineering (EoE) – Service releases, bug fixes, workarounds, and service packs for SRM 2024.2 will no longer be actively supported by SolarWinds.",
+          "eol": "July 9, 2027: End-of-Life (EoL) – SolarWinds will no longer provide technical support for SRM 2024.2."
+        },
+        "table": "Supported versions with end-of-life announcement"
+      }
+    },
+    {
+      "id": "2024.1",
+      "name": "2024.1",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2027-03-12"
+      },
+      "upstream": {
+        "name": "2024.1",
+        "cells": {
+          "version": "2024.1",
+          "announcement": "February 10, 2026: End-of-Life (EoL) announcement – Customers on SRM 2024.1 should begin transitioning to the latest version of SRM.",
+          "eoe": "March 12, 2026: End-of-Engineering (EoE) – Service releases, bug fixes, workarounds, and service packs for SRM 2024.1 will no longer be actively supported by SolarWinds.",
+          "eol": "March 12, 2027: End-of-Life (EoL) – SolarWinds will no longer provide technical support for SRM 2024.1."
+        },
+        "table": "Supported versions with end-of-life announcement"
+      }
+    },
+    {
+      "id": "2023.4",
+      "name": "2023.4",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-11-20"
+      },
+      "upstream": {
+        "name": "2023.4",
+        "cells": {
+          "version": "2023.4",
+          "announcement": "October 21, 2025: End-of-Life (EoL) announcement – Customers on SRM 2023.4 should begin transitioning to the latest version of SRM.",
+          "eoe": "November 20, 2025: End-of-Engineering (EoE) – Service releases, bug fixes, workarounds, and service packs for SRM 2023.4 will no longer be actively supported by SolarWinds.",
+          "eol": "November 20, 2026: End-of-Life (EoL) – SolarWinds will no longer provide technical support for SRM 2023.4."
+        },
+        "table": "Supported versions with end-of-life announcement"
+      }
+    },
+    {
+      "id": "2023.3",
+      "name": "2023.3",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-11-20"
+      },
+      "upstream": {
+        "name": "2023.3",
+        "cells": {
+          "version": "2023.3",
+          "announcement": "October 21, 2025: End-of-Life (EoL) announcement – Customers on SRM 2023.3 should begin transitioning to the latest version of SRM.",
+          "eoe": "November 20, 2025: End-of-Engineering (EoE) – Service releases, bug fixes, workarounds, and service packs for SRM 2023.3 will no longer be actively supported by SolarWinds.",
+          "eol": "November 20, 2026: End-of-Life (EoL) – SolarWinds will no longer provide technical support for SRM 2023.3."
+        },
+        "table": "Supported versions with end-of-life announcement"
+      }
+    },
+    {
+      "id": "2023.2",
+      "name": "2023.2",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-07-10"
+      },
+      "upstream": {
+        "name": "2023.2",
+        "cells": {
+          "version": "2023.2",
+          "announcement": "June 10, 2025",
+          "eoe": "July 10, 2025",
+          "eol": "July 10, 2026"
+        },
+        "table": "Unsupported versions"
+      }
+    },
+    {
+      "id": "2023.1.1",
+      "name": "2023.1.1",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-03-13"
+      },
+      "upstream": {
+        "name": "2023.1.1",
+        "cells": {
+          "version": "2023.1.1",
+          "announcement": "February 11, 2025",
+          "eoe": "March 13, 2025",
+          "eol": "March 13, 2026"
+        },
+        "table": "Unsupported versions"
+      }
+    },
+    {
+      "id": "2023.1",
+      "name": "2023.1",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-03-13"
+      },
+      "upstream": {
+        "name": "2023.1",
+        "cells": {
+          "version": "2023.1",
+          "announcement": "February 11, 2025",
+          "eoe": "March 13, 2025",
+          "eol": "March 13, 2026"
+        },
+        "table": "Unsupported versions"
+      }
+    },
+    {
+      "id": "2022.4.1",
+      "name": "2022.4.1",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-07-06"
+      },
+      "upstream": {
+        "name": "2022.4.1",
+        "cells": {
+          "version": "2022.4.1",
+          "announcement": "June 6, 2024",
+          "eoe": "July 6, 2024",
+          "eol": "July 6, 2025"
+        },
+        "table": "Unsupported versions"
+      }
+    },
+    {
+      "id": "2022.4",
+      "name": "2022.4",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-07-06"
+      },
+      "upstream": {
+        "name": "2022.4",
+        "cells": {
+          "version": "2022.4",
+          "announcement": "June 6, 2024",
+          "eoe": "July 6, 2024",
+          "eol": "July 6, 2025"
+        },
+        "table": "Unsupported versions"
+      }
+    },
+    {
+      "id": "2022.3",
+      "name": "2022.3",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-03-07"
+      },
+      "upstream": {
+        "name": "2022.3",
+        "cells": {
+          "version": "2022.3",
+          "announcement": "February, 6, 2024",
+          "eoe": "March 7, 2024",
+          "eol": "March 7, 2025"
+        },
+        "table": "Unsupported versions"
+      }
+    },
+    {
+      "id": "2020.2.7",
+      "name": "2020.2.7",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-05-18"
+      },
+      "upstream": {
+        "name": "2020.2.7",
+        "cells": {
+          "version": "2020.2.7",
+          "announcement": "April 18, 2023",
+          "eoe": "May 18, 2023",
+          "eol": "May 18, 2024"
+        },
+        "table": "Unsupported versions"
+      }
+    },
+    {
+      "id": "2020.2.6",
+      "name": "2020.2.6",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-05-18"
+      },
+      "upstream": {
+        "name": "2020.2.6",
+        "cells": {
+          "version": "2020.2.6",
+          "announcement": "April 18, 2023",
+          "eoe": "May 18, 2023",
+          "eol": "May 18, 2024"
+        },
+        "table": "Unsupported versions"
+      }
+    },
+    {
+      "id": "2020.2.5",
+      "name": "2020.2.5",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-02-17"
+      },
+      "upstream": {
+        "name": "2020.2.5",
+        "cells": {
+          "version": "2020.2.5",
+          "announcement": "January 18, 2023",
+          "eoe": "February 17, 2023",
+          "eol": "February 17, 2024"
+        },
+        "table": "Unsupported versions"
+      }
+    },
+    {
+      "id": "2020.2.4",
+      "name": "2020.2.4",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-11-18"
+      },
+      "upstream": {
+        "name": "2020.2.4",
+        "cells": {
+          "version": "2020.2.4",
+          "announcement": "October 19, 2022",
+          "eoe": "November 18, 2022",
+          "eol": "November 18, 2023"
+        },
+        "table": "Unsupported versions"
+      }
+    },
+    {
+      "id": "2020.2.1",
+      "name": "2020.2.1",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-11-18"
+      },
+      "upstream": {
+        "name": "2020.2.1",
+        "cells": {
+          "version": "2020.2.1",
+          "announcement": "October 19, 2022",
+          "eoe": "November 18, 2022",
+          "eol": "November 18, 2023"
+        },
+        "table": "Unsupported versions"
+      }
+    },
+    {
+      "id": "2020.2",
+      "name": "2020.2",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-11-18"
+      },
+      "upstream": {
+        "name": "2020.2",
+        "cells": {
+          "version": "2020.2",
+          "announcement": "October 19, 2022",
+          "eoe": "November 18, 2022",
+          "eol": "November 18, 2023"
+        },
+        "table": "Unsupported versions"
+      }
+    },
+    {
+      "id": "2019.4.2",
+      "name": "2019.4.2",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-07-27"
+      },
+      "upstream": {
+        "name": "2019.4.2",
+        "cells": {
+          "version": "2019.4.2",
+          "announcement": "July 27, 2022",
+          "eoe": "October 26, 2022",
+          "eol": "July 27, 2023"
+        },
+        "table": "Unsupported versions"
+      }
+    },
+    {
+      "id": "2019.4",
+      "name": "2019.4",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-07-27"
+      },
+      "upstream": {
+        "name": "2019.4",
+        "cells": {
+          "version": "2019.4",
+          "announcement": "July 27, 2022",
+          "eoe": "October 26, 2022",
+          "eol": "July 27, 2023"
+        },
+        "table": "Unsupported versions"
+      }
+    },
+    {
+      "id": "6.9",
+      "name": "6.9",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-06-01"
+      },
+      "upstream": {
+        "name": "6.9",
+        "cells": {
+          "version": "6.9",
+          "announcement": "June 1, 2022",
+          "eoe": "September 1, 2022",
+          "eol": "June 1, 2023"
+        },
+        "table": "Unsupported versions"
+      }
+    },
+    {
+      "id": "6.8",
+      "name": "6.8",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-07-15"
+      },
+      "upstream": {
+        "name": "6.8",
+        "cells": {
+          "version": "6.8",
+          "announcement": "June 15, 2021",
+          "eoe": "July 15, 2021",
+          "eol": "July 15, 2022"
+        },
+        "table": "Unsupported versions"
+      }
+    },
+    {
+      "id": "6.7",
+      "name": "6.7",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-07-15"
+      },
+      "upstream": {
+        "name": "6.7",
+        "cells": {
+          "version": "6.7",
+          "announcement": "June 15, 2021",
+          "eoe": "July 15, 2021",
+          "eol": "July 15, 2022"
+        },
+        "table": "Unsupported versions"
+      }
+    },
+    {
+      "id": "6.6",
+      "name": "6.6",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-11-25"
+      },
+      "upstream": {
+        "name": "6.6",
+        "cells": {
+          "version": "6.6",
+          "announcement": "August 25, 2020",
+          "eoe": "November 25, 2020",
+          "eol": "November 25, 2021"
+        },
+        "table": "Unsupported versions"
+      }
+    },
+    {
+      "id": "6.5",
+      "name": "6.5",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-08-31"
+      },
+      "upstream": {
+        "name": "6.5",
+        "cells": {
+          "version": "6.5",
+          "announcement": "May 31, 2020",
+          "eoe": "August 31, 2020",
+          "eol": "August 31, 2021"
+        },
+        "table": "Unsupported versions"
+      }
+    },
+    {
+      "id": "6.4",
+      "name": "6.4",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-08-31"
+      },
+      "upstream": {
+        "name": "6.4",
+        "cells": {
+          "version": "6.4",
+          "announcement": "May 31, 2020",
+          "eoe": "August 31, 2020",
+          "eol": "August 31, 2021"
+        },
+        "table": "Unsupported versions"
+      }
+    },
+    {
+      "id": "6.3",
+      "name": "6.3",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-08-31"
+      },
+      "upstream": {
+        "name": "6.3",
+        "cells": {
+          "version": "6.3",
+          "announcement": "May 31, 2020",
+          "eoe": "August 31, 2020",
+          "eol": "August 31, 2021"
+        },
+        "table": "Unsupported versions"
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://documentation.solarwinds.com/en/success_center/srm/content/release_notes/release_history.htm",
+    "verifier": "deterministic-solarwinds",
+    "last_checked": "2026-09-26T14:46:40Z",
+    "upstream_modified": null
+  }
+}

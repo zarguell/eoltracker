@@ -1,0 +1,363 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "sns-smc",
+  "name": "Stormshield Management Center",
+  "category": "software",
+  "upstream_category": "os",
+  "identifiers": [],
+  "labels": {
+    "eoas": "Maintenance Support",
+    "discontinued": null,
+    "eol": "Lifecycle Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/sns-smc",
+    "releasePolicy": null
+  },
+  "releases": [
+    {
+      "id": "3.9",
+      "name": "3.9",
+      "milestones": {
+        "ga": "2026-04-22",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.9",
+        "codename": null,
+        "label": "3.9",
+        "releaseDate": "2026-04-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": null,
+        "custom": {
+          "lowestSNSVersion": "4.3",
+          "highestSNSVersion": "5.1"
+        }
+      }
+    },
+    {
+      "id": "3.8",
+      "name": "3.8",
+      "milestones": {
+        "ga": "2025-06-10",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.8",
+        "codename": null,
+        "label": "3.8",
+        "releaseDate": "2025-06-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-08-24",
+        "isEol": false,
+        "eolFrom": "2026-11-23",
+        "isMaintained": true,
+        "latest": null,
+        "custom": {
+          "lowestSNSVersion": "4.3",
+          "highestSNSVersion": "4.8"
+        }
+      }
+    },
+    {
+      "id": "3.7",
+      "name": "3.7",
+      "milestones": {
+        "ga": "2024-12-17",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.7",
+        "codename": null,
+        "label": "3.7",
+        "releaseDate": "2024-12-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-09-10",
+        "isEol": true,
+        "eolFrom": "2025-12-10",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "lowestSNSVersion": "4.3",
+          "highestSNSVersion": "4.8"
+        }
+      }
+    },
+    {
+      "id": "3.6",
+      "name": "3.6",
+      "milestones": {
+        "ga": "2024-07-30",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.6",
+        "codename": null,
+        "label": "3.6",
+        "releaseDate": "2024-07-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-03-18",
+        "isEol": true,
+        "eolFrom": "2025-06-18",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "lowestSNSVersion": "4.3",
+          "highestSNSVersion": "4.8"
+        }
+      }
+    },
+    {
+      "id": "3.5",
+      "name": "3.5",
+      "milestones": {
+        "ga": "2023-11-08",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.5",
+        "codename": null,
+        "label": "3.5",
+        "releaseDate": "2023-11-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-07-30",
+        "isEol": true,
+        "eolFrom": "2024-10-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "lowestSNSVersion": "3.7.0",
+          "highestSNSVersion": "4.7"
+        }
+      }
+    },
+    {
+      "id": "3.4",
+      "name": "3.4",
+      "milestones": {
+        "ga": "2023-04-11",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.4",
+        "codename": null,
+        "label": "3.4",
+        "releaseDate": "2023-04-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-11-08",
+        "isEol": true,
+        "eolFrom": "2023-11-08",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "lowestSNSVersion": "3.7.0",
+          "highestSNSVersion": "4.7"
+        }
+      }
+    },
+    {
+      "id": "3.3",
+      "name": "3.3",
+      "milestones": {
+        "ga": "2022-08-30",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.3",
+        "codename": null,
+        "label": "3.3",
+        "releaseDate": "2022-08-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-04-11",
+        "isEol": true,
+        "eolFrom": "2023-04-11",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "lowestSNSVersion": "3.7.0",
+          "highestSNSVersion": "4.7"
+        }
+      }
+    },
+    {
+      "id": "3.2",
+      "name": "3.2",
+      "milestones": {
+        "ga": "2022-05-24",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.2",
+        "codename": null,
+        "label": "3.2",
+        "releaseDate": "2022-05-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-08-30",
+        "isEol": true,
+        "eolFrom": "2022-08-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "lowestSNSVersion": "3.7.0",
+          "highestSNSVersion": "4.7"
+        }
+      }
+    },
+    {
+      "id": "3.1",
+      "name": "3.1",
+      "milestones": {
+        "ga": "2021-12-03",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.1",
+        "codename": null,
+        "label": "3.1",
+        "releaseDate": "2021-12-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-05-24",
+        "isEol": true,
+        "eolFrom": "2022-05-24",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "lowestSNSVersion": "2.5.0",
+          "highestSNSVersion": "4.7"
+        }
+      }
+    },
+    {
+      "id": "3.0",
+      "name": "3.0",
+      "milestones": {
+        "ga": "2021-06-17",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.0",
+        "codename": null,
+        "label": "3.0",
+        "releaseDate": "2021-06-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-12-03",
+        "isEol": true,
+        "eolFrom": "2021-12-03",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "lowestSNSVersion": "2.5.0",
+          "highestSNSVersion": "4.7"
+        }
+      }
+    },
+    {
+      "id": "2",
+      "name": "2",
+      "milestones": {
+        "ga": "2017-03-31",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2",
+        "codename": null,
+        "label": "2",
+        "releaseDate": "2017-03-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-06-17",
+        "isEol": true,
+        "eolFrom": "2021-06-17",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "lowestSNSVersion": "2.5.0",
+          "highestSNSVersion": "4.7"
+        }
+      }
+    },
+    {
+      "id": "1",
+      "name": "1",
+      "milestones": {
+        "ga": "2015-12-16",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1",
+        "codename": null,
+        "label": "1",
+        "releaseDate": "2015-12-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2017-03-31",
+        "isEol": true,
+        "eolFrom": "2017-03-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "lowestSNSVersion": "2.5.0",
+          "highestSNSVersion": "4.7"
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/sns-smc/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-05-14T00:08:56+00:00"
+  }
+}

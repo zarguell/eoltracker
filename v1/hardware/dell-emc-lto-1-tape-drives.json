@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-lto-1-tape-drives",
+  "name": "LTO-1 Tape Drives",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC EMC Data Manager (EDM)",
+  "family": "EMC Data Manager (EDM)",
+  "model_number": "LTO-1 Tape Drives",
+  "milestones": {
+    "ga": null,
+    "eos": "2005-03-31",
+    "eossec": null,
+    "eol": "2009-03-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "LTO-1 Tape Drives",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "LTO-1 Tape Drives",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC EMC Data Manager (EDM)",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2005-03-31",
+      "datetime": null,
+      "value": "2005-03-31",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Not Announced",
+      "datetime": "TBD",
+      "value": null,
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2009-03-31",
+      "datetime": null,
+      "value": "2009-03-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/backup/vendor/dell-emc/emc-data-manager-edm/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

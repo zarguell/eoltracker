@@ -1,0 +1,645 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>API and schema — EOL Tracker</title>
+<meta name="description" content="JSON endpoints, the normalized record shapes, and the conservative upstream mapping rules behind EOL Tracker.">
+<link rel="canonical" href="https://zarguell.github.io/eoltracker/api/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EOL Tracker">
+<meta property="og:title" content="API and schema — EOL Tracker">
+<meta property="og:description" content="JSON endpoints, the normalized record shapes, and the conservative upstream mapping rules behind EOL Tracker.">
+<meta property="og:url" content="https://zarguell.github.io/eoltracker/api/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d1b2a'/%3E%3Cpath d='M7 20.5l5-6 4 4.5 4-6.5 5 8' fill='none' stroke='%234fd1c5' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/eoltracker/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="shell masthead-inner">
+    <a class="wordmark" href="/eoltracker/">EOL<span>Tracker</span></a>
+    <nav class="mainnav" aria-label="Primary">
+      <a href="/eoltracker/">Software</a>
+      <a href="/eoltracker/hardware/">Hardware</a>
+      <a href="/eoltracker/api/" aria-current="page">API &amp; data</a>
+      <a href="/eoltracker/why/">Why EOL</a>
+      <a href="https://endoflife.date/" rel="noopener">endoflife.date</a>
+    </nav>
+    <p class="masthead-meta">542 products · 9171 releases · 7169 hardware records</p>
+  </div>
+</header>
+
+<main class="shell" id="main">
+<section class="hero">
+  <p class="eyebrow">API &amp; data</p>
+  <h1 class="page-title">Catalog endpoints and mapping rules</h1>
+  <p class="lead">
+    Everything on this site is generated from two committed, validated catalogs: software from endoflife.date and
+    hardware from eosl.date together with Opengear's own end-of-life product list. The JSON below is the same data the
+    pages render — no private fields, no server, no API keys.
+  </p>
+</section>
+
+<section class="panel" aria-labelledby="endpoints-title">
+  <h2 class="panel-title" id="endpoints-title">Endpoints</h2>
+  <h3 class="sub-title">Software catalog</h3>
+  <ul class="endpoints">
+    <li>
+      <a href="/eoltracker/v1/feed.json"><code>v1/feed.json</code></a>
+      <span>
+        Full normalized catalog. Top-level fields: <code>schema_version</code> (<code>1.0</code>),
+        <code>generated_at</code>, <code>source_url</code>, <code>product_count</code>, <code>release_count</code>,
+        <code>excluded_hardware</code>, and <code>products</code> — every product record, complete.
+      </span>
+    </li>
+    <li>
+      <a href="/eoltracker/v1/products.json"><code>v1/products.json</code></a>
+      <span>
+        Index of summaries: counts, per-milestone coverage, the newest release, the next published deadline, and the
+        absolute URL of each product endpoint.
+      </span>
+    </li>
+    <li>
+      <a href="/eoltracker/v1/products/adonisjs.json"><code>v1/products/adonisjs.json</code></a>
+      <span>
+        One product record, byte-identical to the file committed under <code>data/products/</code>. Replace the id in
+        the path with any <code>id</code> from the index.
+      </span>
+    </li>
+  </ul>
+
+  <h3 class="sub-title">Hardware catalog</h3>
+  <ul class="endpoints">
+    <li>
+      <a href="/eoltracker/v1/hardware.json"><code>v1/hardware.json</code></a>
+      <span>
+        Index of hardware summaries. Each entry carries <code>id</code>, <code>name</code>, <code>vendor</code>,
+        <code>status</code> (<code>supported</code>, <code>expiring</code>, <code>eol</code> or the neutral
+        <code>unknown</code>), per-milestone <code>coverage</code>, the normalized <code>milestones</code>, the next
+        published deadline, and the absolute URL of that record's endpoint. One entry is one published source row: a
+        model or model group from eosl.date, an Opengear product group, or one exact Opengear catalogue model.
+        <code>status: unknown</code> is not a synonym for supported — it means the record carries no support deadline
+        and no matching notice, so no claim is made either way. <code>hardware_count</code> in the catalog manifest
+        matches the array length, and it counts records, not devices or SKUs.
+      </span>
+    </li>
+    <li>
+      <a href="/eoltracker/v1/hardware/apple-big-sur-macos-11.json"><code>v1/hardware/apple-big-sur-macos-11.json</code></a>
+      <span>
+        One hardware record, byte-identical to the file committed under <code>data/hardware/</code>. Replace the id in
+        the path with any <code>id</code> from the hardware index.
+      </span>
+    </li>
+    <li>
+      <span><code>record.catalog</code> and <code>record.lifecycle</code> — optional, present on exact catalog models:</span>
+      <span>
+        A record whose <code>family</code> is <code>catalog</code> is one exact vendor model string from Opengear's
+        product catalogue. Its <code>id</code> is stable: an <code>id</code> is never re-minted when a notice later
+        names the model. <code>catalog</code> is <code>{listed, source_url}</code>, where <code>listed</code> is current
+        presence in the catalogue and <code>source_url</code> is
+        <a href="https://opengear.com/configure/" rel="noopener">https://opengear.com/configure/</a>.
+        <code>lifecycle</code> is <code>{listed, matches}</code>, where <code>matches</code> holds the ids of the
+        published lifecycle records whose notice names this exact model string — matched on the notice's
+        <code>Part #</code> scope only, never its replacement column, never a substring, never a family — and
+        <code>listed</code> is true exactly when a notice resolves. Neither field is a support claim: a catalog listing
+        is not an entitlement, its disappearance is not an end of sale, a revision-only notice never retires a whole
+        model, and a matching notice's dates belong to the linked record.
+      </span>
+    </li>
+    <li>
+      <a href="/eoltracker/v1/opengear-import.json"><code>v1/opengear-import.json</code></a>
+      <span>
+        Import report for the Opengear source: the counts parsed, imported and excluded, and every excluded row with
+        its product, table and reason. Rows from Opengear's software tables, and rows whose support state the source
+        does not state, are excluded here rather than published as hardware records.
+      </span>
+    </li>
+  </ul>
+
+  <h3 class="sub-title">Upcoming deadlines and exclusion reasons</h3>
+  <p class="panel-note">
+    The deadline feeds syndicate upcoming milestones only (<code>today &lt;= date</code>, UTC), as an Atom document, an
+    RSS document and an iCalendar file. All three carry an exact calendar day that a source states: Atom and RSS stamp
+    each item with a date-time and iCalendar with a <code>VALUE=DATE</code> day. Two kinds of upcoming event have no
+    such day, and neither is silently dropped:
+  </p>
+  <ul class="endpoints">
+    <li>
+      <span><code>month_precision_not_representable</code></span>
+      <span>
+        A milestone whose source states only a month (<code>YYYY-MM</code>) has no day to carry, and this catalog
+        never invents one.
+      </span>
+    </li>
+    <li>
+      <span><code>derived_not_vendor_stated</code></span>
+      <span>
+        A <em>derived</em> milestone (<code>releases[].milestone_provenance</code>, below) is computed from a rule the
+        vendor states — an explicit duration, the release that ends the line, or a parent platform's lifecycle —
+        applied to a published base date. The date is real, published and recomputable, but it is not a day the vendor
+        states, so syndicating it would print an arithmetic result as a vendor deadline. See
+        <a href="#derived-dates">Derived dates</a> for the full field list.
+      </span>
+    </li>
+  </ul>
+  <p class="panel-note">
+    The exclusion document below enumerates every event the three documents do not carry, with its stable identity and
+    the value the source states. Its entries are disjoint from the feeds' and together they cover every upcoming
+    milestone.
+  </p>
+  <ul class="endpoints">
+    <li>
+      <a href="/eoltracker/v1/feed.atom"><code>v1/feed.atom</code></a>
+      <span>RFC 4287. One <code>entry</code> per upcoming milestone whose source states a calendar day.</span>
+    </li>
+    <li>
+      <a href="/eoltracker/v1/feed.rss"><code>v1/feed.rss</code></a>
+      <span>RSS 2.0. The same events, each <code>guid</code> the event's permanent <code>tag:</code> identity.</span>
+    </li>
+    <li>
+      <a href="/eoltracker/v1/calendar.ics"><code>v1/calendar.ics</code></a>
+      <span>RFC 5545. One all-day <code>VEVENT</code> per event, <code>UID</code> equal to the Atom id.</span>
+    </li>
+    <li>
+      <a href="/eoltracker/v1/feed-exclusions.json"><code>v1/feed-exclusions.json</code></a>
+      <span>
+        Machine-readable accounting of the upcoming events the three documents do not carry:
+        <code>{counts: {upcoming_events, feeds, excluded, by_code: {&lt;code&gt;: n}}, reasons: [{code, statement, precision}], excluded: [...]}</code>.
+        Each excluded entry carries the event's stable <code>id</code>, its <code>kind</code> (software or hardware),
+        <code>product</code>, <code>release</code>, <code>milestone</code>, the <code>date</code> the source states,
+        and exactly one <code>code</code> with its <code>reason</code> — plus, for a derived event, the
+        <code>derived</code> object with the method, base date, duration/trigger/parent and quote it was computed
+        from. Nothing is dropped silently; a consumer that wants every deadline reads the feeds and this document.
+      </span>
+    </li>
+  </ul>
+
+  <h3 class="sub-title">Changes</h3>
+  <p class="panel-note">
+    The ledger is published in this build and linked below.
+  </p>
+  <ul class="endpoints">
+    <li>
+      <span><a href="/eoltracker/v1/changes.json"><code>v1/changes.json</code></a></span>
+      <span>
+        Ledger of what changed between refreshes:
+        <code>{events: [{id, record_id, name, observed_at, kind, changes, source_urls}]}</code>, where
+        <code>changes</code> maps a field to <code>{before, after}</code> and <code>kind</code> is one of
+        <code>announcement</code>, <code>date_change</code>, <code>catalog_added</code> or
+        <code>catalog_removed</code>. Event ids are stable hashes over the change and its observation time, so a repeat
+        import of unchanged data appends nothing. The first run seeds a baseline instead of replaying history as news.
+      </span>
+    </li>
+    <li>
+      <span><a href="/eoltracker/v1/changes.atom"><code>v1/changes.atom</code></a></span>
+      <span>
+        The same ledger as an Atom feed. It is deliberately not the deadline feed: changes describe catalog
+        differences, while <code>v1/feed.atom</code> and <code>v1/calendar.ics</code> syndicate upcoming milestone
+        dates and keep their own permanent event identities.
+      </span>
+    </li>
+  </ul>
+
+  <h3 class="sub-title">Schemas and exports</h3>
+  <ul class="endpoints">
+    <li>
+      <span><code>v1/schema/</code> — JSON Schema files published alongside the data:</span>
+      <span class="endpoint-files">
+<a href="/eoltracker/v1/schema/hardware.json"><code>hardware.json</code></a><a href="/eoltracker/v1/schema/openeox-core.json"><code>openeox-core.json</code></a><a href="/eoltracker/v1/schema/openeox-meta.json"><code>openeox-meta.json</code></a><a href="/eoltracker/v1/schema/product.json"><code>product.json</code></a>      </span>
+    </li>
+    <li>
+      <a href="/eoltracker/v1/openeox/index.json"><code>v1/openeox/index.json</code></a>
+      <span>
+        Per-release OpenEoX Core v1.0 CSD01 export derived from the same software catalog. Each published record
+        validates against the pinned official OASIS schema (Draft 2020-12, format-assertion), and the index lists every
+        release excluded with its reason. Not an OASIS Standard, and no endorsement is implied.
+      </span>
+    </li>
+  </ul>
+</section>
+
+<section class="panel" aria-labelledby="examples-title">
+  <h2 class="panel-title" id="examples-title">Examples</h2>
+  <p class="panel-note">No authentication, no parameters. All examples are read-only GET requests.</p>
+
+  <h3 class="sub-title">List products with the soonest published deadline</h3>
+<pre><code>curl -s https://zarguell.github.io/eoltracker/v1/products.json \
+  | jq '.products | sort_by(.next.date // "9999") | .[:5] | .[] | {id, name, next}'</code></pre>
+
+  <h3 class="sub-title">Fetch one product record</h3>
+<pre><code>curl -s https://zarguell.github.io/eoltracker/v1/products/adonisjs.json \
+  | jq '{id, name, releases: [.releases[] | {id, ga: .milestones.ga, eol: .milestones.eol}]}'</code></pre>
+
+  <h3 class="sub-title">List hardware records past end of support, by vendor</h3>
+<pre><code>curl -s https://zarguell.github.io/eoltracker/v1/hardware.json \
+  | jq '[.hardware[] | select(.status == "eol")] | group_by(.vendor)
+        | map({vendor: .[0].vendor, records: length}) | sort_by(-.records)'</code></pre>
+
+  <h3 class="sub-title">Fetch one hardware record and its raw upstream cells</h3>
+<pre><code>curl -s https://zarguell.github.io/eoltracker/v1/hardware/apple-big-sur-macos-11.json \
+  | jq '{id, vendor, model: .model_number, milestones, sources: .provenance.source_urls}'</code></pre>
+
+  <h3 class="sub-title">Filter the full feed to records with a published end of life</h3>
+<pre><code>curl -s https://zarguell.github.io/eoltracker/v1/feed.json \
+  | jq '[.products[] | select(any(.releases[]; .milestones.eol != null)) | .id]'</code></pre>
+
+  <h3 class="sub-title">Check the raw upstream value behind a normalized date</h3>
+<pre><code>curl -s https://zarguell.github.io/eoltracker/v1/products/adonisjs.json \
+  | jq '[.releases[] | {id, normalized: .milestones.eossec, raw: {eolFrom: .upstream.eolFrom, label: null}}][:3]'</code></pre>
+</section>
+
+<section class="panel" aria-labelledby="record-title">
+  <h2 class="panel-title" id="record-title">Software record shape</h2>
+  <dl class="facts">
+    <div><dt><code>id</code></dt><dd>Product slug. Also the filename under <code>data/products/</code> and the path segment of its endpoint.</dd></div>
+    <div><dt><code>name</code></dt><dd>Display name from upstream <code>label</code>.</dd></div>
+    <div><dt><code>category</code></dt><dd>Always <code>software</code> in this catalog; hardware has its own catalog and endpoint.</dd></div>
+    <div><dt><code>upstream_category</code></dt><dd>Upstream endoflife.date category (<code>app</code>, <code>database</code>, <code>framework</code>, <code>lang</code>, <code>os</code>, <code>server-app</code>, <code>service</code>, <code>standard</code>), kept unmodified.</dd></div>
+    <div><dt><code>identifiers</code></dt><dd>Upstream identifiers such as CPE values, verbatim.</dd></div>
+    <div><dt><code>labels</code></dt><dd>The product's upstream label object, used to interpret the raw date fields.</dd></div>
+    <div><dt><code>links</code></dt><dd>Upstream link object (icon, release policy, and so on), verbatim.</dd></div>
+    <div><dt><code>releases[].id</code></dt><dd>The upstream release <code>name</code>, used as the release key.</dd></div>
+    <div><dt><code>releases[].name</code></dt><dd>Display label for the release.</dd></div>
+    <div><dt><code>releases[].milestones</code></dt><dd>The four normalized dates: <code>ga</code>, <code>eos</code>, <code>eossec</code>, <code>eol</code>. Each is an ISO date (<code>YYYY-MM-DD</code>), a month (<code>YYYY-MM</code>) when the source states no day, or <code>null</code>; <code>null</code> means the source publishes no date, never a guessed one, and a month is never padded into a day.</dd></div>
+    <div><dt><code>releases[].upstream</code></dt><dd>The entire original upstream release object, so any normalized value can be audited against its source. A vendor collector stores that vendor's own declared columns under <code>upstream.cells</code> and the table they came from under <code>upstream.table</code>, so its record shows the source's wording rather than a mapping that does not apply to it.</dd></div>
+    <div><dt><code>provenance</code></dt><dd><code>source_url</code>, <code>verifier</code> (pipeline revision), <code>last_checked</code> (UTC, per record), <code>upstream_modified</code> (or <code>null</code> when upstream publishes none).</dd></div>
+    <div><dt><code>releases[].milestone_provenance</code></dt><dd>Optional, and present only on a release that derives a milestone rather than stating it. Keyed by milestone name (only milestones the release publishes may appear), each value is <code>{kind: "derived", method, source_url, quote, base_date, base_label, …}</code>; <code>method</code> is <code>release-plus-duration</code> (with <code>duration: {value, unit}</code>), <code>release-trigger</code> (with <code>trigger: {release_id, date, label}</code>) or <code>support-inheritance</code> (with <code>parent: {product_id, release_id, release_name, milestone, date, source_url}</code>). A derived date carries no <code>result</code> field: the result is the milestone value beside it, and the rule has to produce that value or the record fails validation.</dd></div>
+    <div><dt><code>provenance.research</code></dt><dd>Optional, and present only on researched records — a record whose dates came from a one-time reading of a vendor notice because no refreshable catalog publishes them (see <em>Researched records</em> below for the fields and what the quotes must satisfy).</dd></div>
+  </dl>
+</section>
+
+<section class="panel" aria-labelledby="derived-dates">
+  <h2 class="panel-title" id="derived-dates">Derived dates</h2>
+  <p class="panel-note">
+    Some vendors publish the <em>rule</em> that ends a release's support while never writing the resulting calendar
+    day: an explicit duration ("supported for five years from general availability"), an explicit trigger ("end of
+    sale occurs with the release of the next major version"), or explicit inheritance ("a component receives the same
+    support as its parent product or platform"). When the base date, the rule and the arithmetic are all published,
+    the resulting date is a fact a reader can recompute — so this catalog publishes it, and says exactly what it is.
+  </p>
+  <p class="panel-note">
+    A derived date is never presented as a date the vendor states. It is marked <code>derived</code> in the release
+    table, listed with its rule and quote on the product page, and kept out of every exact-day surface: the
+    upcoming-deadlines list, the three syndication feeds and the OpenEoX export each carry only days a source states,
+    and every derived event excluded from the feeds is enumerated in <code>v1/feed-exclusions.json</code> under the
+    code <code>derived_not_vendor_stated</code>. A derived date is also <em>never</em> produced from release cadence:
+    a vendor policy of approximate intervals states no duration, so it yields no entry here.
+  </p>
+  <dl class="facts">
+    <div><dt><code>kind</code></dt><dd>Always <code>"derived"</code>, so a consumer can never mistake the value for a vendor statement.</dd></div>
+    <div><dt><code>method</code></dt><dd><code>release-plus-duration</code>, <code>release-trigger</code> or <code>support-inheritance</code> — which shape of rule the vendor stated. Exactly one rule object accompanies it.</dd></div>
+    <div><dt><code>source_url</code>, <code>quote</code></dt><dd>The page the rule and base were read from, and the vendor sentence stating the rule stored verbatim. The quote is the evidence that licenses the derivation; the dates it contains (if any) are not what makes it valid, the rule is.</dd></div>
+    <div><dt><code>base_date</code>, <code>base_label</code></dt><dd>The stated date the rule starts from and what it is in the source's terms. A <code>release-plus-duration</code> base is the release's own stated milestone; a <code>support-inheritance</code> base is the parent's stated deadline.</dd></div>
+    <div><dt><code>duration.value</code>, <code>duration.unit</code></dt><dd>A positive whole number of <code>day</code>, <code>month</code> or <code>year</code>s, added as calendar arithmetic. A result past the end of its month clamps to that month's last day.</dd></div>
+    <div><dt><code>trigger.release_id</code>, <code>trigger.date</code>, <code>trigger.label</code></dt><dd>The release whose own publication ends this line's support, the date it was published (which <em>is</em> the derived deadline) and a reader-facing label for the event.</dd></div>
+    <div><dt><code>parent</code></dt><dd>The published parent this component follows: the catalog record and release ids, the normalized parent milestone inherited (an end milestone, never general availability), that milestone's date (which <em>is</em> the derived deadline) and the parent's source page.</dd></div>
+  </dl>
+  <p class="panel-note">
+    Verified as published: every derived entry is re-checked at validation time and at contribution time by the same
+    shared code, so a record whose milestone no longer matches its own rule is refused instead of published. Tamper
+    with the date or the base and the record fails; there is no second, derived-from-the-result answer.
+  </p>
+</section>
+
+<section class="panel" aria-labelledby="hw-record-title">
+  <h2 class="panel-title" id="hw-record-title">Hardware record shape</h2>
+  <dl class="facts">
+    <div><dt><code>id</code></dt><dd>Model slug. Also the filename under <code>data/hardware/</code> and the path segment of its endpoint.</dd></div>
+    <div><dt><code>name</code></dt><dd>The product name the record's source publishes for the row.</dd></div>
+    <div><dt><code>category</code></dt><dd>Always <code>hardware</code>.</dd></div>
+    <div><dt><code>vendor</code></dt><dd>The vendor the source attributes the record to: the family page's vendor from its URL and breadcrumb, or Opengear for its own product table.</dd></div>
+    <div><dt><code>product_line</code></dt><dd>The vendor's product line for the record, or the vendor name when the source publishes none.</dd></div>
+    <div><dt><code>family</code>, <code>model_number</code></dt><dd>The source family and model number, verbatim. An Opengear lifecycle row groups a whole product's part numbers, so <code>model_number</code> is the first published part number and the full list stays verbatim in <code>upstream</code>. A catalog record's <code>family</code> is <code>catalog</code> and its <code>model_number</code> is the single exact vendor model string, reproduced without folding, splitting or reordering.</dd></div>
+    <div><dt><code>milestones</code></dt><dd>The four normalized dates: <code>ga</code>, <code>eos</code>, <code>eossec</code>, <code>eol</code>. Each is an ISO date or <code>null</code>, and <code>null</code> means the record's source publishes no such date. <code>eossec</code> is always <code>null</code>, and <code>ga</code> is <code>null</code> for every Opengear record: neither source publishes a security-support or General-availability column for hardware. All four are <code>null</code> on a catalog record, which has no notice of its own; a notice's dates live on the lifecycle record it matches.</dd></div>
+    <div><dt><code>status</code></dt><dd><code>supported</code>, <code>expiring</code>, <code>eol</code>, or <code>unknown</code>. For eosl.date records this is the row the source publishes the model under; for Opengear lifecycle rows it is computed from the published support deadline against the import date, because that source states no row status. <code>unknown</code> is the honest value for a record with no deadline and no matching notice — it is not a synonym for <code>supported</code>, and a catalog listing never produces a dated status.</dd></div>
+    <div><dt><code>upstream</code></dt><dd>Every declared column of the source row, verbatim: <code>text</code> as rendered, <code>datetime</code> and <code>value</code> for a machine-readable date or <code>null</code>, the milestone <code>role</code> the pipeline assigns (or <code>null</code>), and any <code>links</code>. For an Opengear record this also carries the source's own notes: the raw policy or contract-exception text, and the documented grouping semantics of the row. A catalog record's cells are keyed by the configurator's own field names (SKU, Title, Support Series, Families, Datasheet URL, and so on) and carry no milestone role.</dd></div>
+    <div><dt><code>catalog</code>, <code>lifecycle</code></dt><dd>Optional, and present only on exact catalog models. <code>catalog</code> is <code>{listed, source_url}</code> and <code>lifecycle</code> is <code>{listed, matches}</code>; see the catalog model entry under Endpoints for exactly what each states and what it deliberately does not.</dd></div>
+    <div><dt><code>provenance</code></dt><dd><code>source_urls</code> (every page the record was read from), <code>verifier</code> (<code>deterministic-eosl-date</code> or <code>deterministic-opengear</code>, one per record, naming the pipeline that parsed it) and <code>last_checked</code> (UTC). A catalog record's <code>source_urls</code> lead with <a href="https://opengear.com/configure/" rel="noopener">https://opengear.com/configure/</a>, the page it was read from, with any notice page that later named it appended rather than substituted.</dd></div>
+    <div><dt><code>provenance.research</code></dt><dd>Optional, and present only on researched records: <code>verifier</code> is <code>researched-&lt;contributor&gt;</code> instead of a <code>deterministic-*</code> id, and <code>source_urls</code> holds the one notice the dates were read from. The research object itself is the same shape as the software one — see <em>Researched records</em> below.</dd></div>
+  </dl>
+  <p class="panel-note">
+    A hardware record is one published source row, not a family of releases, so there is no <code>releases</code> array:
+    its <code>milestones</code> describe the record itself. An eosl.date row is one model or model group; an Opengear
+    lifecycle row is a product group whose part numbers are grouped rather than expanded into one record per part; a
+    catalog record is one exact model string the vendor's product catalogue currently lists or listed. Record counts
+    count records, never unique devices or SKUs.
+  </p>
+</section>
+
+<section class="panel" aria-labelledby="research-title">
+  <h2 class="panel-title" id="research-title">Researched records</h2>
+  <p class="panel-note">
+    Some products have no deterministic source: no upstream catalog publishes their lifecycle, so no pipeline can
+    re-derive their dates. Following the project's rule — deterministic first, researched second, invented never — such
+    a product is published from a one-time reading of an authoritative primary source (a vendor notice stating an
+    explicit date), with the sentence the date came from stored verbatim in the record. A researched record is never a
+    substitute for an existing deterministic source: it may not overwrite or shadow a deterministic record.
+  </p>
+  <p class="panel-note">
+    A researched record is marked three ways: <code>provenance.verifier</code> is
+    <code>researched-&lt;contributor-slug&gt;</code> rather than a <code>deterministic-*</code> id,
+    <code>provenance.research</code> carries the citation, and the catalog summaries on
+    <code>v1/products.json</code> and <code>v1/hardware.json</code> carry <code>research: true</code> so a consumer can
+    spot them without fetching every record. The full record — quote included — is always in
+    <code>v1/feed.json</code>, <code>v1/products/{id}.json</code> and <code>v1/hardware/{id}.json</code>.
+  </p>
+  <dl class="facts">
+    <div><dt><code>research.quote</code></dt><dd>The verbatim sentence the milestone dates were read from, whitespace-normalized. A contribution is rejected unless every date it claims appears in this text, so the quote is the evidence rather than a summary of it.</dd></div>
+    <div><dt><code>research.source_url</code></dt><dd>The primary source page the quote was read from.</dd></div>
+    <div><dt><code>research.retrieved_at</code></dt><dd>The date the source was read (ISO date).</dd></div>
+    <div><dt><code>research.contributor</code></dt><dd>Who contributed the reading.</dd></div>
+    <div><dt><code>research.method</code></dt><dd><code>manual</code> or <code>agent</code> — a person or an agent read the source and transcribed the quote.</dd></div>
+    <div><dt><code>research.verified_at</code></dt><dd>When the quote was last checked against the live source, or <code>null</code> when the record was installed without fetching it (offline/stale install). A <code>null</code> here means the citation records a reading, not a live check.</dd></div>
+    <div><dt><code>research.stale_after</code></dt><dd>An ISO date after which the source itself says the reading should be reviewed, or <code>null</code>. When it is <code>null</code> the site applies its own 180-day window from <code>provenance.last_checked</code>. This field is a display/review hint only; it never changes a date and never removes a milestone.</dd></div>
+    <div><dt><code>research.evidence</code></dt><dd>Every quote the contribution supplied: <code>{quote, source_url, retrieved_at, milestones}</code>. The record-level <code>quote</code> is these joined, so a consumer can see which sentence supports which milestone.</dd></div>
+    <div><dt><code>upstream.Contribution</code></dt><dd>The contributed cell, kept verbatim like any other raw upstream value: <code>{text, value: null, datetime: null, role: null, links}</code>. It sits in <code>releases[].upstream</code> for software and in the record's <code>upstream</code> for hardware, so the same audit path works for a researched record as for a scraped one.</dd></div>
+  </dl>
+  <p class="panel-note">
+    Consumers should treat <code>research</code> as provenance, not as a status: a researched record makes no claim
+    beyond what its quote states, and the site shows a stale warning on the record page once the reading ages. Dates
+    marked <code>null</code> remain <code>null</code> here exactly as elsewhere — an absent announcement is never
+    filled from a researched record for a different milestone.
+  </p>
+</section>
+
+<section class="panel" aria-labelledby="mapping-title">
+  <h2 class="panel-title" id="mapping-title">Upstream mapping</h2>
+  <p class="panel-note">
+    The normalization is deliberately conservative. A label that does not qualify a field never turns that field into
+    a deadline, and every raw value stays in the record whether or not it was mapped.
+  </p>
+  <h3 class="sub-title">Software (endoflife.date)</h3>
+  <p class="panel-note">
+    The rules below describe the endoflife.date pipeline (<code>deterministic-endoflife-date-v1</code>) alone. A
+    software record published by a vendor collector carries that source's own <code>verifier</code> and states its
+    rows verbatim under <code>upstream.cells</code>; the label mapping below does not apply to it, and its product page
+    says so.
+  </p>
+  <div class="table-scroll">
+    <table class="release-table mapping-table">
+      <thead>
+        <tr><th scope="col">Milestone</th><th scope="col">Upstream input</th><th scope="col">Rule</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">General availability</th>
+          <td><code>releaseDate</code></td>
+          <td>Used as is whenever present. A boolean upstream status is never treated as a date.</td>
+        </tr>
+        <tr>
+          <th scope="row">End of sale</th>
+          <td><code>eoasFrom</code>, <code>discontinuedFrom</code></td>
+          <td>Only when the matching label (<code>eoas</code>, <code>discontinued</code>) names an end of sale. <code>discontinued</code> alone implies no end-of-sale date.</td>
+        </tr>
+        <tr>
+          <th scope="row">End of security support</th>
+          <td><code>eolFrom</code>, <code>eoesFrom</code></td>
+          <td><code>eolFrom</code> when its label names security support. When the <code>eoes</code> label names security support, its date supersedes <code>eolFrom</code> even if the date is unknown.</td>
+        </tr>
+        <tr>
+          <th scope="row">End of life</th>
+          <td><code>eoesFrom</code>, else <code>eolFrom</code></td>
+          <td>A published extended-support date wins. Otherwise <code>eolFrom</code> is used only when no extended-support label is set and the <code>eol</code> label describes a full support end. An unknown extension leaves this <code>null</code>.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="panel-note">
+    Consequence for readers: a <code>null</code> end of life can mean either that no support end was published, or that
+    an announced extension has no published end date. Both cases keep the raw <code>eolFrom</code> value visible on the
+    product page, so the earlier published deadline is never hidden.
+  </p>
+
+  <h3 class="sub-title">Hardware — eosl.date only</h3>
+  <p class="panel-note">
+    The table below describes the eosl.date pipeline (<code>deterministic-eosl-date</code>) alone. Hardware columns are
+    read by role, not by position: the source declares every header, and a column is matched to a milestone case- and
+    whitespace-insensitively. Anything that matches no role stays in <code>upstream</code> untouched.
+  </p>
+  <div class="table-scroll">
+    <table class="release-table mapping-table">
+      <thead>
+        <tr><th scope="col">Milestone</th><th scope="col">Source columns</th><th scope="col">Rule</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">General availability</th>
+          <td><code>Release Date</code>, <code>Launch Date</code></td>
+          <td>The rendered date, or the <code>&lt;time datetime&gt;</code> value when the cell carries one.</td>
+        </tr>
+        <tr>
+          <th scope="row">End of sale</th>
+          <td><code>End of Sale Date</code>, <code>End of Sales Date</code>, <code>End of Life Date</code></td>
+          <td>eosl.date's own glossary defines its end-of-life-date column as the end of sales date, so that column maps here and never to end of support.</td>
+        </tr>
+        <tr>
+          <th scope="row">End of security support</th>
+          <td>none</td>
+          <td>eosl.date publishes no security-support column, so this milestone is always <code>null</code> for its records rather than borrowed from another column.</td>
+        </tr>
+        <tr>
+          <th scope="row">End of support</th>
+          <td><code>End of Support</code>, <code>End of Support (EOSL)</code>, <code>End of Support Date</code>, <code>End of Service</code>, <code>End of Service Date</code></td>
+          <td>The terminal support column — eosl.date's EOSL/LDOS. Relative prose rendered beside the date is stripped; a cell holding no date (a sentinel such as <code>TBD</code>, or a support URL) yields <code>null</code>.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="panel-note">
+    Columns such as <code>EOL Announced</code>, the day-support and warranty discontinuance columns, and
+    <code>Version Number</code> state no milestone of their own, so they are published verbatim in
+    <code>upstream</code> and never promoted into a date. A model appearing in several families merges on its
+    identity; milestones only ever gain a value, and two sources disagreeing on one date is an error to fix, not a
+    tie to break.
+  </p>
+
+  <h3 class="sub-title">Hardware — Opengear only</h3>
+  <p class="panel-note">
+    Opengear records (<code>deterministic-opengear</code>) are read from Opengear's own lifecycle tables. Columns are
+    matched to a milestone by their exact declared header; the two tables below are the only shapes the pipeline
+    accepts, and a missing, renamed or empty table fails the import rather than publishing a partial row.
+  </p>
+  <div class="table-scroll">
+    <table class="release-table mapping-table">
+      <thead>
+        <tr><th scope="col">Source table</th><th scope="col">Milestone</th><th scope="col">Source columns</th><th scope="col">Rule</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row"><code>Hardware Lifecycle</code></th>
+          <td>End of sale</td>
+          <td><code>End of Sale</code></td>
+          <td>Mapped to <code>eos</code>. The row's <code>Product</code>, <code>Part #</code>, <code>Replacement Product</code> and <code>Note</code> columns state no milestone and stay verbatim in <code>upstream</code>.</td>
+        </tr>
+        <tr>
+          <th scope="row"><code>Hardware Lifecycle</code></th>
+          <td>End of support</td>
+          <td><code>End of Support</code></td>
+          <td>Mapped to <code>eol</code>: the published support deadline for the product group.</td>
+        </tr>
+        <tr>
+          <th scope="row"><code>Hardware Revisions</code></th>
+          <td>End of sale</td>
+          <td><code>Old Part Sales End</code></td>
+          <td>Mapped to <code>eos</code> for the old part the revision row names.</td>
+        </tr>
+        <tr>
+          <th scope="row"><code>Hardware Revisions</code></th>
+          <td>End of support</td>
+          <td><code>Old Part Support Ends</code></td>
+          <td>Mapped to <code>eol</code> for that old part. Its <code>Product</code>, <code>Old Part / Rev #</code>, <code>New Part / Rev #</code> and <code>Note</code> columns stay verbatim in <code>upstream</code>.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="panel-note">
+    Two consequences for consumers. No Opengear column feeds <code>ga</code> or <code>eossec</code>: Opengear publishes
+    neither a first-availability nor a security-only deadline, so both are always <code>null</code> on its records —
+    as <code>eossec</code> is on every hardware record. And rows are grouped: one record per published product group
+    (for example a chassis product with all of its SKUs, or an old part with the revision that supersedes it), not one
+    record per part number. The SKU and part lists stay verbatim in <code>upstream</code>. Opengear's own policy and
+    contract-exception text is likewise retained raw in <code>upstream</code> and never converted into a date;
+    the computed <code>status</code> does not override such a contract.
+  </p>
+  <p class="panel-note">
+    Opengear's software and subscription tables are not hardware lifecycle data and are excluded, as are rows whose
+    support state the source does not state. Every excluded row is reported with its product, table and reason in
+    <code>v1/opengear-import.json</code> (listed under Endpoints) rather than being published as a record.
+  </p>
+
+  <h3 class="sub-title">Hardware — Opengear product catalog</h3>
+  <p class="panel-note">
+    Opengear's product configurator (<a href="https://opengear.com/configure/" rel="noopener">https://opengear.com/configure/</a>)
+    is read for a different question than the lifecycle tables: which exact models the vendor currently lists. Each
+    listed model becomes one record with <code>family: catalog</code>, its <code>name</code> and
+    <code>model_number</code> set to the vendor's own model string and its raw configurator fields kept verbatim in
+    <code>upstream</code>. No date is read from the catalogue, because it publishes none.
+  </p>
+  <div class="table-scroll">
+    <table class="release-table mapping-table">
+      <thead>
+        <tr><th scope="col">Field</th><th scope="col">Source</th><th scope="col">Rule</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Record scope</th>
+          <td>Configurator model list</td>
+          <td>One record per exact model string. A model string is never split on hyphens, folded, title-cased or expanded into option combinations, and two catalogue entries that differ only in case remain two records rather than one.</td>
+        </tr>
+        <tr>
+          <th scope="row">Record identity</th>
+          <td>Model string</td>
+          <td>Derived from the model string alone, so the record keeps its id and its URL when the catalogue drops it and when a notice later names it. A notice never renames or re-mints a catalogue record.</td>
+        </tr>
+        <tr>
+          <th scope="row"><code>catalog.listed</code></th>
+          <td>Current configurator listing</td>
+          <td><code>true</code> while the catalogue lists the model, <code>false</code> once it is gone. The record is retained either way; nothing is deleted for disappearing, and no date is invented from the disappearance.</td>
+        </tr>
+        <tr>
+          <th scope="row"><code>lifecycle.matches</code></th>
+          <td>Notice <code>Part #</code> cell</td>
+          <td>Ids of published lifecycle records whose notice scope contains this exact model string. Comparison is exact equality in both directions: the replacement-product column is never consulted, a substring or prefix is never a match, and a product family is never expanded into its members.</td>
+        </tr>
+        <tr>
+          <th scope="row">Revision notices</th>
+          <td>Notice <code>Old Part / Rev #</code> rows</td>
+          <td>A revision row names a revision, not a whole model, so it never matches a catalogue model and never implies that the model's whole SKU range is retired.</td>
+        </tr>
+        <tr>
+          <th scope="row">Several matches</th>
+          <td>Multiple notice records</td>
+          <td>Every matching record is published as a separate link. The site never picks one, never merges the dates and never invents a precedence order, so a consumer sees the disagreement instead of a resolution the source does not state.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="panel-note">
+    Consequences worth stating plainly: catalogue presence is not support entitlement, catalogue disappearance is not
+    end of life, and a catalogue record with no matching notice carries <code>status: unknown</code> rather than a
+    borrowed status or a guessed date. Where a notice does match, its dates stay on the lifecycle record and the
+    catalogue record links to it.</p>
+</section>
+
+<section class="panel" aria-labelledby="attribution-title">
+  <h2 class="panel-title" id="attribution-title">Attribution and accuracy</h2>
+  <p class="panel-note">
+    Software source data comes from <a href="https://endoflife.date/" rel="noopener">endoflife.date</a> and is used under its
+    MIT license (<a href="https://github.com/endoflife-date/endoflife.date/blob/master/LICENSE" rel="noopener">license text</a>). Product names,
+    labels and dates are theirs; the normalization, coverage math and presentation are this project's.
+    This site does not claim affiliation with endoflife.date or with any vendor whose product appears here.
+  </p>
+  <p class="panel-note">
+    Hardware lifecycle data comes from eosl.date by Subash Geetha Krishnan, aggregated from public vendor announcements. That eosl.date data is aggregated from public vendor announcements, and eosl.date
+    states no license for it, so it is reproduced here with attribution and a link to the source page for every record
+    read from it, rather than relied on as licensed material. Opengear records are read from
+    <a href="https://opengear.com/end-life-products" rel="noopener">Opengear's end-of-life product list</a>, published by
+    Opengear; those dates are Opengear's and are credited to Opengear here and on every record page. Attribution is not
+    a licence for either source and does not relicense the source material: nothing on this site is represented as
+    licensed hardware data. Model names, vendor names and dates are the vendors', eosl.date's or Opengear's; the
+    normalization, coverage math and presentation are this project's. This project is not affiliated with, endorsed by
+    or sponsored by eosl.date, Subash Geetha Krishnan, Opengear, or any vendor whose hardware appears in the catalog.
+  </p>
+  <p class="panel-note">
+    Both catalogs are generated offline from committed snapshots, so they can lag upstream between refreshes. Each
+    record carries the timestamp of the last check, and every hardware record page links the exact page it was read
+    from. Verify anything decision-critical against the linked upstream record or the vendor's own lifecycle policy.
+  </p>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="shell footer-inner">
+    <div class="footer-col">
+      <p class="footer-title">EOL Tracker</p>
+      <p class="footer-note">
+        Software lifecycle dates are republished from the
+        <a href="https://endoflife.date/" rel="noopener">endoflife.date</a> community catalog and vendor-specific public
+        lifecycle sources. Each record names its source; community-catalog data is licensed
+        <a href="https://github.com/endoflife-date/endoflife.date/blob/master/LICENSE" rel="noopener">MIT</a>.
+      </p>
+      <p class="footer-note">
+        Hardware lifecycle data comes from
+        <a href="https://eosl.date/" rel="noopener">eosl.date</a> by Subash Geetha Krishnan,
+        which aggregates public vendor announcements, and from
+        <a href="https://opengear.com/end-life-products" rel="noopener">Opengear's end-of-life product list</a>.
+        Attribution here is credit by name and link, not a licence to the source material: nothing is reproduced as
+        licensed material. This catalog is an independent normalization, not affiliated with endoflife.date, eosl.date,
+        Opengear or any vendor listed here.
+      </p>
+      <p class="footer-note">
+        Last catalog refresh Sep 17, 2026 at 18:35 UTC.
+      </p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-title">Data</p>
+      <ul class="footer-links">
+        <li><a href="/eoltracker/v1/feed.json">Feed (JSON)</a></li>
+        <li><a href="/eoltracker/v1/feed.atom">Deadlines (Atom)</a></li>
+        <li><a href="/eoltracker/v1/calendar.ics">Deadlines (iCal)</a></li>
+        <li><a href="/eoltracker/v1/products.json">Product summaries</a></li>
+        <li><a href="/eoltracker/v1/hardware.json">Hardware summaries</a></li>
+        <li><a href="/eoltracker/v1/changes.atom">Changes (Atom)</a></li>
+        <li><a href="/eoltracker/v1/changes.json">Changes (JSON)</a></li>
+        <li><a href="/eoltracker/hardware/">Hardware catalog</a></li>
+        <li><a href="/eoltracker/api/">Endpoints &amp; mapping</a></li>
+        <li><a href="/eoltracker/v1/schema/product.json">Record schema</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <p class="footer-title">Project</p>
+      <ul class="footer-links">
+        <li><a href="https://github.com/zarguell/eoltracker" rel="noopener">Source on GitHub</a></li>
+        <li><a href="https://endoflife.date/" rel="noopener">Upstream source</a></li>
+        <li><a href="/eoltracker/THIRD-PARTY-NOTICES.txt">THIRD-PARTY-NOTICES.txt</a></li>
+        <li><a href="/eoltracker/OASIS-NOTICE.txt">OASIS-NOTICE.txt</a></li>
+        <li><a href="/eoltracker/404.html">Not found page</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script src="/eoltracker/app.js" defer></script>
+</body>
+</html>

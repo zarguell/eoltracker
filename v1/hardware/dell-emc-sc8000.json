@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-sc8000",
+  "name": "SC8000",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC StorageCenter (compellent)",
+  "family": "StorageCenter (compellent)",
+  "model_number": "SC8000",
+  "milestones": {
+    "ga": "2012-08-19",
+    "eos": "2017-03-03",
+    "eossec": null,
+    "eol": "2022-03-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "SC8000",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "SC8000",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC StorageCenter (compellent)",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2017-03-03",
+      "datetime": null,
+      "value": "2017-03-03",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Aug. 19, 2012",
+      "datetime": "2012-08-19",
+      "value": "2012-08-19",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2022-03-31",
+      "datetime": null,
+      "value": "2022-03-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/san-storage/vendor/dell-emc/storagecenter-compellent/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

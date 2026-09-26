@@ -1,0 +1,2520 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "routeros",
+  "name": "RouterOS",
+  "category": "software",
+  "upstream_category": "os",
+  "identifiers": [
+    {
+      "type": "cpe",
+      "id": "cpe:/o:mikrotik:routeros"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:o:mikrotik:routeros"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/mikrotik.svg",
+    "html": "https://endoflife.date/routeros",
+    "releasePolicy": null
+  },
+  "releases": [
+    {
+      "id": "7.24",
+      "name": "RouterOS 7.24",
+      "milestones": {
+        "ga": "2026-08-17",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.24",
+        "codename": null,
+        "label": "RouterOS 7.24",
+        "releaseDate": "2026-08-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "7.24.2",
+          "date": "2026-09-03",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=7.24.2&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.23",
+      "name": "RouterOS 7.23 (LT)",
+      "milestones": {
+        "ga": "2026-05-26",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.23",
+        "codename": null,
+        "label": "RouterOS 7.23 (LT)",
+        "releaseDate": "2026-05-26",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "7.23.7",
+          "date": "2026-09-16",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=7.23.7&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.22",
+      "name": "RouterOS 7.22",
+      "milestones": {
+        "ga": "2026-03-10",
+        "eos": null,
+        "eossec": "2026-05-26",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.22",
+        "codename": null,
+        "label": "RouterOS 7.22",
+        "releaseDate": "2026-03-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-05-26",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.22.3",
+          "date": "2026-05-08",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=7.22.3&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.21",
+      "name": "RouterOS 7.21 (LT)",
+      "milestones": {
+        "ga": "2026-01-12",
+        "eos": null,
+        "eossec": "2026-05-26",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.21",
+        "codename": null,
+        "label": "RouterOS 7.21 (LT)",
+        "releaseDate": "2026-01-12",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-05-26",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.21.5",
+          "date": "2026-07-06",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=7.21.5&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.20",
+      "name": "RouterOS 7.20 (LT)",
+      "milestones": {
+        "ga": "2025-09-30",
+        "eos": null,
+        "eossec": "2026-01-12",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.20",
+        "codename": null,
+        "label": "RouterOS 7.20 (LT)",
+        "releaseDate": "2025-09-30",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-01-12",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.20.8",
+          "date": "2026-02-02",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=7.20.8&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.19",
+      "name": "RouterOS 7.19",
+      "milestones": {
+        "ga": "2025-05-22",
+        "eos": null,
+        "eossec": "2025-09-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.19",
+        "codename": null,
+        "label": "RouterOS 7.19",
+        "releaseDate": "2025-05-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-09-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.19.6",
+          "date": "2025-09-15",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=7.19.6&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.18",
+      "name": "RouterOS 7.18",
+      "milestones": {
+        "ga": "2025-02-24",
+        "eos": null,
+        "eossec": "2025-05-22",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.18",
+        "codename": null,
+        "label": "RouterOS 7.18",
+        "releaseDate": "2025-02-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-05-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.18.2",
+          "date": "2025-03-12",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=7.18.2&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.17",
+      "name": "RouterOS 7.17",
+      "milestones": {
+        "ga": "2025-01-16",
+        "eos": null,
+        "eossec": "2025-02-24",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.17",
+        "codename": null,
+        "label": "RouterOS 7.17",
+        "releaseDate": "2025-01-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-02-24",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.17.2",
+          "date": "2025-02-06",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=7.17.2&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.16",
+      "name": "RouterOS 7.16",
+      "milestones": {
+        "ga": "2024-09-24",
+        "eos": null,
+        "eossec": "2025-01-16",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.16",
+        "codename": null,
+        "label": "RouterOS 7.16",
+        "releaseDate": "2024-09-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-01-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.16.2",
+          "date": "2024-11-27",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=7.16.2&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.15",
+      "name": "RouterOS 7.15",
+      "milestones": {
+        "ga": "2024-05-30",
+        "eos": null,
+        "eossec": "2024-09-24",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.15",
+        "codename": null,
+        "label": "RouterOS 7.15",
+        "releaseDate": "2024-05-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-09-24",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.15.3",
+          "date": "2024-07-25",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=7.15.3&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.14",
+      "name": "RouterOS 7.14",
+      "milestones": {
+        "ga": "2024-03-25",
+        "eos": null,
+        "eossec": "2024-05-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.14",
+        "codename": null,
+        "label": "RouterOS 7.14",
+        "releaseDate": "2024-03-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-05-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.14.3",
+          "date": "2024-04-19",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=7.14.3&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.13",
+      "name": "RouterOS 7.13",
+      "milestones": {
+        "ga": "2023-12-14",
+        "eos": null,
+        "eossec": "2024-03-25",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.13",
+        "codename": null,
+        "label": "RouterOS 7.13",
+        "releaseDate": "2023-12-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-03-25",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.13.5",
+          "date": "2024-02-16",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=7.13.5&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.12",
+      "name": "RouterOS 7.12",
+      "milestones": {
+        "ga": "2023-11-09",
+        "eos": null,
+        "eossec": "2023-12-14",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.12",
+        "codename": null,
+        "label": "RouterOS 7.12",
+        "releaseDate": "2023-11-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-12-14",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.12.2",
+          "date": "2023-12-20",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=7.12.2&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.11",
+      "name": "RouterOS 7.11",
+      "milestones": {
+        "ga": "2023-08-15",
+        "eos": null,
+        "eossec": "2023-11-09",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.11",
+        "codename": null,
+        "label": "RouterOS 7.11",
+        "releaseDate": "2023-08-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-11-09",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.11.3",
+          "date": "2023-09-27",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=7.11.3&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.10",
+      "name": "RouterOS 7.10",
+      "milestones": {
+        "ga": "2023-06-15",
+        "eos": null,
+        "eossec": "2023-08-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.10",
+        "codename": null,
+        "label": "RouterOS 7.10",
+        "releaseDate": "2023-06-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-08-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.10.2",
+          "date": "2023-07-12",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=7.10.2&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.9",
+      "name": "RouterOS 7.9",
+      "milestones": {
+        "ga": "2023-05-02",
+        "eos": null,
+        "eossec": "2023-06-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.9",
+        "codename": null,
+        "label": "RouterOS 7.9",
+        "releaseDate": "2023-05-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-06-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.9.2",
+          "date": "2023-05-30",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=7.9.2&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.8",
+      "name": "RouterOS 7.8",
+      "milestones": {
+        "ga": "2023-02-24",
+        "eos": null,
+        "eossec": "2023-05-02",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.8",
+        "codename": null,
+        "label": "RouterOS 7.8",
+        "releaseDate": "2023-02-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-05-02",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.8",
+          "date": "2023-02-24",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=7.8&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.7",
+      "name": "RouterOS 7.7",
+      "milestones": {
+        "ga": "2023-01-12",
+        "eos": null,
+        "eossec": "2023-02-24",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.7",
+        "codename": null,
+        "label": "RouterOS 7.7",
+        "releaseDate": "2023-01-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-02-24",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.7",
+          "date": "2023-01-12",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=7.7&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.6",
+      "name": "RouterOS 7.6",
+      "milestones": {
+        "ga": "2022-10-17",
+        "eos": null,
+        "eossec": "2023-01-12",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.6",
+        "codename": null,
+        "label": "RouterOS 7.6",
+        "releaseDate": "2022-10-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-01-12",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.6",
+          "date": "2022-10-17",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=7.6&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.5",
+      "name": "RouterOS 7.5",
+      "milestones": {
+        "ga": "2022-08-30",
+        "eos": null,
+        "eossec": "2022-10-17",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.5",
+        "codename": null,
+        "label": "RouterOS 7.5",
+        "releaseDate": "2022-08-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-10-17",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.5",
+          "date": "2022-08-30",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=7.5&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.4",
+      "name": "RouterOS 7.4",
+      "milestones": {
+        "ga": "2022-07-19",
+        "eos": null,
+        "eossec": "2022-08-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.4",
+        "codename": null,
+        "label": "RouterOS 7.4",
+        "releaseDate": "2022-07-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-08-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.4.1",
+          "date": "2022-08-04",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=7.4.1&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.3",
+      "name": "RouterOS 7.3",
+      "milestones": {
+        "ga": "2022-06-06",
+        "eos": null,
+        "eossec": "2022-07-19",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.3",
+        "codename": null,
+        "label": "RouterOS 7.3",
+        "releaseDate": "2022-06-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-07-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.3.1",
+          "date": "2022-06-09",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=7.3.1&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.2",
+      "name": "RouterOS 7.2",
+      "milestones": {
+        "ga": "2022-03-31",
+        "eos": null,
+        "eossec": "2022-06-06",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.2",
+        "codename": null,
+        "label": "RouterOS 7.2",
+        "releaseDate": "2022-03-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-06-06",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.2.3",
+          "date": "2022-05-02",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=7.2.3&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.1",
+      "name": "RouterOS 7.1",
+      "milestones": {
+        "ga": "2021-12-01",
+        "eos": null,
+        "eossec": "2022-03-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.1",
+        "codename": null,
+        "label": "RouterOS 7.1",
+        "releaseDate": "2021-12-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-03-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.1.5",
+          "date": "2022-03-22",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=7.1.5&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.49",
+      "name": "RouterOS 6.49 (LT)",
+      "milestones": {
+        "ga": "2021-10-06",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.49",
+        "codename": null,
+        "label": "RouterOS 6.49 (LT)",
+        "releaseDate": "2021-10-06",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "6.49.21",
+          "date": "2026-09-03",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.49.21&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.48",
+      "name": "RouterOS 6.48",
+      "milestones": {
+        "ga": "2020-12-22",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.48",
+        "codename": null,
+        "label": "RouterOS 6.48",
+        "releaseDate": "2020-12-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.48.7",
+          "date": "2023-05-23",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.48.7&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.47",
+      "name": "RouterOS 6.47",
+      "milestones": {
+        "ga": "2020-06-02",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.47",
+        "codename": null,
+        "label": "RouterOS 6.47",
+        "releaseDate": "2020-06-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.47.10",
+          "date": "2021-05-31",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.47.10&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.46",
+      "name": "RouterOS 6.46 (LT)",
+      "milestones": {
+        "ga": "2019-12-02",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.46",
+        "codename": null,
+        "label": "RouterOS 6.46 (LT)",
+        "releaseDate": "2019-12-02",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.46.8",
+          "date": "2020-10-29",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.46.8&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.45",
+      "name": "RouterOS 6.45 (LT)",
+      "milestones": {
+        "ga": "2019-06-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.45",
+        "codename": null,
+        "label": "RouterOS 6.45 (LT)",
+        "releaseDate": "2019-06-21",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.45.9",
+          "date": "2020-04-30",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.45.9&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.44",
+      "name": "RouterOS 6.44 (LT)",
+      "milestones": {
+        "ga": "2019-02-25",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.44",
+        "codename": null,
+        "label": "RouterOS 6.44 (LT)",
+        "releaseDate": "2019-02-25",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.44.6",
+          "date": "2019-10-24",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.44.6&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.43",
+      "name": "RouterOS 6.43 (LT)",
+      "milestones": {
+        "ga": "2018-09-06",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.43",
+        "codename": null,
+        "label": "RouterOS 6.43 (LT)",
+        "releaseDate": "2018-09-06",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.43.16",
+          "date": "2019-05-14",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.43.16&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.42",
+      "name": "RouterOS 6.42 (LT)",
+      "milestones": {
+        "ga": "2018-04-13",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.42",
+        "codename": null,
+        "label": "RouterOS 6.42 (LT)",
+        "releaseDate": "2018-04-13",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.42.12",
+          "date": "2019-02-12",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.42.12&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.41",
+      "name": "RouterOS 6.41",
+      "milestones": {
+        "ga": "2017-12-22",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.41",
+        "codename": null,
+        "label": "RouterOS 6.41",
+        "releaseDate": "2017-12-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.41.4",
+          "date": "2018-04-05",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.41.4&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.40",
+      "name": "RouterOS 6.40 (LT)",
+      "milestones": {
+        "ga": "2017-07-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.40",
+        "codename": null,
+        "label": "RouterOS 6.40 (LT)",
+        "releaseDate": "2017-07-21",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.40.9",
+          "date": "2018-08-20",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.40.9&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.39",
+      "name": "RouterOS 6.39 (LT)",
+      "milestones": {
+        "ga": "2017-04-27",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.39",
+        "codename": null,
+        "label": "RouterOS 6.39 (LT)",
+        "releaseDate": "2017-04-27",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.39.3",
+          "date": "2017-10-12",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.39.3&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.38",
+      "name": "RouterOS 6.38 (LT)",
+      "milestones": {
+        "ga": "2016-12-30",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.38",
+        "codename": null,
+        "label": "RouterOS 6.38 (LT)",
+        "releaseDate": "2016-12-30",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.38.7",
+          "date": "2017-06-20",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.38.7&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.37",
+      "name": "RouterOS 6.37 (LT)",
+      "milestones": {
+        "ga": "2016-09-23",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.37",
+        "codename": null,
+        "label": "RouterOS 6.37 (LT)",
+        "releaseDate": "2016-09-23",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.37.5",
+          "date": "2017-03-09",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.37.5&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.36",
+      "name": "RouterOS 6.36",
+      "milestones": {
+        "ga": "2016-07-20",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.36",
+        "codename": null,
+        "label": "RouterOS 6.36",
+        "releaseDate": "2016-07-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.36.3",
+          "date": "2016-09-05",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.36.3&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.35",
+      "name": "RouterOS 6.35",
+      "milestones": {
+        "ga": "2016-04-14",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.35",
+        "codename": null,
+        "label": "RouterOS 6.35",
+        "releaseDate": "2016-04-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.35.4",
+          "date": "2016-06-09",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.35.4&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.34",
+      "name": "RouterOS 6.34 (LT)",
+      "milestones": {
+        "ga": "2016-01-29",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.34",
+        "codename": null,
+        "label": "RouterOS 6.34 (LT)",
+        "releaseDate": "2016-01-29",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.34.6",
+          "date": "2016-06-06",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.34.6&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.33",
+      "name": "RouterOS 6.33",
+      "milestones": {
+        "ga": "2015-11-06",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.33",
+        "codename": null,
+        "label": "RouterOS 6.33",
+        "releaseDate": "2015-11-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.33.6",
+          "date": "2016-01-28",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.33.6&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.32",
+      "name": "RouterOS 6.32 (LT)",
+      "milestones": {
+        "ga": "2015-09-07",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.32",
+        "codename": null,
+        "label": "RouterOS 6.32 (LT)",
+        "releaseDate": "2015-09-07",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.32.4",
+          "date": "2016-02-09",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.32.4&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.30",
+      "name": "RouterOS 6.30 (LT)",
+      "milestones": {
+        "ga": "2015-07-08",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.30",
+        "codename": null,
+        "label": "RouterOS 6.30 (LT)",
+        "releaseDate": "2015-07-08",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.30.4",
+          "date": "2015-08-25",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.30.4&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.29",
+      "name": "RouterOS 6.29",
+      "milestones": {
+        "ga": "2015-05-27",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.29",
+        "codename": null,
+        "label": "RouterOS 6.29",
+        "releaseDate": "2015-05-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.29.1",
+          "date": "2015-06-01",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.29.1&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.28",
+      "name": "RouterOS 6.28",
+      "milestones": {
+        "ga": "2015-04-15",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.28",
+        "codename": null,
+        "label": "RouterOS 6.28",
+        "releaseDate": "2015-04-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.28",
+          "date": "2015-04-15",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.28&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.27",
+      "name": "RouterOS 6.27",
+      "milestones": {
+        "ga": "2015-02-11",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.27",
+        "codename": null,
+        "label": "RouterOS 6.27",
+        "releaseDate": "2015-02-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.27",
+          "date": "2015-02-11",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.27&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.26",
+      "name": "RouterOS 6.26",
+      "milestones": {
+        "ga": "2015-02-03",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.26",
+        "codename": null,
+        "label": "RouterOS 6.26",
+        "releaseDate": "2015-02-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.26",
+          "date": "2015-02-03",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.26&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.25",
+      "name": "RouterOS 6.25",
+      "milestones": {
+        "ga": "2015-01-19",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.25",
+        "codename": null,
+        "label": "RouterOS 6.25",
+        "releaseDate": "2015-01-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.25",
+          "date": "2015-01-19",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.25&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.24",
+      "name": "RouterOS 6.24",
+      "milestones": {
+        "ga": "2014-12-23",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.24",
+        "codename": null,
+        "label": "RouterOS 6.24",
+        "releaseDate": "2014-12-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.24",
+          "date": "2014-12-23",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.24&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.23",
+      "name": "RouterOS 6.23",
+      "milestones": {
+        "ga": "2014-12-04",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.23",
+        "codename": null,
+        "label": "RouterOS 6.23",
+        "releaseDate": "2014-12-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.23",
+          "date": "2014-12-04",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.23&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.22",
+      "name": "RouterOS 6.22",
+      "milestones": {
+        "ga": "2014-11-11",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.22",
+        "codename": null,
+        "label": "RouterOS 6.22",
+        "releaseDate": "2014-11-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.22",
+          "date": "2014-11-11",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.22&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.20",
+      "name": "RouterOS 6.20",
+      "milestones": {
+        "ga": "2014-10-01",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.20",
+        "codename": null,
+        "label": "RouterOS 6.20",
+        "releaseDate": "2014-10-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.21.1",
+          "date": "2014-11-03",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.21.1&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.19",
+      "name": "RouterOS 6.19",
+      "milestones": {
+        "ga": "2014-08-26",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.19",
+        "codename": null,
+        "label": "RouterOS 6.19",
+        "releaseDate": "2014-08-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.19",
+          "date": "2014-08-26",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.19&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.18",
+      "name": "RouterOS 6.18",
+      "milestones": {
+        "ga": "2014-08-01",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.18",
+        "codename": null,
+        "label": "RouterOS 6.18",
+        "releaseDate": "2014-08-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.18",
+          "date": "2014-08-01",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.18&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.17",
+      "name": "RouterOS 6.17",
+      "milestones": {
+        "ga": "2014-07-18",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.17",
+        "codename": null,
+        "label": "RouterOS 6.17",
+        "releaseDate": "2014-07-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.17",
+          "date": "2014-07-18",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.17&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.16",
+      "name": "RouterOS 6.16",
+      "milestones": {
+        "ga": "2014-07-17",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.16",
+        "codename": null,
+        "label": "RouterOS 6.16",
+        "releaseDate": "2014-07-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.16",
+          "date": "2014-07-17",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.16&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.15",
+      "name": "RouterOS 6.15",
+      "milestones": {
+        "ga": "2014-06-12",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.15",
+        "codename": null,
+        "label": "RouterOS 6.15",
+        "releaseDate": "2014-06-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.15",
+          "date": "2014-06-12",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.15&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.14",
+      "name": "RouterOS 6.14",
+      "milestones": {
+        "ga": "2014-06-06",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.14",
+        "codename": null,
+        "label": "RouterOS 6.14",
+        "releaseDate": "2014-06-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.14",
+          "date": "2014-06-06",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.14&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.13",
+      "name": "RouterOS 6.13",
+      "milestones": {
+        "ga": "2014-05-15",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.13",
+        "codename": null,
+        "label": "RouterOS 6.13",
+        "releaseDate": "2014-05-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.13",
+          "date": "2014-05-15",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.13&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.12",
+      "name": "RouterOS 6.12",
+      "milestones": {
+        "ga": "2014-04-14",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.12",
+        "codename": null,
+        "label": "RouterOS 6.12",
+        "releaseDate": "2014-04-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.12",
+          "date": "2014-04-14",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.12&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.11",
+      "name": "RouterOS 6.11",
+      "milestones": {
+        "ga": "2014-03-20",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.11",
+        "codename": null,
+        "label": "RouterOS 6.11",
+        "releaseDate": "2014-03-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.11",
+          "date": "2014-03-20",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.11&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.10",
+      "name": "RouterOS 6.10",
+      "milestones": {
+        "ga": "2014-02-12",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.10",
+        "codename": null,
+        "label": "RouterOS 6.10",
+        "releaseDate": "2014-02-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.10",
+          "date": "2014-02-12",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.10&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.9",
+      "name": "RouterOS 6.9",
+      "milestones": {
+        "ga": "2014-01-31",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.9",
+        "codename": null,
+        "label": "RouterOS 6.9",
+        "releaseDate": "2014-01-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.9",
+          "date": "2014-01-31",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.9&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.7",
+      "name": "RouterOS 6.7",
+      "milestones": {
+        "ga": "2013-11-29",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.7",
+        "codename": null,
+        "label": "RouterOS 6.7",
+        "releaseDate": "2013-11-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.7",
+          "date": "2013-11-29",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.7&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.6",
+      "name": "RouterOS 6.6",
+      "milestones": {
+        "ga": "2013-11-07",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.6",
+        "codename": null,
+        "label": "RouterOS 6.6",
+        "releaseDate": "2013-11-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.6",
+          "date": "2013-11-07",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.6&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.5",
+      "name": "RouterOS 6.5",
+      "milestones": {
+        "ga": "2013-10-16",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.5",
+        "codename": null,
+        "label": "RouterOS 6.5",
+        "releaseDate": "2013-10-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.5",
+          "date": "2013-10-16",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.5&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.4",
+      "name": "RouterOS 6.4",
+      "milestones": {
+        "ga": "2013-09-12",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.4",
+        "codename": null,
+        "label": "RouterOS 6.4",
+        "releaseDate": "2013-09-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.4",
+          "date": "2013-09-12",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.4&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.26",
+      "name": "RouterOS 5.26",
+      "milestones": {
+        "ga": "2013-09-04",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.26",
+        "codename": null,
+        "label": "RouterOS 5.26",
+        "releaseDate": "2013-09-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "5.26",
+          "date": "2013-09-04",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=5.26&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.3",
+      "name": "RouterOS 6.3",
+      "milestones": {
+        "ga": "2013-09-03",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.3",
+        "codename": null,
+        "label": "RouterOS 6.3",
+        "releaseDate": "2013-09-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.3",
+          "date": "2013-09-03",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.3&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.2",
+      "name": "RouterOS 6.2",
+      "milestones": {
+        "ga": "2013-08-02",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.2",
+        "codename": null,
+        "label": "RouterOS 6.2",
+        "releaseDate": "2013-08-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.2",
+          "date": "2013-08-02",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.2&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.1",
+      "name": "RouterOS 6.1",
+      "milestones": {
+        "ga": "2013-06-12",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.1",
+        "codename": null,
+        "label": "RouterOS 6.1",
+        "releaseDate": "2013-06-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.1",
+          "date": "2013-06-12",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.1&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.0",
+      "name": "RouterOS 6.0",
+      "milestones": {
+        "ga": "2013-05-17",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.0",
+        "codename": null,
+        "label": "RouterOS 6.0",
+        "releaseDate": "2013-05-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "6.0",
+          "date": "2013-05-17",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=6.0&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.25",
+      "name": "RouterOS 5.25",
+      "milestones": {
+        "ga": "2013-04-25",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.25",
+        "codename": null,
+        "label": "RouterOS 5.25",
+        "releaseDate": "2013-04-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "5.25",
+          "date": "2013-04-25",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=5.25&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.24",
+      "name": "RouterOS 5.24",
+      "milestones": {
+        "ga": "2013-02-19",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.24",
+        "codename": null,
+        "label": "RouterOS 5.24",
+        "releaseDate": "2013-02-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "5.24",
+          "date": "2013-02-19",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=5.24&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.23",
+      "name": "RouterOS 5.23",
+      "milestones": {
+        "ga": "2013-01-29",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.23",
+        "codename": null,
+        "label": "RouterOS 5.23",
+        "releaseDate": "2013-01-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "5.23",
+          "date": "2013-01-29",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=5.23&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.22",
+      "name": "RouterOS 5.22",
+      "milestones": {
+        "ga": "2012-11-23",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.22",
+        "codename": null,
+        "label": "RouterOS 5.22",
+        "releaseDate": "2012-11-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "5.22",
+          "date": "2012-11-23",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=5.22&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.21",
+      "name": "RouterOS 5.21",
+      "milestones": {
+        "ga": "2012-10-12",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.21",
+        "codename": null,
+        "label": "RouterOS 5.21",
+        "releaseDate": "2012-10-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "5.21",
+          "date": "2012-10-12",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=5.21&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.20",
+      "name": "RouterOS 5.20",
+      "milestones": {
+        "ga": "2012-08-15",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.20",
+        "codename": null,
+        "label": "RouterOS 5.20",
+        "releaseDate": "2012-08-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "5.20",
+          "date": "2012-08-15",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=5.20&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.19",
+      "name": "RouterOS 5.19",
+      "milestones": {
+        "ga": "2012-07-16",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.19",
+        "codename": null,
+        "label": "RouterOS 5.19",
+        "releaseDate": "2012-07-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "5.19",
+          "date": "2012-07-16",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=5.19&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.18",
+      "name": "RouterOS 5.18",
+      "milestones": {
+        "ga": "2012-06-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.18",
+        "codename": null,
+        "label": "RouterOS 5.18",
+        "releaseDate": "2012-06-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "5.18",
+          "date": "2012-06-21",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=5.18&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.17",
+      "name": "RouterOS 5.17",
+      "milestones": {
+        "ga": "2012-05-28",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.17",
+        "codename": null,
+        "label": "RouterOS 5.17",
+        "releaseDate": "2012-05-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "5.17",
+          "date": "2012-05-28",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=5.17&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.16",
+      "name": "RouterOS 5.16",
+      "milestones": {
+        "ga": "2012-05-09",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.16",
+        "codename": null,
+        "label": "RouterOS 5.16",
+        "releaseDate": "2012-05-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "5.16",
+          "date": "2012-05-09",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=5.16&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.14",
+      "name": "RouterOS 5.14",
+      "milestones": {
+        "ga": "2012-02-22",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.14",
+        "codename": null,
+        "label": "RouterOS 5.14",
+        "releaseDate": "2012-02-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "5.14",
+          "date": "2012-02-22",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=5.14&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.13",
+      "name": "RouterOS 5.13",
+      "milestones": {
+        "ga": "2012-02-14",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.13",
+        "codename": null,
+        "label": "RouterOS 5.13",
+        "releaseDate": "2012-02-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "5.13",
+          "date": "2012-02-14",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=5.13&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.12",
+      "name": "RouterOS 5.12",
+      "milestones": {
+        "ga": "2012-01-19",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.12",
+        "codename": null,
+        "label": "RouterOS 5.12",
+        "releaseDate": "2012-01-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "5.12",
+          "date": "2012-01-19",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=5.12&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.11",
+      "name": "RouterOS 5.11",
+      "milestones": {
+        "ga": "2011-12-12",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.11",
+        "codename": null,
+        "label": "RouterOS 5.11",
+        "releaseDate": "2011-12-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "5.11",
+          "date": "2011-12-12",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=5.11&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.9",
+      "name": "RouterOS 5.9",
+      "milestones": {
+        "ga": "2011-11-29",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.9",
+        "codename": null,
+        "label": "RouterOS 5.9",
+        "releaseDate": "2011-11-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "5.9",
+          "date": "2011-11-29",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=5.9&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.8",
+      "name": "RouterOS 5.8",
+      "milestones": {
+        "ga": "2011-11-01",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.8",
+        "codename": null,
+        "label": "RouterOS 5.8",
+        "releaseDate": "2011-11-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "5.8",
+          "date": "2011-11-01",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=5.8&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.7",
+      "name": "RouterOS 5.7",
+      "milestones": {
+        "ga": "2011-09-14",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.7",
+        "codename": null,
+        "label": "RouterOS 5.7",
+        "releaseDate": "2011-09-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "5.7",
+          "date": "2011-09-14",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=5.7&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.17",
+      "name": "RouterOS 4.17",
+      "milestones": {
+        "ga": "2011-03-02",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.17",
+        "codename": null,
+        "label": "RouterOS 4.17",
+        "releaseDate": "2011-03-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "4.17",
+          "date": "2011-03-02",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=4.17&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.10",
+      "name": "RouterOS 4.10",
+      "milestones": {
+        "ga": "2010-05-26",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.10",
+        "codename": null,
+        "label": "RouterOS 4.10",
+        "releaseDate": "2010-05-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "4.10",
+          "date": "2010-05-26",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=4.10&channelFilter="
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.30",
+      "name": "RouterOS 3.30",
+      "milestones": {
+        "ga": "2009-09-11",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.30",
+        "codename": null,
+        "label": "RouterOS 3.30",
+        "releaseDate": "2009-09-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "3.30",
+          "date": "2009-09-11",
+          "link": "https://mikrotik.com/download/changelogs?versionFilter=3.30&channelFilter="
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/routeros/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-17T00:08:37+00:00"
+  }
+}

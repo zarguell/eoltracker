@@ -1,0 +1,1427 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>XenServer lifecycle dates — EOL Tracker</title>
+<meta name="description" content="General availability, end-of-sale, security-support and end-of-life dates for every XenServer release, with raw source values and provenance.">
+<link rel="canonical" href="https://zarguell.github.io/eoltracker/products/xenserver/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EOL Tracker">
+<meta property="og:title" content="XenServer lifecycle dates — EOL Tracker">
+<meta property="og:description" content="General availability, end-of-sale, security-support and end-of-life dates for every XenServer release, with raw source values and provenance.">
+<meta property="og:url" content="https://zarguell.github.io/eoltracker/products/xenserver/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d1b2a'/%3E%3Cpath d='M7 20.5l5-6 4 4.5 4-6.5 5 8' fill='none' stroke='%234fd1c5' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/eoltracker/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="shell masthead-inner">
+    <a class="wordmark" href="/eoltracker/">EOL<span>Tracker</span></a>
+    <nav class="mainnav" aria-label="Primary">
+      <a href="/eoltracker/">Software</a>
+      <a href="/eoltracker/hardware/">Hardware</a>
+      <a href="/eoltracker/api/">API &amp; data</a>
+      <a href="/eoltracker/why/">Why EOL</a>
+      <a href="https://endoflife.date/" rel="noopener">endoflife.date</a>
+    </nav>
+    <p class="masthead-meta">542 products · 9171 releases · 7169 hardware records</p>
+  </div>
+</header>
+
+<main class="shell" id="main">
+<nav class="crumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/eoltracker/">Catalog</a></li>
+    <li aria-current="page">XenServer</li>
+  </ol>
+</nav>
+
+<section class="hero product-hero">
+  <p class="eyebrow">os · software · vendor collector</p>
+  <h1 class="page-title">XenServer</h1>
+  <p class="lead">
+    29 releases published by XenServer lifecycle from the vendor's
+    own lifecycle table, with each row's cells kept verbatim beneath the normalized dates. Identifier for this
+    record: <code>xenserver</code>.
+  </p>
+  <p class="hero-meta">
+    Verified Sep 24, 2026 at 01:06 UTC by <code>deterministic-xenserver</code>.
+Source: XenServer lifecycle.    Upstream publishes no modification timestamp for this product.
+    Last catalog refresh <time datetime="2026-09-17T18:35:21Z">Sep 17, 2026 at 18:35 UTC</time>.
+  </p>
+  <p class="product-links">
+    <a class="button" href="/eoltracker/v1/products/xenserver.json">JSON record</a>
+    <a class="button" href="https://www.xenserver.com/support" rel="noopener">Source: XenServer product matrix</a>
+<a class="button" href="https://www.xenserver.com/support" rel="noopener">html</a>  </p>
+</section>
+
+<section class="panel" aria-labelledby="coverage-title">
+  <h2 class="panel-title" id="coverage-title">Data coverage</h2>
+  <p class="panel-note">
+    Upstream does not publish every milestone for every release. Empty cells are unknown dates, not implied support;
+    any calculated date is labeled derived and carries its rule above.
+  </p>
+  <ul class="bars">
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">General availability</span>
+        <span class="bar-value">0 / 29 releases (0%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="General availability: 0 of 29 releases have a published date">
+        <div class="bar-fill" style="width: 0%"></div>
+      </div>
+    </li>
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">End of sale</span>
+        <span class="bar-value">17 / 29 releases (59%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="End of sale: 17 of 29 releases have a published date">
+        <div class="bar-fill" style="width: 59%"></div>
+      </div>
+    </li>
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">End of security support</span>
+        <span class="bar-value">0 / 29 releases (0%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="End of security support: 0 of 29 releases have a published date">
+        <div class="bar-fill" style="width: 0%"></div>
+      </div>
+    </li>
+    <li class="bar">
+      <p class="bar-head">
+        <span class="bar-label">End of life</span>
+        <span class="bar-value">29 / 29 releases (100%)</span>
+      </p>
+      <div class="bar-track" role="img" aria-label="End of life: 29 of 29 releases have a published date">
+        <div class="bar-fill" style="width: 100%"></div>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section class="panel" aria-labelledby="legend-title">
+  <h2 class="panel-title" id="legend-title">How to read these dates</h2>
+  <p class="panel-note">
+    The milestone meanings below are the catalog's shared vocabulary. The endoflife.date label rules do not apply to
+    this record: dates are either mapped from the vendor's own cells or derived from an explicit vendor rule. Every
+    source row and every derivation input is retained for review.
+  </p>
+  <dl class="legend">
+    <div class="legend-row">
+      <dt>General availability</dt>
+      <dd>
+        <p>First public release. Taken from the upstream releaseDate.</p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>End of sale</dt>
+      <dd>
+        <p>Last day new licenses or units are sold. Only mapped from an upstream field whose label names an end of sale.</p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>End of security support</dt>
+      <dd>
+        <p>Last day security fixes are published. Mapped from eolFrom or eoesFrom only when the label names security support.</p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>End of life</dt>
+      <dd>
+        <p>End of all support. A published extended-support date wins; otherwise eolFrom when its label describes a full support end.</p>
+      </dd>
+    </div>
+    <div class="legend-row">
+      <dt>Blank date</dt>
+      <dd><p>The source publishes no value for that milestone. A missing date is an absent announcement, not a claim that support ends or continues.</p></dd>
+    </div>
+  </dl>
+</section>
+
+
+<section class="panel" aria-labelledby="next-title">
+  <h2 class="panel-title" id="next-title">Upcoming published deadlines</h2>
+  <ul class="events">
+    <li>
+      <span class="event-release">XenServer 8.4</span>
+      <span class="event-milestone">End of life</span>
+      <span class="event-date"><time datetime="2028-11-30">Nov 30, 2028</time>        <span class="event-days">in 805 days</span></span>
+    </li>
+    <li>
+      <span class="event-release">XenServer 9</span>
+      <span class="event-milestone">End of life</span>
+      <span class="event-date"><time datetime="2031-07-31">Jul 31, 2031</time>        <span class="event-days">in 1778 days</span></span>
+    </li>
+  </ul>
+</section>
+
+<section class="releases" aria-labelledby="releases-title">
+  <div class="catalog-head">
+    <h2 class="panel-title" id="releases-title">Release lifecycle</h2>
+    <p class="catalog-count">29 releases</p>
+  </div>
+  <p class="panel-note">
+    Newest first. Cells show normalized dates; a secondary line shows the raw upstream field and label when the
+    normalized date differs from, or is absent despite, a published value.
+  </p>
+
+  <div class="table-scroll">
+    <table class="release-table">
+      <caption class="sr-only">Lifecycle dates for each XenServer release</caption>
+      <thead>
+        <tr>
+          <th scope="col">Release</th>
+          <th scope="col">General availability</th>
+          <th scope="col">End of sale</th>
+          <th scope="col">End of security support</th>
+          <th scope="col">End of life</th>
+          <th scope="col">Upstream status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">XenServer 9</span>
+<code class="release-raw">9</code>          </th>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2031-07-31">Jul 31, 2031</time>          </td>
+          <td class="upstream-status">
+<span class="tag">9</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">XenServer 8.4</span>
+<code class="release-raw">8.4</code>          </th>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2024-06-03">Jun 3, 2024</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2028-11-30">Nov 30, 2028</time>          </td>
+          <td class="upstream-status">
+<span class="tag">8.4</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">XenServer 8.2 LTSR</span>
+<code class="release-raw">8.2-ltsr</code>          </th>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2025-06-25">Jun 25, 2025</time>          </td>
+          <td class="upstream-status">
+<span class="tag">8.2 LTSR</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">XenServer 8.1 CR</span>
+<code class="release-raw">8.1-cr</code>          </th>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2020-12-17">Dec 17, 2020</time>          </td>
+          <td class="upstream-status">
+<span class="tag">8.1 CR</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">XenServer 8.0 CR</span>
+<code class="release-raw">8.0-cr</code>          </th>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2020-08-31">Aug 31, 2020</time>          </td>
+          <td class="upstream-status">
+<span class="tag">8.0 CR</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">XenServer 7.6 CR</span>
+<code class="release-raw">7.6-cr</code>          </th>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2020-01-10">Jan 10, 2020</time>          </td>
+          <td class="upstream-status">
+<span class="tag">7.6 CR</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">XenServer 7.5 CR</span>
+<code class="release-raw">7.5-cr</code>          </th>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2019-05-07">May 7, 2019</time>          </td>
+          <td class="upstream-status">
+<span class="tag">7.5 CR</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">XenServer 7.4 CR</span>
+<code class="release-raw">7.4-cr</code>          </th>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2018-10-06">Oct 6, 2018</time>          </td>
+          <td class="upstream-status">
+<span class="tag">7.4 CR</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">XenServer 7.3 CR</span>
+<code class="release-raw">7.3-cr</code>          </th>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2018-06-27">Jun 27, 2018</time>          </td>
+          <td class="upstream-status">
+<span class="tag">7.3 CR</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">XenServer 7.2 CR</span>
+<code class="release-raw">7.2-cr</code>          </th>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2018-04-13">Apr 13, 2018</time>          </td>
+          <td class="upstream-status">
+<span class="tag">7.2 CR</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">XenServer 7.1 LTSR</span>
+<code class="release-raw">7.1-ltsr</code>          </th>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2022-08-15">Aug 15, 2022</time>          </td>
+          <td class="upstream-status">
+<span class="tag">7.1 LTSR</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">XenServer 7.0 CR</span>
+<code class="release-raw">7.0-cr</code>          </th>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2021-05-19">May 19, 2021</time>          </td>
+          <td class="upstream-status">
+<span class="tag">7.0 CR</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">XenServer 6.5</span>
+<code class="release-raw">6.5</code>          </th>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2018-06-26">Jun 26, 2018</time>          </td>
+          <td class="upstream-status">
+<span class="tag">6.5</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">XenServer 6.2</span>
+<code class="release-raw">6.2</code>          </th>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2015-05-13">May 13, 2015</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2018-06-26">Jun 26, 2018</time>          </td>
+          <td class="upstream-status">
+<span class="tag">6.2</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">XenServer 6.1</span>
+<code class="release-raw">6.1</code>          </th>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2015-03-31">Mar 31, 2015</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2016-09-30">Sep 30, 2016</time>          </td>
+          <td class="upstream-status">
+<span class="tag">6.1</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">XenServer 6.0.2 CC</span>
+<code class="release-raw">6.0.2-cc</code>          </th>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2013-07-25">Jul 25, 2013</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2018-06-26">Jun 26, 2018</time>          </td>
+          <td class="upstream-status">
+<span class="tag">6.0.2 CC</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">XenServer 6.0.2</span>
+<code class="release-raw">6.0.2</code>          </th>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2013-07-25">Jul 25, 2013</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2016-09-26">Sep 26, 2016</time>          </td>
+          <td class="upstream-status">
+<span class="tag">6.0.2</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">XenServer 6.0.0</span>
+<code class="release-raw">6.0.0-ja</code>          </th>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2013-09-23">Sep 23, 2013</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2016-09-26">Sep 26, 2016</time>          </td>
+          <td class="upstream-status">
+<span class="tag">6.0.0</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">XenServer 6.0.0</span>
+<code class="release-raw">6.0.0</code>          </th>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2013-07-25">Jul 25, 2013</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2016-09-26">Sep 26, 2016</time>          </td>
+          <td class="upstream-status">
+<span class="tag">6.0.0</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">XenServer 5.6</span>
+<code class="release-raw">5.6-ja</code>          </th>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2013-09-23">Sep 23, 2013</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2014-03-31">Mar 31, 2014</time>          </td>
+          <td class="upstream-status">
+<span class="tag">5.6</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">XenServer 5.6</span>
+<code class="release-raw">5.6</code>          </th>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2013-07-25">Jul 25, 2013</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2014-03-31">Mar 31, 2014</time>          </td>
+          <td class="upstream-status">
+<span class="tag">5.6</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">XenServer 5.5</span>
+<code class="release-raw">5.5-ja</code>          </th>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2013-09-23">Sep 23, 2013</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2013-09-15">Sep 15, 2013</time>          </td>
+          <td class="upstream-status">
+<span class="tag">5.5</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">XenServer 5.5</span>
+<code class="release-raw">5.5</code>          </th>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2013-07-25">Jul 25, 2013</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2013-09-15">Sep 15, 2013</time>          </td>
+          <td class="upstream-status">
+<span class="tag">5.5</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">XenServer 5</span>
+<code class="release-raw">5-ja</code>          </th>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2013-09-23">Sep 23, 2013</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2013-09-15">Sep 15, 2013</time>          </td>
+          <td class="upstream-status">
+<span class="tag">5</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">XenServer 5</span>
+<code class="release-raw">5</code>          </th>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2013-07-25">Jul 25, 2013</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2013-09-15">Sep 15, 2013</time>          </td>
+          <td class="upstream-status">
+<span class="tag">5</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">XenServer 4.1</span>
+<code class="release-raw">4.1</code>          </th>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2008-09-15">Sep 15, 2008</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2009-12-13">Dec 13, 2009</time>          </td>
+          <td class="upstream-status">
+<span class="tag">4.1</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">XenServer 4.0 Express, Standard, and Enterprise Edition</span>
+<code class="release-raw">4.0-express-standard-and-enterprise-edition</code>          </th>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2008-03-31">Mar 31, 2008</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2009-06-29">Jun 29, 2009</time>          </td>
+          <td class="upstream-status">
+<span class="tag">4.0 Express, Standard, and Enterprise Edition</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">XenServer 3.2 XenExpress, XenServer, XenEnterprise</span>
+<code class="release-raw">3.2-xenexpress-xenserver-xenenterprise</code>          </th>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2007-08-31">Aug 31, 2007</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2009-03-31">Mar 31, 2009</time>          </td>
+          <td class="upstream-status">
+<span class="tag">3.2 XenExpress, XenServer, XenEnterprise</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="release-id">
+            <span class="release-name">XenServer 3.1 and earlier</span>
+<code class="release-raw">3.1-and-earlier</code>          </th>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2007-04-30">Apr 30, 2007</time>          </td>
+          <td class="milestone is-unknown">
+            <span class="unknown">unknown</span>
+          </td>
+          <td class="milestone">
+            <time datetime="2007-12-31">Dec 31, 2007</time>          </td>
+          <td class="upstream-status">
+<span class="tag">3.1 and earlier</span>            <span class="release-raw">vendor row; every cell is retained below</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="panel" aria-labelledby="source-title">
+  <h2 class="panel-title" id="source-title">Source and upstream values</h2>
+  <p class="panel-note">
+    This record is a normalization of vendor-published lifecycle data, read by
+    XenServer lifecycle. Direct mappings use the vendor's own cells; derived dates use an
+    explicit vendor duration, trigger, or parent-support rule and retain every input. The endoflife.date label rules
+    and license do not apply.
+  </p>
+  <dl class="facts">
+    <div><dt>Upstream record</dt><dd><a href="https://www.xenserver.com/support" rel="noopener">https://www.xenserver.com/support</a></dd></div>
+    <div><dt>Source attribution</dt><dd>XenServer hypervisor lifecycle published directly by Citrix&#39;s and XenServer&#39;s own product matrices and the public CTX692513 support article; only each table&#39;s own EOL and EOS columns become milestones, and NSC, EOM and EOES stay the vendor&#39;s own cells.</dd></div>
+    <div><dt>Verifier</dt><dd><code>deterministic-xenserver</code></dd></div>
+    <div><dt>Last checked</dt><dd>Sep 24, 2026 at 01:06 UTC</dd></div>
+    <div><dt>Upstream modified</dt><dd>not published upstream</dd></div>
+    <div><dt>JSON record</dt><dd><a href="https://zarguell.github.io/eoltracker/v1/products/xenserver.json">https://zarguell.github.io/eoltracker/v1/products/xenserver.json</a></dd></div>
+    <div><dt>Schema</dt><dd><a href="https://zarguell.github.io/eoltracker/v1/schema/product.json">v1/schema/product.json</a></dd></div>
+  </dl>
+
+
+
+  <h3 class="sub-title">Vendor row cells</h3>
+  <p class="panel-note">
+    The vendor's own columns, as the source publishes them. A normalized milestone is mapped directly from these
+    cells or derived under the explicit rule shown above; no value is inferred from cadence or silence.
+  </p>
+  <div class="table-scroll">
+    <table class="release-table">
+      <thead>
+        <tr>
+          <th scope="col">Release</th>
+<th scope="col">Product</th><th scope="col">Version</th><th scope="col">Language</th><th scope="col">NSC</th><th scope="col">EOS</th><th scope="col">EOM &amp; EOL</th><th scope="col">Notes</th>        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">XenServer 9</span></th>
+<td>XenServer</td><td>9</td><td>EN</td><td>02-07-2026</td><td>NA</td><td>07-31-2031</td><td>XenServer specific licence required</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">XenServer 8.4</span></th>
+<td>XenServer</td><td>8.4</td><td>EN</td><td>03-26-2024</td><td>06-03-2024</td><td>11-30-2028</td><td>XenServer specific licence required</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">XenServer 8.2 LTSR</span></th>
+<td>Citrix Hypervisor</td><td>8.2 LTSR</td><td>EN, SC, JA</td><td>01-May-24</td><td>03-Jun-24</td><td>25-Jun-25</td><td>N/A</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">XenServer 8.1 CR</span></th>
+<td>Citrix Hypervisor</td><td>8.1 CR</td><td>EN, SC, JA</td><td>17-Dec-19</td><td>N/A</td><td>17-Dec-20</td><td>N/A</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">XenServer 8.0 CR</span></th>
+<td>Citrix Hypervisor</td><td>8.0 CR</td><td>EN, SC, JA</td><td>25-Apr-19</td><td>N/A</td><td>31-Aug-20</td><td>N/A</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">XenServer 7.6 CR</span></th>
+<td>XenServer</td><td>7.6 CR</td><td>EN, SC, JA</td><td>6-Sep-18</td><td>N/A</td><td>N/A</td><td>10-Jan-20</td><td>N/A</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">XenServer 7.5 CR</span></th>
+<td>XenServer</td><td>7.5 CR</td><td>EN, SC, JA</td><td>30-May-18</td><td>N/A</td><td>N/A</td><td>7-May-19</td><td>N/A</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">XenServer 7.4 CR</span></th>
+<td>XenServer</td><td>7.4 CR</td><td>EN, SC, JA</td><td>28-Feb-18</td><td>N/A</td><td>N/A</td><td>6-Oct-18</td><td>N/A</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">XenServer 7.3 CR</span></th>
+<td>XenServer</td><td>7.3 CR</td><td>EN, SC, JA</td><td>13-Dec-17</td><td>N/A</td><td>N/A</td><td>27-Jun-18</td><td>N/A</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">XenServer 7.2 CR</span></th>
+<td>XenServer</td><td>7.2 CR</td><td>EN, SC, JA</td><td>25-May-17</td><td>N/A</td><td>N/A</td><td>13-Apr-18</td><td>N/A</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">XenServer 7.1 LTSR</span></th>
+<td>XenServer</td><td>7.1 LTSR</td><td>EN, SC, JA</td><td>23-Apr-17</td><td>N/A</td><td>15-Aug-22</td><td>N/A</td><td>Maintenance for this release is only available on Cumulative Update 2</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">XenServer 7.0 CR</span></th>
+<td>XenServer</td><td>7.0 CR</td><td>EN, SC, JA</td><td>19-Apr-16</td><td>N/A</td><td>19-May-19</td><td>19-May-21</td><td>N/A</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">XenServer 6.5</span></th>
+<td>XenServer</td><td>6.5</td><td>EN, SC, JA</td><td>28-Jan-15</td><td>N/A</td><td>30-Sep-17</td><td>26-Jun-18</td><td>N/A</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">XenServer 6.2</span></th>
+<td>XenServer</td><td>6.2</td><td>EN</td><td>11-Feb-15</td><td>13-May-15</td><td>30-Sep-16</td><td>26-Jun-18</td><td>N/A</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">XenServer 6.1</span></th>
+<td>XenServer</td><td>6.1</td><td>EN, SC, JA</td><td>25-Jun-13</td><td>31-Mar-15</td><td>30-Sep-16</td><td>30-Sep-16</td><td>N/A</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">XenServer 6.0.2 CC</span></th>
+<td>XenServer</td><td>6.0.2 CC</td><td>EN</td><td>26-Nov-13</td><td>25-Jul-13</td><td>26-Jun-14</td><td>26-Jun-18</td><td>N/A</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">XenServer 6.0.2</span></th>
+<td>XenServer</td><td>6.0.2</td><td>EN, SC, JA</td><td>25-Apr-16</td><td>25-Jul-13</td><td>26-Sep-14</td><td>26-Sep-16</td><td>N/A</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">XenServer 6.0.0</span></th>
+<td>XenServer</td><td>6.0.0</td><td>JA</td><td>25-Jun-13</td><td>23-Sep-13</td><td>26-Sep-14</td><td>26-Sep-16</td><td>N/A</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">XenServer 6.0.0</span></th>
+<td>XenServer</td><td>6.0.0</td><td>EN, SC</td><td>25-Jun-13</td><td>25-Jul-13</td><td>26-Sep-14</td><td>26-Sep-16</td><td>N/A</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">XenServer 5.6</span></th>
+<td>XenServer</td><td>5.6</td><td>JA</td><td>25-Jun-13</td><td>23-Sept-13</td><td>30-Jun-12</td><td>31-Mar-14</td><td></td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">XenServer 5.6</span></th>
+<td>XenServer</td><td>5.6</td><td>EN</td><td>25-Jun-13</td><td>25-Jul-13</td><td>30-Jun-12</td><td>31-Mar-14</td><td></td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">XenServer 5.5</span></th>
+<td>XenServer</td><td>5.5</td><td>JA</td><td>25-Jun-13</td><td>23-Sept-13</td><td>15-Sep-11</td><td>15-Sep-13</td><td></td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">XenServer 5.5</span></th>
+<td>XenServer</td><td>5.5</td><td>EN</td><td>25-Jun-13</td><td>25-Jul-13</td><td>15-Sep-11</td><td>15-Sep-13</td><td></td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">XenServer 5</span></th>
+<td>XenServer</td><td>5</td><td>JA</td><td>25-Jun-13</td><td>23-Sept-13</td><td>15-Sep-11</td><td>15-Sep-13</td><td></td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">XenServer 5</span></th>
+<td>XenServer</td><td>5</td><td>EN</td><td>25-Jun-13</td><td>25-Jul-13</td><td>15-Sep-11</td><td>15-Sep-13</td><td></td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">XenServer 4.1</span></th>
+<td>XenServer</td><td>4.1</td><td>EN, JA</td><td>15-Jun-08</td><td>15-Sep-08</td><td>14-Sep-09</td><td>13-Dec-09</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">XenServer 4.0 Express, Standard, and Enterprise Edition</span></th>
+<td>XenServer</td><td>4.0 Express, Standard, and Enterprise Edition</td><td>EN</td><td>31-Dec-07</td><td>31-Mar-08</td><td>30-Mar-09</td><td>29-Jun-09</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">XenServer 3.2 XenExpress, XenServer, XenEnterprise</span></th>
+<td>XenServer</td><td>3.2 XenExpress, XenServer, XenEnterprise</td><td>EN</td><td>10-Mar-08</td><td>31-Aug-07</td><td>30-Sep-08</td><td>31-Mar-09</td>        </tr>
+        <tr>
+          <th scope="row" class="release-id"><span class="release-name">XenServer 3.1 and earlier</span></th>
+<td>XenServer</td><td>3.1 and earlier</td><td>EN</td><td>10-Mar-08</td><td>30-Apr-07 XenExpress, XenServer, XenEnterprise</td><td>31-Dec-07</td><td>31-Dec-07</td>        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <details class="raw">
+    <summary>Raw upstream release objects (29)</summary>
+    <p class="panel-note">Verbatim <code>releases[]</code> entries: each release's stored <code>upstream</code> object, including the vendor's own row cells, unmodified.</p>
+    <details class="raw-release">
+      <summary><code>9</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;EOM &amp; EOL&#34;: &#34;07-31-2031&#34;,
+    &#34;EOS&#34;: &#34;NA&#34;,
+    &#34;Language&#34;: &#34;EN&#34;,
+    &#34;NSC&#34;: &#34;02-07-2026&#34;,
+    &#34;Notes&#34;: &#34;XenServer specific licence required&#34;,
+    &#34;Product&#34;: &#34;XenServer&#34;,
+    &#34;Version&#34;: &#34;9&#34;
+  },
+  &#34;name&#34;: &#34;9&#34;,
+  &#34;page&#34;: &#34;https://www.xenserver.com/support&#34;,
+  &#34;table&#34;: &#34;XenServer product matrix&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>8.4</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;EOM &amp; EOL&#34;: &#34;11-30-2028&#34;,
+    &#34;EOS&#34;: &#34;06-03-2024&#34;,
+    &#34;Language&#34;: &#34;EN&#34;,
+    &#34;NSC&#34;: &#34;03-26-2024&#34;,
+    &#34;Notes&#34;: &#34;XenServer specific licence required&#34;,
+    &#34;Product&#34;: &#34;XenServer&#34;,
+    &#34;Version&#34;: &#34;8.4&#34;
+  },
+  &#34;name&#34;: &#34;8.4&#34;,
+  &#34;page&#34;: &#34;https://www.xenserver.com/support&#34;,
+  &#34;table&#34;: &#34;XenServer product matrix&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>8.2-ltsr</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;EOES&#34;: &#34;N/A&#34;,
+    &#34;EOL&#34;: &#34;25-Jun-25&#34;,
+    &#34;EOM&#34;: &#34;03-Jun-24&#34;,
+    &#34;Language&#34;: &#34;EN, SC, JA&#34;,
+    &#34;NSC&#34;: &#34;01-May-24&#34;,
+    &#34;Product/Component Name&#34;: &#34;Citrix Hypervisor&#34;,
+    &#34;Version/Model&#34;: &#34;8.2 LTSR&#34;
+  },
+  &#34;name&#34;: &#34;8.2 LTSR&#34;,
+  &#34;page&#34;: &#34;https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html&#34;,
+  &#34;statement&#34;: {
+    &#34;article&#34;: &#34;CTX692513&#34;,
+    &#34;quote&#34;: &#34;Citrix Hypervisor 8.2 Cumulative Update 1 becomes End of Life on June 25, 2025.&#34;,
+    &#34;url&#34;: &#34;https://support.citrix.com/external/article?articleUrl=CTX692513-prepare-for-citrix-hypervisor-82-cumulative-update-1-end-of-life&#34;
+  },
+  &#34;table&#34;: &#34;Citrix Hypervisor tab&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>8.1-cr</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;EOES&#34;: &#34;N/A&#34;,
+    &#34;EOL&#34;: &#34;17-Dec-20&#34;,
+    &#34;EOM&#34;: &#34;N/A&#34;,
+    &#34;Language&#34;: &#34;EN, SC, JA&#34;,
+    &#34;NSC&#34;: &#34;17-Dec-19&#34;,
+    &#34;Product/Component Name&#34;: &#34;Citrix Hypervisor&#34;,
+    &#34;Version/Model&#34;: &#34;8.1 CR&#34;
+  },
+  &#34;name&#34;: &#34;8.1 CR&#34;,
+  &#34;page&#34;: &#34;https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html&#34;,
+  &#34;table&#34;: &#34;Citrix Hypervisor tab&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>8.0-cr</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;EOES&#34;: &#34;N/A&#34;,
+    &#34;EOL&#34;: &#34;31-Aug-20&#34;,
+    &#34;EOM&#34;: &#34;N/A&#34;,
+    &#34;Language&#34;: &#34;EN, SC, JA&#34;,
+    &#34;NSC&#34;: &#34;25-Apr-19&#34;,
+    &#34;Product/Component Name&#34;: &#34;Citrix Hypervisor&#34;,
+    &#34;Version/Model&#34;: &#34;8.0 CR&#34;
+  },
+  &#34;name&#34;: &#34;8.0 CR&#34;,
+  &#34;page&#34;: &#34;https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html&#34;,
+  &#34;table&#34;: &#34;Citrix Hypervisor tab&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>7.6-cr</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;EOES&#34;: &#34;N/A&#34;,
+    &#34;EOL&#34;: &#34;10-Jan-20&#34;,
+    &#34;EOM&#34;: &#34;N/A&#34;,
+    &#34;EOS&#34;: &#34;N/A&#34;,
+    &#34;Language&#34;: &#34;EN, SC, JA&#34;,
+    &#34;NSC&#34;: &#34;6-Sep-18&#34;,
+    &#34;Product/Component Name&#34;: &#34;XenServer&#34;,
+    &#34;Version/Model&#34;: &#34;7.6 CR&#34;
+  },
+  &#34;name&#34;: &#34;7.6 CR&#34;,
+  &#34;page&#34;: &#34;https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html&#34;,
+  &#34;table&#34;: &#34;XenServer tab / Current Release (CR) Lifecycle Dates&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>7.5-cr</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;EOES&#34;: &#34;N/A&#34;,
+    &#34;EOL&#34;: &#34;7-May-19&#34;,
+    &#34;EOM&#34;: &#34;N/A&#34;,
+    &#34;EOS&#34;: &#34;N/A&#34;,
+    &#34;Language&#34;: &#34;EN, SC, JA&#34;,
+    &#34;NSC&#34;: &#34;30-May-18&#34;,
+    &#34;Product/Component Name&#34;: &#34;XenServer&#34;,
+    &#34;Version/Model&#34;: &#34;7.5 CR&#34;
+  },
+  &#34;name&#34;: &#34;7.5 CR&#34;,
+  &#34;page&#34;: &#34;https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html&#34;,
+  &#34;table&#34;: &#34;XenServer tab / Current Release (CR) Lifecycle Dates&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>7.4-cr</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;EOES&#34;: &#34;N/A&#34;,
+    &#34;EOL&#34;: &#34;6-Oct-18&#34;,
+    &#34;EOM&#34;: &#34;N/A&#34;,
+    &#34;EOS&#34;: &#34;N/A&#34;,
+    &#34;Language&#34;: &#34;EN, SC, JA&#34;,
+    &#34;NSC&#34;: &#34;28-Feb-18&#34;,
+    &#34;Product/Component Name&#34;: &#34;XenServer&#34;,
+    &#34;Version/Model&#34;: &#34;7.4 CR&#34;
+  },
+  &#34;name&#34;: &#34;7.4 CR&#34;,
+  &#34;page&#34;: &#34;https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html&#34;,
+  &#34;table&#34;: &#34;XenServer tab / Current Release (CR) Lifecycle Dates&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>7.3-cr</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;EOES&#34;: &#34;N/A&#34;,
+    &#34;EOL&#34;: &#34;27-Jun-18&#34;,
+    &#34;EOM&#34;: &#34;N/A&#34;,
+    &#34;EOS&#34;: &#34;N/A&#34;,
+    &#34;Language&#34;: &#34;EN, SC, JA&#34;,
+    &#34;NSC&#34;: &#34;13-Dec-17&#34;,
+    &#34;Product/Component Name&#34;: &#34;XenServer&#34;,
+    &#34;Version/Model&#34;: &#34;7.3 CR&#34;
+  },
+  &#34;name&#34;: &#34;7.3 CR&#34;,
+  &#34;page&#34;: &#34;https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html&#34;,
+  &#34;table&#34;: &#34;XenServer tab / Current Release (CR) Lifecycle Dates&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>7.2-cr</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;EOES&#34;: &#34;N/A&#34;,
+    &#34;EOL&#34;: &#34;13-Apr-18&#34;,
+    &#34;EOM&#34;: &#34;N/A&#34;,
+    &#34;EOS&#34;: &#34;N/A&#34;,
+    &#34;Language&#34;: &#34;EN, SC, JA&#34;,
+    &#34;NSC&#34;: &#34;25-May-17&#34;,
+    &#34;Product/Component Name&#34;: &#34;XenServer&#34;,
+    &#34;Version/Model&#34;: &#34;7.2 CR&#34;
+  },
+  &#34;name&#34;: &#34;7.2 CR&#34;,
+  &#34;page&#34;: &#34;https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html&#34;,
+  &#34;table&#34;: &#34;XenServer tab / Current Release (CR) Lifecycle Dates&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>7.1-ltsr</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;EOES&#34;: &#34;N/A&#34;,
+    &#34;EOL&#34;: &#34;15-Aug-22&#34;,
+    &#34;EOM&#34;: &#34;N/A&#34;,
+    &#34;Language&#34;: &#34;EN, SC, JA&#34;,
+    &#34;NSC&#34;: &#34;23-Apr-17&#34;,
+    &#34;Notes&#34;: &#34;Maintenance for this release is only available on Cumulative Update 2&#34;,
+    &#34;Product/Component Name&#34;: &#34;XenServer&#34;,
+    &#34;Version/Model&#34;: &#34;7.1 LTSR&#34;
+  },
+  &#34;name&#34;: &#34;7.1 LTSR&#34;,
+  &#34;page&#34;: &#34;https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html&#34;,
+  &#34;table&#34;: &#34;XenServer tab / Long Term Service Release (LTSR) Lifecycle Dates&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>7.0-cr</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;EOES&#34;: &#34;N/A&#34;,
+    &#34;EOL&#34;: &#34;19-May-21&#34;,
+    &#34;EOM&#34;: &#34;19-May-19&#34;,
+    &#34;EOS&#34;: &#34;N/A&#34;,
+    &#34;Language&#34;: &#34;EN, SC, JA&#34;,
+    &#34;NSC&#34;: &#34;19-Apr-16&#34;,
+    &#34;Product/Component Name&#34;: &#34;XenServer&#34;,
+    &#34;Version/Model&#34;: &#34;7.0 CR&#34;
+  },
+  &#34;name&#34;: &#34;7.0 CR&#34;,
+  &#34;page&#34;: &#34;https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html&#34;,
+  &#34;table&#34;: &#34;XenServer tab / Current Release (CR) Lifecycle Dates&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>6.5</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;EOES&#34;: &#34;N/A&#34;,
+    &#34;EOL&#34;: &#34;26-Jun-18&#34;,
+    &#34;EOM&#34;: &#34;30-Sep-17&#34;,
+    &#34;EOS&#34;: &#34;N/A&#34;,
+    &#34;Language&#34;: &#34;EN, SC, JA&#34;,
+    &#34;NSC&#34;: &#34;28-Jan-15&#34;,
+    &#34;Product/Component Name&#34;: &#34;XenServer&#34;,
+    &#34;Version/Model&#34;: &#34;6.5&#34;
+  },
+  &#34;name&#34;: &#34;6.5&#34;,
+  &#34;page&#34;: &#34;https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html&#34;,
+  &#34;table&#34;: &#34;XenServer tab / Current Release (CR) Lifecycle Dates&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>6.2</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;EOES&#34;: &#34;N/A&#34;,
+    &#34;EOL&#34;: &#34;26-Jun-18&#34;,
+    &#34;EOM&#34;: &#34;30-Sep-16&#34;,
+    &#34;EOS&#34;: &#34;13-May-15&#34;,
+    &#34;Language&#34;: &#34;EN&#34;,
+    &#34;NSC&#34;: &#34;11-Feb-15&#34;,
+    &#34;Product/Component Name&#34;: &#34;XenServer&#34;,
+    &#34;Version/Model&#34;: &#34;6.2&#34;
+  },
+  &#34;name&#34;: &#34;6.2&#34;,
+  &#34;page&#34;: &#34;https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html&#34;,
+  &#34;table&#34;: &#34;XenServer tab / Current Release (CR) Lifecycle Dates&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>6.1</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;EOES&#34;: &#34;N/A&#34;,
+    &#34;EOL&#34;: &#34;30-Sep-16&#34;,
+    &#34;EOM&#34;: &#34;30-Sep-16&#34;,
+    &#34;EOS&#34;: &#34;31-Mar-15&#34;,
+    &#34;Language&#34;: &#34;EN, SC, JA&#34;,
+    &#34;NSC&#34;: &#34;25-Jun-13&#34;,
+    &#34;Product/Component Name&#34;: &#34;XenServer&#34;,
+    &#34;Version/Model&#34;: &#34;6.1&#34;
+  },
+  &#34;name&#34;: &#34;6.1&#34;,
+  &#34;page&#34;: &#34;https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html&#34;,
+  &#34;table&#34;: &#34;XenServer tab / Current Release (CR) Lifecycle Dates&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>6.0.2-cc</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;EOES&#34;: &#34;N/A&#34;,
+    &#34;EOL&#34;: &#34;26-Jun-18&#34;,
+    &#34;EOM&#34;: &#34;26-Jun-14&#34;,
+    &#34;EOS&#34;: &#34;25-Jul-13&#34;,
+    &#34;Language&#34;: &#34;EN&#34;,
+    &#34;NSC&#34;: &#34;26-Nov-13&#34;,
+    &#34;Product/Component Name&#34;: &#34;XenServer&#34;,
+    &#34;Version/Model&#34;: &#34;6.0.2 CC&#34;
+  },
+  &#34;name&#34;: &#34;6.0.2 CC&#34;,
+  &#34;page&#34;: &#34;https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html&#34;,
+  &#34;table&#34;: &#34;XenServer tab / Current Release (CR) Lifecycle Dates&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>6.0.2</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;EOES&#34;: &#34;N/A&#34;,
+    &#34;EOL&#34;: &#34;26-Sep-16&#34;,
+    &#34;EOM&#34;: &#34;26-Sep-14&#34;,
+    &#34;EOS&#34;: &#34;25-Jul-13&#34;,
+    &#34;Language&#34;: &#34;EN, SC, JA&#34;,
+    &#34;NSC&#34;: &#34;25-Apr-16&#34;,
+    &#34;Product/Component Name&#34;: &#34;XenServer&#34;,
+    &#34;Version/Model&#34;: &#34;6.0.2&#34;
+  },
+  &#34;name&#34;: &#34;6.0.2&#34;,
+  &#34;page&#34;: &#34;https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html&#34;,
+  &#34;table&#34;: &#34;XenServer tab / Current Release (CR) Lifecycle Dates&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>6.0.0-ja</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;EOES&#34;: &#34;N/A&#34;,
+    &#34;EOL&#34;: &#34;26-Sep-16&#34;,
+    &#34;EOM&#34;: &#34;26-Sep-14&#34;,
+    &#34;EOS&#34;: &#34;23-Sep-13&#34;,
+    &#34;Language&#34;: &#34;JA&#34;,
+    &#34;NSC&#34;: &#34;25-Jun-13&#34;,
+    &#34;Product/Component Name&#34;: &#34;XenServer&#34;,
+    &#34;Version/Model&#34;: &#34;6.0.0&#34;
+  },
+  &#34;name&#34;: &#34;6.0.0&#34;,
+  &#34;page&#34;: &#34;https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html&#34;,
+  &#34;table&#34;: &#34;XenServer tab / Current Release (CR) Lifecycle Dates&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>6.0.0</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;EOES&#34;: &#34;N/A&#34;,
+    &#34;EOL&#34;: &#34;26-Sep-16&#34;,
+    &#34;EOM&#34;: &#34;26-Sep-14&#34;,
+    &#34;EOS&#34;: &#34;25-Jul-13&#34;,
+    &#34;Language&#34;: &#34;EN, SC&#34;,
+    &#34;NSC&#34;: &#34;25-Jun-13&#34;,
+    &#34;Product/Component Name&#34;: &#34;XenServer&#34;,
+    &#34;Version/Model&#34;: &#34;6.0.0&#34;
+  },
+  &#34;name&#34;: &#34;6.0.0&#34;,
+  &#34;page&#34;: &#34;https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html&#34;,
+  &#34;table&#34;: &#34;XenServer tab / Current Release (CR) Lifecycle Dates&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>5.6-ja</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;EOES&#34;: &#34;&#34;,
+    &#34;EOL&#34;: &#34;31-Mar-14&#34;,
+    &#34;EOM&#34;: &#34;30-Jun-12&#34;,
+    &#34;EOS&#34;: &#34;23-Sept-13&#34;,
+    &#34;Language&#34;: &#34;JA&#34;,
+    &#34;NSC&#34;: &#34;25-Jun-13&#34;,
+    &#34;Product/Component Name&#34;: &#34;XenServer&#34;,
+    &#34;Version/Model&#34;: &#34;5.6&#34;
+  },
+  &#34;name&#34;: &#34;5.6&#34;,
+  &#34;page&#34;: &#34;https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html&#34;,
+  &#34;table&#34;: &#34;XenServer tab / Current Release (CR) Lifecycle Dates&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>5.6</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;EOES&#34;: &#34;&#34;,
+    &#34;EOL&#34;: &#34;31-Mar-14&#34;,
+    &#34;EOM&#34;: &#34;30-Jun-12&#34;,
+    &#34;EOS&#34;: &#34;25-Jul-13&#34;,
+    &#34;Language&#34;: &#34;EN&#34;,
+    &#34;NSC&#34;: &#34;25-Jun-13&#34;,
+    &#34;Product/Component Name&#34;: &#34;XenServer&#34;,
+    &#34;Version/Model&#34;: &#34;5.6&#34;
+  },
+  &#34;name&#34;: &#34;5.6&#34;,
+  &#34;page&#34;: &#34;https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html&#34;,
+  &#34;table&#34;: &#34;XenServer tab / Current Release (CR) Lifecycle Dates&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>5.5-ja</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;EOES&#34;: &#34;&#34;,
+    &#34;EOL&#34;: &#34;15-Sep-13&#34;,
+    &#34;EOM&#34;: &#34;15-Sep-11&#34;,
+    &#34;EOS&#34;: &#34;23-Sept-13&#34;,
+    &#34;Language&#34;: &#34;JA&#34;,
+    &#34;NSC&#34;: &#34;25-Jun-13&#34;,
+    &#34;Product/Component Name&#34;: &#34;XenServer&#34;,
+    &#34;Version/Model&#34;: &#34;5.5&#34;
+  },
+  &#34;name&#34;: &#34;5.5&#34;,
+  &#34;page&#34;: &#34;https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html&#34;,
+  &#34;table&#34;: &#34;XenServer tab / Current Release (CR) Lifecycle Dates&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>5.5</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;EOES&#34;: &#34;&#34;,
+    &#34;EOL&#34;: &#34;15-Sep-13&#34;,
+    &#34;EOM&#34;: &#34;15-Sep-11&#34;,
+    &#34;EOS&#34;: &#34;25-Jul-13&#34;,
+    &#34;Language&#34;: &#34;EN&#34;,
+    &#34;NSC&#34;: &#34;25-Jun-13&#34;,
+    &#34;Product/Component Name&#34;: &#34;XenServer&#34;,
+    &#34;Version/Model&#34;: &#34;5.5&#34;
+  },
+  &#34;name&#34;: &#34;5.5&#34;,
+  &#34;page&#34;: &#34;https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html&#34;,
+  &#34;table&#34;: &#34;XenServer tab / Current Release (CR) Lifecycle Dates&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>5-ja</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;EOES&#34;: &#34;&#34;,
+    &#34;EOL&#34;: &#34;15-Sep-13&#34;,
+    &#34;EOM&#34;: &#34;15-Sep-11&#34;,
+    &#34;EOS&#34;: &#34;23-Sept-13&#34;,
+    &#34;Language&#34;: &#34;JA&#34;,
+    &#34;NSC&#34;: &#34;25-Jun-13&#34;,
+    &#34;Product/Component Name&#34;: &#34;XenServer&#34;,
+    &#34;Version/Model&#34;: &#34;5&#34;
+  },
+  &#34;name&#34;: &#34;5&#34;,
+  &#34;page&#34;: &#34;https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html&#34;,
+  &#34;table&#34;: &#34;XenServer tab / Current Release (CR) Lifecycle Dates&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>5</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;EOES&#34;: &#34;&#34;,
+    &#34;EOL&#34;: &#34;15-Sep-13&#34;,
+    &#34;EOM&#34;: &#34;15-Sep-11&#34;,
+    &#34;EOS&#34;: &#34;25-Jul-13&#34;,
+    &#34;Language&#34;: &#34;EN&#34;,
+    &#34;NSC&#34;: &#34;25-Jun-13&#34;,
+    &#34;Product/Component Name&#34;: &#34;XenServer&#34;,
+    &#34;Version/Model&#34;: &#34;5&#34;
+  },
+  &#34;name&#34;: &#34;5&#34;,
+  &#34;page&#34;: &#34;https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html&#34;,
+  &#34;table&#34;: &#34;XenServer tab / Current Release (CR) Lifecycle Dates&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>4.1</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;EOL&#34;: &#34;13-Dec-09&#34;,
+    &#34;EOM&#34;: &#34;14-Sep-09&#34;,
+    &#34;EOS&#34;: &#34;15-Sep-08&#34;,
+    &#34;Language&#34;: &#34;EN, JA&#34;,
+    &#34;NSC&#34;: &#34;15-Jun-08&#34;,
+    &#34;Product/Component Name&#34;: &#34;XenServer&#34;,
+    &#34;Version/Model&#34;: &#34;4.1&#34;
+  },
+  &#34;name&#34;: &#34;4.1&#34;,
+  &#34;page&#34;: &#34;https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html&#34;,
+  &#34;table&#34;: &#34;XenSource XenServer tab&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>4.0-express-standard-and-enterprise-edition</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;EOL&#34;: &#34;29-Jun-09&#34;,
+    &#34;EOM&#34;: &#34;30-Mar-09&#34;,
+    &#34;EOS&#34;: &#34;31-Mar-08&#34;,
+    &#34;Language&#34;: &#34;EN&#34;,
+    &#34;NSC&#34;: &#34;31-Dec-07&#34;,
+    &#34;Product/Component Name&#34;: &#34;XenServer&#34;,
+    &#34;Version/Model&#34;: &#34;4.0 Express, Standard, and Enterprise Edition&#34;
+  },
+  &#34;name&#34;: &#34;4.0 Express, Standard, and Enterprise Edition&#34;,
+  &#34;page&#34;: &#34;https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html&#34;,
+  &#34;table&#34;: &#34;XenSource XenServer tab&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.2-xenexpress-xenserver-xenenterprise</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;EOL&#34;: &#34;31-Mar-09&#34;,
+    &#34;EOM&#34;: &#34;30-Sep-08&#34;,
+    &#34;EOS&#34;: &#34;31-Aug-07&#34;,
+    &#34;Language&#34;: &#34;EN&#34;,
+    &#34;NSC&#34;: &#34;10-Mar-08&#34;,
+    &#34;Product/Component Name&#34;: &#34;XenServer&#34;,
+    &#34;Version/Model&#34;: &#34;3.2 XenExpress, XenServer, XenEnterprise&#34;
+  },
+  &#34;name&#34;: &#34;3.2 XenExpress, XenServer, XenEnterprise&#34;,
+  &#34;page&#34;: &#34;https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html&#34;,
+  &#34;table&#34;: &#34;XenSource XenServer tab&#34;
+}</code></pre>
+    </details>
+    <details class="raw-release">
+      <summary><code>3.1-and-earlier</code></summary>
+      <pre><code>{
+  &#34;cells&#34;: {
+    &#34;EOL&#34;: &#34;31-Dec-07&#34;,
+    &#34;EOM&#34;: &#34;31-Dec-07&#34;,
+    &#34;EOS&#34;: &#34;30-Apr-07 XenExpress, XenServer, XenEnterprise&#34;,
+    &#34;Language&#34;: &#34;EN&#34;,
+    &#34;NSC&#34;: &#34;10-Mar-08&#34;,
+    &#34;Product/Component Name&#34;: &#34;XenServer&#34;,
+    &#34;Version/Model&#34;: &#34;3.1 and earlier&#34;
+  },
+  &#34;name&#34;: &#34;3.1 and earlier&#34;,
+  &#34;page&#34;: &#34;https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html&#34;,
+  &#34;table&#34;: &#34;XenSource XenServer tab&#34;
+}</code></pre>
+    </details>
+  </details>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="shell footer-inner">
+    <div class="footer-col">
+      <p class="footer-title">EOL Tracker</p>
+      <p class="footer-note">
+        Software lifecycle dates are republished from the
+        <a href="https://endoflife.date/" rel="noopener">endoflife.date</a> community catalog and vendor-specific public
+        lifecycle sources. Each record names its source; community-catalog data is licensed
+        <a href="https://github.com/endoflife-date/endoflife.date/blob/master/LICENSE" rel="noopener">MIT</a>.
+      </p>
+      <p class="footer-note">
+        Hardware lifecycle data comes from
+        <a href="https://eosl.date/" rel="noopener">eosl.date</a> by Subash Geetha Krishnan,
+        which aggregates public vendor announcements, and from
+        <a href="https://opengear.com/end-life-products" rel="noopener">Opengear's end-of-life product list</a>.
+        Attribution here is credit by name and link, not a licence to the source material: nothing is reproduced as
+        licensed material. This catalog is an independent normalization, not affiliated with endoflife.date, eosl.date,
+        Opengear or any vendor listed here.
+      </p>
+      <p class="footer-note">
+        Last catalog refresh Sep 17, 2026 at 18:35 UTC.
+      </p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-title">Data</p>
+      <ul class="footer-links">
+        <li><a href="/eoltracker/v1/feed.json">Feed (JSON)</a></li>
+        <li><a href="/eoltracker/v1/feed.atom">Deadlines (Atom)</a></li>
+        <li><a href="/eoltracker/v1/calendar.ics">Deadlines (iCal)</a></li>
+        <li><a href="/eoltracker/v1/products.json">Product summaries</a></li>
+        <li><a href="/eoltracker/v1/hardware.json">Hardware summaries</a></li>
+        <li><a href="/eoltracker/v1/changes.atom">Changes (Atom)</a></li>
+        <li><a href="/eoltracker/v1/changes.json">Changes (JSON)</a></li>
+        <li><a href="/eoltracker/hardware/">Hardware catalog</a></li>
+        <li><a href="/eoltracker/api/">Endpoints &amp; mapping</a></li>
+        <li><a href="/eoltracker/v1/schema/product.json">Record schema</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <p class="footer-title">Project</p>
+      <ul class="footer-links">
+        <li><a href="https://github.com/zarguell/eoltracker" rel="noopener">Source on GitHub</a></li>
+        <li><a href="https://endoflife.date/" rel="noopener">Upstream source</a></li>
+        <li><a href="/eoltracker/THIRD-PARTY-NOTICES.txt">THIRD-PARTY-NOTICES.txt</a></li>
+        <li><a href="/eoltracker/OASIS-NOTICE.txt">OASIS-NOTICE.txt</a></li>
+        <li><a href="/eoltracker/404.html">Not found page</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script src="/eoltracker/app.js" defer></script>
+</body>
+</html>
