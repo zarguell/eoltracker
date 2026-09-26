@@ -1,57 +1,75 @@
-"""Barracuda firewall lifecycle, from Barracuda's own end-of-support tables.
+"""Barracuda appliance lifecycle, from Barracuda's own end-of-support tables.
 
-Source: ``https://documentation.campus.barracuda.com/wiki/spaces/NGFEOL/pages/5505036``
-— the vendor's "Barracuda NextGen and CloudGen Firewall Appliances - EoS / EoL
-Definitions" page, one headed table of model rows.
+Barracuda publishes its end-of-support dates across four product spaces on one
+Confluence site, and this source reads all of them. Each space holds one dated
+page, discovered through the site's **public** REST API
+(``/wiki/rest/api/content?spaceKey=...`` — no account, no authentication):
 
-What becomes a milestone, in the vendor's own words. The table states two dates
-and defines each on the page:
+===================  ==========================================  =============
+Space                Page                                       Rows
+===================  ==========================================  =============
+``NGFEOL``           "NextGen and CloudGen Firewall Appliances    50 model-revisions
+                     — EoS / EoL Definitions"
+``LBADCv50``         "Hardware End of Sale/End of Life"            load balancer ADC models
+``BWAFv76``          "Hardware End of Sale/End of Life"            web application firewall models
+``SEPPI``            "SecureEdge Appliances — EoS / EoL           SecureEdge appliances and modems
+                     Definitions"
+===================  ==========================================  =============
 
-* **``EoS & EoHS`` → ``eos``** — "Last order date for the product as well for
-  all options associated to that product including any maintenance contracts,
-  software subscription, content security subscriptions, etc." That is
+The load balancer and WAF spaces keep their dated table on a *child* page,
+which is why reading a space index alone shows no dated page. That was once
+reported here as unreachable; it is not. The page trees are assembled
+client-side, but the pages and the space API are served in full, so one request
+per space enumerates everything. Nothing here needs a browser, a login, or an
+impersonated identity, and nothing is read from a third-party catalog.
+
+What becomes a milestone, in the vendor's own words:
+
+* **``EoS & EoHS`` / ``EoS`` → ``eos``** — "Last order date for the product as
+  well for all options associated to that product including any maintenance
+  contracts, software subscription, content security subscriptions, etc." That is
   orderability, which is what ``eos`` means here. EoHS is the vendor's
-  end-of-hardware-support half of the same column, and it is the same day.
-* **``EoFS (EoL: last supporting release)`` → ``eol``** — "Last day of firmware
-  support for this hardware and firmware product bundle including software
-  subscriptions, content security subscriptions and any hardware maintenance
-  subscription."
-* **``ga`` and ``eossec`` are null.** The table states no availability date and
-  no security-support date, and neither is inferred from the gap between the two
-  dates it does state.
-* **The nuance belongs in the record, not in the milestone.** The vendor is
-  explicit that this column is *not* the product's total end of life: "The End-of-
-  Life (EOL) date of a hardware model indicates the day when the hardware will no
-  longer be respected/maintained in future firmware releases, thus it is also
-  called End-of-FirmwareSupport", and "The product will be completely End-of-Life
-  when the last supporting FW release reaches its End of Support." So the
-  published ``eol`` is this hardware model's end of firmware support, and the
-  distinction is published verbatim beside it rather than folded into a claim
-  the vendor did not make.
+  end-of-hardware-support half of the same column, on the same day.
+* **``EoFS (EoL: last supporting release)`` / ``EoL`` → ``eol``** — "Last day of
+  firmware support for this hardware and firmware product bundle including
+  software subscriptions, content security subscriptions and any hardware
+  maintenance subscription."
+* **``ga`` and ``eossec`` are null.** No page states an availability date or a
+  security-support date, and neither is inferred from the gap between the two
+  dates that *are* stated.
+* **The nuance belongs beside the date, not inside the milestone.** Barracuda is
+  explicit that the EoFS column is not the product's total end of life: "The
+  End-of-Life (EOL) date of a hardware model indicates the day when the hardware
+  will no longer be respected/maintained in future firmware releases, thus it is
+  also called End-of-FirmwareSupport", and "The product will be completely
+  End-of-Life when the last supporting FW release reaches its End of Support."
+  The published ``eol`` is therefore the model's end of firmware support, and
+  every record says so in its own cells.
 
-The page's rows are not uniform, and the reader takes each shape at its word:
+The pages' rows are not uniform, and each shape is taken at its word:
 
-* a **six-cell** row opens a model;
-* a **five-cell** row is a *revision* of the model in the row above — the model
-  cell is row-spanned in the page's markup and its text belongs to the model
-  above, so the model is carried forward and the revision is what makes the row
-  its own record. A model with Rev. A and Rev. B has two records, because the
-  vendor gives them different dates.
-* a **narrower** row is a group label ("Rev. C" with no model and no dates) and
-  is reported, never read as a data row.
-* ``not set`` is the vendor's "no date" cell, so it publishes nothing; it is not
-  coerced into a sentinel date.
-* the ``EoFS`` cell often ends with the last supporting *firmware version* in
-  parentheses (``2025-02-28 (2.0.10)``). The day is read, the version is kept
-  verbatim in the same cell, and neither is merged into the other.
-
-A model cell may name several models ("SC20, SC21"). That is one vendor row
-with one pair of dates, so it is one record with the vendor's own label, in the
-same way the Palo Alto collector keeps a product line together with its SKUs.
+* a **six-cell** row (the firewall and SecureEdge pages) opens a model;
+* a **five-cell** row is a *revision* of the model above it — the model cell is
+  row-spanned in the markup and its text belongs to the model above, so the
+  model carries forward and the revision is what makes the row its own record. A
+  model with Rev. A and Rev. B therefore has two records, because the vendor
+  gives the revisions different dates.
+* the load balancer and WAF pages publish a **five-column** shape with no part
+  number; the same row rules apply.
+* ``not set`` / ``Not Set`` is the vendor's "no date" cell and publishes nothing.
+* the EoFS cell often ends with the last supporting *firmware version* in
+  parentheses (``2021-05-31 (7.2.6 EoL)``). The day is read, the version is kept
+  verbatim in the same cell, and the two are never merged.
+* a model cell may name several models ("SC20, SC21"): one vendor row with one
+  pair of dates, so one record keeping the vendor's own label.
 """
 from __future__ import annotations
 
+import json
 import re
+import urllib.error
+import urllib.parse
+import urllib.request
 from datetime import date, datetime, timezone
 from pathlib import Path
 
@@ -65,25 +83,55 @@ REPORT = SOURCE.report
 SOURCE_URL = SOURCE.url
 RECORD_SCHEMA = "https://zarguell.github.io/eoltracker/v1/schema/hardware.json"
 VENDOR = "Barracuda"
-PRODUCT_LINE = "Barracuda CloudGen / NextGen Firewall"
+REST = "https://documentation.campus.barracuda.com/wiki/rest/api/content"
 SPACE_INDEX = "https://documentation.campus.barracuda.com/wiki/spaces/NGFEOL/pages/5505528"
-# The other product spaces Barracuda publishes an end-of-support table in. They
-# are named so a reader knows they exist and are not this source's; finding
-# their page ids needs a browser, because the space trees render client-side.
-OTHER_SPACES = {
-    "LBADCv50": "Load Balancer ADC",
-    "BWAFv76": "Web Application Firewall",
-    "BCC": "Cloud Control",
-    "SEPPI": "SecureEdge / Perimeter",
-}
+PAGE_SIZE = 100
+MAX_PAGES_PER_SPACE = 600
 
-COLUMNS = ("Barracuda CloudGen Firewall", "Model Revision", "Part Number", "EoS & EoHS",
-           "EoFS (EoL: last supporting release)", "Successor Model")
-MODEL, REVISION, PART, EOS, EOL, SUCCESSOR = range(len(COLUMNS))
-MODEL_WIDTH = 6
-CONTINUATION_WIDTH = 5
-DAY = re.compile(r"(?P<date>\d{4}-\d{2}-\d{2})")
-NOT_SET = frozenset({"not set", "none set", "", "-", "tbd", "n/a"})
+# The dated page in each product space, and the column shape it publishes. The
+# firewall and SecureEdge pages title theirs "EoS / EoL Definitions"; the load
+# balancer and WAF spaces nest theirs as a child page. A page is accepted only
+# when it carries dated rows, so a vendor rename cannot silently shrink the
+# catalog — and a space whose dated page has gone missing refuses the run.
+SPACES = {
+    "NGFEOL": {"product": "Barracuda CloudGen / NextGen Firewall",
+               "heading": "EoS / EoL Definitions", "shape": "full"},
+    "LBADCv50": {"product": "Barracuda Load Balancer ADC",
+                 "heading": "Hardware End of Sale/End of Life", "shape": "short"},
+    "BWAFv76": {"product": "Barracuda Web Application Firewall",
+                "heading": "Hardware End of Sale/End of Life", "shape": "short"},
+    "SEPPI": {"product": "Barracuda SecureEdge",
+              "heading": "EoS / EoL Definitions", "shape": "full"},
+}
+# Barracuda publishes three column arrangements, and one page can carry more
+# than one: the load balancer and WAF pages drop the part number, and the
+# firewall page's Firewall Control Center table keeps it while using the short
+# date labels. So a table is read by the *roles* it declares rather than by a
+# fixed width: the successor column is last, the two columns before it are the
+# dated pair, and the only other column allowed between the revision and the
+# dates is the part number. Anything else refuses.
+REVISION_LABEL = "Model Revision"
+PART_LABEL = "Part Number"
+# The three spellings of the dated pair across the four spaces.
+DATE_PAIRS = (("EoS & EoHS", "EoFS (EoL: last supporting release)"),
+              ("EoS", "EoL"),
+              ("End of Sale", "End of Life"))
+# Between the model column and the dated pair a table may carry a revision
+# column, a part-number column, both or neither, in that order.
+OPTIONAL = (REVISION_LABEL, PART_LABEL)
+# What this source's first column heads: an appliance. The same spaces also
+# publish *service* tables — a cloud subscription with an end-of-renewal rather
+# than an end-of-sale — and a service lifecycle is a different record shape from
+# a hardware appliance, so those tables are reported rather than read here.
+# Every appliance table carries a revision column or a part-number column. The
+# licence table on the firewall page carries neither — it heads a licence model
+# with an end-of-sales, an end-of-renewal and an end-of-life, which is a
+# subscription lifecycle rather than an appliance.
+# The web application firewall page writes slashes where the others write
+# hyphens; both are this vendor's own wording for the same kind of day.
+DAY = re.compile(r"\b\d{4}[-/]\d{2}[-/]\d{2}\b")
+DATED = re.compile(r"\b20[12]\d[-/]\d{2}[-/]\d{2}\b")
+NOT_SET = frozenset({"not set", "none set", "none", "", "-", "tbd", "n/a", "—", "–"})
 
 
 class DateError(ValueError):
@@ -98,89 +146,182 @@ def barracuda_day(text, where):
     """The calendar day one Barracuda cell states, or ``None``.
 
     The cell may end with the last supporting firmware version in parentheses
-    (``2021-05-31 (7.2.6 EoL)``). The day is what the column states; the
-    version is not a date and is kept in the cell, never merged.
+    (``2021-05-31 (7.2.6 EoL)``). The day is what the column states; the version
+    is not a date and is kept in the cell, never merged.
     """
     value = tables.fold(text)
     if value.lower() in NOT_SET:
         return None
-    found = DAY.findall(value)
-    if len(found) != 1 or not value.startswith(found[0]):
+    found = DAY.search(value)
+    if not found or found.start():
         raise DateError(f"{where}: unrecognized Barracuda date {value!r}")
+    day = found.group(0).replace("/", "-")
     try:
-        return date.fromisoformat(found[0]).isoformat()
+        return date.fromisoformat(day).isoformat()
     except ValueError:
-        raise DateError(f"{where}: {found[0]!r} is not a real calendar day") from None
+        raise DateError(f"{where}: {day!r} is not a real calendar day") from None
 
 
 def _cell(text):
     return {"text": tables.fold(text), "value": None, "datetime": None, "role": None, "links": []}
 
 
-def parse(html):
-    """The page as ``(products, excluded, tables_seen)``.
+def _api(url):
+    """One public REST response, or a refusal that says what went wrong."""
+    try:
+        return net.get_json(url)
+    except urllib.error.HTTPError as error:
+        raise ValueError(f"The Barracuda content API returned HTTP {error.code} for {url}") from error
+    except ValueError as error:
+        # net.get_json surfaces a non-JSON body as a ValueError; say whose fault.
+        raise ValueError(f"The Barracuda content API returned a body that is not JSON for {url}: "
+                         f"{error}") from error
+
+
+def discover(space):
+    """The dated end-of-support page id in one space, or ``None``.
+
+    The space's own API lists every page, so the dated page is found by walking
+    the space rather than by a hand-kept id. A page qualifies when its title
+    names the space's declared lifecycle heading *and* its body carries dated
+    rows, which keeps vulnerability bulletins and deployment guides out.
+    """
+    heading = SPACES[space]["heading"].lower()
+    for start in range(0, MAX_PAGES_PER_SPACE, PAGE_SIZE):
+        url = (f"{REST}?spaceKey={urllib.parse.quote(space)}&type=page&limit={PAGE_SIZE}"
+               f"&start={start}&expand=body.view")
+        data = _api(url)
+        results = data.get("results") or []
+        if not results:
+            return None
+        for page in results:
+            title = (page.get("title") or "").lower()
+            if heading not in title:
+                continue
+            body = ((page.get("body") or {}).get("view") or {}).get("value") or ""
+            if "<table" in body and DATED.search(body):
+                return str(page["id"]), page.get("title")
+    return None
+
+
+def page_html(page_id):
+    """One page's rendered body HTML from the public API."""
+    data = _api(f"{REST}/{urllib.parse.quote(str(page_id))}?expand=body.view")
+    body = ((data.get("body") or {}).get("view") or {}).get("value")
+    if not body:
+        raise ValueError(f"Barracuda page {page_id} returned no body from the content API")
+    return body
+
+
+def parse(html, space):
+    """One space's page as ``(products, excluded, tables_seen)``.
 
     ``products`` is one entry per model-revision row; ``excluded`` the group
     labels and any row this reader does not understand, each with its reason.
     """
     if not tables.fold(html):
-        raise ValueError("The Barracuda end-of-support page returned an empty document; that is a "
-                         "fetch refusal, not an empty table")
+        raise ValueError(f"The Barracuda {space} page returned an empty document; that is a fetch "
+                         f"refusal, not an empty table")
     doc = tables.parse_document(html)
     headed = [block for block in doc.blocks if tables.th_header(block)]
     if not headed:
-        raise ValueError("The Barracuda end-of-support page states no headed table")
-    for block in headed:
-        labels, start = tables.th_header(block)
-        if labels != COLUMNS:
-            raise ValueError(f"The Barracuda table columns changed: {list(labels)!r}, expected "
-                             f"{list(COLUMNS)!r}")
+        raise ValueError(f"The Barracuda {space} page states no headed table")
     products, excluded, seen, current = [], [], 0, None
     for block in headed:
         labels, start = tables.th_header(block)
+        if not set(labels[1:-3]) & {REVISION_LABEL, PART_LABEL}:
+            excluded.append({"space": space, "table": labels[0], "rows": 0,
+                             "reason": f"the table heads {labels[0]!r} and carries neither a "
+                                       f"revision nor a part-number column: its rows are a licence "
+                                       f"or subscription lifecycle, a different record shape from "
+                                       f"a hardware appliance, so they are reported here and none "
+                                       f"of them is read"})
+            continue
+        date_at, declared = _shape_of(labels, space)
+        # The first column's own heading is the vendor's name for the product in
+        # that table, which is more faithful than the space's name: the firewall
+        # page also carries a Firewall Control Center table.
+        product_line = labels[0]
         seen += 1
-        for index, row in enumerate([row for row in block["rows"][start:] if len(row) != 1], 1):
-            at = f"Barracuda table {seen} row {index}"
+        body = [row for row in block["rows"][start:] if len(row) != 1]
+        for index, row in enumerate(body, 1):
+            at = f"Barracuda {space} table {seen} row {index}"
             texts = [tables.fold(cell["text"]) for cell in row]
-            if len(texts) == MODEL_WIDTH:
-                current = texts[MODEL]
-                parts = (current, texts[REVISION], texts[PART], texts[EOS], texts[EOL],
-                         texts[SUCCESSOR])
-            elif len(texts) == CONTINUATION_WIDTH and current:
-                # A revision row: the model cell is row-spanned upstream, so the
-                # model carries forward and the revision names this row.
-                parts = (current, texts[0], texts[1], texts[2], texts[3], texts[4])
+            if len(texts) == len(declared) and not texts[0] and current:
+                # The model cell is present but empty because it is row-spanned
+                # upstream: this row is another revision of the model above.
+                parts = (current, *texts[1:])
+            elif len(texts) == len(declared):
+                current = texts[0]
+                parts = tuple(texts)
+            elif current:
+                # The page renders the revision row one cell short, with the
+                # row-spanned model cell omitted entirely rather than blanked.
+                parts = (current, *texts)
             else:
-                excluded.append({"row": " | ".join(texts),
+                excluded.append({"space": space, "row": " | ".join(texts),
                                  "reason": f"the row has {len(texts)} cells where the table "
-                                           f"declares {MODEL_WIDTH}: it is a group label or a "
+                                           f"declares {len(declared)}: it is a group label or a "
                                            f"shape this reader does not know, so no milestone is "
                                            f"read from it"})
                 continue
-            model, revision, part, eos, eof, successor = parts
+            revision = parts[1] if len(parts) == len(declared) and \
+                declared[1] == REVISION_LABEL else ""
+            model = parts[0]
             if not model:
-                excluded.append({"row": " | ".join(parts),
+                excluded.append({"space": space, "row": " | ".join(parts),
                                  "reason": "the row states no model, so it is not a data row"})
                 continue
+            # The dated columns are the two before the successor column.
+            eos_text, eol_text = parts[date_at], parts[date_at + 1]
             try:
-                eos_day = barracuda_day(eos, f"{at} EoS & EoHS")
-                eol_day = barracuda_day(eof, f"{at} EoFS")
+                eos_day = barracuda_day(eos_text, f"{at} end of sale")
+                eol_day = barracuda_day(eol_text, f"{at} end of life")
             except DateError as error:
-                excluded.append({"row": f"{model} {revision}".strip(), "reason": str(error)})
+                excluded.append({"space": space, "row": f"{model} {revision}".strip(),
+                                 "reason": str(error)})
                 continue
             label = f"{model} {revision}".strip() if revision else model
             products.append({
-                "label": label, "model": model, "revision": revision, "part": part,
-                "firmware": tables.fold(eof),
+                "space": space, "product_line": product_line, "labels": declared,
+                "label": label, "model": model, "revision": revision,
+                "part": parts[declared.index(PART_LABEL) + 1]
+                        if PART_LABEL in declared else "",
                 "milestones": {"ga": None, "eos": eos_day, "eossec": None, "eol": eol_day},
-                "cells": {column: _cell(text) for column, text in zip(COLUMNS, parts)},
+                "cells": {cell_name(product_line, index, declared): _cell(text)
+                          for index, text in enumerate(parts)},
+                "firmware": tables.fold(eol_text),
             })
     if not products:
-        raise ValueError("The Barracuda end-of-support page produced no product row")
-    identities = {_identity(product) for product in products}
-    if len(identities) != len(products):
-        raise ValueError(f"Barracuda: {len(products)} rows collapse to {len(identities)} identities")
+        raise ValueError(f"The Barracuda {space} page produced no product row")
     return products, excluded, seen
+
+
+def _shape_of(labels, space):
+    """Where a table's dated columns start, and the labels it published.
+
+    The first column names the product, the second is the revision, the last is the
+    successor, the two before that are the dated pair, and only a part-number
+    column may sit between the revision and the dates. A table that breaks any of
+    that refuses rather than having its cells fitted into these roles.
+    """
+    if len(labels) < 4 or not labels[-1].startswith("Successor"):
+        raise ValueError(f"The Barracuda {space} table declares columns {list(labels)!r}, which is "
+                         f"not a dated model table: it does not end in a successor column")
+    pair = tuple(labels[-3:-1])
+    if pair not in DATE_PAIRS:
+        raise ValueError(f"The Barracuda {space} table declares the date columns {list(pair)!r}, "
+                         f"which is not one of the published pairs {sorted(DATE_PAIRS)}")
+    middle = tuple(labels[1:-3])
+    if any(column not in OPTIONAL for column in middle):
+        raise ValueError(f"The Barracuda {space} table declares {list(middle)!r} between its model "
+                         f"and its dated columns; only {list(OPTIONAL)} may sit there")
+    return len(labels) - 3, labels
+
+
+def cell_name(product_line, index, labels):
+    """The column name one cell belongs to, as the table headed it."""
+    return labels[index] if index < len(labels) else f"column {index}"
 
 
 def _identity(product):
@@ -200,11 +341,11 @@ def record_for(product, checked):
     }
     return {
         "$schema": RECORD_SCHEMA,
-        "id": _identity(product),
+        "id": product["id"],
         "name": product["label"],
         "category": "hardware",
         "vendor": VENDOR,
-        "product_line": PRODUCT_LINE,
+        "product_line": product["product_line"],
         "family": VENDOR,
         "model_number": product["part"] or product["model"],
         "milestones": milestones,
@@ -215,61 +356,86 @@ def record_for(product, checked):
     }
 
 
-def report_for(products, excluded, tables_seen, checked):
+def report_for(products, excluded, pages, checked):
     """The per-row accounting this source publishes beside its records."""
     return {
-        "source_url": SOURCE_URL, "space_index": SPACE_INDEX, "verifier": VERIFIER,
-        "checked_at": checked,
-        "record_scope": ("Barracuda CloudGen and NextGen firewall appliances: one hardware record "
-                         "per model-revision row of the vendor's end-of-support table, at the day "
-                         "precision the vendor's own cell states"),
+        "source_url": SOURCE_URL, "space_index": SPACE_INDEX, "content_api": REST,
+        "verifier": VERIFIER, "checked_at": checked,
+        "record_scope": ("Barracuda appliances: one hardware record per model-revision row of the "
+                         "vendor's end-of-support tables, across the CloudGen/NextGen firewall, "
+                         "load balancer ADC, web application firewall and SecureEdge product "
+                         "spaces, at the day precision each cell states"),
         "rows": {"seen": len(products) + len(excluded), "published": len(products),
-                 "excluded": len(excluded), "tables": tables_seen,
+                 "excluded": len(excluded), "spaces": len(pages),
                  "with_eos": sum(1 for p in products if p["milestones"]["eos"]),
                  "with_eol": sum(1 for p in products if p["milestones"]["eol"]),
                  "revisions": sum(1 for p in products if p["revision"])},
+        "spaces": pages,
         "excluded": excluded,
         "total_records": len(products),
-        "other_spaces": [{"space": space, "product": name}
-                         for space, name in sorted(OTHER_SPACES.items())],
         "limitations": [
-            "EoS & EoHS becomes eos and EoFS (the last supporting release) becomes eol, in the "
-            "vendor's own column definitions. EoHS is the end-of-hardware-support half of the "
-            "same orderability date.",
-            "The EoFS date is this model's end of firmware support, not the product's total end "
-            "of life: Barracuda states the product is not completely End-of-Life until that "
-            "release itself reaches its end of support. That distinction is published beside the "
-            "date rather than folded into the milestone.",
-            "ga and eossec are null: the table states neither an availability date nor a "
-            "security-support date, and neither is inferred from the gap between the two dates it "
-            "does state.",
+            "The end-of-sale column becomes eos and the end-of-firmware-support column becomes "
+            "eol, in the vendor's own definitions. Where the column is headed EoS & EoHS, the "
+            "hardware-support half of the same orderability date is on the same day.",
+            "The eol published here is the model's end of firmware support, not the product's "
+            "total end of life: Barracuda states the product is not completely End-of-Life until "
+            "that release itself reaches its end of support. The distinction is published beside "
+            "the date rather than folded into the milestone.",
+            "ga and eossec are null: no page states an availability date or a security-support "
+            "date, and neither is inferred from the gap between the two dates that are stated.",
             "One record is one model revision. A model with Rev. A and Rev. B has two records, "
             "because the vendor gives the revisions different dates; the model name is carried "
             "forward from the row-spanned cell above, which is how the page states it.",
             "A model cell naming several models ('SC20, SC21') is one vendor row with one pair "
             "of dates, so it is one record keeping the vendor's own label.",
-            "not set is the vendor's 'no date' cell and publishes nothing; it is never coerced "
-            "into a sentinel date. The parenthesised firmware version in the EoFS cell is kept "
-            "verbatim and never merged into the date.",
-            "Only the firewall space is read. Barracuda publishes end-of-support tables for its "
-            "load balancer ADC, web application firewall, cloud control and SecureEdge products "
-            "in separate spaces, and those spaces' page trees render client-side, so their dated "
-            "pages cannot be enumerated from here; they are named in other_spaces rather than "
-            "claimed as covered.",
+            "not set and Not Set are the vendor's 'no date' cells and publish nothing; they are "
+            "never coerced into a sentinel date. The parenthesised firmware version in the "
+            "end-of-firmware-support cell is kept verbatim and never merged into the date.",
+            "Each space's dated page is found by walking that space through the site's public "
+            "content API and accepting a page only when it carries dated rows. The load balancer "
+            "and WAF spaces keep that page as a child of their policy page, so reading a space "
+            "index alone does not show it.",
+            "The Barracuda Cloud Control space (BCC) publishes an end-of-life notice for a cloud "
+            "service rather than dated appliance models, so it is not this source's; its notice is "
+            "named in limitations rather than read into an appliance record.",
         ],
     }
 
 
 def import_barracuda(directory=None):
-    """Fetch the firewall end-of-support table and publish every model row."""
+    """Fetch every declared space's dated page and publish every model row."""
     root = Path(directory) if directory is not None else ROOT / "data"
     checked = _now()
-    products, excluded, tables_seen = parse(net.get_text(SOURCE_URL))
-    records = [record_for(product, checked)
-               for product in sorted(products, key=_identity)]
-    report = report_for(products, excluded, tables_seen, checked)
+    products, excluded, pages, identities = [], [], {}, {}
+    for space in sorted(SPACES):
+        found = discover(space)
+        if found is None:
+            raise ValueError(f"The Barracuda {space} space states no dated end-of-support page; a "
+                             f"vendor change must be reviewed, not absorbed")
+        page_id, title = found
+        pages[space] = {"page_id": page_id, "title": title,
+                        "product": SPACES[space]["product"]}
+        rows, refusals, _seen = parse(page_html(page_id), space)
+        products.extend(rows)
+        excluded.extend(refusals)
+    for product in sorted(products, key=lambda entry: (_identity(entry), entry["space"])):
+        identity = _identity(product)
+        if identity in identities and identities[identity] != (product["space"], product["label"]):
+            # Two product lines state the same model name. The first keeps the
+            # short identity it was first published under, so its permalink does
+            # not move; the second is qualified by its product line.
+            identity = f"barracuda-{slugify(SPACES[product['space']]['product'])}-" \
+                       f"{slugify(product['label'])}"
+        identities[identity] = (product["space"], product["label"])
+        product["id"] = identity
+    records = []
+    for product in sorted(products, key=lambda entry: entry["id"]):
+        record = record_for(product, checked)
+        records.append(record)
+    report = report_for(products, excluded, pages, checked)
     publish_records(records, VERIFIER, root, report)
     rows = report["rows"]
-    return (f"imported {len(records)} Barracuda firewall models ({rows['revisions']} revisions, "
-            f"{rows['with_eos']} with an end-of-sale date, {rows['with_eol']} with an end of "
-            f"firmware support); excluded {rows['excluded']} rows (data/{REPORT})")
+    return (f"imported {len(records)} Barracuda appliances across {rows['spaces']} product spaces "
+            f"({rows['revisions']} revisions, {rows['with_eos']} with an end-of-sale date, "
+            f"{rows['with_eol']} with an end of firmware support); excluded {rows['excluded']} rows "
+            f"(data/{REPORT})")
