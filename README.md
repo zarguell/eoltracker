@@ -10,7 +10,7 @@ EOL Tracker ingests community lifecycle catalogs, normalizes their vendor-specif
 
 | What | Where |
 |---|---|
-| Software catalog (636 products, 9,286 releases) | `/v1/products.json`, `/v1/products/{id}.json`, human pages `/products/{id}/` |
+| Software catalog (637 products, 9,301 releases) | `/v1/products.json`, `/v1/products/{id}.json`, human pages `/products/{id}/` |
 | Hardware catalog (15,467 models, 15 vendors) | `/v1/hardware.json`, `/v1/hardware/{id}.json`, human pages `/hardware/{id}/` |
 | Upcoming lifecycle milestones (one exact vendor-stated event per release × milestone) | `/v1/feed.atom` (RFC 4287), `/v1/feed.rss` (RSS 2.0), `/v1/calendar.ics` (RFC 5545), exclusions `/v1/feed-exclusions.json` |
 | OpenEoX Core v1.0 CSD01 export | `/v1/openeox/index.json`, `/v1/openeox/{product}/{release}.json` |

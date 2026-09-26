@@ -67,6 +67,14 @@ EXTREME_ATTRIBUTION = ("Extreme Networks product lifecycle published directly fr
                        "becomes eos and the EOSL date eol in the vendor's own definitions, EOSM is "
                        "published verbatim and never mapped because it is a software-maintenance "
                        "window, and no date is derived from the vendor's stated support rule.")
+OWNCLOUD_SCHEDULE = ("https://github.com/owncloud/core/wiki/"
+                     "Maintenance-and-Release-Schedule")
+OWNCLOUD_ATTRIBUTION = (
+    "ownCloud Server release lines published from the owncloud/core project's own Maintenance "
+    "and Release Schedule, the page owncloud.com/support/ designates for Server releases; the "
+    "vendor is ownCloud, not Kiteworks (issue #126). Each line's release date is its GA, and its "
+    "end of life is a month the schedule states without a day, so it is published at month "
+    "precision and never widened.")
 BARRACUDA_FIREWALL_EOL = ("https://documentation.campus.barracuda.com/wiki/spaces/NGFEOL/"
                           "pages/5505036")
 BARRACUDA_ATTRIBUTION = ("Barracuda firewall lifecycle published directly by Barracuda's own "
@@ -680,6 +688,23 @@ SOURCES = (
         pages=(Page(EXTREME_EOS_INDEX, "Extreme Networks end-of-sale and end-of-support products"),),
         attribution=EXTREME_ATTRIBUTION,
         report="extreme-import.json",
+    ),
+    Source(
+        id="import-owncloud",
+        module="engine.owncloud",
+        entry="import_owncloud",
+        verifier="deterministic-owncloud",
+        category="software",
+        name="ownCloud Server",
+        url=OWNCLOUD_SCHEDULE,
+        # The schedule carries one dated row per major release line. The vendor's
+        # support page is what designates it, and that attribution is recorded on
+        # every record rather than assumed.
+        pages=(Page(OWNCLOUD_SCHEDULE, "ownCloud Server maintenance and release schedule"),
+               Page("https://owncloud.com/support/", "ownCloud product support lifecycle")),
+        attribution=OWNCLOUD_ATTRIBUTION,
+        validator="engine.owncloud.validate_record",
+        report="owncloud-import.json",
     ),
     Source(
         id="import-barracuda",
