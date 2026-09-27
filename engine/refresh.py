@@ -48,9 +48,19 @@ class Outcome:
     ok: bool
     error: str = ""
     detail: str = ""
+    # A source that was deliberately not run: its fetch profile is registered but
+    # the operator has not switched it on for this run. A skip is not a failure.
+    # Nothing was attempted, nothing was rolled back, and the records this source
+    # published on an earlier run stay exactly as they were — which is the point
+    # of choosing a schedule. Counting it as a failure would block publication
+    # every day for a source nobody asked to run today, and would bury a real
+    # failure in the noise.
+    skipped: bool = False
 
     def line(self):
         """One-line report of this source's result, truthful in both directions."""
+        if self.skipped:
+            return f"SKIP  {self.id}: {self.detail}"
         if self.ok:
             return f"OK    {self.id}" + (f": {self.detail}" if self.detail else "")
         return f"FAIL  {self.id}: {self.error}"
@@ -85,8 +95,28 @@ def restore(directory, before):
             path.write_bytes(data)
 
 
+def skipped_outcome(source):
+    """The outcome for a source whose fetch profile this run did not enable.
+
+    Returns ``None`` when the source may run, so the ordinary path is unchanged
+    for every source on the plain HTTP client.
+    """
+    if getattr(source, "fetch", "plain") == "plain":
+        return None
+    from . import render
+    if render.profile_available(source):
+        return None
+    return Outcome(source.id, False, skipped=True,
+                   detail=f"registered for the {source.fetch!r} fetch profile and not enabled "
+                          f"for this run ({render.switch_state()}); its committed records are "
+                          f"unchanged, which is what choosing a schedule means")
+
+
 def refresh_source(source, directory=None):
     """Run one source refresh transactionally; returns its outcome."""
+    skip = skipped_outcome(source)
+    if skip is not None:
+        return skip
     root = data_directory(directory)
     before = snapshot(root)
     try:
@@ -110,9 +140,19 @@ def refresh_all(sources, directory=None):
     return [refresh_source(source, directory) for source in sources]
 
 
+def skipped(outcomes):
+    """The sources this run deliberately did not run."""
+    return [outcome for outcome in outcomes if outcome.skipped]
+
+
 def failed(outcomes):
-    """The outcomes that failed, in order."""
-    return [outcome for outcome in outcomes if not outcome.ok]
+    """The outcomes that failed, in order.
+
+    A skipped source is not here: it was not run on purpose, its committed
+    records are untouched, and reporting it as a failure would block publication
+    for a source the operator chose not to run.
+    """
+    return [outcome for outcome in outcomes if not outcome.ok and not outcome.skipped]
 
 
 def exit_code(outcomes):
@@ -183,11 +223,19 @@ def summary_markdown(outcomes):
     outcomes = list(outcomes)
     rows = ["| Source | Result | Detail |", "| --- | --- | --- |"]
     for outcome in outcomes:
-        detail = outcome.detail if outcome.ok else outcome.error
-        rows.append(f"| `{outcome.id}` | {'ok' if outcome.ok else 'failed'} | {detail.replace('|', '\\|') or '-'} |")
+        if outcome.skipped:
+            result, detail = "skipped", outcome.detail
+        elif outcome.ok:
+            result, detail = "ok", outcome.detail
+        else:
+            result, detail = "failed", outcome.error
+        rows.append(f"| `{outcome.id}` | {result} | {detail.replace('|', '\\|') or '-'} |")
     verdict = freshness(outcomes)
     return "\n".join([
         "## Catalog refresh", "", *rows, "", report(outcomes)[-1], "",
         f"Freshness: {verdict['refreshed']}/{verdict['sources']} sources refreshed; "
         f"{'complete' if verdict['complete'] else 'incomplete — publication blocked'}.", "",
+        (f"{len(skipped(outcomes))} source(s) were skipped because their fetch profile was not "
+         f"enabled for this run; their committed records are unchanged, which does not block "
+         f"publication." if skipped(outcomes) else ""), "",
     ])

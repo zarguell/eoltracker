@@ -178,6 +178,7 @@ def validate_hardware(directory=None):
             check = sources.record_validator(found)
             if check is not None:
                 check(record)
+            check_fetch_profile(record, found)
         if record["id"] in seen:
             raise CatalogError(f"Duplicate hardware record: {file}")
         seen.add(record["id"])
@@ -192,6 +193,28 @@ def validate_hardware(directory=None):
         records.append(record)
     check_source_reports(directory, owned, "hardware")
     return records
+
+
+def check_fetch_profile(record, source):
+    """A record states how its page was read, and the registry agrees.
+
+    A source registered with a non-plain fetch profile owns only records that
+    declare it, so a reader can never find a rendered record without the marker
+    or read the marker on a record whose page needed no browser. The check runs
+    both ways: a source that must declare the profile, and a record that declares
+    one whose source does not.
+    """
+    declared = (record.get("provenance") or {}).get("fetch")
+    registered = source.fetch
+    if registered == "plain" and declared is not None:
+        raise CatalogError(
+            f"{record['id']} declares fetch={declared['fetch']!r} but its source {source.id!r} is "
+            f"registered as plain; only a source registered for that profile may carry the marker")
+    if registered != "plain" and declared is None:
+        raise CatalogError(
+            f"{record['id']} is owned by {source.id!r}, which is registered with "
+            f"fetch={registered!r}, but states no fetch profile; every record read through a "
+            f"non-plain profile must say so in its provenance")
 
 
 def check_source_reports(directory, owned, category):

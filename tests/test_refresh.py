@@ -1,15 +1,74 @@
 """A failed source must restore records and sidecars without losing peers' work."""
+import os
 import tempfile
 import unittest
 from pathlib import Path
 from types import SimpleNamespace
+from unittest import mock
 
-from engine import refresh
+from engine import refresh, render, sources
 
 
 def snapshot(root):
     return {str(path.relative_to(root)): path.read_bytes()
             for path in root.rglob("*") if path.is_file()}
+
+
+class SkippedProfileTests(unittest.TestCase):
+    """A source on a fetch profile this run did not enable is skipped, not failed.
+
+    The daily refresh runs every registered source. A source that needs the
+    opt-in rendering profile is not run unless the operator switched it on for
+    that run, and it must not be reported as a failure: nothing was attempted,
+    its committed records are untouched, and publication must not be blocked
+    every day for a source nobody asked to run today.
+    """
+
+    def source(self, fetch):
+        return mock.Mock(id=f"import-{fetch}", fetch=fetch, run=mock.Mock(return_value="detail"))
+
+    def test_a_plain_source_is_never_skipped(self):
+        self.assertIsNone(refresh.skipped_outcome(self.source("plain")))
+
+    def test_a_rendered_source_is_skipped_when_the_operator_switch_is_off(self):
+        with mock.patch.dict(os.environ, {}, clear=False):
+            os.environ.pop(render.ENV_SWITCH, None)
+            outcome = refresh.skipped_outcome(sources.source("import-netgear"))
+        self.assertIsNotNone(outcome)
+        self.assertTrue(outcome.skipped)
+        self.assertFalse(outcome.ok)
+        self.assertIn("EOLTRACKER_ALLOW_RENDER", outcome.detail)
+        self.assertIn("SKIP", outcome.line())
+
+    def test_a_skipped_source_does_not_fail_the_run_or_block_publication(self):
+        outcome = refresh.Outcome("import-netgear", False, skipped=True, detail="not enabled")
+        self.assertEqual(refresh.failed([outcome]), [])
+        self.assertEqual(refresh.exit_code([outcome]), 0)
+        self.assertTrue(refresh.freshness([outcome])["complete"])
+
+    def test_a_real_failure_still_blocks_publication_alongside_a_skip(self):
+        skip = refresh.Outcome("import-netgear", False, skipped=True, detail="not enabled")
+        failure = refresh.Outcome("import-watchguard", False, error="upstream 500")
+        self.assertEqual([o.id for o in refresh.failed([skip, failure])], ["import-watchguard"])
+        self.assertEqual(refresh.exit_code([skip, failure]), 1)
+        self.assertFalse(refresh.freshness([skip, failure])["complete"])
+
+    def test_the_step_summary_reports_a_skip_as_skipped(self):
+        outcomes = [refresh.Outcome("import-data", True, detail="ok"),
+                    refresh.Outcome("import-netgear", False, skipped=True,
+                                    detail="rendered profile not enabled"),
+                    refresh.Outcome("import-watchguard", False, error="upstream 500")]
+        with mock.patch.dict(os.environ, {refresh.STEP_SUMMARY: str(self._summary())}, clear=False):
+            summary = refresh.summary_markdown(outcomes)
+        self.assertIn("| `import-netgear` | skipped |", summary)
+        self.assertIn("| `import-watchguard` | failed |", summary)
+        self.assertIn("1 source(s) were skipped", summary)
+
+    def _summary(self):
+        temp = tempfile.NamedTemporaryFile("w", suffix=".md", delete=False)
+        temp.close()
+        self.addCleanup(lambda: Path(temp.name).unlink(missing_ok=True))
+        return temp.name
 
 
 class RefreshTransactionTests(unittest.TestCase):

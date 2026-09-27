@@ -482,6 +482,11 @@ def _render_tree(data_dir, out):
             # absolute http(s) URLs reach the template's `href` (#98).
             hardware_source_site=safe_source_url(source_urls[0]) if source_urls else None,
             hardware_source_attribution=source_attribution(record["provenance"]["verifier"]),
+            # How this page was read, for a source that needs more than the plain
+            # HTTP client. The record carries it in its provenance; the page says
+            # it in words, because "this was rendered in a browser" is the sort of
+            # fact a reader should not have to go and fetch the JSON to learn.
+            fetch_profile=(record.get("provenance") or {}).get("fetch"),
             research=research_view(record, today),
         ))
 

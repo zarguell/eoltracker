@@ -20,7 +20,7 @@ than from a fresh search.
 | **Check Point** | **Deterministic — published** | 220 appliances from the lifecycle page, plus a 9-table date grammar. `deterministic-checkpoint-appliances` |
 | **Barracuda** | **Deterministic — published** | 120 appliances across all four dated product spaces. `deterministic-barracuda` |
 | **Extreme Networks** | **Deterministic — published** | 7,846 products from the vendor's two XLSX extracts. `deterministic-extreme` |
-| **NETGEAR** | **Absent** | The global EoS list is client-rendered — 0 dated rows in ~480 KB of server HTML. The only server-rendered table is the AU locale: AU-SKU, consumer-only, and every one of its 45 dates is the blanket 09/01/2029. See `netgear-eos-no-go.md` |
+| **NETGEAR** | **Deterministic — published (rendered)** | 9,405 item numbers from the global EoS page, read through the opt-in rendering profile because the list is client-rendered — 0 dated rows in ~480 KB of server HTML. `deterministic-netgear` |
 | **Brocade / Broadcom** | Deterministic, additive | 98 records exist with community-catalog dates; the vendor's own dates are not yet used |
 | **Citrix NetScaler** | Already covered | `deterministic-netscaler` in `engine/netscaler.py` |
 | **Aruba / HPE networking** | Researched | Vendor's consolidated list frozen at 2020-05-06; live data behind a JS app |
@@ -92,13 +92,22 @@ product twice with two spellings (`SALSA-Ent-edition-XL` and
 than publishing one product twice — so colliding part numbers take a digest of
 their exact spelling and the group is named in the report for a human.
 
-**NETGEAR** — no-go, with the evidence in `netgear-eos-no-go.md`. Its global
+**NETGEAR** — published through the opt-in rendering profile; the evidence that
+a browser is required is in `netgear-eos-no-go.md`. Its global
 End-of-Service list is a client-rendered application: 200 and roughly 480 KB of
 markup with zero dates and zero table cells, confirmed on all three lifecycle
-URLs the sitemap lists. The only server-rendered dated table is the AU locale,
-and it fails on scope twice — AU-region SKUs, consumer categories only, no
-business hardware — and on content, since all 45 of its dates are the single
-blanket `09/01/2029`.
+URLs the sitemap lists. Rendered, it carries **68 category tables and 9,405 SKU
+rows** with per-item dates, which is what the collector now publishes.
+
+Two decisions the rendered page forced, both from the vendor's own words. The
+page states **no column names at all** — no caption, no header row, no
+`data-title`, no `aria-label` — and each row is five bare cells, so `eol` is the
+date in the row's own `DD-MMM-YYYY` sentence, not either date cell; the cell
+beside it is verified against that sentence on every dated row, in either order,
+because `9/12/2013` is 9 December on one row and 12 September on another. And the
+record is per **item number**, because the page's own policy says "the last sale
+date may be limited to a particular SKU in an identified country or region" —
+and 783 of 1,273 dated models have item numbers that disagree on the date.
 
 ## Why a vendor with no record is not a no-go
 

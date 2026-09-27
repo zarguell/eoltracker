@@ -1,8 +1,15 @@
-# NETGEAR product lifecycle — no-go for a deterministic collector
+# NETGEAR product lifecycle — rendered fetch, now published
 
-**Disposition:** no-go for a plain-HTTP deterministic collector, as of 2026-09-26.
-**Verdict tier:** absent. Nothing is published for NETGEAR, and this file is the
-evidence for that absence rather than a placeholder record.
+**Disposition (superseded 2026-09-26):** this was recorded as a no-go for a
+*plain-HTTP* deterministic collector, and it still is one. The opt-in rendering
+fetch profile added in #154 reads the same page, and NETGEAR now publishes
+**9,405 item numbers** from it. The evidence below is kept unchanged because it
+is the evidence for *why* a browser is needed: the plain client cannot read this
+page, and the collector that ships says so in every record it writes.
+
+**Verdict tier:** deterministic through the `rendered` fetch profile. Every
+record carries `provenance.fetch = "rendered"`, permanently, and the registry in
+`engine/sources.py` is what authorises the browser to run against this vendor.
 
 NETGEAR publishes a global End-of-Service product list. It is the only one of
 the five open edge vendors in #150 whose dates are *not* reachable by an honest
@@ -52,7 +59,20 @@ would convert one AU region's blanket consumer-SKU date into a fact about every
 NETGEAR product, which is exactly the fabrication rule 2 forbids: inferring a
 date for a product because a table sits near it.
 
-## What would change this verdict
+## What changed this verdict (answered)
+
+Both conditions listed below have now been met, which is why the verdict changed:
+
+- **A rendered fetch of the global page.** Approved as the opt-in `rendered`
+  fetch profile in #154, gated twice: a source must register the profile in the
+  registry, and the operator must set `EOLTRACKER_ALLOW_RENDER`. The collector
+  reads the *global* page, never the AU locale — the scope warning below is why,
+  and the published inventory (switches, wireless, business SKUs across 68
+  categories) confirms it.
+- **Per-SKU dates for the business catalog.** The rendered page states them, one
+  per item number, with the vendor's own end-of-service sentence in each row.
+
+## The original conditions (kept for the record)
 
 - A **public JSON endpoint** for the global EoS list that an unauthenticated GET
   returns. If one exists and carries per-SKU dates for the business catalog,

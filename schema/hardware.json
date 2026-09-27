@@ -129,6 +129,32 @@
           }
         }
       }
+    },
+    "fetch": {
+      "description": "How this record's page was read, for a source that needs more than the plain HTTP client. Present only when a source registers a fetch profile other than 'plain' in engine/sources.py, and required on every record such a source owns, so a reader can always tell which records came from a rendered page. The rendering profile is opt-in twice over: a source must register it, and the operator must set EOLTRACKER_ALLOW_RENDER, before a page is rendered for it. It requests the vendor's own published URL as a headless browser with no user-agent override, no identity rewriting and no challenge solving.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "fetch",
+        "rendered_by",
+        "operator_switch"
+      ],
+      "properties": {
+        "fetch": {
+          "description": "The registered fetch profile this record was read with. 'rendered' means the page's content exists only after its own scripts ran and a browser rendered it.",
+          "const": "rendered"
+        },
+        "rendered_by": {
+          "description": "The rendering engine and the honesty of its request, stated in full.",
+          "type": "string",
+          "minLength": 1
+        },
+        "operator_switch": {
+          "description": "The environment variable that gates the rendering profile, named so a reader can see what authorises it.",
+          "type": "string",
+          "minLength": 1
+        }
+      }
     }
   },
   "type": "object",
@@ -341,6 +367,9 @@
         },
         "research": {
           "$ref": "#/$defs/research"
+        },
+        "fetch": {
+          "$ref": "#/$defs/fetch"
         }
       }
     }

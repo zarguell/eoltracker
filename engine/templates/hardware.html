@@ -257,6 +257,9 @@
       </dd>
     </div>
     <div><dt>Verifier</dt><dd><code>{{ model.provenance.verifier }}</code></dd></div>
+    {% if fetch_profile %}
+    <div><dt>How this page was read</dt><dd><strong>Rendered in a browser.</strong> {{ fetch_profile.rendered_by }} This source is registered for the <code>{{ fetch_profile.fetch }}</code> fetch profile, which runs only when the operator sets <code>{{ fetch_profile.operator_switch }}</code>, and every record it produces states this.</dd></div>
+    {% endif %}
     <div><dt>Last checked</dt><dd>{{ human_datetime(model.provenance.last_checked) }}</dd></div>
     <div><dt>JSON record</dt><dd><a href="{{ json_abs }}">{{ json_abs }}</a></dd></div>
     <div><dt>Schema</dt><dd><a href="{{ site_url('v1/schema/hardware.json') }}">v1/schema/hardware.json</a></dd></div>

@@ -94,6 +94,20 @@ jobs:
       # sources keep their results. A partial refresh now exits nonzero (#87),
       # so a broad upstream outage blocks publication instead of shipping a
       # catalog whose timestamps promise more freshness than its contents have.
+      #
+      # A source registered for a non-plain fetch profile (engine/render.py: a
+      # page whose content exists only after its own scripts run) is SKIPPED here,
+      # not failed: `python -m engine refresh` reports it as skipped and leaves
+      # its committed records untouched, and a skip does not block publication.
+      # Running one is the operator's choice, on the operator's schedule:
+      #
+      #   EOLTRACKER_ALLOW_RENDER=1 python -m engine refresh
+      #
+      # after `pip install playwright && playwright install chromium`. It is not
+      # wired to this schedule on purpose — a rendered fetch loads a browser
+      # engine and runs the page's own scripts, which is heavier and less polite
+      # than a plain GET, and the cadence is a judgement this repository does not
+      # make for the maintainer.
       - name: Refresh registered upstream sources
         if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         run: python -m engine refresh

@@ -67,6 +67,12 @@ EXTREME_ATTRIBUTION = ("Extreme Networks product lifecycle published directly fr
                        "becomes eos and the EOSL date eol in the vendor's own definitions, EOSM is "
                        "published verbatim and never mapped because it is a software-maintenance "
                        "window, and no date is derived from the vendor's stated support rule.")
+NETGEAR_EOS = "https://www.netgear.com/about/eos/"
+NETGEAR_ATTRIBUTION = (
+    "NETGEAR product end of service published from the vendor's own End of Service Products page, "
+    "read through the opt-in rendering profile because the product list is assembled client-side; "
+    "each record is one item number at the day precision the row's own note states, and carries "
+    "fetch=rendered in its provenance.")
 OWNCLOUD_SCHEDULE = ("https://github.com/owncloud/core/wiki/"
                      "Maintenance-and-Release-Schedule")
 OWNCLOUD_ATTRIBUTION = (
@@ -216,6 +222,14 @@ class Source:
     # publishes to account for every source row it saw.
     validator: str = ""
     report: str = ""
+    # How this source's page is read. "plain" is engine.net, the polite
+    # identifying scriptable client every collector uses by default. "rendered"
+    # is engine.render's opt-in browser profile, for a page whose content only
+    # exists after its own scripts run; a source must register it here, and the
+    # operator must additionally set EOLTRACKER_ALLOW_RENDER, before a page may
+    # be rendered for it. Adding a source to this profile is a reviewed change
+    # because it is what lets a browser run against a vendor.
+    fetch: str = "plain"
 
     @property
     def urls(self):
@@ -676,6 +690,25 @@ SOURCES = (
         attribution=PROGRESS_ATTRIBUTION,
         validator="engine.progress.validate_sitefinity",
         report="progress-sitefinity-import.json",
+    ),
+    Source(
+        id="import-netgear",
+        module="engine.netgear",
+        entry="import_netgear",
+        verifier="deterministic-netgear",
+        category="hardware",
+        name="NETGEAR",
+        url=NETGEAR_EOS,
+        # The only source in the catalog read through the rendering profile. The
+        # page's product list exists only after its own scripts run, so a plain
+        # client cannot read it at all; see contributions/netgear-eos-no-go.md
+        # for the evidence. Registering the profile here is what allows a browser
+        # to run against this vendor, and the operator must additionally set
+        # EOLTRACKER_ALLOW_RENDER before any page is rendered.
+        pages=(Page(NETGEAR_EOS, "NETGEAR end of service products"),),
+        attribution=NETGEAR_ATTRIBUTION,
+        report="netgear-import.json",
+        fetch="rendered",
     ),
     Source(
         id="import-extreme",
