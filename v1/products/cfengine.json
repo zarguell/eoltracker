@@ -1,0 +1,422 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "cfengine",
+  "name": "CFEngine",
+  "category": "software",
+  "upstream_category": "app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "cfengine"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:brew/cfengine"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:gnu:cfengine"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:gnu:cfengine"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Supported",
+    "eoes": null
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/cfengine",
+    "releasePolicy": "https://cfengine.com"
+  },
+  "releases": [
+    {
+      "id": "3.28",
+      "name": "3.28",
+      "milestones": {
+        "ga": "2026-07-10",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.28",
+        "codename": null,
+        "label": "3.28",
+        "releaseDate": "2026-07-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "3.28.0",
+          "date": "2026-07-10",
+          "link": "https://docs.cfengine.com/docs/3.28/release-notes/whatsnew/changelog-core/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.27",
+      "name": "3.27 (LTS)",
+      "milestones": {
+        "ga": "2026-01-09",
+        "eos": null,
+        "eossec": null,
+        "eol": "2029-01-09"
+      },
+      "upstream": {
+        "name": "3.27",
+        "codename": null,
+        "label": "3.27 (LTS)",
+        "releaseDate": "2026-01-09",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2029-01-09",
+        "isMaintained": true,
+        "latest": {
+          "name": "3.27.1",
+          "date": "2026-05-08",
+          "link": "https://docs.cfengine.com/docs/3.27/release-notes/whatsnew/changelog-core/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.26",
+      "name": "3.26",
+      "milestones": {
+        "ga": "2025-05-20",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-01-09"
+      },
+      "upstream": {
+        "name": "3.26",
+        "codename": null,
+        "label": "3.26",
+        "releaseDate": "2025-05-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-01-09",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.26.0",
+          "date": "2025-05-20",
+          "link": "https://docs.cfengine.com/docs/3.26/release-notes-whatsnew-changelog-core.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.25",
+      "name": "3.25",
+      "milestones": {
+        "ga": "2025-01-06",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-05-20"
+      },
+      "upstream": {
+        "name": "3.25",
+        "codename": null,
+        "label": "3.25",
+        "releaseDate": "2025-01-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-05-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.25.0",
+          "date": "2025-01-06",
+          "link": "https://docs.cfengine.com/docs/3.25/release-notes-whatsnew-changelog-core.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.24",
+      "name": "3.24 (LTS)",
+      "milestones": {
+        "ga": "2024-07-22",
+        "eos": null,
+        "eossec": null,
+        "eol": "2027-07-31"
+      },
+      "upstream": {
+        "name": "3.24",
+        "codename": null,
+        "label": "3.24 (LTS)",
+        "releaseDate": "2024-07-22",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-07-31",
+        "isMaintained": true,
+        "latest": {
+          "name": "3.24.4",
+          "date": "2026-05-08",
+          "link": "https://docs.cfengine.com/docs/3.24/release-notes-whatsnew-changelog-core.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.23",
+      "name": "3.23",
+      "milestones": {
+        "ga": "2023-12-05",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-07-22"
+      },
+      "upstream": {
+        "name": "3.23",
+        "codename": null,
+        "label": "3.23",
+        "releaseDate": "2023-12-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-07-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.23.0",
+          "date": "2023-12-05",
+          "link": "https://docs.cfengine.com/docs/3.23/release-notes-whatsnew-changelog-core.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.22",
+      "name": "3.22",
+      "milestones": {
+        "ga": "2023-06-16",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-12-05"
+      },
+      "upstream": {
+        "name": "3.22",
+        "codename": null,
+        "label": "3.22",
+        "releaseDate": "2023-06-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-12-05",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.22.0",
+          "date": "2023-06-16",
+          "link": "https://docs.cfengine.com/docs/3.22/release-notes-whatsnew-changelog-core.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.21",
+      "name": "3.21 (LTS)",
+      "milestones": {
+        "ga": "2022-12-21",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-12-31"
+      },
+      "upstream": {
+        "name": "3.21",
+        "codename": null,
+        "label": "3.21 (LTS)",
+        "releaseDate": "2022-12-21",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.21.8",
+          "date": "2025-12-15",
+          "link": "https://docs.cfengine.com/docs/3.21/release-notes-whatsnew-changelog-core.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.20",
+      "name": "3.20",
+      "milestones": {
+        "ga": "2022-07-01",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-12-21"
+      },
+      "upstream": {
+        "name": "3.20",
+        "codename": null,
+        "label": "3.20",
+        "releaseDate": "2022-07-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-12-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.20.0",
+          "date": "2022-07-01",
+          "link": "https://docs.cfengine.com/docs/3.20/guide-latest-release-whatsnew-changelog-core.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.19",
+      "name": "3.19",
+      "milestones": {
+        "ga": "2021-12-10",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-07-01"
+      },
+      "upstream": {
+        "name": "3.19",
+        "codename": null,
+        "label": "3.19",
+        "releaseDate": "2021-12-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-07-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.19.0",
+          "date": "2021-12-10",
+          "link": "https://docs.cfengine.com/docs/3.19/guide-latest-release-whatsnew-changelog-core.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.18",
+      "name": "3.18 (LTS)",
+      "milestones": {
+        "ga": "2021-06-24",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-08-31"
+      },
+      "upstream": {
+        "name": "3.18",
+        "codename": null,
+        "label": "3.18 (LTS)",
+        "releaseDate": "2021-06-24",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-08-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.18.8",
+          "date": "2024-06-20",
+          "link": "https://docs.cfengine.com/docs/3.18/guide-latest-release-whatsnew-changelog-core.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.17",
+      "name": "3.17",
+      "milestones": {
+        "ga": "2020-11-19",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-06-24"
+      },
+      "upstream": {
+        "name": "3.17",
+        "codename": null,
+        "label": "3.17",
+        "releaseDate": "2020-11-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-06-24",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.17.0",
+          "date": "2020-11-19",
+          "link": "https://docs.cfengine.com/docs/3.17/guide-latest-release-whatsnew-changelog-core.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.16",
+      "name": "3.16",
+      "milestones": {
+        "ga": "2020-06-23",
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-11-19"
+      },
+      "upstream": {
+        "name": "3.16",
+        "codename": null,
+        "label": "3.16",
+        "releaseDate": "2020-06-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-11-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.16.0",
+          "date": "2020-06-23",
+          "link": "https://docs.cfengine.com/docs/3.16/guide-latest-release-whatsnew-changelog-core.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.15",
+      "name": "3.15 (LTS)",
+      "milestones": {
+        "ga": "2019-12-19",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-12-31"
+      },
+      "upstream": {
+        "name": "3.15",
+        "codename": null,
+        "label": "3.15 (LTS)",
+        "releaseDate": "2019-12-19",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.15.7",
+          "date": "2022-11-14",
+          "link": "https://docs.cfengine.com/docs/3.15/guide-latest-release-whatsnew-changelog-core.html"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/cfengine/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-07-11T00:54:09+00:00"
+  }
+}

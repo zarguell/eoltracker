@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-kazeon-server-gen1",
+  "name": "Kazeon Server GEN1",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Kazeon Server",
+  "family": "Kazeon Server",
+  "model_number": "Kazeon Server GEN1",
+  "milestones": {
+    "ga": "2008-08-01",
+    "eos": "2011-03-31",
+    "eossec": null,
+    "eol": "2016-03-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "Kazeon Server GEN1",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "Kazeon Server GEN1",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Kazeon Server",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2011-03-31",
+      "datetime": null,
+      "value": "2011-03-31",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Aug. 01, 2008",
+      "datetime": "2008-08-01",
+      "value": "2008-08-01",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2016-03-31",
+      "datetime": null,
+      "value": "2016-03-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/servers/vendor/dell-emc/kazeon-server/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

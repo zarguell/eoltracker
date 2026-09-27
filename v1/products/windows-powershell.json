@@ -1,0 +1,165 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "windows-powershell",
+  "name": "Microsoft Windows PowerShell",
+  "category": "software",
+  "upstream_category": "lang",
+  "identifiers": [],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Support Status",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/powershell.svg",
+    "html": "https://endoflife.date/windows-powershell",
+    "releasePolicy": "https://learn.microsoft.com/powershell/scripting/install/powershell-support-lifecycle?view=powershell-5.1#windows-powershell-release-history"
+  },
+  "releases": [
+    {
+      "id": "5.1",
+      "name": "5.1",
+      "milestones": {
+        "ga": "2016-08-02",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.1",
+        "codename": null,
+        "label": "5.1",
+        "releaseDate": "2016-08-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "5.0",
+      "name": "5.0",
+      "milestones": {
+        "ga": "2016-02-24",
+        "eos": null,
+        "eossec": null,
+        "eol": "2016-08-02"
+      },
+      "upstream": {
+        "name": "5.0",
+        "codename": null,
+        "label": "5.0",
+        "releaseDate": "2016-02-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2016-08-02",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "4.0",
+      "name": "4.0",
+      "milestones": {
+        "ga": "2013-10-01",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-10-10"
+      },
+      "upstream": {
+        "name": "4.0",
+        "codename": null,
+        "label": "4.0",
+        "releaseDate": "2013-10-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-10-10",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "3.0",
+      "name": "3.0",
+      "milestones": {
+        "ga": "2012-10-01",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-10-10"
+      },
+      "upstream": {
+        "name": "3.0",
+        "codename": null,
+        "label": "3.0",
+        "releaseDate": "2012-10-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-10-10",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "2.0",
+      "name": "2.0",
+      "milestones": {
+        "ga": "2009-07-01",
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-01-14"
+      },
+      "upstream": {
+        "name": "2.0",
+        "codename": null,
+        "label": "2.0",
+        "releaseDate": "2009-07-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-01-14",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "1.0",
+      "name": "1.0",
+      "milestones": {
+        "ga": "2006-11-14",
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-01-14"
+      },
+      "upstream": {
+        "name": "1.0",
+        "codename": null,
+        "label": "1.0",
+        "releaseDate": "2006-11-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-01-14",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/windows-powershell/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-08-08T03:21:47+00:00"
+  }
+}

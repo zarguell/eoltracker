@@ -1,0 +1,181 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "chef-infra-server",
+  "name": "Chef Infra Server",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "chef-server"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:progress:chef_infra_server"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/chef.svg",
+    "html": "https://endoflife.date/chef-infra-server",
+    "releasePolicy": "https://docs.chef.io/versions/"
+  },
+  "releases": [
+    {
+      "id": "15",
+      "name": "15",
+      "milestones": {
+        "ga": "2022-06-13",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "15",
+        "codename": null,
+        "label": "15",
+        "releaseDate": "2022-06-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "15.10.125",
+          "date": "2026-08-27",
+          "link": "https://docs.chef.io/release_notes_server/#15.10.125"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "14",
+      "name": "14",
+      "milestones": {
+        "ga": "2020-06-08",
+        "eos": null,
+        "eossec": "2025-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "14",
+        "codename": null,
+        "label": "14",
+        "releaseDate": "2020-06-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-06-13",
+        "isEol": true,
+        "eolFrom": "2025-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "14.16.19",
+          "date": "2022-06-07",
+          "link": "https://docs.chef.io/release_notes_server/#14.16.19"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "13",
+      "name": "13",
+      "milestones": {
+        "ga": "2019-05-31",
+        "eos": null,
+        "eossec": "2021-06-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "13",
+        "codename": null,
+        "label": "13",
+        "releaseDate": "2019-05-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-06-08",
+        "isEol": true,
+        "eolFrom": "2021-06-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "13.2.0",
+          "date": "2020-04-10",
+          "link": "https://docs.chef.io/release_notes_server/#13.2.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "12",
+      "name": "12",
+      "milestones": {
+        "ga": "2014-11-25",
+        "eos": null,
+        "eossec": "2020-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "12",
+        "codename": null,
+        "label": "12",
+        "releaseDate": "2014-11-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2019-05-31",
+        "isEol": true,
+        "eolFrom": "2020-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "12.19.31",
+          "date": "2019-03-07",
+          "link": "https://docs.chef.io/release_notes_server/#12.19.31"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "11",
+      "name": "11",
+      "milestones": {
+        "ga": "2013-02-04",
+        "eos": null,
+        "eossec": "2018-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "11",
+        "codename": null,
+        "label": "11",
+        "releaseDate": "2013-02-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2014-11-25",
+        "isEol": true,
+        "eolFrom": "2018-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "11.1.7",
+          "date": "2014-06-19",
+          "link": "https://docs.chef.io/release_notes_server/#11.1.7"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/chef-infra-server/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-08-28T00:07:00+00:00"
+  }
+}

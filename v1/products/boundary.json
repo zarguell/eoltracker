@@ -1,0 +1,198 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "boundary",
+  "name": "Hashicorp Boundary",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "boundary"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:hashicorp:boundary"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/hashicorp.svg",
+    "html": "https://endoflife.date/boundary",
+    "releasePolicy": "https://support.hashicorp.com/hc/en-us/articles/360021185113-Support-Period-and-End-of-Life-EOL-Policy"
+  },
+  "releases": [
+    {
+      "id": "0.21",
+      "name": "0.21",
+      "milestones": {
+        "ga": "2025-12-11",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.21",
+        "codename": null,
+        "label": "0.21",
+        "releaseDate": "2025-12-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "0.21.3",
+          "date": "2026-04-30",
+          "link": "https://github.com/hashicorp/boundary/blob/release/0.21.x/CHANGELOG.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.20",
+      "name": "0.20",
+      "milestones": {
+        "ga": "2025-09-25",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.20",
+        "codename": null,
+        "label": "0.20",
+        "releaseDate": "2025-09-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "0.20.3",
+          "date": "2026-04-30",
+          "link": "https://github.com/hashicorp/boundary/blob/release/0.20.x/CHANGELOG.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.19",
+      "name": "0.19",
+      "milestones": {
+        "ga": "2025-02-10",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.19",
+        "codename": null,
+        "label": "0.19",
+        "releaseDate": "2025-02-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "0.19.5",
+          "date": "2026-04-30",
+          "link": "https://github.com/hashicorp/boundary/blob/release/0.19.x/CHANGELOG.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.18",
+      "name": "0.18",
+      "milestones": {
+        "ga": "2024-10-14",
+        "eos": null,
+        "eossec": "2025-12-11",
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.18",
+        "codename": null,
+        "label": "0.18",
+        "releaseDate": "2024-10-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-12-11",
+        "isMaintained": false,
+        "latest": {
+          "name": "0.18.2",
+          "date": "2024-12-12",
+          "link": "https://github.com/hashicorp/boundary/blob/release/0.18.x/CHANGELOG.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.17",
+      "name": "0.17",
+      "milestones": {
+        "ga": "2024-07-31",
+        "eos": null,
+        "eossec": "2025-09-25",
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.17",
+        "codename": null,
+        "label": "0.17",
+        "releaseDate": "2024-07-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-09-25",
+        "isMaintained": false,
+        "latest": {
+          "name": "0.17.2",
+          "date": "2024-10-14",
+          "link": "https://github.com/hashicorp/boundary/blob/release/0.17.x/CHANGELOG.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.16",
+      "name": "0.16",
+      "milestones": {
+        "ga": "2024-04-30",
+        "eos": null,
+        "eossec": "2025-02-10",
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.16",
+        "codename": null,
+        "label": "0.16",
+        "releaseDate": "2024-04-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-02-10",
+        "isMaintained": false,
+        "latest": {
+          "name": "0.16.3",
+          "date": "2024-08-22",
+          "link": "https://github.com/hashicorp/boundary/blob/release/0.16.x/CHANGELOG.md"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/boundary/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-05-01T09:58:42+00:00"
+  }
+}

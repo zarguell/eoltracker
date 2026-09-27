@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-centera-gen3",
+  "name": "Centera Gen3",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Centera",
+  "family": "Centera",
+  "model_number": "Centera Gen3",
+  "milestones": {
+    "ga": "2004-12-01",
+    "eos": "2006-03-31",
+    "eossec": null,
+    "eol": "2011-03-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "Centera Gen3",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "Centera Gen3",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Centera",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2006-03-31",
+      "datetime": null,
+      "value": "2006-03-31",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Dec. 01, 2004",
+      "datetime": "2004-12-01",
+      "value": "2004-12-01",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2011-03-31",
+      "datetime": null,
+      "value": "2011-03-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/content-addressable-storage/vendor/dell-emc/centera/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

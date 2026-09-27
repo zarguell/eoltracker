@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-vmax-250f",
+  "name": "VMAX 250F",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Symmetrix",
+  "family": "Symmetrix",
+  "model_number": "VMAX 250F",
+  "milestones": {
+    "ga": "2016-09-28",
+    "eos": "2021-09-30",
+    "eossec": null,
+    "eol": "2026-09-30"
+  },
+  "status": "expiring",
+  "upstream": {
+    "Product": {
+      "text": "VMAX 250F",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "VMAX 250F",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Symmetrix",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2021-09-30",
+      "datetime": null,
+      "value": "2021-09-30",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Sep. 28, 2016",
+      "datetime": "2016-09-28",
+      "value": "2016-09-28",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2026-09-30",
+      "datetime": null,
+      "value": "2026-09-30",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/san-storage/vendor/dell-emc/symmetrix/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

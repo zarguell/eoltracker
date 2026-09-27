@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-hci-ax-650",
+  "name": "HCI AX-650",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Azure stack",
+  "family": "Azure stack",
+  "model_number": "HCI AX-650",
+  "milestones": {
+    "ga": "2021-09-15",
+    "eos": "2025-01-31",
+    "eossec": null,
+    "eol": "2030-01-31"
+  },
+  "status": "supported",
+  "upstream": {
+    "Product": {
+      "text": "HCI AX-650",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "HCI AX-650",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Azure stack",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2025-01-31",
+      "datetime": null,
+      "value": "2025-01-31",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Sep. 15, 2021",
+      "datetime": "2021-09-15",
+      "value": "2021-09-15",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2030-01-31",
+      "datetime": null,
+      "value": "2030-01-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/hyper-converged/vendor/dell-emc/azure-stack/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

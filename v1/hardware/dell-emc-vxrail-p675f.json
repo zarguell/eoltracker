@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-vxrail-p675f",
+  "name": "VxRail P675F",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC VxRail",
+  "family": "VxRail",
+  "model_number": "VxRail P675F",
+  "milestones": {
+    "ga": "2020-12-08",
+    "eos": "2024-05-14",
+    "eossec": null,
+    "eol": "2029-04-30"
+  },
+  "status": "supported",
+  "upstream": {
+    "Product": {
+      "text": "VxRail P675F",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "VxRail P675F",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC VxRail",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2024-05-14",
+      "datetime": null,
+      "value": "2024-05-14",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Dec. 08, 2020",
+      "datetime": "2020-12-08",
+      "value": "2020-12-08",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2029-04-30",
+      "datetime": null,
+      "value": "2029-04-30",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/hyper-converged/vendor/dell-emc/vxrail/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

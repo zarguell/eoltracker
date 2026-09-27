@@ -1,0 +1,81 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "researched-remix",
+  "name": "Remix",
+  "category": "software",
+  "upstream_category": "framework",
+  "identifiers": [],
+  "labels": {},
+  "links": {
+    "html": "https://remix.run/blog/remix-v2"
+  },
+  "releases": [
+    {
+      "id": "2",
+      "name": "Remix v2",
+      "milestones": {
+        "ga": "2023-09-15",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-06-17"
+      },
+      "upstream": {
+        "name": "Remix v2",
+        "Contribution": {
+          "text": "June 17, 2026 React Router v8 With the release of React Router v8 we are officially marking React Router v6 and Remix v2 as End of Life (EOL) so they will no longer be receiving security updates. September 15, 2023 Remix v2 Michael Jackson Co-Founder We are excited to announce that after nearly 2 years of sustained effort since releasing Remix version 1",
+          "value": null,
+          "datetime": null,
+          "role": null,
+          "links": [
+            "https://remix.run/blog/react-router-v8",
+            "https://remix.run/blog/remix-v2"
+          ]
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "verifier": "researched-eoltracker-agent",
+    "last_checked": "2026-09-18T02:49:51Z",
+    "research": {
+      "quote": "June 17, 2026 React Router v8 With the release of React Router v8 we are officially marking React Router v6 and Remix v2 as End of Life (EOL) so they will no longer be receiving security updates. September 15, 2023 Remix v2 Michael Jackson Co-Founder We are excited to announce that after nearly 2 years of sustained effort since releasing Remix version 1",
+      "source_url": "https://remix.run/blog/react-router-v8",
+      "retrieved_at": "2026-09-17",
+      "contributor": "eoltracker-agent",
+      "method": "agent",
+      "verified_at": "2026-09-18T02:49:51Z",
+      "stale_after": "2027-03-17",
+      "evidence": [
+        {
+          "quote": "June 17, 2026 React Router v8",
+          "source_url": "https://remix.run/blog/react-router-v8",
+          "retrieved_at": "2026-09-17",
+          "milestones": [
+            "eol"
+          ]
+        },
+        {
+          "quote": "With the release of React Router v8 we are officially marking React Router v6 and Remix v2 as End of Life (EOL) so they will no longer be receiving security updates.",
+          "source_url": "https://remix.run/blog/react-router-v8",
+          "retrieved_at": "2026-09-17",
+          "milestones": [
+            "eol"
+          ]
+        },
+        {
+          "quote": "September 15, 2023 Remix v2 Michael Jackson Co-Founder We are excited to announce that after nearly 2 years of sustained effort since releasing Remix version 1",
+          "source_url": "https://remix.run/blog/remix-v2",
+          "retrieved_at": "2026-09-17",
+          "milestones": [
+            "ga"
+          ]
+        }
+      ],
+      "vendor": "Remix Software",
+      "summary": "Remix is a full-stack web framework built on React Router. Version 2 was marked End of Life by the vendor upon the release of React Router v8.",
+      "notes": "Tier: researched (AGENTS.md rule 8b). endoflife.date has no remix slug (checked https://endoflife.date/api/all.json 2026-09-17: no remix id) and data/products/ holds no remix record. The vendor's EOL statement is: 'With the release of React Router v8 we are officially marking React Router v6 and Remix v2 as End of Life (EOL) so they will no longer be receiving security updates.' The React Router v8 release date (June 17, 2026) serves as the EOL date for Remix v2, as the EOL is announced with that release. GA date from the Remix v2 announcement blog post (September 15, 2023). eos/eossec not stated by vendor, remain null."
+    },
+    "source_url": "https://remix.run/blog/react-router-v8",
+    "upstream_modified": null
+  }
+}

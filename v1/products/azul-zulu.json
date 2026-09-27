@@ -1,0 +1,691 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "azul-zulu",
+  "name": "Azul Zulu",
+  "category": "software",
+  "upstream_category": "lang",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "zulu-openjdk"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:azul:zulu"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:azul:zulu"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Support",
+    "eoes": "Extended Support"
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/openjdk.svg",
+    "html": "https://endoflife.date/azul-zulu",
+    "releasePolicy": "https://www.azul.com/products/azul-support-roadmap/"
+  },
+  "releases": [
+    {
+      "id": "26",
+      "name": "26",
+      "milestones": {
+        "ga": "2026-03-17",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "26",
+        "codename": null,
+        "label": "26",
+        "releaseDate": "2026-03-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2026-09-30",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "26.28.59",
+          "date": "2026-03-17",
+          "link": "https://docs.azul.com/core/release/26-ga/release-notes/release-notes"
+        },
+        "custom": {
+          "latestJdkVersion": "26.0.0+35"
+        }
+      }
+    },
+    {
+      "id": "25",
+      "name": "25 (LTS)",
+      "milestones": {
+        "ga": "2025-09-16",
+        "eos": null,
+        "eossec": null,
+        "eol": "2035-09-30"
+      },
+      "upstream": {
+        "name": "25",
+        "codename": null,
+        "label": "25 (LTS)",
+        "releaseDate": "2025-09-16",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2033-09-30",
+        "isEoes": false,
+        "eoesFrom": "2035-09-30",
+        "isMaintained": true,
+        "latest": {
+          "name": "25.32.21",
+          "date": "2026-01-30",
+          "link": "https://docs.azul.com/core/release/january-2026-respin/release-notes"
+        },
+        "custom": {
+          "latestJdkVersion": "25.0.2+10"
+        }
+      }
+    },
+    {
+      "id": "24",
+      "name": "24",
+      "milestones": {
+        "ga": "2025-03-18",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-09-16"
+      },
+      "upstream": {
+        "name": "24",
+        "codename": null,
+        "label": "24",
+        "releaseDate": "2025-03-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-09-16",
+        "isEoes": true,
+        "eoesFrom": "2025-09-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "24.32.13",
+          "date": "2025-07-15",
+          "link": "https://docs.azul.com/core/release/july-2025/release-notes.html"
+        },
+        "custom": {
+          "latestJdkVersion": "24.0.2+12"
+        }
+      }
+    },
+    {
+      "id": "23",
+      "name": "23",
+      "milestones": {
+        "ga": "2024-09-17",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-03-18"
+      },
+      "upstream": {
+        "name": "23",
+        "codename": null,
+        "label": "23",
+        "releaseDate": "2024-09-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-03-18",
+        "isEoes": true,
+        "eoesFrom": "2025-03-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "23.32.11",
+          "date": "2025-01-21",
+          "link": "https://docs.azul.com/core/release/january-2025/release-notes"
+        },
+        "custom": {
+          "latestJdkVersion": "23.0.2+7"
+        }
+      }
+    },
+    {
+      "id": "22",
+      "name": "22",
+      "milestones": {
+        "ga": "2024-03-19",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-03-17"
+      },
+      "upstream": {
+        "name": "22",
+        "codename": null,
+        "label": "22",
+        "releaseDate": "2024-03-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-09-17",
+        "isEoes": true,
+        "eoesFrom": "2025-03-17",
+        "isMaintained": false,
+        "latest": {
+          "name": "22.32.15",
+          "date": "2024-07-16",
+          "link": "https://docs.azul.com/core/release/july-2024/release-notes/release-notes"
+        },
+        "custom": {
+          "latestJdkVersion": "22.0.2+9"
+        }
+      }
+    },
+    {
+      "id": "21",
+      "name": "21 (LTS)",
+      "milestones": {
+        "ga": "2023-09-19",
+        "eos": null,
+        "eossec": null,
+        "eol": "2033-09-30"
+      },
+      "upstream": {
+        "name": "21",
+        "codename": null,
+        "label": "21 (LTS)",
+        "releaseDate": "2023-09-19",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2031-09-30",
+        "isEoes": false,
+        "eoesFrom": "2033-09-30",
+        "isMaintained": true,
+        "latest": {
+          "name": "21.48.17",
+          "date": "2026-01-30",
+          "link": "https://docs.azul.com/core/release/january-2026-respin/release-notes"
+        },
+        "custom": {
+          "latestJdkVersion": "21.0.10+7"
+        }
+      }
+    },
+    {
+      "id": "20",
+      "name": "20 (STS)",
+      "milestones": {
+        "ga": "2023-03-21",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-03-31"
+      },
+      "upstream": {
+        "name": "20",
+        "codename": null,
+        "label": "20 (STS)",
+        "releaseDate": "2023-03-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-09-19",
+        "isEoes": true,
+        "eoesFrom": "2024-03-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "20.32.11",
+          "date": "2023-07-18",
+          "link": "https://docs.azul.com/core/release/july-2023/release-notes/release-notes"
+        },
+        "custom": {
+          "latestJdkVersion": "20.0.2+9"
+        }
+      }
+    },
+    {
+      "id": "19",
+      "name": "19 (STS)",
+      "milestones": {
+        "ga": "2022-09-20",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-09-30"
+      },
+      "upstream": {
+        "name": "19",
+        "codename": null,
+        "label": "19 (STS)",
+        "releaseDate": "2022-09-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-03-31",
+        "isEoes": true,
+        "eoesFrom": "2023-09-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "19.32.13",
+          "date": "2023-01-17",
+          "link": "https://docs.azul.com/core/release/january-2023/release-notes/release-notes"
+        },
+        "custom": {
+          "latestJdkVersion": "19.0.2+7"
+        }
+      }
+    },
+    {
+      "id": "18",
+      "name": "18 (STS)",
+      "milestones": {
+        "ga": "2022-03-12",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-03-31"
+      },
+      "upstream": {
+        "name": "18",
+        "codename": null,
+        "label": "18 (STS)",
+        "releaseDate": "2022-03-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-09-30",
+        "isEoes": true,
+        "eoesFrom": "2023-03-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.32.13",
+          "date": "2022-08-22",
+          "link": "https://docs.azul.com/core/release/august-2022-11.58-17.36-18.32/release-notes/release-notes"
+        },
+        "custom": {
+          "latestJdkVersion": "18.0.2.1+1"
+        }
+      }
+    },
+    {
+      "id": "17",
+      "name": "17 (LTS)",
+      "milestones": {
+        "ga": "2021-09-15",
+        "eos": null,
+        "eossec": null,
+        "eol": "2031-09-30"
+      },
+      "upstream": {
+        "name": "17",
+        "codename": null,
+        "label": "17 (LTS)",
+        "releaseDate": "2021-09-15",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2029-09-30",
+        "isEoes": false,
+        "eoesFrom": "2031-09-30",
+        "isMaintained": true,
+        "latest": {
+          "name": "17.64.17",
+          "date": "2026-01-30",
+          "link": "https://docs.azul.com/core/release/january-2026-respin/release-notes"
+        },
+        "custom": {
+          "latestJdkVersion": "17.0.18+8"
+        }
+      }
+    },
+    {
+      "id": "16",
+      "name": "16 (STS)",
+      "milestones": {
+        "ga": "2021-03-16",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-03-31"
+      },
+      "upstream": {
+        "name": "16",
+        "codename": null,
+        "label": "16 (STS)",
+        "releaseDate": "2021-03-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-09-30",
+        "isEoes": true,
+        "eoesFrom": "2022-03-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "16.32.15",
+          "date": "2021-07-24",
+          "link": "https://docs.azul.com/core/release/july-2021/release-notes/release-notes"
+        },
+        "custom": {
+          "latestJdkVersion": "16.0.2+7"
+        }
+      }
+    },
+    {
+      "id": "15",
+      "name": "15 (MTS)",
+      "milestones": {
+        "ga": "2020-09-15",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-03-31"
+      },
+      "upstream": {
+        "name": "15",
+        "codename": null,
+        "label": "15 (MTS)",
+        "releaseDate": "2020-09-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-03-31",
+        "isEoes": true,
+        "eoesFrom": "2024-03-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "15.46.17",
+          "date": "2023-01-17",
+          "link": "https://docs.azul.com/core/release/january-2023/release-notes/release-notes"
+        },
+        "custom": {
+          "latestJdkVersion": "15.0.10+5"
+        }
+      }
+    },
+    {
+      "id": "14",
+      "name": "14 (STS)",
+      "milestones": {
+        "ga": "2020-03-17",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-03-31"
+      },
+      "upstream": {
+        "name": "14",
+        "codename": null,
+        "label": "14 (STS)",
+        "releaseDate": "2020-03-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-09-30",
+        "isEoes": true,
+        "eoesFrom": "2021-03-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "14.29.23",
+          "date": "2020-07-17",
+          "link": null
+        },
+        "custom": {
+          "latestJdkVersion": "14.0.2+12"
+        }
+      }
+    },
+    {
+      "id": "13",
+      "name": "13 (MTS)",
+      "milestones": {
+        "ga": "2019-09-17",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-03-31"
+      },
+      "upstream": {
+        "name": "13",
+        "codename": null,
+        "label": "13 (MTS)",
+        "releaseDate": "2019-09-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-03-31",
+        "isEoes": true,
+        "eoesFrom": "2024-03-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "13.54.17",
+          "date": "2023-01-17",
+          "link": "https://docs.azul.com/core/release/january-2023/release-notes/release-notes"
+        },
+        "custom": {
+          "latestJdkVersion": "13.0.14+5"
+        }
+      }
+    },
+    {
+      "id": "12",
+      "name": "12 (STS)",
+      "milestones": {
+        "ga": "2019-03-19",
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-03-31"
+      },
+      "upstream": {
+        "name": "12",
+        "codename": null,
+        "label": "12 (STS)",
+        "releaseDate": "2019-03-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-09-30",
+        "isEoes": true,
+        "eoesFrom": "2020-03-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "12.3.11",
+          "date": "2019-07-16",
+          "link": null
+        },
+        "custom": {
+          "latestJdkVersion": "12.0.2+3"
+        }
+      }
+    },
+    {
+      "id": "11",
+      "name": "11 (LTS)",
+      "milestones": {
+        "ga": "2018-09-25",
+        "eos": null,
+        "eossec": null,
+        "eol": "2034-01-31"
+      },
+      "upstream": {
+        "name": "11",
+        "codename": null,
+        "label": "11 (LTS)",
+        "releaseDate": "2018-09-25",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2032-01-31",
+        "isEoes": false,
+        "eoesFrom": "2034-01-31",
+        "isMaintained": true,
+        "latest": {
+          "name": "11.86.21",
+          "date": "2026-01-30",
+          "link": "https://docs.azul.com/core/release/january-2026-respin/release-notes"
+        },
+        "custom": {
+          "latestJdkVersion": "11.0.30+7"
+        }
+      }
+    },
+    {
+      "id": "10",
+      "name": "10 (STS)",
+      "milestones": {
+        "ga": "2018-03-27",
+        "eos": null,
+        "eossec": null,
+        "eol": "2019-03-31"
+      },
+      "upstream": {
+        "name": "10",
+        "codename": null,
+        "label": "10 (STS)",
+        "releaseDate": "2018-03-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-09-30",
+        "isEoes": true,
+        "eoesFrom": "2019-03-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "10.3.5",
+          "date": "2018-07-26",
+          "link": null
+        },
+        "custom": {
+          "latestJdkVersion": "10.0.2+13"
+        }
+      }
+    },
+    {
+      "id": "9",
+      "name": "9 (STS)",
+      "milestones": {
+        "ga": "2017-09-21",
+        "eos": null,
+        "eossec": null,
+        "eol": "2018-09-30"
+      },
+      "upstream": {
+        "name": "9",
+        "codename": null,
+        "label": "9 (STS)",
+        "releaseDate": "2017-09-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-03-31",
+        "isEoes": true,
+        "eoesFrom": "2018-09-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.0.7.1",
+          "date": "2018-04-27",
+          "link": null
+        },
+        "custom": {
+          "latestJdkVersion": "9u7"
+        }
+      }
+    },
+    {
+      "id": "8",
+      "name": "8 (LTS)",
+      "milestones": {
+        "ga": "2014-04-08",
+        "eos": null,
+        "eossec": null,
+        "eol": "2032-12-31"
+      },
+      "upstream": {
+        "name": "8",
+        "codename": null,
+        "label": "8 (LTS)",
+        "releaseDate": "2014-04-08",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2030-12-31",
+        "isEoes": false,
+        "eoesFrom": "2032-12-31",
+        "isMaintained": true,
+        "latest": {
+          "name": "8.92.0.21",
+          "date": "2026-01-30",
+          "link": "https://docs.azul.com/core/release/january-2026-respin/release-notes"
+        },
+        "custom": {
+          "latestJdkVersion": "8u482-b08"
+        }
+      }
+    },
+    {
+      "id": "6",
+      "name": "6 (LTS)",
+      "milestones": {
+        "ga": "2014-01-21",
+        "eos": null,
+        "eossec": null,
+        "eol": "2027-12-31"
+      },
+      "upstream": {
+        "name": "6",
+        "codename": null,
+        "label": "6 (LTS)",
+        "releaseDate": "2014-01-21",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-12-31",
+        "isEoes": false,
+        "eoesFrom": "2027-12-31",
+        "isMaintained": true,
+        "latest": {
+          "name": "N/A",
+          "date": "2018-10-16",
+          "link": null
+        },
+        "custom": {
+          "latestJdkVersion": "6u211"
+        }
+      }
+    },
+    {
+      "id": "7",
+      "name": "7 (LTS)",
+      "milestones": {
+        "ga": "2013-09-25",
+        "eos": null,
+        "eossec": null,
+        "eol": "2027-12-31"
+      },
+      "upstream": {
+        "name": "7",
+        "codename": null,
+        "label": "7 (LTS)",
+        "releaseDate": "2013-09-25",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-07-31",
+        "isEoes": false,
+        "eoesFrom": "2027-12-31",
+        "isMaintained": true,
+        "latest": {
+          "name": "7.56",
+          "date": "2022-07-19",
+          "link": "https://docs.azul.com/core/release/july-2022/release-notes/release-notes"
+        },
+        "custom": {
+          "latestJdkVersion": "7u352-b01"
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/azul-zulu/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-08-22T08:52:34+00:00"
+  }
+}

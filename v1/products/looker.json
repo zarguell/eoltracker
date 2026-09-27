@@ -1,0 +1,1550 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "looker",
+  "name": "Looker",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:google:looker"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Support Status",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/looker.svg",
+    "html": "https://endoflife.date/looker",
+    "releasePolicy": "https://cloud.google.com/looker/docs/release-overview"
+  },
+  "releases": [
+    {
+      "id": "26.16",
+      "name": "26.16",
+      "milestones": {
+        "ga": "2026-09-04",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-12-31"
+      },
+      "upstream": {
+        "name": "26.16",
+        "codename": null,
+        "label": "26.16",
+        "releaseDate": "2026-09-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2026-12-31",
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "26.14",
+      "name": "26.14",
+      "milestones": {
+        "ga": "2026-08-06",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-10-31"
+      },
+      "upstream": {
+        "name": "26.14",
+        "codename": null,
+        "label": "26.14",
+        "releaseDate": "2026-08-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2026-10-31",
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "26.12",
+      "name": "26.12 (ESR)",
+      "milestones": {
+        "ga": "2026-07-09",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-11-30"
+      },
+      "upstream": {
+        "name": "26.12",
+        "codename": null,
+        "label": "26.12 (ESR)",
+        "releaseDate": "2026-07-09",
+        "isLts": true,
+        "ltsFrom": "2026-08-31",
+        "isEol": false,
+        "eolFrom": "2026-11-30",
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "26.10",
+      "name": "26.10",
+      "milestones": {
+        "ga": "2026-06-04",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-08-31"
+      },
+      "upstream": {
+        "name": "26.10",
+        "codename": null,
+        "label": "26.10",
+        "releaseDate": "2026-06-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-08-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "26.8",
+      "name": "26.8",
+      "milestones": {
+        "ga": "2026-05-07",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-07-31"
+      },
+      "upstream": {
+        "name": "26.8",
+        "codename": null,
+        "label": "26.8",
+        "releaseDate": "2026-05-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-07-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "26.6",
+      "name": "26.6 (ESR)",
+      "milestones": {
+        "ga": "2026-03-25",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-08-31"
+      },
+      "upstream": {
+        "name": "26.6",
+        "codename": null,
+        "label": "26.6 (ESR)",
+        "releaseDate": "2026-03-25",
+        "isLts": true,
+        "ltsFrom": "2026-05-31",
+        "isEol": true,
+        "eolFrom": "2026-08-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "26.4",
+      "name": "26.4",
+      "milestones": {
+        "ga": "2026-03-05",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-05-31"
+      },
+      "upstream": {
+        "name": "26.4",
+        "codename": null,
+        "label": "26.4",
+        "releaseDate": "2026-03-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-05-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "26.2",
+      "name": "26.2",
+      "milestones": {
+        "ga": "2026-02-09",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-04-30"
+      },
+      "upstream": {
+        "name": "26.2",
+        "codename": null,
+        "label": "26.2",
+        "releaseDate": "2026-02-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-04-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "26.0",
+      "name": "26.0 (ESR)",
+      "milestones": {
+        "ga": "2026-01-08",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-06-30"
+      },
+      "upstream": {
+        "name": "26.0",
+        "codename": null,
+        "label": "26.0 (ESR)",
+        "releaseDate": "2026-01-08",
+        "isLts": true,
+        "ltsFrom": "2026-02-28",
+        "isEol": true,
+        "eolFrom": "2026-06-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "25.20",
+      "name": "25.20",
+      "milestones": {
+        "ga": "2025-11-05",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-03-31"
+      },
+      "upstream": {
+        "name": "25.20",
+        "codename": null,
+        "label": "25.20",
+        "releaseDate": "2025-11-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-03-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "25.18",
+      "name": "25.18 (ESR)",
+      "milestones": {
+        "ga": "2025-10-06",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-02-28"
+      },
+      "upstream": {
+        "name": "25.18",
+        "codename": null,
+        "label": "25.18 (ESR)",
+        "releaseDate": "2025-10-06",
+        "isLts": true,
+        "ltsFrom": "2025-11-30",
+        "isEol": true,
+        "eolFrom": "2026-02-28",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "25.16",
+      "name": "25.16",
+      "milestones": {
+        "ga": "2025-09-10",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-12-31"
+      },
+      "upstream": {
+        "name": "25.16",
+        "codename": null,
+        "label": "25.16",
+        "releaseDate": "2025-09-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-12-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "25.14",
+      "name": "25.14",
+      "milestones": {
+        "ga": "2025-08-13",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-11-30"
+      },
+      "upstream": {
+        "name": "25.14",
+        "codename": null,
+        "label": "25.14",
+        "releaseDate": "2025-08-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-11-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "25.12",
+      "name": "25.12 (ESR)",
+      "milestones": {
+        "ga": "2025-07-24",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-11-30"
+      },
+      "upstream": {
+        "name": "25.12",
+        "codename": null,
+        "label": "25.12 (ESR)",
+        "releaseDate": "2025-07-24",
+        "isLts": true,
+        "ltsFrom": "2025-08-31",
+        "isEol": true,
+        "eolFrom": "2025-11-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "25.10",
+      "name": "25.10",
+      "milestones": {
+        "ga": "2025-06-11",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-09-30"
+      },
+      "upstream": {
+        "name": "25.10",
+        "codename": null,
+        "label": "25.10",
+        "releaseDate": "2025-06-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-09-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "25.8",
+      "name": "25.8",
+      "milestones": {
+        "ga": "2025-05-14",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-08-31"
+      },
+      "upstream": {
+        "name": "25.8",
+        "codename": null,
+        "label": "25.8",
+        "releaseDate": "2025-05-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-08-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "25.6",
+      "name": "25.6 (ESR)",
+      "milestones": {
+        "ga": "2025-04-09",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-08-31"
+      },
+      "upstream": {
+        "name": "25.6",
+        "codename": null,
+        "label": "25.6 (ESR)",
+        "releaseDate": "2025-04-09",
+        "isLts": true,
+        "ltsFrom": "2025-05-31",
+        "isEol": true,
+        "eolFrom": "2025-08-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "25.4",
+      "name": "25.4",
+      "milestones": {
+        "ga": "2025-03-12",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-06-30"
+      },
+      "upstream": {
+        "name": "25.4",
+        "codename": null,
+        "label": "25.4",
+        "releaseDate": "2025-03-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-06-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "25.2",
+      "name": "25.2",
+      "milestones": {
+        "ga": "2025-02-12",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-05-31"
+      },
+      "upstream": {
+        "name": "25.2",
+        "codename": null,
+        "label": "25.2",
+        "releaseDate": "2025-02-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-05-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "25.0",
+      "name": "25.0 (ESR)",
+      "milestones": {
+        "ga": "2025-01-08",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-05-31"
+      },
+      "upstream": {
+        "name": "25.0",
+        "codename": null,
+        "label": "25.0 (ESR)",
+        "releaseDate": "2025-01-08",
+        "isLts": true,
+        "ltsFrom": "2025-02-28",
+        "isEol": true,
+        "eolFrom": "2025-05-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "24.20",
+      "name": "24.20",
+      "milestones": {
+        "ga": "2024-11-30",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-03-31"
+      },
+      "upstream": {
+        "name": "24.20",
+        "codename": null,
+        "label": "24.20",
+        "releaseDate": "2024-11-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-03-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "24.18",
+      "name": "24.18 (ESR)",
+      "milestones": {
+        "ga": "2024-10-31",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-02-28"
+      },
+      "upstream": {
+        "name": "24.18",
+        "codename": null,
+        "label": "24.18 (ESR)",
+        "releaseDate": "2024-10-31",
+        "isLts": true,
+        "ltsFrom": "2024-11-30",
+        "isEol": true,
+        "eolFrom": "2025-02-28",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "24.16",
+      "name": "24.16",
+      "milestones": {
+        "ga": "2024-09-11",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-12-31"
+      },
+      "upstream": {
+        "name": "24.16",
+        "codename": null,
+        "label": "24.16",
+        "releaseDate": "2024-09-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-12-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "24.14",
+      "name": "24.14",
+      "milestones": {
+        "ga": "2024-08-14",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-11-30"
+      },
+      "upstream": {
+        "name": "24.14",
+        "codename": null,
+        "label": "24.14",
+        "releaseDate": "2024-08-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-11-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "24.12",
+      "name": "24.12 (ESR)",
+      "milestones": {
+        "ga": "2024-07-10",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-11-30"
+      },
+      "upstream": {
+        "name": "24.12",
+        "codename": null,
+        "label": "24.12 (ESR)",
+        "releaseDate": "2024-07-10",
+        "isLts": true,
+        "ltsFrom": "2024-09-01",
+        "isEol": true,
+        "eolFrom": "2024-11-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "24.10",
+      "name": "24.10",
+      "milestones": {
+        "ga": "2024-06-12",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-09-30"
+      },
+      "upstream": {
+        "name": "24.10",
+        "codename": null,
+        "label": "24.10",
+        "releaseDate": "2024-06-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-09-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "24.8",
+      "name": "24.8",
+      "milestones": {
+        "ga": "2024-05-08",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-08-31"
+      },
+      "upstream": {
+        "name": "24.8",
+        "codename": null,
+        "label": "24.8",
+        "releaseDate": "2024-05-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-08-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "24.6",
+      "name": "24.6 (ESR)",
+      "milestones": {
+        "ga": "2024-04-10",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-08-31"
+      },
+      "upstream": {
+        "name": "24.6",
+        "codename": null,
+        "label": "24.6 (ESR)",
+        "releaseDate": "2024-04-10",
+        "isLts": true,
+        "ltsFrom": "2024-06-01",
+        "isEol": true,
+        "eolFrom": "2024-08-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "24.4",
+      "name": "24.4",
+      "milestones": {
+        "ga": "2024-03-13",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-06-30"
+      },
+      "upstream": {
+        "name": "24.4",
+        "codename": null,
+        "label": "24.4",
+        "releaseDate": "2024-03-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-06-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "24.2",
+      "name": "24.2",
+      "milestones": {
+        "ga": "2024-02-14",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-05-31"
+      },
+      "upstream": {
+        "name": "24.2",
+        "codename": null,
+        "label": "24.2",
+        "releaseDate": "2024-02-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-05-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "24.0",
+      "name": "24.0 (ESR)",
+      "milestones": {
+        "ga": "2024-01-10",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-05-31"
+      },
+      "upstream": {
+        "name": "24.0",
+        "codename": null,
+        "label": "24.0 (ESR)",
+        "releaseDate": "2024-01-10",
+        "isLts": true,
+        "ltsFrom": "2024-03-01",
+        "isEol": true,
+        "eolFrom": "2024-05-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "23.20",
+      "name": "23.20",
+      "milestones": {
+        "ga": "2023-11-08",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-03-31"
+      },
+      "upstream": {
+        "name": "23.20",
+        "codename": null,
+        "label": "23.20",
+        "releaseDate": "2023-11-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-03-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "23.18",
+      "name": "23.18 (ESR)",
+      "milestones": {
+        "ga": "2023-10-11",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-02-28"
+      },
+      "upstream": {
+        "name": "23.18",
+        "codename": null,
+        "label": "23.18 (ESR)",
+        "releaseDate": "2023-10-11",
+        "isLts": true,
+        "ltsFrom": "2023-12-01",
+        "isEol": true,
+        "eolFrom": "2024-02-28",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "23.16",
+      "name": "23.16",
+      "milestones": {
+        "ga": "2023-09-13",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-12-12"
+      },
+      "upstream": {
+        "name": "23.16",
+        "codename": null,
+        "label": "23.16",
+        "releaseDate": "2023-09-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-12-12",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "23.14",
+      "name": "23.14",
+      "milestones": {
+        "ga": "2023-08-09",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-11-08"
+      },
+      "upstream": {
+        "name": "23.14",
+        "codename": null,
+        "label": "23.14",
+        "releaseDate": "2023-08-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-11-08",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "23.12",
+      "name": "23.12 (ESR)",
+      "milestones": {
+        "ga": "2023-07-12",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-11-30"
+      },
+      "upstream": {
+        "name": "23.12",
+        "codename": null,
+        "label": "23.12 (ESR)",
+        "releaseDate": "2023-07-12",
+        "isLts": true,
+        "ltsFrom": "2023-09-07",
+        "isEol": true,
+        "eolFrom": "2023-11-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "23.10",
+      "name": "23.10",
+      "milestones": {
+        "ga": "2023-06-14",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-09-13"
+      },
+      "upstream": {
+        "name": "23.10",
+        "codename": null,
+        "label": "23.10",
+        "releaseDate": "2023-06-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-09-13",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "23.8",
+      "name": "23.8",
+      "milestones": {
+        "ga": "2023-05-10",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-08-09"
+      },
+      "upstream": {
+        "name": "23.8",
+        "codename": null,
+        "label": "23.8",
+        "releaseDate": "2023-05-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-08-09",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "23.6",
+      "name": "23.6 (ESR)",
+      "milestones": {
+        "ga": "2023-04-14",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-08-31"
+      },
+      "upstream": {
+        "name": "23.6",
+        "codename": null,
+        "label": "23.6 (ESR)",
+        "releaseDate": "2023-04-14",
+        "isLts": true,
+        "ltsFrom": "2023-06-05",
+        "isEol": true,
+        "eolFrom": "2023-08-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "23.4",
+      "name": "23.4",
+      "milestones": {
+        "ga": "2023-03-14",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-06-13"
+      },
+      "upstream": {
+        "name": "23.4",
+        "codename": null,
+        "label": "23.4",
+        "releaseDate": "2023-03-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-06-13",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "23.2",
+      "name": "23.2",
+      "milestones": {
+        "ga": "2023-02-10",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-05-09"
+      },
+      "upstream": {
+        "name": "23.2",
+        "codename": null,
+        "label": "23.2",
+        "releaseDate": "2023-02-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-05-09",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "23.0",
+      "name": "23.0 (ESR)",
+      "milestones": {
+        "ga": "2023-01-11",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-05-31"
+      },
+      "upstream": {
+        "name": "23.0",
+        "codename": null,
+        "label": "23.0 (ESR)",
+        "releaseDate": "2023-01-11",
+        "isLts": true,
+        "ltsFrom": "2023-03-07",
+        "isEol": true,
+        "eolFrom": "2023-05-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "22.20",
+      "name": "22.20",
+      "milestones": {
+        "ga": "2022-11-14",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-03-13"
+      },
+      "upstream": {
+        "name": "22.20",
+        "codename": null,
+        "label": "22.20",
+        "releaseDate": "2022-11-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-03-13",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "22.18",
+      "name": "22.18 (ESR)",
+      "milestones": {
+        "ga": "2022-10-17",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-02-28"
+      },
+      "upstream": {
+        "name": "22.18",
+        "codename": null,
+        "label": "22.18 (ESR)",
+        "releaseDate": "2022-10-17",
+        "isLts": true,
+        "ltsFrom": "2022-12-01",
+        "isEol": true,
+        "eolFrom": "2023-02-28",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "22.16",
+      "name": "22.16",
+      "milestones": {
+        "ga": "2022-09-19",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-12-18"
+      },
+      "upstream": {
+        "name": "22.16",
+        "codename": null,
+        "label": "22.16",
+        "releaseDate": "2022-09-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-12-18",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "22.14",
+      "name": "22.14",
+      "milestones": {
+        "ga": "2022-08-15",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-11-14"
+      },
+      "upstream": {
+        "name": "22.14",
+        "codename": null,
+        "label": "22.14",
+        "releaseDate": "2022-08-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-11-14",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "22.12",
+      "name": "22.12 (ESR)",
+      "milestones": {
+        "ga": "2022-07-18",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-11-30"
+      },
+      "upstream": {
+        "name": "22.12",
+        "codename": null,
+        "label": "22.12 (ESR)",
+        "releaseDate": "2022-07-18",
+        "isLts": true,
+        "ltsFrom": "2022-09-01",
+        "isEol": true,
+        "eolFrom": "2022-11-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "22.10",
+      "name": "22.10",
+      "milestones": {
+        "ga": "2022-06-13",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-09-19"
+      },
+      "upstream": {
+        "name": "22.10",
+        "codename": null,
+        "label": "22.10",
+        "releaseDate": "2022-06-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-09-19",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "22.8",
+      "name": "22.8",
+      "milestones": {
+        "ga": "2022-05-16",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-08-15"
+      },
+      "upstream": {
+        "name": "22.8",
+        "codename": null,
+        "label": "22.8",
+        "releaseDate": "2022-05-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-08-15",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "22.6",
+      "name": "22.6 (ESR)",
+      "milestones": {
+        "ga": "2022-04-18",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-08-31"
+      },
+      "upstream": {
+        "name": "22.6",
+        "codename": null,
+        "label": "22.6 (ESR)",
+        "releaseDate": "2022-04-18",
+        "isLts": true,
+        "ltsFrom": "2022-06-01",
+        "isEol": true,
+        "eolFrom": "2022-08-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "22.4",
+      "name": "22.4",
+      "milestones": {
+        "ga": "2022-03-14",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-06-13"
+      },
+      "upstream": {
+        "name": "22.4",
+        "codename": null,
+        "label": "22.4",
+        "releaseDate": "2022-03-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-06-13",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "22.2",
+      "name": "22.2",
+      "milestones": {
+        "ga": "2022-02-15",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-05-16"
+      },
+      "upstream": {
+        "name": "22.2",
+        "codename": null,
+        "label": "22.2",
+        "releaseDate": "2022-02-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-05-16",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "22.0",
+      "name": "22.0 (ESR)",
+      "milestones": {
+        "ga": "2022-01-18",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-05-31"
+      },
+      "upstream": {
+        "name": "22.0",
+        "codename": null,
+        "label": "22.0 (ESR)",
+        "releaseDate": "2022-01-18",
+        "isLts": true,
+        "ltsFrom": "2022-03-01",
+        "isEol": true,
+        "eolFrom": "2022-05-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "21.20",
+      "name": "21.20",
+      "milestones": {
+        "ga": "2021-11-16",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-03-15"
+      },
+      "upstream": {
+        "name": "21.20",
+        "codename": null,
+        "label": "21.20",
+        "releaseDate": "2021-11-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-03-15",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "21.18",
+      "name": "21.18 (ESR)",
+      "milestones": {
+        "ga": "2021-10-19",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-02-28"
+      },
+      "upstream": {
+        "name": "21.18",
+        "codename": null,
+        "label": "21.18 (ESR)",
+        "releaseDate": "2021-10-19",
+        "isLts": true,
+        "ltsFrom": "2021-12-01",
+        "isEol": true,
+        "eolFrom": "2022-02-28",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "21.16",
+      "name": "21.16",
+      "milestones": {
+        "ga": "2021-09-14",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-12-15"
+      },
+      "upstream": {
+        "name": "21.16",
+        "codename": null,
+        "label": "21.16",
+        "releaseDate": "2021-09-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-12-15",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "21.14",
+      "name": "21.14",
+      "milestones": {
+        "ga": "2021-08-16",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-11-16"
+      },
+      "upstream": {
+        "name": "21.14",
+        "codename": null,
+        "label": "21.14",
+        "releaseDate": "2021-08-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-11-16",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "21.12",
+      "name": "21.12 (ESR)",
+      "milestones": {
+        "ga": "2021-07-15",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-11-30"
+      },
+      "upstream": {
+        "name": "21.12",
+        "codename": null,
+        "label": "21.12 (ESR)",
+        "releaseDate": "2021-07-15",
+        "isLts": true,
+        "ltsFrom": "2021-09-01",
+        "isEol": true,
+        "eolFrom": "2021-11-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "21.10",
+      "name": "21.10",
+      "milestones": {
+        "ga": "2021-06-10",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-09-14"
+      },
+      "upstream": {
+        "name": "21.10",
+        "codename": null,
+        "label": "21.10",
+        "releaseDate": "2021-06-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-09-14",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "21.8",
+      "name": "21.8",
+      "milestones": {
+        "ga": "2021-05-13",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-10-16"
+      },
+      "upstream": {
+        "name": "21.8",
+        "codename": null,
+        "label": "21.8",
+        "releaseDate": "2021-05-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-10-16",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "21.6",
+      "name": "21.6 (ESR)",
+      "milestones": {
+        "ga": "2021-04-15",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-08-31"
+      },
+      "upstream": {
+        "name": "21.6",
+        "codename": null,
+        "label": "21.6 (ESR)",
+        "releaseDate": "2021-04-15",
+        "isLts": true,
+        "ltsFrom": "2021-06-01",
+        "isEol": true,
+        "eolFrom": "2021-08-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "21.4",
+      "name": "21.4",
+      "milestones": {
+        "ga": "2021-03-11",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-06-10"
+      },
+      "upstream": {
+        "name": "21.4",
+        "codename": null,
+        "label": "21.4",
+        "releaseDate": "2021-03-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-06-10",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "21.0",
+      "name": "21.0 (ESR)",
+      "milestones": {
+        "ga": "2021-01-20",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-05-31"
+      },
+      "upstream": {
+        "name": "21.0",
+        "codename": null,
+        "label": "21.0 (ESR)",
+        "releaseDate": "2021-01-20",
+        "isLts": true,
+        "ltsFrom": "2021-03-01",
+        "isEol": true,
+        "eolFrom": "2021-05-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "7.20",
+      "name": "7.20",
+      "milestones": {
+        "ga": "2020-11-15",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.20",
+        "codename": null,
+        "label": "7.20",
+        "releaseDate": "2020-11-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "7.18",
+      "name": "7.18",
+      "milestones": {
+        "ga": "2020-10-15",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.18",
+        "codename": null,
+        "label": "7.18",
+        "releaseDate": "2020-10-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "7.16",
+      "name": "7.16",
+      "milestones": {
+        "ga": "2020-09-17",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.16",
+        "codename": null,
+        "label": "7.16",
+        "releaseDate": "2020-09-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/looker/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-10T00:08:43+00:00"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-4400",
+  "name": "4400",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Symmetrix",
+  "family": "Symmetrix",
+  "model_number": "4400",
+  "milestones": {
+    "ga": "1990-12-01",
+    "eos": "1998-04-30",
+    "eossec": null,
+    "eol": "2002-10-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "4400",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "4400",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Symmetrix",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "1998-04-30",
+      "datetime": null,
+      "value": "1998-04-30",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Dec. 01, 1990",
+      "datetime": "1990-12-01",
+      "value": "1990-12-01",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2002-10-31",
+      "datetime": null,
+      "value": "2002-10-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/san-storage/vendor/dell-emc/symmetrix/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

@@ -1,0 +1,1130 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "flatcar-container-linux",
+  "name": "Flatcar Container Linux",
+  "category": "software",
+  "upstream_category": "os",
+  "identifiers": [],
+  "labels": {
+    "ga": "release_date"
+  },
+  "links": {
+    "html": "https://www.flatcar.org/releases-json/releases.json",
+    "channel documentation": "https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels"
+  },
+  "releases": [
+    {
+      "id": "4757",
+      "name": "Flatcar Container Linux 4757",
+      "milestones": {
+        "ga": "2026-09-14",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4757.2.0",
+        "cells": {
+          "version": "4757.2.0",
+          "channel": "stable",
+          "release_date": "2026-09-14 12:19:07 +0000"
+        },
+        "table": "releases.json"
+      }
+    },
+    {
+      "id": "4593",
+      "name": "Flatcar Container Linux 4593",
+      "milestones": {
+        "ga": "2026-04-27",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-09-14"
+      },
+      "upstream": {
+        "name": "4593.2.0",
+        "cells": {
+          "version": "4593.2.0",
+          "channel": "stable",
+          "release_date": "2026-04-27 10:26:25 +0000"
+        },
+        "table": "releases.json"
+      },
+      "milestone_provenance": {
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels",
+          "quote": "Any Stable major version remains supported until a new major Stable version is released.",
+          "base_date": "2026-04-27",
+          "base_label": "first Stable release",
+          "trigger": {
+            "release_id": "4757",
+            "date": "2026-09-14",
+            "label": "the next major Stable release"
+          }
+        }
+      }
+    },
+    {
+      "id": "4459",
+      "name": "Flatcar Container Linux 4459",
+      "milestones": {
+        "ga": "2025-11-12",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-04-27"
+      },
+      "upstream": {
+        "name": "4459.2.0",
+        "cells": {
+          "version": "4459.2.0",
+          "channel": "stable",
+          "release_date": "2025-11-12 15:00:55 +0000"
+        },
+        "table": "releases.json"
+      },
+      "milestone_provenance": {
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels",
+          "quote": "Any Stable major version remains supported until a new major Stable version is released.",
+          "base_date": "2025-11-12",
+          "base_label": "first Stable release",
+          "trigger": {
+            "release_id": "4593",
+            "date": "2026-04-27",
+            "label": "the next major Stable release"
+          }
+        }
+      }
+    },
+    {
+      "id": "4230",
+      "name": "Flatcar Container Linux 4230",
+      "milestones": {
+        "ga": "2025-06-24",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-11-12"
+      },
+      "upstream": {
+        "name": "4230.2.0",
+        "cells": {
+          "version": "4230.2.0",
+          "channel": "stable",
+          "release_date": "2025-06-24 11:58:22 +0000"
+        },
+        "table": "releases.json"
+      },
+      "milestone_provenance": {
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels",
+          "quote": "Any Stable major version remains supported until a new major Stable version is released.",
+          "base_date": "2025-06-24",
+          "base_label": "first Stable release",
+          "trigger": {
+            "release_id": "4459",
+            "date": "2025-11-12",
+            "label": "the next major Stable release"
+          }
+        }
+      }
+    },
+    {
+      "id": "4152",
+      "name": "Flatcar Container Linux 4152",
+      "milestones": {
+        "ga": "2025-01-30",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-06-24"
+      },
+      "upstream": {
+        "name": "4152.2.0",
+        "cells": {
+          "version": "4152.2.0",
+          "channel": "stable",
+          "release_date": "2025-01-30 16:25:47 +0000"
+        },
+        "table": "releases.json"
+      },
+      "milestone_provenance": {
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels",
+          "quote": "Any Stable major version remains supported until a new major Stable version is released.",
+          "base_date": "2025-01-30",
+          "base_label": "first Stable release",
+          "trigger": {
+            "release_id": "4230",
+            "date": "2025-06-24",
+            "label": "the next major Stable release"
+          }
+        }
+      }
+    },
+    {
+      "id": "4081",
+      "name": "Flatcar Container Linux 4081",
+      "milestones": {
+        "ga": "2024-11-13",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-01-30"
+      },
+      "upstream": {
+        "name": "4081.2.0",
+        "cells": {
+          "version": "4081.2.0",
+          "channel": "stable",
+          "release_date": "2024-11-13 12:29:46 +0000"
+        },
+        "table": "releases.json"
+      },
+      "milestone_provenance": {
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels",
+          "quote": "Any Stable major version remains supported until a new major Stable version is released.",
+          "base_date": "2024-11-13",
+          "base_label": "first Stable release",
+          "trigger": {
+            "release_id": "4152",
+            "date": "2025-01-30",
+            "label": "the next major Stable release"
+          }
+        }
+      }
+    },
+    {
+      "id": "3975",
+      "name": "Flatcar Container Linux 3975",
+      "milestones": {
+        "ga": "2024-08-07",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-11-13"
+      },
+      "upstream": {
+        "name": "3975.2.0",
+        "cells": {
+          "version": "3975.2.0",
+          "channel": "stable",
+          "release_date": "2024-08-07 10:56:37 +0000"
+        },
+        "table": "releases.json"
+      },
+      "milestone_provenance": {
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels",
+          "quote": "Any Stable major version remains supported until a new major Stable version is released.",
+          "base_date": "2024-08-07",
+          "base_label": "first Stable release",
+          "trigger": {
+            "release_id": "4081",
+            "date": "2024-11-13",
+            "label": "the next major Stable release"
+          }
+        }
+      }
+    },
+    {
+      "id": "3815",
+      "name": "Flatcar Container Linux 3815",
+      "milestones": {
+        "ga": "2024-02-14",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-08-07"
+      },
+      "upstream": {
+        "name": "3815.2.0",
+        "cells": {
+          "version": "3815.2.0",
+          "channel": "stable",
+          "release_date": "2024-02-14 04:35:10 +0000"
+        },
+        "table": "releases.json"
+      },
+      "milestone_provenance": {
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels",
+          "quote": "Any Stable major version remains supported until a new major Stable version is released.",
+          "base_date": "2024-02-14",
+          "base_label": "first Stable release",
+          "trigger": {
+            "release_id": "3975",
+            "date": "2024-08-07",
+            "label": "the next major Stable release"
+          }
+        }
+      }
+    },
+    {
+      "id": "3760",
+      "name": "Flatcar Container Linux 3760",
+      "milestones": {
+        "ga": "2024-01-18",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-02-14"
+      },
+      "upstream": {
+        "name": "3760.2.0",
+        "cells": {
+          "version": "3760.2.0",
+          "channel": "stable",
+          "release_date": "2024-01-18 15:15:58 +0000"
+        },
+        "table": "releases.json"
+      },
+      "milestone_provenance": {
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels",
+          "quote": "Any Stable major version remains supported until a new major Stable version is released.",
+          "base_date": "2024-01-18",
+          "base_label": "first Stable release",
+          "trigger": {
+            "release_id": "3815",
+            "date": "2024-02-14",
+            "label": "the next major Stable release"
+          }
+        }
+      }
+    },
+    {
+      "id": "3602",
+      "name": "Flatcar Container Linux 3602",
+      "milestones": {
+        "ga": "2023-10-05",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-01-18"
+      },
+      "upstream": {
+        "name": "3602.2.0",
+        "cells": {
+          "version": "3602.2.0",
+          "channel": "stable",
+          "release_date": "2023-10-05 10:02:27 +0000"
+        },
+        "table": "releases.json"
+      },
+      "milestone_provenance": {
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels",
+          "quote": "Any Stable major version remains supported until a new major Stable version is released.",
+          "base_date": "2023-10-05",
+          "base_label": "first Stable release",
+          "trigger": {
+            "release_id": "3760",
+            "date": "2024-01-18",
+            "label": "the next major Stable release"
+          }
+        }
+      }
+    },
+    {
+      "id": "3510",
+      "name": "Flatcar Container Linux 3510",
+      "milestones": {
+        "ga": "2023-04-17",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-10-05"
+      },
+      "upstream": {
+        "name": "3510.2.0",
+        "cells": {
+          "version": "3510.2.0",
+          "channel": "stable",
+          "release_date": "2023-04-17 13:19:22 +0000"
+        },
+        "table": "releases.json"
+      },
+      "milestone_provenance": {
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels",
+          "quote": "Any Stable major version remains supported until a new major Stable version is released.",
+          "base_date": "2023-04-17",
+          "base_label": "first Stable release",
+          "trigger": {
+            "release_id": "3602",
+            "date": "2023-10-05",
+            "label": "the next major Stable release"
+          }
+        }
+      }
+    },
+    {
+      "id": "3374",
+      "name": "Flatcar Container Linux 3374",
+      "milestones": {
+        "ga": "2022-11-17",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-04-17"
+      },
+      "upstream": {
+        "name": "3374.2.0",
+        "cells": {
+          "version": "3374.2.0",
+          "channel": "stable",
+          "release_date": "2022-11-17 07:03:54 +0000"
+        },
+        "table": "releases.json"
+      },
+      "milestone_provenance": {
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels",
+          "quote": "Any Stable major version remains supported until a new major Stable version is released.",
+          "base_date": "2022-11-17",
+          "base_label": "first Stable release",
+          "trigger": {
+            "release_id": "3510",
+            "date": "2023-04-17",
+            "label": "the next major Stable release"
+          }
+        }
+      }
+    },
+    {
+      "id": "3227",
+      "name": "Flatcar Container Linux 3227",
+      "milestones": {
+        "ga": "2022-07-21",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-11-17"
+      },
+      "upstream": {
+        "name": "3227.2.0",
+        "cells": {
+          "version": "3227.2.0",
+          "channel": "stable",
+          "release_date": "2022-07-21 15:45:09 +0000"
+        },
+        "table": "releases.json"
+      },
+      "milestone_provenance": {
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels",
+          "quote": "Any Stable major version remains supported until a new major Stable version is released.",
+          "base_date": "2022-07-21",
+          "base_label": "first Stable release",
+          "trigger": {
+            "release_id": "3374",
+            "date": "2022-11-17",
+            "label": "the next major Stable release"
+          }
+        }
+      }
+    },
+    {
+      "id": "3139",
+      "name": "Flatcar Container Linux 3139",
+      "milestones": {
+        "ga": "2022-04-07",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-07-21"
+      },
+      "upstream": {
+        "name": "3139.2.0",
+        "cells": {
+          "version": "3139.2.0",
+          "channel": "stable",
+          "release_date": "2022-04-07 12:05:52 +0000"
+        },
+        "table": "releases.json"
+      },
+      "milestone_provenance": {
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels",
+          "quote": "Any Stable major version remains supported until a new major Stable version is released.",
+          "base_date": "2022-04-07",
+          "base_label": "first Stable release",
+          "trigger": {
+            "release_id": "3227",
+            "date": "2022-07-21",
+            "label": "the next major Stable release"
+          }
+        }
+      }
+    },
+    {
+      "id": "3033",
+      "name": "Flatcar Container Linux 3033",
+      "milestones": {
+        "ga": "2021-12-15",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-04-07"
+      },
+      "upstream": {
+        "name": "3033.2.0",
+        "cells": {
+          "version": "3033.2.0",
+          "channel": "stable",
+          "release_date": "2021-12-15 19:36:24 +0000"
+        },
+        "table": "releases.json"
+      },
+      "milestone_provenance": {
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels",
+          "quote": "Any Stable major version remains supported until a new major Stable version is released.",
+          "base_date": "2021-12-15",
+          "base_label": "first Stable release",
+          "trigger": {
+            "release_id": "3139",
+            "date": "2022-04-07",
+            "label": "the next major Stable release"
+          }
+        }
+      }
+    },
+    {
+      "id": "2983",
+      "name": "Flatcar Container Linux 2983",
+      "milestones": {
+        "ga": "2021-11-09",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-12-15"
+      },
+      "upstream": {
+        "name": "2983.2.0",
+        "cells": {
+          "version": "2983.2.0",
+          "channel": "stable",
+          "release_date": "2021-11-09 08:18:14 +0000"
+        },
+        "table": "releases.json"
+      },
+      "milestone_provenance": {
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels",
+          "quote": "Any Stable major version remains supported until a new major Stable version is released.",
+          "base_date": "2021-11-09",
+          "base_label": "first Stable release",
+          "trigger": {
+            "release_id": "3033",
+            "date": "2021-12-15",
+            "label": "the next major Stable release"
+          }
+        }
+      }
+    },
+    {
+      "id": "2905",
+      "name": "Flatcar Container Linux 2905",
+      "milestones": {
+        "ga": "2021-07-28",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-11-09"
+      },
+      "upstream": {
+        "name": "2905.2.0",
+        "cells": {
+          "version": "2905.2.0",
+          "channel": "stable",
+          "release_date": "2021-07-28 08:25:15 +0000"
+        },
+        "table": "releases.json"
+      },
+      "milestone_provenance": {
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels",
+          "quote": "Any Stable major version remains supported until a new major Stable version is released.",
+          "base_date": "2021-07-28",
+          "base_label": "first Stable release",
+          "trigger": {
+            "release_id": "2983",
+            "date": "2021-11-09",
+            "label": "the next major Stable release"
+          }
+        }
+      }
+    },
+    {
+      "id": "2765",
+      "name": "Flatcar Container Linux 2765",
+      "milestones": {
+        "ga": "2021-03-03",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-07-28"
+      },
+      "upstream": {
+        "name": "2765.2.0",
+        "cells": {
+          "version": "2765.2.0",
+          "channel": "stable",
+          "release_date": "2021-03-03 14:58:35 +0000"
+        },
+        "table": "releases.json"
+      },
+      "milestone_provenance": {
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels",
+          "quote": "Any Stable major version remains supported until a new major Stable version is released.",
+          "base_date": "2021-03-03",
+          "base_label": "first Stable release",
+          "trigger": {
+            "release_id": "2905",
+            "date": "2021-07-28",
+            "label": "the next major Stable release"
+          }
+        }
+      }
+    },
+    {
+      "id": "2605",
+      "name": "Flatcar Container Linux 2605",
+      "milestones": {
+        "ga": "2020-09-22",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-03-03"
+      },
+      "upstream": {
+        "name": "2605.5.0",
+        "cells": {
+          "version": "2605.5.0",
+          "channel": "stable",
+          "release_date": "2020-09-22 08:20:39 +0000"
+        },
+        "table": "releases.json"
+      },
+      "milestone_provenance": {
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels",
+          "quote": "Any Stable major version remains supported until a new major Stable version is released.",
+          "base_date": "2020-09-22",
+          "base_label": "first Stable release",
+          "trigger": {
+            "release_id": "2765",
+            "date": "2021-03-03",
+            "label": "the next major Stable release"
+          }
+        }
+      }
+    },
+    {
+      "id": "2512",
+      "name": "Flatcar Container Linux 2512",
+      "milestones": {
+        "ga": "2020-05-26",
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-09-22"
+      },
+      "upstream": {
+        "name": "2512.2.0",
+        "cells": {
+          "version": "2512.2.0",
+          "channel": "stable",
+          "release_date": "2020-05-26 16:58:25 +0000"
+        },
+        "table": "releases.json"
+      },
+      "milestone_provenance": {
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels",
+          "quote": "Any Stable major version remains supported until a new major Stable version is released.",
+          "base_date": "2020-05-26",
+          "base_label": "first Stable release",
+          "trigger": {
+            "release_id": "2605",
+            "date": "2020-09-22",
+            "label": "the next major Stable release"
+          }
+        }
+      }
+    },
+    {
+      "id": "2345",
+      "name": "Flatcar Container Linux 2345",
+      "milestones": {
+        "ga": "2020-03-02",
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-05-26"
+      },
+      "upstream": {
+        "name": "2345.3.0",
+        "cells": {
+          "version": "2345.3.0",
+          "channel": "stable",
+          "release_date": "2020-03-02 14:03:06 +0000"
+        },
+        "table": "releases.json"
+      },
+      "milestone_provenance": {
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels",
+          "quote": "Any Stable major version remains supported until a new major Stable version is released.",
+          "base_date": "2020-03-02",
+          "base_label": "first Stable release",
+          "trigger": {
+            "release_id": "2512",
+            "date": "2020-05-26",
+            "label": "the next major Stable release"
+          }
+        }
+      }
+    },
+    {
+      "id": "2303",
+      "name": "Flatcar Container Linux 2303",
+      "milestones": {
+        "ga": "2019-12-05",
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-03-02"
+      },
+      "upstream": {
+        "name": "2303.3.0",
+        "cells": {
+          "version": "2303.3.0",
+          "channel": "stable",
+          "release_date": "2019-12-05 06:33:04 +0000"
+        },
+        "table": "releases.json"
+      },
+      "milestone_provenance": {
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels",
+          "quote": "Any Stable major version remains supported until a new major Stable version is released.",
+          "base_date": "2019-12-05",
+          "base_label": "first Stable release",
+          "trigger": {
+            "release_id": "2345",
+            "date": "2020-03-02",
+            "label": "the next major Stable release"
+          }
+        }
+      }
+    },
+    {
+      "id": "2247",
+      "name": "Flatcar Container Linux 2247",
+      "milestones": {
+        "ga": "2019-10-17",
+        "eos": null,
+        "eossec": null,
+        "eol": "2019-12-05"
+      },
+      "upstream": {
+        "name": "2247.5.0",
+        "cells": {
+          "version": "2247.5.0",
+          "channel": "stable",
+          "release_date": "2019-10-17 18:54:06 +0000"
+        },
+        "table": "releases.json"
+      },
+      "milestone_provenance": {
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels",
+          "quote": "Any Stable major version remains supported until a new major Stable version is released.",
+          "base_date": "2019-10-17",
+          "base_label": "first Stable release",
+          "trigger": {
+            "release_id": "2303",
+            "date": "2019-12-05",
+            "label": "the next major Stable release"
+          }
+        }
+      }
+    },
+    {
+      "id": "2191",
+      "name": "Flatcar Container Linux 2191",
+      "milestones": {
+        "ga": "2019-08-16",
+        "eos": null,
+        "eossec": null,
+        "eol": "2019-10-17"
+      },
+      "upstream": {
+        "name": "2191.4.0",
+        "cells": {
+          "version": "2191.4.0",
+          "channel": "stable",
+          "release_date": "2019-08-16 09:42:56 +0000"
+        },
+        "table": "releases.json"
+      },
+      "milestone_provenance": {
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels",
+          "quote": "Any Stable major version remains supported until a new major Stable version is released.",
+          "base_date": "2019-08-16",
+          "base_label": "first Stable release",
+          "trigger": {
+            "release_id": "2247",
+            "date": "2019-10-17",
+            "label": "the next major Stable release"
+          }
+        }
+      }
+    },
+    {
+      "id": "2135",
+      "name": "Flatcar Container Linux 2135",
+      "milestones": {
+        "ga": "2019-07-01",
+        "eos": null,
+        "eossec": null,
+        "eol": "2019-08-16"
+      },
+      "upstream": {
+        "name": "2135.4.0",
+        "cells": {
+          "version": "2135.4.0",
+          "channel": "stable",
+          "release_date": "2019-07-01 10:47:02 +0000"
+        },
+        "table": "releases.json"
+      },
+      "milestone_provenance": {
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels",
+          "quote": "Any Stable major version remains supported until a new major Stable version is released.",
+          "base_date": "2019-07-01",
+          "base_label": "first Stable release",
+          "trigger": {
+            "release_id": "2191",
+            "date": "2019-08-16",
+            "label": "the next major Stable release"
+          }
+        }
+      }
+    },
+    {
+      "id": "2079",
+      "name": "Flatcar Container Linux 2079",
+      "milestones": {
+        "ga": "2019-04-24",
+        "eos": null,
+        "eossec": null,
+        "eol": "2019-07-01"
+      },
+      "upstream": {
+        "name": "2079.3.0",
+        "cells": {
+          "version": "2079.3.0",
+          "channel": "stable",
+          "release_date": "2019-04-24 10:00:10 +0000"
+        },
+        "table": "releases.json"
+      },
+      "milestone_provenance": {
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels",
+          "quote": "Any Stable major version remains supported until a new major Stable version is released.",
+          "base_date": "2019-04-24",
+          "base_label": "first Stable release",
+          "trigger": {
+            "release_id": "2135",
+            "date": "2019-07-01",
+            "label": "the next major Stable release"
+          }
+        }
+      }
+    },
+    {
+      "id": "2023",
+      "name": "Flatcar Container Linux 2023",
+      "milestones": {
+        "ga": "2019-02-27",
+        "eos": null,
+        "eossec": null,
+        "eol": "2019-04-24"
+      },
+      "upstream": {
+        "name": "2023.4.0",
+        "cells": {
+          "version": "2023.4.0",
+          "channel": "stable",
+          "release_date": "2019-02-27 08:52:33 +0000"
+        },
+        "table": "releases.json"
+      },
+      "milestone_provenance": {
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels",
+          "quote": "Any Stable major version remains supported until a new major Stable version is released.",
+          "base_date": "2019-02-27",
+          "base_label": "first Stable release",
+          "trigger": {
+            "release_id": "2079",
+            "date": "2019-04-24",
+            "label": "the next major Stable release"
+          }
+        }
+      }
+    },
+    {
+      "id": "1967",
+      "name": "Flatcar Container Linux 1967",
+      "milestones": {
+        "ga": "2019-01-28",
+        "eos": null,
+        "eossec": null,
+        "eol": "2019-02-27"
+      },
+      "upstream": {
+        "name": "1967.3.1",
+        "cells": {
+          "version": "1967.3.1",
+          "channel": "stable",
+          "release_date": "2019-01-28 10:32:57 +0000"
+        },
+        "table": "releases.json"
+      },
+      "milestone_provenance": {
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels",
+          "quote": "Any Stable major version remains supported until a new major Stable version is released.",
+          "base_date": "2019-01-28",
+          "base_label": "first Stable release",
+          "trigger": {
+            "release_id": "2023",
+            "date": "2019-02-27",
+            "label": "the next major Stable release"
+          }
+        }
+      }
+    },
+    {
+      "id": "1911",
+      "name": "Flatcar Container Linux 1911",
+      "milestones": {
+        "ga": "2018-11-08",
+        "eos": null,
+        "eossec": null,
+        "eol": "2019-01-28"
+      },
+      "upstream": {
+        "name": "1911.3.0",
+        "cells": {
+          "version": "1911.3.0",
+          "channel": "stable",
+          "release_date": "2018-11-08 16:14:37 +0000"
+        },
+        "table": "releases.json"
+      },
+      "milestone_provenance": {
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels",
+          "quote": "Any Stable major version remains supported until a new major Stable version is released.",
+          "base_date": "2018-11-08",
+          "base_label": "first Stable release",
+          "trigger": {
+            "release_id": "1967",
+            "date": "2019-01-28",
+            "label": "the next major Stable release"
+          }
+        }
+      }
+    },
+    {
+      "id": "1855",
+      "name": "Flatcar Container Linux 1855",
+      "milestones": {
+        "ga": "2018-09-14",
+        "eos": null,
+        "eossec": null,
+        "eol": "2018-11-08"
+      },
+      "upstream": {
+        "name": "1855.4.0",
+        "cells": {
+          "version": "1855.4.0",
+          "channel": "stable",
+          "release_date": "2018-09-14 09:59:47 +0000"
+        },
+        "table": "releases.json"
+      },
+      "milestone_provenance": {
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels",
+          "quote": "Any Stable major version remains supported until a new major Stable version is released.",
+          "base_date": "2018-09-14",
+          "base_label": "first Stable release",
+          "trigger": {
+            "release_id": "1911",
+            "date": "2018-11-08",
+            "label": "the next major Stable release"
+          }
+        }
+      }
+    },
+    {
+      "id": "1800",
+      "name": "Flatcar Container Linux 1800",
+      "milestones": {
+        "ga": "2018-07-26",
+        "eos": null,
+        "eossec": null,
+        "eol": "2018-09-14"
+      },
+      "upstream": {
+        "name": "1800.4.0",
+        "cells": {
+          "version": "1800.4.0",
+          "channel": "stable",
+          "release_date": "2018-07-26 09:38:46 +0000"
+        },
+        "table": "releases.json"
+      },
+      "milestone_provenance": {
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels",
+          "quote": "Any Stable major version remains supported until a new major Stable version is released.",
+          "base_date": "2018-07-26",
+          "base_label": "first Stable release",
+          "trigger": {
+            "release_id": "1855",
+            "date": "2018-09-14",
+            "label": "the next major Stable release"
+          }
+        }
+      }
+    },
+    {
+      "id": "1745",
+      "name": "Flatcar Container Linux 1745",
+      "milestones": {
+        "ga": "2018-05-26",
+        "eos": null,
+        "eossec": null,
+        "eol": "2018-07-26"
+      },
+      "upstream": {
+        "name": "1745.3.1",
+        "cells": {
+          "version": "1745.3.1",
+          "channel": "stable",
+          "release_date": "2018-05-26 15:29:48 +0000"
+        },
+        "table": "releases.json"
+      },
+      "milestone_provenance": {
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels",
+          "quote": "Any Stable major version remains supported until a new major Stable version is released.",
+          "base_date": "2018-05-26",
+          "base_label": "first Stable release",
+          "trigger": {
+            "release_id": "1800",
+            "date": "2018-07-26",
+            "label": "the next major Stable release"
+          }
+        }
+      }
+    },
+    {
+      "id": "1688",
+      "name": "Flatcar Container Linux 1688",
+      "milestones": {
+        "ga": "2018-04-25",
+        "eos": null,
+        "eossec": null,
+        "eol": "2018-05-26"
+      },
+      "upstream": {
+        "name": "1688.5.3",
+        "cells": {
+          "version": "1688.5.3",
+          "channel": "stable",
+          "release_date": "2018-04-25 14:36:41 +0000"
+        },
+        "table": "releases.json"
+      },
+      "milestone_provenance": {
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.flatcar.org/docs/latest/updates-releases/releases/switching-channels",
+          "quote": "Any Stable major version remains supported until a new major Stable version is released.",
+          "base_date": "2018-04-25",
+          "base_label": "first Stable release",
+          "trigger": {
+            "release_id": "1745",
+            "date": "2018-05-26",
+            "label": "the next major Stable release"
+          }
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://www.flatcar.org/releases-json/releases.json",
+    "verifier": "deterministic-flatcar",
+    "last_checked": "2026-09-24T01:06:37Z",
+    "upstream_modified": null
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "verifier": "deterministic-progress-corticon",
+  "checked_at": "2026-09-26T14:36:19Z",
+  "source_url": "https://docs.progress.com/bundle/corticon-life-cycle/page/Corticon-Life-Cycle.html",
+  "corticon_js_url": "https://docs.progress.com/bundle/corticon-js-life-cycle/page/Corticon.js-Life-Cycle.html",
+  "record_scope": "Progress Corticon and Corticon.js release families: two software records, one per vendor page, at the month precision both pages state",
+  "rows": {
+    "seen": 30,
+    "published": 28,
+    "retained": 0,
+    "excluded": 2
+  },
+  "tables": [
+    {
+      "table": "Corticon Life Cycle",
+      "rows": 19,
+      "published": 18,
+      "layout": 1,
+      "url": "https://docs.progress.com/bundle/corticon-life-cycle/page/Corticon-Life-Cycle.html",
+      "product": "corticon"
+    },
+    {
+      "table": "Corticon.js",
+      "rows": 11,
+      "published": 10,
+      "layout": 1,
+      "url": "https://docs.progress.com/bundle/corticon-js-life-cycle/page/Corticon.js-Life-Cycle.html",
+      "product": "corticon-js"
+    }
+  ],
+  "retained": [],
+  "excluded": [
+    {
+      "table": "Corticon Life Cycle",
+      "url": "https://docs.progress.com/bundle/corticon-life-cycle/page/Corticon-Life-Cycle.html",
+      "context": "layout",
+      "rows": 1,
+      "text": 1,
+      "reason": "the vendor's own in-table group label separating current from retired rows: it states no release identity or date, and is counted and named rather than published as a release"
+    },
+    {
+      "table": "Corticon.js",
+      "url": "https://docs.progress.com/bundle/corticon-js-life-cycle/page/Corticon.js-Life-Cycle.html",
+      "context": "layout",
+      "rows": 1,
+      "text": 1,
+      "reason": "the vendor's own in-table group label separating current from retired rows: it states no release identity or date, and is counted and named rather than published as a release"
+    }
+  ],
+  "products": {
+    "corticon": 18,
+    "corticon-js": 10
+  },
+  "total_records": 2,
+  "limitations": [
+    "The two pages differ in the vendor's own month spelling ('2025-Nov' on the Corticon page, '2025-April' on the Corticon.js page); both are accepted and an unknown month word refuses the page instead of being read as an absent date.",
+    "Corticon.js retired rows prefix the release identity with '- '; the prefix is normalized for the release id and the raw cell stays verbatim under upstream.cells.",
+    "Sunset (Mature) is the vendor's own phase and never fills eossec or eol; eos is absent because neither page states an end of sale.",
+    "'-' and 'TBD' state no date: they publish a null milestone while the vendor's own cell is retained verbatim."
+  ]
+}

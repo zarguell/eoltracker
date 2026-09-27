@@ -1,0 +1,121 @@
+{
+  "source_url": "https://www.odoo.com/documentation/master/administration/standard_extended_support.html",
+  "verifier": "deterministic-odoo",
+  "checked_at": "2026-09-17T22:25:45Z",
+  "record_scope": "Odoo release series and Odoo Online (SaaS) intermediary versions; 'Older versions' remains one grouped scope",
+  "rows": {
+    "seen": 14,
+    "published": 14,
+    "retained": 0,
+    "excluded": 0,
+    "release_date_stated": 12,
+    "release_date_unstated": 2,
+    "support_end_stated": 2,
+    "support_end_planned": 3,
+    "support_end_unstated": 9
+  },
+  "total_records": 1,
+  "excluded": [],
+  "planned": [
+    {
+      "id": "odoo-19.0",
+      "cell": "September 2028 (planned)",
+      "reason": "the vendor marks this end of standard support as planned; a planned date is retained as the vendor's cell and never published as a milestone"
+    },
+    {
+      "id": "odoo-18.0",
+      "cell": "September 2027 (planned)",
+      "reason": "the vendor marks this end of standard support as planned; a planned date is retained as the vendor's cell and never published as a milestone"
+    },
+    {
+      "id": "odoo-17.0",
+      "cell": "September 2026 (planned)",
+      "reason": "the vendor marks this end of standard support as planned; a planned date is retained as the vendor's cell and never published as a milestone"
+    }
+  ],
+  "unstated": [
+    {
+      "id": "odoo-saas-19.4",
+      "cells": {
+        "Release date": "July 2026",
+        "End of standard support": ""
+      },
+      "reason": "the vendor's own cell is blank or a bound ('Before 2024') rather than a date; the wording is kept and no date is invented for the row"
+    },
+    {
+      "id": "odoo-saas-19.3",
+      "cells": {
+        "Release date": "May 2026",
+        "End of standard support": ""
+      },
+      "reason": "the vendor's own cell is blank or a bound ('Before 2024') rather than a date; the wording is kept and no date is invented for the row"
+    },
+    {
+      "id": "odoo-saas-19.2",
+      "cells": {
+        "Release date": "March 2026",
+        "End of standard support": ""
+      },
+      "reason": "the vendor's own cell is blank or a bound ('Before 2024') rather than a date; the wording is kept and no date is invented for the row"
+    },
+    {
+      "id": "odoo-saas-19.1",
+      "cells": {
+        "Release date": "January 2026",
+        "End of standard support": ""
+      },
+      "reason": "the vendor's own cell is blank or a bound ('Before 2024') rather than a date; the wording is kept and no date is invented for the row"
+    },
+    {
+      "id": "odoo-saas-18.4",
+      "cells": {
+        "Release date": "July 2025",
+        "End of standard support": ""
+      },
+      "reason": "the vendor's own cell is blank or a bound ('Before 2024') rather than a date; the wording is kept and no date is invented for the row"
+    },
+    {
+      "id": "odoo-saas-18.3",
+      "cells": {
+        "Release date": "May 2025",
+        "End of standard support": ""
+      },
+      "reason": "the vendor's own cell is blank or a bound ('Before 2024') rather than a date; the wording is kept and no date is invented for the row"
+    },
+    {
+      "id": "odoo-saas-18.2",
+      "cells": {
+        "Release date": "March 2025",
+        "End of standard support": ""
+      },
+      "reason": "the vendor's own cell is blank or a bound ('Before 2024') rather than a date; the wording is kept and no date is invented for the row"
+    },
+    {
+      "id": "odoo-14.0",
+      "cells": {
+        "Release date": "Before 2021",
+        "End of standard support": "Before 2024"
+      },
+      "reason": "the vendor's own cell is blank or a bound ('Before 2024') rather than a date; the wording is kept and no date is invented for the row"
+    },
+    {
+      "id": "older-versions",
+      "cells": {
+        "Release date": "Before 2021",
+        "End of standard support": "Before 2024"
+      },
+      "reason": "the vendor's own cell is blank or a bound ('Before 2024') rather than a date; the wording is kept and no date is invented for the row"
+    }
+  ],
+  "retained": [],
+  "limitations": [
+    "The table's last column is 'End of standard support' only; the page states extended support continues beyond it against a mandatory fee and publishes no end for it, so eol stays unknown for every row.",
+    "Whether security updates end with standard support is the vendor's commercial policy, not a statement of this table; eossec stays unknown rather than inferred.",
+    "A cell the vendor marks '(planned)' is a plan it may move; it is retained as the vendor's own cell and never becomes a milestone.",
+    "A cell stated as a bound ('Before 2024') is not a date; the row keeps the vendor's wording and no date is invented.",
+    "Release dates carry the month the vendor states; no day is inferred.",
+    "Odoo Online (SaaS) intermediary versions are released every two to three months and the vendor states they are not eligible for extended support.",
+    "A release series the vendor has not published a row for is absent; no row and no date is synthesized for it.",
+    "The platform columns record the vendor's own legend terms for each row; they are support statuses, not dates."
+  ]
+}

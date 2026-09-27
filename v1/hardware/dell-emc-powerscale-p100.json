@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-powerscale-p100",
+  "name": "PowerScale P100",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC PowerScale / Isilon",
+  "family": "PowerScale / Isilon",
+  "model_number": "PowerScale P100",
+  "milestones": {
+    "ga": "2021-12-07",
+    "eos": "2025-08-01",
+    "eossec": null,
+    "eol": null
+  },
+  "status": "supported",
+  "upstream": {
+    "Product": {
+      "text": "PowerScale P100",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "PowerScale P100",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC PowerScale / Isilon",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2025-08-01",
+      "datetime": null,
+      "value": "2025-08-01",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Dec. 07, 2021",
+      "datetime": "2021-12-07",
+      "value": "2021-12-07",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "TBD",
+      "datetime": null,
+      "value": null,
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/nas-storage/vendor/dell-emc/powerscale-isilon/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

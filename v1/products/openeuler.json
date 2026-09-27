@@ -1,0 +1,975 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "openeuler",
+  "name": "openEuler",
+  "category": "software",
+  "upstream_category": "os",
+  "identifiers": [],
+  "labels": {
+    "ga": "release history",
+    "eol": "Planned EOL"
+  },
+  "links": {
+    "release downloads": "https://www.openeuler.org/en/download/",
+    "release catalog": "https://www.openeuler.org/api/mirrors/",
+    "lifecycle policy": "https://www.openeuler.org/en/other/lifecycle/",
+    "technical white paper": "https://www.openeuler.org/whitepaper/en/openEuler%2024.03%20LTS%20SP4%20Technical%20White%20Paper.pdf"
+  },
+  "releases": [
+    {
+      "id": "24.03-lts-sp4",
+      "name": "openEuler 24.03 LTS SP4",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2027-03"
+      },
+      "upstream": {
+        "name": "openEuler-24.03-LTS-SP4",
+        "table": "release catalog API RepoVersion",
+        "cells": {
+          "Version": "openEuler-24.03-LTS-SP4",
+          "LTS": true,
+          "Scenario": [
+            "ISO",
+            "edge_img",
+            "embedded_img",
+            "virtual_machine_img"
+          ],
+          "Arch": [
+            "aarch64",
+            "loongarch64",
+            "riscv64",
+            "x86_64"
+          ]
+        },
+        "history": {
+          "table": "technical white paper release history",
+          "quote": "On June 30, 2026, openEuler 24.03 LTS SP4 was officially released as an enhanced and extended update to openEuler 24.03 LTS, built on Linux kernel 6.6.",
+          "date": "2026-06-30",
+          "hold": {
+            "reason": "the sources state different general availabilities for openEuler 24.03 LTS SP4: the technical white paper dates the release to June 30, 2026, while the community's own release announcement is dated July 1, 2026 and says the release is now available; the sources define no artifact-date versus announcement-date distinction, so no day is published",
+            "evidence": [
+              {
+                "source_url": "https://www.openeuler.org/whitepaper/en/openEuler%2024.03%20LTS%20SP4%20Technical%20White%20Paper.pdf",
+                "quote": "On June 30, 2026, openEuler 24.03 LTS SP4 was officially released as an enhanced and extended update to openEuler 24.03 LTS, built on Linux kernel 6.6."
+              },
+              {
+                "source_url": "https://www.openeuler.org/en/news/20260701-openEuler%2024.03%20LTS%20SP4/20260701-openEuler%2024.03%20LTS%20SP4.html",
+                "quote": "openEuler 2026-07-01"
+              },
+              {
+                "source_url": "https://www.openeuler.org/en/news/20260701-openEuler%2024.03%20LTS%20SP4/20260701-openEuler%2024.03%20LTS%20SP4.html",
+                "quote": "OpenAtom openEuler 24.03 LTS SP4 is now available."
+              }
+            ]
+          }
+        },
+        "planned_eol": {
+          "table": "download page release card",
+          "label": "Planned EOL",
+          "value": "2027/03",
+          "card": "openEuler 24.03 LTS SP4"
+        },
+        "in_catalog": true,
+        "in_sources": true
+      }
+    },
+    {
+      "id": "24.03-lts-sp3",
+      "name": "openEuler 24.03 LTS SP3",
+      "milestones": {
+        "ga": "2025-12-30",
+        "eos": null,
+        "eossec": null,
+        "eol": "2027-12"
+      },
+      "upstream": {
+        "name": "openEuler-24.03-LTS-SP3",
+        "table": "release catalog API RepoVersion",
+        "cells": {
+          "Version": "openEuler-24.03-LTS-SP3",
+          "LTS": true,
+          "Scenario": [
+            "DevStation",
+            "ISO",
+            "edge_img",
+            "embedded_img",
+            "virtual_machine_img"
+          ],
+          "Arch": [
+            "aarch64",
+            "arm32",
+            "loongarch64",
+            "riscv64",
+            "x86_64"
+          ]
+        },
+        "history": {
+          "table": "technical white paper release history",
+          "quote": "on December 30, 2025, the first openEuler release supporting SuperPoDs was officially launched. openEuler 24.03 LTS SP3, an enhanced and extended version of openEuler 24.03 LTS based on the Linux 6.6 kernel, is designed for server, cloud, and AI scenarios.",
+          "date": "2025-12-30"
+        },
+        "planned_eol": {
+          "table": "download page release card",
+          "label": "Planned EOL",
+          "value": "2027/12",
+          "card": "openEuler 24.03 LTS SP3"
+        },
+        "in_catalog": true,
+        "in_sources": true
+      }
+    },
+    {
+      "id": "25.09",
+      "name": "openEuler 25.09",
+      "milestones": {
+        "ga": "2025-09-30",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-03-30"
+      },
+      "upstream": {
+        "name": "openEuler-25.09",
+        "table": "release catalog API RepoVersion",
+        "cells": {
+          "Version": "openEuler-25.09",
+          "LTS": false,
+          "Scenario": [
+            "DevStation",
+            "ISO",
+            "edge_img",
+            "embedded_img",
+            "virtual_machine_img"
+          ],
+          "Arch": [
+            "aarch64",
+            "arm32",
+            "riscv64",
+            "x86_64"
+          ]
+        },
+        "history": {
+          "table": "technical white paper release history",
+          "quote": "On September 30, 2025, openEuler 25.09 was released.",
+          "date": "2025-09-30"
+        },
+        "planned_eol": null,
+        "in_catalog": true,
+        "in_sources": true
+      },
+      "milestone_provenance": {
+        "eol": {
+          "kind": "derived",
+          "method": "release-plus-duration",
+          "source_url": "https://www.openeuler.org/en/other/lifecycle/",
+          "quote": "Innovation releases (effective from August 2025): Released in September every year with 6 months of community support.",
+          "base_date": "2025-09-30",
+          "base_label": "general availability",
+          "duration": {
+            "value": 6,
+            "unit": "month"
+          }
+        }
+      }
+    },
+    {
+      "id": "24.03-lts-sp2",
+      "name": "openEuler 24.03 LTS SP2",
+      "milestones": {
+        "ga": "2025-06-30",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "openEuler-24.03-LTS-SP2",
+        "table": "release catalog API RepoVersion",
+        "cells": {
+          "Version": "openEuler-24.03-LTS-SP2",
+          "LTS": true,
+          "Scenario": [
+            "DevStation",
+            "ISO",
+            "edge_img",
+            "embedded_img",
+            "virtual_machine_img"
+          ],
+          "Arch": [
+            "aarch64",
+            "arm32",
+            "loongarch64",
+            "riscv64",
+            "x86_64"
+          ]
+        },
+        "history": {
+          "table": "technical white paper release history",
+          "quote": "On June 30, 2025, openEuler 24.03 LTS SP2 was released.",
+          "date": "2025-06-30"
+        },
+        "planned_eol": null,
+        "in_catalog": true,
+        "in_sources": true
+      }
+    },
+    {
+      "id": "25.03",
+      "name": "openEuler 25.03",
+      "milestones": {
+        "ga": "2025-03-30",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "openEuler-25.03",
+        "table": "release catalog API RepoVersion",
+        "cells": {
+          "Version": "openEuler-25.03",
+          "LTS": false,
+          "Scenario": [
+            "DevStation",
+            "ISO",
+            "edge_img",
+            "embedded_img",
+            "virtual_machine_img"
+          ],
+          "Arch": [
+            "aarch64",
+            "arm32",
+            "riscv64",
+            "x86_64"
+          ]
+        },
+        "history": {
+          "table": "technical white paper release history",
+          "quote": "On March 30, 2025, openEuler 25.03 was released.",
+          "date": "2025-03-30"
+        },
+        "planned_eol": null,
+        "in_catalog": true,
+        "in_sources": true
+      }
+    },
+    {
+      "id": "24.03-lts-sp1",
+      "name": "openEuler 24.03 LTS SP1",
+      "milestones": {
+        "ga": "2024-12-30",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-12"
+      },
+      "upstream": {
+        "name": "openEuler-24.03-LTS-SP1",
+        "table": "release catalog API RepoVersion",
+        "cells": {
+          "Version": "openEuler-24.03-LTS-SP1",
+          "LTS": true,
+          "Scenario": [
+            "DevStation",
+            "ISO",
+            "edge_img",
+            "embedded_img",
+            "virtual_machine_img"
+          ],
+          "Arch": [
+            "aarch64",
+            "arm32",
+            "loongarch64",
+            "riscv64",
+            "x86_64"
+          ]
+        },
+        "history": {
+          "table": "technical white paper release history",
+          "quote": "On December 30, 2024, openEuler 24.03 LTS SP1 was released.",
+          "date": "2024-12-30"
+        },
+        "planned_eol": {
+          "table": "download page release card",
+          "label": "Planned EOL",
+          "value": "2026/12",
+          "card": "openEuler 24.03 LTS SP1"
+        },
+        "in_catalog": true,
+        "in_sources": true
+      }
+    },
+    {
+      "id": "24.09",
+      "name": "openEuler 24.09",
+      "milestones": {
+        "ga": "2024-09-30",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "openEuler-24.09",
+        "table": "release catalog API RepoVersion",
+        "cells": {
+          "Version": "openEuler-24.09",
+          "LTS": false,
+          "Scenario": [
+            "DevStation",
+            "ISO",
+            "edge_img",
+            "embedded_img",
+            "virtual_machine_img"
+          ],
+          "Arch": [
+            "aarch64",
+            "arm32",
+            "riscv64",
+            "x86_64"
+          ]
+        },
+        "history": {
+          "table": "technical white paper release history",
+          "quote": "On September 30, 2024, openEuler 24.09 was released.",
+          "date": "2024-09-30"
+        },
+        "planned_eol": null,
+        "in_catalog": true,
+        "in_sources": true
+      }
+    },
+    {
+      "id": "22.03-lts-sp4",
+      "name": "openEuler 22.03 LTS SP4",
+      "milestones": {
+        "ga": "2024-06-30",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "openEuler-22.03-LTS-SP4",
+        "table": "release catalog API RepoVersion",
+        "cells": {
+          "Version": "openEuler-22.03-LTS-SP4",
+          "LTS": true,
+          "Scenario": [
+            "ISO",
+            "edge_img",
+            "embedded_img",
+            "virtual_machine_img"
+          ],
+          "Arch": [
+            "aarch64",
+            "arm32",
+            "x86_64"
+          ]
+        },
+        "history": {
+          "table": "technical white paper release history",
+          "quote": "On June 30, 2024, openEuler 22.03 LTS SP4 was released.",
+          "date": "2024-06-30"
+        },
+        "planned_eol": null,
+        "in_catalog": true,
+        "in_sources": true
+      }
+    },
+    {
+      "id": "24.03-lts",
+      "name": "openEuler 24.03 LTS",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "openEuler-24.03-LTS",
+        "table": "release catalog API RepoVersion",
+        "cells": {
+          "Version": "openEuler-24.03-LTS",
+          "LTS": true,
+          "Scenario": [
+            "ISO",
+            "edge_img",
+            "embedded_img",
+            "virtual_machine_img"
+          ],
+          "Arch": [
+            "aarch64",
+            "arm32",
+            "loongarch64",
+            "ppc64le",
+            "riscv64",
+            "x86_64"
+          ]
+        },
+        "history": {
+          "table": "technical white paper release history",
+          "quote": "On May 30, 2024, openEuler 24.03 LTS was released.",
+          "date": "2024-05-30",
+          "hold": {
+            "reason": "the sources state different general availabilities for openEuler 24.03 LTS: the technical white paper dates the release to May 30, 2024, the lifecycle component says only that it was released in June 2024, and the community's own release announcement carries a June 6, 2024 dateline; the sources define no artifact-date versus launch-event-date distinction, so no day is published",
+            "evidence": [
+              {
+                "source_url": "https://www.openeuler.org/whitepaper/en/openEuler%2024.03%20LTS%20SP4%20Technical%20White%20Paper.pdf",
+                "quote": "On May 30, 2024, openEuler 24.03 LTS was released."
+              },
+              {
+                "source_url": "https://www.openeuler.org/en/other/lifecycle/",
+                "quote": "The latest openEuler 24.03 LTS was released in June 2024 (kernel 6.6)."
+              },
+              {
+                "source_url": "https://www.openeuler.org/en/news/20240612-openEuler%2024.03%20LTS-The%20First%20AI-Native%20Open%20Source%20Operating%20System/",
+                "quote": "[Beijing, China, June 6, 2024]"
+              }
+            ]
+          }
+        },
+        "planned_eol": null,
+        "in_catalog": true,
+        "in_sources": true
+      }
+    },
+    {
+      "id": "22.03-lts-sp3",
+      "name": "openEuler 22.03 LTS SP3",
+      "milestones": {
+        "ga": "2023-12-30",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "openEuler-22.03-LTS-SP3",
+        "table": "release catalog API RepoVersion",
+        "cells": {
+          "Version": "openEuler-22.03-LTS-SP3",
+          "LTS": true,
+          "Scenario": [
+            "ISO",
+            "edge_img",
+            "embedded_img",
+            "virtual_machine_img"
+          ],
+          "Arch": [
+            "aarch64",
+            "arm32",
+            "x86_64"
+          ]
+        },
+        "history": {
+          "table": "technical white paper release history",
+          "quote": "On December 30, 2023, openEuler 22.03 LTS SP3 was released.",
+          "date": "2023-12-30"
+        },
+        "planned_eol": null,
+        "in_catalog": true,
+        "in_sources": true
+      }
+    },
+    {
+      "id": "20.03-lts-sp4",
+      "name": "openEuler 20.03 LTS SP4",
+      "milestones": {
+        "ga": "2023-11-30",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "openEuler-20.03-LTS-SP4",
+        "table": "release catalog API RepoVersion",
+        "cells": {
+          "Version": "openEuler-20.03-LTS-SP4",
+          "LTS": true,
+          "Scenario": [
+            "ISO",
+            "virtual_machine_img"
+          ],
+          "Arch": [
+            "aarch64",
+            "x86_64"
+          ]
+        },
+        "history": {
+          "table": "technical white paper release history",
+          "quote": "On November 30, 2023, openEuler 20.03 LTS SP4 was released, an enhanced extension of openEuler 20.03 LTS.",
+          "date": "2023-11-30"
+        },
+        "planned_eol": null,
+        "in_catalog": true,
+        "in_sources": true
+      }
+    },
+    {
+      "id": "23.09",
+      "name": "openEuler 23.09",
+      "milestones": {
+        "ga": "2023-09-30",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "openEuler-23.09",
+        "table": "release catalog API RepoVersion",
+        "cells": {
+          "Version": "openEuler-23.09",
+          "LTS": false,
+          "Scenario": [
+            "ISO",
+            "edge_img",
+            "embedded_img",
+            "virtual_machine_img"
+          ],
+          "Arch": [
+            "aarch64",
+            "arm32",
+            "riscv64",
+            "x86_64"
+          ]
+        },
+        "history": {
+          "table": "technical white paper release history",
+          "quote": "On September 30, 2023, the openEuler 23.09 innovation version was released based on Linux kernel 6.4.",
+          "date": "2023-09-30"
+        },
+        "planned_eol": null,
+        "in_catalog": true,
+        "in_sources": true
+      }
+    },
+    {
+      "id": "22.03-lts-sp2",
+      "name": "openEuler 22.03 LTS SP2",
+      "milestones": {
+        "ga": "2023-06-30",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "openEuler-22.03-LTS-SP2",
+        "table": "release catalog API RepoVersion",
+        "cells": {
+          "Version": "openEuler-22.03-LTS-SP2",
+          "LTS": true,
+          "Scenario": [
+            "ISO",
+            "edge_img",
+            "embedded_img",
+            "virtual_machine_img"
+          ],
+          "Arch": [
+            "aarch64",
+            "arm32",
+            "x86_64"
+          ]
+        },
+        "history": {
+          "table": "technical white paper release history",
+          "quote": "On June 30, 2023, openEuler 22.03 LTS SP2 was released, which enhances scenario-specific features and increases system performance to a higher level.",
+          "date": "2023-06-30"
+        },
+        "planned_eol": null,
+        "in_catalog": true,
+        "in_sources": true
+      }
+    },
+    {
+      "id": "23.03",
+      "name": "openEuler 23.03",
+      "milestones": {
+        "ga": "2023-03-30",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "openEuler-23.03",
+        "table": "release catalog API RepoVersion",
+        "cells": {
+          "Version": "openEuler-23.03",
+          "LTS": false,
+          "Scenario": [
+            "ISO",
+            "edge_img",
+            "embedded_img",
+            "virtual_machine_img"
+          ],
+          "Arch": [
+            "aarch64",
+            "arm32",
+            "x86_64"
+          ]
+        },
+        "history": {
+          "table": "technical white paper release history",
+          "quote": "On March 30, 2023, openEuler 23.03 was released.",
+          "date": "2023-03-30"
+        },
+        "planned_eol": null,
+        "in_catalog": true,
+        "in_sources": true
+      }
+    },
+    {
+      "id": "22.03-lts-sp1",
+      "name": "openEuler 22.03 LTS SP1",
+      "milestones": {
+        "ga": "2022-12-30",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "openEuler-22.03-LTS-SP1",
+        "table": "release catalog API RepoVersion",
+        "cells": {
+          "Version": "openEuler-22.03-LTS-SP1",
+          "LTS": true,
+          "Scenario": [
+            "ISO",
+            "edge_img",
+            "embedded_img",
+            "virtual_machine_img"
+          ],
+          "Arch": [
+            "aarch64",
+            "arm32",
+            "x86_64"
+          ]
+        },
+        "history": {
+          "table": "technical white paper release history",
+          "quote": "On December 30, 2022, openEuler 22.03 LTS SP1 was released, which is designed for hitless porting with best-of-breed tools.",
+          "date": "2022-12-30"
+        },
+        "planned_eol": null,
+        "in_catalog": true,
+        "in_sources": true
+      }
+    },
+    {
+      "id": "22.09",
+      "name": "openEuler 22.09",
+      "milestones": {
+        "ga": "2022-09-30",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "openEuler 22.09",
+        "table": null,
+        "cells": {},
+        "history": {
+          "table": "technical white paper release history",
+          "quote": "On September 30, 2022, openEuler 22.09 was released to further enhance all-scenario innovations.",
+          "date": "2022-09-30"
+        },
+        "planned_eol": null,
+        "in_catalog": false,
+        "in_sources": true
+      }
+    },
+    {
+      "id": "22.03-lts",
+      "name": "openEuler 22.03 LTS",
+      "milestones": {
+        "ga": "2022-03-30",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "openEuler-22.03-LTS",
+        "table": "release catalog API RepoVersion",
+        "cells": {
+          "Version": "openEuler-22.03-LTS",
+          "LTS": true,
+          "Scenario": [
+            "ISO",
+            "edge_img",
+            "embedded_img",
+            "virtual_machine_img"
+          ],
+          "Arch": [
+            "aarch64",
+            "arm32",
+            "loongarch64",
+            "x86_64",
+            "sw64",
+            "power"
+          ]
+        },
+        "history": {
+          "table": "technical white paper release history",
+          "quote": "On March 30, 2022, openEuler 22.03 LTS was released based on Linux kernel 5.10.",
+          "date": "2022-03-30"
+        },
+        "planned_eol": null,
+        "in_catalog": true,
+        "in_sources": true
+      }
+    },
+    {
+      "id": "21.09",
+      "name": "openEuler 21.09",
+      "milestones": {
+        "ga": "2021-09-30",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "openEuler 21.09",
+        "table": null,
+        "cells": {},
+        "history": {
+          "table": "technical white paper release history",
+          "quote": "On September 30, 2021, openEuler 21.09 was released.",
+          "date": "2021-09-30"
+        },
+        "planned_eol": null,
+        "in_catalog": false,
+        "in_sources": true
+      }
+    },
+    {
+      "id": "21.03",
+      "name": "openEuler 21.03",
+      "milestones": {
+        "ga": "2021-03-31",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "openEuler 21.03",
+        "table": null,
+        "cells": {},
+        "history": {
+          "table": "technical white paper release history",
+          "quote": "On March 31, 2021, the innovative kernel version openEuler 21.03 was released.",
+          "date": "2021-03-31"
+        },
+        "planned_eol": null,
+        "in_catalog": false,
+        "in_sources": true
+      }
+    },
+    {
+      "id": "20.09",
+      "name": "openEuler 20.09",
+      "milestones": {
+        "ga": "2020-09-30",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "openEuler 20.09",
+        "table": null,
+        "cells": {},
+        "history": {
+          "table": "technical white paper release history",
+          "quote": "On September 30, 2020, the innovative openEuler 20.09 version was released through the collaboration efforts of multiple companies, teams, and independent developers in the openEuler community.",
+          "date": "2020-09-30"
+        },
+        "planned_eol": null,
+        "in_catalog": false,
+        "in_sources": true
+      }
+    },
+    {
+      "id": "20.03-lts",
+      "name": "openEuler 20.03 LTS",
+      "milestones": {
+        "ga": "2020-03-30",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "openEuler-20.03-LTS",
+        "table": "release catalog API RepoVersion",
+        "cells": {
+          "Version": "openEuler-20.03-LTS",
+          "LTS": true,
+          "Scenario": [
+            "ISO",
+            "virtual_machine_img"
+          ],
+          "Arch": [
+            "aarch64",
+            "x86_64"
+          ]
+        },
+        "history": {
+          "table": "technical white paper release history",
+          "quote": "On March 30, 2020, the Long Term Support (LTS) version openEuler 20.03 was officially released, which was a new Linux distribution with independent technology evolution.",
+          "date": "2020-03-30"
+        },
+        "planned_eol": null,
+        "in_catalog": true,
+        "in_sources": true
+      }
+    },
+    {
+      "id": "embedded-26.03",
+      "name": "openEuler Embedded 26.03",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "openEuler-Embedded-26.03",
+        "table": "release catalog API RepoVersion",
+        "cells": {
+          "Version": "openEuler-Embedded-26.03",
+          "LTS": false,
+          "Scenario": [
+            "embedded_img"
+          ],
+          "Arch": [
+            "aarch64",
+            "arm32"
+          ]
+        },
+        "history": null,
+        "planned_eol": null,
+        "in_catalog": true,
+        "in_sources": true
+      }
+    },
+    {
+      "id": "22.03-lts-64kb",
+      "name": "openEuler 22.03 LTS 64KB",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "openEuler-22.03-LTS-64kb",
+        "table": "release catalog API RepoVersion",
+        "cells": {
+          "Version": "openEuler-22.03-LTS-64kb",
+          "LTS": true,
+          "Scenario": [
+            "ISO",
+            "virtual_machine_img"
+          ],
+          "Arch": [
+            "aarch64"
+          ]
+        },
+        "history": null,
+        "planned_eol": null,
+        "in_catalog": true,
+        "in_sources": true
+      }
+    },
+    {
+      "id": "20.03-lts-sp3",
+      "name": "openEuler 20.03 LTS SP3",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "openEuler-20.03-LTS-SP3",
+        "table": "release catalog API RepoVersion",
+        "cells": {
+          "Version": "openEuler-20.03-LTS-SP3",
+          "LTS": true,
+          "Scenario": [
+            "ISO",
+            "virtual_machine_img"
+          ],
+          "Arch": [
+            "aarch64",
+            "x86_64"
+          ]
+        },
+        "history": null,
+        "planned_eol": null,
+        "in_catalog": true,
+        "in_sources": true
+      }
+    },
+    {
+      "id": "20.03-lts-sp2",
+      "name": "openEuler 20.03 LTS SP2",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "openEuler-20.03-LTS-SP2",
+        "table": "release catalog API RepoVersion",
+        "cells": {
+          "Version": "openEuler-20.03-LTS-SP2",
+          "LTS": true,
+          "Scenario": [
+            "ISO",
+            "virtual_machine_img"
+          ],
+          "Arch": [
+            "aarch64",
+            "x86_64"
+          ]
+        },
+        "history": null,
+        "planned_eol": null,
+        "in_catalog": true,
+        "in_sources": true
+      }
+    },
+    {
+      "id": "20.03-lts-sp1",
+      "name": "openEuler 20.03 LTS SP1",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "openEuler-20.03-LTS-SP1",
+        "table": "release catalog API RepoVersion",
+        "cells": {
+          "Version": "openEuler-20.03-LTS-SP1",
+          "LTS": true,
+          "Scenario": [
+            "ISO",
+            "virtual_machine_img"
+          ],
+          "Arch": [
+            "aarch64",
+            "x86_64"
+          ]
+        },
+        "history": null,
+        "planned_eol": null,
+        "in_catalog": true,
+        "in_sources": true
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://www.openeuler.org/en/download/",
+    "verifier": "deterministic-openeuler",
+    "last_checked": "2026-09-24T01:06:41Z",
+    "upstream_modified": null
+  }
+}

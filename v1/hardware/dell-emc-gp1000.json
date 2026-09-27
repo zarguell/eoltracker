@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-gp1000",
+  "name": "GP1000",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Greenplum Data Computing Appliance V1",
+  "family": "Greenplum Data Computing Appliance V1",
+  "model_number": "GP1000",
+  "milestones": {
+    "ga": "2010-09-09",
+    "eos": "2014-03-31",
+    "eossec": null,
+    "eol": "2017-03-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "GP1000",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "GP1000",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Greenplum Data Computing Appliance V1",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2014-03-31",
+      "datetime": null,
+      "value": "2014-03-31",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Sep. 09, 2010",
+      "datetime": "2010-09-09",
+      "value": "2010-09-09",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2017-03-31",
+      "datetime": null,
+      "value": "2017-03-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/database/vendor/dell-emc/greenplum-data-computing-appliance-v1/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

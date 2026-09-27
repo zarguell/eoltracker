@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-symmetrix-3830-5830",
+  "name": "Symmetrix 3830/5830",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Symmetrix",
+  "family": "Symmetrix",
+  "model_number": "Symmetrix 3830/5830",
+  "milestones": {
+    "ga": "1999-02-01",
+    "eos": "2003-09-30",
+    "eossec": null,
+    "eol": "2011-03-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "Symmetrix 3830/5830",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "Symmetrix 3830/5830",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Symmetrix",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2003-09-30",
+      "datetime": null,
+      "value": "2003-09-30",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Feb. 01, 1999",
+      "datetime": "1999-02-01",
+      "value": "1999-02-01",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2011-03-31",
+      "datetime": null,
+      "value": "2011-03-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/san-storage/vendor/dell-emc/symmetrix/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

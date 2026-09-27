@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-isilon-iq-3000i",
+  "name": "Isilon IQ 3000i",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC PowerScale / Isilon",
+  "family": "PowerScale / Isilon",
+  "model_number": "Isilon IQ 3000i",
+  "milestones": {
+    "ga": "2007-03-15",
+    "eos": "2008-05-30",
+    "eossec": null,
+    "eol": "2013-06-30"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "Isilon IQ 3000i",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "Isilon IQ 3000i",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC PowerScale / Isilon",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2008-05-30",
+      "datetime": null,
+      "value": "2008-05-30",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Mar. 15, 2007",
+      "datetime": "2007-03-15",
+      "value": "2007-03-15",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2013-06-30",
+      "datetime": null,
+      "value": "2013-06-30",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/nas-storage/vendor/dell-emc/powerscale-isilon/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

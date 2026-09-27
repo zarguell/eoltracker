@@ -1,0 +1,180 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "jquery",
+  "name": "jQuery",
+  "category": "software",
+  "upstream_category": "framework",
+  "identifiers": [
+    {
+      "type": "purl",
+      "id": "pkg:github/jquery/jquery"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:maven/org.webjars/jquery"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:npm/jquery"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:nuget/jQuery"
+    },
+    {
+      "type": "repology",
+      "id": "jquery"
+    },
+    {
+      "type": "repology",
+      "id": "js-jquery"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:jquery:jquery"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": "Commercial Support"
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/jquery.svg",
+    "html": "https://endoflife.date/jquery",
+    "releasePolicy": "https://jquery.com/support/"
+  },
+  "releases": [
+    {
+      "id": "4",
+      "name": "4",
+      "milestones": {
+        "ga": "2026-01-17",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4",
+        "codename": null,
+        "label": "4",
+        "releaseDate": "2026-01-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "4.0.0",
+          "date": "2026-01-17",
+          "link": "https://github.com/jquery/jquery/releases/tag/4.0.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3",
+      "name": "3",
+      "milestones": {
+        "ga": "2016-06-09",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3",
+        "codename": null,
+        "label": "3",
+        "releaseDate": "2016-06-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-01-17",
+        "isEol": false,
+        "eolFrom": null,
+        "isEoes": false,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "3.7.1",
+          "date": "2023-08-28",
+          "link": "https://github.com/jquery/jquery/releases/tag/3.7.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2",
+      "name": "2",
+      "milestones": {
+        "ga": "2013-04-18",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2",
+        "codename": null,
+        "label": "2",
+        "releaseDate": "2013-04-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isEoes": false,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "2.2.4",
+          "date": "2016-05-20",
+          "link": "https://blog.jquery.com/2016/05/20/jquery-1-12-4-and-2-2-4-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1",
+      "name": "1",
+      "milestones": {
+        "ga": "2006-08-31",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1",
+        "codename": null,
+        "label": "1",
+        "releaseDate": "2006-08-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isEoes": false,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "1.12.4",
+          "date": "2016-05-20",
+          "link": "https://blog.jquery.com/2016/05/20/jquery-1-12-4-and-2-2-4-released/"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/jquery/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-07T19:54:43+00:00"
+  }
+}

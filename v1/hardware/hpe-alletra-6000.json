@@ -1,0 +1,89 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "hpe-alletra-6000",
+  "name": "HPE Alletra 6000",
+  "category": "hardware",
+  "vendor": "HPE",
+  "product_line": "Adaptive Flash Storage",
+  "family": "Alletra Storage",
+  "model_number": "Alletra 6000",
+  "milestones": {
+    "ga": null,
+    "eos": "2025-06-01",
+    "eossec": null,
+    "eol": "2030-12-31"
+  },
+  "status": "supported",
+  "upstream": {
+    "Product": {
+      "text": "HPE Alletra 6000",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "Alletra 6000",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Adaptive Flash Storage",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Sale Date": {
+      "text": "Jun. 01, 2025",
+      "datetime": "2025-06-01",
+      "value": "2025-06-01",
+      "role": "eos",
+      "links": []
+    },
+    "Discontinuance Date": {
+      "text": "Mar. 31, 2025",
+      "datetime": "2025-03-31",
+      "value": "2025-03-31",
+      "role": null,
+      "links": []
+    },
+    "End of Service Date": {
+      "text": "Dec. 31, 2030",
+      "datetime": "2030-12-31",
+      "value": "2030-12-31",
+      "role": "eol",
+      "links": []
+    },
+    "EOL Announcement Date": {
+      "text": "Sep. 01, 2024",
+      "datetime": "2024-09-01",
+      "value": "2024-09-01",
+      "role": null,
+      "links": []
+    },
+    "End of Hardware Upgrades Date": {
+      "text": "Dec. 31, 2028",
+      "datetime": "2028-12-31",
+      "value": "2028-12-31",
+      "role": null,
+      "links": []
+    },
+    "End of Engineering Support Date": {
+      "text": "Dec. 31, 2030",
+      "datetime": "2030-12-31",
+      "value": "2030-12-31",
+      "role": null,
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/vendor/hpe/alletra-storage/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

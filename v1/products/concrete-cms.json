@@ -1,0 +1,160 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "concrete-cms",
+  "name": "Concrete CMS",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "php:concrete-cms"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:composer/concrete5/core"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/fehrenbacher/concrete5"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/concretecms/concretecms"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:concretecms:concrete_cms"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:concretecms:concrete_cms"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/concrete-cms",
+    "releasePolicy": "https://documentation.concretecms.org/9-x/developers/introduction/versioning-numbering-guide"
+  },
+  "releases": [
+    {
+      "id": "9",
+      "name": "9",
+      "milestones": {
+        "ga": "2021-10-29",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "9",
+        "codename": null,
+        "label": "9",
+        "releaseDate": "2021-10-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "9.5.4",
+          "date": "2026-09-08",
+          "link": "https://github.com/concretecms/concretecms/releases/tag/9.5.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8",
+      "name": "8",
+      "milestones": {
+        "ga": "2016-12-01",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-08-05"
+      },
+      "upstream": {
+        "name": "8",
+        "codename": null,
+        "label": "8",
+        "releaseDate": "2016-12-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-08-05",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.5.21",
+          "date": "2025-08-05",
+          "link": "https://github.com/concretecms/concretecms/releases/tag/8.5.21"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.7",
+      "name": "5.7",
+      "milestones": {
+        "ga": "2014-09-12",
+        "eos": null,
+        "eossec": null,
+        "eol": "2019-10-23"
+      },
+      "upstream": {
+        "name": "5.7",
+        "codename": null,
+        "label": "5.7",
+        "releaseDate": "2014-09-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-10-23",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.7.5.13",
+          "date": "2019-10-23",
+          "link": "https://github.com/concretecms/concretecms/releases/tag/5.7.5.13"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.6",
+      "name": "5.6",
+      "milestones": {
+        "ga": "2012-08-26",
+        "eos": null,
+        "eossec": null,
+        "eol": "2019-02-26"
+      },
+      "upstream": {
+        "name": "5.6",
+        "codename": null,
+        "label": "5.6",
+        "releaseDate": "2012-08-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-02-26",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.6.4.0",
+          "date": "2019-02-26",
+          "link": "https://documentation.concretecms.org/9-x/developers/introduction/version-history/5640"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/concrete-cms/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-09T00:07:20+00:00"
+  }
+}

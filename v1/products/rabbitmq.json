@@ -1,0 +1,570 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "rabbitmq",
+  "name": "RabbitMQ",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "rabbitmq-server"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:pivotal_software:rabbitmq"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:pivotal_software:rabbitmq"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:vmware:rabbitmq"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:vmware:rabbitmq"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Community Support",
+    "eoes": "Extended Commercial Support"
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/rabbitmq.svg",
+    "html": "https://endoflife.date/rabbitmq",
+    "releasePolicy": "https://www.rabbitmq.com/release-information"
+  },
+  "releases": [
+    {
+      "id": "4.3",
+      "name": "4.3",
+      "milestones": {
+        "ga": "2026-04-23",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.3",
+        "codename": null,
+        "label": "4.3",
+        "releaseDate": "2026-04-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isEoes": false,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "4.3.6",
+          "date": "2026-09-14",
+          "link": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/v4.3.6"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.2",
+      "name": "4.2",
+      "milestones": {
+        "ga": "2025-10-27",
+        "eos": null,
+        "eossec": null,
+        "eol": "2030-06-30"
+      },
+      "upstream": {
+        "name": "4.2",
+        "codename": null,
+        "label": "4.2",
+        "releaseDate": "2025-10-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-07-31",
+        "isEoes": false,
+        "eoesFrom": "2030-06-30",
+        "isMaintained": true,
+        "latest": {
+          "name": "4.2.9",
+          "date": "2026-07-19",
+          "link": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/v4.2.9"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.1",
+      "name": "4.1",
+      "milestones": {
+        "ga": "2025-04-15",
+        "eos": null,
+        "eossec": null,
+        "eol": "2028-04-29"
+      },
+      "upstream": {
+        "name": "4.1",
+        "codename": null,
+        "label": "4.1",
+        "releaseDate": "2025-04-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-01-30",
+        "isEoes": false,
+        "eoesFrom": "2028-04-29",
+        "isMaintained": true,
+        "latest": {
+          "name": "4.1.8",
+          "date": "2026-01-21",
+          "link": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/v4.1.8"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.0",
+      "name": "4.0",
+      "milestones": {
+        "ga": "2024-09-18",
+        "eos": null,
+        "eossec": null,
+        "eol": "2027-09-29"
+      },
+      "upstream": {
+        "name": "4.0",
+        "codename": null,
+        "label": "4.0",
+        "releaseDate": "2024-09-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-04-15",
+        "isEoes": false,
+        "eoesFrom": "2027-09-29",
+        "isMaintained": true,
+        "latest": {
+          "name": "4.0.9",
+          "date": "2025-04-14",
+          "link": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/v4.0.9"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.13",
+      "name": "3.13",
+      "milestones": {
+        "ga": "2024-02-22",
+        "eos": null,
+        "eossec": null,
+        "eol": "2027-12-30"
+      },
+      "upstream": {
+        "name": "3.13",
+        "codename": null,
+        "label": "3.13",
+        "releaseDate": "2024-02-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-09-17",
+        "isEoes": false,
+        "eoesFrom": "2027-12-30",
+        "isMaintained": true,
+        "latest": {
+          "name": "3.13.7",
+          "date": "2024-08-26",
+          "link": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/v3.13.7"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.12",
+      "name": "3.12",
+      "milestones": {
+        "ga": "2023-06-01",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-06-29"
+      },
+      "upstream": {
+        "name": "3.12",
+        "codename": null,
+        "label": "3.12",
+        "releaseDate": "2023-06-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-02-21",
+        "isEoes": true,
+        "eoesFrom": "2025-06-29",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.12.14",
+          "date": "2024-05-05",
+          "link": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/v3.12.14"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.11",
+      "name": "3.11",
+      "milestones": {
+        "ga": "2022-09-26",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-06-29"
+      },
+      "upstream": {
+        "name": "3.11",
+        "codename": null,
+        "label": "3.11",
+        "releaseDate": "2022-09-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-06-01",
+        "isEoes": true,
+        "eoesFrom": "2024-06-29",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.11.28",
+          "date": "2023-12-21",
+          "link": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/v3.11.28"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.10",
+      "name": "3.10",
+      "milestones": {
+        "ga": "2022-05-03",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-12-31"
+      },
+      "upstream": {
+        "name": "3.10",
+        "codename": null,
+        "label": "3.10",
+        "releaseDate": "2022-05-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-09-28",
+        "isEoes": true,
+        "eoesFrom": "2023-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.10.25",
+          "date": "2023-07-18",
+          "link": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/v3.10.25"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.9",
+      "name": "3.9",
+      "milestones": {
+        "ga": "2021-07-23",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-07-31"
+      },
+      "upstream": {
+        "name": "3.9",
+        "codename": null,
+        "label": "3.9",
+        "releaseDate": "2021-07-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-01-31",
+        "isEoes": true,
+        "eoesFrom": "2023-07-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.9.29",
+          "date": "2023-03-09",
+          "link": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/v3.9.29"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.8",
+      "name": "3.8",
+      "milestones": {
+        "ga": "2019-10-01",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-07-31"
+      },
+      "upstream": {
+        "name": "3.8",
+        "codename": null,
+        "label": "3.8",
+        "releaseDate": "2019-10-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-07-31",
+        "isEoes": true,
+        "eoesFrom": "2022-07-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.8.35",
+          "date": "2022-07-09",
+          "link": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/v3.8.35"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.7",
+      "name": "3.7",
+      "milestones": {
+        "ga": "2017-11-28",
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-09-30"
+      },
+      "upstream": {
+        "name": "3.7",
+        "codename": null,
+        "label": "3.7",
+        "releaseDate": "2017-11-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-09-30",
+        "isEoes": true,
+        "eoesFrom": "2020-09-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.7.28",
+          "date": "2020-08-17",
+          "link": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/v3.7.28"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.6",
+      "name": "3.6",
+      "milestones": {
+        "ga": "2015-12-22",
+        "eos": null,
+        "eossec": null,
+        "eol": "2018-05-31"
+      },
+      "upstream": {
+        "name": "3.6",
+        "codename": null,
+        "label": "3.6",
+        "releaseDate": "2015-12-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-05-31",
+        "isEoes": true,
+        "eoesFrom": "2018-05-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.6.16",
+          "date": "2018-06-13",
+          "link": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/rabbitmq_v3_6_16"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.5",
+      "name": "3.5",
+      "milestones": {
+        "ga": "2015-03-11",
+        "eos": null,
+        "eossec": null,
+        "eol": "2016-10-31"
+      },
+      "upstream": {
+        "name": "3.5",
+        "codename": null,
+        "label": "3.5",
+        "releaseDate": "2015-03-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2016-10-31",
+        "isEoes": true,
+        "eoesFrom": "2016-10-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.5.8",
+          "date": "2016-11-03",
+          "link": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/rabbitmq_v3_5_8"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.4",
+      "name": "3.4",
+      "milestones": {
+        "ga": "2014-10-21",
+        "eos": null,
+        "eossec": null,
+        "eol": "2015-10-31"
+      },
+      "upstream": {
+        "name": "3.4",
+        "codename": null,
+        "label": "3.4",
+        "releaseDate": "2014-10-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2015-10-31",
+        "isEoes": true,
+        "eoesFrom": "2015-10-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.4.4",
+          "date": "2015-02-11",
+          "link": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/rabbitmq_v3_4_4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.3",
+      "name": "3.3",
+      "milestones": {
+        "ga": "2014-04-02",
+        "eos": null,
+        "eossec": null,
+        "eol": "2015-03-31"
+      },
+      "upstream": {
+        "name": "3.3",
+        "codename": null,
+        "label": "3.3",
+        "releaseDate": "2014-04-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2015-03-31",
+        "isEoes": true,
+        "eoesFrom": "2015-03-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.3.5",
+          "date": "2014-08-11",
+          "link": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/rabbitmq_v3_3_5"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.2",
+      "name": "3.2",
+      "milestones": {
+        "ga": "2013-10-23",
+        "eos": null,
+        "eossec": null,
+        "eol": "2014-10-31"
+      },
+      "upstream": {
+        "name": "3.2",
+        "codename": null,
+        "label": "3.2",
+        "releaseDate": "2013-10-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2014-10-31",
+        "isEoes": true,
+        "eoesFrom": "2014-10-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.2.4",
+          "date": "2014-03-04",
+          "link": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/rabbitmq_v3_2_4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.1",
+      "name": "3.1",
+      "milestones": {
+        "ga": "2013-05-01",
+        "eos": null,
+        "eossec": null,
+        "eol": "2014-04-30"
+      },
+      "upstream": {
+        "name": "3.1",
+        "codename": null,
+        "label": "3.1",
+        "releaseDate": "2013-05-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2014-04-30",
+        "isEoes": true,
+        "eoesFrom": "2014-04-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.1.5",
+          "date": "2013-08-15",
+          "link": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/rabbitmq_v3_1_5"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.0",
+      "name": "3.0",
+      "milestones": {
+        "ga": "2012-11-19",
+        "eos": null,
+        "eossec": null,
+        "eol": "2013-11-30"
+      },
+      "upstream": {
+        "name": "3.0",
+        "codename": null,
+        "label": "3.0",
+        "releaseDate": "2012-11-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2013-11-30",
+        "isEoes": true,
+        "eoesFrom": "2013-11-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.0.4",
+          "date": "2013-03-06",
+          "link": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/rabbitmq_v3_0_4"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/rabbitmq/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-15T00:08:08+00:00"
+  }
+}

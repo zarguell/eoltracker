@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-dp5900-appliance",
+  "name": "DP5900 Appliance",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Integrated Data Protection Appliance",
+  "family": "Integrated Data Protection Appliance",
+  "model_number": "DP5900 Appliance",
+  "milestones": {
+    "ga": "2020-12-15",
+    "eos": "2024-08-31",
+    "eossec": null,
+    "eol": "2027-12-31"
+  },
+  "status": "supported",
+  "upstream": {
+    "Product": {
+      "text": "DP5900 Appliance",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "DP5900 Appliance",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Integrated Data Protection Appliance",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2024-08-31",
+      "datetime": null,
+      "value": "2024-08-31",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Dec. 15, 2020",
+      "datetime": "2020-12-15",
+      "value": "2020-12-15",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2027-12-31",
+      "datetime": null,
+      "value": "2027-12-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/backup/vendor/dell-emc/integrated-data-protection-appliance/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

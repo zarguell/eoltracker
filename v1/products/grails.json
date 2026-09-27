@@ -1,0 +1,251 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "grails",
+  "name": "Apache Grails Framework",
+  "category": "software",
+  "upstream_category": "framework",
+  "identifiers": [
+    {
+      "type": "cpe",
+      "id": "cpe:/a:apache:grails"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:apache:grails"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:maven/org.apache.grails/grails"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:grails:grails"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:grails:grails"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Development",
+    "discontinued": null,
+    "eol": "Active Maintenance",
+    "eoes": null
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/grails",
+    "releasePolicy": "https://grails.apache.org/support.html"
+  },
+  "releases": [
+    {
+      "id": "7",
+      "name": "7",
+      "milestones": {
+        "ga": "2025-10-19",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "7",
+        "codename": null,
+        "label": "7",
+        "releaseDate": "2025-10-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "7.2.3",
+          "date": "2026-08-23",
+          "link": "https://github.com/apache/grails-core/releases/tag/v7.2.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6",
+      "name": "6",
+      "milestones": {
+        "ga": "2023-07-24",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6",
+        "codename": null,
+        "label": "6",
+        "releaseDate": "2023-07-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-01-03",
+        "isEol": true,
+        "eolFrom": "2025-10-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.2.3",
+          "date": "2025-01-03",
+          "link": "https://github.com/apache/grails-core/releases/tag/v6.2.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5",
+      "name": "5",
+      "milestones": {
+        "ga": "2021-10-12",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5",
+        "codename": null,
+        "label": "5",
+        "releaseDate": "2021-10-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-07-24",
+        "isEol": true,
+        "eolFrom": "2025-01-09",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.3.6",
+          "date": "2024-01-09",
+          "link": "https://github.com/apache/grails-core/releases/tag/v5.3.6"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4",
+      "name": "4",
+      "milestones": {
+        "ga": "2019-07-11",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4",
+        "codename": null,
+        "label": "4",
+        "releaseDate": "2019-07-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-03-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.1.4",
+          "date": "2024-03-08",
+          "link": "https://github.com/apache/grails-core/releases/tag/v4.1.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3",
+      "name": "3",
+      "milestones": {
+        "ga": "2015-03-31",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3",
+        "codename": null,
+        "label": "3",
+        "releaseDate": "2015-03-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-09-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.3.18",
+          "date": "2024-01-09",
+          "link": "https://github.com/apache/grails-core/releases/tag/v3.3.18"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2",
+      "name": "2",
+      "milestones": {
+        "ga": "2011-12-15",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2",
+        "codename": null,
+        "label": "2",
+        "releaseDate": "2011-12-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-06-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.6.1",
+          "date": "2022-06-07",
+          "link": "https://github.com/apache/grails-core/releases/tag/v2.6.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1",
+      "name": "1",
+      "milestones": {
+        "ga": "2009-05-14",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1",
+        "codename": null,
+        "label": "1",
+        "releaseDate": "2009-05-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": true,
+        "eolFrom": "2012-05-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.3.9",
+          "date": "2015-01-16",
+          "link": "https://github.com/apache/grails-core/releases/tag/v1.3.9"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/grails/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-08-24T00:07:02+00:00"
+  }
+}

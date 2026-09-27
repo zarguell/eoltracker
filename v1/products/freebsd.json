@@ -1,0 +1,2083 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "freebsd",
+  "name": "FreeBSD",
+  "category": "software",
+  "upstream_category": "os",
+  "identifiers": [
+    {
+      "type": "cpe",
+      "id": "cpe:/o:freebsd:freebsd"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:o:freebsd:freebsd"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/freebsd.svg",
+    "html": "https://endoflife.date/freebsd",
+    "releasePolicy": "https://www.freebsd.org/security/#sup"
+  },
+  "releases": [
+    {
+      "id": "14.5",
+      "name": "releng/14.5",
+      "milestones": {
+        "ga": "2026-09-08",
+        "eos": null,
+        "eossec": "2027-06-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "14.5",
+        "codename": null,
+        "label": "releng/14.5",
+        "releaseDate": "2026-09-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-06-30",
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "15.1",
+      "name": "releng/15.1",
+      "milestones": {
+        "ga": "2026-06-16",
+        "eos": null,
+        "eossec": "2027-03-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "15.1",
+        "codename": null,
+        "label": "releng/15.1",
+        "releaseDate": "2026-06-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-03-31",
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "14.4",
+      "name": "releng/14.4",
+      "milestones": {
+        "ga": "2026-03-10",
+        "eos": null,
+        "eossec": "2026-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "14.4",
+        "codename": null,
+        "label": "releng/14.4",
+        "releaseDate": "2026-03-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2026-12-31",
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "15",
+      "name": "stable/15",
+      "milestones": {
+        "ga": "2025-12-02",
+        "eos": null,
+        "eossec": "2029-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "15",
+        "codename": null,
+        "label": "stable/15",
+        "releaseDate": "2025-12-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2029-12-31",
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "15.0",
+      "name": "releng/15.0",
+      "milestones": {
+        "ga": "2025-12-02",
+        "eos": null,
+        "eossec": "2026-09-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "15.0",
+        "codename": null,
+        "label": "releng/15.0",
+        "releaseDate": "2025-12-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2026-09-30",
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "14.3",
+      "name": "releng/14.3",
+      "milestones": {
+        "ga": "2025-06-10",
+        "eos": null,
+        "eossec": "2026-06-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "14.3",
+        "codename": null,
+        "label": "releng/14.3",
+        "releaseDate": "2025-06-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-06-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "13.5",
+      "name": "releng/13.5",
+      "milestones": {
+        "ga": "2025-03-11",
+        "eos": null,
+        "eossec": "2026-04-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "13.5",
+        "codename": null,
+        "label": "releng/13.5",
+        "releaseDate": "2025-03-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-04-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "14.2",
+      "name": "releng/14.2",
+      "milestones": {
+        "ga": "2024-12-03",
+        "eos": null,
+        "eossec": "2025-09-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "14.2",
+        "codename": null,
+        "label": "releng/14.2",
+        "releaseDate": "2024-12-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-09-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "13.4",
+      "name": "releng/13.4",
+      "milestones": {
+        "ga": "2024-09-17",
+        "eos": null,
+        "eossec": "2025-06-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "13.4",
+        "codename": null,
+        "label": "releng/13.4",
+        "releaseDate": "2024-09-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-06-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "14.1",
+      "name": "releng/14.1",
+      "milestones": {
+        "ga": "2024-06-04",
+        "eos": null,
+        "eossec": "2025-03-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "14.1",
+        "codename": null,
+        "label": "releng/14.1",
+        "releaseDate": "2024-06-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-03-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "13.3",
+      "name": "releng/13.3",
+      "milestones": {
+        "ga": "2024-03-05",
+        "eos": null,
+        "eossec": "2024-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "13.3",
+        "codename": null,
+        "label": "releng/13.3",
+        "releaseDate": "2024-03-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-12-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "14.0",
+      "name": "releng/14.0",
+      "milestones": {
+        "ga": "2023-11-20",
+        "eos": null,
+        "eossec": "2024-09-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "14.0",
+        "codename": null,
+        "label": "releng/14.0",
+        "releaseDate": "2023-11-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-09-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "14",
+      "name": "stable/14",
+      "milestones": {
+        "ga": "2023-11-20",
+        "eos": null,
+        "eossec": "2028-11-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "14",
+        "codename": null,
+        "label": "stable/14",
+        "releaseDate": "2023-11-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2028-11-30",
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "13.2",
+      "name": "releng/13.2",
+      "milestones": {
+        "ga": "2023-04-11",
+        "eos": null,
+        "eossec": "2024-06-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "13.2",
+        "codename": null,
+        "label": "releng/13.2",
+        "releaseDate": "2023-04-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-06-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "12.4",
+      "name": "releng/12.4",
+      "milestones": {
+        "ga": "2022-12-05",
+        "eos": null,
+        "eossec": "2023-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "12.4",
+        "codename": null,
+        "label": "releng/12.4",
+        "releaseDate": "2022-12-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-12-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "13.1",
+      "name": "releng/13.1",
+      "milestones": {
+        "ga": "2022-05-16",
+        "eos": null,
+        "eossec": "2023-07-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "13.1",
+        "codename": null,
+        "label": "releng/13.1",
+        "releaseDate": "2022-05-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-07-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "12.3",
+      "name": "releng/12.3",
+      "milestones": {
+        "ga": "2021-12-07",
+        "eos": null,
+        "eossec": "2023-03-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "12.3",
+        "codename": null,
+        "label": "releng/12.3",
+        "releaseDate": "2021-12-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-03-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "13.0",
+      "name": "releng/13.0",
+      "milestones": {
+        "ga": "2021-04-13",
+        "eos": null,
+        "eossec": "2022-08-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "13.0",
+        "codename": null,
+        "label": "releng/13.0",
+        "releaseDate": "2021-04-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-08-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "13",
+      "name": "stable/13",
+      "milestones": {
+        "ga": "2021-04-13",
+        "eos": null,
+        "eossec": "2026-04-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "13",
+        "codename": null,
+        "label": "stable/13",
+        "releaseDate": "2021-04-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-04-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "12.2",
+      "name": "releng/12.2",
+      "milestones": {
+        "ga": "2020-10-27",
+        "eos": null,
+        "eossec": "2022-03-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "12.2",
+        "codename": null,
+        "label": "releng/12.2",
+        "releaseDate": "2020-10-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-03-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "11.4",
+      "name": "releng/11.4",
+      "milestones": {
+        "ga": "2020-06-16",
+        "eos": null,
+        "eossec": "2021-09-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "11.4",
+        "codename": null,
+        "label": "releng/11.4",
+        "releaseDate": "2020-06-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-09-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "12.1",
+      "name": "releng/12.1",
+      "milestones": {
+        "ga": "2019-11-04",
+        "eos": null,
+        "eossec": "2021-01-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "12.1",
+        "codename": null,
+        "label": "releng/12.1",
+        "releaseDate": "2019-11-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-01-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "11.3",
+      "name": "releng/11.3",
+      "milestones": {
+        "ga": "2019-07-09",
+        "eos": null,
+        "eossec": "2020-09-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "11.3",
+        "codename": null,
+        "label": "releng/11.3",
+        "releaseDate": "2019-07-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-09-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "12.0",
+      "name": "releng/12.0",
+      "milestones": {
+        "ga": "2018-12-11",
+        "eos": null,
+        "eossec": "2020-02-29",
+        "eol": null
+      },
+      "upstream": {
+        "name": "12.0",
+        "codename": null,
+        "label": "releng/12.0",
+        "releaseDate": "2018-12-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-02-29",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "12",
+      "name": "stable/12",
+      "milestones": {
+        "ga": "2018-12-11",
+        "eos": null,
+        "eossec": "2023-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "12",
+        "codename": null,
+        "label": "stable/12",
+        "releaseDate": "2018-12-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-12-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "11.2",
+      "name": "releng/11.2",
+      "milestones": {
+        "ga": "2018-06-28",
+        "eos": null,
+        "eossec": "2019-10-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "11.2",
+        "codename": null,
+        "label": "releng/11.2",
+        "releaseDate": "2018-06-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-10-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "10.4",
+      "name": "releng/10.4",
+      "milestones": {
+        "ga": "2017-10-03",
+        "eos": null,
+        "eossec": "2018-10-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "10.4",
+        "codename": null,
+        "label": "releng/10.4",
+        "releaseDate": "2017-10-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-10-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "11.1",
+      "name": "releng/11.1",
+      "milestones": {
+        "ga": "2017-07-26",
+        "eos": null,
+        "eossec": "2018-09-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "11.1",
+        "codename": null,
+        "label": "releng/11.1",
+        "releaseDate": "2017-07-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-09-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "11.0",
+      "name": "releng/11.0",
+      "milestones": {
+        "ga": "2016-10-10",
+        "eos": null,
+        "eossec": "2017-11-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "11.0",
+        "codename": null,
+        "label": "releng/11.0",
+        "releaseDate": "2016-10-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-11-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "11",
+      "name": "stable/11",
+      "milestones": {
+        "ga": "2016-10-10",
+        "eos": null,
+        "eossec": "2021-09-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "11",
+        "codename": null,
+        "label": "stable/11",
+        "releaseDate": "2016-10-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-09-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "10.3",
+      "name": "releng/10.3",
+      "milestones": {
+        "ga": "2016-04-04",
+        "eos": null,
+        "eossec": "2018-04-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "10.3",
+        "codename": null,
+        "label": "releng/10.3",
+        "releaseDate": "2016-04-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-04-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "10.2",
+      "name": "releng/10.2",
+      "milestones": {
+        "ga": "2015-08-13",
+        "eos": null,
+        "eossec": "2016-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "10.2",
+        "codename": null,
+        "label": "releng/10.2",
+        "releaseDate": "2015-08-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2016-12-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "10.1",
+      "name": "releng/10.1",
+      "milestones": {
+        "ga": "2014-11-14",
+        "eos": null,
+        "eossec": "2016-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "10.1",
+        "codename": null,
+        "label": "releng/10.1",
+        "releaseDate": "2014-11-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2016-12-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "9.3",
+      "name": "releng/9.3",
+      "milestones": {
+        "ga": "2014-07-16",
+        "eos": null,
+        "eossec": "2016-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.3",
+        "codename": null,
+        "label": "releng/9.3",
+        "releaseDate": "2014-07-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2016-12-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "10.0",
+      "name": "releng/10.0",
+      "milestones": {
+        "ga": "2014-01-20",
+        "eos": null,
+        "eossec": "2015-02-28",
+        "eol": null
+      },
+      "upstream": {
+        "name": "10.0",
+        "codename": null,
+        "label": "releng/10.0",
+        "releaseDate": "2014-01-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2015-02-28",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "10",
+      "name": "stable/10",
+      "milestones": {
+        "ga": "2014-01-20",
+        "eos": null,
+        "eossec": "2018-10-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "10",
+        "codename": null,
+        "label": "stable/10",
+        "releaseDate": "2014-01-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-10-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "9.2",
+      "name": "releng/9.2",
+      "milestones": {
+        "ga": "2013-09-30",
+        "eos": null,
+        "eossec": "2014-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.2",
+        "codename": null,
+        "label": "releng/9.2",
+        "releaseDate": "2013-09-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2014-12-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "8.4",
+      "name": "releng/8.4",
+      "milestones": {
+        "ga": "2013-06-09",
+        "eos": null,
+        "eossec": "2015-08-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "8.4",
+        "codename": null,
+        "label": "releng/8.4",
+        "releaseDate": "2013-06-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2015-08-01",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "9.1",
+      "name": "releng/9.1",
+      "milestones": {
+        "ga": "2012-12-30",
+        "eos": null,
+        "eossec": "2014-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.1",
+        "codename": null,
+        "label": "releng/9.1",
+        "releaseDate": "2012-12-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2014-12-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "8.3",
+      "name": "releng/8.3",
+      "milestones": {
+        "ga": "2012-04-18",
+        "eos": null,
+        "eossec": "2014-04-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "8.3",
+        "codename": null,
+        "label": "releng/8.3",
+        "releaseDate": "2012-04-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2014-04-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "9.0",
+      "name": "releng/9.0",
+      "milestones": {
+        "ga": "2012-01-10",
+        "eos": null,
+        "eossec": "2013-03-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.0",
+        "codename": null,
+        "label": "releng/9.0",
+        "releaseDate": "2012-01-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2013-03-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "9",
+      "name": "stable/9",
+      "milestones": {
+        "ga": "2012-01-10",
+        "eos": null,
+        "eossec": "2016-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "9",
+        "codename": null,
+        "label": "stable/9",
+        "releaseDate": "2012-01-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2016-12-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "7.4",
+      "name": "releng/7.4",
+      "milestones": {
+        "ga": "2011-02-24",
+        "eos": null,
+        "eossec": "2013-02-28",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.4",
+        "codename": null,
+        "label": "releng/7.4",
+        "releaseDate": "2011-02-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2013-02-28",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "8.2",
+      "name": "releng/8.2",
+      "milestones": {
+        "ga": "2011-02-24",
+        "eos": null,
+        "eossec": "2012-07-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "8.2",
+        "codename": null,
+        "label": "releng/8.2",
+        "releaseDate": "2011-02-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2012-07-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "8.1",
+      "name": "releng/8.1",
+      "milestones": {
+        "ga": "2010-07-23",
+        "eos": null,
+        "eossec": "2012-07-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "8.1",
+        "codename": null,
+        "label": "releng/8.1",
+        "releaseDate": "2010-07-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2012-07-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "7.3",
+      "name": "releng/7.3",
+      "milestones": {
+        "ga": "2010-03-23",
+        "eos": null,
+        "eossec": "2012-03-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.3",
+        "codename": null,
+        "label": "releng/7.3",
+        "releaseDate": "2010-03-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2012-03-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "8.0",
+      "name": "releng/8.0",
+      "milestones": {
+        "ga": "2009-11-25",
+        "eos": null,
+        "eossec": "2010-11-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "8.0",
+        "codename": null,
+        "label": "releng/8.0",
+        "releaseDate": "2009-11-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2010-11-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "8",
+      "name": "stable/8",
+      "milestones": {
+        "ga": "2009-11-25",
+        "eos": null,
+        "eossec": "2015-08-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "8",
+        "codename": null,
+        "label": "stable/8",
+        "releaseDate": "2009-11-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2015-08-01",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "7.2",
+      "name": "releng/7.2",
+      "milestones": {
+        "ga": "2009-05-04",
+        "eos": null,
+        "eossec": "2010-06-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.2",
+        "codename": null,
+        "label": "releng/7.2",
+        "releaseDate": "2009-05-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2010-06-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "7.1",
+      "name": "releng/7.1",
+      "milestones": {
+        "ga": "2009-01-04",
+        "eos": null,
+        "eossec": "2011-02-28",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.1",
+        "codename": null,
+        "label": "releng/7.1",
+        "releaseDate": "2009-01-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2011-02-28",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "6.4",
+      "name": "releng/6.4",
+      "milestones": {
+        "ga": "2008-11-28",
+        "eos": null,
+        "eossec": "2010-11-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.4",
+        "codename": null,
+        "label": "releng/6.4",
+        "releaseDate": "2008-11-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2010-11-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "7.0",
+      "name": "releng/7.0",
+      "milestones": {
+        "ga": "2008-02-27",
+        "eos": null,
+        "eossec": "2009-04-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.0",
+        "codename": null,
+        "label": "releng/7.0",
+        "releaseDate": "2008-02-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2009-04-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "7",
+      "name": "stable/7",
+      "milestones": {
+        "ga": "2008-02-27",
+        "eos": null,
+        "eossec": "2013-02-28",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7",
+        "codename": null,
+        "label": "stable/7",
+        "releaseDate": "2008-02-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2013-02-28",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "6.3",
+      "name": "releng/6.3",
+      "milestones": {
+        "ga": "2008-01-18",
+        "eos": null,
+        "eossec": "2010-01-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.3",
+        "codename": null,
+        "label": "releng/6.3",
+        "releaseDate": "2008-01-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2010-01-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "6.2",
+      "name": "releng/6.2",
+      "milestones": {
+        "ga": "2007-01-15",
+        "eos": null,
+        "eossec": "2008-05-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.2",
+        "codename": null,
+        "label": "releng/6.2",
+        "releaseDate": "2007-01-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2008-05-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "5.5",
+      "name": "releng/5.5",
+      "milestones": {
+        "ga": "2006-05-25",
+        "eos": null,
+        "eossec": "2008-05-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.5",
+        "codename": null,
+        "label": "releng/5.5",
+        "releaseDate": "2006-05-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2008-05-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "6.1",
+      "name": "releng/6.1",
+      "milestones": {
+        "ga": "2006-05-09",
+        "eos": null,
+        "eossec": "2008-05-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.1",
+        "codename": null,
+        "label": "releng/6.1",
+        "releaseDate": "2006-05-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2008-05-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "6.0",
+      "name": "releng/6.0",
+      "milestones": {
+        "ga": "2005-11-04",
+        "eos": null,
+        "eossec": "2007-01-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.0",
+        "codename": null,
+        "label": "releng/6.0",
+        "releaseDate": "2005-11-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2007-01-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "6",
+      "name": "stable/6",
+      "milestones": {
+        "ga": "2005-11-04",
+        "eos": null,
+        "eossec": "2010-11-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6",
+        "codename": null,
+        "label": "stable/6",
+        "releaseDate": "2005-11-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2010-11-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "5.4",
+      "name": "releng/5.4",
+      "milestones": {
+        "ga": "2005-05-09",
+        "eos": null,
+        "eossec": "2006-10-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.4",
+        "codename": null,
+        "label": "releng/5.4",
+        "releaseDate": "2005-05-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2006-10-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "4.11",
+      "name": "releng/4.11",
+      "milestones": {
+        "ga": "2005-01-25",
+        "eos": null,
+        "eossec": "2007-01-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.11",
+        "codename": null,
+        "label": "releng/4.11",
+        "releaseDate": "2005-01-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2007-01-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "5.3",
+      "name": "releng/5.3",
+      "milestones": {
+        "ga": "2004-11-06",
+        "eos": null,
+        "eossec": "2006-10-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.3",
+        "codename": null,
+        "label": "releng/5.3",
+        "releaseDate": "2004-11-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2006-10-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "4.10",
+      "name": "releng/4.10",
+      "milestones": {
+        "ga": "2004-05-27",
+        "eos": null,
+        "eossec": "2007-01-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.10",
+        "codename": null,
+        "label": "releng/4.10",
+        "releaseDate": "2004-05-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2007-01-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "5.2",
+      "name": "releng/5.2",
+      "milestones": {
+        "ga": "2004-01-09",
+        "eos": null,
+        "eossec": "2005-02-28",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.2",
+        "codename": null,
+        "label": "releng/5.2",
+        "releaseDate": "2004-01-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2005-02-28",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "4.9",
+      "name": "releng/4.9",
+      "milestones": {
+        "ga": "2003-10-28",
+        "eos": null,
+        "eossec": "2004-08-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.9",
+        "codename": null,
+        "label": "releng/4.9",
+        "releaseDate": "2003-10-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2004-08-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "5.1",
+      "name": "releng/5.1",
+      "milestones": {
+        "ga": "2003-06-09",
+        "eos": null,
+        "eossec": "2004-04-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.1",
+        "codename": null,
+        "label": "releng/5.1",
+        "releaseDate": "2003-06-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2004-04-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "4.8",
+      "name": "releng/4.8",
+      "milestones": {
+        "ga": "2003-04-03",
+        "eos": null,
+        "eossec": "2004-02-28",
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.8",
+        "codename": null,
+        "label": "releng/4.8",
+        "releaseDate": "2003-04-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2004-02-28",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "5.0",
+      "name": "releng/5.0",
+      "milestones": {
+        "ga": "2003-01-14",
+        "eos": null,
+        "eossec": "2003-09-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.0",
+        "codename": null,
+        "label": "releng/5.0",
+        "releaseDate": "2003-01-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2003-09-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "5",
+      "name": "stable/5",
+      "milestones": {
+        "ga": "2003-01-14",
+        "eos": null,
+        "eossec": "2008-05-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5",
+        "codename": null,
+        "label": "stable/5",
+        "releaseDate": "2003-01-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2008-05-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "4.7",
+      "name": "releng/4.7",
+      "milestones": {
+        "ga": "2002-10-10",
+        "eos": null,
+        "eossec": "2003-07-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.7",
+        "codename": null,
+        "label": "releng/4.7",
+        "releaseDate": "2002-10-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2003-07-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "4.6",
+      "name": "releng/4.6",
+      "milestones": {
+        "ga": "2002-06-15",
+        "eos": null,
+        "eossec": "2003-01-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.6",
+        "codename": null,
+        "label": "releng/4.6",
+        "releaseDate": "2002-06-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2003-01-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "4.5",
+      "name": "releng/4.5",
+      "milestones": {
+        "ga": "2002-01-29",
+        "eos": null,
+        "eossec": "2002-09-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.5",
+        "codename": null,
+        "label": "releng/4.5",
+        "releaseDate": "2002-01-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2002-09-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "4.4",
+      "name": "releng/4.4",
+      "milestones": {
+        "ga": "2001-09-20",
+        "eos": null,
+        "eossec": "2002-04-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.4",
+        "codename": null,
+        "label": "releng/4.4",
+        "releaseDate": "2001-09-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2002-04-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "4.3",
+      "name": "releng/4.3",
+      "milestones": {
+        "ga": "2001-04-20",
+        "eos": null,
+        "eossec": "2001-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.3",
+        "codename": null,
+        "label": "releng/4.3",
+        "releaseDate": "2001-04-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2001-12-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "4.2",
+      "name": "releng/4.2",
+      "milestones": {
+        "ga": "2000-11-21",
+        "eos": null,
+        "eossec": "2001-07-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.2",
+        "codename": null,
+        "label": "releng/4.2",
+        "releaseDate": "2000-11-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2001-07-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "4.1",
+      "name": "releng/4.1",
+      "milestones": {
+        "ga": "2000-07-27",
+        "eos": null,
+        "eossec": "2001-02-28",
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.1",
+        "codename": null,
+        "label": "releng/4.1",
+        "releaseDate": "2000-07-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2001-02-28",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "3.5",
+      "name": "releng/3.5",
+      "milestones": {
+        "ga": "2000-06-30",
+        "eos": null,
+        "eossec": "2001-06-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.5",
+        "codename": null,
+        "label": "releng/3.5",
+        "releaseDate": "2000-06-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2001-06-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "4.0",
+      "name": "releng/4.0",
+      "milestones": {
+        "ga": "2000-03-14",
+        "eos": null,
+        "eossec": "2000-10-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.0",
+        "codename": null,
+        "label": "releng/4.0",
+        "releaseDate": "2000-03-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2000-10-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "4",
+      "name": "stable/4",
+      "milestones": {
+        "ga": "2000-03-14",
+        "eos": null,
+        "eossec": "2007-01-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "4",
+        "codename": null,
+        "label": "stable/4",
+        "releaseDate": "2000-03-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2007-01-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "3.4",
+      "name": "releng/3.4",
+      "milestones": {
+        "ga": "1999-12-31",
+        "eos": null,
+        "eossec": "2000-09-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.4",
+        "codename": null,
+        "label": "releng/3.4",
+        "releaseDate": "1999-12-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2000-09-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "3.3",
+      "name": "releng/3.3",
+      "milestones": {
+        "ga": "1999-09-30",
+        "eos": null,
+        "eossec": "2000-02-29",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.3",
+        "codename": null,
+        "label": "releng/3.3",
+        "releaseDate": "1999-09-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2000-02-29",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "3.2",
+      "name": "releng/3.2",
+      "milestones": {
+        "ga": "1999-05-31",
+        "eos": null,
+        "eossec": "1999-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.2",
+        "codename": null,
+        "label": "releng/3.2",
+        "releaseDate": "1999-05-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "1999-12-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "3.1",
+      "name": "releng/3.1",
+      "milestones": {
+        "ga": "1999-02-28",
+        "eos": null,
+        "eossec": "1999-08-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.1",
+        "codename": null,
+        "label": "releng/3.1",
+        "releaseDate": "1999-02-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "1999-08-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "3.0",
+      "name": "releng/3.0",
+      "milestones": {
+        "ga": "1998-10-16",
+        "eos": null,
+        "eossec": "1999-05-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.0",
+        "codename": null,
+        "label": "releng/3.0",
+        "releaseDate": "1998-10-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "1999-05-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "2.2",
+      "name": "releng/2.2",
+      "milestones": {
+        "ga": "1997-03-31",
+        "eos": null,
+        "eossec": "1998-03-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.2",
+        "codename": null,
+        "label": "releng/2.2",
+        "releaseDate": "1997-03-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "1998-03-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "2.1",
+      "name": "releng/2.1",
+      "milestones": {
+        "ga": "1995-11-30",
+        "eos": null,
+        "eossec": "1997-06-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.1",
+        "codename": null,
+        "label": "releng/2.1",
+        "releaseDate": "1995-11-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "1997-06-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "2.0",
+      "name": "releng/2.0",
+      "milestones": {
+        "ga": "1994-11-22",
+        "eos": null,
+        "eossec": "1996-02-28",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.0",
+        "codename": null,
+        "label": "releng/2.0",
+        "releaseDate": "1994-11-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "1996-02-28",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "1.1",
+      "name": "releng/1.1",
+      "milestones": {
+        "ga": "1994-05-31",
+        "eos": null,
+        "eossec": "1995-05-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.1",
+        "codename": null,
+        "label": "releng/1.1",
+        "releaseDate": "1994-05-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "1995-05-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "1.0",
+      "name": "releng/1.0",
+      "milestones": {
+        "ga": "1993-11-30",
+        "eos": null,
+        "eossec": "1994-08-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.0",
+        "codename": null,
+        "label": "releng/1.0",
+        "releaseDate": "1993-11-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "1994-08-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/freebsd/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-08T19:16:13+00:00"
+  }
+}

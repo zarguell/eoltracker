@@ -1,0 +1,230 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "zookeeper",
+  "name": "Apache ZooKeeper",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "zookeeper"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:maven/org.apache.zookeeper/zookeeper"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/apache/zookeeper"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/library/zookeeper"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:deb/debian/zookeeper"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:apache:zookeeper"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:apache:zookeeper"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/zookeeper",
+    "releasePolicy": "https://zookeeper.apache.org/releases.html"
+  },
+  "releases": [
+    {
+      "id": "3.9",
+      "name": "3.9",
+      "milestones": {
+        "ga": "2023-07-19",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.9",
+        "codename": null,
+        "label": "3.9",
+        "releaseDate": "2023-07-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "3.9.6",
+          "date": "2026-09-14",
+          "link": "https://zookeeper.apache.org/doc/r3.9.6/releasenotes.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.8",
+      "name": "3.8",
+      "milestones": {
+        "ga": "2022-02-25",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.8",
+        "codename": null,
+        "label": "3.8",
+        "releaseDate": "2022-02-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "3.8.7",
+          "date": "2026-09-14",
+          "link": "https://zookeeper.apache.org/doc/r3.8.7/releasenotes.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.7",
+      "name": "3.7",
+      "milestones": {
+        "ga": "2021-03-17",
+        "eos": null,
+        "eossec": "2024-01-19",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.7",
+        "codename": null,
+        "label": "3.7",
+        "releaseDate": "2021-03-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-07-19",
+        "isEol": true,
+        "eolFrom": "2024-01-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.7.2",
+          "date": "2023-10-09",
+          "link": "https://zookeeper.apache.org/doc/r3.7.2/releasenotes.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.6",
+      "name": "3.6",
+      "milestones": {
+        "ga": "2020-02-25",
+        "eos": null,
+        "eossec": "2022-12-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.6",
+        "codename": null,
+        "label": "3.6",
+        "releaseDate": "2020-02-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-03-07",
+        "isEol": true,
+        "eolFrom": "2022-12-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.6.4",
+          "date": "2022-12-30",
+          "link": "https://zookeeper.apache.org/doc/r3.6.4/releasenotes.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.5",
+      "name": "3.5",
+      "milestones": {
+        "ga": "2019-05-03",
+        "eos": null,
+        "eossec": "2022-06-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.5",
+        "codename": null,
+        "label": "3.5",
+        "releaseDate": "2019-05-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-03-27",
+        "isEol": true,
+        "eolFrom": "2022-06-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.5.10",
+          "date": "2022-06-04",
+          "link": "https://zookeeper.apache.org/doc/r3.5.10/releasenotes.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.4",
+      "name": "3.4",
+      "milestones": {
+        "ga": "2011-11-23",
+        "eos": null,
+        "eossec": "2020-06-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.4",
+        "codename": null,
+        "label": "3.4",
+        "releaseDate": "2011-11-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-03-27",
+        "isEol": true,
+        "eolFrom": "2020-06-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.4.14",
+          "date": "2019-04-01",
+          "link": "https://zookeeper.apache.org/doc/r3.4.14/releasenotes.html"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/zookeeper/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-15T00:08:08+00:00"
+  }
+}

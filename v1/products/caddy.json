@@ -1,0 +1,142 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "caddy",
+  "name": "Caddy",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "caddy"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:alpm/caddy"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:apk/alpine/caddy"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:brew/caddy"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:chocolatey/caddy"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:deb/debian/caddy"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:deb/ubuntu/caddy"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/library/caddy"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/caddyserver/caddy"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:golang/github.com/caddyserver/caddy/v2"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:oci/caddy?repository_url=quay.io/repository/caddy"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:rpm/fedora/caddy"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:scoop/caddy"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:caddyserver:caddy"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:caddyserver:caddy"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/caddy.svg",
+    "html": "https://endoflife.date/caddy",
+    "releasePolicy": "https://github.com/caddyserver/caddy/security"
+  },
+  "releases": [
+    {
+      "id": "2",
+      "name": "2",
+      "milestones": {
+        "ga": "2020-05-04",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2",
+        "codename": null,
+        "label": "2",
+        "releaseDate": "2020-05-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "2.11.4",
+          "date": "2026-06-02",
+          "link": "https://github.com/caddyserver/caddy/releases/tag/v2.11.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1",
+      "name": "1",
+      "milestones": {
+        "ga": "2019-04-24",
+        "eos": null,
+        "eossec": "2020-07-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1",
+        "codename": null,
+        "label": "1",
+        "releaseDate": "2019-04-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-07-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.0.5",
+          "date": "2020-02-28",
+          "link": "https://github.com/caddyserver/caddy/releases/tag/v1.0.5"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/caddy/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-06-03T18:02:01+00:00"
+  }
+}

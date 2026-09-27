@@ -1,0 +1,607 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "google-kubernetes-engine",
+  "name": "Google Kubernetes Engine",
+  "category": "software",
+  "upstream_category": "service",
+  "identifiers": [],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Maintenance Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/kubernetes.svg",
+    "html": "https://endoflife.date/google-kubernetes-engine",
+    "releasePolicy": "https://cloud.google.com/kubernetes-engine/docs/release-schedule"
+  },
+  "releases": [
+    {
+      "id": "1.36",
+      "name": "1.36",
+      "milestones": {
+        "ga": "2026-06-09",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.36",
+        "codename": null,
+        "label": "1.36",
+        "releaseDate": "2026-06-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": "2027-06-30",
+        "isEol": false,
+        "eolFrom": "2027-08-09",
+        "isMaintained": true,
+        "latest": {
+          "name": "1.36.4-gke.1247000",
+          "date": "2026-09-08",
+          "link": "https://cloud.google.com/kubernetes-engine/docs/release-notes-nochannel"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.35",
+      "name": "1.35",
+      "milestones": {
+        "ga": "2026-02-11",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.35",
+        "codename": null,
+        "label": "1.35",
+        "releaseDate": "2026-02-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": "2027-02-28",
+        "isEol": false,
+        "eolFrom": "2027-04-11",
+        "isMaintained": true,
+        "latest": {
+          "name": "1.35.8-gke.1380000",
+          "date": "2026-09-08",
+          "link": "https://cloud.google.com/kubernetes-engine/docs/release-notes-nochannel"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.34",
+      "name": "1.34",
+      "milestones": {
+        "ga": "2025-09-30",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.34",
+        "codename": null,
+        "label": "1.34",
+        "releaseDate": "2025-09-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-08-30",
+        "isEol": false,
+        "eolFrom": "2026-10-01",
+        "isMaintained": true,
+        "latest": {
+          "name": "1.34.11-gke.1056000",
+          "date": "2026-09-08",
+          "link": "https://cloud.google.com/kubernetes-engine/docs/release-notes-nochannel"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.33",
+      "name": "1.33",
+      "milestones": {
+        "ga": "2025-06-03",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.33",
+        "codename": null,
+        "label": "1.33",
+        "releaseDate": "2025-06-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-06-30",
+        "isEol": true,
+        "eolFrom": "2026-08-03",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.33.13-gke.1636000",
+          "date": "2026-09-08",
+          "link": "https://cloud.google.com/kubernetes-engine/docs/release-notes-nochannel"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.32",
+      "name": "1.32",
+      "milestones": {
+        "ga": "2025-02-11",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.32",
+        "codename": null,
+        "label": "1.32",
+        "releaseDate": "2025-02-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-02-28",
+        "isEol": true,
+        "eolFrom": "2026-04-11",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.32.13-gke.2411000",
+          "date": "2026-09-08",
+          "link": "https://cloud.google.com/kubernetes-engine/docs/release-notes-nochannel"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.31",
+      "name": "1.31",
+      "milestones": {
+        "ga": "2024-10-25",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.31",
+        "codename": null,
+        "label": "1.31",
+        "releaseDate": "2024-10-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-11-30",
+        "isEol": true,
+        "eolFrom": "2026-01-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.31.14-gke.2689000",
+          "date": "2026-09-08",
+          "link": "https://cloud.google.com/kubernetes-engine/docs/release-notes-nochannel"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.30",
+      "name": "1.30",
+      "milestones": {
+        "ga": "2024-07-31",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.30",
+        "codename": null,
+        "label": "1.30",
+        "releaseDate": "2024-07-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-07-31",
+        "isEol": true,
+        "eolFrom": "2025-09-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.30.14-gke.2866000",
+          "date": "2026-07-30",
+          "link": "https://cloud.google.com/kubernetes-engine/docs/release-notes-nochannel"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.29",
+      "name": "1.29",
+      "milestones": {
+        "ga": "2024-01-26",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.29",
+        "codename": null,
+        "label": "1.29",
+        "releaseDate": "2024-01-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-02-28",
+        "isEol": true,
+        "eolFrom": "2025-04-12",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.29.15-gke.2725000",
+          "date": "2026-01-29",
+          "link": "https://cloud.google.com/kubernetes-engine/docs/release-notes-nochannel"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.28",
+      "name": "1.28",
+      "milestones": {
+        "ga": "2023-12-04",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.28",
+        "codename": null,
+        "label": "1.28",
+        "releaseDate": "2023-12-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-12-31",
+        "isEol": true,
+        "eolFrom": "2025-02-04",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.28.15-gke.3290000",
+          "date": "2026-01-07",
+          "link": "https://cloud.google.com/kubernetes-engine/docs/release-notes-nochannel"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.27",
+      "name": "1.27",
+      "milestones": {
+        "ga": "2023-06-15",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.27",
+        "codename": null,
+        "label": "1.27",
+        "releaseDate": "2023-06-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-07-31",
+        "isEol": true,
+        "eolFrom": "2024-10-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.27.16-gke.2894000",
+          "date": "2025-06-18",
+          "link": "https://cloud.google.com/kubernetes-engine/docs/release-notes-nochannel"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.26",
+      "name": "1.26",
+      "milestones": {
+        "ga": "2023-03-31",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.26",
+        "codename": null,
+        "label": "1.26",
+        "releaseDate": "2023-03-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-04-30",
+        "isEol": true,
+        "eolFrom": "2024-06-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.26.15-gke.1469001",
+          "date": "2024-07-03",
+          "link": "https://cloud.google.com/kubernetes-engine/docs/release-notes-nochannel"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.25",
+      "name": "1.25",
+      "milestones": {
+        "ga": "2022-12-14",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.25",
+        "codename": null,
+        "label": "1.25",
+        "releaseDate": "2022-12-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-01-31",
+        "isEol": true,
+        "eolFrom": "2024-03-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.25.16-gke.1759000",
+          "date": "2024-04-18",
+          "link": "https://cloud.google.com/kubernetes-engine/docs/release-notes-nochannel"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.24",
+      "name": "1.24",
+      "milestones": {
+        "ga": "2022-06-23",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.24",
+        "codename": null,
+        "label": "1.24",
+        "releaseDate": "2022-06-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-08-31",
+        "isEol": true,
+        "eolFrom": "2023-10-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.24.17-gke.2472000",
+          "date": "2024-01-11",
+          "link": "https://cloud.google.com/kubernetes-engine/docs/release-notes-nochannel"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.23",
+      "name": "1.23",
+      "milestones": {
+        "ga": "2022-05-03",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.23",
+        "codename": null,
+        "label": "1.23",
+        "releaseDate": "2022-05-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-05-31",
+        "isEol": true,
+        "eolFrom": "2023-07-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.23.17-gke.10700",
+          "date": "2023-08-08",
+          "link": "https://cloud.google.com/kubernetes-engine/docs/release-notes-nochannel"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.22",
+      "name": "1.22",
+      "milestones": {
+        "ga": "2022-03-07",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.22",
+        "codename": null,
+        "label": "1.22",
+        "releaseDate": "2022-03-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-02-28",
+        "isEol": true,
+        "eolFrom": "2023-04-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.22.17-gke.14100",
+          "date": "2023-07-07",
+          "link": "https://cloud.google.com/kubernetes-engine/docs/release-notes-nochannel"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.21",
+      "name": "1.21",
+      "milestones": {
+        "ga": "2021-10-01",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.21",
+        "codename": null,
+        "label": "1.21",
+        "releaseDate": "2021-10-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-11-01",
+        "isEol": true,
+        "eolFrom": "2023-01-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.21.14-gke.18800",
+          "date": "2023-03-22",
+          "link": "https://cloud.google.com/kubernetes-engine/docs/release-notes-nochannel"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.20",
+      "name": "1.20",
+      "milestones": {
+        "ga": "2021-06-09",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.20",
+        "codename": null,
+        "label": "1.20",
+        "releaseDate": "2021-06-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-12-01",
+        "isEol": true,
+        "eolFrom": "2022-08-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.20.15-gke.13700",
+          "date": "2022-08-18",
+          "link": "https://cloud.google.com/kubernetes-engine/docs/release-notes-nochannel"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.19",
+      "name": "1.19",
+      "milestones": {
+        "ga": "2021-04-14",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.19",
+        "codename": null,
+        "label": "1.19",
+        "releaseDate": "2021-04-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-10-01",
+        "isEol": true,
+        "eolFrom": "2022-06-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.19.16-gke.15700",
+          "date": "2022-06-23",
+          "link": "https://cloud.google.com/kubernetes-engine/docs/release-notes-nochannel"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.18",
+      "name": "1.18",
+      "milestones": {
+        "ga": "2021-03-29",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.18",
+        "codename": null,
+        "label": "1.18",
+        "releaseDate": "2021-03-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-08-01",
+        "isEol": true,
+        "eolFrom": "2022-03-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.18.20-gke.6000",
+          "date": "2021-09-17",
+          "link": "https://cloud.google.com/kubernetes-engine/docs/release-notes-nochannel"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.17",
+      "name": "1.17",
+      "milestones": {
+        "ga": "2021-03-29",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.17",
+        "codename": null,
+        "label": "1.17",
+        "releaseDate": "2021-03-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-07-01",
+        "isEol": true,
+        "eolFrom": "2021-11-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.17.17-gke.9100",
+          "date": "2021-06-09",
+          "link": "https://cloud.google.com/kubernetes-engine/docs/release-notes-nochannel"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/google-kubernetes-engine/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-10T00:08:43+00:00"
+  }
+}

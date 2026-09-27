@@ -1,0 +1,61 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "cisco-cisco-catalyst-2918-24tt-c-switch",
+  "name": "Cisco Catalyst 2918-24TT-C Switch",
+  "category": "hardware",
+  "vendor": "Cisco",
+  "product_line": "Cisco CATALYST",
+  "family": "CATALYST",
+  "model_number": "Cisco Catalyst 2918-24TT-C Switch",
+  "milestones": {
+    "ga": null,
+    "eos": null,
+    "eossec": null,
+    "eol": "2020-10-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "Cisco Catalyst 2918-24TT-C Switch",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "Cisco Catalyst 2918-24TT-C Switch",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Cisco CATALYST",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Not Announced",
+      "datetime": "",
+      "value": null,
+      "role": "ga",
+      "links": []
+    },
+    "End of Support": {
+      "text": "2020-10-31",
+      "datetime": null,
+      "value": "2020-10-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/network/ethernet-switches/vendor/cisco/catalyst/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

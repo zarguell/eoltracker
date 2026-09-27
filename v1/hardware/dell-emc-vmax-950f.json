@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-vmax-950f",
+  "name": "VMAX 950F",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Symmetrix",
+  "family": "Symmetrix",
+  "model_number": "VMAX 950F",
+  "milestones": {
+    "ga": "2017-05-12",
+    "eos": "2022-07-31",
+    "eossec": null,
+    "eol": "2027-07-31"
+  },
+  "status": "supported",
+  "upstream": {
+    "Product": {
+      "text": "VMAX 950F",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "VMAX 950F",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Symmetrix",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2022-07-31",
+      "datetime": null,
+      "value": "2022-07-31",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "May. 12, 2017",
+      "datetime": "2017-05-12",
+      "value": "2017-05-12",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2027-07-31",
+      "datetime": null,
+      "value": "2027-07-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/san-storage/vendor/dell-emc/symmetrix/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

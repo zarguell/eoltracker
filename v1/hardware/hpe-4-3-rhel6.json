@@ -1,0 +1,77 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "hpe-4-3-rhel6",
+  "name": "4.3/RHEL6",
+  "category": "hardware",
+  "vendor": "HPE",
+  "product_line": "HPE",
+  "family": "HPE OC Universal Signaling Platform (OC USP-M)",
+  "model_number": "4.3/RHEL6",
+  "milestones": {
+    "ga": null,
+    "eos": "2023-05-01",
+    "eossec": null,
+    "eol": "2026-04-30"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "4.3/RHEL6",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Version Number": {
+      "text": "4.3/RHEL6",
+      "datetime": null,
+      "value": null,
+      "role": "version",
+      "links": []
+    },
+    "Release Type": {
+      "text": "End of Software Support",
+      "datetime": null,
+      "value": null,
+      "role": null,
+      "links": []
+    },
+    "Release Stream": {
+      "text": "4.3/RHEL6",
+      "datetime": null,
+      "value": null,
+      "role": null,
+      "links": []
+    },
+    "End of Sales Date": {
+      "text": "May. 01, 2023",
+      "datetime": "2023-05-01",
+      "value": "2023-05-01",
+      "role": "eos",
+      "links": []
+    },
+    "Announcement Date": {
+      "text": "Jun. 01, 2022",
+      "datetime": "2022-06-01",
+      "value": "2022-06-01",
+      "role": null,
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "Apr. 30, 2026",
+      "datetime": "2026-04-30",
+      "value": "2026-04-30",
+      "role": "eol",
+      "links": [
+        "https://support.hpe.com/portal/site/hpsc/scm/home"
+      ]
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/communications-and-media-solutions/vendor/hpe/hpe-oc-universal-signaling-platform-oc-usp-m/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

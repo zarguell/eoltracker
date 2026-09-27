@@ -1,0 +1,193 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "matomo",
+  "name": "Matomo",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "matomo"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/library/matomo"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/bitnami/matomo"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/matomo-org/matomo"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:matomo:matomo"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Long Term Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/matomo.svg",
+    "html": "https://endoflife.date/matomo",
+    "releasePolicy": "https://matomo.org/faq/new-to-piwik/faq_18925/"
+  },
+  "releases": [
+    {
+      "id": "5",
+      "name": "5",
+      "milestones": {
+        "ga": "2023-12-18",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5",
+        "codename": null,
+        "label": "5",
+        "releaseDate": "2023-12-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "5.13.0",
+          "date": "2026-08-17",
+          "link": "https://github.com/matomo-org/matomo/releases/tag/5.13.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4",
+      "name": "4",
+      "milestones": {
+        "ga": "2020-11-24",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4",
+        "codename": null,
+        "label": "4",
+        "releaseDate": "2020-11-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-12-18",
+        "isEol": true,
+        "eolFrom": "2024-12-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.16.2",
+          "date": "2025-11-20",
+          "link": "https://github.com/matomo-org/matomo/releases/tag/4.16.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3",
+      "name": "3",
+      "milestones": {
+        "ga": "2016-12-19",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3",
+        "codename": null,
+        "label": "3",
+        "releaseDate": "2016-12-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-11-24",
+        "isEol": true,
+        "eolFrom": "2021-12-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.14.1",
+          "date": "2020-09-11",
+          "link": "https://github.com/matomo-org/matomo/releases/tag/3.14.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2",
+      "name": "2",
+      "milestones": {
+        "ga": "2013-12-17",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2",
+        "codename": null,
+        "label": "2",
+        "releaseDate": "2013-12-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2016-12-19",
+        "isEol": true,
+        "eolFrom": "2017-12-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.18.1",
+          "date": "2020-07-01",
+          "link": "https://github.com/matomo-org/matomo/releases/tag/2.18.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1",
+      "name": "1",
+      "milestones": {
+        "ga": "2010-08-28",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1",
+        "codename": null,
+        "label": "1",
+        "releaseDate": "2010-08-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2013-12-17",
+        "isEol": true,
+        "eolFrom": "2013-12-17",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.12",
+          "date": "2013-05-30",
+          "link": "https://github.com/matomo-org/matomo/releases/tag/1.12"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/matomo/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-08-18T00:07:43+00:00"
+  }
+}

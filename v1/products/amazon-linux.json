@@ -1,0 +1,541 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "amazon-linux",
+  "name": "Amazon Linux",
+  "category": "software",
+  "upstream_category": "os",
+  "identifiers": [
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:o:amazon:linux"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:o:amazon:amazon_linux"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/o:amazon:linux"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/o:amazon:amazon_linux"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/library/amazonlinux"
+    }
+  ],
+  "labels": {
+    "eoas": "Standard Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/amazonaws.svg",
+    "html": "https://endoflife.date/amazon-linux",
+    "releasePolicy": "https://docs.aws.amazon.com/AL2/latest/relnotes/relnotes-al2.html"
+  },
+  "releases": [
+    {
+      "id": "2023",
+      "name": "2023",
+      "milestones": {
+        "ga": "2023-03-01",
+        "eos": null,
+        "eossec": "2029-06-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2023",
+        "codename": null,
+        "label": "2023",
+        "releaseDate": "2023-03-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": "2027-06-30",
+        "isEol": false,
+        "eolFrom": "2029-06-30",
+        "isMaintained": true,
+        "latest": {
+          "name": "2023.12.20260831.0",
+          "date": "2026-09-15",
+          "link": "https://aws.amazon.com/about-aws/whats-new/2023/03/amazon-linux-2023/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2",
+      "name": "2",
+      "milestones": {
+        "ga": "2018-06-26",
+        "eos": null,
+        "eossec": "2026-06-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2",
+        "codename": null,
+        "label": "2",
+        "releaseDate": "2018-06-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-06-30",
+        "isEol": true,
+        "eolFrom": "2026-06-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.0.20260831.0",
+          "date": "2026-09-15",
+          "link": "https://aws.amazon.com/about-aws/whats-new/2018/06/announcing-amazon-linux-2-with-long-term-support/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2018.03",
+      "name": "AMI 2018.03",
+      "milestones": {
+        "ga": "2018-04-25",
+        "eos": null,
+        "eossec": "2023-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2018.03",
+        "codename": null,
+        "label": "AMI 2018.03",
+        "releaseDate": "2018-04-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-12-31",
+        "isEol": true,
+        "eolFrom": "2023-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "2018.03.0.20231218.0",
+          "date": "2026-06-16",
+          "link": "https://aws.amazon.com/amazon-linux-ami/2018.03-release-notes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2017.09",
+      "name": "AMI 2017.09",
+      "milestones": {
+        "ga": "2017-11-03",
+        "eos": null,
+        "eossec": "2023-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2017.09",
+        "codename": null,
+        "label": "AMI 2017.09",
+        "releaseDate": "2017-11-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-12-31",
+        "isEol": true,
+        "eolFrom": "2023-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "2017.09.1.20180409",
+          "date": "2018-04-10",
+          "link": "https://aws.amazon.com/blogs/aws/now-available-amazon-linux-ami-2017-09/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2017.03",
+      "name": "AMI 2017.03",
+      "milestones": {
+        "ga": "2017-04-07",
+        "eos": null,
+        "eossec": "2023-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2017.03",
+        "codename": null,
+        "label": "AMI 2017.03",
+        "releaseDate": "2017-04-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-12-31",
+        "isEol": true,
+        "eolFrom": "2023-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "2017.03.1.20170812",
+          "date": "2017-11-03",
+          "link": "https://aws.amazon.com/blogs/aws/amazon-inspector-update-assessment-reporting-proxy-support-and-more/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2016.09",
+      "name": "AMI 2016.09",
+      "milestones": {
+        "ga": "2016-11-16",
+        "eos": null,
+        "eossec": "2023-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2016.09",
+        "codename": null,
+        "label": "AMI 2016.09",
+        "releaseDate": "2016-11-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-12-31",
+        "isEol": true,
+        "eolFrom": "2023-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "2016.09.1.20161221",
+          "date": "2017-11-03",
+          "link": "https://aws.amazon.com/blogs/aws/now-available-amazon-linux-ami-2016-09/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2016.03",
+      "name": "AMI 2016.03",
+      "milestones": {
+        "ga": "2016-03-22",
+        "eos": null,
+        "eossec": "2023-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2016.03",
+        "codename": null,
+        "label": "AMI 2016.03",
+        "releaseDate": "2016-03-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-12-31",
+        "isEol": true,
+        "eolFrom": "2023-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "2016.03",
+          "date": null,
+          "link": "https://aws.amazon.com/amazon-linux-ami/2016.03-release-notes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2015.09",
+      "name": "AMI 2015.09",
+      "milestones": {
+        "ga": "2015-09-22",
+        "eos": null,
+        "eossec": "2023-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2015.09",
+        "codename": null,
+        "label": "AMI 2015.09",
+        "releaseDate": "2015-09-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-12-31",
+        "isEol": true,
+        "eolFrom": "2023-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "2015.09",
+          "date": null,
+          "link": "https://aws.amazon.com/blogs/aws/now-available-amazon-linux-ami-2015-09/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2015.03",
+      "name": "AMI 2015.03",
+      "milestones": {
+        "ga": "2015-03-24",
+        "eos": null,
+        "eossec": "2023-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2015.03",
+        "codename": null,
+        "label": "AMI 2015.03",
+        "releaseDate": "2015-03-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-12-31",
+        "isEol": true,
+        "eolFrom": "2023-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "2015.03",
+          "date": null,
+          "link": "https://aws.amazon.com/blogs/aws/now-available-amazon-linux-ami-2015-03/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2014.09",
+      "name": "AMI 2014.09",
+      "milestones": {
+        "ga": "2014-09-23",
+        "eos": null,
+        "eossec": "2023-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2014.09",
+        "codename": null,
+        "label": "AMI 2014.09",
+        "releaseDate": "2014-09-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-12-31",
+        "isEol": true,
+        "eolFrom": "2023-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "2014.09",
+          "date": null,
+          "link": "https://aws.amazon.com/blogs/aws/amazon-linux-ami-2014-09/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2014.03",
+      "name": "AMI 2014.03",
+      "milestones": {
+        "ga": "2014-03-27",
+        "eos": null,
+        "eossec": "2023-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2014.03",
+        "codename": null,
+        "label": "AMI 2014.03",
+        "releaseDate": "2014-03-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-12-31",
+        "isEol": true,
+        "eolFrom": "2023-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "2014.03",
+          "date": null,
+          "link": "https://aws.amazon.com/blogs/aws/amazon-linux-ami-201403-is-now-available/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2013.09",
+      "name": "AMI 2013.09",
+      "milestones": {
+        "ga": "2013-09-30",
+        "eos": null,
+        "eossec": "2023-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2013.09",
+        "codename": null,
+        "label": "AMI 2013.09",
+        "releaseDate": "2013-09-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-12-31",
+        "isEol": true,
+        "eolFrom": "2023-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "2013.09",
+          "date": null,
+          "link": "https://aws.amazon.com/blogs/aws/amazon-linux-ami-201309-now-available/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2013.03",
+      "name": "AMI 2013.03",
+      "milestones": {
+        "ga": "2013-03-27",
+        "eos": null,
+        "eossec": "2023-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2013.03",
+        "codename": null,
+        "label": "AMI 2013.03",
+        "releaseDate": "2013-03-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-12-31",
+        "isEol": true,
+        "eolFrom": "2023-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "2013.03",
+          "date": null,
+          "link": "https://aws.amazon.com/blogs/aws/amazon-linux-ami-201303-now-available/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2012.09",
+      "name": "AMI 2012.09",
+      "milestones": {
+        "ga": "2012-10-11",
+        "eos": null,
+        "eossec": "2023-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2012.09",
+        "codename": null,
+        "label": "AMI 2012.09",
+        "releaseDate": "2012-10-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-12-31",
+        "isEol": true,
+        "eolFrom": "2023-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "2012.09",
+          "date": null,
+          "link": "https://aws.amazon.com/blogs/aws/amazon-linux-ami-201209-now-available/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2012.03",
+      "name": "AMI 2012.03",
+      "milestones": {
+        "ga": "2012-03-28",
+        "eos": null,
+        "eossec": "2023-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2012.03",
+        "codename": null,
+        "label": "AMI 2012.03",
+        "releaseDate": "2012-03-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-12-31",
+        "isEol": true,
+        "eolFrom": "2023-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "2012.03",
+          "date": null,
+          "link": "https://aws.amazon.com/blogs/aws/updated-amazon-linux-ami-201203-now-available/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2011.09",
+      "name": "AMI 2011.09",
+      "milestones": {
+        "ga": "2011-09-26",
+        "eos": null,
+        "eossec": "2023-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2011.09",
+        "codename": null,
+        "label": "AMI 2011.09",
+        "releaseDate": "2011-09-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-12-31",
+        "isEol": true,
+        "eolFrom": "2023-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "2011.09",
+          "date": null,
+          "link": "https://aws.amazon.com/blogs/aws/amazon-linux-ami-production-status-new-features/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2010.11",
+      "name": "AMI 2010.11",
+      "milestones": {
+        "ga": "2010-12-01",
+        "eos": null,
+        "eossec": "2023-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2010.11",
+        "codename": null,
+        "label": "AMI 2010.11",
+        "releaseDate": "2010-12-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-12-31",
+        "isEol": true,
+        "eolFrom": "2023-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "2010.11",
+          "date": null,
+          "link": "https://aws.amazon.com/blogs/aws/amazon-linux-ami-2010111-released/"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/amazon-linux/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-16T00:07:55+00:00"
+  }
+}

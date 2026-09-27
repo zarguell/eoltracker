@@ -1,0 +1,399 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "gatekeeper",
+  "name": "Gatekeeper",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "gatekeeper"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/open-policy-agent/gatekeeper"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/openpolicyagent/gatekeeper"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:oci/gatekeeper?repository_url=cgr.dev/chainguard"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:openpolicyagent:gatekeeper"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/gatekeeper",
+    "releasePolicy": "https://github.com/open-policy-agent/gatekeeper/blob/master/docs/Release_Management.md#supported-releases"
+  },
+  "releases": [
+    {
+      "id": "3.23",
+      "name": "3.23",
+      "milestones": {
+        "ga": "2026-07-09",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.23",
+        "codename": null,
+        "label": "3.23",
+        "releaseDate": "2026-07-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "3.23.1",
+          "date": "2026-08-27",
+          "link": "https://github.com/open-policy-agent/gatekeeper/releases/tag/v3.23.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.22",
+      "name": "3.22",
+      "milestones": {
+        "ga": "2026-03-09",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.22",
+        "codename": null,
+        "label": "3.22",
+        "releaseDate": "2026-03-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "3.22.2",
+          "date": "2026-04-27",
+          "link": "https://github.com/open-policy-agent/gatekeeper/releases/tag/v3.22.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.21",
+      "name": "3.21",
+      "milestones": {
+        "ga": "2025-11-19",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-07-09"
+      },
+      "upstream": {
+        "name": "3.21",
+        "codename": null,
+        "label": "3.21",
+        "releaseDate": "2025-11-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-07-09",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.21.1",
+          "date": "2026-02-04",
+          "link": "https://github.com/open-policy-agent/gatekeeper/releases/tag/v3.21.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.20",
+      "name": "3.20",
+      "milestones": {
+        "ga": "2025-07-24",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-03-09"
+      },
+      "upstream": {
+        "name": "3.20",
+        "codename": null,
+        "label": "3.20",
+        "releaseDate": "2025-07-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-03-09",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.20.1",
+          "date": "2025-08-29",
+          "link": "https://github.com/open-policy-agent/gatekeeper/releases/tag/v3.20.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.19",
+      "name": "3.19",
+      "milestones": {
+        "ga": "2025-04-09",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-11-19"
+      },
+      "upstream": {
+        "name": "3.19",
+        "codename": null,
+        "label": "3.19",
+        "releaseDate": "2025-04-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-11-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.19.3",
+          "date": "2025-07-15",
+          "link": "https://github.com/open-policy-agent/gatekeeper/releases/tag/v3.19.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.18",
+      "name": "3.18",
+      "milestones": {
+        "ga": "2024-12-12",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-07-24"
+      },
+      "upstream": {
+        "name": "3.18",
+        "codename": null,
+        "label": "3.18",
+        "releaseDate": "2024-12-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-07-24",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.18.3",
+          "date": "2025-04-25",
+          "link": "https://github.com/open-policy-agent/gatekeeper/releases/tag/v3.18.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.17",
+      "name": "3.17",
+      "milestones": {
+        "ga": "2024-08-21",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-04-09"
+      },
+      "upstream": {
+        "name": "3.17",
+        "codename": null,
+        "label": "3.17",
+        "releaseDate": "2024-08-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-04-09",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.17.2",
+          "date": "2025-01-24",
+          "link": "https://github.com/open-policy-agent/gatekeeper/releases/tag/v3.17.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.16",
+      "name": "3.16",
+      "milestones": {
+        "ga": "2024-05-09",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-12-12"
+      },
+      "upstream": {
+        "name": "3.16",
+        "codename": null,
+        "label": "3.16",
+        "releaseDate": "2024-05-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-12-12",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.16.3",
+          "date": "2024-05-24",
+          "link": "https://github.com/open-policy-agent/gatekeeper/releases/tag/v3.16.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.15",
+      "name": "3.15",
+      "milestones": {
+        "ga": "2024-02-05",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-08-21"
+      },
+      "upstream": {
+        "name": "3.15",
+        "codename": null,
+        "label": "3.15",
+        "releaseDate": "2024-02-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-08-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.15.1",
+          "date": "2024-03-12",
+          "link": "https://github.com/open-policy-agent/gatekeeper/releases/tag/v3.15.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.14",
+      "name": "3.14",
+      "milestones": {
+        "ga": "2023-11-01",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-05-09"
+      },
+      "upstream": {
+        "name": "3.14",
+        "codename": null,
+        "label": "3.14",
+        "releaseDate": "2023-11-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-05-09",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.14.2",
+          "date": "2024-04-22",
+          "link": "https://github.com/open-policy-agent/gatekeeper/releases/tag/v3.14.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.13",
+      "name": "3.13",
+      "milestones": {
+        "ga": "2023-08-08",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-02-05"
+      },
+      "upstream": {
+        "name": "3.13",
+        "codename": null,
+        "label": "3.13",
+        "releaseDate": "2023-08-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-02-05",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.13.4",
+          "date": "2023-11-01",
+          "link": "https://github.com/open-policy-agent/gatekeeper/releases/tag/v3.13.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.12",
+      "name": "3.12",
+      "milestones": {
+        "ga": "2023-04-14",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-11-01"
+      },
+      "upstream": {
+        "name": "3.12",
+        "codename": null,
+        "label": "3.12",
+        "releaseDate": "2023-04-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-11-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.12.0",
+          "date": "2023-04-14",
+          "link": "https://github.com/open-policy-agent/gatekeeper/releases/tag/v3.12.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.11",
+      "name": "3.11",
+      "milestones": {
+        "ga": "2023-01-04",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-08-08"
+      },
+      "upstream": {
+        "name": "3.11",
+        "codename": null,
+        "label": "3.11",
+        "releaseDate": "2023-01-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-08-08",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.11.1",
+          "date": "2023-04-25",
+          "link": "https://github.com/open-policy-agent/gatekeeper/releases/tag/v3.11.1"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/gatekeeper/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-08-28T00:07:00+00:00"
+  }
+}

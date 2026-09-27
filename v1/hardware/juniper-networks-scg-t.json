@@ -1,0 +1,82 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "juniper-networks-scg-t",
+  "name": "SCG-T",
+  "category": "hardware",
+  "vendor": "Juniper Networks",
+  "product_line": "Juniper Networks T Series",
+  "family": "T Series",
+  "model_number": "SCG-T",
+  "milestones": {
+    "ga": null,
+    "eos": null,
+    "eossec": null,
+    "eol": "2019-01-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "SCG-T",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "SCG-T",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Juniper Networks T Series",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "EOL Announced": {
+      "text": "2013-01-31",
+      "datetime": null,
+      "value": "2013-01-31",
+      "role": null,
+      "links": []
+    },
+    "End of Support": {
+      "text": "2019-01-31",
+      "datetime": null,
+      "value": "2019-01-31",
+      "role": "eol",
+      "links": []
+    },
+    "Last Date to Convert Warranty": {
+      "text": "Jan. 31, 2015",
+      "datetime": "2015-01-31",
+      "value": "2015-01-31",
+      "role": null,
+      "links": []
+    },
+    "Next Day Support Discontinued": {
+      "text": "2018-01-31",
+      "datetime": null,
+      "value": "2018-01-31",
+      "role": null,
+      "links": []
+    },
+    "Same Day Support Discontinued": {
+      "text": "2016-01-31",
+      "datetime": null,
+      "value": "2016-01-31",
+      "role": null,
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/network/routers/vendor/juniper-networks/t-series/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

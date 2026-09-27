@@ -1,0 +1,235 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "antix",
+  "name": "antiX Linux",
+  "category": "software",
+  "upstream_category": "os",
+  "identifiers": [
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:o:antixlinux:antix_linux"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/antix",
+    "releasePolicy": "https://www.antixforum.com/forums/topic/when-is-end-of-support-for-stable-antix-versions-17-19/#post-26424"
+  },
+  "releases": [
+    {
+      "id": "26",
+      "name": "26 (Stephen Kapos)",
+      "milestones": {
+        "ga": "2026-03-21",
+        "eos": null,
+        "eossec": "2030-07-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "26",
+        "codename": "Stephen Kapos",
+        "label": "26 (Stephen Kapos)",
+        "releaseDate": "2026-03-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": "2028-08-09",
+        "isEol": false,
+        "eolFrom": "2030-07-30",
+        "isMaintained": true,
+        "latest": {
+          "name": "26",
+          "date": "2026-03-21",
+          "link": "https://antixlinux.com/antix-26-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "23",
+      "name": "23 (Arditi del Popolo)",
+      "milestones": {
+        "ga": "2023-08-28",
+        "eos": null,
+        "eossec": "2028-06-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "23",
+        "codename": "Arditi del Popolo",
+        "label": "23 (Arditi del Popolo)",
+        "releaseDate": "2023-08-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-07-11",
+        "isEol": false,
+        "eolFrom": "2028-06-30",
+        "isMaintained": true,
+        "latest": {
+          "name": "23",
+          "date": "2023-08-28",
+          "link": "https://antixlinux.com/antix-23-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "21",
+      "name": "21 (Grup Yorum)",
+      "milestones": {
+        "ga": "2021-10-31",
+        "eos": null,
+        "eossec": "2026-08-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "21",
+        "codename": "Grup Yorum",
+        "label": "21 (Grup Yorum)",
+        "releaseDate": "2021-10-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-08-14",
+        "isEol": true,
+        "eolFrom": "2026-08-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "22",
+          "date": "2022-10-19",
+          "link": "https://antixlinux.com/antix-22-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "19",
+      "name": "19 (Grup Yorum)",
+      "milestones": {
+        "ga": "2019-10-17",
+        "eos": null,
+        "eossec": "2024-06-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "19",
+        "codename": "Grup Yorum",
+        "label": "19 (Grup Yorum)",
+        "releaseDate": "2019-10-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-09-10",
+        "isEol": true,
+        "eolFrom": "2024-06-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "19.5",
+          "date": "2022-01-25",
+          "link": "https://antixlinux.com/antix-19-5-point-release-update/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "17",
+      "name": "17 (Helen Keller)",
+      "milestones": {
+        "ga": "2017-10-24",
+        "eos": null,
+        "eossec": "2022-06-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "17",
+        "codename": "Helen Keller",
+        "label": "17 (Helen Keller)",
+        "releaseDate": "2017-10-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-06-05",
+        "isEol": true,
+        "eolFrom": "2022-06-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "17.4.1",
+          "date": "2019-03-28",
+          "link": "https://antixlinux.com/antix-17-4-1-now-out/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "16",
+      "name": "16 (Berta Cáceres)",
+      "milestones": {
+        "ga": "2016-06-27",
+        "eos": null,
+        "eossec": "2020-06-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "16",
+        "codename": "Berta Cáceres",
+        "label": "16 (Berta Cáceres)",
+        "releaseDate": "2016-06-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2018-06-23",
+        "isEol": true,
+        "eolFrom": "2020-06-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "16.3",
+          "date": "2017-12-21",
+          "link": "https://antixlinux.com/antix-16-3-full-iso-files-available/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "15",
+      "name": "15 (Berta Cáceres)",
+      "milestones": {
+        "ga": "2015-06-30",
+        "eos": null,
+        "eossec": "2020-06-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "15",
+        "codename": "Berta Cáceres",
+        "label": "15 (Berta Cáceres)",
+        "releaseDate": "2015-06-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2018-06-23",
+        "isEol": true,
+        "eolFrom": "2020-06-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "15",
+          "date": "2015-06-30",
+          "link": "https://antixlinux.com/forum-archive/antix-15-released-t5697.html"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/antix/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-13T14:51:29+00:00"
+  }
+}

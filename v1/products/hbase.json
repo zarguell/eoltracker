@@ -1,0 +1,229 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "hbase",
+  "name": "Apache HBase",
+  "category": "software",
+  "upstream_category": "database",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "hbase"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:apache:hbase"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:apache:hbase"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Service Status",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/apachehbase.svg",
+    "html": "https://endoflife.date/hbase",
+    "releasePolicy": "https://hbase.apache.org/downloads"
+  },
+  "releases": [
+    {
+      "id": "3.0",
+      "name": "3.0",
+      "milestones": {
+        "ga": "2026-08-05",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.0",
+        "codename": null,
+        "label": "3.0",
+        "releaseDate": "2026-08-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "3.0.0",
+          "date": "2026-08-05",
+          "link": "https://github.com/apache/hbase/releases/tag/rel%2F3.0.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.6",
+      "name": "2.6",
+      "milestones": {
+        "ga": "2024-05-17",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.6",
+        "codename": null,
+        "label": "2.6",
+        "releaseDate": "2024-05-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "2.6.6",
+          "date": "2026-06-09",
+          "link": "https://github.com/apache/hbase/blob/rel/2.6.6/RELEASENOTES.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.5",
+      "name": "2.5",
+      "milestones": {
+        "ga": "2022-08-31",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.5",
+        "codename": null,
+        "label": "2.5",
+        "releaseDate": "2022-08-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "2.5.15",
+          "date": "2026-06-09",
+          "link": "https://github.com/apache/hbase/blob/rel/2.5.15/RELEASENOTES.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.4",
+      "name": "2.4",
+      "milestones": {
+        "ga": "2020-12-15",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.4",
+        "codename": null,
+        "label": "2.4",
+        "releaseDate": "2020-12-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-05-25",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.4.18",
+          "date": "2024-05-25",
+          "link": "https://github.com/apache/hbase/blob/rel/2.4.18/RELEASENOTES.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.3",
+      "name": "2.3",
+      "milestones": {
+        "ga": "2020-07-13",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.3",
+        "codename": null,
+        "label": "2.3",
+        "releaseDate": "2020-07-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-10-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.3.7",
+          "date": "2021-10-19",
+          "link": "https://github.com/apache/hbase/blob/rel/2.3.7/RELEASENOTES.md"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.7",
+      "name": "1.7",
+      "milestones": {
+        "ga": "2021-06-12",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.7",
+        "codename": null,
+        "label": "1.7",
+        "releaseDate": "2021-06-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-08-09",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.7.2",
+          "date": "2022-08-09",
+          "link": "https://github.com/apache/hbase/blob/rel/1.7.2/CHANGES.txt"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.2",
+      "name": "2.2",
+      "milestones": {
+        "ga": "2019-07-25",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.2",
+        "codename": null,
+        "label": "2.2",
+        "releaseDate": "2019-07-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-04-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.2.7",
+          "date": "2021-04-19",
+          "link": "https://github.com/apache/hbase/blob/rel/2.2.7/RELEASENOTES.md"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/hbase/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-06T21:21:41+00:00"
+  }
+}

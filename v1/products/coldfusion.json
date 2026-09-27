@@ -1,0 +1,239 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "coldfusion",
+  "name": "Adobe ColdFusion",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:adobe:coldfusion"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:adobe:coldfusion"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Core Support",
+    "eoes": "Extended Support"
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/coldfusion",
+    "releasePolicy": "https://helpx.adobe.com/x-productkb/policy-pricing/policy_enterprise_lifecycle.html"
+  },
+  "releases": [
+    {
+      "id": "2025",
+      "name": "2025",
+      "milestones": {
+        "ga": "2025-02-25",
+        "eos": null,
+        "eossec": null,
+        "eol": "2031-04-08"
+      },
+      "upstream": {
+        "name": "2025",
+        "codename": null,
+        "label": "2025",
+        "releaseDate": "2025-02-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2030-04-08",
+        "isEoes": false,
+        "eoesFrom": "2031-04-08",
+        "isMaintained": true,
+        "latest": {
+          "name": "2025.0.13.331960",
+          "date": "2026-09-08",
+          "link": "https://helpx.adobe.com/coldfusion/kb/coldfusion-2025-updates.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2023",
+      "name": "2023",
+      "milestones": {
+        "ga": "2022-05-16",
+        "eos": null,
+        "eossec": null,
+        "eol": "2029-05-16"
+      },
+      "upstream": {
+        "name": "2023",
+        "codename": null,
+        "label": "2023",
+        "releaseDate": "2022-05-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2028-05-16",
+        "isEoes": false,
+        "eoesFrom": "2029-05-16",
+        "isMaintained": true,
+        "latest": {
+          "name": "2023.0.24.330957",
+          "date": "2026-09-08",
+          "link": "https://helpx.adobe.com/coldfusion/kb/coldfusion-2023-updates.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2021",
+      "name": "2021",
+      "milestones": {
+        "ga": "2020-11-11",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-11-10"
+      },
+      "upstream": {
+        "name": "2021",
+        "codename": null,
+        "label": "2021",
+        "releaseDate": "2020-11-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-12-09",
+        "isEoes": false,
+        "eoesFrom": "2026-11-10",
+        "isMaintained": true,
+        "latest": {
+          "name": "2021.0.23.330486",
+          "date": "2025-12-09",
+          "link": "https://helpx.adobe.com/coldfusion/kb/coldfusion-2021-updates.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2018",
+      "name": "2018",
+      "milestones": {
+        "ga": "2018-07-12",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-07-13"
+      },
+      "upstream": {
+        "name": "2018",
+        "codename": null,
+        "label": "2018",
+        "releaseDate": "2018-07-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-07-19",
+        "isEoes": true,
+        "eoesFrom": "2024-07-13",
+        "isMaintained": false,
+        "latest": {
+          "name": "2018.0.19.330149",
+          "date": "2023-07-19",
+          "link": "https://helpx.adobe.com/coldfusion/kb/coldfusion-2018-updates.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2016",
+      "name": "2016",
+      "milestones": {
+        "ga": "2016-02-16",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-02-17"
+      },
+      "upstream": {
+        "name": "2016",
+        "codename": null,
+        "label": "2016",
+        "releaseDate": "2016-02-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-03-22",
+        "isEoes": true,
+        "eoesFrom": "2022-02-17",
+        "isMaintained": false,
+        "latest": {
+          "name": "2016.0.17.325979",
+          "date": "2021-03-22",
+          "link": "https://helpx.adobe.com/coldfusion/kb/coldfusion-2016-updates.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "11",
+      "name": "11",
+      "milestones": {
+        "ga": "2014-04-29",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-04-30"
+      },
+      "upstream": {
+        "name": "11",
+        "codename": null,
+        "label": "11",
+        "releaseDate": "2014-04-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-06-11",
+        "isEoes": true,
+        "eoesFrom": "2021-04-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "11.0.19.314546",
+          "date": "2019-06-11",
+          "link": "https://helpx.adobe.com/coldfusion/kb/coldfusion-11-updates.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "10",
+      "name": "10",
+      "milestones": {
+        "ga": "2012-05-15",
+        "eos": null,
+        "eossec": null,
+        "eol": "2019-05-16"
+      },
+      "upstream": {
+        "name": "10",
+        "codename": null,
+        "label": "10",
+        "releaseDate": "2012-05-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-05-16",
+        "isEoes": true,
+        "eoesFrom": "2019-05-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "10.0.23.302580",
+          "date": "2017-04-25",
+          "link": "https://helpx.adobe.com/coldfusion/kb/coldfusion-10-updates.html"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/coldfusion/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-09T06:32:45+00:00"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-cns-14",
+  "name": "CNS-14",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Celerra File Server",
+  "family": "Celerra File Server",
+  "model_number": "CNS-14",
+  "milestones": {
+    "ga": "2003-09-01",
+    "eos": "2006-12-31",
+    "eossec": null,
+    "eol": "2011-12-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "CNS-14",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "CNS-14",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Celerra File Server",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2006-12-31",
+      "datetime": null,
+      "value": "2006-12-31",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Sep. 01, 2003",
+      "datetime": "2003-09-01",
+      "value": "2003-09-01",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2011-12-31",
+      "datetime": null,
+      "value": "2011-12-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/nas-storage/vendor/dell-emc/celerra-file-server/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

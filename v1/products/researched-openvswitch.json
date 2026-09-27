@@ -1,0 +1,149 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "researched-openvswitch",
+  "name": "Open vSwitch",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [],
+  "labels": {},
+  "links": {
+    "about": "https://www.openvswitch.org/",
+    "download": "https://www.openvswitch.org/download/",
+    "releases": "https://docs.openvswitch.org/en/latest/faq/releases/",
+    "releaseProcess": "https://docs.openvswitch.org/en/latest/internals/release-process/",
+    "announcement": "https://mail.openvswitch.org/pipermail/ovs-announce/2026-August/000400.html",
+    "releaseNotes": "https://www.openvswitch.org/releases/NEWS-4.0.0.txt",
+    "repository": "https://github.com/openvswitch/ovs"
+  },
+  "releases": [
+    {
+      "id": "3.3",
+      "name": "Open vSwitch 3.3.x (former LTS series, in its transition period)",
+      "milestones": {
+        "ga": "2024-02-16",
+        "eos": null,
+        "eossec": null,
+        "eol": "2027-02"
+      },
+      "upstream": {
+        "name": "Open vSwitch 3.3.x (former LTS series, in its transition period)",
+        "Contribution": {
+          "text": "v3.3.0 - 16 Feb 2024 -------------------- The Open vSwitch team is pleased to announce the release of Open vSwitch 3.3.0: Also, with the release of OVS 4.0, the 3.7.x series becomes our new LTS series. The old LTS series 3.3.x will be supported until the next release in February. v4.0.0 - 17 Aug 2026 -------------------- Current LTS series: https://www.openvswitch.org/releases/openvswitch-3.3.9.tar.gz At most three release branches are formally maintained at any given time: the latest release, the latest release designed as LTS and a previous LTS release during the transition period. All official releases have been through a comprehensive testing process and are suitable for production use. Planned releases occur twice a year. If a significant bug is identified in an LTS release, we will provide an updated release that includes the fix. Releases that are not LTS may not be fixed and may just be supplanted by the next major release. The current LTS release is 3.7.x.",
+          "value": null,
+          "datetime": null,
+          "role": null,
+          "links": [
+            "https://www.openvswitch.org/releases/NEWS-3.3.0.txt",
+            "https://mail.openvswitch.org/pipermail/ovs-announce/2024-February/000343.html",
+            "https://mail.openvswitch.org/pipermail/ovs-announce/2026-August/000400.html",
+            "https://www.openvswitch.org/releases/NEWS-4.0.0.txt",
+            "https://mail.openvswitch.org/pipermail/ovs-announce/2026-March/000392.html",
+            "https://docs.openvswitch.org/en/latest/internals/release-process/",
+            "https://docs.openvswitch.org/en/latest/faq/releases/"
+          ]
+        }
+      },
+      "milestone_provenance": {
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://mail.openvswitch.org/pipermail/ovs-announce/2026-August/000400.html",
+          "quote": "Also, with the release of OVS 4.0, the 3.7.x series becomes our new LTS series. The old LTS series 3.3.x will be supported until the next release in February.",
+          "base_date": "2026-08-17",
+          "base_label": "Open vSwitch 4.0.0 general availability: the dated announcement that states this transition rule",
+          "trigger": {
+            "release_id": "next-release-2027-02",
+            "date": "2027-02",
+            "label": "the next Open vSwitch release after 4.0.0, named by the vendor only as the release in February"
+          }
+        }
+      }
+    },
+    {
+      "id": "next-release-2027-02",
+      "name": "The next Open vSwitch release after 4.0.0 (February 2027; the announcement names neither its version nor a day)",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "The next Open vSwitch release after 4.0.0 (February 2027; the announcement names neither its version nor a day)",
+        "Contribution": {
+          "text": "v3.3.0 - 16 Feb 2024 -------------------- The Open vSwitch team is pleased to announce the release of Open vSwitch 3.3.0: Also, with the release of OVS 4.0, the 3.7.x series becomes our new LTS series. The old LTS series 3.3.x will be supported until the next release in February. v4.0.0 - 17 Aug 2026 -------------------- Current LTS series: https://www.openvswitch.org/releases/openvswitch-3.3.9.tar.gz At most three release branches are formally maintained at any given time: the latest release, the latest release designed as LTS and a previous LTS release during the transition period. All official releases have been through a comprehensive testing process and are suitable for production use. Planned releases occur twice a year. If a significant bug is identified in an LTS release, we will provide an updated release that includes the fix. Releases that are not LTS may not be fixed and may just be supplanted by the next major release. The current LTS release is 3.7.x.",
+          "value": null,
+          "datetime": null,
+          "role": null,
+          "links": [
+            "https://www.openvswitch.org/releases/NEWS-3.3.0.txt",
+            "https://mail.openvswitch.org/pipermail/ovs-announce/2024-February/000343.html",
+            "https://mail.openvswitch.org/pipermail/ovs-announce/2026-August/000400.html",
+            "https://www.openvswitch.org/releases/NEWS-4.0.0.txt",
+            "https://mail.openvswitch.org/pipermail/ovs-announce/2026-March/000392.html",
+            "https://docs.openvswitch.org/en/latest/internals/release-process/",
+            "https://docs.openvswitch.org/en/latest/faq/releases/"
+          ]
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "verifier": "researched-eoltracker-agent",
+    "last_checked": "2026-09-23T21:59:21Z",
+    "research": {
+      "quote": "v3.3.0 - 16 Feb 2024 -------------------- The Open vSwitch team is pleased to announce the release of Open vSwitch 3.3.0: Also, with the release of OVS 4.0, the 3.7.x series becomes our new LTS series. The old LTS series 3.3.x will be supported until the next release in February. v4.0.0 - 17 Aug 2026 -------------------- Current LTS series: https://www.openvswitch.org/releases/openvswitch-3.3.9.tar.gz At most three release branches are formally maintained at any given time: the latest release, the latest release designed as LTS and a previous LTS release during the transition period. All official releases have been through a comprehensive testing process and are suitable for production use. Planned releases occur twice a year. If a significant bug is identified in an LTS release, we will provide an updated release that includes the fix. Releases that are not LTS may not be fixed and may just be supplanted by the next major release. The current LTS release is 3.7.x.",
+      "source_url": "https://www.openvswitch.org/releases/NEWS-3.3.0.txt",
+      "retrieved_at": "2026-09-23",
+      "contributor": "eoltracker-agent",
+      "method": "agent",
+      "verified_at": "2026-09-23T21:59:21Z",
+      "stale_after": "2027-03-22",
+      "evidence": [
+        {
+          "quote": "v3.3.0 - 16 Feb 2024 --------------------",
+          "source_url": "https://www.openvswitch.org/releases/NEWS-3.3.0.txt",
+          "retrieved_at": "2026-09-23",
+          "milestones": [
+            "ga"
+          ]
+        },
+        {
+          "quote": "The Open vSwitch team is pleased to announce the release of Open vSwitch 3.3.0:",
+          "source_url": "https://mail.openvswitch.org/pipermail/ovs-announce/2024-February/000343.html",
+          "retrieved_at": "2026-09-23"
+        },
+        {
+          "quote": "Also, with the release of OVS 4.0, the 3.7.x series becomes our new LTS series. The old LTS series 3.3.x will be supported until the next release in February.",
+          "source_url": "https://mail.openvswitch.org/pipermail/ovs-announce/2026-August/000400.html",
+          "retrieved_at": "2026-09-23"
+        },
+        {
+          "quote": "v4.0.0 - 17 Aug 2026 --------------------",
+          "source_url": "https://www.openvswitch.org/releases/NEWS-4.0.0.txt",
+          "retrieved_at": "2026-09-23"
+        },
+        {
+          "quote": "Current LTS series: https://www.openvswitch.org/releases/openvswitch-3.3.9.tar.gz",
+          "source_url": "https://mail.openvswitch.org/pipermail/ovs-announce/2026-March/000392.html",
+          "retrieved_at": "2026-09-23"
+        },
+        {
+          "quote": "At most three release branches are formally maintained at any given time: the latest release, the latest release designed as LTS and a previous LTS release during the transition period.",
+          "source_url": "https://docs.openvswitch.org/en/latest/internals/release-process/",
+          "retrieved_at": "2026-09-23"
+        },
+        {
+          "quote": "All official releases have been through a comprehensive testing process and are suitable for production use. Planned releases occur twice a year. If a significant bug is identified in an LTS release, we will provide an updated release that includes the fix. Releases that are not LTS may not be fixed and may just be supplanted by the next major release. The current LTS release is 3.7.x.",
+          "source_url": "https://docs.openvswitch.org/en/latest/faq/releases/",
+          "retrieved_at": "2026-09-23"
+        }
+      ],
+      "vendor": "Open vSwitch project (Linux Foundation)",
+      "summary": "Open vSwitch is the production-quality multilayer open source virtual switch of the OVS project (repository openvswitch/ovs), used as the hypervisor soft switch and the control stack for switching silicon. The project dates every release in its own NEWS headings and states the LTS transition rule that ends 3.3.x in the dated 4.0.0 announcement; it publishes no lifecycle table, no product API and there is no structured EOL feed.",
+      "notes": "Tier: researched, with one derived milestone (AGENTS.md rule 8b). Open vSwitch is the OVS project's multilayer virtual switch (repository openvswitch/ovs); endoflife.date has no openvswitch slug (checked 2026-09-23: 477 products) and data/products/ holds no openvswitch record, so no deterministic source is displaced. Scope is the former LTS series 3.3.x only. The current LTS series (3.7.x) and the ordinary, non-LTS branches are NOT given terminal dates here: nothing checked states an end for them, and a series being older, newer, superseded or currently maintained is never treated as a lifecycle date. GA 2024-02-16 is the vendor's own dated release-notes heading for 3.3.0 ('v3.3.0 - 16 Feb 2024') in NEWS-3.3.0.txt, matching the dated 3.3.0 announcement; it is vendor-stated, not derived. eol 2027-02 IS DERIVED, not vendor-stated: the dated 4.0.0 announcement of 2026-08-17 states the trigger ('The old LTS series 3.3.x will be supported until the next release in February'), so the entry is carried under milestone_provenance with method release-trigger, base_date 2026-08-17 (the 4.0.0 general availability day the announcement is dated, also the vendor's NEWS-4.0.0 heading 'v4.0.0 - 17 Aug 2026'), and trigger {release_id 'next-release-2027-02', date 2027-02}. MONTH PRECISION IS PRESERVED (AGENTS.md rule 4): the vendor names only 'February' and no day, so the milestone is stored as 2027-02 and is NOT padded to a day; the derived month is presented as derived and is excluded from the exact-day Atom/RSS/iCalendar feeds (feed-exclusions code 'derived_not_vendor_stated', which wins over the month code) and from the OpenEoX export (code 'end_of_life_month_precision'), each with machine-readable disclosure. The YEAR is the next February after the dated announcement of 2026-08-17, which is the only February following the stated trigger; it is chronology from the vendor's own 'the next release in February' wording read against its own dated announcement, NOT cadence extrapolation. The vendor names neither the version nor a day of that release, so it is published as its own release line (id 'next-release-2027-02') with every milestone null: it is the triggering release the rule names, and no date or identity is invented for it. NOT USED AS EVIDENCE: the approximately twice-a-year cadence ('Planned releases occur twice a year'), the release-scheduling table's approximate dates, the '3.5 | Feb 2025, 2.17 LTS -> EOL' style designation schedule example, and the release-process 'usually provides stable releases ... for at least 2 years' sentence; none of them dates 3.3.x, and cadence may not license a derivation. eossec is null: the sentence states one combined support end ('will be supported'), not a separate security-only end, and AGENTS.md forbids filling eossec from a generic support date. Also not evidence of an end: the 3.3.8/3.3.9 bug-fix and security releases and the CVE-2026-34956 advisory show maintenance occurred, never when full or security support stops; the three-year support wording that appears in unofficial summaries has no current primary-source quote tying it to 3.3.x and is not used. Every stored date is backed by a verbatim quote at its own precision, and all seven quotes were refetched on 2026-09-23."
+    },
+    "source_url": "https://www.openvswitch.org/releases/NEWS-3.3.0.txt",
+    "upstream_modified": null
+  }
+}

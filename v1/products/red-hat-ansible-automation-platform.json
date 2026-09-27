@@ -1,0 +1,172 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "red-hat-ansible-automation-platform",
+  "name": "Red Hat Ansible Automation Platform",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "cpe",
+      "id": "cpe:/a:redhat:ansible_automation_platform"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:redhat:ansible_automation_platform"
+    }
+  ],
+  "labels": {
+    "eoas": "Full Support",
+    "discontinued": null,
+    "eol": "Maintenance Support 1",
+    "eoes": "Maintenance Support 2"
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/redhat.svg",
+    "html": "https://endoflife.date/red-hat-ansible-automation-platform",
+    "releasePolicy": "https://access.redhat.com/support/policy/updates/ansible-automation-platform"
+  },
+  "releases": [
+    {
+      "id": "2.6",
+      "name": "2.6",
+      "milestones": {
+        "ga": "2025-10-01",
+        "eos": null,
+        "eossec": null,
+        "eol": "2028-10-01"
+      },
+      "upstream": {
+        "name": "2.6",
+        "codename": null,
+        "label": "2.6",
+        "releaseDate": "2025-10-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": "2026-10-01",
+        "isEol": false,
+        "eolFrom": "2027-10-01",
+        "isEoes": false,
+        "eoesFrom": "2028-10-01",
+        "isMaintained": true,
+        "latest": null,
+        "custom": {
+          "ansibleCoreVersion": "2.16",
+          "aapPLatformUIVersion": "2.6.1",
+          "automationControllerVersion": "4.7.10",
+          "automationHubVersion": "4.11.7",
+          "eventDrivenAnsibleVersion": "1.2.7",
+          "platformGatewayVersion": "2.6.20251001"
+        }
+      }
+    },
+    {
+      "id": "2.5",
+      "name": "2.5",
+      "milestones": {
+        "ga": "2024-09-30",
+        "eos": null,
+        "eossec": null,
+        "eol": "2027-10-02"
+      },
+      "upstream": {
+        "name": "2.5",
+        "codename": null,
+        "label": "2.5",
+        "releaseDate": "2024-09-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-10-02",
+        "isEol": false,
+        "eolFrom": "2026-10-02",
+        "isEoes": false,
+        "eoesFrom": "2027-10-02",
+        "isMaintained": true,
+        "latest": null,
+        "custom": {
+          "ansibleCoreVersion": "2.16",
+          "aapPLatformUIVersion": "1.1",
+          "automationControllerVersion": "4.6.27",
+          "automationHubVersion": "4.10.13",
+          "eventDrivenAnsibleVersion": "1.1.17",
+          "platformGatewayVersion": "N/A"
+        }
+      }
+    },
+    {
+      "id": "2.4",
+      "name": "2.4",
+      "milestones": {
+        "ga": "2023-06-27",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-06-30"
+      },
+      "upstream": {
+        "name": "2.4",
+        "codename": null,
+        "label": "2.4",
+        "releaseDate": "2023-06-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-10-01",
+        "isEol": true,
+        "eolFrom": "2025-10-01",
+        "isEoes": true,
+        "eoesFrom": "2026-06-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "ansibleCoreVersion": "2.15",
+          "aapPLatformUIVersion": "N/A",
+          "automationControllerVersion": "4.5.30",
+          "automationHubVersion": "4.9.5",
+          "eventDrivenAnsibleVersion": "1.0.8",
+          "platformGatewayVersion": "N/A"
+        }
+      }
+    },
+    {
+      "id": "2.3",
+      "name": "2.3",
+      "milestones": {
+        "ga": "2022-11-29",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-05-31"
+      },
+      "upstream": {
+        "name": "2.3",
+        "codename": null,
+        "label": "2.3",
+        "releaseDate": "2022-11-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-06-30",
+        "isEol": true,
+        "eolFrom": "2023-11-29",
+        "isEoes": true,
+        "eoesFrom": "2024-05-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "ansibleCoreVersion": "2.14",
+          "aapPLatformUIVersion": "N/A",
+          "automationControllerVersion": "4.3",
+          "automationHubVersion": "4.6",
+          "eventDrivenAnsibleVersion": "N/A",
+          "platformGatewayVersion": "N/A"
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/red-hat-ansible-automation-platform/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-05-01T09:58:42+00:00"
+  }
+}

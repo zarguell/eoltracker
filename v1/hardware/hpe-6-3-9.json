@@ -1,0 +1,63 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "hpe-6-3-9",
+  "name": "Recovery Manager Central (RMC)",
+  "category": "hardware",
+  "vendor": "HPE",
+  "product_line": "HPE",
+  "family": "HPE Recovery Manager Central",
+  "model_number": "6.3.9",
+  "milestones": {
+    "ga": "2022-01-25",
+    "eos": null,
+    "eossec": null,
+    "eol": "2025-01-25"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Product Name": {
+      "text": "Recovery Manager Central (RMC)",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Version": {
+      "text": "6.3.9",
+      "datetime": null,
+      "value": null,
+      "role": "version",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Jan. 25, 2022",
+      "datetime": "2022-01-25",
+      "value": "2022-01-25",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support": {
+      "text": "2025-01-25",
+      "datetime": null,
+      "value": "2025-01-25",
+      "role": "eol",
+      "links": [
+        "https://support.hpe.com/connect/s/softwaredetails?language=en_US&collectionId=MTX-MSC_RMC"
+      ]
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/backup/vendor/hpe/hpe-recovery-manager-central/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

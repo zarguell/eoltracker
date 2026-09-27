@@ -1,0 +1,268 @@
+{
+  "source_url": "https://learn.microsoft.com/en-us/lifecycle/products/internet-information-services-iis",
+  "verifier": "deterministic-microsoft-iis",
+  "checked_at": "2026-09-23T17:42:07Z",
+  "record_scope": "Microsoft IIS lifecycle rows: one software record with one release per IIS/platform scope, from the IIS lifecycle table as stated plus the current scopes Microsoft names elsewhere, whose dates are inherited from the parent platform and labeled derived",
+  "pages": [
+    {
+      "url": "https://learn.microsoft.com/en-us/lifecycle/products/internet-information-services-iis",
+      "label": "Microsoft Lifecycle: IIS"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/lifecycle/faq/fixed-policy",
+      "label": "Microsoft Fixed Lifecycle Policy: component support"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows-server/administration/performance-tuning/role/web-server/tuning-iis-10",
+      "label": "IIS 10.0 on Windows Server 2022"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2022",
+      "label": "Microsoft Lifecycle: Windows Server 2022"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/powershell/module/servermanager/install-windowsfeature?view=windowsserver2025-ps",
+      "label": "Web Server (IIS) role on Windows Server 2025"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2025",
+      "label": "Microsoft Lifecycle: Windows Server 2025"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/lifecycle/products/windows-10-home-and-pro",
+      "label": "Microsoft Lifecycle: Windows 10 Home and Pro"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/lifecycle/products/windows-10-enterprise-and-education",
+      "label": "Microsoft Lifecycle: Windows 10 Enterprise and Education"
+    }
+  ],
+  "rows": {
+    "seen": 13,
+    "published": 14,
+    "direct": 12,
+    "derived": 2,
+    "inherited": 4,
+    "retained": 0,
+    "excluded": 1
+  },
+  "milestones": {
+    "eol_stated": 9,
+    "eol_inherited": 4,
+    "eol_unknown": 1,
+    "ga_published": 0
+  },
+  "excluded": [
+    {
+      "page": "https://learn.microsoft.com/en-us/lifecycle/products/internet-information-services-iis",
+      "table": "Support Dates",
+      "row": "Internet Information Services (IIS) | 5/28/2003 8:00:00 AM | See Note",
+      "reason": "the page's Support Dates row is the product-level listing, not a version row: its End Date cell states 'See Note', a pointer to the Windows platform lifecycles rather than a date, so no release or date is published from it"
+    }
+  ],
+  "derived": [
+    {
+      "id": "iis-10-windows-10-pro",
+      "name": "IIS 10 on Windows 10 Pro",
+      "kind": "undated-row",
+      "state": "inherited",
+      "date": "2025-10-14",
+      "parent": {
+        "page": "https://learn.microsoft.com/en-us/lifecycle/products/windows-10-home-and-pro",
+        "listing": "Windows 10 Home and Pro",
+        "end_column": "Retirement Date",
+        "end_cell": "10/15/2025 6:59:59 AM",
+        "cells": {
+          "Listing": "Windows 10 Home and Pro",
+          "Start Date": "7/29/2015 8:00:00 AM",
+          "Retirement Date": "10/15/2025 6:59:59 AM"
+        },
+        "milestone": "eol",
+        "policy": "Modern Lifecycle Policy",
+        "date": "2025-10-14",
+        "start": "2015-07-29"
+      },
+      "scope": {
+        "page": "https://learn.microsoft.com/en-us/lifecycle/products/internet-information-services-iis",
+        "label": "Microsoft Lifecycle: IIS",
+        "quote": "Internet Information Services (IIS) is a component of the Windows operating system and follows the same lifecycle."
+      },
+      "rule": {
+        "page": "https://learn.microsoft.com/en-us/lifecycle/products/internet-information-services-iis",
+        "quote": "Internet Information Services (IIS) is a component of the Windows operating system and follows the same lifecycle."
+      }
+    },
+    {
+      "id": "iis-10-windows-10-enterprise-and-education",
+      "name": "IIS 10 on Windows 10, Enterprise and Education",
+      "kind": "undated-row",
+      "state": "inherited",
+      "date": "2025-10-14",
+      "parent": {
+        "page": "https://learn.microsoft.com/en-us/lifecycle/products/windows-10-enterprise-and-education",
+        "listing": "Windows 10 Enterprise and Education",
+        "end_column": "Retirement Date",
+        "end_cell": "10/15/2025 6:59:59 AM",
+        "cells": {
+          "Listing": "Windows 10 Enterprise and Education",
+          "Start Date": "7/29/2015 8:00:00 AM",
+          "Retirement Date": "10/15/2025 6:59:59 AM"
+        },
+        "milestone": "eol",
+        "policy": "Modern Lifecycle Policy",
+        "date": "2025-10-14",
+        "start": "2015-07-29"
+      },
+      "scope": {
+        "page": "https://learn.microsoft.com/en-us/lifecycle/products/internet-information-services-iis",
+        "label": "Microsoft Lifecycle: IIS",
+        "quote": "Internet Information Services (IIS) is a component of the Windows operating system and follows the same lifecycle."
+      },
+      "rule": {
+        "page": "https://learn.microsoft.com/en-us/lifecycle/products/internet-information-services-iis",
+        "quote": "Internet Information Services (IIS) is a component of the Windows operating system and follows the same lifecycle."
+      }
+    },
+    {
+      "id": "iis-10-windows-server-2022",
+      "name": "IIS 10 on Windows Server 2022",
+      "kind": "omitted-platform",
+      "state": "inherited",
+      "date": "2031-10-14",
+      "parent": {
+        "page": "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2022",
+        "listing": "Windows Server 2022",
+        "end_column": "Extended End Date",
+        "end_cell": "10/15/2031 6:59:59 AM",
+        "cells": {
+          "Listing": "Windows Server 2022",
+          "Start Date": "8/18/2021 8:00:00 AM",
+          "Mainstream End Date": "10/14/2026 6:59:59 AM",
+          "Extended End Date": "10/15/2031 6:59:59 AM"
+        },
+        "milestone": "eol",
+        "policy": "Fixed Lifecycle Policy",
+        "date": "2031-10-14",
+        "start": "2021-08-18"
+      },
+      "scope": {
+        "page": "https://learn.microsoft.com/en-us/windows-server/administration/performance-tuning/role/web-server/tuning-iis-10",
+        "label": "IIS 10.0 on Windows Server 2022",
+        "quote": "Internet Information Services (IIS) 10.0 is included with Windows Server 2022."
+      },
+      "rule": {
+        "page": "https://learn.microsoft.com/en-us/lifecycle/faq/fixed-policy",
+        "quote": "A component receives the same support as its parent product or platform. When a parent product or platform is in Mainstream, or Extended Support, so is the component. When a parent product or platform reaches the end of support, so does the component."
+      }
+    },
+    {
+      "id": "web-server-iis-windows-server-2025",
+      "name": "Web Server (IIS) on Windows Server 2025",
+      "kind": "omitted-platform",
+      "state": "inherited",
+      "date": "2034-11-14",
+      "parent": {
+        "page": "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2025",
+        "listing": "Windows Server 2025",
+        "end_column": "Extended End Date",
+        "end_cell": "11/15/2034 6:59:59 AM",
+        "cells": {
+          "Listing": "Windows Server 2025",
+          "Start Date": "11/1/2024 8:00:00 AM",
+          "Mainstream End Date": "11/14/2029 6:59:59 AM",
+          "Extended End Date": "11/15/2034 6:59:59 AM"
+        },
+        "milestone": "eol",
+        "policy": "Fixed Lifecycle Policy",
+        "date": "2034-11-14",
+        "start": "2024-11-01"
+      },
+      "scope": {
+        "page": "https://learn.microsoft.com/en-us/powershell/module/servermanager/install-windowsfeature?view=windowsserver2025-ps",
+        "label": "Web Server (IIS) role on Windows Server 2025",
+        "quote": "This example shows what is installed with Web Server (IIS), including all role services, on a computer named Server1."
+      },
+      "rule": {
+        "page": "https://learn.microsoft.com/en-us/lifecycle/faq/fixed-policy",
+        "quote": "A component receives the same support as its parent product or platform. When a parent product or platform is in Mainstream, or Extended Support, so is the component. When a parent product or platform reaches the end of support, so does the component."
+      }
+    }
+  ],
+  "parents": [
+    {
+      "page": "https://learn.microsoft.com/en-us/lifecycle/products/windows-10-home-and-pro",
+      "listing": "Windows 10 Home and Pro",
+      "end_column": "Retirement Date",
+      "end_cell": "10/15/2025 6:59:59 AM",
+      "cells": {
+        "Listing": "Windows 10 Home and Pro",
+        "Start Date": "7/29/2015 8:00:00 AM",
+        "Retirement Date": "10/15/2025 6:59:59 AM"
+      },
+      "milestone": "eol",
+      "policy": "Modern Lifecycle Policy",
+      "date": "2025-10-14",
+      "start": "2015-07-29"
+    },
+    {
+      "page": "https://learn.microsoft.com/en-us/lifecycle/products/windows-10-enterprise-and-education",
+      "listing": "Windows 10 Enterprise and Education",
+      "end_column": "Retirement Date",
+      "end_cell": "10/15/2025 6:59:59 AM",
+      "cells": {
+        "Listing": "Windows 10 Enterprise and Education",
+        "Start Date": "7/29/2015 8:00:00 AM",
+        "Retirement Date": "10/15/2025 6:59:59 AM"
+      },
+      "milestone": "eol",
+      "policy": "Modern Lifecycle Policy",
+      "date": "2025-10-14",
+      "start": "2015-07-29"
+    },
+    {
+      "page": "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2022",
+      "listing": "Windows Server 2022",
+      "end_column": "Extended End Date",
+      "end_cell": "10/15/2031 6:59:59 AM",
+      "cells": {
+        "Listing": "Windows Server 2022",
+        "Start Date": "8/18/2021 8:00:00 AM",
+        "Mainstream End Date": "10/14/2026 6:59:59 AM",
+        "Extended End Date": "10/15/2031 6:59:59 AM"
+      },
+      "milestone": "eol",
+      "policy": "Fixed Lifecycle Policy",
+      "date": "2031-10-14",
+      "start": "2021-08-18"
+    },
+    {
+      "page": "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2025",
+      "listing": "Windows Server 2025",
+      "end_column": "Extended End Date",
+      "end_cell": "11/15/2034 6:59:59 AM",
+      "cells": {
+        "Listing": "Windows Server 2025",
+        "Start Date": "11/1/2024 8:00:00 AM",
+        "Mainstream End Date": "11/14/2029 6:59:59 AM",
+        "Extended End Date": "11/15/2034 6:59:59 AM"
+      },
+      "milestone": "eol",
+      "policy": "Fixed Lifecycle Policy",
+      "date": "2034-11-14",
+      "start": "2024-11-01"
+    }
+  ],
+  "retained": [],
+  "total_records": 1,
+  "limitations": [
+    "The IIS lifecycle table omits the current Windows Server 2022 and Windows Server 2025 platforms; those releases are published from Microsoft's explicit statements about IIS on each platform, with the parent platform's terminal date inherited and labeled derived, never as a vendor-stated IIS deadline.",
+    "Microsoft publishes no numeric IIS version for Windows Server 2025, so that release is named after the role Microsoft states, 'Web Server (IIS) on Windows Server 2025', and no IIS version is asserted for the platform. The platform itself is identified by the moniker of the reference the scope sentence was read from ('?view=windowsserver2025-ps'), which the fetch requires to be the document's own canonical URL.",
+    "The two Windows 10 rows state no End Date; their dates are inherited from the exact Windows 10 lifecycles Microsoft's own Note links, and the blank cell is kept verbatim in the row's stored cells.",
+    "'IIS 10 on Windows Server (Semi-Annual Channel)' states no end date in the source and names no single parent release, so its eol stays unknown; no date is inferred from the channel's newer releases.",
+    "The page's Start Date column is the start of support, never a general-availability statement, so every row publishes with ga absent while the raw cell stays visible.",
+    "The footnote tip about Extended Security Updates ('up to an additional three years') is a program description, not a date, and is never added to any milestone.",
+    "Microsoft prints end instants in Pacific time; a printed 6:59:59 AM instant is read as support through the previous full calendar day, which is the day stored, and the raw cell is retained verbatim beside it.",
+    "IIS Express, Application Request Routing, URL Rewrite, Web Deploy, the IIS administration modules and the Web Platform Installer are separate products and tools with their own lifecycle, and no row of the IIS lifecycle table states them.",
+    "A derived date is published in the catalog and on the product page only: the shared pipeline excludes derived dates from the day-precision feeds and the OpenEoX export, with the reason stated there."
+  ]
+}

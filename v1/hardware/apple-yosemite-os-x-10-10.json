@@ -1,0 +1,70 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "apple-yosemite-os-x-10-10",
+  "name": "Yosemite (OS X 10.10)",
+  "category": "hardware",
+  "vendor": "Apple",
+  "product_line": "Apple",
+  "family": "macOS",
+  "model_number": "Yosemite (OS X 10.10)",
+  "milestones": {
+    "ga": "2014-10-16",
+    "eos": null,
+    "eossec": null,
+    "eol": "2017-08-01"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Build Number": {
+      "text": "14F2511",
+      "datetime": null,
+      "value": null,
+      "role": "build",
+      "links": []
+    },
+    "Version Number": {
+      "text": "Yosemite (OS X 10.10)",
+      "datetime": null,
+      "value": null,
+      "role": "version",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Oct. 16, 2014",
+      "datetime": "2014-10-16",
+      "value": "2014-10-16",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support": {
+      "text": "2017-08-01",
+      "datetime": null,
+      "value": "2017-08-01",
+      "role": "eol",
+      "links": []
+    },
+    "Most Recent Version": {
+      "text": "10.10.5 (August 13, 2015)",
+      "datetime": null,
+      "value": null,
+      "role": null,
+      "links": [
+        "https://en.wikipedia.org/wiki/OS_X_Yosemite#Release_history"
+      ]
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/operating-system/vendor/apple/macos/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-celerra-ns600-ns600g",
+  "name": "Celerra NS600/NS600G",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Celerra Gateway",
+  "family": "Celerra Gateway",
+  "model_number": "Celerra NS600/NS600G",
+  "milestones": {
+    "ga": "2003-08-01",
+    "eos": "2005-01-31",
+    "eossec": null,
+    "eol": "2010-07-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "Celerra NS600/NS600G",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "Celerra NS600/NS600G",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Celerra Gateway",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2005-01-31",
+      "datetime": null,
+      "value": "2005-01-31",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Aug. 01, 2003",
+      "datetime": "2003-08-01",
+      "value": "2003-08-01",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2010-07-31",
+      "datetime": null,
+      "value": "2010-07-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/nas-storage/vendor/dell-emc/celerra-gateway/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

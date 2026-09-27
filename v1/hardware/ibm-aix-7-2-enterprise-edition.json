@@ -1,0 +1,61 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "ibm-aix-7-2-enterprise-edition",
+  "name": "AIX 7.2 Enterprise Edition",
+  "category": "hardware",
+  "vendor": "IBM",
+  "product_line": "IBM OS Enterprise Edition",
+  "family": "OS Enterprise Edition",
+  "model_number": "AIX 7.2 Enterprise Edition",
+  "milestones": {
+    "ga": null,
+    "eos": null,
+    "eossec": null,
+    "eol": "2021-04-30"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "AIX 7.2 Enterprise Edition",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "AIX 7.2 Enterprise Edition",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "IBM OS Enterprise Edition",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Not Announced",
+      "datetime": "TBD",
+      "value": null,
+      "role": "ga",
+      "links": []
+    },
+    "End of Support": {
+      "text": "2021-04-30",
+      "datetime": null,
+      "value": "2021-04-30",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/operating-system/vendor/ibm/os-enterprise-edition/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

@@ -1,0 +1,319 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "angularjs",
+  "name": "AngularJS",
+  "category": "software",
+  "upstream_category": "framework",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "angular.js"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:npm/angular"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/angular/angular.js"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Support",
+    "eoes": "Extended Long Term Support"
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/angularjs",
+    "releasePolicy": "https://docs.angularjs.org/misc/version-support-status"
+  },
+  "releases": [
+    {
+      "id": "1.8",
+      "name": "1.8 (LTS)",
+      "milestones": {
+        "ga": "2020-06-04",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.8",
+        "codename": null,
+        "label": "1.8 (LTS)",
+        "releaseDate": "2020-06-04",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-12-31",
+        "isEoes": false,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "1.8.3",
+          "date": "2022-04-07",
+          "link": "https://github.com/angular/angular.js/blob/v1.8.3/CHANGELOG.md"
+        },
+        "custom": {
+          "eoesProvider": "HeroDevs, OpenLogic"
+        }
+      }
+    },
+    {
+      "id": "1.7",
+      "name": "1.7",
+      "milestones": {
+        "ga": "2018-05-11",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.7",
+        "codename": null,
+        "label": "1.7",
+        "releaseDate": "2018-05-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-12-31",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "1.7.9",
+          "date": "2019-11-19",
+          "link": "https://github.com/angular/angular.js/blob/v1.7.9/CHANGELOG.md"
+        },
+        "custom": {
+          "eoesProvider": null
+        }
+      }
+    },
+    {
+      "id": "1.6",
+      "name": "1.6",
+      "milestones": {
+        "ga": "2016-12-08",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.6",
+        "codename": null,
+        "label": "1.6",
+        "releaseDate": "2016-12-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-12-31",
+        "isEoes": false,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "1.6.10",
+          "date": "2018-04-17",
+          "link": "https://github.com/angular/angular.js/blob/v1.6.10/CHANGELOG.md"
+        },
+        "custom": {
+          "eoesProvider": "OpenLogic"
+        }
+      }
+    },
+    {
+      "id": "1.5",
+      "name": "1.5",
+      "milestones": {
+        "ga": "2016-02-05",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.5",
+        "codename": null,
+        "label": "1.5",
+        "releaseDate": "2016-02-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-12-31",
+        "isEoes": false,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "1.5.11",
+          "date": "2017-01-12",
+          "link": "https://github.com/angular/angular.js/blob/v1.5.11/CHANGELOG.md"
+        },
+        "custom": {
+          "eoesProvider": "HeroDevs"
+        }
+      }
+    },
+    {
+      "id": "1.4",
+      "name": "1.4",
+      "milestones": {
+        "ga": "2015-05-27",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.4",
+        "codename": null,
+        "label": "1.4",
+        "releaseDate": "2015-05-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-12-31",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "1.4.14",
+          "date": "2016-10-11",
+          "link": "https://github.com/angular/angular.js/blob/v1.4.14/CHANGELOG.md"
+        },
+        "custom": {
+          "eoesProvider": null
+        }
+      }
+    },
+    {
+      "id": "1.3",
+      "name": "1.3",
+      "milestones": {
+        "ga": "2014-10-13",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.3",
+        "codename": null,
+        "label": "1.3",
+        "releaseDate": "2014-10-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-12-31",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "1.3.20",
+          "date": "2015-09-29",
+          "link": "https://github.com/angular/angular.js/blob/v1.3.20/CHANGELOG.md"
+        },
+        "custom": {
+          "eoesProvider": null
+        }
+      }
+    },
+    {
+      "id": "1.2",
+      "name": "1.2",
+      "milestones": {
+        "ga": "2013-11-23",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.2",
+        "codename": null,
+        "label": "1.2",
+        "releaseDate": "2013-11-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-12-31",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "1.2.32",
+          "date": "2016-10-11",
+          "link": "https://github.com/angular/angular.js/blob/v1.2.32/CHANGELOG.md"
+        },
+        "custom": {
+          "eoesProvider": null
+        }
+      }
+    },
+    {
+      "id": "1.1",
+      "name": "1.1",
+      "milestones": {
+        "ga": "2013-11-23",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.1",
+        "codename": null,
+        "label": "1.1",
+        "releaseDate": "2013-11-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-12-31",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "1.1.5",
+          "date": "2013-11-23",
+          "link": "https://github.com/angular/angular.js/blob/v1.1.5/CHANGELOG.md"
+        },
+        "custom": {
+          "eoesProvider": null
+        }
+      }
+    },
+    {
+      "id": "1.0",
+      "name": "1.0",
+      "milestones": {
+        "ga": "2013-11-23",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.0",
+        "codename": null,
+        "label": "1.0",
+        "releaseDate": "2013-11-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-12-31",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "1.0.8",
+          "date": "2013-11-23",
+          "link": "https://github.com/angular/angular.js/blob/v1.0.8/CHANGELOG.md"
+        },
+        "custom": {
+          "eoesProvider": null
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/angularjs/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-05-01T09:58:42+00:00"
+  }
+}

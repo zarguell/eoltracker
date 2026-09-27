@@ -1,0 +1,235 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "oracle-graalvm",
+  "name": "Oracle GraalVM",
+  "category": "software",
+  "upstream_category": "lang",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "graalvm"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Premier Support",
+    "eoes": "Extended Support"
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/oracle-graalvm",
+    "releasePolicy": "https://docs.oracle.com/en/graalvm/support-roadmap.html"
+  },
+  "releases": [
+    {
+      "id": "25",
+      "name": "25",
+      "milestones": {
+        "ga": "2025-09-16",
+        "eos": null,
+        "eossec": null,
+        "eol": "2033-09-30"
+      },
+      "upstream": {
+        "name": "25",
+        "codename": null,
+        "label": "25",
+        "releaseDate": "2025-09-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2030-09-30",
+        "isEoes": false,
+        "eoesFrom": "2033-09-30",
+        "isMaintained": true,
+        "latest": {
+          "name": "25.3.4.1",
+          "date": "2026-08-25",
+          "link": "https://docs.oracle.com/en/graalvm/jdk/25/docs/release-notes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "24",
+      "name": "24",
+      "milestones": {
+        "ga": "2025-03-18",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "24",
+        "codename": null,
+        "label": "24",
+        "releaseDate": "2025-03-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-09-30",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "24.0.2",
+          "date": "2025-07-15",
+          "link": "https://docs.oracle.com/en/graalvm/jdk/24/docs/release-notes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "23",
+      "name": "23",
+      "milestones": {
+        "ga": "2024-09-17",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "23",
+        "codename": null,
+        "label": "23",
+        "releaseDate": "2024-09-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-03-31",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "23.0.2",
+          "date": "2025-01-21",
+          "link": "https://docs.oracle.com/en/graalvm/jdk/23/docs/release-notes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "22",
+      "name": "22",
+      "milestones": {
+        "ga": "2024-03-19",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "22",
+        "codename": null,
+        "label": "22",
+        "releaseDate": "2024-03-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-09-17",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "22.0.2",
+          "date": "2024-07-16",
+          "link": "https://docs.oracle.com/en/graalvm/jdk/22/docs/release-notes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "21",
+      "name": "21 (LTS)",
+      "milestones": {
+        "ga": "2023-09-19",
+        "eos": null,
+        "eossec": null,
+        "eol": "2031-09-30"
+      },
+      "upstream": {
+        "name": "21",
+        "codename": null,
+        "label": "21 (LTS)",
+        "releaseDate": "2023-09-19",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2028-09-30",
+        "isEoes": false,
+        "eoesFrom": "2031-09-30",
+        "isMaintained": true,
+        "latest": {
+          "name": "21.0.12.1",
+          "date": "2026-08-18",
+          "link": "https://docs.oracle.com/en/graalvm/jdk/21/docs/release-notes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "20",
+      "name": "20",
+      "milestones": {
+        "ga": "2023-06-13",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "20",
+        "codename": null,
+        "label": "20",
+        "releaseDate": "2023-06-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-09-19",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "20.0.2",
+          "date": "2023-07-25",
+          "link": "https://docs.oracle.com/en/graalvm/jdk/20/docs/release-notes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "17",
+      "name": "17 (LTS)",
+      "milestones": {
+        "ga": "2023-06-13",
+        "eos": null,
+        "eossec": null,
+        "eol": "2029-09-30"
+      },
+      "upstream": {
+        "name": "17",
+        "codename": null,
+        "label": "17 (LTS)",
+        "releaseDate": "2023-06-13",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2026-09-30",
+        "isEoes": false,
+        "eoesFrom": "2029-09-30",
+        "isMaintained": true,
+        "latest": {
+          "name": "17.0.20.1",
+          "date": "2026-08-18",
+          "link": "https://docs.oracle.com/en/graalvm/jdk/17/docs/release-notes/"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/oracle-graalvm/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T14:54:07Z",
+    "upstream_modified": "2026-08-26T00:06:55+00:00"
+  }
+}

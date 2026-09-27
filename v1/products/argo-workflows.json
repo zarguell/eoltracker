@@ -1,0 +1,229 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "argo-workflows",
+  "name": "Argo Workflows",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "purl",
+      "id": "pkg:github/argoproj/argo-workflows"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/argoproj/argocli"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/argoproj/workflow-controller"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Supported",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/argo.svg",
+    "html": "https://endoflife.date/argo-workflows",
+    "releasePolicy": "https://argo-workflows.readthedocs.io/en/latest/releases/"
+  },
+  "releases": [
+    {
+      "id": "4.1",
+      "name": "4.1",
+      "milestones": {
+        "ga": "2026-08-11",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.1",
+        "codename": null,
+        "label": "4.1",
+        "releaseDate": "2026-08-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "4.1.3",
+          "date": "2026-09-11",
+          "link": "https://github.com/argoproj/argo-workflows/releases/tag/v4.1.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.0",
+      "name": "4.0",
+      "milestones": {
+        "ga": "2026-02-04",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.0",
+        "codename": null,
+        "label": "4.0",
+        "releaseDate": "2026-02-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "4.0.11",
+          "date": "2026-09-11",
+          "link": "https://github.com/argoproj/argo-workflows/releases/tag/v4.0.11"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.7",
+      "name": "3.7",
+      "milestones": {
+        "ga": "2025-07-23",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-08-14"
+      },
+      "upstream": {
+        "name": "3.7",
+        "codename": null,
+        "label": "3.7",
+        "releaseDate": "2025-07-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-08-14",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.7.18",
+          "date": "2026-08-14",
+          "link": "https://github.com/argoproj/argo-workflows/releases/tag/v3.7.18"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.6",
+      "name": "3.6",
+      "milestones": {
+        "ga": "2024-11-14",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-02-04"
+      },
+      "upstream": {
+        "name": "3.6",
+        "codename": null,
+        "label": "3.6",
+        "releaseDate": "2024-11-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-02-04",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.6.19",
+          "date": "2026-02-16",
+          "link": "https://github.com/argoproj/argo-workflows/releases/tag/v3.6.19"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.5",
+      "name": "3.5",
+      "milestones": {
+        "ga": "2023-10-13",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-07-23"
+      },
+      "upstream": {
+        "name": "3.5",
+        "codename": null,
+        "label": "3.5",
+        "releaseDate": "2023-10-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-07-23",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.5.15",
+          "date": "2025-06-13",
+          "link": "https://github.com/argoproj/argo-workflows/releases/tag/v3.5.15"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.4",
+      "name": "3.4",
+      "milestones": {
+        "ga": "2022-09-18",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-11-14"
+      },
+      "upstream": {
+        "name": "3.4",
+        "codename": null,
+        "label": "3.4",
+        "releaseDate": "2022-09-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-11-14",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.4.18",
+          "date": "2024-10-07",
+          "link": "https://github.com/argoproj/argo-workflows/releases/tag/v3.4.18"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.3",
+      "name": "3.3",
+      "milestones": {
+        "ga": "2022-03-14",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-10-13"
+      },
+      "upstream": {
+        "name": "3.3",
+        "codename": null,
+        "label": "3.3",
+        "releaseDate": "2022-03-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-10-13",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.3.10",
+          "date": "2022-11-29",
+          "link": "https://github.com/argoproj/argo-workflows/releases/tag/v3.3.10"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/argo-workflows/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-12T00:06:51+00:00"
+  }
+}

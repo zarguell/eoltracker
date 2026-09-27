@@ -1,0 +1,67 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "clear-linux",
+  "name": "Clear Linux",
+  "category": "software",
+  "upstream_category": "os",
+  "identifiers": [
+    {
+      "type": "purl",
+      "id": "pkg:docker/library/clearlinux"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/o:intel:clear-linux-os"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:o:intel:clear-linux-os"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/intel.svg",
+    "html": "https://endoflife.date/clear-linux",
+    "releasePolicy": "https://web.archive.org/web/20260101094138/https://community.clearlinux.org/t/all-good-things-come-to-an-end-shutting-down-clear-linux-os/10716"
+  },
+  "releases": [
+    {
+      "id": "current",
+      "name": "current",
+      "milestones": {
+        "ga": "2015-02-06",
+        "eos": null,
+        "eossec": "2025-07-21",
+        "eol": null
+      },
+      "upstream": {
+        "name": "current",
+        "codename": null,
+        "label": "current",
+        "releaseDate": "2015-02-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-07-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "43800",
+          "date": "2025-07-21",
+          "link": null
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/clear-linux/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-05-01T09:58:42+00:00"
+  }
+}

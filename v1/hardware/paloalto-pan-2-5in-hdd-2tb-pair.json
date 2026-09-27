@@ -1,0 +1,84 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "paloalto-pan-2-5in-hdd-2tb-pair",
+  "name": "PAN-2.5IN-HDD-2TB-PAIR",
+  "category": "hardware",
+  "vendor": "Palo Alto Networks",
+  "product_line": "PAN-2.5IN-HDD-2TB-PAIR",
+  "family": "Palo Alto Networks hardware",
+  "model_number": "PAN-2.5IN-HDD-2TB-PAIR",
+  "milestones": {
+    "ga": null,
+    "eos": "2024-08-01",
+    "eossec": null,
+    "eol": "2028-08-31"
+  },
+  "status": "expiring",
+  "upstream": {
+    "End-of-Sale Product": {
+      "text": "PAN-2.5IN-HDD-2TB-PAIR",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "End-of-Sale Date": {
+      "text": "Aug 1, 2024",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "End-of-Life Date": {
+      "text": "Aug 31, 2028",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "Resources": {
+      "text": "PA-5200 Datasheet",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "Last Supported OS ^": {
+      "text": "PAN-OS 11.2 Standard Support: Until May 2, 2027 Extended Support: Until Hardware EOL Aug 31, 2028",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "Recommended Replacement": {
+      "text": "PAN-2.5IN-SSD-1.92TB-PAIR",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "products": {
+      "text": "PAN-2.5IN-HDD-2TB-PAIR",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": [],
+      "note": "the product line the vendor heads this row with, and the SKUs it lists under it; one row is one line, not one SKU"
+    },
+    "Last Supported OS note": {
+      "text": "PAN-OS 11.2 Standard Support: Until May 2, 2027 Extended Support: Until Hardware EOL Aug 31, 2028",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": [],
+      "note": "this row's OS support window names a year later than the row's own End-of-Life Date. Both are the vendor's own statements and both are published; neither is recomputed from the other."
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates"
+    ],
+    "verifier": "deterministic-paloalto",
+    "last_checked": "2026-09-26T18:53:25Z"
+  }
+}

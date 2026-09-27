@@ -1,0 +1,177 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "windows-embedded",
+  "name": "Microsoft Windows Embedded",
+  "category": "software",
+  "upstream_category": "os",
+  "identifiers": [],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/windows-embedded",
+    "releasePolicy": "https://learn.microsoft.com/lifecycle/products/?terms=Windows%20Embedded"
+  },
+  "releases": [
+    {
+      "id": "8.1-industry",
+      "name": "8.1 Industry",
+      "milestones": {
+        "ga": "2013-11-25",
+        "eos": null,
+        "eossec": "2023-07-11",
+        "eol": null
+      },
+      "upstream": {
+        "name": "8.1-industry",
+        "codename": null,
+        "label": "8.1 Industry",
+        "releaseDate": "2013-11-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2018-07-10",
+        "isEol": true,
+        "eolFrom": "2023-07-11",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "8.1-pro",
+      "name": "8.1 Pro",
+      "milestones": {
+        "ga": "2013-11-13",
+        "eos": null,
+        "eossec": "2023-01-10",
+        "eol": null
+      },
+      "upstream": {
+        "name": "8.1-pro",
+        "codename": null,
+        "label": "8.1 Pro",
+        "releaseDate": "2013-11-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2018-01-09",
+        "isEol": true,
+        "eolFrom": "2023-01-10",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "compact-2013",
+      "name": "Compact 2013",
+      "milestones": {
+        "ga": "2013-08-11",
+        "eos": null,
+        "eossec": "2023-10-10",
+        "eol": null
+      },
+      "upstream": {
+        "name": "compact-2013",
+        "codename": null,
+        "label": "Compact 2013",
+        "releaseDate": "2013-08-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2018-10-09",
+        "isEol": true,
+        "eolFrom": "2023-10-10",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "posready-7",
+      "name": "POSReady 7",
+      "milestones": {
+        "ga": "2011-09-10",
+        "eos": null,
+        "eossec": "2021-10-12",
+        "eol": null
+      },
+      "upstream": {
+        "name": "posready-7",
+        "codename": null,
+        "label": "POSReady 7",
+        "releaseDate": "2011-09-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2016-10-11",
+        "isEol": true,
+        "eolFrom": "2021-10-12",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "compact-7",
+      "name": "Compact 7",
+      "milestones": {
+        "ga": "2011-03-15",
+        "eos": null,
+        "eossec": "2021-04-13",
+        "eol": null
+      },
+      "upstream": {
+        "name": "compact-7",
+        "codename": null,
+        "label": "Compact 7",
+        "releaseDate": "2011-03-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2016-04-12",
+        "isEol": true,
+        "eolFrom": "2021-04-13",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "standard-7-sp1",
+      "name": "Standard 7 SP1",
+      "milestones": {
+        "ga": "2011-02-28",
+        "eos": null,
+        "eossec": "2020-10-13",
+        "eol": null
+      },
+      "upstream": {
+        "name": "standard-7-sp1",
+        "codename": null,
+        "label": "Standard 7 SP1",
+        "releaseDate": "2011-02-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2015-10-13",
+        "isEol": true,
+        "eolFrom": "2020-10-13",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/windows-embedded/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-05-01T09:58:42+00:00"
+  }
+}

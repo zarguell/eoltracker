@@ -1,0 +1,372 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "authentik",
+  "name": "authentik",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "authentik"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/goauthentik/authentik"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/authentik/server"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:goauthentik:authentik"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:goauthentik:authentik"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Supported",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/authentik.svg",
+    "html": "https://endoflife.date/authentik",
+    "releasePolicy": "https://docs.goauthentik.io/enterprise/entsupport/#product-version-support"
+  },
+  "releases": [
+    {
+      "id": "2026.8",
+      "name": "2026.8",
+      "milestones": {
+        "ga": "2026-08-18",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2026.8",
+        "codename": null,
+        "label": "2026.8",
+        "releaseDate": "2026-08-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "2026.8.2",
+          "date": "2026-09-09",
+          "link": "https://docs.goauthentik.io/releases/2026.8/#fixed-in-202682"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2026.5",
+      "name": "2026.5",
+      "milestones": {
+        "ga": "2026-05-22",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2026.5",
+        "codename": null,
+        "label": "2026.5",
+        "releaseDate": "2026-05-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "2026.5.7",
+          "date": "2026-09-09",
+          "link": "https://docs.goauthentik.io/releases/2026.5/#fixed-in-202657"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2026.2",
+      "name": "2026.2",
+      "milestones": {
+        "ga": "2026-02-24",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-08-18"
+      },
+      "upstream": {
+        "name": "2026.2",
+        "codename": null,
+        "label": "2026.2",
+        "releaseDate": "2026-02-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-08-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "2026.2.7",
+          "date": "2026-09-09",
+          "link": "https://docs.goauthentik.io/releases/2026.2/#fixed-in-202627"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2025.12",
+      "name": "2025.12",
+      "milestones": {
+        "ga": "2026-01-13",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-05-22"
+      },
+      "upstream": {
+        "name": "2025.12",
+        "codename": null,
+        "label": "2025.12",
+        "releaseDate": "2026-01-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-05-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "2025.12.6",
+          "date": "2026-05-28",
+          "link": "https://docs.goauthentik.io/releases/2025.12/#fixed-in-2025126"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2025.10",
+      "name": "2025.10",
+      "milestones": {
+        "ga": "2025-10-27",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-02-24"
+      },
+      "upstream": {
+        "name": "2025.10",
+        "codename": null,
+        "label": "2025.10",
+        "releaseDate": "2025-10-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-02-24",
+        "isMaintained": false,
+        "latest": {
+          "name": "2025.10.4",
+          "date": "2026-02-12",
+          "link": "https://docs.goauthentik.io/releases/2025.10/#fixed-in-2025104"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2025.8",
+      "name": "2025.8",
+      "milestones": {
+        "ga": "2025-08-20",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-01-13"
+      },
+      "upstream": {
+        "name": "2025.8",
+        "codename": null,
+        "label": "2025.8",
+        "releaseDate": "2025-08-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-01-13",
+        "isMaintained": false,
+        "latest": {
+          "name": "2025.8.6",
+          "date": "2026-02-12",
+          "link": "https://docs.goauthentik.io/releases/2025.8/#fixed-in-202586"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2025.6",
+      "name": "2025.6",
+      "milestones": {
+        "ga": "2025-06-03",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-10-27"
+      },
+      "upstream": {
+        "name": "2025.6",
+        "codename": null,
+        "label": "2025.6",
+        "releaseDate": "2025-06-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-10-27",
+        "isMaintained": false,
+        "latest": {
+          "name": "2025.6.4",
+          "date": "2025-07-22",
+          "link": "https://docs.goauthentik.io/releases/2025.6/#fixed-in-202564"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2025.4",
+      "name": "2025.4",
+      "milestones": {
+        "ga": "2025-04-29",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-08-20"
+      },
+      "upstream": {
+        "name": "2025.4",
+        "codename": null,
+        "label": "2025.4",
+        "releaseDate": "2025-04-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-08-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "2025.4.4",
+          "date": "2025-07-22",
+          "link": "https://docs.goauthentik.io/releases/2025.4/#fixed-in-202544"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2024.12",
+      "name": "2024.12",
+      "milestones": {
+        "ga": "2024-12-19",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-04-30"
+      },
+      "upstream": {
+        "name": "2024.12",
+        "codename": null,
+        "label": "2024.12",
+        "releaseDate": "2024-12-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-04-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "2024.12.5",
+          "date": "2025-04-08",
+          "link": "https://docs.goauthentik.io/releases/2024.12/#fixed-in-2024125"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2023.10",
+      "name": "2023.10",
+      "milestones": {
+        "ga": "2023-10-26",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-04-24"
+      },
+      "upstream": {
+        "name": "2023.10",
+        "codename": null,
+        "label": "2023.10",
+        "releaseDate": "2023-10-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-04-24",
+        "isMaintained": false,
+        "latest": {
+          "name": "2023.10.7",
+          "date": "2024-01-29",
+          "link": "https://docs.goauthentik.io/releases/2023.10/#fixed-in-2023107"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2022.12",
+      "name": "2022.12",
+      "milestones": {
+        "ga": "2022-12-28",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-02-14"
+      },
+      "upstream": {
+        "name": "2022.12",
+        "codename": null,
+        "label": "2022.12",
+        "releaseDate": "2022-12-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-02-14",
+        "isMaintained": false,
+        "latest": {
+          "name": "2022.12.3",
+          "date": "2023-03-02",
+          "link": "https://docs.goauthentik.io/releases/2022.12/#fixed-in-2022123"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2021.12",
+      "name": "2021.12",
+      "milestones": {
+        "ga": "2021-12-16",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-02-16"
+      },
+      "upstream": {
+        "name": "2021.12",
+        "codename": null,
+        "label": "2021.12",
+        "releaseDate": "2021-12-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-02-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "2021.12.5",
+          "date": "2022-01-06",
+          "link": "https://docs.goauthentik.io/releases/2021.12/#fixed-in-2021125"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/authentik/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-10T00:08:43+00:00"
+  }
+}

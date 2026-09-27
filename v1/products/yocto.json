@@ -1,0 +1,441 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "yocto",
+  "name": "Yocto Project",
+  "category": "software",
+  "upstream_category": "os",
+  "identifiers": [
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:linuxfoundation:yocto"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:linuxfoundation:yocto"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Support Status",
+    "eoes": null
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/yocto",
+    "releasePolicy": "https://wiki.yoctoproject.org/wiki/Stable_Release_and_LTS"
+  },
+  "releases": [
+    {
+      "id": "6.0",
+      "name": "6.0 'Wrynose' (LTS)",
+      "milestones": {
+        "ga": "2026-05-13",
+        "eos": null,
+        "eossec": null,
+        "eol": "2030-04-30"
+      },
+      "upstream": {
+        "name": "6.0",
+        "codename": "Wrynose",
+        "label": "6.0 'Wrynose' (LTS)",
+        "releaseDate": "2026-05-13",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2030-04-30",
+        "isMaintained": true,
+        "latest": {
+          "name": "6.0.1",
+          "date": "2026-06-18",
+          "link": "https://docs.yoctoproject.org/migration-guides/migration-6.0.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.3",
+      "name": "5.3 'Whinlatter'",
+      "milestones": {
+        "ga": "2025-12-15",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-06-15"
+      },
+      "upstream": {
+        "name": "5.3",
+        "codename": "Whinlatter",
+        "label": "5.3 'Whinlatter'",
+        "releaseDate": "2025-12-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-06-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.3",
+          "date": "2025-12-15",
+          "link": "https://docs.yoctoproject.org/migration-guides/migration-5.3.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.2",
+      "name": "5.2 'Walnascar'",
+      "milestones": {
+        "ga": "2025-05-07",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-12-07"
+      },
+      "upstream": {
+        "name": "5.2",
+        "codename": "Walnascar",
+        "label": "5.2 'Walnascar'",
+        "releaseDate": "2025-05-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-12-07",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.2.4",
+          "date": "2025-10-14",
+          "link": "https://docs.yoctoproject.org/migration-guides/migration-5.2.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.1",
+      "name": "5.1 'Styhead'",
+      "milestones": {
+        "ga": "2024-10-16",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-05-16"
+      },
+      "upstream": {
+        "name": "5.1",
+        "codename": "Styhead",
+        "label": "5.1 'Styhead'",
+        "releaseDate": "2024-10-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-05-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.1.4",
+          "date": "2025-04-01",
+          "link": "https://docs.yoctoproject.org/migration-guides/migration-5.1.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.0",
+      "name": "5.0 'Scarthgap' (LTS)",
+      "milestones": {
+        "ga": "2024-04-29",
+        "eos": null,
+        "eossec": null,
+        "eol": "2028-04-30"
+      },
+      "upstream": {
+        "name": "5.0",
+        "codename": "Scarthgap",
+        "label": "5.0 'Scarthgap' (LTS)",
+        "releaseDate": "2024-04-29",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2028-04-30",
+        "isMaintained": true,
+        "latest": {
+          "name": "5.0.20",
+          "date": "2026-09-15",
+          "link": "https://docs.yoctoproject.org/migration-guides/migration-5.0.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.3",
+      "name": "4.3 'Nanbield'",
+      "milestones": {
+        "ga": "2023-11-09",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-06-09"
+      },
+      "upstream": {
+        "name": "4.3",
+        "codename": "Nanbield",
+        "label": "4.3 'Nanbield'",
+        "releaseDate": "2023-11-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-06-09",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.3.4",
+          "date": "2024-04-09",
+          "link": "https://docs.yoctoproject.org/migration-guides/migration-4.3.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.2",
+      "name": "4.2 'Mickledore'",
+      "milestones": {
+        "ga": "2023-05-03",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-11-05"
+      },
+      "upstream": {
+        "name": "4.2",
+        "codename": "Mickledore",
+        "label": "4.2 'Mickledore'",
+        "releaseDate": "2023-05-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-11-05",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.2.4",
+          "date": "2023-12-07",
+          "link": "https://docs.yoctoproject.org/migration-guides/migration-4.2.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.1",
+      "name": "4.1 'Langdale'",
+      "milestones": {
+        "ga": "2022-10-23",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-05-27"
+      },
+      "upstream": {
+        "name": "4.1",
+        "codename": "Langdale",
+        "label": "4.1 'Langdale'",
+        "releaseDate": "2022-10-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-05-27",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.1.4",
+          "date": "2023-05-11",
+          "link": "https://docs.yoctoproject.org/migration-guides/migration-4.1.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.0",
+      "name": "4.0 'Kirkstone' (LTS)",
+      "milestones": {
+        "ga": "2022-04-25",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-04-27"
+      },
+      "upstream": {
+        "name": "4.0",
+        "codename": "Kirkstone",
+        "label": "4.0 'Kirkstone' (LTS)",
+        "releaseDate": "2022-04-25",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-04-27",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.0.35",
+          "date": "2026-04-29",
+          "link": "https://docs.yoctoproject.org/migration-guides/migration-4.0.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.4",
+      "name": "3.4 'Honister'",
+      "milestones": {
+        "ga": "2021-10-25",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-05-01"
+      },
+      "upstream": {
+        "name": "3.4",
+        "codename": "Honister",
+        "label": "3.4 'Honister'",
+        "releaseDate": "2021-10-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-05-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.4.4",
+          "date": "2022-05-12",
+          "link": "https://docs.yoctoproject.org/migration-guides/migration-3.4.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.3",
+      "name": "3.3 'Hardknott'",
+      "milestones": {
+        "ga": "2021-04-19",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-04-20"
+      },
+      "upstream": {
+        "name": "3.3",
+        "codename": "Hardknott",
+        "label": "3.3 'Hardknott'",
+        "releaseDate": "2021-04-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-04-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.3.6",
+          "date": "2022-04-27",
+          "link": "https://docs.yoctoproject.org/migration-guides/migration-3.3.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.2",
+      "name": "3.2 'Gatesgarth'",
+      "milestones": {
+        "ga": "2020-11-03",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-05-01"
+      },
+      "upstream": {
+        "name": "3.2",
+        "codename": "Gatesgarth",
+        "label": "3.2 'Gatesgarth'",
+        "releaseDate": "2020-11-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-05-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.2.4",
+          "date": "2021-05-17",
+          "link": "https://docs.yoctoproject.org/migration-guides/migration-3.2.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.1",
+      "name": "3.1 'Dunfell' (LTS)",
+      "milestones": {
+        "ga": "2020-04-21",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-04-30"
+      },
+      "upstream": {
+        "name": "3.1",
+        "codename": "Dunfell",
+        "label": "3.1 'Dunfell' (LTS)",
+        "releaseDate": "2020-04-21",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-04-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.1.33",
+          "date": "2024-05-03",
+          "link": "https://docs.yoctoproject.org/migration-guides/migration-3.1.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.0",
+      "name": "3.0 'Zeus'",
+      "milestones": {
+        "ga": "2019-10-22",
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-08-01"
+      },
+      "upstream": {
+        "name": "3.0",
+        "codename": "Zeus",
+        "label": "3.0 'Zeus'",
+        "releaseDate": "2019-10-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-08-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.0.4",
+          "date": "2020-08-20",
+          "link": "https://docs.yoctoproject.org/migration-guides/migration-3.0.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.7",
+      "name": "2.7 'Warrior'",
+      "milestones": {
+        "ga": "2019-05-01",
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-06-01"
+      },
+      "upstream": {
+        "name": "2.7",
+        "codename": "Warrior",
+        "label": "2.7 'Warrior'",
+        "releaseDate": "2019-05-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-06-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.7.4",
+          "date": "2020-06-02",
+          "link": "https://docs.yoctoproject.org/migration-guides/migration-2.7.html"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/yocto/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-16T00:07:55+00:00"
+  }
+}

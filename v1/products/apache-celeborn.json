@@ -1,0 +1,152 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "apache-celeborn",
+  "name": "Apache Celeborn",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "celeborn"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/apache/celeborn"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:apache:celeborn"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:apache:celeborn"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/apache.svg",
+    "html": "https://endoflife.date/apache-celeborn",
+    "releasePolicy": null
+  },
+  "releases": [
+    {
+      "id": "0.7",
+      "name": "0.7",
+      "milestones": {
+        "ga": "2026-08-16",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.7",
+        "codename": null,
+        "label": "0.7",
+        "releaseDate": "2026-08-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "0.7.0",
+          "date": "2026-08-17",
+          "link": "https://celeborn.apache.org/community/release_notes/release_note_0.7.0/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.6",
+      "name": "0.6",
+      "milestones": {
+        "ga": "2025-07-07",
+        "eos": null,
+        "eossec": "2026-08-16",
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.6",
+        "codename": null,
+        "label": "0.6",
+        "releaseDate": "2025-07-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-08-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "0.6.3",
+          "date": "2026-04-23",
+          "link": "https://celeborn.apache.org/community/release_notes/release_note_0.6.3/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.5",
+      "name": "0.5",
+      "milestones": {
+        "ga": "2024-07-09",
+        "eos": null,
+        "eossec": "2025-07-07",
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.5",
+        "codename": null,
+        "label": "0.5",
+        "releaseDate": "2024-07-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-07-07",
+        "isMaintained": false,
+        "latest": {
+          "name": "0.5.4",
+          "date": "2025-03-13",
+          "link": "https://celeborn.apache.org/community/release_notes/release_note_0.5.4/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.4",
+      "name": "0.4",
+      "milestones": {
+        "ga": "2024-05-22",
+        "eos": null,
+        "eossec": "2025-07-07",
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.4",
+        "codename": null,
+        "label": "0.4",
+        "releaseDate": "2024-05-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-07-07",
+        "isMaintained": false,
+        "latest": {
+          "name": "0.4.3",
+          "date": "2024-12-10",
+          "link": "https://celeborn.apache.org/community/release_notes/release_note_0.4.3/"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/apache-celeborn/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-08-24T00:07:02+00:00"
+  }
+}

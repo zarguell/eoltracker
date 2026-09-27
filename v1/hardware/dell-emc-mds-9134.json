@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-mds-9134",
+  "name": "MDS-9134",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Connectrix - Cisco",
+  "family": "Connectrix - Cisco",
+  "model_number": "MDS-9134",
+  "milestones": {
+    "ga": "2007-12-01",
+    "eos": "2010-12-31",
+    "eossec": null,
+    "eol": "2016-01-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "MDS-9134",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "MDS-9134",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Connectrix - Cisco",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2010-12-31",
+      "datetime": null,
+      "value": "2010-12-31",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Dec. 01, 2007",
+      "datetime": "2007-12-01",
+      "value": "2007-12-01",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2016-01-31",
+      "datetime": null,
+      "value": "2016-01-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/san-switches/vendor/dell-emc/connectrix-cisco/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

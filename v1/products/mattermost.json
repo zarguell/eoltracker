@@ -1,0 +1,1548 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "mattermost",
+  "name": "Mattermost",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "mattermost"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:mattermost:mattermost_server"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/mattermost.svg",
+    "html": "https://endoflife.date/mattermost",
+    "releasePolicy": "https://docs.mattermost.com/about/release-policy.html"
+  },
+  "releases": [
+    {
+      "id": "11.10",
+      "name": "11.10",
+      "milestones": {
+        "ga": "2026-08-14",
+        "eos": null,
+        "eossec": "2026-11-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "11.10",
+        "codename": null,
+        "label": "11.10",
+        "releaseDate": "2026-08-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2026-11-15",
+        "isMaintained": true,
+        "latest": {
+          "name": "11.10.2",
+          "date": "2026-09-15",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "11.9",
+      "name": "11.9",
+      "milestones": {
+        "ga": "2026-07-16",
+        "eos": null,
+        "eossec": "2026-10-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "11.9",
+        "codename": null,
+        "label": "11.9",
+        "releaseDate": "2026-07-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2026-10-15",
+        "isMaintained": true,
+        "latest": {
+          "name": "11.9.2",
+          "date": "2026-09-15",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "11.8",
+      "name": "11.8",
+      "milestones": {
+        "ga": "2026-06-16",
+        "eos": null,
+        "eossec": "2026-09-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "11.8",
+        "codename": null,
+        "label": "11.8",
+        "releaseDate": "2026-06-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-09-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "11.8.5",
+          "date": "2026-08-13",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "11.7",
+      "name": "11.7",
+      "milestones": {
+        "ga": "2026-05-15",
+        "eos": null,
+        "eossec": "2027-05-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "11.7",
+        "codename": null,
+        "label": "11.7",
+        "releaseDate": "2026-05-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-05-15",
+        "isMaintained": true,
+        "latest": {
+          "name": "11.7.11",
+          "date": "2026-09-15",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "11.6",
+      "name": "11.6",
+      "milestones": {
+        "ga": "2026-04-16",
+        "eos": null,
+        "eossec": "2026-07-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "11.6",
+        "codename": null,
+        "label": "11.6",
+        "releaseDate": "2026-04-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-07-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "11.6.6",
+          "date": "2026-06-26",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "11.5",
+      "name": "11.5",
+      "milestones": {
+        "ga": "2026-03-16",
+        "eos": null,
+        "eossec": "2026-06-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "11.5",
+        "codename": null,
+        "label": "11.5",
+        "releaseDate": "2026-03-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-06-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "11.5.7",
+          "date": "2026-05-27",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "11.4",
+      "name": "11.4",
+      "milestones": {
+        "ga": "2026-02-16",
+        "eos": null,
+        "eossec": "2026-05-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "11.4",
+        "codename": null,
+        "label": "11.4",
+        "releaseDate": "2026-02-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-05-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "11.4.5",
+          "date": "2026-04-22",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "11.3",
+      "name": "11.3",
+      "milestones": {
+        "ga": "2026-01-16",
+        "eos": null,
+        "eossec": "2026-04-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "11.3",
+        "codename": null,
+        "label": "11.3",
+        "releaseDate": "2026-01-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-04-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "11.3.3",
+          "date": "2026-03-16",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "11.2",
+      "name": "11.2",
+      "milestones": {
+        "ga": "2025-12-16",
+        "eos": null,
+        "eossec": "2026-03-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "11.2",
+        "codename": null,
+        "label": "11.2",
+        "releaseDate": "2025-12-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-03-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "11.2.4",
+          "date": "2026-02-20",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "11.1",
+      "name": "11.1",
+      "milestones": {
+        "ga": "2025-11-14",
+        "eos": null,
+        "eossec": "2026-02-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "11.1",
+        "codename": null,
+        "label": "11.1",
+        "releaseDate": "2025-11-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-02-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "11.1.3",
+          "date": "2026-01-15",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "11.0",
+      "name": "11.0",
+      "milestones": {
+        "ga": "2025-10-16",
+        "eos": null,
+        "eossec": "2026-01-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "11.0",
+        "codename": null,
+        "label": "11.0",
+        "releaseDate": "2025-10-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-01-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "11.0.7",
+          "date": "2025-12-17",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "10.12",
+      "name": "10.12",
+      "milestones": {
+        "ga": "2025-09-16",
+        "eos": null,
+        "eossec": "2025-12-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "10.12",
+        "codename": null,
+        "label": "10.12",
+        "releaseDate": "2025-09-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-12-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "10.12.4",
+          "date": "2025-11-21",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "10.11",
+      "name": "10.11",
+      "milestones": {
+        "ga": "2025-08-15",
+        "eos": null,
+        "eossec": "2026-08-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "10.11",
+        "codename": null,
+        "label": "10.11",
+        "releaseDate": "2025-08-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-08-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "10.11.24",
+          "date": "2026-09-16",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "10.10",
+      "name": "10.10",
+      "milestones": {
+        "ga": "2025-07-16",
+        "eos": null,
+        "eossec": "2025-10-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "10.10",
+        "codename": null,
+        "label": "10.10",
+        "releaseDate": "2025-07-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-10-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "10.10.3",
+          "date": "2025-09-16",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "10.9",
+      "name": "10.9",
+      "milestones": {
+        "ga": "2025-06-16",
+        "eos": null,
+        "eossec": "2025-09-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "10.9",
+        "codename": null,
+        "label": "10.9",
+        "releaseDate": "2025-06-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-09-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "10.9.5",
+          "date": "2025-08-15",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "10.8",
+      "name": "10.8",
+      "milestones": {
+        "ga": "2025-05-16",
+        "eos": null,
+        "eossec": "2025-08-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "10.8",
+        "codename": null,
+        "label": "10.8",
+        "releaseDate": "2025-05-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-08-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "10.8.4",
+          "date": "2025-07-22",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "10.7",
+      "name": "10.7",
+      "milestones": {
+        "ga": "2025-04-16",
+        "eos": null,
+        "eossec": "2025-07-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "10.7",
+        "codename": null,
+        "label": "10.7",
+        "releaseDate": "2025-04-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-07-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "10.7.4",
+          "date": "2025-06-18",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "10.6",
+      "name": "10.6",
+      "milestones": {
+        "ga": "2025-03-16",
+        "eos": null,
+        "eossec": "2025-06-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "10.6",
+        "codename": null,
+        "label": "10.6",
+        "releaseDate": "2025-03-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-06-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "10.6.6",
+          "date": "2025-05-21",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "10.5",
+      "name": "10.5 (ESR)",
+      "milestones": {
+        "ga": "2025-02-16",
+        "eos": null,
+        "eossec": "2025-11-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "10.5",
+        "codename": null,
+        "label": "10.5 (ESR)",
+        "releaseDate": "2025-02-16",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-11-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "10.5.14",
+          "date": "2025-10-30",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "10.4",
+      "name": "10.4",
+      "milestones": {
+        "ga": "2025-01-16",
+        "eos": null,
+        "eossec": "2025-04-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "10.4",
+        "codename": null,
+        "label": "10.4",
+        "releaseDate": "2025-01-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-04-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "10.4.5",
+          "date": "2025-04-15",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "10.3",
+      "name": "10.3",
+      "milestones": {
+        "ga": "2024-12-16",
+        "eos": null,
+        "eossec": "2025-03-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "10.3",
+        "codename": null,
+        "label": "10.3",
+        "releaseDate": "2024-12-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-03-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "10.3.4",
+          "date": "2025-02-19",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "10.2",
+      "name": "10.2",
+      "milestones": {
+        "ga": "2024-11-15",
+        "eos": null,
+        "eossec": "2025-02-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "10.2",
+        "codename": null,
+        "label": "10.2",
+        "releaseDate": "2024-11-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-02-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "10.2.3",
+          "date": "2025-01-22",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "10.1",
+      "name": "10.1",
+      "milestones": {
+        "ga": "2024-10-16",
+        "eos": null,
+        "eossec": "2025-01-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "10.1",
+        "codename": null,
+        "label": "10.1",
+        "releaseDate": "2024-10-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-01-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "10.1.7",
+          "date": "2025-01-15",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "10.0",
+      "name": "10.0",
+      "milestones": {
+        "ga": "2024-09-16",
+        "eos": null,
+        "eossec": "2024-12-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "10.0",
+        "codename": null,
+        "label": "10.0",
+        "releaseDate": "2024-09-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-12-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "10.0.4",
+          "date": "2024-12-10",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.11",
+      "name": "9.11 (ESR)",
+      "milestones": {
+        "ga": "2024-08-02",
+        "eos": null,
+        "eossec": "2025-05-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.11",
+        "codename": null,
+        "label": "9.11 (ESR)",
+        "releaseDate": "2024-08-02",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-05-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.11.18",
+          "date": "2025-07-22",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.10",
+      "name": "9.10",
+      "milestones": {
+        "ga": "2024-06-28",
+        "eos": null,
+        "eossec": "2024-10-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.10",
+        "codename": null,
+        "label": "9.10",
+        "releaseDate": "2024-06-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-10-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.10.3",
+          "date": "2024-09-26",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.9",
+      "name": "9.9",
+      "milestones": {
+        "ga": "2024-05-31",
+        "eos": null,
+        "eossec": "2024-09-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.9",
+        "codename": null,
+        "label": "9.9",
+        "releaseDate": "2024-05-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-09-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.9.3",
+          "date": "2024-08-27",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.8",
+      "name": "9.8",
+      "milestones": {
+        "ga": "2024-05-03",
+        "eos": null,
+        "eossec": "2024-08-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.8",
+        "codename": null,
+        "label": "9.8",
+        "releaseDate": "2024-05-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-08-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.8.3",
+          "date": "2024-07-22",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.7",
+      "name": "9.7",
+      "milestones": {
+        "ga": "2024-04-03",
+        "eos": null,
+        "eossec": "2024-07-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.7",
+        "codename": null,
+        "label": "9.7",
+        "releaseDate": "2024-04-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-07-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.7.6",
+          "date": "2024-07-02",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.6",
+      "name": "9.6",
+      "milestones": {
+        "ga": "2024-03-01",
+        "eos": null,
+        "eossec": "2024-06-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.6",
+        "codename": null,
+        "label": "9.6",
+        "releaseDate": "2024-03-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-06-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.6.3",
+          "date": "2024-06-03",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.5",
+      "name": "9.5",
+      "milestones": {
+        "ga": "2024-02-02",
+        "eos": null,
+        "eossec": "2024-11-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.5",
+        "codename": null,
+        "label": "9.5",
+        "releaseDate": "2024-02-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-11-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.5.14",
+          "date": "2025-05-09",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.4",
+      "name": "9.4",
+      "milestones": {
+        "ga": "2024-01-08",
+        "eos": null,
+        "eossec": "2024-04-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.4",
+        "codename": null,
+        "label": "9.4",
+        "releaseDate": "2024-01-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-04-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.4.5",
+          "date": "2024-03-26",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.3",
+      "name": "9.3",
+      "milestones": {
+        "ga": "2023-12-05",
+        "eos": null,
+        "eossec": "2024-03-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.3",
+        "codename": null,
+        "label": "9.3",
+        "releaseDate": "2023-12-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-03-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.3.3",
+          "date": "2024-03-06",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.2",
+      "name": "9.2",
+      "milestones": {
+        "ga": "2023-11-06",
+        "eos": null,
+        "eossec": "2024-02-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.2",
+        "codename": null,
+        "label": "9.2",
+        "releaseDate": "2023-11-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-02-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.2.6",
+          "date": "2024-02-14",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.1",
+      "name": "9.1",
+      "milestones": {
+        "ga": "2023-10-13",
+        "eos": null,
+        "eossec": "2024-01-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.1",
+        "codename": null,
+        "label": "9.1",
+        "releaseDate": "2023-10-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-01-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.1.5",
+          "date": "2024-01-09",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.0",
+      "name": "9.0",
+      "milestones": {
+        "ga": "2023-09-14",
+        "eos": null,
+        "eossec": "2023-12-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.0",
+        "codename": null,
+        "label": "9.0",
+        "releaseDate": "2023-09-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-12-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.0.5",
+          "date": "2023-11-29",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.1",
+      "name": "8.1 (ESR)",
+      "milestones": {
+        "ga": "2023-08-10",
+        "eos": null,
+        "eossec": "2024-05-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "8.1",
+        "codename": null,
+        "label": "8.1 (ESR)",
+        "releaseDate": "2023-08-10",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-05-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.1.13",
+          "date": "2024-04-25",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.0",
+      "name": "8.0",
+      "milestones": {
+        "ga": "2023-07-09",
+        "eos": null,
+        "eossec": "2023-10-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "8.0",
+        "codename": null,
+        "label": "8.0",
+        "releaseDate": "2023-07-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-10-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.0.4",
+          "date": "2023-10-06",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.10",
+      "name": "7.10",
+      "milestones": {
+        "ga": "2023-04-12",
+        "eos": null,
+        "eossec": "2023-08-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.10",
+        "codename": null,
+        "label": "7.10",
+        "releaseDate": "2023-04-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-08-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.10.5",
+          "date": "2023-07-26",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.9",
+      "name": "7.9",
+      "milestones": {
+        "ga": "2023-03-14",
+        "eos": null,
+        "eossec": "2023-07-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.9",
+        "codename": null,
+        "label": "7.9",
+        "releaseDate": "2023-03-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-07-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.9.6",
+          "date": "2023-07-12",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.8",
+      "name": "7.8 (ESR)",
+      "milestones": {
+        "ga": "2023-02-14",
+        "eos": null,
+        "eossec": "2023-11-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.8",
+        "codename": null,
+        "label": "7.8 (ESR)",
+        "releaseDate": "2023-02-14",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-11-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.8.15",
+          "date": "2023-11-13",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.7",
+      "name": "7.7",
+      "milestones": {
+        "ga": "2023-01-13",
+        "eos": null,
+        "eossec": "2023-04-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.7",
+        "codename": null,
+        "label": "7.7",
+        "releaseDate": "2023-01-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-04-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.7.4",
+          "date": "2023-04-12",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.5",
+      "name": "7.5 (ESR)",
+      "milestones": {
+        "ga": "2022-11-09",
+        "eos": null,
+        "eossec": "2023-02-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.5",
+        "codename": null,
+        "label": "7.5 (ESR)",
+        "releaseDate": "2022-11-09",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-02-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.5.2",
+          "date": "2022-12-21",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.4",
+      "name": "7.4",
+      "milestones": {
+        "ga": "2022-10-12",
+        "eos": null,
+        "eossec": "2023-01-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.4",
+        "codename": null,
+        "label": "7.4",
+        "releaseDate": "2022-10-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-01-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.4.1",
+          "date": "2022-12-21",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.3",
+      "name": "7.3",
+      "milestones": {
+        "ga": "2022-09-14",
+        "eos": null,
+        "eossec": "2022-12-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.3",
+        "codename": null,
+        "label": "7.3",
+        "releaseDate": "2022-09-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-12-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.3.1",
+          "date": "2022-10-14",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.2",
+      "name": "7.2",
+      "milestones": {
+        "ga": "2022-08-11",
+        "eos": null,
+        "eossec": "2022-11-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.2",
+        "codename": null,
+        "label": "7.2",
+        "releaseDate": "2022-08-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-11-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.2.1",
+          "date": "2022-10-13",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.1",
+      "name": "7.1 (ESR)",
+      "milestones": {
+        "ga": "2022-07-13",
+        "eos": null,
+        "eossec": "2023-05-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.1",
+        "codename": null,
+        "label": "7.1 (ESR)",
+        "releaseDate": "2022-07-13",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-05-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.1.9",
+          "date": "2023-04-27",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.0",
+      "name": "7.0",
+      "milestones": {
+        "ga": "2022-06-13",
+        "eos": null,
+        "eossec": "2022-09-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.0",
+        "codename": null,
+        "label": "7.0",
+        "releaseDate": "2022-06-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-09-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.0.2",
+          "date": "2022-08-23",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.7",
+      "name": "6.7",
+      "milestones": {
+        "ga": "2022-05-11",
+        "eos": null,
+        "eossec": "2022-08-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.7",
+        "codename": null,
+        "label": "6.7",
+        "releaseDate": "2022-05-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-08-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.7.2",
+          "date": "2022-06-15",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.6",
+      "name": "6.6",
+      "milestones": {
+        "ga": "2022-04-07",
+        "eos": null,
+        "eossec": "2022-07-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.6",
+        "codename": null,
+        "label": "6.6",
+        "releaseDate": "2022-04-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-07-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.6.2",
+          "date": "2022-06-13",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.5",
+      "name": "6.5",
+      "milestones": {
+        "ga": "2022-03-11",
+        "eos": null,
+        "eossec": "2022-06-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.5",
+        "codename": null,
+        "label": "6.5",
+        "releaseDate": "2022-03-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-06-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.5.2",
+          "date": "2022-06-13",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.4",
+      "name": "6.4",
+      "milestones": {
+        "ga": "2022-02-15",
+        "eos": null,
+        "eossec": "2022-05-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.4",
+        "codename": null,
+        "label": "6.4",
+        "releaseDate": "2022-02-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-05-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.4.3",
+          "date": "2022-04-28",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.3",
+      "name": "6.3 (ESR)",
+      "milestones": {
+        "ga": "2022-01-13",
+        "eos": null,
+        "eossec": "2022-10-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.3",
+        "codename": null,
+        "label": "6.3 (ESR)",
+        "releaseDate": "2022-01-13",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-10-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.3.10",
+          "date": "2022-08-23",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.2",
+      "name": "6.2",
+      "milestones": {
+        "ga": "2021-12-13",
+        "eos": null,
+        "eossec": "2022-03-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.2",
+        "codename": null,
+        "label": "6.2",
+        "releaseDate": "2021-12-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-03-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.2.5",
+          "date": "2022-03-10",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.1",
+      "name": "6.1",
+      "milestones": {
+        "ga": "2021-11-11",
+        "eos": null,
+        "eossec": "2022-02-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.1",
+        "codename": null,
+        "label": "6.1",
+        "releaseDate": "2021-11-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-02-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.1.3",
+          "date": "2022-02-03",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.0",
+      "name": "6.0",
+      "milestones": {
+        "ga": "2021-10-08",
+        "eos": null,
+        "eossec": "2022-01-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.0",
+        "codename": null,
+        "label": "6.0",
+        "releaseDate": "2021-10-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-01-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.0.4",
+          "date": "2021-12-17",
+          "link": "https://docs.mattermost.com/upgrade/version-archive.html"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/mattermost/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-17T00:08:37+00:00"
+  }
+}

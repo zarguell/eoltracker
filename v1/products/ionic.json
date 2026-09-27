@@ -1,0 +1,360 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "ionic",
+  "name": "Ionic Framework",
+  "category": "software",
+  "upstream_category": "framework",
+  "identifiers": [
+    {
+      "type": "purl",
+      "id": "pkg:github/ionic-team/ionic-framework"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:npm/%40ionic/core"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Maintenance",
+    "eoes": "Extended Support"
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/ionic.svg",
+    "html": "https://endoflife.date/ionic",
+    "releasePolicy": "https://ionicframework.com/docs/reference/support"
+  },
+  "releases": [
+    {
+      "id": "9",
+      "name": "9",
+      "milestones": {
+        "ga": "2026-08-19",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "9",
+        "codename": null,
+        "label": "9",
+        "releaseDate": "2026-08-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isEoes": false,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "9.0.4",
+          "date": "2026-09-16",
+          "link": "https://github.com/ionic-team/ionic-framework/releases/tag/v9.0.4"
+        },
+        "custom": {
+          "minAngularVersion": "v18",
+          "maxAngularVersion": "v22.x",
+          "supportedReactVersions": "v18+",
+          "supportedVueVersions": "v3.5+"
+        }
+      }
+    },
+    {
+      "id": "8",
+      "name": "8",
+      "milestones": {
+        "ga": "2024-04-17",
+        "eos": null,
+        "eossec": null,
+        "eol": "2027-08-19"
+      },
+      "upstream": {
+        "name": "8",
+        "codename": null,
+        "label": "8",
+        "releaseDate": "2024-04-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-08-19",
+        "isEol": false,
+        "eolFrom": "2027-02-19",
+        "isEoes": false,
+        "eoesFrom": "2027-08-19",
+        "isMaintained": true,
+        "latest": {
+          "name": "8.8.19",
+          "date": "2026-08-19",
+          "link": "https://github.com/ionic-team/ionic-framework/releases/tag/v8.8.19"
+        },
+        "custom": {
+          "minAngularVersion": "v16",
+          "maxAngularVersion": "v20.x",
+          "supportedReactVersions": "v17+",
+          "supportedVueVersions": "v3.0.6+"
+        }
+      }
+    },
+    {
+      "id": "7",
+      "name": "7",
+      "milestones": {
+        "ga": "2023-03-29",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-04-17"
+      },
+      "upstream": {
+        "name": "7",
+        "codename": null,
+        "label": "7",
+        "releaseDate": "2023-03-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-04-17",
+        "isEol": true,
+        "eolFrom": "2024-10-17",
+        "isEoes": true,
+        "eoesFrom": "2025-04-17",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.8.6",
+          "date": "2024-04-24",
+          "link": "https://github.com/ionic-team/ionic-framework/releases/tag/v7.8.6"
+        },
+        "custom": {
+          "minAngularVersion": "v14",
+          "maxAngularVersion": "v17.x",
+          "supportedReactVersions": "v17+",
+          "supportedVueVersions": "v3.0.6+"
+        }
+      }
+    },
+    {
+      "id": "6",
+      "name": "6",
+      "milestones": {
+        "ga": "2021-12-08",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-03-29"
+      },
+      "upstream": {
+        "name": "6",
+        "codename": null,
+        "label": "6",
+        "releaseDate": "2021-12-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-03-29",
+        "isEol": true,
+        "eolFrom": "2023-09-29",
+        "isEoes": true,
+        "eoesFrom": "2024-03-29",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.7.5",
+          "date": "2023-06-08",
+          "link": "https://github.com/ionic-team/ionic-framework/releases/tag/v6.7.5"
+        },
+        "custom": {
+          "minAngularVersion": "v12",
+          "maxAngularVersion": "v15.x",
+          "supportedReactVersions": "v17+",
+          "supportedVueVersions": "v3.0.6+"
+        }
+      }
+    },
+    {
+      "id": "5",
+      "name": "5",
+      "milestones": {
+        "ga": "2020-02-11",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-12-08"
+      },
+      "upstream": {
+        "name": "5",
+        "codename": null,
+        "label": "5",
+        "releaseDate": "2020-02-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-12-08",
+        "isEol": true,
+        "eolFrom": "2022-06-08",
+        "isEoes": true,
+        "eoesFrom": "2022-12-08",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.9.4",
+          "date": "2022-04-27",
+          "link": "https://github.com/ionic-team/ionic-framework/releases/tag/v5.9.4"
+        },
+        "custom": {
+          "minAngularVersion": "v8.2",
+          "maxAngularVersion": "v12.x",
+          "supportedReactVersions": "v16.8+",
+          "supportedVueVersions": "v3.0+"
+        }
+      }
+    },
+    {
+      "id": "4",
+      "name": "4",
+      "milestones": {
+        "ga": "2019-01-23",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-09-30"
+      },
+      "upstream": {
+        "name": "4",
+        "codename": null,
+        "label": "4",
+        "releaseDate": "2019-01-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-02-11",
+        "isEol": true,
+        "eolFrom": "2020-08-11",
+        "isEoes": true,
+        "eoesFrom": "2022-09-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.11.13",
+          "date": "2020-10-01",
+          "link": "https://github.com/ionic-team/ionic-framework/releases/tag/v4.11.13"
+        },
+        "custom": {
+          "minAngularVersion": "v8.2",
+          "maxAngularVersion": "v11.x",
+          "supportedReactVersions": "v16.8+",
+          "supportedVueVersions": "N/A"
+        }
+      }
+    },
+    {
+      "id": "3",
+      "name": "3",
+      "milestones": {
+        "ga": "2017-04-05",
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-08-11"
+      },
+      "upstream": {
+        "name": "3",
+        "codename": null,
+        "label": "3",
+        "releaseDate": "2017-04-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2019-01-23",
+        "isEol": true,
+        "eolFrom": "2019-10-30",
+        "isEoes": true,
+        "eoesFrom": "2020-08-11",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.9.3",
+          "date": "2019-01-14",
+          "link": "https://github.com/ionic-team/ionic-framework/releases/tag/v3.9.3"
+        },
+        "custom": {
+          "minAngularVersion": "v5.2.11",
+          "maxAngularVersion": "v5.2.11",
+          "supportedReactVersions": "N/A",
+          "supportedVueVersions": "N/A"
+        }
+      }
+    },
+    {
+      "id": "2",
+      "name": "2",
+      "milestones": {
+        "ga": "2017-01-24",
+        "eos": null,
+        "eossec": null,
+        "eol": "2017-04-05"
+      },
+      "upstream": {
+        "name": "2",
+        "codename": null,
+        "label": "2",
+        "releaseDate": "2017-01-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2017-04-05",
+        "isEol": true,
+        "eolFrom": "2017-04-05",
+        "isEoes": true,
+        "eoesFrom": "2017-04-05",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.3.0",
+          "date": "2017-03-17",
+          "link": "https://github.com/ionic-team/ionic-framework/releases/tag/v2.3.0"
+        },
+        "custom": {
+          "minAngularVersion": "v2.x",
+          "maxAngularVersion": "v2.x",
+          "supportedReactVersions": "N/A",
+          "supportedVueVersions": "N/A"
+        }
+      }
+    },
+    {
+      "id": "1",
+      "name": "1",
+      "milestones": {
+        "ga": "2015-05-12",
+        "eos": null,
+        "eossec": null,
+        "eol": "2017-01-25"
+      },
+      "upstream": {
+        "name": "1",
+        "codename": null,
+        "label": "1",
+        "releaseDate": "2015-05-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2017-01-25",
+        "isEol": true,
+        "eolFrom": "2017-01-25",
+        "isEoes": true,
+        "eoesFrom": "2017-01-25",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.3.2",
+          "date": "2016-10-24",
+          "link": "https://github.com/ionic-team/ionic-framework/releases/tag/v1.3.2"
+        },
+        "custom": {
+          "minAngularVersion": "v1.x",
+          "maxAngularVersion": "v1.x",
+          "supportedReactVersions": "N/A",
+          "supportedVueVersions": "N/A"
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/ionic/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-17T00:08:37+00:00"
+  }
+}

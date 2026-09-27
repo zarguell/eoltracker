@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-mds-sfp-10g-lw",
+  "name": "MDS-SFP-10G-LW",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Connectrix - Cisco",
+  "family": "Connectrix - Cisco",
+  "model_number": "MDS-SFP-10G-LW",
+  "milestones": {
+    "ga": "2006-12-31",
+    "eos": "2018-06-11",
+    "eossec": null,
+    "eol": "2023-06-30"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "MDS-SFP-10G-LW",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "MDS-SFP-10G-LW",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Connectrix - Cisco",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2018-06-11",
+      "datetime": null,
+      "value": "2018-06-11",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Dec. 31, 2006",
+      "datetime": "2006-12-31",
+      "value": "2006-12-31",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2023-06-30",
+      "datetime": null,
+      "value": "2023-06-30",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/san-switches/vendor/dell-emc/connectrix-cisco/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

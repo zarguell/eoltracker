@@ -1,0 +1,181 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "proftpd",
+  "name": "ProFTPD",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "proftpd"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:proftpd:proftpd"
+    }
+  ],
+  "labels": {
+    "eoas": "Stable Support",
+    "discontinued": null,
+    "eol": "Maintenance Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/proftpd",
+    "releasePolicy": "http://www.proftpd.org/docs/howto/Versioning.html"
+  },
+  "releases": [
+    {
+      "id": "1.3.9",
+      "name": "1.3.9",
+      "milestones": {
+        "ga": "2025-03-14",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.3.9",
+        "codename": null,
+        "label": "1.3.9",
+        "releaseDate": "2025-03-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "1.3.9d",
+          "date": "2026-08-14",
+          "link": "https://github.com/proftpd/proftpd/releases/tag/v1.3.9d"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.3.8",
+      "name": "1.3.8",
+      "milestones": {
+        "ga": "2022-12-04",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.3.8",
+        "codename": null,
+        "label": "1.3.8",
+        "releaseDate": "2022-12-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-03-14",
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "1.3.8d",
+          "date": "2025-03-14",
+          "link": "https://github.com/proftpd/proftpd/releases/tag/v1.3.8d"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.3.7",
+      "name": "1.3.7",
+      "milestones": {
+        "ga": "2020-07-20",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.3.7",
+        "codename": null,
+        "label": "1.3.7",
+        "releaseDate": "2020-07-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-12-04",
+        "isEol": true,
+        "eolFrom": "2025-03-14",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.3.7f",
+          "date": "2022-12-04",
+          "link": "https://github.com/proftpd/proftpd/releases/tag/v1.3.7f"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.3.6",
+      "name": "1.3.6",
+      "milestones": {
+        "ga": "2017-04-09",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.3.6",
+        "codename": null,
+        "label": "1.3.6",
+        "releaseDate": "2017-04-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-07-20",
+        "isEol": true,
+        "eolFrom": "2022-12-04",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.3.6e",
+          "date": "2020-07-20",
+          "link": "https://github.com/proftpd/proftpd/releases/tag/v1.3.6e"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.3.5",
+      "name": "1.3.5",
+      "milestones": {
+        "ga": "2015-05-27",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.3.5",
+        "codename": null,
+        "label": "1.3.5",
+        "releaseDate": "2015-05-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2017-04-09",
+        "isEol": true,
+        "eolFrom": "2020-07-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.3.5e",
+          "date": "2017-04-09",
+          "link": "https://github.com/proftpd/proftpd/releases/tag/v1.3.5e"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/proftpd/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-08-15T00:07:14+00:00"
+  }
+}

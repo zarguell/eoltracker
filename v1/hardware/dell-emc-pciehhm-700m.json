@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-pciehhm-700m",
+  "name": "PCIEHHM-700M",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC XtremSF",
+  "family": "XtremSF",
+  "model_number": "PCIEHHM-700M",
+  "milestones": {
+    "ga": "2013-08-16",
+    "eos": "2015-03-31",
+    "eossec": null,
+    "eol": "2020-03-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "PCIEHHM-700M",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "PCIEHHM-700M",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC XtremSF",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2015-03-31",
+      "datetime": null,
+      "value": "2015-03-31",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Aug. 16, 2013",
+      "datetime": "2013-08-16",
+      "value": "2013-08-16",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2020-03-31",
+      "datetime": null,
+      "value": "2020-03-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/servers/pcie-flash-cards/vendor/dell-emc/xtremsf/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

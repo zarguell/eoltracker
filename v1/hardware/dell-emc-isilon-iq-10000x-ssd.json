@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-isilon-iq-10000x-ssd",
+  "name": "Isilon IQ 10000X-SSD",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC PowerScale / Isilon",
+  "family": "PowerScale / Isilon",
+  "model_number": "Isilon IQ 10000X-SSD",
+  "milestones": {
+    "ga": "2010-02-15",
+    "eos": "2011-12-31",
+    "eossec": null,
+    "eol": "2017-01-01"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "Isilon IQ 10000X-SSD",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "Isilon IQ 10000X-SSD",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC PowerScale / Isilon",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2011-12-31",
+      "datetime": null,
+      "value": "2011-12-31",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Feb. 15, 2010",
+      "datetime": "2010-02-15",
+      "value": "2010-02-15",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2017-01-01",
+      "datetime": null,
+      "value": "2017-01-01",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/nas-storage/vendor/dell-emc/powerscale-isilon/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

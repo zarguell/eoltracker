@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-vnx5150-block-only",
+  "name": "VNX5150 (Block only)",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC VNX",
+  "family": "VNX",
+  "model_number": "VNX5150 (Block only)",
+  "milestones": {
+    "ga": "2014-08-22",
+    "eos": "2015-12-31",
+    "eossec": null,
+    "eol": "2020-12-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "VNX5150 (Block only)",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "VNX5150 (Block only)",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC VNX",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2015-12-31",
+      "datetime": null,
+      "value": "2015-12-31",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Aug. 22, 2014",
+      "datetime": "2014-08-22",
+      "value": "2014-08-22",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2020-12-31",
+      "datetime": null,
+      "value": "2020-12-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/san-storage/vendor/dell-emc/vnx/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

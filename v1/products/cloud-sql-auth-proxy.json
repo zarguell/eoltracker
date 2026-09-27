@@ -1,0 +1,85 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "cloud-sql-auth-proxy",
+  "name": "Cloud SQL Auth Proxy",
+  "category": "software",
+  "upstream_category": "app",
+  "identifiers": [],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Maintenance",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/googlecloud.svg",
+    "html": "https://endoflife.date/cloud-sql-auth-proxy",
+    "releasePolicy": "https://github.com/GoogleCloudPlatform/cloud-sql-proxy?tab=readme-ov-file#support-policy"
+  },
+  "releases": [
+    {
+      "id": "2",
+      "name": "2",
+      "milestones": {
+        "ga": "2023-01-17",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2",
+        "codename": null,
+        "label": "2",
+        "releaseDate": "2023-01-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-04-28",
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "2.25.4",
+          "date": "2026-08-28",
+          "link": "https://github.com/GoogleCloudPlatform/cloud-sql-proxy/releases/tag/v2.25.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1",
+      "name": "1",
+      "milestones": {
+        "ga": "2020-01-01",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1",
+        "codename": null,
+        "label": "1",
+        "releaseDate": "2020-01-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-08-22",
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "1.38.3",
+          "date": "2026-08-13",
+          "link": "https://github.com/GoogleCloudPlatform/cloud-sql-proxy/releases/tag/v1.38.3"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/cloud-sql-auth-proxy/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-08-29T00:06:26+00:00"
+  }
+}

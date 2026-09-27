@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-symmetrix-8230",
+  "name": "Symmetrix 8230",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Symmetrix",
+  "family": "Symmetrix",
+  "model_number": "Symmetrix 8230",
+  "milestones": {
+    "ga": "2001-10-01",
+    "eos": "2006-12-31",
+    "eossec": null,
+    "eol": "2012-06-30"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "Symmetrix 8230",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "Symmetrix 8230",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Symmetrix",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2006-12-31",
+      "datetime": null,
+      "value": "2006-12-31",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Oct. 01, 2001",
+      "datetime": "2001-10-01",
+      "value": "2001-10-01",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2012-06-30",
+      "datetime": null,
+      "value": "2012-06-30",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/san-storage/vendor/dell-emc/symmetrix/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

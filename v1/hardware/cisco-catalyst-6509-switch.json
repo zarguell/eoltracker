@@ -1,0 +1,61 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "cisco-catalyst-6509-switch",
+  "name": "Catalyst 6509 Switch",
+  "category": "hardware",
+  "vendor": "Cisco",
+  "product_line": "Cisco CATALYST",
+  "family": "CATALYST",
+  "model_number": "Catalyst 6509 Switch",
+  "milestones": {
+    "ga": null,
+    "eos": null,
+    "eossec": null,
+    "eol": "2011-11-01"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "Catalyst 6509 Switch",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "Catalyst 6509 Switch",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Cisco CATALYST",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Not Announced",
+      "datetime": "",
+      "value": null,
+      "role": "ga",
+      "links": []
+    },
+    "End of Support": {
+      "text": "2011-11-01",
+      "datetime": null,
+      "value": "2011-11-01",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/network/ethernet-switches/vendor/cisco/catalyst/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

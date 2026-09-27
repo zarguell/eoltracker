@@ -1,0 +1,193 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "express",
+  "name": "Express",
+  "category": "software",
+  "upstream_category": "framework",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "js:express"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/expressjs/express"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:npm/express"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:openjsf:express"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:openjsf:express"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": "Commercial Support"
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/express.svg",
+    "html": "https://endoflife.date/express",
+    "releasePolicy": "https://expressjs.com/en/support/"
+  },
+  "releases": [
+    {
+      "id": "5",
+      "name": "5",
+      "milestones": {
+        "ga": "2024-09-09",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5",
+        "codename": null,
+        "label": "5",
+        "releaseDate": "2024-09-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "5.2.1",
+          "date": "2025-12-01",
+          "link": "https://github.com/expressjs/express/releases/tag/v5.2.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4",
+      "name": "4",
+      "milestones": {
+        "ga": "2014-04-09",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4",
+        "codename": null,
+        "label": "4",
+        "releaseDate": "2014-04-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "4.22.3",
+          "date": "2026-09-14",
+          "link": "https://github.com/expressjs/express/releases/tag/v4.22.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3",
+      "name": "3",
+      "milestones": {
+        "ga": "2012-10-23",
+        "eos": null,
+        "eossec": "2015-07-05",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3",
+        "codename": null,
+        "label": "3",
+        "releaseDate": "2012-10-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2015-07-05",
+        "isEoes": false,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "3.21.2",
+          "date": "2015-07-31",
+          "link": "https://github.com/expressjs/express/releases/tag/3.21.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2",
+      "name": "2",
+      "milestones": {
+        "ga": "2011-03-17",
+        "eos": null,
+        "eossec": "2012-07-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2",
+        "codename": null,
+        "label": "2",
+        "releaseDate": "2011-03-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2012-07-01",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "2.5.11",
+          "date": "2012-06-29",
+          "link": "https://github.com/expressjs/express/releases/tag/2.5.11"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1",
+      "name": "1",
+      "milestones": {
+        "ga": "2010-11-16",
+        "eos": null,
+        "eossec": "2011-03-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1",
+        "codename": null,
+        "label": "1",
+        "releaseDate": "2010-11-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2011-03-01",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "1.0.9",
+          "date": "2011-03-23",
+          "link": "https://github.com/expressjs/express/releases/tag/1.0.9"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/express/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-15T00:08:08+00:00"
+  }
+}

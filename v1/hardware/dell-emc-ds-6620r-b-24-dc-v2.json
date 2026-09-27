@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-ds-6620r-b-24-dc-v2",
+  "name": "DS-6620R-B-24-DC-V2",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Connectrix - Brocade",
+  "family": "Connectrix - Brocade",
+  "model_number": "DS-6620R-B-24-DC-V2",
+  "milestones": {
+    "ga": "2021-08-03",
+    "eos": "2025-01-26",
+    "eossec": null,
+    "eol": "2030-01-31"
+  },
+  "status": "supported",
+  "upstream": {
+    "Product": {
+      "text": "DS-6620R-B-24-DC-V2",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "DS-6620R-B-24-DC-V2",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Connectrix - Brocade",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2025-01-26",
+      "datetime": null,
+      "value": "2025-01-26",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Aug. 03, 2021",
+      "datetime": "2021-08-03",
+      "value": "2021-08-03",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2030-01-31",
+      "datetime": null,
+      "value": "2030-01-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/san-switches/vendor/dell-emc/connectrix-brocade/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

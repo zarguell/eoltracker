@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-514-518-data-mover-in-cns-xxx",
+  "name": "514 / 518 Data Mover in CNS-xxx",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Celerra File Server",
+  "family": "Celerra File Server",
+  "model_number": "514 / 518 Data Mover in CNS-xxx",
+  "milestones": {
+    "ga": "2004-02-01",
+    "eos": "2006-12-31",
+    "eossec": null,
+    "eol": "2011-12-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "514 / 518 Data Mover in CNS-xxx",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "514 / 518 Data Mover in CNS-xxx",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Celerra File Server",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2006-12-31",
+      "datetime": null,
+      "value": "2006-12-31",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Feb. 01, 2004",
+      "datetime": "2004-02-01",
+      "value": "2004-02-01",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2011-12-31",
+      "datetime": null,
+      "value": "2011-12-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/nas-storage/vendor/dell-emc/celerra-file-server/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

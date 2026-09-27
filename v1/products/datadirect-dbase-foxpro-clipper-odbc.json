@@ -1,0 +1,47 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "datadirect-dbase-foxpro-clipper-odbc",
+  "name": "Dbase, FoxPro, Clipper ODBC",
+  "category": "software",
+  "upstream_category": "app",
+  "identifiers": [],
+  "labels": {
+    "ga": "Latest Release Date",
+    "stream retirement": "Stream Retirement Date (vendor's own cell, no milestone)",
+    "category": "Enterprise Essentials"
+  },
+  "links": {
+    "html": "https://docs.progress.com/bundle/datadirect-product-life-cycle/page/topics/datadirect_life_cycle/datadirect-product-life-cycle.html",
+    "life cycle policy": "https://docs-be.progress.com/bundle/datadirect-pdfs/raw/resource/enus/datadirect-life-cycle-policy.pdf",
+    "discontinued products notice": "https://www.progress.com/docs/default-source/datadirect/progress-datadirect-dis-products-eol---faq_final-02-20-24.pdf"
+  },
+  "releases": [
+    {
+      "id": "07.14.0035",
+      "name": "07.14.0035",
+      "milestones": {
+        "ga": "2025-09-30",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "07.14.0035",
+        "cells": {
+          "SUNSET Latest Release": "07.14.0035",
+          "SUNSET Latest Release Date": "30-Sep-25",
+          "Stream Retirement Date": "02-Jan-27"
+        },
+        "table": "current release streams",
+        "stream": "SUNSET Release Stream",
+        "retirement_note": "the vendor's target retirement date for this release stream, not this release's terminal support end: the policy sets it one year after the stream is reclassified, and puts the stream's most recent release in the Sunset phase while the prior releases enter the Retired phase, so the date is retained as the vendor's own cell and fills no milestone"
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://docs.progress.com/bundle/datadirect-product-life-cycle/page/topics/datadirect_life_cycle/datadirect-product-life-cycle.html",
+    "verifier": "deterministic-progress-datadirect",
+    "last_checked": "2026-09-26T22:23:44Z",
+    "upstream_modified": null
+  }
+}

@@ -1,0 +1,372 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "discourse",
+  "name": "Discourse",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "discourse"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:discourse:discourse"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:discourse:discourse"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/bitnami/discourse"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/discourse/base"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/discourse.svg",
+    "html": "https://endoflife.date/discourse",
+    "releasePolicy": "https://releases.discourse.org/"
+  },
+  "releases": [
+    {
+      "id": "2026.8",
+      "name": "2026.8",
+      "milestones": {
+        "ga": "2026-08-25",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-10-27"
+      },
+      "upstream": {
+        "name": "2026.8",
+        "codename": null,
+        "label": "2026.8",
+        "releaseDate": "2026-08-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2026-10-27",
+        "isMaintained": true,
+        "latest": {
+          "name": "2026.8.0",
+          "date": "2026-08-25",
+          "link": "https://releases.discourse.org/changelog/v2026.8.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2026.7",
+      "name": "2026.7 (ESR)",
+      "milestones": {
+        "ga": "2026-07-28",
+        "eos": null,
+        "eossec": null,
+        "eol": "2027-03-30"
+      },
+      "upstream": {
+        "name": "2026.7",
+        "codename": null,
+        "label": "2026.7 (ESR)",
+        "releaseDate": "2026-07-28",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-03-30",
+        "isMaintained": true,
+        "latest": {
+          "name": "2026.7.2",
+          "date": "2026-08-25",
+          "link": "https://releases.discourse.org/changelog/v2026.7.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2026.6",
+      "name": "2026.6",
+      "milestones": {
+        "ga": "2026-06-30",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-08-25"
+      },
+      "upstream": {
+        "name": "2026.6",
+        "codename": null,
+        "label": "2026.6",
+        "releaseDate": "2026-06-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-08-25",
+        "isMaintained": false,
+        "latest": {
+          "name": "2026.6.3",
+          "date": "2026-08-25",
+          "link": "https://releases.discourse.org/changelog/v2026.6.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2026.5",
+      "name": "2026.5",
+      "milestones": {
+        "ga": "2026-05-28",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-07-28"
+      },
+      "upstream": {
+        "name": "2026.5",
+        "codename": null,
+        "label": "2026.5",
+        "releaseDate": "2026-05-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-07-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "2026.5.2",
+          "date": "2026-07-28",
+          "link": "https://releases.discourse.org/changelog/v2026.5.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2026.4",
+      "name": "2026.4",
+      "milestones": {
+        "ga": "2026-04-28",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-06-30"
+      },
+      "upstream": {
+        "name": "2026.4",
+        "codename": null,
+        "label": "2026.4",
+        "releaseDate": "2026-04-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-06-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "2026.4.2",
+          "date": "2026-06-30",
+          "link": "https://releases.discourse.org/changelog/v2026.4.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2026.3",
+      "name": "2026.3",
+      "milestones": {
+        "ga": "2026-03-31",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-05-28"
+      },
+      "upstream": {
+        "name": "2026.3",
+        "codename": null,
+        "label": "2026.3",
+        "releaseDate": "2026-03-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-05-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "2026.3.1",
+          "date": "2026-05-18",
+          "link": "https://releases.discourse.org/changelog/v2026.3.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2026.2",
+      "name": "2026.2",
+      "milestones": {
+        "ga": "2026-02-26",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-04-28"
+      },
+      "upstream": {
+        "name": "2026.2",
+        "codename": null,
+        "label": "2026.2",
+        "releaseDate": "2026-02-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-04-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "2026.2.2",
+          "date": "2026-03-31",
+          "link": "https://releases.discourse.org/changelog/v2026.2.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2026.1",
+      "name": "2026.1 (ESR)",
+      "milestones": {
+        "ga": "2026-01-28",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-09-30"
+      },
+      "upstream": {
+        "name": "2026.1",
+        "codename": null,
+        "label": "2026.1 (ESR)",
+        "releaseDate": "2026-01-28",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2026-09-30",
+        "isMaintained": true,
+        "latest": {
+          "name": "2026.1.8",
+          "date": "2026-08-25",
+          "link": "https://releases.discourse.org/changelog/v2026.1.8"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2025.12",
+      "name": "2025.12",
+      "milestones": {
+        "ga": "2025-12-30",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-02-26"
+      },
+      "upstream": {
+        "name": "2025.12",
+        "codename": null,
+        "label": "2025.12",
+        "releaseDate": "2025-12-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-02-26",
+        "isMaintained": false,
+        "latest": {
+          "name": "2025.12.2",
+          "date": "2026-02-26",
+          "link": "https://releases.discourse.org/changelog/v2025.12.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2025.11",
+      "name": "2025.11",
+      "milestones": {
+        "ga": "2025-11-25",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-01-28"
+      },
+      "upstream": {
+        "name": "2025.11",
+        "codename": null,
+        "label": "2025.11",
+        "releaseDate": "2025-11-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-01-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "2025.11.2",
+          "date": "2026-01-28",
+          "link": "https://releases.discourse.org/changelog/v2025.11.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.5",
+      "name": "3.5 (ESR)",
+      "milestones": {
+        "ga": "2025-08-19",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-01-28"
+      },
+      "upstream": {
+        "name": "3.5",
+        "codename": null,
+        "label": "3.5 (ESR)",
+        "releaseDate": "2025-08-19",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-01-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.5.4",
+          "date": "2026-01-28",
+          "link": "https://releases.discourse.org/changelog/v3.5.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.4",
+      "name": "3.4 (ESR)",
+      "milestones": {
+        "ga": "2025-02-04",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-08-19"
+      },
+      "upstream": {
+        "name": "3.4",
+        "codename": null,
+        "label": "3.4 (ESR)",
+        "releaseDate": "2025-02-04",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-08-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.4.7",
+          "date": "2025-07-29",
+          "link": "https://releases.discourse.org/changelog/v3.4.7"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/discourse/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-08-30T16:32:51+00:00"
+  }
+}

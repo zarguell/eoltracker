@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-mds-ssn-16",
+  "name": "MDS-SSN-16",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Connectrix - Cisco",
+  "family": "Connectrix - Cisco",
+  "model_number": "MDS-SSN-16",
+  "milestones": {
+    "ga": "2009-10-12",
+    "eos": "2017-04-10",
+    "eossec": null,
+    "eol": "2022-04-30"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "MDS-SSN-16",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "MDS-SSN-16",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Connectrix - Cisco",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2017-04-10",
+      "datetime": null,
+      "value": "2017-04-10",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Oct. 12, 2009",
+      "datetime": "2009-10-12",
+      "value": "2009-10-12",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2022-04-30",
+      "datetime": null,
+      "value": "2022-04-30",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/san-switches/vendor/dell-emc/connectrix-cisco/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

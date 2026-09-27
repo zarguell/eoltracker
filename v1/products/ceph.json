@@ -1,0 +1,377 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "ceph",
+  "name": "Ceph",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [],
+  "labels": {},
+  "links": {
+    "html": "https://docs.ceph.com/en/latest/releases/"
+  },
+  "releases": [
+    {
+      "id": "20.2",
+      "name": "Tentacle",
+      "milestones": {
+        "ga": "2025-11-18",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "20.2.4",
+        "cells": {
+          "Name": "Tentacle",
+          "Initial release": "2025-11-18",
+          "Latest": "20.2.4",
+          "End of life (estimated)": "2027-06-01",
+          "End of life": "--"
+        },
+        "table": "Active Releases"
+      }
+    },
+    {
+      "id": "19.2",
+      "name": "Squid",
+      "milestones": {
+        "ga": "2024-09-26",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "19.2.6",
+        "cells": {
+          "Name": "Squid",
+          "Initial release": "2024-09-26",
+          "Latest": "19.2.6",
+          "End of life (estimated)": "2026-10-31",
+          "End of life": "--"
+        },
+        "table": "Active Releases"
+      }
+    },
+    {
+      "id": "18.2",
+      "name": "Reef",
+      "milestones": {
+        "ga": "2023-08-07",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-03-20"
+      },
+      "upstream": {
+        "name": "18.2.8",
+        "cells": {
+          "Name": "Reef",
+          "Initial release": "2023-08-07",
+          "Latest": "18.2.8",
+          "End of life (estimated)": "2026-03-20",
+          "End of life": "2026-03-20"
+        },
+        "table": "Archived Releases"
+      }
+    },
+    {
+      "id": "17.2",
+      "name": "Quincy",
+      "milestones": {
+        "ga": "2022-04-19",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-01-13"
+      },
+      "upstream": {
+        "name": "17.2.9",
+        "cells": {
+          "Name": "Quincy",
+          "Initial release": "2022-04-19",
+          "Latest": "17.2.9",
+          "End of life (estimated)": "2024-06-01",
+          "End of life": "2025-01-13"
+        },
+        "table": "Archived Releases"
+      }
+    },
+    {
+      "id": "16.2",
+      "name": "Pacific",
+      "milestones": {
+        "ga": "2021-03-31",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-03-04"
+      },
+      "upstream": {
+        "name": "16.2.15",
+        "cells": {
+          "Name": "Pacific",
+          "Initial release": "2021-03-31",
+          "Latest": "16.2.15",
+          "End of life (estimated)": "2023-10-01",
+          "End of life": "2024-03-04"
+        },
+        "table": "Archived Releases"
+      }
+    },
+    {
+      "id": "15.2",
+      "name": "Octopus",
+      "milestones": {
+        "ga": "2020-03-23",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-08-09"
+      },
+      "upstream": {
+        "name": "15.2.17",
+        "cells": {
+          "Name": "Octopus",
+          "Initial release": "2020-03-23",
+          "Latest": "15.2.17",
+          "End of life (estimated)": "2022-06-01",
+          "End of life": "2022-08-09"
+        },
+        "table": "Archived Releases"
+      }
+    },
+    {
+      "id": "14.2",
+      "name": "Nautilus",
+      "milestones": {
+        "ga": "2019-03-19",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-06-30"
+      },
+      "upstream": {
+        "name": "14.2.22",
+        "cells": {
+          "Name": "Nautilus",
+          "Initial release": "2019-03-19",
+          "Latest": "14.2.22",
+          "End of life (estimated)": "2021-06-01",
+          "End of life": "2021-06-30"
+        },
+        "table": "Archived Releases"
+      }
+    },
+    {
+      "id": "13.2",
+      "name": "Mimic",
+      "milestones": {
+        "ga": "2018-06-01",
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-07-22"
+      },
+      "upstream": {
+        "name": "13.2.10",
+        "cells": {
+          "Name": "Mimic",
+          "Initial release": "2018-06-01",
+          "Latest": "13.2.10",
+          "End of life (estimated)": "2020-06-01",
+          "End of life": "2020-07-22"
+        },
+        "table": "Archived Releases"
+      }
+    },
+    {
+      "id": "12.2",
+      "name": "Luminous",
+      "milestones": {
+        "ga": "2017-08-01",
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-03-01"
+      },
+      "upstream": {
+        "name": "12.2.13",
+        "cells": {
+          "Name": "Luminous",
+          "Initial release": "2017-08-01",
+          "Latest": "12.2.13",
+          "End of life (estimated)": "2019-06-01",
+          "End of life": "2020-03-01"
+        },
+        "table": "Archived Releases"
+      }
+    },
+    {
+      "id": "11.2",
+      "name": "Kraken",
+      "milestones": {
+        "ga": "2017-01-01",
+        "eos": null,
+        "eossec": null,
+        "eol": "2017-08-01"
+      },
+      "upstream": {
+        "name": "11.2.1",
+        "cells": {
+          "Name": "Kraken",
+          "Initial release": "2017-01-01",
+          "Latest": "11.2.1",
+          "End of life (estimated)": "2017-08-01",
+          "End of life": "2017-08-01"
+        },
+        "table": "Archived Releases"
+      }
+    },
+    {
+      "id": "10.2",
+      "name": "Jewel",
+      "milestones": {
+        "ga": "2016-04-01",
+        "eos": null,
+        "eossec": null,
+        "eol": "2018-07-01"
+      },
+      "upstream": {
+        "name": "10.2.11",
+        "cells": {
+          "Name": "Jewel",
+          "Initial release": "2016-04-01",
+          "Latest": "10.2.11",
+          "End of life (estimated)": "2018-06-01",
+          "End of life": "2018-07-01"
+        },
+        "table": "Archived Releases"
+      }
+    },
+    {
+      "id": "9.2",
+      "name": "Infernalis",
+      "milestones": {
+        "ga": "2015-11-01",
+        "eos": null,
+        "eossec": null,
+        "eol": "2016-04-01"
+      },
+      "upstream": {
+        "name": "9.2.1",
+        "cells": {
+          "Name": "Infernalis",
+          "Initial release": "2015-11-01",
+          "Latest": "9.2.1",
+          "End of life (estimated)": "--",
+          "End of life": "2016-04-01"
+        },
+        "table": "Archived Releases"
+      }
+    },
+    {
+      "id": "0.94",
+      "name": "Hammer",
+      "milestones": {
+        "ga": "2015-04-01",
+        "eos": null,
+        "eossec": null,
+        "eol": "2017-08-01"
+      },
+      "upstream": {
+        "name": "0.94.10",
+        "cells": {
+          "Name": "Hammer",
+          "Initial release": "2015-04-01",
+          "Latest": "0.94.10",
+          "End of life (estimated)": "2017-05-01",
+          "End of life": "2017-08-01"
+        },
+        "table": "Archived Releases"
+      }
+    },
+    {
+      "id": "0.87",
+      "name": "Giant",
+      "milestones": {
+        "ga": "2014-10-01",
+        "eos": null,
+        "eossec": null,
+        "eol": "2015-04-01"
+      },
+      "upstream": {
+        "name": "0.87.2",
+        "cells": {
+          "Name": "Giant",
+          "Initial release": "2014-10-01",
+          "Latest": "0.87.2",
+          "End of life (estimated)": "--",
+          "End of life": "2015-04-01"
+        },
+        "table": "Archived Releases"
+      }
+    },
+    {
+      "id": "0.80",
+      "name": "Firefly",
+      "milestones": {
+        "ga": "2014-05-01",
+        "eos": null,
+        "eossec": null,
+        "eol": "2016-04-01"
+      },
+      "upstream": {
+        "name": "0.80.11",
+        "cells": {
+          "Name": "Firefly",
+          "Initial release": "2014-05-01",
+          "Latest": "0.80.11",
+          "End of life (estimated)": "2016-01-01",
+          "End of life": "2016-04-01"
+        },
+        "table": "Archived Releases"
+      }
+    },
+    {
+      "id": "0.72",
+      "name": "Emperor",
+      "milestones": {
+        "ga": "2013-11-01",
+        "eos": null,
+        "eossec": null,
+        "eol": "2014-05-01"
+      },
+      "upstream": {
+        "name": "0.72.2",
+        "cells": {
+          "Name": "Emperor",
+          "Initial release": "2013-11-01",
+          "Latest": "0.72.2",
+          "End of life (estimated)": "--",
+          "End of life": "2014-05-01"
+        },
+        "table": "Archived Releases"
+      }
+    },
+    {
+      "id": "0.67",
+      "name": "Dumpling",
+      "milestones": {
+        "ga": "2013-08-01",
+        "eos": null,
+        "eossec": null,
+        "eol": "2015-05-01"
+      },
+      "upstream": {
+        "name": "0.67.11",
+        "cells": {
+          "Name": "Dumpling",
+          "Initial release": "2013-08-01",
+          "Latest": "0.67.11",
+          "End of life (estimated)": "2015-03-01",
+          "End of life": "2015-05-01"
+        },
+        "table": "Archived Releases"
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://docs.ceph.com/en/latest/releases/",
+    "verifier": "deterministic-ceph",
+    "last_checked": "2026-09-21T10:54:58Z",
+    "upstream_modified": null
+  }
+}

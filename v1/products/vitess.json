@@ -1,0 +1,368 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "vitess",
+  "name": "Vitess",
+  "category": "software",
+  "upstream_category": "database",
+  "identifiers": [
+    {
+      "type": "purl",
+      "id": "pkg:github/vitessio/vitess"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/vitess/lite"
+    },
+    {
+      "type": "repology",
+      "id": "vitess"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:linuxfoundation:vitess"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/vitess.svg",
+    "html": "https://endoflife.date/vitess",
+    "releasePolicy": "https://github.com/vitessio/enhancements/blob/main/veps/vep-5.md"
+  },
+  "releases": [
+    {
+      "id": "24",
+      "name": "24",
+      "milestones": {
+        "ga": "2026-05-07",
+        "eos": null,
+        "eossec": null,
+        "eol": "2027-05-07"
+      },
+      "upstream": {
+        "name": "24",
+        "codename": null,
+        "label": "24",
+        "releaseDate": "2026-05-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-05-07",
+        "isMaintained": true,
+        "latest": {
+          "name": "24.0.3",
+          "date": "2026-09-03",
+          "link": "https://github.com/vitessio/vitess/releases/tag/v24.0.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "23",
+      "name": "23",
+      "milestones": {
+        "ga": "2025-11-04",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-11-04"
+      },
+      "upstream": {
+        "name": "23",
+        "codename": null,
+        "label": "23",
+        "releaseDate": "2025-11-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2026-11-04",
+        "isMaintained": true,
+        "latest": {
+          "name": "23.0.6",
+          "date": "2026-09-03",
+          "link": "https://github.com/vitessio/vitess/releases/tag/v23.0.6"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "22",
+      "name": "22",
+      "milestones": {
+        "ga": "2025-04-29",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-04-29"
+      },
+      "upstream": {
+        "name": "22",
+        "codename": null,
+        "label": "22",
+        "releaseDate": "2025-04-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-04-29",
+        "isMaintained": false,
+        "latest": {
+          "name": "22.0.4",
+          "date": "2026-02-26",
+          "link": "https://github.com/vitessio/vitess/releases/tag/v22.0.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "21",
+      "name": "21",
+      "milestones": {
+        "ga": "2024-10-29",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-10-29"
+      },
+      "upstream": {
+        "name": "21",
+        "codename": null,
+        "label": "21",
+        "releaseDate": "2024-10-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-10-29",
+        "isMaintained": false,
+        "latest": {
+          "name": "21.0.6",
+          "date": "2025-11-05",
+          "link": "https://github.com/vitessio/vitess/releases/tag/v21.0.6"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "20",
+      "name": "20",
+      "milestones": {
+        "ga": "2024-06-27",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-06-27"
+      },
+      "upstream": {
+        "name": "20",
+        "codename": null,
+        "label": "20",
+        "releaseDate": "2024-06-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-06-27",
+        "isMaintained": false,
+        "latest": {
+          "name": "20.0.8",
+          "date": "2025-06-18",
+          "link": "https://github.com/vitessio/vitess/releases/tag/v20.0.8"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "19",
+      "name": "19",
+      "milestones": {
+        "ga": "2024-03-06",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-03-06"
+      },
+      "upstream": {
+        "name": "19",
+        "codename": null,
+        "label": "19",
+        "releaseDate": "2024-03-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-03-06",
+        "isMaintained": false,
+        "latest": {
+          "name": "19.0.10",
+          "date": "2025-02-12",
+          "link": "https://github.com/vitessio/vitess/releases/tag/v19.0.10"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18",
+      "name": "18",
+      "milestones": {
+        "ga": "2023-11-06",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-11-07"
+      },
+      "upstream": {
+        "name": "18",
+        "codename": null,
+        "label": "18",
+        "releaseDate": "2023-11-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-11-07",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.0.8",
+          "date": "2024-11-06",
+          "link": "https://github.com/vitessio/vitess/releases/tag/v18.0.8"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "17",
+      "name": "17",
+      "milestones": {
+        "ga": "2023-06-27",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-06-27"
+      },
+      "upstream": {
+        "name": "17",
+        "codename": null,
+        "label": "17",
+        "releaseDate": "2023-06-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-06-27",
+        "isMaintained": false,
+        "latest": {
+          "name": "17.0.7",
+          "date": "2024-05-08",
+          "link": "https://github.com/vitessio/vitess/releases/tag/v17.0.7"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "16",
+      "name": "16",
+      "milestones": {
+        "ga": "2023-02-28",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-02-28"
+      },
+      "upstream": {
+        "name": "16",
+        "codename": null,
+        "label": "16",
+        "releaseDate": "2023-02-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-02-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "16.0.7",
+          "date": "2023-12-20",
+          "link": "https://github.com/vitessio/vitess/releases/tag/v16.0.7"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "15",
+      "name": "15",
+      "milestones": {
+        "ga": "2022-10-25",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-10-25"
+      },
+      "upstream": {
+        "name": "15",
+        "codename": null,
+        "label": "15",
+        "releaseDate": "2022-10-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-10-25",
+        "isMaintained": false,
+        "latest": {
+          "name": "15.0.5",
+          "date": "2023-10-03",
+          "link": "https://github.com/vitessio/vitess/releases/tag/v15.0.5"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "14",
+      "name": "14",
+      "milestones": {
+        "ga": "2022-06-28",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-06-28"
+      },
+      "upstream": {
+        "name": "14",
+        "codename": null,
+        "label": "14",
+        "releaseDate": "2022-06-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-06-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "14.0.5",
+          "date": "2023-03-30",
+          "link": "https://github.com/vitessio/vitess/releases/tag/v14.0.5"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "13",
+      "name": "13",
+      "milestones": {
+        "ga": "2022-02-22",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-02-22"
+      },
+      "upstream": {
+        "name": "13",
+        "codename": null,
+        "label": "13",
+        "releaseDate": "2022-02-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-02-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "13.0.3",
+          "date": "2022-09-01",
+          "link": "https://github.com/vitessio/vitess/releases/tag/v13.0.3"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/vitess/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-04T00:07:10+00:00"
+  }
+}

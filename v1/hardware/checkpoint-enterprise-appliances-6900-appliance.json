@@ -1,0 +1,90 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "checkpoint-enterprise-appliances-6900-appliance",
+  "name": "6900 Appliance",
+  "category": "hardware",
+  "vendor": "Check Point",
+  "product_line": "Check Point",
+  "family": "Enterprise Appliances",
+  "model_number": "6900 Appliance",
+  "milestones": {
+    "ga": "2020-01",
+    "eos": "2026-10",
+    "eossec": null,
+    "eol": "2031-10"
+  },
+  "status": "expiring",
+  "upstream": {
+    "Appliance Product/Model": {
+      "text": "6900 Appliance",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "Status": {
+      "text": "Active",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "General Availability": {
+      "text": "Jan-2020",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "End of Sale": {
+      "text": "Oct-2026",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "Successor Model": {
+      "text": "9700",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "Successor Product Availability": {
+      "text": "Feb-2024",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "End of Engineering Support": {
+      "text": "Oct-2029",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": [],
+      "note": "Check Point defines this as maintenance releases until three years after end of sale, which is not a security-support end; the cell is published and never mapped to eossec"
+    },
+    "End of Support": {
+      "text": "Oct-2031",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "Supported Software Versions": {
+      "text": "R80.30*, R80.40, R81, R81.10, R81.20, R82, R82.10, R82.20",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://www.checkpoint.com/support-services/support-life-cycle-policy/"
+    ],
+    "verifier": "deterministic-checkpoint-appliances",
+    "last_checked": "2026-09-26T19:30:03Z"
+  }
+}

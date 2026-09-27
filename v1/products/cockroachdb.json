@@ -1,0 +1,728 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "cockroachdb",
+  "name": "CockroachDB",
+  "category": "software",
+  "upstream_category": "database",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "cockroachdb"
+    }
+  ],
+  "labels": {
+    "eoas": "Maintenance Support",
+    "discontinued": null,
+    "eol": "Assistance Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/cockroachlabs.svg",
+    "html": "https://endoflife.date/cockroachdb",
+    "releasePolicy": "https://www.cockroachlabs.com/docs/releases/release-support-policy"
+  },
+  "releases": [
+    {
+      "id": "26.3",
+      "name": "26.3",
+      "milestones": {
+        "ga": "2026-08-19",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "26.3",
+        "codename": null,
+        "label": "26.3",
+        "releaseDate": "2026-08-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": "2027-02-19",
+        "isEol": false,
+        "eolFrom": "2027-02-19",
+        "isMaintained": true,
+        "latest": {
+          "name": "26.3.0",
+          "date": "2026-08-24",
+          "link": "https://www.cockroachlabs.com/docs/releases/v26.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "26.2",
+      "name": "26.2",
+      "milestones": {
+        "ga": "2026-04-27",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "26.2",
+        "codename": null,
+        "label": "26.2",
+        "releaseDate": "2026-04-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": "2027-04-27",
+        "isEol": false,
+        "eolFrom": "2027-10-27",
+        "isMaintained": true,
+        "latest": {
+          "name": "26.2.6",
+          "date": "2026-08-24",
+          "link": "https://www.cockroachlabs.com/docs/releases/v26.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "26.1",
+      "name": "26.1",
+      "milestones": {
+        "ga": "2026-02-02",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "26.1",
+        "codename": null,
+        "label": "26.1",
+        "releaseDate": "2026-02-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-08-02",
+        "isEol": true,
+        "eolFrom": "2026-08-02",
+        "isMaintained": false,
+        "latest": {
+          "name": "26.1.8",
+          "date": "2026-07-17",
+          "link": "https://www.cockroachlabs.com/docs/releases/v26.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "25.4",
+      "name": "25.4",
+      "milestones": {
+        "ga": "2025-11-03",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "25.4",
+        "codename": null,
+        "label": "25.4",
+        "releaseDate": "2025-11-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": "2026-11-03",
+        "isEol": false,
+        "eolFrom": "2027-05-03",
+        "isMaintained": true,
+        "latest": {
+          "name": "25.4.16",
+          "date": "2026-09-02",
+          "link": "https://www.cockroachlabs.com/docs/releases/v25.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "25.3",
+      "name": "25.3",
+      "milestones": {
+        "ga": "2025-08-04",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "25.3",
+        "codename": null,
+        "label": "25.3",
+        "releaseDate": "2025-08-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-02-04",
+        "isEol": true,
+        "eolFrom": "2026-02-04",
+        "isMaintained": false,
+        "latest": {
+          "name": "25.3.7",
+          "date": "2026-01-07",
+          "link": "https://www.cockroachlabs.com/docs/releases/v25.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "25.2",
+      "name": "25.2",
+      "milestones": {
+        "ga": "2025-05-09",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "25.2",
+        "codename": null,
+        "label": "25.2",
+        "releaseDate": "2025-05-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-05-12",
+        "isEol": false,
+        "eolFrom": "2026-11-12",
+        "isMaintained": true,
+        "latest": {
+          "name": "25.2.23",
+          "date": "2026-08-24",
+          "link": "https://www.cockroachlabs.com/docs/releases/v25.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "25.1",
+      "name": "25.1",
+      "milestones": {
+        "ga": "2025-02-18",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "25.1",
+        "codename": null,
+        "label": "25.1",
+        "releaseDate": "2025-02-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-08-18",
+        "isEol": true,
+        "eolFrom": "2025-08-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "25.1.10",
+          "date": "2025-07-31",
+          "link": "https://www.cockroachlabs.com/docs/releases/v25.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "24.3",
+      "name": "24.3",
+      "milestones": {
+        "ga": "2024-11-18",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "24.3",
+        "codename": null,
+        "label": "24.3",
+        "releaseDate": "2024-11-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-11-18",
+        "isEol": true,
+        "eolFrom": "2026-05-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "24.3.36",
+          "date": "2026-08-24",
+          "link": "https://www.cockroachlabs.com/docs/releases/v24.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "24.2",
+      "name": "24.2",
+      "milestones": {
+        "ga": "2024-08-12",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "24.2",
+        "codename": null,
+        "label": "24.2",
+        "releaseDate": "2024-08-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-02-12",
+        "isEol": true,
+        "eolFrom": "2025-02-12",
+        "isMaintained": false,
+        "latest": {
+          "name": "24.2.10",
+          "date": "2025-01-31",
+          "link": "https://www.cockroachlabs.com/docs/releases/v24.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "24.1",
+      "name": "24.1 (Upcoming LTS)",
+      "milestones": {
+        "ga": "2024-05-20",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "24.1",
+        "codename": null,
+        "label": "24.1 (Upcoming LTS)",
+        "releaseDate": "2024-05-20",
+        "isLts": false,
+        "ltsFrom": "2026-10-21",
+        "isEoas": true,
+        "eoasFrom": "2025-05-20",
+        "isEol": true,
+        "eolFrom": "2025-11-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "24.1.33",
+          "date": "2026-08-24",
+          "link": "https://www.cockroachlabs.com/docs/releases/v24.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "23.2",
+      "name": "23.2 (LTS)",
+      "milestones": {
+        "ga": "2024-02-05",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "23.2",
+        "codename": null,
+        "label": "23.2 (LTS)",
+        "releaseDate": "2024-02-05",
+        "isLts": true,
+        "ltsFrom": "2026-07-08",
+        "isEoas": true,
+        "eoasFrom": "2025-02-05",
+        "isEol": true,
+        "eolFrom": "2025-08-05",
+        "isMaintained": false,
+        "latest": {
+          "name": "23.2.31",
+          "date": "2026-06-24",
+          "link": "https://www.cockroachlabs.com/docs/releases/v23.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "23.1",
+      "name": "23.1 (LTS)",
+      "milestones": {
+        "ga": "2023-05-15",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "23.1",
+        "codename": null,
+        "label": "23.1 (LTS)",
+        "releaseDate": "2023-05-15",
+        "isLts": true,
+        "ltsFrom": "2023-11-13",
+        "isEoas": true,
+        "eoasFrom": "2024-05-15",
+        "isEol": true,
+        "eolFrom": "2024-11-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "23.1.30",
+          "date": "2024-11-19",
+          "link": "https://www.cockroachlabs.com/docs/releases/v23.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "22.2",
+      "name": "22.2",
+      "milestones": {
+        "ga": "2022-12-05",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "22.2",
+        "codename": null,
+        "label": "22.2",
+        "releaseDate": "2022-12-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-12-05",
+        "isEol": true,
+        "eolFrom": "2024-06-05",
+        "isMaintained": false,
+        "latest": {
+          "name": "22.2.19",
+          "date": "2024-02-23",
+          "link": "https://www.cockroachlabs.com/docs/releases/v22.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "22.1",
+      "name": "22.1",
+      "milestones": {
+        "ga": "2022-05-24",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "22.1",
+        "codename": null,
+        "label": "22.1",
+        "releaseDate": "2022-05-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-05-24",
+        "isEol": true,
+        "eolFrom": "2023-11-24",
+        "isMaintained": false,
+        "latest": {
+          "name": "22.1.22",
+          "date": "2023-08-01",
+          "link": "https://www.cockroachlabs.com/docs/releases/v22.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "21.2",
+      "name": "21.2",
+      "milestones": {
+        "ga": "2021-11-16",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "21.2",
+        "codename": null,
+        "label": "21.2",
+        "releaseDate": "2021-11-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-11-16",
+        "isEol": true,
+        "eolFrom": "2023-05-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "21.2.17",
+          "date": "2022-10-12",
+          "link": "https://www.cockroachlabs.com/docs/releases/v21.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "21.1",
+      "name": "21.1",
+      "milestones": {
+        "ga": "2021-05-18",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "21.1",
+        "codename": null,
+        "label": "21.1",
+        "releaseDate": "2021-05-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-05-18",
+        "isEol": true,
+        "eolFrom": "2022-11-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "21.1.21",
+          "date": "2022-08-08",
+          "link": "https://www.cockroachlabs.com/docs/releases/v21.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "20.2",
+      "name": "20.2",
+      "milestones": {
+        "ga": "2020-11-10",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "20.2",
+        "codename": null,
+        "label": "20.2",
+        "releaseDate": "2020-11-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-11-10",
+        "isEol": true,
+        "eolFrom": "2022-05-10",
+        "isMaintained": false,
+        "latest": {
+          "name": "20.2.19",
+          "date": "2022-02-03",
+          "link": "https://www.cockroachlabs.com/docs/releases/v20.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "20.1",
+      "name": "20.1",
+      "milestones": {
+        "ga": "2020-05-12",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "20.1",
+        "codename": null,
+        "label": "20.1",
+        "releaseDate": "2020-05-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-05-12",
+        "isEol": true,
+        "eolFrom": "2021-11-12",
+        "isMaintained": false,
+        "latest": {
+          "name": "20.1.17",
+          "date": "2021-05-11",
+          "link": "https://www.cockroachlabs.com/docs/releases/v20.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "19.2",
+      "name": "19.2",
+      "milestones": {
+        "ga": "2019-11-12",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "19.2",
+        "codename": null,
+        "label": "19.2",
+        "releaseDate": "2019-11-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-11-12",
+        "isEol": true,
+        "eolFrom": "2021-05-12",
+        "isMaintained": false,
+        "latest": {
+          "name": "19.2.12",
+          "date": "2021-01-12",
+          "link": "https://www.cockroachlabs.com/docs/releases/v19.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "19.1",
+      "name": "19.1",
+      "milestones": {
+        "ga": "2019-04-30",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "19.1",
+        "codename": null,
+        "label": "19.1",
+        "releaseDate": "2019-04-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-04-30",
+        "isEol": true,
+        "eolFrom": "2020-10-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "19.1.11",
+          "date": "2020-06-29",
+          "link": "https://www.cockroachlabs.com/docs/releases/v19.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.1",
+      "name": "2.1",
+      "milestones": {
+        "ga": "2018-10-30",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.1",
+        "codename": null,
+        "label": "2.1",
+        "releaseDate": "2018-10-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2019-10-30",
+        "isEol": true,
+        "eolFrom": "2020-04-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.1.11",
+          "date": "2020-01-22",
+          "link": "https://www.cockroachlabs.com/docs/releases/v2.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.0",
+      "name": "2.0",
+      "milestones": {
+        "ga": "2018-04-04",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.0",
+        "codename": null,
+        "label": "2.0",
+        "releaseDate": "2018-04-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2019-04-04",
+        "isEol": true,
+        "eolFrom": "2019-10-04",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.0.7",
+          "date": "2018-11-28",
+          "link": "https://www.cockroachlabs.com/docs/releases/v2.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.1",
+      "name": "1.1",
+      "milestones": {
+        "ga": "2017-10-12",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.1",
+        "codename": null,
+        "label": "1.1",
+        "releaseDate": "2017-10-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2018-10-12",
+        "isEol": true,
+        "eolFrom": "2019-04-12",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.1.9",
+          "date": "2018-10-01",
+          "link": "https://www.cockroachlabs.com/docs/releases/v1.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.0",
+      "name": "1.0",
+      "milestones": {
+        "ga": "2017-05-10",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.0",
+        "codename": null,
+        "label": "1.0",
+        "releaseDate": "2017-05-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2018-05-10",
+        "isEol": true,
+        "eolFrom": "2018-11-10",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.0.7",
+          "date": "2018-02-11",
+          "link": "https://www.cockroachlabs.com/docs/releases/v1.0"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/cockroachdb/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-05T13:36:02+00:00"
+  }
+}

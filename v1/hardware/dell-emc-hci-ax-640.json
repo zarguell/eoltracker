@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-hci-ax-640",
+  "name": "HCI AX-640",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Azure stack",
+  "family": "Azure stack",
+  "model_number": "HCI AX-640",
+  "milestones": {
+    "ga": "2012-01-21",
+    "eos": null,
+    "eossec": null,
+    "eol": "2018-12-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "HCI AX-640",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "HCI AX-640",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Azure stack",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "TBD",
+      "datetime": null,
+      "value": null,
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Jan. 21, 2012",
+      "datetime": "2012-01-21",
+      "value": "2012-01-21",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2018-12-31",
+      "datetime": null,
+      "value": "2018-12-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/hyper-converged/vendor/dell-emc/azure-stack/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

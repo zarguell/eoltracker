@@ -1,0 +1,1386 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "foreman",
+  "name": "Foreman",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "foreman"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:theforeman:foreman"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/foreman",
+    "releasePolicy": null
+  },
+  "releases": [
+    {
+      "id": "5.0",
+      "name": "5.0",
+      "milestones": {
+        "ga": "2026-09-08",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.0",
+        "codename": null,
+        "label": "5.0",
+        "releaseDate": "2026-09-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "5.0.0",
+          "date": "2026-09-08",
+          "link": "https://theforeman.org/manuals/5.0/index.html#Releasenotesfor5.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.19",
+      "name": "3.19",
+      "milestones": {
+        "ga": "2026-06-09",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.19",
+        "codename": null,
+        "label": "3.19",
+        "releaseDate": "2026-06-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "3.19.1",
+          "date": "2026-07-01",
+          "link": "https://theforeman.org/manuals/3.19/index.html#Releasenotesfor3.19"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.18",
+      "name": "3.18",
+      "milestones": {
+        "ga": "2026-03-10",
+        "eos": null,
+        "eossec": "2026-09-08",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.18",
+        "codename": null,
+        "label": "3.18",
+        "releaseDate": "2026-03-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-09-08",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.18.2",
+          "date": "2026-07-01",
+          "link": "https://theforeman.org/manuals/3.18/index.html#Releasenotesfor3.18"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.17",
+      "name": "3.17",
+      "milestones": {
+        "ga": "2025-12-09",
+        "eos": null,
+        "eossec": "2026-06-09",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.17",
+        "codename": null,
+        "label": "3.17",
+        "releaseDate": "2025-12-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-06-09",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.17.2",
+          "date": "2026-03-26",
+          "link": "https://theforeman.org/manuals/3.17/index.html#Releasenotesfor3.17"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.16",
+      "name": "3.16",
+      "milestones": {
+        "ga": "2025-09-09",
+        "eos": null,
+        "eossec": "2026-03-10",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.16",
+        "codename": null,
+        "label": "3.16",
+        "releaseDate": "2025-09-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-03-10",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.16.3",
+          "date": "2026-03-26",
+          "link": "https://theforeman.org/manuals/3.16/index.html#Releasenotesfor3.16"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.15",
+      "name": "3.15",
+      "milestones": {
+        "ga": "2025-06-09",
+        "eos": null,
+        "eossec": "2025-12-09",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.15",
+        "codename": null,
+        "label": "3.15",
+        "releaseDate": "2025-06-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-12-09",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.15.1",
+          "date": "2025-11-05",
+          "link": "https://theforeman.org/manuals/3.15/index.html#Releasenotesfor3.15"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.14",
+      "name": "3.14",
+      "milestones": {
+        "ga": "2025-03-19",
+        "eos": null,
+        "eossec": "2025-09-09",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.14",
+        "codename": null,
+        "label": "3.14",
+        "releaseDate": "2025-03-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-09-09",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.14.0",
+          "date": "2025-03-19",
+          "link": "https://theforeman.org/manuals/3.14/index.html#Releasenotesfor3.14"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.13",
+      "name": "3.13",
+      "milestones": {
+        "ga": "2024-12-03",
+        "eos": null,
+        "eossec": "2025-06-09",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.13",
+        "codename": null,
+        "label": "3.13",
+        "releaseDate": "2024-12-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-06-09",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.13.1",
+          "date": "2025-04-10",
+          "link": "https://theforeman.org/manuals/3.13/index.html#Releasenotesfor3.13"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.12",
+      "name": "3.12",
+      "milestones": {
+        "ga": "2024-09-19",
+        "eos": null,
+        "eossec": "2025-03-19",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.12",
+        "codename": null,
+        "label": "3.12",
+        "releaseDate": "2024-09-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-03-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.12.1",
+          "date": "2024-11-21",
+          "link": "https://theforeman.org/manuals/3.12/index.html#Releasenotesfor3.12"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.11",
+      "name": "3.11",
+      "milestones": {
+        "ga": "2024-06-25",
+        "eos": null,
+        "eossec": "2024-12-03",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.11",
+        "codename": null,
+        "label": "3.11",
+        "releaseDate": "2024-06-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-12-03",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.11.5",
+          "date": "2024-11-26",
+          "link": "https://theforeman.org/manuals/3.11/index.html#Releasenotesfor3.11"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.10",
+      "name": "3.10",
+      "milestones": {
+        "ga": "2024-03-22",
+        "eos": null,
+        "eossec": "2024-09-19",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.10",
+        "codename": null,
+        "label": "3.10",
+        "releaseDate": "2024-03-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-09-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.10.1",
+          "date": "2024-09-04",
+          "link": "https://theforeman.org/manuals/3.10/index.html#Releasenotesfor3.10"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.9",
+      "name": "3.9",
+      "milestones": {
+        "ga": "2023-12-19",
+        "eos": null,
+        "eossec": "2024-06-25",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.9",
+        "codename": null,
+        "label": "3.9",
+        "releaseDate": "2023-12-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-06-25",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.9.3",
+          "date": "2024-04-26",
+          "link": "https://theforeman.org/manuals/3.9/index.html#Releasenotesfor3.9"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.8",
+      "name": "3.8",
+      "milestones": {
+        "ga": "2023-10-10",
+        "eos": null,
+        "eossec": "2024-03-22",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.8",
+        "codename": null,
+        "label": "3.8",
+        "releaseDate": "2023-10-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-03-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.8.0",
+          "date": "2023-10-10",
+          "link": "https://theforeman.org/manuals/3.8/index.html#Releasenotesfor3.8"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.7",
+      "name": "3.7",
+      "milestones": {
+        "ga": "2023-06-20",
+        "eos": null,
+        "eossec": "2023-12-19",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.7",
+        "codename": null,
+        "label": "3.7",
+        "releaseDate": "2023-06-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-12-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.7.1",
+          "date": "2023-11-01",
+          "link": "https://theforeman.org/manuals/3.7/index.html#Releasenotesfor3.7"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.6",
+      "name": "3.6",
+      "milestones": {
+        "ga": "2023-03-21",
+        "eos": null,
+        "eossec": "2023-10-10",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.6",
+        "codename": null,
+        "label": "3.6",
+        "releaseDate": "2023-03-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-10-10",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.6.2",
+          "date": "2023-08-11",
+          "link": "https://theforeman.org/manuals/3.6/index.html#Releasenotesfor3.6"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.5",
+      "name": "3.5",
+      "milestones": {
+        "ga": "2022-12-14",
+        "eos": null,
+        "eossec": "2023-06-20",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.5",
+        "codename": null,
+        "label": "3.5",
+        "releaseDate": "2022-12-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-06-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.5.3",
+          "date": "2023-04-17",
+          "link": "https://theforeman.org/manuals/3.5/index.html#Releasenotesfor3.5"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.4",
+      "name": "3.4",
+      "milestones": {
+        "ga": "2022-09-08",
+        "eos": null,
+        "eossec": "2023-03-21",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.4",
+        "codename": null,
+        "label": "3.4",
+        "releaseDate": "2022-09-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-03-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.4.1",
+          "date": "2022-11-28",
+          "link": "https://theforeman.org/manuals/3.4/index.html#Releasenotesfor3.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.3",
+      "name": "3.3",
+      "milestones": {
+        "ga": "2022-06-09",
+        "eos": null,
+        "eossec": "2022-12-14",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.3",
+        "codename": null,
+        "label": "3.3",
+        "releaseDate": "2022-06-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-12-14",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.3.1",
+          "date": "2022-10-06",
+          "link": "https://theforeman.org/manuals/3.3/index.html#Releasenotesfor3.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.2",
+      "name": "3.2",
+      "milestones": {
+        "ga": "2022-03-15",
+        "eos": null,
+        "eossec": "2022-09-08",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.2",
+        "codename": null,
+        "label": "3.2",
+        "releaseDate": "2022-03-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-09-08",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.2.1",
+          "date": "2022-05-24",
+          "link": "https://theforeman.org/manuals/3.2/index.html#Releasenotesfor3.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.1",
+      "name": "3.1",
+      "milestones": {
+        "ga": "2021-12-09",
+        "eos": null,
+        "eossec": "2022-06-09",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.1",
+        "codename": null,
+        "label": "3.1",
+        "releaseDate": "2021-12-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-06-09",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.1.3",
+          "date": "2022-05-19",
+          "link": "https://theforeman.org/manuals/3.1/index.html#Releasenotesfor3.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.0",
+      "name": "3.0",
+      "milestones": {
+        "ga": "2021-09-07",
+        "eos": null,
+        "eossec": "2022-03-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.0",
+        "codename": null,
+        "label": "3.0",
+        "releaseDate": "2021-09-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-03-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.0.2",
+          "date": "2022-02-25",
+          "link": "https://theforeman.org/manuals/3.0/index.html#Releasenotesfor3.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.5",
+      "name": "2.5",
+      "milestones": {
+        "ga": "2021-06-02",
+        "eos": null,
+        "eossec": "2021-12-09",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.5",
+        "codename": null,
+        "label": "2.5",
+        "releaseDate": "2021-06-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-12-09",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.5.4",
+          "date": "2021-10-19",
+          "link": "https://theforeman.org/manuals/2.5/index.html#Releasenotesfor2.5"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.4",
+      "name": "2.4",
+      "milestones": {
+        "ga": "2021-03-19",
+        "eos": null,
+        "eossec": "2021-09-07",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.4",
+        "codename": null,
+        "label": "2.4",
+        "releaseDate": "2021-03-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-09-07",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.4.1",
+          "date": "2021-06-22",
+          "link": "https://theforeman.org/manuals/2.4/index.html#Releasenotesfor2.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.3",
+      "name": "2.3",
+      "milestones": {
+        "ga": "2020-12-01",
+        "eos": null,
+        "eossec": "2021-06-09",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.3",
+        "codename": null,
+        "label": "2.3",
+        "releaseDate": "2020-12-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-06-09",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.3.5",
+          "date": "2021-06-09",
+          "link": "https://theforeman.org/manuals/2.3/index.html#Releasenotesfor2.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.2",
+      "name": "2.2",
+      "milestones": {
+        "ga": "2020-10-28",
+        "eos": null,
+        "eossec": "2021-03-19",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.2",
+        "codename": null,
+        "label": "2.2",
+        "releaseDate": "2020-10-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-03-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.2.3",
+          "date": "2021-02-24",
+          "link": "https://theforeman.org/manuals/2.2/index.html#Releasenotesfor2.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.1",
+      "name": "2.1",
+      "milestones": {
+        "ga": "2020-07-02",
+        "eos": null,
+        "eossec": "2020-12-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.1",
+        "codename": null,
+        "label": "2.1",
+        "releaseDate": "2020-07-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-12-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.1.4",
+          "date": "2020-10-14",
+          "link": "https://theforeman.org/manuals/2.1/index.html#Releasenotesfor2.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.0",
+      "name": "2.0",
+      "milestones": {
+        "ga": "2020-04-02",
+        "eos": null,
+        "eossec": "2020-10-28",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.0",
+        "codename": null,
+        "label": "2.0",
+        "releaseDate": "2020-04-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-10-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.0.3",
+          "date": "2020-09-21",
+          "link": "https://theforeman.org/manuals/2.0/index.html#Releasenotesfor2.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.24",
+      "name": "1.24",
+      "milestones": {
+        "ga": "2019-12-09",
+        "eos": null,
+        "eossec": "2020-07-02",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.24",
+        "codename": null,
+        "label": "1.24",
+        "releaseDate": "2019-12-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-07-02",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.24.3",
+          "date": "2020-05-20",
+          "link": "https://theforeman.org/manuals/1.24/index.html#Releasenotesfor1.24"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.23",
+      "name": "1.23",
+      "milestones": {
+        "ga": "2019-09-10",
+        "eos": null,
+        "eossec": "2020-04-02",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.23",
+        "codename": null,
+        "label": "1.23",
+        "releaseDate": "2019-09-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-04-02",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.23.2",
+          "date": "2020-03-12",
+          "link": "https://theforeman.org/manuals/1.23/index.html#Releasenotesfor1.23"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.22",
+      "name": "1.22",
+      "milestones": {
+        "ga": "2019-06-04",
+        "eos": null,
+        "eossec": "2019-12-09",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.22",
+        "codename": null,
+        "label": "1.22",
+        "releaseDate": "2019-06-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-12-09",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.22.2",
+          "date": "2019-11-04",
+          "link": "https://theforeman.org/manuals/1.22/index.html#Releasenotesfor1.22"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.21",
+      "name": "1.21",
+      "milestones": {
+        "ga": "2019-02-26",
+        "eos": null,
+        "eossec": "2019-09-18",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.21",
+        "codename": null,
+        "label": "1.21",
+        "releaseDate": "2019-02-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-09-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.21.4",
+          "date": "2019-09-18",
+          "link": "https://theforeman.org/manuals/1.21/index.html#Releasenotesfor1.21"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.20",
+      "name": "1.20",
+      "milestones": {
+        "ga": "2018-11-15",
+        "eos": null,
+        "eossec": "2019-07-02",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.20",
+        "codename": null,
+        "label": "1.20",
+        "releaseDate": "2018-11-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-07-02",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.20.3",
+          "date": "2019-07-02",
+          "link": "https://theforeman.org/manuals/1.20/index.html#Releasenotesfor1.20"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.19",
+      "name": "1.19",
+      "milestones": {
+        "ga": "2018-08-30",
+        "eos": null,
+        "eossec": "2019-02-26",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.19",
+        "codename": null,
+        "label": "1.19",
+        "releaseDate": "2018-08-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-02-26",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.19.1",
+          "date": "2018-11-06",
+          "link": "https://theforeman.org/manuals/1.19/index.html#Releasenotesfor1.19"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.18",
+      "name": "1.18",
+      "milestones": {
+        "ga": "2018-07-12",
+        "eos": null,
+        "eossec": "2018-11-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.18",
+        "codename": null,
+        "label": "1.18",
+        "releaseDate": "2018-07-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-11-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.18.3",
+          "date": "2018-11-06",
+          "link": "https://theforeman.org/manuals/1.18/index.html#Releasenotesfor1.18"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.17",
+      "name": "1.17",
+      "milestones": {
+        "ga": "2018-04-11",
+        "eos": null,
+        "eossec": "2018-08-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.17",
+        "codename": null,
+        "label": "1.17",
+        "releaseDate": "2018-04-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-08-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.17.4",
+          "date": "2018-08-28",
+          "link": "https://theforeman.org/manuals/1.17/index.html#Releasenotesfor1.17"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.16",
+      "name": "1.16",
+      "milestones": {
+        "ga": "2017-11-29",
+        "eos": null,
+        "eossec": "2018-07-12",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.16",
+        "codename": null,
+        "label": "1.16",
+        "releaseDate": "2017-11-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-07-12",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.16.2",
+          "date": "2018-06-04",
+          "link": "https://theforeman.org/manuals/1.16/index.html#Releasenotesfor1.16"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.15",
+      "name": "1.15",
+      "milestones": {
+        "ga": "2017-05-09",
+        "eos": null,
+        "eossec": "2018-04-11",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.15",
+        "codename": null,
+        "label": "1.15",
+        "releaseDate": "2017-05-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-04-11",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.15.7",
+          "date": "2018-04-03",
+          "link": "https://theforeman.org/manuals/1.15/index.html#Releasenotesfor1.15"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.14",
+      "name": "1.14",
+      "milestones": {
+        "ga": "2017-01-13",
+        "eos": null,
+        "eossec": "2017-11-29",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.14",
+        "codename": null,
+        "label": "1.14",
+        "releaseDate": "2017-01-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-11-29",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.14.3",
+          "date": "2017-04-03",
+          "link": "https://theforeman.org/manuals/1.14/index.html#Releasenotesfor1.14"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.13",
+      "name": "1.13",
+      "milestones": {
+        "ga": "2016-10-05",
+        "eos": null,
+        "eossec": "2017-05-09",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.13",
+        "codename": null,
+        "label": "1.13",
+        "releaseDate": "2016-10-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-05-09",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.13.4",
+          "date": "2017-01-26",
+          "link": "https://theforeman.org/manuals/1.13/index.html#Releasenotesfor1.13"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.12",
+      "name": "1.12",
+      "milestones": {
+        "ga": "2016-07-08",
+        "eos": null,
+        "eossec": "2017-01-13",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.12",
+        "codename": null,
+        "label": "1.12",
+        "releaseDate": "2016-07-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-01-13",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.12.4",
+          "date": "2016-10-21",
+          "link": "https://theforeman.org/manuals/1.12/index.html#Releasenotesfor1.12"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.11",
+      "name": "1.11",
+      "milestones": {
+        "ga": "2016-03-31",
+        "eos": null,
+        "eossec": "2016-10-05",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.11",
+        "codename": null,
+        "label": "1.11",
+        "releaseDate": "2016-03-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2016-10-05",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.11.4",
+          "date": "2016-07-25",
+          "link": "https://theforeman.org/manuals/1.11/index.html#Releasenotesfor1.11"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.10",
+      "name": "1.10",
+      "milestones": {
+        "ga": "2015-12-23",
+        "eos": null,
+        "eossec": "2016-07-08",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.10",
+        "codename": null,
+        "label": "1.10",
+        "releaseDate": "2015-12-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2016-07-08",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.10.4",
+          "date": "2016-05-20",
+          "link": "https://theforeman.org/manuals/1.10/index.html#Releasenotesfor1.10"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.9",
+      "name": "1.9",
+      "milestones": {
+        "ga": "2015-08-18",
+        "eos": null,
+        "eossec": "2016-03-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.9",
+        "codename": null,
+        "label": "1.9",
+        "releaseDate": "2015-08-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2016-03-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.9.3",
+          "date": "2015-11-03",
+          "link": "https://theforeman.org/manuals/1.9/index.html#Releasenotesfor1.9"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.8",
+      "name": "1.8",
+      "milestones": {
+        "ga": "2015-04-28",
+        "eos": null,
+        "eossec": "2015-12-23",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.8",
+        "codename": null,
+        "label": "1.8",
+        "releaseDate": "2015-04-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2015-12-23",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.8.4",
+          "date": "2015-09-15",
+          "link": "https://theforeman.org/manuals/1.8/index.html#Releasenotesfor1.8"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.7",
+      "name": "1.7",
+      "milestones": {
+        "ga": "2014-12-02",
+        "eos": null,
+        "eossec": "2015-08-18",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.7",
+        "codename": null,
+        "label": "1.7",
+        "releaseDate": "2014-12-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2015-08-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.7.5",
+          "date": "2015-04-29",
+          "link": "https://theforeman.org/manuals/1.7/index.html#Releasenotesfor1.7"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.6",
+      "name": "1.6",
+      "milestones": {
+        "ga": "2014-09-10",
+        "eos": null,
+        "eossec": "2015-04-28",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.6",
+        "codename": null,
+        "label": "1.6",
+        "releaseDate": "2014-09-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2015-04-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.6.3",
+          "date": "2014-11-18",
+          "link": "https://theforeman.org/manuals/1.6/index.html#Releasenotesfor1.6"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.5",
+      "name": "1.5",
+      "milestones": {
+        "ga": "2014-05-09",
+        "eos": null,
+        "eossec": "2014-12-02",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.5",
+        "codename": null,
+        "label": "1.5",
+        "releaseDate": "2014-05-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2014-12-02",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.5.3",
+          "date": "2014-09-04",
+          "link": "https://theforeman.org/manuals/1.5/index.html#Releasenotesfor1.5"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.4",
+      "name": "1.4",
+      "milestones": {
+        "ga": "2014-01-29",
+        "eos": null,
+        "eossec": "2014-09-10",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.4",
+        "codename": null,
+        "label": "1.4",
+        "releaseDate": "2014-01-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2014-09-10",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.4.5",
+          "date": "2014-06-18",
+          "link": "https://theforeman.org/manuals/1.4/index.html#Releasenotesfor1.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.3",
+      "name": "1.3",
+      "milestones": {
+        "ga": "2013-10-14",
+        "eos": null,
+        "eossec": "2014-05-09",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.3",
+        "codename": null,
+        "label": "1.3",
+        "releaseDate": "2013-10-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2014-05-09",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.3.2",
+          "date": "2013-12-23",
+          "link": "https://theforeman.org/manuals/1.3/index.html#Releasenotesfor1.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.2",
+      "name": "1.2",
+      "milestones": {
+        "ga": "2013-07-01",
+        "eos": null,
+        "eossec": "2014-01-29",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.2",
+        "codename": null,
+        "label": "1.2",
+        "releaseDate": "2013-07-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2014-01-29",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.2.3",
+          "date": "2013-10-07",
+          "link": "https://theforeman.org/manuals/1.2/index.html#Releasenotesfor1.2"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/foreman/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-13T06:57:55+00:00"
+  }
+}

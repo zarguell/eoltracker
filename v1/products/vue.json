@@ -1,0 +1,509 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "vue",
+  "name": "Vue",
+  "category": "software",
+  "upstream_category": "framework",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "vue.js"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:npm/vue"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/vuejs/vue"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/vuejs/core"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": "Commercial Support"
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/vuedotjs.svg",
+    "html": "https://endoflife.date/vue",
+    "releasePolicy": "https://vuejs.org/about/releases.html"
+  },
+  "releases": [
+    {
+      "id": "3.5",
+      "name": "3.5",
+      "milestones": {
+        "ga": "2024-09-03",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.5",
+        "codename": null,
+        "label": "3.5",
+        "releaseDate": "2024-09-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "3.5.43",
+          "date": "2026-09-17",
+          "link": "https://github.com/vuejs/core/releases/tag/v3.5.43"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.4",
+      "name": "3.4",
+      "milestones": {
+        "ga": "2023-12-29",
+        "eos": null,
+        "eossec": "2024-09-03",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.4",
+        "codename": null,
+        "label": "3.4",
+        "releaseDate": "2023-12-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-09-03",
+        "isEol": true,
+        "eolFrom": "2024-09-03",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "3.4.38",
+          "date": "2024-08-15",
+          "link": "https://github.com/vuejs/core/releases/tag/v3.4.38"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.3",
+      "name": "3.3",
+      "milestones": {
+        "ga": "2023-05-11",
+        "eos": null,
+        "eossec": "2023-12-29",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.3",
+        "codename": null,
+        "label": "3.3",
+        "releaseDate": "2023-05-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-12-29",
+        "isEol": true,
+        "eolFrom": "2023-12-29",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "3.3.13",
+          "date": "2023-12-19",
+          "link": "https://github.com/vuejs/core/releases/tag/v3.3.13"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.7",
+      "name": "2.7",
+      "milestones": {
+        "ga": "2022-07-01",
+        "eos": null,
+        "eossec": "2023-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.7",
+        "codename": null,
+        "label": "2.7",
+        "releaseDate": "2022-07-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-12-31",
+        "isEol": true,
+        "eolFrom": "2023-12-31",
+        "isEoes": false,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "2.7.16",
+          "date": "2023-12-24",
+          "link": "https://github.com/vuejs/vue/releases/tag/v2.7.16"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.2",
+      "name": "3.2",
+      "milestones": {
+        "ga": "2021-08-09",
+        "eos": null,
+        "eossec": "2023-05-11",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.2",
+        "codename": null,
+        "label": "3.2",
+        "releaseDate": "2021-08-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-05-11",
+        "isEol": true,
+        "eolFrom": "2023-05-11",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "3.2.47",
+          "date": "2023-02-02",
+          "link": "https://github.com/vuejs/core/releases/tag/v3.2.47"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.1",
+      "name": "3.1",
+      "milestones": {
+        "ga": "2021-06-07",
+        "eos": null,
+        "eossec": "2021-08-09",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.1",
+        "codename": null,
+        "label": "3.1",
+        "releaseDate": "2021-06-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-08-09",
+        "isEol": true,
+        "eolFrom": "2021-08-09",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "3.1.5",
+          "date": "2021-07-16",
+          "link": "https://github.com/vuejs/core/releases/tag/v3.1.5"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.0",
+      "name": "3.0",
+      "milestones": {
+        "ga": "2020-09-18",
+        "eos": null,
+        "eossec": "2021-06-07",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.0",
+        "codename": null,
+        "label": "3.0",
+        "releaseDate": "2020-09-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-06-07",
+        "isEol": true,
+        "eolFrom": "2021-06-07",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "3.0.11",
+          "date": "2021-04-01",
+          "link": "https://github.com/vuejs/core/releases/tag/v3.0.11"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.6",
+      "name": "2.6",
+      "milestones": {
+        "ga": "2019-02-04",
+        "eos": null,
+        "eossec": "2022-07-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.6",
+        "codename": null,
+        "label": "2.6",
+        "releaseDate": "2019-02-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-07-01",
+        "isEol": true,
+        "eolFrom": "2022-07-01",
+        "isEoes": false,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "2.6.14",
+          "date": "2021-06-07",
+          "link": "https://github.com/vuejs/vue/releases/tag/v2.6.14"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.5",
+      "name": "2.5",
+      "milestones": {
+        "ga": "2017-10-13",
+        "eos": null,
+        "eossec": "2019-02-04",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.5",
+        "codename": null,
+        "label": "2.5",
+        "releaseDate": "2017-10-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2019-02-04",
+        "isEol": true,
+        "eolFrom": "2019-02-04",
+        "isEoes": true,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "2.5.22",
+          "date": "2019-01-11",
+          "link": "https://github.com/vuejs/vue/releases/tag/v2.5.22"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.4",
+      "name": "2.4",
+      "milestones": {
+        "ga": "2017-07-13",
+        "eos": null,
+        "eossec": "2017-10-13",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.4",
+        "codename": null,
+        "label": "2.4",
+        "releaseDate": "2017-07-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2017-10-13",
+        "isEol": true,
+        "eolFrom": "2017-10-13",
+        "isEoes": true,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "2.4.4",
+          "date": "2017-09-14",
+          "link": "https://github.com/vuejs/vue/releases/tag/v2.4.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.3",
+      "name": "2.3",
+      "milestones": {
+        "ga": "2017-04-27",
+        "eos": null,
+        "eossec": "2017-07-13",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.3",
+        "codename": null,
+        "label": "2.3",
+        "releaseDate": "2017-04-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2017-07-13",
+        "isEol": true,
+        "eolFrom": "2017-07-13",
+        "isEoes": true,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "2.3.4",
+          "date": "2017-06-08",
+          "link": "https://github.com/vuejs/vue/releases/tag/v2.3.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.2",
+      "name": "2.2",
+      "milestones": {
+        "ga": "2017-02-26",
+        "eos": null,
+        "eossec": "2017-04-27",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.2",
+        "codename": null,
+        "label": "2.2",
+        "releaseDate": "2017-02-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2017-04-27",
+        "isEol": true,
+        "eolFrom": "2017-04-27",
+        "isEoes": true,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "2.2.6",
+          "date": "2017-03-27",
+          "link": "https://github.com/vuejs/vue/releases/tag/v2.2.6"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.1",
+      "name": "2.1",
+      "milestones": {
+        "ga": "2016-11-22",
+        "eos": null,
+        "eossec": "2017-02-26",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.1",
+        "codename": null,
+        "label": "2.1",
+        "releaseDate": "2016-11-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2017-02-26",
+        "isEol": true,
+        "eolFrom": "2017-02-26",
+        "isEoes": true,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "2.1.10",
+          "date": "2017-01-17",
+          "link": "https://github.com/vuejs/vue/releases/tag/v2.1.10"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.0",
+      "name": "2.0",
+      "milestones": {
+        "ga": "2016-09-30",
+        "eos": null,
+        "eossec": "2016-11-22",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.0",
+        "codename": null,
+        "label": "2.0",
+        "releaseDate": "2016-09-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2016-11-22",
+        "isEol": true,
+        "eolFrom": "2016-11-22",
+        "isEoes": true,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "2.0.8",
+          "date": "2016-11-20",
+          "link": "https://github.com/vuejs/vue/releases/tag/v2.0.8"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1",
+      "name": "1",
+      "milestones": {
+        "ga": "2015-10-27",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1",
+        "codename": null,
+        "label": "1",
+        "releaseDate": "2015-10-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "1.0.28",
+          "date": "2016-09-27",
+          "link": "https://github.com/vuejs/vue/releases/tag/v1.0.28"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/vue/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T14:54:07Z",
+    "upstream_modified": "2026-08-28T00:07:00+00:00"
+  }
+}

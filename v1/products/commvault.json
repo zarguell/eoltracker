@@ -1,0 +1,221 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "commvault",
+  "name": "Commvault",
+  "category": "software",
+  "upstream_category": "app",
+  "identifiers": [
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:commvault:commvault"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/commvault",
+    "releasePolicy": "https://documentation.commvault.com/v11/software/commvault_software_releases_release_types_and_release_tracks.html"
+  },
+  "releases": [
+    {
+      "id": "11.46",
+      "name": "11.46",
+      "milestones": {
+        "ga": "2026-07-15",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "11.46",
+        "codename": null,
+        "label": "11.46",
+        "releaseDate": "2026-07-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "11.46.20",
+          "date": "2026-08-14",
+          "link": "https://documentation.commvault.com/11.46/software/innovation_update_release_in_11_46.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "11.44",
+      "name": "11.44 (LTS)",
+      "milestones": {
+        "ga": "2026-06-15",
+        "eos": null,
+        "eossec": "2028-12-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "11.44",
+        "codename": null,
+        "label": "11.44 (LTS)",
+        "releaseDate": "2026-06-15",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2028-12-15",
+        "isMaintained": true,
+        "latest": {
+          "name": "11.44.20",
+          "date": "2026-09-01",
+          "link": "https://documentation.commvault.com/11.44/software/maintenance_release_in_11_44.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "11.42",
+      "name": "11.42",
+      "milestones": {
+        "ga": "2025-07-14",
+        "eos": null,
+        "eossec": "2028-06-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "11.42",
+        "codename": null,
+        "label": "11.42",
+        "releaseDate": "2025-07-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2028-06-15",
+        "isMaintained": true,
+        "latest": {
+          "name": "11.42.122",
+          "date": "2026-06-15",
+          "link": "https://documentation.commvault.com/11.42/software/list_of_update_releases_in_11_42.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "11.40",
+      "name": "11.40 (LTS)",
+      "milestones": {
+        "ga": "2025-06-15",
+        "eos": null,
+        "eossec": "2027-12-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "11.40",
+        "codename": null,
+        "label": "11.40 (LTS)",
+        "releaseDate": "2025-06-15",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-12-15",
+        "isMaintained": true,
+        "latest": {
+          "name": "11.40.72",
+          "date": "2026-09-01",
+          "link": "https://documentation.commvault.com/11.40/essential/list_of_maintenance_releases_in_11_40.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "11.38",
+      "name": "11.38",
+      "milestones": {
+        "ga": "2025-02-15",
+        "eos": null,
+        "eossec": "2025-07-18",
+        "eol": null
+      },
+      "upstream": {
+        "name": "11.38",
+        "codename": null,
+        "label": "11.38",
+        "releaseDate": "2025-02-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-07-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "11.38.37",
+          "date": "2025-06-17",
+          "link": "https://documentation.commvault.com/11.40/software/changes_in_innovation_release_11_38.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "11.36",
+      "name": "2024E (LTS)",
+      "milestones": {
+        "ga": "2024-08-15",
+        "eos": null,
+        "eossec": "2027-06-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "11.36",
+        "codename": null,
+        "label": "2024E (LTS)",
+        "releaseDate": "2024-08-15",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-06-15",
+        "isMaintained": true,
+        "latest": {
+          "name": "11.36.123",
+          "date": "2026-09-01",
+          "link": "https://documentation.commvault.com/2024e/essential/list_of_maintenance_releases_for_commvault_platform_release_2024e.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "11.32",
+      "name": "2023E (LTS)",
+      "milestones": {
+        "ga": "2023-08-15",
+        "eos": null,
+        "eossec": "2026-06-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "11.32",
+        "codename": null,
+        "label": "2023E (LTS)",
+        "releaseDate": "2023-08-15",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-06-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "11.32.143",
+          "date": "2026-06-02",
+          "link": "https://documentation.commvault.com/11.40/software/changes_in_commvault_platform_release_2023e.html"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/commvault/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-09T06:34:31+00:00"
+  }
+}

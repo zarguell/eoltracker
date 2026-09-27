@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-vxrack-sddc",
+  "name": "VxRack SDDC",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC VxRack",
+  "family": "VxRack",
+  "model_number": "VxRack SDDC",
+  "milestones": {
+    "ga": null,
+    "eos": "2019-08-16",
+    "eossec": null,
+    "eol": "2019-12-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "VxRack SDDC",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "VxRack SDDC",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC VxRack",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2019-08-16",
+      "datetime": null,
+      "value": "2019-08-16",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Not Announced",
+      "datetime": "TBD",
+      "value": null,
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2019-12-31",
+      "datetime": null,
+      "value": "2019-12-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/hyper-converged/vendor/dell-emc/vxrack/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

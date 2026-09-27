@@ -1,0 +1,607 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "redhat-satellite",
+  "name": "Red Hat Satellite",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [],
+  "labels": {
+    "eoas": "Full support",
+    "discontinued": null,
+    "eol": "Maintenance support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/redhat.svg",
+    "html": "https://endoflife.date/redhat-satellite",
+    "releasePolicy": "https://access.redhat.com/support/policy/updates/satellite"
+  },
+  "releases": [
+    {
+      "id": "6.19",
+      "name": "6.19",
+      "milestones": {
+        "ga": "2026-05-06",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.19",
+        "codename": null,
+        "label": "6.19",
+        "releaseDate": "2026-05-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": "2026-11-01",
+        "isEol": false,
+        "eolFrom": "2027-11-01",
+        "isMaintained": true,
+        "latest": {
+          "name": "6.19.4",
+          "date": "2026-09-03",
+          "link": "https://access.redhat.com/documentation/en-us/red_hat_satellite/6.19/html/release_notes/index"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.18",
+      "name": "6.18",
+      "milestones": {
+        "ga": "2025-11-04",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.18",
+        "codename": null,
+        "label": "6.18",
+        "releaseDate": "2025-11-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-05-06",
+        "isEol": false,
+        "eolFrom": "2027-05-01",
+        "isMaintained": true,
+        "latest": {
+          "name": "6.18.9",
+          "date": "2026-09-03",
+          "link": "https://access.redhat.com/documentation/en-us/red_hat_satellite/6.18/html/release_notes/index"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.17",
+      "name": "6.17",
+      "milestones": {
+        "ga": "2025-05-06",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.17",
+        "codename": null,
+        "label": "6.17",
+        "releaseDate": "2025-05-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-11-30",
+        "isEol": false,
+        "eolFrom": "2026-11-30",
+        "isMaintained": true,
+        "latest": {
+          "name": "6.17.11",
+          "date": "2026-09-03",
+          "link": "https://access.redhat.com/documentation/en-us/red_hat_satellite/6.17/html/release_notes/index"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.16",
+      "name": "6.16",
+      "milestones": {
+        "ga": "2024-11-05",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.16",
+        "codename": null,
+        "label": "6.16",
+        "releaseDate": "2024-11-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-05-31",
+        "isEol": true,
+        "eolFrom": "2026-05-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.16.10",
+          "date": "2026-07-01",
+          "link": "https://access.redhat.com/documentation/en-us/red_hat_satellite/6.16/html/release_notes/index"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.15",
+      "name": "6.15",
+      "milestones": {
+        "ga": "2024-04-23",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.15",
+        "codename": null,
+        "label": "6.15",
+        "releaseDate": "2024-04-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-11-30",
+        "isEol": true,
+        "eolFrom": "2025-11-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.15.5.8",
+          "date": "2025-12-02",
+          "link": "https://access.redhat.com/documentation/en-us/red_hat_satellite/6.15/html/release_notes/index"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.14",
+      "name": "6.14",
+      "milestones": {
+        "ga": "2023-11-08",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.14",
+        "codename": null,
+        "label": "6.14",
+        "releaseDate": "2023-11-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-05-31",
+        "isEol": true,
+        "eolFrom": "2025-05-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.14.4.5",
+          "date": "2025-04-01",
+          "link": "https://access.redhat.com/documentation/en-us/red_hat_satellite/6.14/html/release_notes/index"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.13",
+      "name": "6.13",
+      "milestones": {
+        "ga": "2023-05-03",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.13",
+        "codename": null,
+        "label": "6.13",
+        "releaseDate": "2023-05-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-11-30",
+        "isEol": true,
+        "eolFrom": "2024-11-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.13.7.3",
+          "date": "2024-10-31",
+          "link": "https://access.redhat.com/documentation/en-us/red_hat_satellite/6.13/html/release_notes/index"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.12",
+      "name": "6.12",
+      "milestones": {
+        "ga": "2022-11-16",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.12",
+        "codename": null,
+        "label": "6.12",
+        "releaseDate": "2022-11-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-05-31",
+        "isEol": true,
+        "eolFrom": "2024-05-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.12.5.3",
+          "date": "2024-04-22",
+          "link": "https://access.redhat.com/documentation/en-us/red_hat_satellite/6.12/html/release_notes/index"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.11",
+      "name": "6.11",
+      "milestones": {
+        "ga": "2022-07-05",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.11",
+        "codename": null,
+        "label": "6.11",
+        "releaseDate": "2022-07-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-11-30",
+        "isEol": true,
+        "eolFrom": "2024-01-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.11.5.7",
+          "date": "2024-05-06",
+          "link": "https://access.redhat.com/documentation/en-us/red_hat_satellite/6.11/html/release_notes/index"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.10",
+      "name": "6.10",
+      "milestones": {
+        "ga": "2021-11-16",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.10",
+        "codename": null,
+        "label": "6.10",
+        "releaseDate": "2021-11-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-06-30",
+        "isEol": true,
+        "eolFrom": "2023-05-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.10.7.2",
+          "date": "2023-03-01",
+          "link": "https://access.redhat.com/documentation/en-us/red_hat_satellite/6.10/html/release_notes/index"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.9",
+      "name": "6.9",
+      "milestones": {
+        "ga": "2021-04-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.9",
+        "codename": null,
+        "label": "6.9",
+        "releaseDate": "2021-04-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-11-30",
+        "isEol": true,
+        "eolFrom": "2022-11-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.9.10",
+          "date": "2022-11-17",
+          "link": "https://access.redhat.com/documentation/en-us/red_hat_satellite/6.9/html/release_notes/index"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.8",
+      "name": "6.8",
+      "milestones": {
+        "ga": "2020-10-27",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.8",
+        "codename": null,
+        "label": "6.8",
+        "releaseDate": "2020-10-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-04-30",
+        "isEol": true,
+        "eolFrom": "2022-07-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.8.6",
+          "date": "2021-04-13",
+          "link": "https://access.redhat.com/documentation/en-us/red_hat_satellite/6.8/html/release_notes/index"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.7",
+      "name": "6.7",
+      "milestones": {
+        "ga": "2020-04-14",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.7",
+        "codename": null,
+        "label": "6.7",
+        "releaseDate": "2020-04-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-10-31",
+        "isEol": true,
+        "eolFrom": "2021-11-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.7.5",
+          "date": "2020-10-26",
+          "link": "https://access.redhat.com/documentation/en-us/red_hat_satellite/6.7/html/release_notes/index"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.6",
+      "name": "6.6",
+      "milestones": {
+        "ga": "2019-10-22",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.6",
+        "codename": null,
+        "label": "6.6",
+        "releaseDate": "2019-10-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-04-30",
+        "isEol": true,
+        "eolFrom": "2021-05-14",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.6.3",
+          "date": "2020-04-16",
+          "link": "https://access.redhat.com/documentation/en-us/red_hat_satellite/6.6/html/release_notes/index"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.5",
+      "name": "6.5",
+      "milestones": {
+        "ga": "2019-05-14",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.5",
+        "codename": null,
+        "label": "6.5",
+        "releaseDate": "2019-05-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2019-10-31",
+        "isEol": true,
+        "eolFrom": "2020-10-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.5.3",
+          "date": "2019-10-29",
+          "link": "https://access.redhat.com/documentation/en-us/red_hat_satellite/6.5/html/release_notes/index"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.4",
+      "name": "6.4",
+      "milestones": {
+        "ga": "2018-10-16",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.4",
+        "codename": null,
+        "label": "6.4",
+        "releaseDate": "2018-10-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2019-05-31",
+        "isEol": true,
+        "eolFrom": "2020-04-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.4.4",
+          "date": "2019-07-15",
+          "link": "https://access.redhat.com/documentation/en-us/red_hat_satellite/6.4/html/release_notes/index"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.3",
+      "name": "6.3",
+      "milestones": {
+        "ga": "2018-02-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.3",
+        "codename": null,
+        "label": "6.3",
+        "releaseDate": "2018-02-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2018-10-30",
+        "isEol": true,
+        "eolFrom": "2019-05-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.3.5",
+          "date": "2018-10-30",
+          "link": "https://access.redhat.com/documentation/en-us/red_hat_satellite/6.3/html/release_notes/index"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.2",
+      "name": "6.2",
+      "milestones": {
+        "ga": "2016-07-27",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.2",
+        "codename": null,
+        "label": "6.2",
+        "releaseDate": "2016-07-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2018-02-21",
+        "isEol": true,
+        "eolFrom": "2019-05-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.2.16",
+          "date": "2018-11-26",
+          "link": "https://access.redhat.com/documentation/en-us/red_hat_satellite/6.2/html/release_notes/index"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.1",
+      "name": "6.1",
+      "milestones": {
+        "ga": "2015-08-12",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.1",
+        "codename": null,
+        "label": "6.1",
+        "releaseDate": "2015-08-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2016-07-27",
+        "isEol": true,
+        "eolFrom": "2018-10-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.1.12",
+          "date": "2017-06-29",
+          "link": "https://web.archive.org/web/20190719230423/https://access.redhat.com/documentation/en-us/red_hat_satellite/6.1/html/release_notes/index"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.0",
+      "name": "6.0",
+      "milestones": {
+        "ga": "2014-09-10",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.0",
+        "codename": null,
+        "label": "6.0",
+        "releaseDate": "2014-09-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2015-08-12",
+        "isEol": true,
+        "eolFrom": "2018-02-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.0.8",
+          "date": "2015-02-20",
+          "link": "https://web.archive.org/web/20190719183026/https://access.redhat.com/documentation/en-us/red_hat_satellite/6.0/html/release_notes/index"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/redhat-satellite/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-08T00:07:27+00:00"
+  }
+}
