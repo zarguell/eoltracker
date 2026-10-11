@@ -3,7 +3,7 @@ import copy
 import json
 import tempfile
 import unittest
-from datetime import date
+from datetime import date, datetime, timezone
 from pathlib import Path
 
 from engine.contribute import (RESEARCHED_VERIFIER_PREFIX, build_record, check_file, date_in_quote,
@@ -341,7 +341,11 @@ class EvidenceTests(ContributionCase):
         def broken(url):
             raise ConnectionError("offline")
 
-        report = install_file(path, root=self.root, fetch=broken, allow_stale=True)
+        # Pin `now`: the staleness assertion below compares a fixed review date
+        # against last_checked, so an unpinned install stamp would make the test
+        # age out once the real clock passes the 180-day horizon.
+        report = install_file(path, root=self.root, fetch=broken, allow_stale=True,
+                              now=datetime(2026, 9, 17, 12, tzinfo=timezone.utc))
         self.assertEqual(report["action"], "install")
         record = json.loads((self.root / "products/researched-synology-dsm-6-2.json").read_text())
         self.assertIsNone(record["provenance"]["research"]["verified_at"])
