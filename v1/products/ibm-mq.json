@@ -1,0 +1,361 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "ibm-mq",
+  "name": "IBM MQ",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "cpe",
+      "id": "cpe:/a:ibm:mq"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:ibm:mq"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Support",
+    "eoes": "Extended Support"
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/ibm.svg",
+    "html": "https://endoflife.date/ibm-mq",
+    "releasePolicy": "https://www.ibm.com/support/pages/ibm-mq-faq-long-term-support-and-continuous-delivery-releases"
+  },
+  "releases": [
+    {
+      "id": "10.0",
+      "name": "IBM MQ 10.0 LTS",
+      "milestones": {
+        "ga": "2026-06-16",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "10.0",
+        "codename": null,
+        "label": "IBM MQ 10.0 LTS",
+        "releaseDate": "2026-06-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isEoes": false,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "9.4",
+      "name": "IBM MQ 9.4 LTS",
+      "milestones": {
+        "ga": "2024-06-18",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.4",
+        "codename": null,
+        "label": "IBM MQ 9.4 LTS",
+        "releaseDate": "2024-06-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isEoes": false,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "9.3",
+      "name": "IBM MQ 9.3 LTS",
+      "milestones": {
+        "ga": "2022-06-23",
+        "eos": null,
+        "eossec": null,
+        "eol": "2031-09-30"
+      },
+      "upstream": {
+        "name": "9.3",
+        "codename": null,
+        "label": "IBM MQ 9.3 LTS",
+        "releaseDate": "2022-06-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-09-30",
+        "isEoes": false,
+        "eoesFrom": "2031-09-30",
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "9.2",
+      "name": "IBM MQ 9.2 LTS",
+      "milestones": {
+        "ga": "2020-07-23",
+        "eos": null,
+        "eossec": null,
+        "eol": "2029-09-30"
+      },
+      "upstream": {
+        "name": "9.2",
+        "codename": null,
+        "label": "IBM MQ 9.2 LTS",
+        "releaseDate": "2020-07-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-09-30",
+        "isEoes": false,
+        "eoesFrom": "2029-09-30",
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "9.1",
+      "name": "IBM MQ 9.1 LTS",
+      "milestones": {
+        "ga": "2018-07-23",
+        "eos": null,
+        "eossec": null,
+        "eol": "2027-09-30"
+      },
+      "upstream": {
+        "name": "9.1",
+        "codename": null,
+        "label": "IBM MQ 9.1 LTS",
+        "releaseDate": "2018-07-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-09-30",
+        "isEoes": false,
+        "eoesFrom": "2027-09-30",
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "9.0",
+      "name": "IBM MQ 9.0 LTS",
+      "milestones": {
+        "ga": "2016-06-02",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-09-30"
+      },
+      "upstream": {
+        "name": "9.0",
+        "codename": null,
+        "label": "IBM MQ 9.0 LTS",
+        "releaseDate": "2016-06-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-09-30",
+        "isEoes": true,
+        "eoesFrom": "2025-09-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "8.0",
+      "name": "IBM MQ 8.0",
+      "milestones": {
+        "ga": "2014-06-13",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-04-30"
+      },
+      "upstream": {
+        "name": "8.0",
+        "codename": null,
+        "label": "IBM MQ 8.0",
+        "releaseDate": "2014-06-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-04-30",
+        "isEoes": true,
+        "eoesFrom": "2023-04-30",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "7.5",
+      "name": "WebSphere MQ 7.5",
+      "milestones": {
+        "ga": "2012-06-15",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.5",
+        "codename": null,
+        "label": "WebSphere MQ 7.5",
+        "releaseDate": "2012-06-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-04-30",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "7.1",
+      "name": "WebSphere MQ 7.1",
+      "milestones": {
+        "ga": "2011-11-01",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.1",
+        "codename": null,
+        "label": "WebSphere MQ 7.1",
+        "releaseDate": "2011-11-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-04-30",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "7.0",
+      "name": "WebSphere MQ 7.0",
+      "milestones": {
+        "ga": "2008-05-01",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.0",
+        "codename": null,
+        "label": "WebSphere MQ 7.0",
+        "releaseDate": "2008-05-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2015-09-30",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "6.0",
+      "name": "WebSphere MQ 6.X",
+      "milestones": {
+        "ga": "2005-05-01",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.0",
+        "codename": null,
+        "label": "WebSphere MQ 6.X",
+        "releaseDate": "2005-05-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2012-09-30",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "5.3",
+      "name": "WebSphere MQ 5.3",
+      "milestones": {
+        "ga": "2002-06-01",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.3",
+        "codename": null,
+        "label": "WebSphere MQ 5.3",
+        "releaseDate": "2002-06-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2007-09-28",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "5.2",
+      "name": "MQ Series 5.2",
+      "milestones": {
+        "ga": "2000-12-01",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.2",
+        "codename": null,
+        "label": "MQ Series 5.2",
+        "releaseDate": "2000-12-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2003-12-31",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/ibm-mq/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-07-12T07:24:32+00:00"
+  }
+}

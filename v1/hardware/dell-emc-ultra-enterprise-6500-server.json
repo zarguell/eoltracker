@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-ultra-enterprise-6500-server",
+  "name": "Ultra Enterprise 6500 Server",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC EMC Data Manager (EDM)",
+  "family": "EMC Data Manager (EDM)",
+  "model_number": "Ultra Enterprise 6500 Server",
+  "milestones": {
+    "ga": "2001-02-01",
+    "eos": "2002-11-30",
+    "eossec": null,
+    "eol": "2007-12-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "Ultra Enterprise 6500 Server",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "Ultra Enterprise 6500 Server",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC EMC Data Manager (EDM)",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2002-11-30",
+      "datetime": null,
+      "value": "2002-11-30",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Feb. 01, 2001",
+      "datetime": "2001-02-01",
+      "value": "2001-02-01",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2007-12-31",
+      "datetime": null,
+      "value": "2007-12-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/backup/vendor/dell-emc/emc-data-manager-edm/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

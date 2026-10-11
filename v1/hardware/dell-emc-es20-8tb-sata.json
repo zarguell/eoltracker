@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-es20-8tb-sata",
+  "name": "ES20-8TB SATA",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Data Domain",
+  "family": "Data Domain",
+  "model_number": "ES20-8TB SATA",
+  "milestones": {
+    "ga": "2007-04-23",
+    "eos": "2011-03-21",
+    "eossec": null,
+    "eol": "2015-12-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "ES20-8TB SATA",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "ES20-8TB SATA",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Data Domain",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2011-03-21",
+      "datetime": null,
+      "value": "2011-03-21",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Apr. 23, 2007",
+      "datetime": "2007-04-23",
+      "value": "2007-04-23",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2015-12-31",
+      "datetime": null,
+      "value": "2015-12-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/backup/vendor/dell-emc/data-domain/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

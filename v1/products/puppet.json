@@ -1,0 +1,202 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "puppet",
+  "name": "Puppet",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "puppet"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:puppet:puppet"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:puppet:puppet"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Supported",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/puppet.svg",
+    "html": "https://endoflife.date/puppet",
+    "releasePolicy": "https://help.puppet.com/core/8/Content/PuppetCore/platform_lifecycle.htm#Puppetreleasesandlifecycle"
+  },
+  "releases": [
+    {
+      "id": "8",
+      "name": "8",
+      "milestones": {
+        "ga": "2023-04-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "8",
+        "codename": null,
+        "label": "8",
+        "releaseDate": "2023-04-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "8.18.0",
+          "date": "2026-04-10",
+          "link": "https://help.puppet.com/core/8/Content/PuppetCore/PuppetReleaseNotes/release_notes_puppet_x-8-18-0.htm"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7",
+      "name": "7",
+      "milestones": {
+        "ga": "2020-11-13",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-04-30"
+      },
+      "upstream": {
+        "name": "7",
+        "codename": null,
+        "label": "7",
+        "releaseDate": "2020-11-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-04-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.35.0",
+          "date": "2025-02-28",
+          "link": "https://www.puppet.com/docs/puppet/7/release_notes_puppet#release_notes_puppet"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6",
+      "name": "6",
+      "milestones": {
+        "ga": "2018-09-18",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-02-01"
+      },
+      "upstream": {
+        "name": "6",
+        "codename": null,
+        "label": "6",
+        "releaseDate": "2018-09-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-02-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.29.0",
+          "date": "2023-01-24",
+          "link": "https://www.puppet.com/docs/puppet/6/release_notes_puppet.html#release_notes_puppet"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5",
+      "name": "5",
+      "milestones": {
+        "ga": "2017-06-27",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-01-01"
+      },
+      "upstream": {
+        "name": "5",
+        "codename": null,
+        "label": "5",
+        "releaseDate": "2017-06-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-01-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.5.22",
+          "date": "2020-10-09",
+          "link": "https://www.puppet.com/docs/puppet/5.5/release_notes.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4",
+      "name": "4",
+      "milestones": {
+        "ga": "2015-04-08",
+        "eos": null,
+        "eossec": null,
+        "eol": "2018-10-01"
+      },
+      "upstream": {
+        "name": "4",
+        "codename": null,
+        "label": "4",
+        "releaseDate": "2015-04-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-10-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.10.13",
+          "date": "2018-12-19",
+          "link": "https://github.com/puppetlabs/docs-archive/blob/main/puppet/4.10/release_notes.markdown"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3",
+      "name": "3",
+      "milestones": {
+        "ga": "2012-09-28",
+        "eos": null,
+        "eossec": null,
+        "eol": "2017-01-01"
+      },
+      "upstream": {
+        "name": "3",
+        "codename": null,
+        "label": "3",
+        "releaseDate": "2012-09-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-01-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.8.7",
+          "date": "2016-04-25",
+          "link": "https://github.com/puppetlabs/docs-archive/blob/main/puppet/3.8/release_notes.markdown"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/puppet/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-05-01T09:58:42+00:00"
+  }
+}

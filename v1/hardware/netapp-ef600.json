@@ -1,0 +1,61 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "netapp-ef600",
+  "name": "EF600",
+  "category": "hardware",
+  "vendor": "NetApp",
+  "product_line": "NetApp E-Series",
+  "family": "E-Series",
+  "model_number": "EF600",
+  "milestones": {
+    "ga": "2020-01-01",
+    "eos": null,
+    "eossec": null,
+    "eol": null
+  },
+  "status": "supported",
+  "upstream": {
+    "Product": {
+      "text": "EF600",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "EF600",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "NetApp E-Series",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Jan. 01, 2020",
+      "datetime": "2020-01-01",
+      "value": "2020-01-01",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support": {
+      "text": "",
+      "datetime": null,
+      "value": null,
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/vendor/netapp/e-series/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

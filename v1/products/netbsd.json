@@ -1,0 +1,355 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "netbsd",
+  "name": "NetBSD",
+  "category": "software",
+  "upstream_category": "os",
+  "identifiers": [
+    {
+      "type": "cpe",
+      "id": "cpe:/o:netbsd:netbsd"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:o:netbsd:netbsd"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/netbsd.svg",
+    "html": "https://endoflife.date/netbsd",
+    "releasePolicy": "https://www.netbsd.org/releases/"
+  },
+  "releases": [
+    {
+      "id": "11",
+      "name": "11",
+      "milestones": {
+        "ga": "2026-07-30",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "11",
+        "codename": null,
+        "label": "11",
+        "releaseDate": "2026-07-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "11.0",
+          "date": "2026-07-30",
+          "link": "https://www.netbsd.org/releases/formal-11/NetBSD-11.0.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "10",
+      "name": "10",
+      "milestones": {
+        "ga": "2024-03-28",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "10",
+        "codename": null,
+        "label": "10",
+        "releaseDate": "2024-03-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-07-30",
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "10.1",
+          "date": "2024-12-16",
+          "link": "https://www.netbsd.org/releases/formal-10/NetBSD-10.1.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9",
+      "name": "9",
+      "milestones": {
+        "ga": "2020-02-14",
+        "eos": null,
+        "eossec": "2026-08-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "9",
+        "codename": null,
+        "label": "9",
+        "releaseDate": "2020-02-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-03-28",
+        "isEol": true,
+        "eolFrom": "2026-08-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.5",
+          "date": "2026-08-31",
+          "link": "https://www.netbsd.org/releases/formal-9/NetBSD-9.5.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8",
+      "name": "8",
+      "milestones": {
+        "ga": "2018-07-17",
+        "eos": null,
+        "eossec": "2024-05-04",
+        "eol": null
+      },
+      "upstream": {
+        "name": "8",
+        "codename": null,
+        "label": "8",
+        "releaseDate": "2018-07-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-02-14",
+        "isEol": true,
+        "eolFrom": "2024-05-04",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.3",
+          "date": "2024-05-04",
+          "link": "https://www.netbsd.org/releases/formal-8/NetBSD-8.3.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7",
+      "name": "7",
+      "milestones": {
+        "ga": "2015-09-25",
+        "eos": null,
+        "eossec": "2020-06-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7",
+        "codename": null,
+        "label": "7",
+        "releaseDate": "2015-09-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2018-07-17",
+        "isEol": true,
+        "eolFrom": "2020-06-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.2",
+          "date": "2018-08-29",
+          "link": "https://www.netbsd.org/releases/formal-7/NetBSD-7.2.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6",
+      "name": "6",
+      "milestones": {
+        "ga": "2012-10-17",
+        "eos": null,
+        "eossec": "2018-08-23",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6",
+        "codename": null,
+        "label": "6",
+        "releaseDate": "2012-10-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2015-09-25",
+        "isEol": true,
+        "eolFrom": "2018-08-23",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.1.5",
+          "date": "2014-09-22",
+          "link": "https://www.netbsd.org/releases/formal-6/NetBSD-6.1.5.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5",
+      "name": "5",
+      "milestones": {
+        "ga": "2009-04-29",
+        "eos": null,
+        "eossec": "2015-11-11",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5",
+        "codename": null,
+        "label": "5",
+        "releaseDate": "2009-04-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2012-10-17",
+        "isEol": true,
+        "eolFrom": "2015-11-11",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.2.3",
+          "date": "2014-11-15",
+          "link": "https://www.netbsd.org/releases/formal-5/NetBSD-5.2.3.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4",
+      "name": "4",
+      "milestones": {
+        "ga": "2007-12-19",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4",
+        "codename": null,
+        "label": "4",
+        "releaseDate": "2007-12-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2009-04-29",
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "4.0.1",
+          "date": "2008-10-14",
+          "link": "https://www.netbsd.org/releases/formal-4/NetBSD-4.0.1.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3",
+      "name": "3",
+      "milestones": {
+        "ga": "2005-12-23",
+        "eos": null,
+        "eossec": "2009-05-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3",
+        "codename": null,
+        "label": "3",
+        "releaseDate": "2005-12-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2007-12-19",
+        "isEol": true,
+        "eolFrom": "2009-05-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.1",
+          "date": "2006-11-04",
+          "link": "https://www.netbsd.org/releases/formal-3/NetBSD-3.1.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2",
+      "name": "2",
+      "milestones": {
+        "ga": "2004-12-09",
+        "eos": null,
+        "eossec": "2008-08-21",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2",
+        "codename": null,
+        "label": "2",
+        "releaseDate": "2004-12-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2005-12-23",
+        "isEol": true,
+        "eolFrom": "2008-08-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.1",
+          "date": "2005-11-02",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1",
+      "name": "1",
+      "milestones": {
+        "ga": "1994-10-26",
+        "eos": null,
+        "eossec": "2006-05-17",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1",
+        "codename": null,
+        "label": "1",
+        "releaseDate": "1994-10-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2004-12-09",
+        "isEol": true,
+        "eolFrom": "2006-05-17",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.6.2",
+          "date": "2004-03-01",
+          "link": null
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/netbsd/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-08T00:07:27+00:00"
+  }
+}

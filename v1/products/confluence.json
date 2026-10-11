@@ -1,0 +1,850 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "confluence",
+  "name": "Confluence",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "cpe",
+      "id": "cpe:/a:atlassian:confluence"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:atlassian:confluence"
+    },
+    {
+      "type": "repology",
+      "id": "atlassian-confluence"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/confluence.svg",
+    "html": "https://endoflife.date/confluence",
+    "releasePolicy": "https://confluence.atlassian.com/enterprise/atlassian-enterprise-releases-948227420.html#LongTermSupportreleases-Policyanddetails"
+  },
+  "releases": [
+    {
+      "id": "10.2",
+      "name": "10.2 (LTS)",
+      "milestones": {
+        "ga": "2025-12-02",
+        "eos": null,
+        "eossec": null,
+        "eol": "2027-12-02"
+      },
+      "upstream": {
+        "name": "10.2",
+        "codename": null,
+        "label": "10.2 (LTS)",
+        "releaseDate": "2025-12-02",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-12-02",
+        "isMaintained": true,
+        "latest": {
+          "name": "10.2.18",
+          "date": "2026-09-08",
+          "link": "https://confluence.atlassian.com/display/DOC/Confluence+10.2+Release+Notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "10.1",
+      "name": "10.1",
+      "milestones": {
+        "ga": "2025-10-07",
+        "eos": null,
+        "eossec": null,
+        "eol": "2027-10-07"
+      },
+      "upstream": {
+        "name": "10.1",
+        "codename": null,
+        "label": "10.1",
+        "releaseDate": "2025-10-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-10-07",
+        "isMaintained": true,
+        "latest": {
+          "name": "10.1.2",
+          "date": "2025-12-01",
+          "link": "https://confluence.atlassian.com/display/DOC/Confluence+10.1+Release+Notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "10.0",
+      "name": "10.0",
+      "milestones": {
+        "ga": "2025-08-05",
+        "eos": null,
+        "eossec": null,
+        "eol": "2027-08-05"
+      },
+      "upstream": {
+        "name": "10.0",
+        "codename": null,
+        "label": "10.0",
+        "releaseDate": "2025-08-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-08-05",
+        "isMaintained": true,
+        "latest": {
+          "name": "10.0.3",
+          "date": "2025-09-03",
+          "link": "https://confluence.atlassian.com/display/DOC/Confluence+10.0+Release+Notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.5",
+      "name": "9.5",
+      "milestones": {
+        "ga": "2025-06-04",
+        "eos": null,
+        "eossec": null,
+        "eol": "2027-06-04"
+      },
+      "upstream": {
+        "name": "9.5",
+        "codename": null,
+        "label": "9.5",
+        "releaseDate": "2025-06-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-06-04",
+        "isMaintained": true,
+        "latest": {
+          "name": "9.5.4",
+          "date": "2025-09-03",
+          "link": "https://confluence.atlassian.com/display/DOC/Confluence+9.5+Release+Notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.4",
+      "name": "9.4",
+      "milestones": {
+        "ga": "2025-03-31",
+        "eos": null,
+        "eossec": null,
+        "eol": "2027-04-01"
+      },
+      "upstream": {
+        "name": "9.4",
+        "codename": null,
+        "label": "9.4",
+        "releaseDate": "2025-03-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-04-01",
+        "isMaintained": true,
+        "latest": {
+          "name": "9.4.1",
+          "date": "2025-05-05",
+          "link": "https://confluence.atlassian.com/display/DOC/Confluence+9.4+Release+Notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.3",
+      "name": "9.3",
+      "milestones": {
+        "ga": "2025-02-04",
+        "eos": null,
+        "eossec": null,
+        "eol": "2027-02-04"
+      },
+      "upstream": {
+        "name": "9.3",
+        "codename": null,
+        "label": "9.3",
+        "releaseDate": "2025-02-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-02-04",
+        "isMaintained": true,
+        "latest": {
+          "name": "9.3.2",
+          "date": "2025-03-03",
+          "link": "https://confluence.atlassian.com/display/DOC/Confluence+9.3+Release+Notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.2",
+      "name": "9.2 (LTS)",
+      "milestones": {
+        "ga": "2024-12-09",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-12-10"
+      },
+      "upstream": {
+        "name": "9.2",
+        "codename": null,
+        "label": "9.2 (LTS)",
+        "releaseDate": "2024-12-09",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2026-12-10",
+        "isMaintained": true,
+        "latest": {
+          "name": "9.2.25",
+          "date": "2026-09-08",
+          "link": "https://confluence.atlassian.com/display/DOC/Confluence+9.2+Release+Notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.1",
+      "name": "9.1",
+      "milestones": {
+        "ga": "2024-10-03",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-10-03"
+      },
+      "upstream": {
+        "name": "9.1",
+        "codename": null,
+        "label": "9.1",
+        "releaseDate": "2024-10-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2026-10-03",
+        "isMaintained": true,
+        "latest": {
+          "name": "9.1.1",
+          "date": "2024-11-04",
+          "link": "https://confluence.atlassian.com/display/DOC/Confluence+9.1+Release+Notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.0",
+      "name": "9.0",
+      "milestones": {
+        "ga": "2024-07-30",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-07-30"
+      },
+      "upstream": {
+        "name": "9.0",
+        "codename": null,
+        "label": "9.0",
+        "releaseDate": "2024-07-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-07-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.0.3",
+          "date": "2024-09-03",
+          "link": "https://confluence.atlassian.com/display/DOC/Confluence+9.0+Release+Notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.9",
+      "name": "8.9",
+      "milestones": {
+        "ga": "2024-04-01",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-04-02"
+      },
+      "upstream": {
+        "name": "8.9",
+        "codename": null,
+        "label": "8.9",
+        "releaseDate": "2024-04-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-04-02",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.9.8",
+          "date": "2024-11-04",
+          "link": "https://confluence.atlassian.com/display/DOC/Confluence+8.9+Release+Notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.8",
+      "name": "8.8",
+      "milestones": {
+        "ga": "2024-02-08",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-02-08"
+      },
+      "upstream": {
+        "name": "8.8",
+        "codename": null,
+        "label": "8.8",
+        "releaseDate": "2024-02-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-02-08",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.8.1",
+          "date": "2024-03-05",
+          "link": "https://confluence.atlassian.com/display/DOC/Confluence+8.8+Release+Notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.7",
+      "name": "8.7",
+      "milestones": {
+        "ga": "2023-12-05",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-12-06"
+      },
+      "upstream": {
+        "name": "8.7",
+        "codename": null,
+        "label": "8.7",
+        "releaseDate": "2023-12-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-12-06",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.7.2",
+          "date": "2024-01-16",
+          "link": "https://confluence.atlassian.com/display/DOC/Confluence+8.7+Release+Notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.6",
+      "name": "8.6",
+      "milestones": {
+        "ga": "2023-10-04",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-10-05"
+      },
+      "upstream": {
+        "name": "8.6",
+        "codename": null,
+        "label": "8.6",
+        "releaseDate": "2023-10-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-10-05",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.6.2",
+          "date": "2023-12-06",
+          "link": "https://confluence.atlassian.com/display/DOC/Confluence+8.6+Release+Notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.5",
+      "name": "8.5 (LTS)",
+      "milestones": {
+        "ga": "2023-08-21",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-12-15"
+      },
+      "upstream": {
+        "name": "8.5",
+        "codename": null,
+        "label": "8.5 (LTS)",
+        "releaseDate": "2023-08-21",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-12-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.5.31",
+          "date": "2025-12-16",
+          "link": "https://confluence.atlassian.com/display/DOC/Confluence+8.5+Release+Notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.4",
+      "name": "8.4",
+      "milestones": {
+        "ga": "2023-07-05",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-07-06"
+      },
+      "upstream": {
+        "name": "8.4",
+        "codename": null,
+        "label": "8.4",
+        "releaseDate": "2023-07-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-07-06",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.4.5",
+          "date": "2023-12-06",
+          "link": "https://confluence.atlassian.com/display/DOC/Confluence+8.4+Release+Notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.3",
+      "name": "8.3",
+      "milestones": {
+        "ga": "2023-05-22",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-05-23"
+      },
+      "upstream": {
+        "name": "8.3",
+        "codename": null,
+        "label": "8.3",
+        "releaseDate": "2023-05-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-05-23",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.3.4",
+          "date": "2023-10-31",
+          "link": "https://confluence.atlassian.com/display/DOC/Confluence+8.3+Release+Notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.2",
+      "name": "8.2",
+      "milestones": {
+        "ga": "2023-03-28",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-03-29"
+      },
+      "upstream": {
+        "name": "8.2",
+        "codename": null,
+        "label": "8.2",
+        "releaseDate": "2023-03-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-03-29",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.2.3",
+          "date": "2023-05-16",
+          "link": "https://confluence.atlassian.com/display/DOC/Confluence+8.2+Release+Notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.1",
+      "name": "8.1",
+      "milestones": {
+        "ga": "2023-02-13",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-02-14"
+      },
+      "upstream": {
+        "name": "8.1",
+        "codename": null,
+        "label": "8.1",
+        "releaseDate": "2023-02-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-02-14",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.1.4",
+          "date": "2023-04-05",
+          "link": "https://confluence.atlassian.com/display/DOC/Confluence+8.1+Release+Notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.0",
+      "name": "8.0",
+      "milestones": {
+        "ga": "2022-11-28",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-11-29"
+      },
+      "upstream": {
+        "name": "8.0",
+        "codename": null,
+        "label": "8.0",
+        "releaseDate": "2022-11-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-11-29",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.0.4",
+          "date": "2023-02-13",
+          "link": "https://confluence.atlassian.com/display/DOC/Confluence+8.0+Release+Notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.20",
+      "name": "7.20",
+      "milestones": {
+        "ga": "2022-10-03",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-10-04"
+      },
+      "upstream": {
+        "name": "7.20",
+        "codename": null,
+        "label": "7.20",
+        "releaseDate": "2022-10-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-10-04",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.20.3",
+          "date": "2022-12-13",
+          "link": "https://confluence.atlassian.com/display/DOC/Confluence+7.20+Release+Notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.19",
+      "name": "7.19 (LTS)",
+      "milestones": {
+        "ga": "2022-07-27",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-12-13"
+      },
+      "upstream": {
+        "name": "7.19",
+        "codename": null,
+        "label": "7.19 (LTS)",
+        "releaseDate": "2022-07-27",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-12-13",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.19.30",
+          "date": "2024-12-02",
+          "link": "https://confluence.atlassian.com/display/DOC/Confluence+7.19+Release+Notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.18",
+      "name": "7.18",
+      "milestones": {
+        "ga": "2022-05-28",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-05-30"
+      },
+      "upstream": {
+        "name": "7.18",
+        "codename": null,
+        "label": "7.18",
+        "releaseDate": "2022-05-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-05-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.18.3",
+          "date": "2022-07-11",
+          "link": "https://confluence.atlassian.com/display/DOC/Confluence+7.18+Release+Notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.17",
+      "name": "7.17",
+      "milestones": {
+        "ga": "2022-03-20",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-03-22"
+      },
+      "upstream": {
+        "name": "7.17",
+        "codename": null,
+        "label": "7.17",
+        "releaseDate": "2022-03-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-03-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.17.5",
+          "date": "2022-06-21",
+          "link": "https://confluence.atlassian.com/display/DOC/Confluence+7.17+Release+Notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.16",
+      "name": "7.16",
+      "milestones": {
+        "ga": "2022-01-30",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-01-31"
+      },
+      "upstream": {
+        "name": "7.16",
+        "codename": null,
+        "label": "7.16",
+        "releaseDate": "2022-01-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-01-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.16.5",
+          "date": "2022-07-05",
+          "link": "https://confluence.atlassian.com/display/DOC/Confluence+7.16+Release+Notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.15",
+      "name": "7.15",
+      "milestones": {
+        "ga": "2021-11-22",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-11-24"
+      },
+      "upstream": {
+        "name": "7.15",
+        "codename": null,
+        "label": "7.15",
+        "releaseDate": "2021-11-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-11-24",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.15.3",
+          "date": "2022-06-23",
+          "link": "https://confluence.atlassian.com/display/DOC/Confluence+7.15+Release+Notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.14",
+      "name": "7.14",
+      "milestones": {
+        "ga": "2021-10-10",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-10-12"
+      },
+      "upstream": {
+        "name": "7.14",
+        "codename": null,
+        "label": "7.14",
+        "releaseDate": "2021-10-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-10-12",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.14.4",
+          "date": "2022-06-23",
+          "link": "https://confluence.atlassian.com/display/DOC/Confluence+7.14+Release+Notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.13",
+      "name": "7.13 (LTS)",
+      "milestones": {
+        "ga": "2021-08-15",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-08-17"
+      },
+      "upstream": {
+        "name": "7.13",
+        "codename": null,
+        "label": "7.13 (LTS)",
+        "releaseDate": "2021-08-15",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-08-17",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.13.20",
+          "date": "2023-08-02",
+          "link": "https://confluence.atlassian.com/display/DOC/Confluence+7.13+Release+Notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.4",
+      "name": "7.4 (LTS)",
+      "milestones": {
+        "ga": "2020-04-18",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-04-21"
+      },
+      "upstream": {
+        "name": "7.4",
+        "codename": null,
+        "label": "7.4 (LTS)",
+        "releaseDate": "2020-04-18",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-04-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.4.18",
+          "date": "2022-07-04",
+          "link": "https://confluence.atlassian.com/display/DOC/Confluence+7.4+Release+Notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.13",
+      "name": "6.13 (LTS)",
+      "milestones": {
+        "ga": "2018-12-02",
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-12-04"
+      },
+      "upstream": {
+        "name": "6.13",
+        "codename": null,
+        "label": "6.13 (LTS)",
+        "releaseDate": "2018-12-02",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-12-04",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.13.23",
+          "date": "2021-08-23",
+          "link": "https://confluence.atlassian.com/display/DOC/Confluence+6.13+Release+Notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.6",
+      "name": "6.6 (LTS)",
+      "milestones": {
+        "ga": "2017-12-10",
+        "eos": null,
+        "eossec": null,
+        "eol": "2019-12-12"
+      },
+      "upstream": {
+        "name": "6.6",
+        "codename": null,
+        "label": "6.6 (LTS)",
+        "releaseDate": "2017-12-10",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-12-12",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.6.17",
+          "date": "2019-11-07",
+          "link": "https://confluence.atlassian.com/display/DOC/Confluence+6.6+Release+Notes"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/confluence/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-09T00:07:20+00:00"
+  }
+}

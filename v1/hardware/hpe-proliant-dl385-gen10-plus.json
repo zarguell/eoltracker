@@ -1,0 +1,61 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "hpe-proliant-dl385-gen10-plus",
+  "name": "ProLiant DL385 Gen10 Plus",
+  "category": "hardware",
+  "vendor": "HPE",
+  "product_line": "HPE ProLiant Servers",
+  "family": "ProLiant",
+  "model_number": "ProLiant DL385 Gen10 Plus",
+  "milestones": {
+    "ga": "2021-04-01",
+    "eos": null,
+    "eossec": null,
+    "eol": null
+  },
+  "status": "supported",
+  "upstream": {
+    "Product": {
+      "text": "ProLiant DL385 Gen10 Plus",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "ProLiant DL385 Gen10 Plus",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "HPE ProLiant Servers",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Apr. 01, 2021",
+      "datetime": "2021-04-01",
+      "value": "2021-04-01",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support": {
+      "text": "",
+      "datetime": null,
+      "value": null,
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/servers/vendor/hpe/proliant/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

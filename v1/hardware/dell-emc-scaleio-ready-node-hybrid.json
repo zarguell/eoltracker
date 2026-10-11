@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-scaleio-ready-node-hybrid",
+  "name": "ScaleIO Ready Node (hybrid)",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC ScaleIO Ready Node",
+  "family": "ScaleIO Ready Node",
+  "model_number": "ScaleIO Ready Node (hybrid)",
+  "milestones": {
+    "ga": "2016-09-15",
+    "eos": "2018-06-30",
+    "eossec": null,
+    "eol": "2023-02-28"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "ScaleIO Ready Node (hybrid)",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "ScaleIO Ready Node (hybrid)",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC ScaleIO Ready Node",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2018-06-30",
+      "datetime": null,
+      "value": "2018-06-30",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Sep. 15, 2016",
+      "datetime": "2016-09-15",
+      "value": "2016-09-15",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2023-02-28",
+      "datetime": null,
+      "value": "2023-02-28",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/san-storage/vendor/dell-emc/scaleio-ready-node/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

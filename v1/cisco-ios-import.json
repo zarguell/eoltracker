@@ -1,0 +1,2301 @@
+{
+  "source_url": "https://www.cisco.com/c/en/us/support/eol/index.html",
+  "catalog_url": "https://www.cisco.com/c/en/us/products/ios-nx-os-software/ios-software-releases-listing.html",
+  "verifier": "deterministic-cisco-ios",
+  "checked_at": "2026-09-17T23:51:10Z",
+  "record_scope": "Cisco IOS release trains: one software record with one release per train, from the vendor's own end-of-sale/end-of-life hub and IOS software releases listing, at the day precision the train pages state",
+  "rows": {
+    "seen": 333,
+    "hub_page_rows": 321,
+    "catalog_rows": 12,
+    "duplicate_rows": 1,
+    "trains": 18,
+    "published_fresh": 10,
+    "excluded_trains": 8,
+    "excluded_listing_rows": 314,
+    "excluded": 322,
+    "published": 10,
+    "retained": 0,
+    "milestones": {
+      "ga": 7,
+      "eos": 9,
+      "eossec": 0,
+      "eol": 9
+    }
+  },
+  "excluded": [
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "CollaborationEndpoints",
+      "group": "Board Devices",
+      "row": "Board Series",
+      "reason": "the hub files this row under the 'CollaborationEndpoints' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "CollaborationEndpoints",
+      "group": "Board Devices",
+      "row": "TelePresence MX Series",
+      "reason": "the hub files this row under the 'CollaborationEndpoints' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "CollaborationEndpoints",
+      "group": "Desk Devices",
+      "row": "Desk Series",
+      "reason": "the hub files this row under the 'CollaborationEndpoints' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "CollaborationEndpoints",
+      "group": "Phones",
+      "row": "3900 - Unified SIP",
+      "reason": "the hub files this row under the 'CollaborationEndpoints' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "CollaborationEndpoints",
+      "group": "Phones",
+      "row": "6900 - Unified IP Phone",
+      "reason": "the hub files this row under the 'CollaborationEndpoints' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "CollaborationEndpoints",
+      "group": "Phones",
+      "row": "7800 - IP Phone",
+      "reason": "the hub files this row under the 'CollaborationEndpoints' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "CollaborationEndpoints",
+      "group": "Phones",
+      "row": "7900 - Unified IP Phone",
+      "reason": "the hub files this row under the 'CollaborationEndpoints' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "CollaborationEndpoints",
+      "group": "Phones",
+      "row": "8800 - IP Phone",
+      "reason": "the hub files this row under the 'CollaborationEndpoints' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "CollaborationEndpoints",
+      "group": "Phones",
+      "row": "8800 - IP Phone w/Multiplatform Firmware",
+      "reason": "the hub files this row under the 'CollaborationEndpoints' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "CollaborationEndpoints",
+      "group": "Phones",
+      "row": "SPA300 IP Phones",
+      "reason": "the hub files this row under the 'CollaborationEndpoints' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "CollaborationEndpoints",
+      "group": "Phones",
+      "row": "SPA500 IP Phones",
+      "reason": "the hub files this row under the 'CollaborationEndpoints' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "CollaborationEndpoints",
+      "group": "Phones",
+      "row": "Wireless Phone",
+      "reason": "the hub files this row under the 'CollaborationEndpoints' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "CollaborationEndpoints",
+      "group": "Room Devices",
+      "row": "Room Series",
+      "reason": "the hub files this row under the 'CollaborationEndpoints' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "CollaborationEndpoints",
+      "group": "Room Devices",
+      "row": "TelePresence Administration Software",
+      "reason": "the hub files this row under the 'CollaborationEndpoints' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "CollaborationEndpoints",
+      "group": "Room Devices",
+      "row": "TelePresence IX5000 Series",
+      "reason": "the hub files this row under the 'CollaborationEndpoints' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "CollaborationEndpoints",
+      "group": "Room Devices",
+      "row": "TelePresence SX Series (QuickSet)",
+      "reason": "the hub files this row under the 'CollaborationEndpoints' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "CollaborationEndpoints",
+      "group": "Audio, Cameras, and Peripherals",
+      "row": "900 Series Bang & Olufsen Headsets",
+      "reason": "the hub files this row under the 'CollaborationEndpoints' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "CollaborationEndpoints",
+      "group": "Audio, Cameras, and Peripherals",
+      "row": "Microphones",
+      "reason": "the hub files this row under the 'CollaborationEndpoints' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "CollaborationEndpoints",
+      "group": "Audio, Cameras, and Peripherals",
+      "row": "SpeakerTrack 60",
+      "reason": "the hub files this row under the 'CollaborationEndpoints' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "CollaborationEndpoints",
+      "group": "Audio, Cameras, and Peripherals",
+      "row": "TelePresence Precision Cameras (P60)",
+      "reason": "the hub files this row under the 'CollaborationEndpoints' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "CollaborationEndpoints",
+      "group": "Audio, Cameras, and Peripherals",
+      "row": "TelePresence PrecisionHD Cameras",
+      "reason": "the hub files this row under the 'CollaborationEndpoints' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "CollaborationEndpoints",
+      "group": "Audio, Cameras, and Peripherals",
+      "row": "Room Phone",
+      "reason": "the hub files this row under the 'CollaborationEndpoints' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "CollaborationEndpoints",
+      "group": "Audio, Cameras, and Peripherals",
+      "row": "Touch",
+      "reason": "the hub files this row under the 'CollaborationEndpoints' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "CollaborationEndpoints",
+      "group": "Audio, Cameras, and Peripherals",
+      "row": "Webex Share",
+      "reason": "the hub files this row under the 'CollaborationEndpoints' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Conferencing",
+      "group": "",
+      "row": "Meeting Server",
+      "reason": "the hub files this row under the 'Conferencing' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Conferencing",
+      "group": "",
+      "row": "TelePresence Management Suite (TMS)",
+      "reason": "the hub files this row under the 'Conferencing' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Conferencing",
+      "group": "",
+      "row": "TelePresence Management Suite Extensions",
+      "reason": "the hub files this row under the 'Conferencing' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Conferencing",
+      "group": "",
+      "row": "Webex Meeting",
+      "reason": "the hub files this row under the 'Conferencing' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "ContactCenter",
+      "group": "",
+      "row": "Unified Domain Manager",
+      "reason": "the hub files this row under the 'ContactCenter' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "ContactCenter",
+      "group": "",
+      "row": "Unified IP Interactive Voice Response (IVR)",
+      "reason": "the hub files this row under the 'ContactCenter' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "ContactCenter",
+      "group": "",
+      "row": "Webex Contact Center Enterprise",
+      "reason": "the hub files this row under the 'ContactCenter' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "ContactCenter",
+      "group": "Solutions and Options Cadence:",
+      "row": "15.0(1) - Current Release",
+      "reason": "the hub files this row under the 'ContactCenter' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "ContactCenter",
+      "group": "Solutions and Options Cadence:",
+      "row": "12.6(2)",
+      "reason": "the hub files this row under the 'ContactCenter' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "ContactCenter",
+      "group": "Solutions and Options Cadence:",
+      "row": "12.6(1)",
+      "reason": "the hub files this row under the 'ContactCenter' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "ContactCenter",
+      "group": "Solutions and Options Cadence:",
+      "row": "12.5(2)",
+      "reason": "the hub files this row under the 'ContactCenter' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "ContactCenter",
+      "group": "Solutions and Options Cadence:",
+      "row": "12.5(1)",
+      "reason": "the hub files this row under the 'ContactCenter' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "IOS-NX-OS",
+      "group": "IOS XE Software",
+      "row": "XE 3E",
+      "reason": "the hub files this row under the vendor's 'IOS XE Software' group: it is not classic IOS software, and its own family scope is not this source's"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "IOS-NX-OS",
+      "group": "IOS XE Software",
+      "row": "XE 16",
+      "reason": "the hub files this row under the vendor's 'IOS XE Software' group: it is not classic IOS software, and its own family scope is not this source's"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "IOS-NX-OS",
+      "group": "IOS XE Software",
+      "row": "XE 17",
+      "reason": "the hub files this row under the vendor's 'IOS XE Software' group: it is not classic IOS software, and its own family scope is not this source's"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "IOS-NX-OS",
+      "group": "IOS XR Software",
+      "row": "XR (End-of-Sale Releases)",
+      "reason": "the hub files this row under the vendor's 'IOS XR Software' group: it is not classic IOS software, and its own family scope is not this source's"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "NetworkingCloud",
+      "group": "Data Center, Automation and Prime",
+      "row": "DNA Traffic Telemetry Appliance",
+      "reason": "the hub files this row under the 'NetworkingCloud' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "NetworkingCloud",
+      "group": "Data Center, Automation and Prime",
+      "row": "FindIT Network Management",
+      "reason": "the hub files this row under the 'NetworkingCloud' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "NetworkingCloud",
+      "group": "Data Center, Automation and Prime",
+      "row": "Nexus Dashboard Fabric Controller (formerly DCNM)",
+      "reason": "the hub files this row under the 'NetworkingCloud' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "NetworkingCloud",
+      "group": "Data Center, Automation and Prime",
+      "row": "Prime Access Registrar",
+      "reason": "the hub files this row under the 'NetworkingCloud' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "NetworkingCloud",
+      "group": "Data Center, Automation and Prime",
+      "row": "Prime Cable Provisioning",
+      "reason": "the hub files this row under the 'NetworkingCloud' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "NetworkingCloud",
+      "group": "Data Center, Automation and Prime",
+      "row": "Prime Infrastructure",
+      "reason": "the hub files this row under the 'NetworkingCloud' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "NetworkingCloud",
+      "group": "Data Center, Automation and Prime",
+      "row": "Prime License Manager",
+      "reason": "the hub files this row under the 'NetworkingCloud' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "NetworkingCloud",
+      "group": "Data Center, Automation and Prime",
+      "row": "Prime Network Registrar",
+      "reason": "the hub files this row under the 'NetworkingCloud' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "NetworkingCloud",
+      "group": "Data Center, Automation and Prime",
+      "row": "Prime Network Services Controller",
+      "reason": "the hub files this row under the 'NetworkingCloud' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "NetworkingCloud",
+      "group": "Crosswork and IoT",
+      "row": "Crosswork Network Automation",
+      "reason": "the hub files this row under the 'NetworkingCloud' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "NetworkingCloud",
+      "group": "Crosswork and IoT",
+      "row": "Crosswork Network Services Orchestrator",
+      "reason": "the hub files this row under the 'NetworkingCloud' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "NetworkingCloud",
+      "group": "Crosswork and IoT",
+      "row": "Industrial Network Director",
+      "reason": "the hub files this row under the 'NetworkingCloud' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "NetworkingCloud",
+      "group": "Crosswork and IoT",
+      "row": "IOx (Standalone License)",
+      "reason": "the hub files this row under the 'NetworkingCloud' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "NetworkingCloud",
+      "group": "Configuration and Cloud Management",
+      "row": "CloudCenter Suite",
+      "reason": "the hub files this row under the 'NetworkingCloud' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "NetworkingCloud",
+      "group": "Configuration and Cloud Management",
+      "row": "Configuration Assistant (CCA)",
+      "reason": "the hub files this row under the 'NetworkingCloud' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "NetworkingCloud",
+      "group": "Configuration and Cloud Management",
+      "row": "Configuration Professional for Catalyst",
+      "reason": "the hub files this row under the 'NetworkingCloud' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "NetworkingCloud",
+      "group": "Configuration and Cloud Management",
+      "row": "Configuration Professional Express",
+      "reason": "the hub files this row under the 'NetworkingCloud' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "NetworkingCloud",
+      "group": "Configuration and Cloud Management",
+      "row": "Elastic Services Controller",
+      "reason": "the hub files this row under the 'NetworkingCloud' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "NetworkingCloud",
+      "group": "Configuration and Cloud Management",
+      "row": "Evolved Programmable Network Manager",
+      "reason": "the hub files this row under the 'NetworkingCloud' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "NetworkingCloud",
+      "group": "Configuration and Cloud Management",
+      "row": "Intersight",
+      "reason": "the hub files this row under the 'NetworkingCloud' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "NetworkingCloud",
+      "group": "Configuration and Cloud Management",
+      "row": "Intersight Workload Optimizer",
+      "reason": "the hub files this row under the 'NetworkingCloud' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "NetworkingCloud",
+      "group": "Configuration and Cloud Management",
+      "row": "Managed Services Accelerator",
+      "reason": "the hub files this row under the 'NetworkingCloud' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "NetworkingCloud",
+      "group": "Configuration and Cloud Management",
+      "row": "Virtual Topology System",
+      "reason": "the hub files this row under the 'NetworkingCloud' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "NetworkingCloud",
+      "group": "Configuration and Cloud Management",
+      "row": "Virtualized Infrastructure Manager",
+      "reason": "the hub files this row under the 'NetworkingCloud' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "NetworkingCloud",
+      "group": "Infrastructure Software",
+      "row": "Catalyst Software Subscription for Switching",
+      "reason": "the hub files this row under the 'NetworkingCloud' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "NetworkingCloud",
+      "group": "Infrastructure Software",
+      "row": "DNA Software for Wireless",
+      "reason": "the hub files this row under the 'NetworkingCloud' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Optical",
+      "group": "Network Convergence System",
+      "row": "NCS 520",
+      "reason": "the hub files this row under the 'Optical' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Optical",
+      "group": "Network Convergence System",
+      "row": "NCS 1000",
+      "reason": "the hub files this row under the 'Optical' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Optical",
+      "group": "Network Convergence System",
+      "row": "NCS 4200",
+      "reason": "the hub files this row under the 'Optical' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Optical",
+      "group": "Network Convergence System",
+      "row": "NCS 5000",
+      "reason": "the hub files this row under the 'Optical' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Optical",
+      "group": "Network Convergence System",
+      "row": "NCS 5500",
+      "reason": "the hub files this row under the 'Optical' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Optical",
+      "group": "Network Convergence System",
+      "row": "NCS 6000",
+      "reason": "the hub files this row under the 'Optical' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Optical",
+      "group": "DWDM and Legacy Products",
+      "row": "ONS 15200 Series DWDM Systems",
+      "reason": "the hub files this row under the 'Optical' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Optical",
+      "group": "DWDM and Legacy Products",
+      "row": "ONS 15454 Series Multiservice Transport Platforms",
+      "reason": "the hub files this row under the 'Optical' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Routers",
+      "group": "Branch",
+      "row": "800",
+      "reason": "the hub files this row under the 'Routers' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Routers",
+      "group": "Branch",
+      "row": "900",
+      "reason": "the hub files this row under the 'Routers' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Routers",
+      "group": "Branch",
+      "row": "1000",
+      "reason": "the hub files this row under the 'Routers' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Routers",
+      "group": "Branch",
+      "row": "1900",
+      "reason": "the hub files this row under the 'Routers' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Routers",
+      "group": "Branch",
+      "row": "2900",
+      "reason": "the hub files this row under the 'Routers' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Routers",
+      "group": "Branch",
+      "row": "3900",
+      "reason": "the hub files this row under the 'Routers' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Routers",
+      "group": "Branch",
+      "row": "4000",
+      "reason": "the hub files this row under the 'Routers' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Routers",
+      "group": "Branch",
+      "row": "Meraki MX",
+      "reason": "the hub files this row under the 'Routers' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Routers",
+      "group": "Branch",
+      "row": "RV Series",
+      "reason": "the hub files this row under the 'Routers' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Routers",
+      "group": "8000 Series",
+      "row": "8000 Series",
+      "reason": "the hub files this row under the 'Routers' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Routers",
+      "group": "8000 Series",
+      "row": "Catalyst 8200 Edge uCPE",
+      "reason": "the hub files this row under the 'Routers' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Routers",
+      "group": "8000 Series",
+      "row": "Catalyst 8300 Edge uCPE",
+      "reason": "the hub files this row under the 'Routers' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Routers",
+      "group": "Industrial",
+      "row": "500 WPAN",
+      "reason": "the hub files this row under the 'Routers' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Routers",
+      "group": "Industrial",
+      "row": "800 IISR",
+      "reason": "the hub files this row under the 'Routers' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Routers",
+      "group": "Industrial",
+      "row": "1000 CG",
+      "reason": "the hub files this row under the 'Routers' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Routers",
+      "group": "Industrial",
+      "row": "2000 CG",
+      "reason": "the hub files this row under the 'Routers' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Routers",
+      "group": "Industrial",
+      "row": "Catalyst IR1800 Rugged",
+      "reason": "the hub files this row under the 'Routers' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Routers",
+      "group": "Aggregation",
+      "row": "ASR 900",
+      "reason": "the hub files this row under the 'Routers' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Routers",
+      "group": "Aggregation",
+      "row": "ASR 901",
+      "reason": "the hub files this row under the 'Routers' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Routers",
+      "group": "Aggregation",
+      "row": "ASR 901 10G",
+      "reason": "the hub files this row under the 'Routers' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Routers",
+      "group": "Aggregation",
+      "row": "ASR 920",
+      "reason": "the hub files this row under the 'Routers' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Routers",
+      "group": "Aggregation",
+      "row": "ASR 1000",
+      "reason": "the hub files this row under the 'Routers' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Routers",
+      "group": "Aggregation",
+      "row": "ASR 9000",
+      "reason": "the hub files this row under the 'Routers' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Routers",
+      "group": "Network Convergence System",
+      "row": "NCS 520",
+      "reason": "the hub files this row under the 'Routers' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Routers",
+      "group": "Network Convergence System",
+      "row": "NCS 1000",
+      "reason": "the hub files this row under the 'Routers' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Routers",
+      "group": "Network Convergence System",
+      "row": "NCS 4200",
+      "reason": "the hub files this row under the 'Routers' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Routers",
+      "group": "Network Convergence System",
+      "row": "NCS 5000",
+      "reason": "the hub files this row under the 'Routers' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Routers",
+      "group": "Network Convergence System",
+      "row": "NCS 5500",
+      "reason": "the hub files this row under the 'Routers' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Routers",
+      "group": "Network Convergence System",
+      "row": "NCS 6000",
+      "reason": "the hub files this row under the 'Routers' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Routers",
+      "group": "Service Provider",
+      "row": "Carrier Routing System",
+      "reason": "the hub files this row under the 'Routers' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Routers",
+      "group": "Service Provider",
+      "row": "Wide Area Application Services (WAAS) Software",
+      "reason": "the hub files this row under the 'Routers' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Routers",
+      "group": "Service Provider",
+      "row": "WAN Automation Engine (WAE)",
+      "reason": "the hub files this row under the 'Routers' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Routers",
+      "group": "SD-WAN / Virtualization",
+      "row": "5000 Enterprise Network Compute",
+      "reason": "the hub files this row under the 'Routers' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Routers",
+      "group": "SD-WAN / Virtualization",
+      "row": "Cloud Services 1000V",
+      "reason": "the hub files this row under the 'Routers' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Routers",
+      "group": "SD-WAN / Virtualization",
+      "row": "Integrated Services Virtual Router",
+      "reason": "the hub files this row under the 'Routers' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Routers",
+      "group": "SD-WAN / Virtualization",
+      "row": "SD-WAN Cloud OnRamp for Co-Location",
+      "reason": "the hub files this row under the 'Routers' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Routers",
+      "group": "SD-WAN / Virtualization",
+      "row": "vEdge Router",
+      "reason": "the hub files this row under the 'Routers' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Routers",
+      "group": "Wireless and Mobile",
+      "row": "5900 Embedded Services",
+      "reason": "the hub files this row under the 'Routers' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Routers",
+      "group": "Wireless and Mobile",
+      "row": "Catalyst Cellular Gateways",
+      "reason": "the hub files this row under the 'Routers' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Routers",
+      "group": "Wireless and Mobile",
+      "row": "Catalyst Wireless Gateway CG113",
+      "reason": "the hub files this row under the 'Routers' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Routers",
+      "group": "Wireless and Mobile",
+      "row": "Wireless Gateway for LoRaWAN",
+      "reason": "the hub files this row under the 'Routers' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Routers",
+      "group": "Video",
+      "row": "cBR Converged Broadband Routers",
+      "reason": "the hub files this row under the 'Routers' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Security",
+      "group": "Firewalls, Management and VPN Clients",
+      "row": "ASA 5500-X Firewalls",
+      "reason": "the hub files this row under the 'Security' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Security",
+      "group": "Firewalls, Management and VPN Clients",
+      "row": "ASA 5500-X w/FirePOWER Services",
+      "reason": "the hub files this row under the 'Security' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Security",
+      "group": "Firewalls, Management and VPN Clients",
+      "row": "Firepower 2100",
+      "reason": "the hub files this row under the 'Security' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Security",
+      "group": "Firewalls, Management and VPN Clients",
+      "row": "Firepower 4100",
+      "reason": "the hub files this row under the 'Security' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Security",
+      "group": "Firewalls, Management and VPN Clients",
+      "row": "IOS SSL VPN",
+      "reason": "the hub files this row under the 'Security' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Security",
+      "group": "Firewalls, Management and VPN Clients",
+      "row": "Secure Client (including AnyConnect)",
+      "reason": "the hub files this row under the 'Security' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Security",
+      "group": "Firewalls, Management and VPN Clients",
+      "row": "Secure Firewall Management Center Appliances",
+      "reason": "the hub files this row under the 'Security' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Security",
+      "group": "Email, Web, Endpoint, and Network Security",
+      "row": "Cloud Email Security",
+      "reason": "the hub files this row under the 'Security' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Security",
+      "group": "Email, Web, Endpoint, and Network Security",
+      "row": "Email Encryption",
+      "reason": "the hub files this row under the 'Security' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Security",
+      "group": "Email, Web, Endpoint, and Network Security",
+      "row": "Secure DDoS Protection",
+      "reason": "the hub files this row under the 'Security' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Security",
+      "group": "Email, Web, Endpoint, and Network Security",
+      "row": "Secure Email and Web Manager",
+      "reason": "the hub files this row under the 'Security' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Security",
+      "group": "Email, Web, Endpoint, and Network Security",
+      "row": "Secure Email Gateway",
+      "reason": "the hub files this row under the 'Security' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Security",
+      "group": "Email, Web, Endpoint, and Network Security",
+      "row": "Secure Endpoint Private Cloud",
+      "reason": "the hub files this row under the 'Security' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Security",
+      "group": "Email, Web, Endpoint, and Network Security",
+      "row": "Secure Malware Analytics",
+      "reason": "the hub files this row under the 'Security' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Security",
+      "group": "Email, Web, Endpoint, and Network Security",
+      "row": "Secure Web Appliance",
+      "reason": "the hub files this row under the 'Security' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Security",
+      "group": "Email, Web, Endpoint, and Network Security",
+      "row": "Security Manager",
+      "reason": "the hub files this row under the 'Security' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Security",
+      "group": "Network Visibility, Cloud, Platforms, and Suites",
+      "row": "Attack Surface Management",
+      "reason": "the hub files this row under the 'Security' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Security",
+      "group": "Network Visibility, Cloud, Platforms, and Suites",
+      "row": "Cloud Protection Suite",
+      "reason": "the hub files this row under the 'Security' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Security",
+      "group": "Network Visibility, Cloud, Platforms, and Suites",
+      "row": "Cyber Vision",
+      "reason": "the hub files this row under the 'Security' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Security",
+      "group": "Network Visibility, Cloud, Platforms, and Suites",
+      "row": "Identity Services Engine (ISE)",
+      "reason": "the hub files this row under the 'Security' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Security",
+      "group": "Network Visibility, Cloud, Platforms, and Suites",
+      "row": "ISE Passive Identity Connector",
+      "reason": "the hub files this row under the 'Security' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Security",
+      "group": "Network Visibility, Cloud, Platforms, and Suites",
+      "row": "Secure Cloud Analytics (now part of XDR)",
+      "reason": "the hub files this row under the 'Security' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Security",
+      "group": "Network Visibility, Cloud, Platforms, and Suites",
+      "row": "Secure Network Analytics",
+      "reason": "the hub files this row under the 'Security' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Security",
+      "group": "Network Visibility, Cloud, Platforms, and Suites",
+      "row": "Secure Network Analytics Flow Collector",
+      "reason": "the hub files this row under the 'Security' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Security",
+      "group": "Network Visibility, Cloud, Platforms, and Suites",
+      "row": "Secure Network Analytics Flow Sensor",
+      "reason": "the hub files this row under the 'Security' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Security",
+      "group": "Network Visibility, Cloud, Platforms, and Suites",
+      "row": "Secure Network Analytics Manager",
+      "reason": "the hub files this row under the 'Security' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Security",
+      "group": "Network Visibility, Cloud, Platforms, and Suites",
+      "row": "Secure Network Analytics UDP Director",
+      "reason": "the hub files this row under the 'Security' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Security",
+      "group": "Network Visibility, Cloud, Platforms, and Suites",
+      "row": "Secure Network Analytics - Virtual Releases",
+      "reason": "the hub files this row under the 'Security' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Security",
+      "group": "Network Visibility, Cloud, Platforms, and Suites",
+      "row": "Secure Workload (formerly Tetration)",
+      "reason": "the hub files this row under the 'Security' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Security",
+      "group": "Network Visibility, Cloud, Platforms, and Suites",
+      "row": "Security Analytics and Logging",
+      "reason": "the hub files this row under the 'Security' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Security",
+      "group": "Network Visibility, Cloud, Platforms, and Suites",
+      "row": "Security Cloud",
+      "reason": "the hub files this row under the 'Security' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Security",
+      "group": "Network Visibility, Cloud, Platforms, and Suites",
+      "row": "Umbrella",
+      "reason": "the hub files this row under the 'Security' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Security",
+      "group": "Network Visibility, Cloud, Platforms, and Suites",
+      "row": "Vulnerability Management (formerly Kenna)",
+      "reason": "the hub files this row under the 'Security' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Security",
+      "group": "Network Visibility, Cloud, Platforms, and Suites",
+      "row": "XDR",
+      "reason": "the hub files this row under the 'Security' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "UCS-HCI",
+      "group": "Servers and Software",
+      "row": "5108 Blade Server",
+      "reason": "the hub files this row under the 'UCS-HCI' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "UCS-HCI",
+      "group": "Servers and Software",
+      "row": "B Series Blade",
+      "reason": "the hub files this row under the 'UCS-HCI' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "UCS-HCI",
+      "group": "Servers and Software",
+      "row": "B Series Blade Server Software",
+      "reason": "the hub files this row under the 'UCS-HCI' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "UCS-HCI",
+      "group": "Servers and Software",
+      "row": "C Series Rack Servers",
+      "reason": "the hub files this row under the 'UCS-HCI' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "UCS-HCI",
+      "group": "Servers and Software",
+      "row": "C Series Rack-Mount Standalone Software",
+      "reason": "the hub files this row under the 'UCS-HCI' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "UCS-HCI",
+      "group": "Servers and Software",
+      "row": "C800 Series",
+      "reason": "the hub files this row under the 'UCS-HCI' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "UCS-HCI",
+      "group": "Servers and Software",
+      "row": "C4200 Rack Series",
+      "reason": "the hub files this row under the 'UCS-HCI' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "UCS-HCI",
+      "group": "Servers and Software",
+      "row": "E Series Servers",
+      "reason": "the hub files this row under the 'UCS-HCI' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "UCS-HCI",
+      "group": "Servers and Software",
+      "row": "Mini Series Servers",
+      "reason": "the hub files this row under the 'UCS-HCI' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "UCS-HCI",
+      "group": "Servers and Software",
+      "row": "S Series Storage",
+      "reason": "the hub files this row under the 'UCS-HCI' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "UCS-HCI",
+      "group": "Servers and Software",
+      "row": "X Series Modular System",
+      "reason": "the hub files this row under the 'UCS-HCI' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "UCS-HCI",
+      "group": "HyperConverged Infrastructure",
+      "row": "Compute Hyperconverged with Nutanix",
+      "reason": "the hub files this row under the 'UCS-HCI' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "UCS-HCI",
+      "group": "HyperConverged Infrastructure",
+      "row": "HyperFlex HX Data Platform",
+      "reason": "the hub files this row under the 'UCS-HCI' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "UCS-HCI",
+      "group": "HyperConverged Infrastructure",
+      "row": "HyperFlex HX Series",
+      "reason": "the hub files this row under the 'UCS-HCI' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "UCS-HCI",
+      "group": "UCS Management Software",
+      "row": "Hypervisors and Operating Systems (VMware ESXi)",
+      "reason": "the hub files this row under the 'UCS-HCI' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "UCS-HCI",
+      "group": "UCS Management Software",
+      "row": "Infrastructure and UCS Manager Software",
+      "reason": "the hub files this row under the 'UCS-HCI' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "UCS-HCI",
+      "group": "UCS Management Software",
+      "row": "Intersight",
+      "reason": "the hub files this row under the 'UCS-HCI' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "UCS-HCI",
+      "group": "UCS Management Software",
+      "row": "UCS Central Software",
+      "reason": "the hub files this row under the 'UCS-HCI' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "UCS-HCI",
+      "group": "UCS Management Software",
+      "row": "UCS Director",
+      "reason": "the hub files this row under the 'UCS-HCI' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "UCS-HCI",
+      "group": "UCS Management Software",
+      "row": "UCS Manager",
+      "reason": "the hub files this row under the 'UCS-HCI' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "UCS-HCI",
+      "group": "UCS Management Software",
+      "row": "Workload Optimization Manager",
+      "reason": "the hub files this row under the 'UCS-HCI' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "UCS-HCI",
+      "group": "UCS Accessories and Infrastructure",
+      "row": "2200 Fabric Extender",
+      "reason": "the hub files this row under the 'UCS-HCI' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "UCS-HCI",
+      "group": "UCS Accessories and Infrastructure",
+      "row": "6200 Fabric Interconnects",
+      "reason": "the hub files this row under the 'UCS-HCI' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "UCS-HCI",
+      "group": "UCS Accessories and Infrastructure",
+      "row": "6300 Fabric Interconnects",
+      "reason": "the hub files this row under the 'UCS-HCI' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "UCS-HCI",
+      "group": "UCS Accessories and Infrastructure",
+      "row": "R Series Racks",
+      "reason": "the hub files this row under the 'UCS-HCI' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "UCS-HCI",
+      "group": "UCS Accessories and Infrastructure",
+      "row": "RP Series Power Distribution Units",
+      "reason": "the hub files this row under the 'UCS-HCI' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "UCS-HCI",
+      "group": "UCS Accessories and Infrastructure",
+      "row": "UCS Adapters",
+      "reason": "the hub files this row under the 'UCS-HCI' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "UCS-HCI",
+      "group": "UCS Accessories and Infrastructure",
+      "row": "UCS Virtual Interface Cards",
+      "reason": "the hub files this row under the 'UCS-HCI' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "StorageNetworking",
+      "group": "MDS 9000 Multilayer Switches",
+      "row": "MDS 9100 Multilayer Fabric Switches",
+      "reason": "the hub files this row under the 'StorageNetworking' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "StorageNetworking",
+      "group": "MDS 9000 Multilayer Switches",
+      "row": "MDS 9200 Multiservice Switches",
+      "reason": "the hub files this row under the 'StorageNetworking' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "StorageNetworking",
+      "group": "MDS 9000 Multilayer Switches",
+      "row": "MDS 9300 Multilayer Fabric Switches",
+      "reason": "the hub files this row under the 'StorageNetworking' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "StorageNetworking",
+      "group": "MDS 9000 Multilayer Switches",
+      "row": "MDS 9500 Multilayer Directors",
+      "reason": "the hub files this row under the 'StorageNetworking' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "StorageNetworking",
+      "group": "MDS 9000 Software",
+      "row": "NX-OS and SAN-OS Software",
+      "reason": "the hub files this row under the 'StorageNetworking' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "Catalyst",
+      "row": "1000",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "Catalyst",
+      "row": "2960",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "Catalyst",
+      "row": "2960-C",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "Catalyst",
+      "row": "2960-CX",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "Catalyst",
+      "row": "2960-L",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "Catalyst",
+      "row": "2960-Plus",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "Catalyst",
+      "row": "2960-S",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "Catalyst",
+      "row": "2960-X",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "Catalyst",
+      "row": "2960-XR",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "Catalyst",
+      "row": "3560",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "Catalyst",
+      "row": "3560-C",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "Catalyst",
+      "row": "3560-CX",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "Catalyst",
+      "row": "3650",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "Catalyst",
+      "row": "3650",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "",
+      "row": "3750",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "",
+      "row": "3750-X",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "",
+      "row": "3850",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "",
+      "row": "4500",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "",
+      "row": "4500-X",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "",
+      "row": "4900",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "",
+      "row": "6500",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "",
+      "row": "6500 VSS 1440",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "",
+      "row": "6800",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "",
+      "row": "9500",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "",
+      "row": "Digital Building Series",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "",
+      "row": "PON Series",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "",
+      "row": "Redundant Power Systems",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "Nexus",
+      "row": "Nexus 2000 Fabric Extenders",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "Nexus",
+      "row": "Nexus 3000",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "Nexus",
+      "row": "Nexus 3550",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "Nexus",
+      "row": "Nexus 5000",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "Nexus",
+      "row": "Nexus 6000",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "Nexus",
+      "row": "Nexus 7000",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "Nexus",
+      "row": "Nexus 9000",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "Industrial",
+      "row": "IE 2000",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "Industrial",
+      "row": "IE 2000U",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "Industrial",
+      "row": "IE 3000",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "Industrial",
+      "row": "IE 3010",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "Industrial",
+      "row": "IE 4000",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "Industrial",
+      "row": "IE 4010",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "Industrial",
+      "row": "IE 5000",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "Small Business",
+      "row": "95 Unmanaged",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "Small Business",
+      "row": "110 Unmanaged",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "Small Business",
+      "row": "220 Smart",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "Small Business",
+      "row": "250 Smart",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "Small Business",
+      "row": "350 Managed",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "Small Business",
+      "row": "350X Stackable Managed",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "Small Business",
+      "row": "550X Stackable Managed",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "Small Business",
+      "row": "Business 250 Smart",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "Additional Switches",
+      "row": "Cloud Services Platform 5000",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "Additional Switches",
+      "row": "CGS 2500 Connected Grid",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "Additional Switches",
+      "row": "Embedded Services 2020",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Switches",
+      "group": "Additional Switches",
+      "row": "ME 3400E Ethernet Access",
+      "reason": "the hub files this row under the 'Switches' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "UnifiedCommunications",
+      "group": "",
+      "row": "ATA 190 Series Analog Telephone Adapters",
+      "reason": "the hub files this row under the 'UnifiedCommunications' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "UnifiedCommunications",
+      "group": "",
+      "row": "Collaboration Flex Plan",
+      "reason": "the hub files this row under the 'UnifiedCommunications' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "UnifiedCommunications",
+      "group": "",
+      "row": "Expressway Series",
+      "reason": "the hub files this row under the 'UnifiedCommunications' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "UnifiedCommunications",
+      "group": "",
+      "row": "Hosted Collaboration Solution (HCS)",
+      "reason": "the hub files this row under the 'UnifiedCommunications' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "UnifiedCommunications",
+      "group": "",
+      "row": "Paging Server",
+      "reason": "the hub files this row under the 'UnifiedCommunications' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "UnifiedCommunications",
+      "group": "",
+      "row": "Small Business Voice Gateways and ATAs",
+      "reason": "the hub files this row under the 'UnifiedCommunications' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "UnifiedCommunications",
+      "group": "",
+      "row": "TDM Gateways",
+      "reason": "the hub files this row under the 'UnifiedCommunications' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "UnifiedCommunications",
+      "group": "",
+      "row": "TelePresence Video Communication Server (VCS)",
+      "reason": "the hub files this row under the 'UnifiedCommunications' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "UnifiedCommunications",
+      "group": "",
+      "row": "Unified Communications Licensing",
+      "reason": "the hub files this row under the 'UnifiedCommunications' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "UnifiedCommunications",
+      "group": "",
+      "row": "Unified SIP Proxy (CUSP) Software",
+      "reason": "the hub files this row under the 'UnifiedCommunications' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "UnifiedCommunications",
+      "group": "",
+      "row": "VG Series Gateways",
+      "reason": "the hub files this row under the 'UnifiedCommunications' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "UnifiedCommunications",
+      "group": "Applications and Management Cadence:",
+      "row": "Version 15 - Current Release",
+      "reason": "the hub files this row under the 'UnifiedCommunications' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "UnifiedCommunications",
+      "group": "Applications and Management Cadence:",
+      "row": "Version 14",
+      "reason": "the hub files this row under the 'UnifiedCommunications' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "UnifiedCommunications",
+      "group": "Applications and Management Cadence:",
+      "row": "Version 12.5",
+      "reason": "the hub files this row under the 'UnifiedCommunications' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "UnifiedCommunications",
+      "group": "Applications and Management Cadence:",
+      "row": "Version 12.0",
+      "reason": "the hub files this row under the 'UnifiedCommunications' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Video",
+      "group": "",
+      "row": "cBR Series Converged Broadband Routers",
+      "reason": "the hub files this row under the 'Video' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Video",
+      "group": "",
+      "row": "GS7000 Nodes and Optical Hub",
+      "reason": "the hub files this row under the 'Video' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Video",
+      "group": "",
+      "row": "Prisma II Products",
+      "reason": "the hub files this row under the 'Video' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Video",
+      "group": "",
+      "row": "Remote PHY Shelves",
+      "reason": "the hub files this row under the 'Video' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Video",
+      "group": "",
+      "row": "RF Gateway Series",
+      "reason": "the hub files this row under the 'Video' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Wireless",
+      "group": "Aironet Access Points",
+      "row": "1800 Family",
+      "reason": "the hub files this row under the 'Wireless' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Wireless",
+      "group": "Aironet Access Points",
+      "row": "- 1800",
+      "reason": "the hub files this row under the 'Wireless' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Wireless",
+      "group": "Aironet Access Points",
+      "row": "- 1800s Active Sensor",
+      "reason": "the hub files this row under the 'Wireless' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Wireless",
+      "group": "Aironet Access Points",
+      "row": "- 1810 OfficeExtend",
+      "reason": "the hub files this row under the 'Wireless' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Wireless",
+      "group": "Aironet Access Points",
+      "row": "- 1810w",
+      "reason": "the hub files this row under the 'Wireless' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Wireless",
+      "group": "Aironet Access Points",
+      "row": "- 1815",
+      "reason": "the hub files this row under the 'Wireless' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Wireless",
+      "group": "Aironet Access Points",
+      "row": "- 1830",
+      "reason": "the hub files this row under the 'Wireless' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Wireless",
+      "group": "Aironet Access Points",
+      "row": "- 1840",
+      "reason": "the hub files this row under the 'Wireless' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Wireless",
+      "group": "Aironet Access Points",
+      "row": "- 1850",
+      "reason": "the hub files this row under the 'Wireless' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Wireless",
+      "group": "Aironet Access Points",
+      "row": "2800",
+      "reason": "the hub files this row under the 'Wireless' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Wireless",
+      "group": "Aironet Access Points",
+      "row": "3800",
+      "reason": "the hub files this row under the 'Wireless' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Wireless",
+      "group": "Aironet Access Points",
+      "row": "4800",
+      "reason": "the hub files this row under the 'Wireless' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Wireless",
+      "group": "Aironet Access Points",
+      "row": "Antennas/Accessories",
+      "reason": "the hub files this row under the 'Wireless' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Wireless",
+      "group": "",
+      "row": "1540 Outdoor",
+      "reason": "the hub files this row under the 'Wireless' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Wireless",
+      "group": "",
+      "row": "1550 Outdoor",
+      "reason": "the hub files this row under the 'Wireless' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Wireless",
+      "group": "",
+      "row": "1560 Outdoor",
+      "reason": "the hub files this row under the 'Wireless' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Wireless",
+      "group": "",
+      "row": "1570 Outdoor",
+      "reason": "the hub files this row under the 'Wireless' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Wireless",
+      "group": "Catalyst Access Points",
+      "row": "Catalyst 9105AX",
+      "reason": "the hub files this row under the 'Wireless' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Wireless",
+      "group": "Catalyst Access Points",
+      "row": "Catalyst 9115AX",
+      "reason": "the hub files this row under the 'Wireless' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Wireless",
+      "group": "Catalyst Access Points",
+      "row": "Catalyst 9117AX",
+      "reason": "the hub files this row under the 'Wireless' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Wireless",
+      "group": "Catalyst Access Points",
+      "row": "Catalyst 9120AX",
+      "reason": "the hub files this row under the 'Wireless' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Wireless",
+      "group": "Catalyst Access Points",
+      "row": "Catalyst 9130AX",
+      "reason": "the hub files this row under the 'Wireless' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Wireless",
+      "group": "Industrial Access Points",
+      "row": "IW 3700 Industrial",
+      "reason": "the hub files this row under the 'Wireless' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Wireless",
+      "group": "Industrial Access Points",
+      "row": "IW 6300 Embedded Services",
+      "reason": "the hub files this row under the 'Wireless' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Wireless",
+      "group": "Industrial Access Points",
+      "row": "IW 6300 Catalyst Heavy Duty",
+      "reason": "the hub files this row under the 'Wireless' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Wireless",
+      "group": "Industrial Access Points",
+      "row": "Ultra-Reliable Wireless Backhaul",
+      "reason": "the hub files this row under the 'Wireless' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Wireless",
+      "group": "Small Business",
+      "row": "Business 100 Mesh Extender",
+      "reason": "the hub files this row under the 'Wireless' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Wireless",
+      "group": "Small Business",
+      "row": "Small Business 100",
+      "reason": "the hub files this row under the 'Wireless' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Wireless",
+      "group": "Small Business",
+      "row": "Small Business 300",
+      "reason": "the hub files this row under the 'Wireless' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Wireless",
+      "group": "Small Business",
+      "row": "Small Business 500",
+      "reason": "the hub files this row under the 'Wireless' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Wireless",
+      "group": "Wireless Controllers",
+      "row": "2500",
+      "reason": "the hub files this row under the 'Wireless' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Wireless",
+      "group": "Wireless Controllers",
+      "row": "3500",
+      "reason": "the hub files this row under the 'Wireless' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Wireless",
+      "group": "Wireless Controllers",
+      "row": "5500",
+      "reason": "the hub files this row under the 'Wireless' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Wireless",
+      "group": "Wireless Controllers",
+      "row": "8500",
+      "reason": "the hub files this row under the 'Wireless' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Wireless",
+      "group": "Wireless Controllers",
+      "row": "Catalyst 9800",
+      "reason": "the hub files this row under the 'Wireless' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Wireless",
+      "group": "Wireless Controllers",
+      "row": "Catalyst Embedded Controller",
+      "reason": "the hub files this row under the 'Wireless' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Wireless",
+      "group": "Wireless Controllers",
+      "row": "Virtual Wireless Controller",
+      "reason": "the hub files this row under the 'Wireless' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Wireless",
+      "group": "Other Wireless Products",
+      "row": "ASR 5000",
+      "reason": "the hub files this row under the 'Wireless' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Wireless",
+      "group": "Other Wireless Products",
+      "row": "Catalyst Wireless Gateway CG113",
+      "reason": "the hub files this row under the 'Wireless' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Wireless",
+      "group": "Other Wireless Products",
+      "row": "Wireless Gateway for LoRaWAN",
+      "reason": "the hub files this row under the 'Wireless' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Wireless",
+      "group": "Other Wireless Products",
+      "row": "Mobility Services Engine",
+      "reason": "the hub files this row under the 'Wireless' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Wireless",
+      "group": "Other Wireless Products",
+      "row": "Spectrum Expert",
+      "reason": "the hub files this row under the 'Wireless' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Accessories",
+      "group": "",
+      "row": "10GBASE Modules",
+      "reason": "the hub files this row under the 'Accessories' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Accessories",
+      "group": "",
+      "row": "Access Point Modules",
+      "reason": "the hub files this row under the 'Accessories' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Accessories",
+      "group": "",
+      "row": "ASA 5500 Security Appliance Modules",
+      "reason": "the hub files this row under the 'Accessories' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Accessories",
+      "group": "",
+      "row": "Connected Grid Modules",
+      "reason": "the hub files this row under the 'Accessories' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Accessories",
+      "group": "",
+      "row": "Ethernet Switching Network Modules",
+      "reason": "the hub files this row under the 'Accessories' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Accessories",
+      "group": "",
+      "row": "High-Speed WAN Interface Cards",
+      "reason": "the hub files this row under the 'Accessories' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Accessories",
+      "group": "",
+      "row": "Line Cards",
+      "reason": "the hub files this row under the 'Accessories' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Accessories",
+      "group": "",
+      "row": "Network Modules",
+      "reason": "the hub files this row under the 'Accessories' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Accessories",
+      "group": "",
+      "row": "Port Adapters",
+      "reason": "the hub files this row under the 'Accessories' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Accessories",
+      "group": "",
+      "row": "Route Processors and Route Switch Processors",
+      "reason": "the hub files this row under the 'Accessories' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Accessories",
+      "group": "",
+      "row": "Services Modules",
+      "reason": "the hub files this row under the 'Accessories' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Accessories",
+      "group": "",
+      "row": "Shared Port Adapters/SPA Interface Processors",
+      "reason": "the hub files this row under the 'Accessories' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Accessories",
+      "group": "",
+      "row": "Small Business Network Accessories",
+      "reason": "the hub files this row under the 'Accessories' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Accessories",
+      "group": "",
+      "row": "Storage Networking Modules",
+      "reason": "the hub files this row under the 'Accessories' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Accessories",
+      "group": "",
+      "row": "Transceiver Modules",
+      "reason": "the hub files this row under the 'Accessories' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "listing": "https://www.cisco.com/c/en/us/support/eol/index.html",
+      "section": "Accessories",
+      "group": "",
+      "row": "Unified Computing System Adapters",
+      "reason": "the hub files this row under the 'Accessories' section, not the IOS/NX-OS software section: it states no classic IOS release-train lifecycle"
+    },
+    {
+      "id": "15.0s",
+      "name": "Cisco IOS Software Releases 15.0S",
+      "listing": "catalog",
+      "url": "https://www.cisco.com/c/en/us/support/ios-nx-os-software/ios-software-release-15-0-1-s/model.html",
+      "final_url": "https://www.cisco.com/c/en/us/support/ios-nx-os-software/index.html",
+      "reason": "the vendor serves no train-level lifecycle page at this URL; it resolves to the generic IOS/NX-OS software category page, which states no train lifecycle"
+    },
+    {
+      "id": "15.0sy",
+      "name": "Cisco IOS Software Releases 15.0SY",
+      "listing": "catalog",
+      "url": "https://www.cisco.com/c/en/us/support/ios-nx-os-software/ios-software-release-15-0-1-sy/model.html",
+      "final_url": "https://www.cisco.com/c/en/us/support/ios-nx-os-software/index.html",
+      "reason": "the vendor serves no train-level lifecycle page at this URL; it resolves to the generic IOS/NX-OS software category page, which states no train lifecycle"
+    },
+    {
+      "id": "15.1s",
+      "name": "Cisco IOS Software Releases 15.1S",
+      "listing": "catalog",
+      "url": "https://www.cisco.com/c/en/us/support/ios-nx-os-software/ios-15-1s/series.html",
+      "final_url": "https://www.cisco.com/c/en/us/support/ios-nx-os-software/index.html",
+      "reason": "the vendor serves no train-level lifecycle page at this URL; it resolves to the generic IOS/NX-OS software category page, which states no train lifecycle"
+    },
+    {
+      "id": "15.1sy",
+      "name": "Cisco IOS Software Releases 15.1SY",
+      "listing": "catalog",
+      "url": "https://www.cisco.com/c/en/us/support/ios-nx-os-software/ios-software-release-15-1-1-sy/model.html",
+      "final_url": "https://www.cisco.com/c/en/us/support/ios-nx-os-software/index.html",
+      "reason": "the vendor serves no train-level lifecycle page at this URL; it resolves to the generic IOS/NX-OS software category page, which states no train lifecycle"
+    },
+    {
+      "id": "15.2s",
+      "name": "Cisco IOS Software Releases 15.2S",
+      "listing": "catalog",
+      "url": "https://www.cisco.com/c/en/us/support/ios-nx-os-software/ios-15-2s/series.html",
+      "final_url": "https://www.cisco.com/c/en/us/support/ios-nx-os-software/index.html",
+      "reason": "the vendor serves no train-level lifecycle page at this URL; it resolves to the generic IOS/NX-OS software category page, which states no train lifecycle"
+    },
+    {
+      "id": "15.3s",
+      "name": "Cisco IOS Software Releases 15.3S",
+      "listing": "catalog",
+      "url": "https://www.cisco.com/c/en/us/support/ios-nx-os-software/ios-15-3s/series.html",
+      "final_url": "https://www.cisco.com/c/en/us/support/ios-nx-os-software/index.html",
+      "reason": "the vendor serves no train-level lifecycle page at this URL; it resolves to the generic IOS/NX-OS software category page, which states no train lifecycle"
+    },
+    {
+      "id": "15.4s",
+      "name": "Cisco IOS Software Release 15.4S",
+      "listing": "catalog",
+      "url": "https://www.cisco.com/c/en/us/support/ios-nx-os-software/ios-15-4s/series.html",
+      "final_url": "https://www.cisco.com/c/en/us/support/ios-nx-os-software/index.html",
+      "reason": "the vendor serves no train-level lifecycle page at this URL; it resolves to the generic IOS/NX-OS software category page, which states no train lifecycle"
+    },
+    {
+      "id": "15.5mt",
+      "name": "Cisco IOS Software Release 15.5M&T",
+      "listing": "catalog",
+      "url": "https://www.cisco.com/c/en/us/support/ios-nx-os-software/ios-15-5m-t/series.html",
+      "final_url": "https://www.cisco.com/c/en/us/support/ios-nx-os-software/index.html",
+      "reason": "the vendor serves no train-level lifecycle page at this URL; it resolves to the generic IOS/NX-OS software category page, which states no train lifecycle"
+    }
+  ],
+  "retained": [],
+  "total_records": 1,
+  "limitations": [
+    "Hardware is not covered: Cisco announces a hardware model's End-of-Sale and Last Date of Support in the same bulletin format, and a hardware Last Date of Support is not a software end. Those per-model notices are a hardware scope (AGENTS.md rule 7) and no hardware record is published here.",
+    "IOS XE (XE 3E/16/17) and IOS XR trains share the hub section but are different software families; they are reported as excluded rows, and endoflife.date's cisco-ios-xe record already covers IOS XE.",
+    "The record is the trains Cisco's own listing pages inventory. A train whose support page resolves to the generic IOS/NX-OS category is reported as an excluded row with that page-level reason — an absent page is not an assertion that no date exists, and that exclusion is what to re-check if the vendor later publishes one.",
+    "eossec is absent throughout: the train pages publish a terminal End-of-Support Date and no separate security-support-only end.",
+    "A train the vendor lists but states no deadline for (15.8M&T, Status: Available) publishes its series date and no deadline; no date is derived from the vendor's release cadence.",
+    "No date is read from a bulletin's per-model milestone table into a train release: those tables describe the model, and every train date here is a labelled cell of the train's own page.",
+    "The hub's rows outside the IOS/NX-OS software section are enumerated as excluded rows with the section they were filed under, so the page is accounted for as a whole rather than read only where it agrees with this scope."
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "unrealircd",
+  "name": "UnrealIRCd",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "unrealircd"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/bbriggs/unrealircd"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:unrealircd:unrealircd"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:unrealircd:unrealircd"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/unrealircd",
+    "releasePolicy": "https://www.unrealircd.org/docs/UnrealIRCd_releases"
+  },
+  "releases": [
+    {
+      "id": "6",
+      "name": "6",
+      "milestones": {
+        "ga": "2021-12-17",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6",
+        "codename": null,
+        "label": "6",
+        "releaseDate": "2021-12-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "6.2.7",
+          "date": "2026-09-12",
+          "link": "https://github.com/unrealircd/unrealircd/blob/unreal60_dev/doc/RELEASE-NOTES.md#unrealircd-627"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5",
+      "name": "5",
+      "milestones": {
+        "ga": "2019-12-13",
+        "eos": null,
+        "eossec": "2023-07-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5",
+        "codename": null,
+        "label": "5",
+        "releaseDate": "2019-12-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-07-01",
+        "isEol": true,
+        "eolFrom": "2023-07-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.2.4",
+          "date": "2022-01-28",
+          "link": "https://github.com/unrealircd/unrealircd/blob/unreal52/doc/RELEASE-NOTES.md#unrealircd-524"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4",
+      "name": "4",
+      "milestones": {
+        "ga": "2015-12-24",
+        "eos": null,
+        "eossec": "2020-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "4",
+        "codename": null,
+        "label": "4",
+        "releaseDate": "2015-12-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2019-05-20",
+        "isEol": true,
+        "eolFrom": "2020-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.2.4.1",
+          "date": "2019-07-07",
+          "link": "https://github.com/unrealircd/unrealircd/blob/unreal42/doc/RELEASE-NOTES"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.2",
+      "name": "3.2",
+      "milestones": {
+        "ga": "2004-04-25",
+        "eos": null,
+        "eossec": "2016-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.2",
+        "codename": null,
+        "label": "3.2",
+        "releaseDate": "2004-04-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2015-12-11",
+        "isEol": true,
+        "eolFrom": "2016-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.2.10.7",
+          "date": "2016-09-03",
+          "link": "https://forums.unrealircd.org/viewtopic.php?f=1&t=8588"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/unrealircd/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-13T00:07:17+00:00"
+  }
+}

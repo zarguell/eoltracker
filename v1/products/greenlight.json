@@ -1,0 +1,86 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "greenlight",
+  "name": "Greenlight",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:bigbluebutton:greenlight"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/bigbluebutton.svg",
+    "html": "https://endoflife.date/greenlight",
+    "releasePolicy": null
+  },
+  "releases": [
+    {
+      "id": "3",
+      "name": "3",
+      "milestones": {
+        "ga": "2023-02-16",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3",
+        "codename": null,
+        "label": "3",
+        "releaseDate": "2023-02-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "3.9.0",
+          "date": "2026-09-08",
+          "link": "https://github.com/bigbluebutton/greenlight/releases/tag/release-3.9.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2",
+      "name": "2",
+      "milestones": {
+        "ga": "2018-09-14",
+        "eos": null,
+        "eossec": "2023-09-11",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2",
+        "codename": null,
+        "label": "2",
+        "releaseDate": "2018-09-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-09-11",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.14.10",
+          "date": "2024-05-03",
+          "link": "https://github.com/bigbluebutton/greenlight/releases/tag/release-2.14.10"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/greenlight/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-10T00:08:43+00:00"
+  }
+}

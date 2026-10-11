@@ -1,0 +1,1013 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "coder",
+  "name": "Coder",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "coder"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/coder/coder"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:generic/coder"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:oci/coder?repository_url=ghcr.io/coder"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:winget/Coder.Coder"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:coder:coder"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": "Extended Support"
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/coder.svg",
+    "html": "https://endoflife.date/coder",
+    "releasePolicy": "https://coder.com/docs/install/releases"
+  },
+  "releases": [
+    {
+      "id": "2.37",
+      "name": "2.37",
+      "milestones": {
+        "ga": "2026-09-01",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.37",
+        "codename": null,
+        "label": "2.37",
+        "releaseDate": "2026-09-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "2.37.1",
+          "date": "2026-09-08",
+          "link": "https://github.com/coder/coder/releases/tag/v2.37.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.36",
+      "name": "2.36",
+      "milestones": {
+        "ga": "2026-08-04",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.36",
+        "codename": null,
+        "label": "2.36",
+        "releaseDate": "2026-08-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "2.36.5",
+          "date": "2026-09-10",
+          "link": "https://github.com/coder/coder/releases/tag/v2.36.5"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.35",
+      "name": "2.35",
+      "milestones": {
+        "ga": "2026-07-07",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.35",
+        "codename": null,
+        "label": "2.35",
+        "releaseDate": "2026-07-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-09-01",
+        "isEol": false,
+        "eolFrom": null,
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "2.35.7",
+          "date": "2026-09-01",
+          "link": "https://github.com/coder/coder/releases/tag/v2.35.7"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.34",
+      "name": "2.34 (ESR)",
+      "milestones": {
+        "ga": "2026-06-02",
+        "eos": null,
+        "eossec": "2026-09-01",
+        "eol": "2027-06-02"
+      },
+      "upstream": {
+        "name": "2.34",
+        "codename": null,
+        "label": "2.34 (ESR)",
+        "releaseDate": "2026-06-02",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-08-04",
+        "isEol": true,
+        "eolFrom": "2026-09-01",
+        "isEoes": false,
+        "eoesFrom": "2027-06-02",
+        "isMaintained": true,
+        "latest": {
+          "name": "2.34.11",
+          "date": "2026-09-16",
+          "link": "https://github.com/coder/coder/releases/tag/v2.34.11"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.33",
+      "name": "2.33",
+      "milestones": {
+        "ga": "2026-05-06",
+        "eos": null,
+        "eossec": "2026-08-04",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.33",
+        "codename": null,
+        "label": "2.33",
+        "releaseDate": "2026-05-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-07-07",
+        "isEol": true,
+        "eolFrom": "2026-08-04",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "2.33.11",
+          "date": "2026-06-30",
+          "link": "https://github.com/coder/coder/releases/tag/v2.33.11"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.32",
+      "name": "2.32",
+      "milestones": {
+        "ga": "2026-04-14",
+        "eos": null,
+        "eossec": "2026-07-07",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.32",
+        "codename": null,
+        "label": "2.32",
+        "releaseDate": "2026-04-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-06-02",
+        "isEol": true,
+        "eolFrom": "2026-07-07",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "2.32.10",
+          "date": "2026-06-30",
+          "link": "https://github.com/coder/coder/releases/tag/v2.32.10"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.31",
+      "name": "2.31",
+      "milestones": {
+        "ga": "2026-03-03",
+        "eos": null,
+        "eossec": "2026-06-02",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.31",
+        "codename": null,
+        "label": "2.31",
+        "releaseDate": "2026-03-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-05-06",
+        "isEol": true,
+        "eolFrom": "2026-06-02",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "2.31.14",
+          "date": "2026-05-19",
+          "link": "https://github.com/coder/coder/releases/tag/v2.31.14"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.30",
+      "name": "2.30",
+      "milestones": {
+        "ga": "2026-02-03",
+        "eos": null,
+        "eossec": "2026-05-06",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.30",
+        "codename": null,
+        "label": "2.30",
+        "releaseDate": "2026-02-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-04-14",
+        "isEol": true,
+        "eolFrom": "2026-05-06",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "2.30.9",
+          "date": "2026-05-18",
+          "link": "https://github.com/coder/coder/releases/tag/v2.30.9"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.29",
+      "name": "2.29 (ESR)",
+      "milestones": {
+        "ga": "2025-12-02",
+        "eos": null,
+        "eossec": "2026-04-14",
+        "eol": "2026-12-02"
+      },
+      "upstream": {
+        "name": "2.29",
+        "codename": null,
+        "label": "2.29 (ESR)",
+        "releaseDate": "2025-12-02",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-02-23",
+        "isEol": true,
+        "eolFrom": "2026-04-14",
+        "isEoes": false,
+        "eoesFrom": "2026-12-02",
+        "isMaintained": true,
+        "latest": {
+          "name": "2.29.19",
+          "date": "2026-06-27",
+          "link": "https://github.com/coder/coder/releases/tag/v2.29.19"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.28",
+      "name": "2.28",
+      "milestones": {
+        "ga": "2025-11-04",
+        "eos": null,
+        "eossec": "2026-02-23",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.28",
+        "codename": null,
+        "label": "2.28",
+        "releaseDate": "2025-11-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-02-03",
+        "isEol": true,
+        "eolFrom": "2026-02-23",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "2.28.11",
+          "date": "2026-02-23",
+          "link": "https://github.com/coder/coder/releases/tag/v2.28.11"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.27",
+      "name": "2.27",
+      "milestones": {
+        "ga": "2025-10-07",
+        "eos": null,
+        "eossec": "2026-02-03",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.27",
+        "codename": null,
+        "label": "2.27",
+        "releaseDate": "2025-10-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-12-02",
+        "isEol": true,
+        "eolFrom": "2026-02-03",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "2.27.11",
+          "date": "2026-01-26",
+          "link": "https://github.com/coder/coder/releases/tag/v2.27.11"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.26",
+      "name": "2.26",
+      "milestones": {
+        "ga": "2025-09-03",
+        "eos": null,
+        "eossec": "2025-12-02",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.26",
+        "codename": null,
+        "label": "2.26",
+        "releaseDate": "2025-09-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-11-04",
+        "isEol": true,
+        "eolFrom": "2025-12-02",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "2.26.6",
+          "date": "2025-12-01",
+          "link": "https://github.com/coder/coder/releases/tag/v2.26.6"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.25",
+      "name": "2.25",
+      "milestones": {
+        "ga": "2025-08-05",
+        "eos": null,
+        "eossec": "2025-11-04",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.25",
+        "codename": null,
+        "label": "2.25",
+        "releaseDate": "2025-08-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-10-07",
+        "isEol": true,
+        "eolFrom": "2025-11-04",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "2.25.3",
+          "date": "2025-10-01",
+          "link": "https://github.com/coder/coder/releases/tag/v2.25.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.24",
+      "name": "2.24 (ESR)",
+      "milestones": {
+        "ga": "2025-07-01",
+        "eos": null,
+        "eossec": "2025-10-07",
+        "eol": "2026-07-01"
+      },
+      "upstream": {
+        "name": "2.24",
+        "codename": null,
+        "label": "2.24 (ESR)",
+        "releaseDate": "2025-07-01",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-09-03",
+        "isEol": true,
+        "eolFrom": "2025-10-07",
+        "isEoes": true,
+        "eoesFrom": "2026-07-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.24.6",
+          "date": "2026-05-18",
+          "link": "https://github.com/coder/coder/releases/tag/v2.24.6"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.23",
+      "name": "2.23",
+      "milestones": {
+        "ga": "2025-06-03",
+        "eos": null,
+        "eossec": "2025-09-03",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.23",
+        "codename": null,
+        "label": "2.23",
+        "releaseDate": "2025-06-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-08-05",
+        "isEol": true,
+        "eolFrom": "2025-09-03",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "2.23.5",
+          "date": "2025-08-07",
+          "link": "https://github.com/coder/coder/releases/tag/v2.23.5"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.22",
+      "name": "2.22",
+      "milestones": {
+        "ga": "2025-05-16",
+        "eos": null,
+        "eossec": "2025-08-05",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.22",
+        "codename": null,
+        "label": "2.22",
+        "releaseDate": "2025-05-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-07-01",
+        "isEol": true,
+        "eolFrom": "2025-08-05",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "2.22.1",
+          "date": "2025-05-20",
+          "link": "https://github.com/coder/coder/releases/tag/v2.22.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.21",
+      "name": "2.21",
+      "milestones": {
+        "ga": "2025-04-01",
+        "eos": null,
+        "eossec": "2025-07-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.21",
+        "codename": null,
+        "label": "2.21",
+        "releaseDate": "2025-04-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-06-03",
+        "isEol": true,
+        "eolFrom": "2025-07-01",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "2.21.3",
+          "date": "2025-04-29",
+          "link": "https://github.com/coder/coder/releases/tag/v2.21.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.20",
+      "name": "2.20",
+      "milestones": {
+        "ga": "2025-03-05",
+        "eos": null,
+        "eossec": "2025-06-03",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.20",
+        "codename": null,
+        "label": "2.20",
+        "releaseDate": "2025-03-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-05-16",
+        "isEol": true,
+        "eolFrom": "2025-06-03",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "2.20.3",
+          "date": "2025-04-29",
+          "link": "https://github.com/coder/coder/releases/tag/v2.20.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.19",
+      "name": "2.19",
+      "milestones": {
+        "ga": "2025-02-04",
+        "eos": null,
+        "eossec": "2025-05-16",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.19",
+        "codename": null,
+        "label": "2.19",
+        "releaseDate": "2025-02-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-04-01",
+        "isEol": true,
+        "eolFrom": "2025-05-16",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "2.19.3",
+          "date": "2025-04-29",
+          "link": "https://github.com/coder/coder/releases/tag/v2.19.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.18",
+      "name": "2.18",
+      "milestones": {
+        "ga": "2024-12-03",
+        "eos": null,
+        "eossec": "2025-04-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.18",
+        "codename": null,
+        "label": "2.18",
+        "releaseDate": "2024-12-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-03-05",
+        "isEol": true,
+        "eolFrom": "2025-04-01",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "2.18.5",
+          "date": "2025-01-30",
+          "link": "https://github.com/coder/coder/releases/tag/v2.18.5"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.17",
+      "name": "2.17",
+      "milestones": {
+        "ga": "2024-11-05",
+        "eos": null,
+        "eossec": "2025-03-05",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.17",
+        "codename": null,
+        "label": "2.17",
+        "releaseDate": "2024-11-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-02-04",
+        "isEol": true,
+        "eolFrom": "2025-03-05",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "2.17.3",
+          "date": "2024-12-13",
+          "link": "https://github.com/coder/coder/releases/tag/v2.17.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.16",
+      "name": "2.16",
+      "milestones": {
+        "ga": "2024-10-01",
+        "eos": null,
+        "eossec": "2025-02-04",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.16",
+        "codename": null,
+        "label": "2.16",
+        "releaseDate": "2024-10-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-12-03",
+        "isEol": true,
+        "eolFrom": "2025-02-04",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "2.16.1",
+          "date": "2024-10-28",
+          "link": "https://github.com/coder/coder/releases/tag/v2.16.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.15",
+      "name": "2.15",
+      "milestones": {
+        "ga": "2024-09-03",
+        "eos": null,
+        "eossec": "2024-12-03",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.15",
+        "codename": null,
+        "label": "2.15",
+        "releaseDate": "2024-09-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-11-05",
+        "isEol": true,
+        "eolFrom": "2024-12-03",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "2.15.4",
+          "date": "2024-10-28",
+          "link": "https://github.com/coder/coder/releases/tag/v2.15.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.14",
+      "name": "2.14",
+      "milestones": {
+        "ga": "2024-08-06",
+        "eos": null,
+        "eossec": "2024-11-05",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.14",
+        "codename": null,
+        "label": "2.14",
+        "releaseDate": "2024-08-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-10-01",
+        "isEol": true,
+        "eolFrom": "2024-11-05",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "2.14.4",
+          "date": "2024-10-28",
+          "link": "https://github.com/coder/coder/releases/tag/v2.14.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.13",
+      "name": "2.13",
+      "milestones": {
+        "ga": "2024-07-02",
+        "eos": null,
+        "eossec": "2024-10-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.13",
+        "codename": null,
+        "label": "2.13",
+        "releaseDate": "2024-07-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-09-03",
+        "isEol": true,
+        "eolFrom": "2024-10-01",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "2.13.5",
+          "date": "2024-08-20",
+          "link": "https://github.com/coder/coder/releases/tag/v2.13.5"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.12",
+      "name": "2.12",
+      "milestones": {
+        "ga": "2024-06-04",
+        "eos": null,
+        "eossec": "2024-09-03",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.12",
+        "codename": null,
+        "label": "2.12",
+        "releaseDate": "2024-06-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-08-06",
+        "isEol": true,
+        "eolFrom": "2024-09-03",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "2.12.6",
+          "date": "2024-08-01",
+          "link": "https://github.com/coder/coder/releases/tag/v2.12.6"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.11",
+      "name": "2.11",
+      "milestones": {
+        "ga": "2024-05-07",
+        "eos": null,
+        "eossec": "2024-08-06",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.11",
+        "codename": null,
+        "label": "2.11",
+        "releaseDate": "2024-05-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-07-02",
+        "isEol": true,
+        "eolFrom": "2024-08-06",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "2.11.4",
+          "date": "2024-06-24",
+          "link": "https://github.com/coder/coder/releases/tag/v2.11.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.10",
+      "name": "2.10",
+      "milestones": {
+        "ga": "2024-04-03",
+        "eos": null,
+        "eossec": "2024-07-02",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.10",
+        "codename": null,
+        "label": "2.10",
+        "releaseDate": "2024-04-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-06-04",
+        "isEol": true,
+        "eolFrom": "2024-07-02",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "2.10.3",
+          "date": "2024-05-22",
+          "link": "https://github.com/coder/coder/releases/tag/v2.10.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.9",
+      "name": "2.9",
+      "milestones": {
+        "ga": "2024-03-07",
+        "eos": null,
+        "eossec": "2024-06-04",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.9",
+        "codename": null,
+        "label": "2.9",
+        "releaseDate": "2024-03-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-05-07",
+        "isEol": true,
+        "eolFrom": "2024-06-04",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "2.9.4",
+          "date": "2024-04-22",
+          "link": "https://github.com/coder/coder/releases/tag/v2.9.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.8",
+      "name": "2.8",
+      "milestones": {
+        "ga": "2024-02-06",
+        "eos": null,
+        "eossec": "2024-05-07",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.8",
+        "codename": null,
+        "label": "2.8",
+        "releaseDate": "2024-02-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-04-03",
+        "isEol": true,
+        "eolFrom": "2024-05-07",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "2.8.5",
+          "date": "2024-03-09",
+          "link": "https://github.com/coder/coder/releases/tag/v2.8.5"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.7",
+      "name": "2.7",
+      "milestones": {
+        "ga": "2024-01-01",
+        "eos": null,
+        "eossec": "2024-04-03",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.7",
+        "codename": null,
+        "label": "2.7",
+        "releaseDate": "2024-01-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-03-07",
+        "isEol": true,
+        "eolFrom": "2024-04-03",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "2.7.3",
+          "date": "2024-03-04",
+          "link": "https://github.com/coder/coder/releases/tag/v2.7.3"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/coder/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-17T00:08:37+00:00"
+  }
+}

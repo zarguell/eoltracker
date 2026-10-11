@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-mds-9250i",
+  "name": "MDS-9250i",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Connectrix - Cisco",
+  "family": "Connectrix - Cisco",
+  "model_number": "MDS-9250i",
+  "milestones": {
+    "ga": "2014-04-14",
+    "eos": "2023-12-20",
+    "eossec": null,
+    "eol": "2028-12-31"
+  },
+  "status": "supported",
+  "upstream": {
+    "Product": {
+      "text": "MDS-9250i",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "MDS-9250i",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Connectrix - Cisco",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2023-12-20",
+      "datetime": null,
+      "value": "2023-12-20",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Apr. 14, 2014",
+      "datetime": "2014-04-14",
+      "value": "2014-04-14",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2028-12-31",
+      "datetime": null,
+      "value": "2028-12-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/san-switches/vendor/dell-emc/connectrix-cisco/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

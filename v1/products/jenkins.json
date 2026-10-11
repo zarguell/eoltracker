@@ -1,0 +1,553 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "jenkins",
+  "name": "Jenkins",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "jenkins"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:jenkins:jenkins"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:jenkins:jenkins"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/jenkins.svg",
+    "html": "https://endoflife.date/jenkins",
+    "releasePolicy": "https://www.jenkins.io/download/lts/"
+  },
+  "releases": [
+    {
+      "id": "2",
+      "name": "Regular",
+      "milestones": {
+        "ga": "2016-04-20",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2",
+        "codename": null,
+        "label": "Regular",
+        "releaseDate": "2016-04-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "2.582",
+          "date": "2026-09-15",
+          "link": "https://github.com/jenkinsci/jenkins/releases/tag/jenkins-2.582"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.568",
+      "name": "2.568 (LTS)",
+      "milestones": {
+        "ga": "2026-06-10",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.568",
+        "codename": null,
+        "label": "2.568 (LTS)",
+        "releaseDate": "2026-06-10",
+        "isLts": true,
+        "ltsFrom": "2026-07-09",
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "2.568.3",
+          "date": "2026-08-31",
+          "link": "https://github.com/jenkinsci/jenkins/releases/tag/jenkins-2.568.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.555",
+      "name": "2.555 (LTS)",
+      "milestones": {
+        "ga": "2026-03-18",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-06-10"
+      },
+      "upstream": {
+        "name": "2.555",
+        "codename": null,
+        "label": "2.555 (LTS)",
+        "releaseDate": "2026-03-18",
+        "isLts": true,
+        "ltsFrom": "2026-04-15",
+        "isEol": true,
+        "eolFrom": "2026-06-10",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.555.3",
+          "date": "2026-06-08",
+          "link": "https://github.com/jenkinsci/jenkins/releases/tag/jenkins-2.555.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.541",
+      "name": "2.541 (LTS)",
+      "milestones": {
+        "ga": "2025-12-10",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-04-15"
+      },
+      "upstream": {
+        "name": "2.541",
+        "codename": null,
+        "label": "2.541 (LTS)",
+        "releaseDate": "2025-12-10",
+        "isLts": true,
+        "ltsFrom": "2026-01-21",
+        "isEol": true,
+        "eolFrom": "2026-04-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.541.3",
+          "date": "2026-03-16",
+          "link": "https://github.com/jenkinsci/jenkins/releases/tag/jenkins-2.541.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.528",
+      "name": "2.528 (LTS)",
+      "milestones": {
+        "ga": "2025-09-17",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-01-21"
+      },
+      "upstream": {
+        "name": "2.528",
+        "codename": null,
+        "label": "2.528 (LTS)",
+        "releaseDate": "2025-09-17",
+        "isLts": true,
+        "ltsFrom": "2025-10-15",
+        "isEol": true,
+        "eolFrom": "2026-01-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.528.3",
+          "date": "2025-12-08",
+          "link": "https://github.com/jenkinsci/jenkins/releases/tag/jenkins-2.528.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.516",
+      "name": "2.516 (LTS)",
+      "milestones": {
+        "ga": "2025-06-24",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-10-15"
+      },
+      "upstream": {
+        "name": "2.516",
+        "codename": null,
+        "label": "2.516 (LTS)",
+        "releaseDate": "2025-06-24",
+        "isLts": true,
+        "ltsFrom": "2025-07-23",
+        "isEol": true,
+        "eolFrom": "2025-10-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.516.3",
+          "date": "2025-09-15",
+          "link": "https://github.com/jenkinsci/jenkins/releases/tag/jenkins-2.516.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.504",
+      "name": "2.504 (LTS)",
+      "milestones": {
+        "ga": "2025-03-31",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-07-23"
+      },
+      "upstream": {
+        "name": "2.504",
+        "codename": null,
+        "label": "2.504 (LTS)",
+        "releaseDate": "2025-03-31",
+        "isLts": true,
+        "ltsFrom": "2025-04-30",
+        "isEol": true,
+        "eolFrom": "2025-07-23",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.504.3",
+          "date": "2025-06-25",
+          "link": "https://github.com/jenkinsci/jenkins/releases/tag/jenkins-2.504.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.492",
+      "name": "2.492 (LTS)",
+      "milestones": {
+        "ga": "2025-01-07",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-04-30"
+      },
+      "upstream": {
+        "name": "2.492",
+        "codename": null,
+        "label": "2.492 (LTS)",
+        "releaseDate": "2025-01-07",
+        "isLts": true,
+        "ltsFrom": "2025-02-05",
+        "isEol": true,
+        "eolFrom": "2025-04-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.492.3",
+          "date": "2025-03-31",
+          "link": "https://github.com/jenkinsci/jenkins/releases/tag/jenkins-2.492.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.479",
+      "name": "2.479 (LTS)",
+      "milestones": {
+        "ga": "2024-09-27",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-02-05"
+      },
+      "upstream": {
+        "name": "2.479",
+        "codename": null,
+        "label": "2.479 (LTS)",
+        "releaseDate": "2024-09-27",
+        "isLts": true,
+        "ltsFrom": "2024-10-30",
+        "isEol": true,
+        "eolFrom": "2025-02-05",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.479.3",
+          "date": "2025-01-08",
+          "link": "https://github.com/jenkinsci/jenkins/releases/tag/jenkins-2.479.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.462",
+      "name": "2.462 (LTS)",
+      "milestones": {
+        "ga": "2024-06-10",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-10-02"
+      },
+      "upstream": {
+        "name": "2.462",
+        "codename": null,
+        "label": "2.462 (LTS)",
+        "releaseDate": "2024-06-10",
+        "isLts": true,
+        "ltsFrom": "2024-08-07",
+        "isEol": true,
+        "eolFrom": "2024-10-02",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.462.3",
+          "date": "2024-09-19",
+          "link": "https://github.com/jenkinsci/jenkins/releases/tag/jenkins-2.462.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.452",
+      "name": "2.452 (LTS)",
+      "milestones": {
+        "ga": "2024-04-02",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-08-07"
+      },
+      "upstream": {
+        "name": "2.452",
+        "codename": null,
+        "label": "2.452 (LTS)",
+        "releaseDate": "2024-04-02",
+        "isLts": true,
+        "ltsFrom": "2024-05-15",
+        "isEol": true,
+        "eolFrom": "2024-08-07",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.452.4",
+          "date": "2024-08-05",
+          "link": "https://github.com/jenkinsci/jenkins/releases/tag/jenkins-2.452.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.440",
+      "name": "2.440 (LTS)",
+      "milestones": {
+        "ga": "2024-01-10",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-05-15"
+      },
+      "upstream": {
+        "name": "2.440",
+        "codename": null,
+        "label": "2.440 (LTS)",
+        "releaseDate": "2024-01-10",
+        "isLts": true,
+        "ltsFrom": "2024-02-21",
+        "isEol": true,
+        "eolFrom": "2024-05-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.440.3",
+          "date": "2024-04-17",
+          "link": "https://github.com/jenkinsci/jenkins/releases/tag/jenkins-2.440.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.426",
+      "name": "2.426 (LTS)",
+      "milestones": {
+        "ga": "2023-10-03",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-02-21"
+      },
+      "upstream": {
+        "name": "2.426",
+        "codename": null,
+        "label": "2.426 (LTS)",
+        "releaseDate": "2023-10-03",
+        "isLts": true,
+        "ltsFrom": "2023-11-15",
+        "isEol": true,
+        "eolFrom": "2024-02-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.426.3",
+          "date": "2024-01-22",
+          "link": "https://github.com/jenkinsci/jenkins/releases/tag/jenkins-2.426.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.414",
+      "name": "2.414 (LTS)",
+      "milestones": {
+        "ga": "2023-07-11",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-11-15"
+      },
+      "upstream": {
+        "name": "2.414",
+        "codename": null,
+        "label": "2.414 (LTS)",
+        "releaseDate": "2023-07-11",
+        "isLts": true,
+        "ltsFrom": "2023-08-23",
+        "isEol": true,
+        "eolFrom": "2023-11-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.414.3",
+          "date": "2023-10-18",
+          "link": "https://github.com/jenkinsci/jenkins/releases/tag/jenkins-2.414.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.401",
+      "name": "2.401 (LTS)",
+      "milestones": {
+        "ga": "2023-04-18",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-08-23"
+      },
+      "upstream": {
+        "name": "2.401",
+        "codename": null,
+        "label": "2.401 (LTS)",
+        "releaseDate": "2023-04-18",
+        "isLts": true,
+        "ltsFrom": "2023-05-31",
+        "isEol": true,
+        "eolFrom": "2023-08-23",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.401.3",
+          "date": "2023-07-24",
+          "link": "https://github.com/jenkinsci/jenkins/releases/tag/jenkins-2.401.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.387",
+      "name": "2.387 (LTS)",
+      "milestones": {
+        "ga": "2023-01-17",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-05-31"
+      },
+      "upstream": {
+        "name": "2.387",
+        "codename": null,
+        "label": "2.387 (LTS)",
+        "releaseDate": "2023-01-17",
+        "isLts": true,
+        "ltsFrom": "2023-03-08",
+        "isEol": true,
+        "eolFrom": "2023-05-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.387.3",
+          "date": "2023-05-03",
+          "link": "https://github.com/jenkinsci/jenkins/releases/tag/jenkins-2.387.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.375",
+      "name": "2.375 (LTS)",
+      "milestones": {
+        "ga": "2022-10-25",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-03-08"
+      },
+      "upstream": {
+        "name": "2.375",
+        "codename": null,
+        "label": "2.375 (LTS)",
+        "releaseDate": "2022-10-25",
+        "isLts": true,
+        "ltsFrom": "2022-11-30",
+        "isEol": true,
+        "eolFrom": "2023-03-08",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.375.4",
+          "date": "2023-03-06",
+          "link": "https://github.com/jenkinsci/jenkins/releases/tag/jenkins-2.375.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.361",
+      "name": "2.361 (LTS)",
+      "milestones": {
+        "ga": "2022-07-26",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-11-30"
+      },
+      "upstream": {
+        "name": "2.361",
+        "codename": null,
+        "label": "2.361 (LTS)",
+        "releaseDate": "2022-07-26",
+        "isLts": true,
+        "ltsFrom": "2022-09-07",
+        "isEol": true,
+        "eolFrom": "2022-11-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.361.4",
+          "date": "2022-11-14",
+          "link": "https://github.com/jenkinsci/jenkins/releases/tag/jenkins-2.361.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.346",
+      "name": "2.346 (LTS)",
+      "milestones": {
+        "ga": "2022-05-03",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-09-07"
+      },
+      "upstream": {
+        "name": "2.346",
+        "codename": null,
+        "label": "2.346 (LTS)",
+        "releaseDate": "2022-05-03",
+        "isLts": true,
+        "ltsFrom": "2022-06-22",
+        "isEol": true,
+        "eolFrom": "2022-09-07",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.346.3",
+          "date": "2022-08-10",
+          "link": "https://github.com/jenkinsci/jenkins/releases/tag/jenkins-2.346.3"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/jenkins/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-16T00:07:55+00:00"
+  }
+}

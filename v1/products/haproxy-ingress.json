@@ -1,0 +1,182 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "haproxy-ingress",
+  "name": "HAProxy Ingress",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "purl",
+      "id": "pkg:github/jcmoraisjr/haproxy-ingress"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/haproxy-ingress",
+    "releasePolicy": null
+  },
+  "releases": [
+    {
+      "id": "0.16",
+      "name": "0.16",
+      "milestones": {
+        "ga": "2026-03-23",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.16",
+        "codename": null,
+        "label": "0.16",
+        "releaseDate": "2026-03-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "0.16.1",
+          "date": "2026-05-04",
+          "link": "https://github.com/jcmoraisjr/haproxy-ingress/releases/tag/v0.16.1"
+        },
+        "custom": {
+          "embeddedHAProxy": "2.8",
+          "supportedKubernetesVersion": "1.21+"
+        }
+      }
+    },
+    {
+      "id": "0.15",
+      "name": "0.15",
+      "milestones": {
+        "ga": "2025-10-15",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.15",
+        "codename": null,
+        "label": "0.15",
+        "releaseDate": "2025-10-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "0.15.4",
+          "date": "2026-05-04",
+          "link": "https://github.com/jcmoraisjr/haproxy-ingress/releases/tag/v0.15.4"
+        },
+        "custom": {
+          "embeddedHAProxy": "2.6",
+          "supportedKubernetesVersion": "1.21+"
+        }
+      }
+    },
+    {
+      "id": "0.14",
+      "name": "0.14",
+      "milestones": {
+        "ga": "2022-12-26",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.14",
+        "codename": null,
+        "label": "0.14",
+        "releaseDate": "2022-12-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "0.14.12",
+          "date": "2026-03-23",
+          "link": "https://github.com/jcmoraisjr/haproxy-ingress/releases/tag/v0.14.12"
+        },
+        "custom": {
+          "embeddedHAProxy": "2.4",
+          "supportedKubernetesVersion": "1.19+"
+        }
+      }
+    },
+    {
+      "id": "0.13",
+      "name": "0.13",
+      "milestones": {
+        "ga": "2021-08-13",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.13",
+        "codename": null,
+        "label": "0.13",
+        "releaseDate": "2021-08-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "0.13.19",
+          "date": "2025-10-10",
+          "link": "https://github.com/jcmoraisjr/haproxy-ingress/releases/tag/v0.13.19"
+        },
+        "custom": {
+          "embeddedHAProxy": "2.4",
+          "supportedKubernetesVersion": "1.19+"
+        }
+      }
+    },
+    {
+      "id": "0.12",
+      "name": "0.12",
+      "milestones": {
+        "ga": "2021-02-27",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-10-15"
+      },
+      "upstream": {
+        "name": "0.12",
+        "codename": null,
+        "label": "0.12",
+        "releaseDate": "2021-02-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-10-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "0.12.22",
+          "date": "2025-07-29",
+          "link": "https://github.com/jcmoraisjr/haproxy-ingress/releases/tag/v0.12.22"
+        },
+        "custom": {
+          "embeddedHAProxy": "2.2",
+          "supportedKubernetesVersion": "1.18` - `1.21"
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/haproxy-ingress/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-05-05T03:00:45+00:00"
+  }
+}

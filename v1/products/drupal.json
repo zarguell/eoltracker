@@ -1,0 +1,707 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "drupal",
+  "name": "Drupal",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "php:drupal"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:composer/drupal/core"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/bitnami/drupal"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/library/drupal"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/drupal/core"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:drupal:drupal"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:drupal:drupal"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": "Commercial Support"
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/drupal.svg",
+    "html": "https://endoflife.date/drupal",
+    "releasePolicy": "https://www.drupal.org/about/core/policies/core-release-cycles/schedule"
+  },
+  "releases": [
+    {
+      "id": "11.4",
+      "name": "11.4",
+      "milestones": {
+        "ga": "2026-07-01",
+        "eos": null,
+        "eossec": "2027-07-07",
+        "eol": null
+      },
+      "upstream": {
+        "name": "11.4",
+        "codename": null,
+        "label": "11.4",
+        "releaseDate": "2026-07-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": "2027-01-01",
+        "isEol": false,
+        "eolFrom": "2027-07-07",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "11.4.7",
+          "date": "2026-09-16",
+          "link": "https://www.drupal.org/project/drupal/releases/11.4.7"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "11.3",
+      "name": "11.3",
+      "milestones": {
+        "ga": "2025-12-17",
+        "eos": null,
+        "eossec": "2026-12-16",
+        "eol": null
+      },
+      "upstream": {
+        "name": "11.3",
+        "codename": null,
+        "label": "11.3",
+        "releaseDate": "2025-12-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-06-16",
+        "isEol": false,
+        "eolFrom": "2026-12-16",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "11.3.17",
+          "date": "2026-09-16",
+          "link": "https://www.drupal.org/project/drupal/releases/11.3.17"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "10.6",
+      "name": "10.6",
+      "milestones": {
+        "ga": "2025-12-17",
+        "eos": null,
+        "eossec": "2026-12-16",
+        "eol": null
+      },
+      "upstream": {
+        "name": "10.6",
+        "codename": null,
+        "label": "10.6",
+        "releaseDate": "2025-12-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-06-16",
+        "isEol": false,
+        "eolFrom": "2026-12-16",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "10.6.17",
+          "date": "2026-09-16",
+          "link": "https://www.drupal.org/project/drupal/releases/10.6.17"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "11.2",
+      "name": "11.2",
+      "milestones": {
+        "ga": "2025-06-18",
+        "eos": null,
+        "eossec": "2026-07-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "11.2",
+        "codename": null,
+        "label": "11.2",
+        "releaseDate": "2025-06-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-12-10",
+        "isEol": true,
+        "eolFrom": "2026-07-01",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "11.2.14",
+          "date": "2026-06-17",
+          "link": "https://www.drupal.org/project/drupal/releases/11.2.14"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "10.5",
+      "name": "10.5",
+      "milestones": {
+        "ga": "2025-06-18",
+        "eos": null,
+        "eossec": "2026-07-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "10.5",
+        "codename": null,
+        "label": "10.5",
+        "releaseDate": "2025-06-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-12-17",
+        "isEol": true,
+        "eolFrom": "2026-07-01",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "10.5.12",
+          "date": "2026-06-17",
+          "link": "https://www.drupal.org/project/drupal/releases/10.5.12"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "10.4",
+      "name": "10.4",
+      "milestones": {
+        "ga": "2024-12-17",
+        "eos": null,
+        "eossec": "2025-12-10",
+        "eol": null
+      },
+      "upstream": {
+        "name": "10.4",
+        "codename": null,
+        "label": "10.4",
+        "releaseDate": "2024-12-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-06-18",
+        "isEol": true,
+        "eolFrom": "2025-12-10",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "10.4.10",
+          "date": "2026-05-20",
+          "link": "https://www.drupal.org/project/drupal/releases/10.4.10"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "11.1",
+      "name": "11.1",
+      "milestones": {
+        "ga": "2024-12-16",
+        "eos": null,
+        "eossec": "2025-12-10",
+        "eol": null
+      },
+      "upstream": {
+        "name": "11.1",
+        "codename": null,
+        "label": "11.1",
+        "releaseDate": "2024-12-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-06-18",
+        "isEol": true,
+        "eolFrom": "2025-12-10",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "11.1.10",
+          "date": "2026-05-20",
+          "link": "https://www.drupal.org/project/drupal/releases/11.1.10"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "11.0",
+      "name": "11.0",
+      "milestones": {
+        "ga": "2024-08-02",
+        "eos": null,
+        "eossec": "2025-06-16",
+        "eol": null
+      },
+      "upstream": {
+        "name": "11.0",
+        "codename": null,
+        "label": "11.0",
+        "releaseDate": "2024-08-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-12-16",
+        "isEol": true,
+        "eolFrom": "2025-06-16",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "11.0.13",
+          "date": "2025-03-19",
+          "link": "https://www.drupal.org/project/drupal/releases/11.0.13"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "10.3",
+      "name": "10.3",
+      "milestones": {
+        "ga": "2024-06-20",
+        "eos": null,
+        "eossec": "2025-06-16",
+        "eol": null
+      },
+      "upstream": {
+        "name": "10.3",
+        "codename": null,
+        "label": "10.3",
+        "releaseDate": "2024-06-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-08-02",
+        "isEol": true,
+        "eolFrom": "2025-06-16",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "10.3.14",
+          "date": "2025-03-19",
+          "link": "https://www.drupal.org/project/drupal/releases/10.3.14"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "10.2",
+      "name": "10.2",
+      "milestones": {
+        "ga": "2023-12-15",
+        "eos": null,
+        "eossec": "2024-12-17",
+        "eol": null
+      },
+      "upstream": {
+        "name": "10.2",
+        "codename": null,
+        "label": "10.2",
+        "releaseDate": "2023-12-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-06-20",
+        "isEol": true,
+        "eolFrom": "2024-12-17",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "10.2.12",
+          "date": "2024-11-22",
+          "link": "https://www.drupal.org/project/drupal/releases/10.2.12"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "10.1",
+      "name": "10.1",
+      "milestones": {
+        "ga": "2023-06-22",
+        "eos": null,
+        "eossec": "2024-06-20",
+        "eol": null
+      },
+      "upstream": {
+        "name": "10.1",
+        "codename": null,
+        "label": "10.1",
+        "releaseDate": "2023-06-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-12-15",
+        "isEol": true,
+        "eolFrom": "2024-06-20",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "10.1.8",
+          "date": "2024-01-16",
+          "link": "https://www.drupal.org/project/drupal/releases/10.1.8"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "10.0",
+      "name": "10.0",
+      "milestones": {
+        "ga": "2022-12-15",
+        "eos": null,
+        "eossec": "2023-12-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "10.0",
+        "codename": null,
+        "label": "10.0",
+        "releaseDate": "2022-12-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-06-21",
+        "isEol": true,
+        "eolFrom": "2023-12-15",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "10.0.11",
+          "date": "2023-09-19",
+          "link": "https://www.drupal.org/project/drupal/releases/10.0.11"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.5",
+      "name": "9.5",
+      "milestones": {
+        "ga": "2022-12-15",
+        "eos": null,
+        "eossec": "2023-11-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.5",
+        "codename": null,
+        "label": "9.5",
+        "releaseDate": "2022-12-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-06-21",
+        "isEol": true,
+        "eolFrom": "2023-11-01",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "9.5.11",
+          "date": "2023-09-19",
+          "link": "https://www.drupal.org/project/drupal/releases/9.5.11"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.4",
+      "name": "9.4",
+      "milestones": {
+        "ga": "2022-06-15",
+        "eos": null,
+        "eossec": "2023-06-21",
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.4",
+        "codename": null,
+        "label": "9.4",
+        "releaseDate": "2022-06-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-12-14",
+        "isEol": true,
+        "eolFrom": "2023-06-21",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "9.4.15",
+          "date": "2023-05-03",
+          "link": "https://www.drupal.org/project/drupal/releases/9.4.15"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.3",
+      "name": "9.3",
+      "milestones": {
+        "ga": "2021-12-08",
+        "eos": null,
+        "eossec": "2022-12-14",
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.3",
+        "codename": null,
+        "label": "9.3",
+        "releaseDate": "2021-12-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-06-15",
+        "isEol": true,
+        "eolFrom": "2022-12-14",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "9.3.22",
+          "date": "2022-09-28",
+          "link": "https://www.drupal.org/project/drupal/releases/9.3.22"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.2",
+      "name": "9.2",
+      "milestones": {
+        "ga": "2021-06-16",
+        "eos": null,
+        "eossec": "2022-06-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.2",
+        "codename": null,
+        "label": "9.2",
+        "releaseDate": "2021-06-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-12-08",
+        "isEol": true,
+        "eolFrom": "2022-06-15",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "9.2.21",
+          "date": "2022-06-10",
+          "link": "https://www.drupal.org/project/drupal/releases/9.2.21"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.1",
+      "name": "9.1",
+      "milestones": {
+        "ga": "2020-12-02",
+        "eos": null,
+        "eossec": "2021-12-08",
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.1",
+        "codename": null,
+        "label": "9.1",
+        "releaseDate": "2020-12-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-06-16",
+        "isEol": true,
+        "eolFrom": "2021-12-08",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "9.1.15",
+          "date": "2021-11-24",
+          "link": "https://www.drupal.org/project/drupal/releases/9.1.15"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.0",
+      "name": "9.0",
+      "milestones": {
+        "ga": "2020-06-03",
+        "eos": null,
+        "eossec": "2021-06-16",
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.0",
+        "codename": null,
+        "label": "9.0",
+        "releaseDate": "2020-06-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-12-02",
+        "isEol": true,
+        "eolFrom": "2021-06-16",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "9.0.14",
+          "date": "2021-05-25",
+          "link": "https://www.drupal.org/project/drupal/releases/9.0.14"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.9",
+      "name": "8.9",
+      "milestones": {
+        "ga": "2020-06-03",
+        "eos": null,
+        "eossec": "2021-11-02",
+        "eol": null
+      },
+      "upstream": {
+        "name": "8.9",
+        "codename": null,
+        "label": "8.9",
+        "releaseDate": "2020-06-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-12-01",
+        "isEol": true,
+        "eolFrom": "2021-11-02",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "8.9.20",
+          "date": "2021-11-17",
+          "link": "https://www.drupal.org/project/drupal/releases/8.9.20"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.8",
+      "name": "8.8",
+      "milestones": {
+        "ga": "2019-12-04",
+        "eos": null,
+        "eossec": "2020-12-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "8.8",
+        "codename": null,
+        "label": "8.8",
+        "releaseDate": "2019-12-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-06-03",
+        "isEol": true,
+        "eolFrom": "2020-12-01",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "8.8.12",
+          "date": "2020-11-25",
+          "link": "https://www.drupal.org/project/drupal/releases/8.8.12"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7",
+      "name": "7 (LTS)",
+      "milestones": {
+        "ga": "2011-01-05",
+        "eos": null,
+        "eossec": "2025-01-05",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7",
+        "codename": null,
+        "label": "7 (LTS)",
+        "releaseDate": "2011-01-05",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2015-11-19",
+        "isEol": true,
+        "eolFrom": "2025-01-05",
+        "isEoes": false,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "7.103",
+          "date": "2024-12-04",
+          "link": "https://www.drupal.org/project/drupal/releases/7.103"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/drupal/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-17T00:08:37+00:00"
+  }
+}

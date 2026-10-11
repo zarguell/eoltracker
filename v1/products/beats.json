@@ -1,0 +1,364 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "beats",
+  "name": "Elastic Beats",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "filebeat"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:elastic:filebeat"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:elastic:filebeat"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/beats.svg",
+    "html": "https://endoflife.date/beats",
+    "releasePolicy": "https://www.elastic.co/support_policy"
+  },
+  "releases": [
+    {
+      "id": "9.5",
+      "name": "9.5",
+      "milestones": {
+        "ga": "2026-08-04",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.5",
+        "codename": null,
+        "label": "9.5",
+        "releaseDate": "2026-08-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "9.5.4",
+          "date": "2026-09-15",
+          "link": "https://www.elastic.co/docs/release-notes/beats#beats-9.5.4-release-notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.4",
+      "name": "9.4",
+      "milestones": {
+        "ga": "2026-05-05",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.4",
+        "codename": null,
+        "label": "9.4",
+        "releaseDate": "2026-05-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "9.4.7",
+          "date": "2026-09-15",
+          "link": "https://www.elastic.co/docs/release-notes/beats#beats-9.4.7-release-notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.3",
+      "name": "9.3",
+      "milestones": {
+        "ga": "2026-02-03",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-08-04"
+      },
+      "upstream": {
+        "name": "9.3",
+        "codename": null,
+        "label": "9.3",
+        "releaseDate": "2026-02-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-08-04",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.3.8",
+          "date": "2026-07-21",
+          "link": "https://www.elastic.co/docs/release-notes/beats#beats-9.3.8-release-notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.2",
+      "name": "9.2",
+      "milestones": {
+        "ga": "2025-10-23",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-05-05"
+      },
+      "upstream": {
+        "name": "9.2",
+        "codename": null,
+        "label": "9.2",
+        "releaseDate": "2025-10-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-05-05",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.2.8",
+          "date": "2026-04-08",
+          "link": "https://www.elastic.co/docs/release-notes/beats#beats-9.2.8-release-notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.1",
+      "name": "9.1",
+      "milestones": {
+        "ga": "2025-07-29",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-02-03"
+      },
+      "upstream": {
+        "name": "9.1",
+        "codename": null,
+        "label": "9.1",
+        "releaseDate": "2025-07-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-02-03",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.1.10",
+          "date": "2026-01-13",
+          "link": "https://www.elastic.co/docs/release-notes/beats#beats-9.1.10-release-notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.19",
+      "name": "8.19",
+      "milestones": {
+        "ga": "2025-07-29",
+        "eos": null,
+        "eossec": null,
+        "eol": "2027-07-15"
+      },
+      "upstream": {
+        "name": "8.19",
+        "codename": null,
+        "label": "8.19",
+        "releaseDate": "2025-07-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-07-15",
+        "isMaintained": true,
+        "latest": {
+          "name": "8.19.21",
+          "date": "2026-09-01",
+          "link": "https://www.elastic.co/guide/en/beats/libbeat/8.19/release-notes-8.19.21.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.18",
+      "name": "8.18",
+      "milestones": {
+        "ga": "2025-04-15",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-10-20"
+      },
+      "upstream": {
+        "name": "8.18",
+        "codename": null,
+        "label": "8.18",
+        "releaseDate": "2025-04-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-10-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.18.8",
+          "date": "2025-10-06",
+          "link": "https://www.elastic.co/guide/en/beats/libbeat/8.18/release-notes-8.18.8.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.0",
+      "name": "9.0",
+      "milestones": {
+        "ga": "2025-04-15",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-10-23"
+      },
+      "upstream": {
+        "name": "9.0",
+        "codename": null,
+        "label": "9.0",
+        "releaseDate": "2025-04-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-10-23",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.0.8",
+          "date": "2025-10-06",
+          "link": "https://www.elastic.co/docs/release-notes/beats#beats-9.0.8-release-notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.17",
+      "name": "8.17",
+      "milestones": {
+        "ga": "2024-12-12",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-08-12"
+      },
+      "upstream": {
+        "name": "8.17",
+        "codename": null,
+        "label": "8.17",
+        "releaseDate": "2024-12-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-08-12",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.17.10",
+          "date": "2025-08-12",
+          "link": "https://www.elastic.co/guide/en/beats/libbeat/8.17/release-notes-8.17.10.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.16",
+      "name": "8.16",
+      "milestones": {
+        "ga": "2024-11-12",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-04-15"
+      },
+      "upstream": {
+        "name": "8.16",
+        "codename": null,
+        "label": "8.16",
+        "releaseDate": "2024-11-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-04-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.16.6",
+          "date": "2025-03-25",
+          "link": "https://www.elastic.co/guide/en/beats/libbeat/8.16/release-notes-8.16.6.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7",
+      "name": "7",
+      "milestones": {
+        "ga": "2019-04-10",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-01-15"
+      },
+      "upstream": {
+        "name": "7",
+        "codename": null,
+        "label": "7",
+        "releaseDate": "2019-04-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-01-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.17.29",
+          "date": "2025-06-24",
+          "link": "https://www.elastic.co/guide/en/beats/libbeat/7.17/release-notes-7.17.29.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6",
+      "name": "6",
+      "milestones": {
+        "ga": "2017-11-14",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-02-10"
+      },
+      "upstream": {
+        "name": "6",
+        "codename": null,
+        "label": "6",
+        "releaseDate": "2017-11-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-02-10",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.8.23",
+          "date": "2022-01-13",
+          "link": "https://www.elastic.co/guide/en/beats/libbeat/6.8/release-notes-6.8.23.html"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/beats/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-16T00:07:55+00:00"
+  }
+}

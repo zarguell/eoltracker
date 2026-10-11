@@ -1,0 +1,1419 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "nvidia",
+  "name": "NVIDIA Driver",
+  "category": "software",
+  "upstream_category": "app",
+  "identifiers": [],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/nvidia.svg",
+    "html": "https://endoflife.date/nvidia",
+    "releasePolicy": "https://www.nvidia.com/Download/index.aspx"
+  },
+  "releases": [
+    {
+      "id": "r615-windows",
+      "name": "R615-Windows (NFB)",
+      "milestones": {
+        "ga": "2026-09-09",
+        "eos": null,
+        "eossec": "2027-09-09",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r615-windows",
+        "codename": null,
+        "label": "R615-Windows (NFB)",
+        "releaseDate": "2026-09-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-09-09",
+        "isMaintained": true,
+        "latest": {
+          "name": "616.92",
+          "date": "2026-09-09",
+          "link": "https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-615-71-09/index.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r615-linux",
+      "name": "R615-Windows (NFB)",
+      "milestones": {
+        "ga": "2026-09-09",
+        "eos": null,
+        "eossec": "2027-09-09",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r615-linux",
+        "codename": null,
+        "label": "R615-Windows (NFB)",
+        "releaseDate": "2026-09-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-09-09",
+        "isMaintained": true,
+        "latest": {
+          "name": "615.71.09",
+          "date": "2026-09-09",
+          "link": "https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-615-71-09/index.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r610-windows",
+      "name": "R610-Windows (NFB)",
+      "milestones": {
+        "ga": "2026-08-03",
+        "eos": null,
+        "eossec": "2027-08-03",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r610-windows",
+        "codename": null,
+        "label": "R610-Windows (NFB)",
+        "releaseDate": "2026-08-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-08-03",
+        "isMaintained": true,
+        "latest": {
+          "name": "610.88",
+          "date": "2026-08-03",
+          "link": "https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-610-57-04/index.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r610-linux",
+      "name": "R610-Linux (NFB)",
+      "milestones": {
+        "ga": "2026-08-03",
+        "eos": null,
+        "eossec": "2027-08-03",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r610-linux",
+        "codename": null,
+        "label": "R610-Linux (NFB)",
+        "releaseDate": "2026-08-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-08-03",
+        "isMaintained": true,
+        "latest": {
+          "name": "610.57.04",
+          "date": "2026-08-03",
+          "link": "https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-610-57-04/index.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r595-windows",
+      "name": "R595-Windows (PB)",
+      "milestones": {
+        "ga": "2026-03-24",
+        "eos": null,
+        "eossec": "2027-03-24",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r595-windows",
+        "codename": null,
+        "label": "R595-Windows (PB)",
+        "releaseDate": "2026-03-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": "2027-03-24",
+        "isEol": false,
+        "eolFrom": "2027-03-24",
+        "isMaintained": true,
+        "latest": {
+          "name": "596.86",
+          "date": "2026-08-03",
+          "link": "https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-595-91-07/index.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r595-linux",
+      "name": "R595-Linux (PB)",
+      "milestones": {
+        "ga": "2026-03-24",
+        "eos": null,
+        "eossec": "2027-03-24",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r595-linux",
+        "codename": null,
+        "label": "R595-Linux (PB)",
+        "releaseDate": "2026-03-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": "2027-03-24",
+        "isEol": false,
+        "eolFrom": "2027-03-24",
+        "isMaintained": true,
+        "latest": {
+          "name": "595.91.07",
+          "date": "2026-08-03",
+          "link": "https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-595-91-07/index.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r590-windows",
+      "name": "R590-Windows (NFB)",
+      "milestones": {
+        "ga": "2025-12-22",
+        "eos": null,
+        "eossec": "2026-12-22",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r590-windows",
+        "codename": null,
+        "label": "R590-Windows (NFB)",
+        "releaseDate": "2025-12-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": "2026-12-22",
+        "isMaintained": true,
+        "latest": {
+          "name": "591.59",
+          "date": "2025-12-22",
+          "link": "https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-590-48-01/index.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r590-linux",
+      "name": "R590-Linux (NFB)",
+      "milestones": {
+        "ga": "2025-12-22",
+        "eos": null,
+        "eossec": "2026-12-22",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r590-linux",
+        "codename": null,
+        "label": "R590-Linux (NFB)",
+        "releaseDate": "2025-12-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": "2026-12-22",
+        "isMaintained": true,
+        "latest": {
+          "name": "590.48.01",
+          "date": "2025-12-22",
+          "link": "https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-590-48-01/index.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r580-linux",
+      "name": "R580-Linux (LTSB)",
+      "milestones": {
+        "ga": "2025-08-04",
+        "eos": null,
+        "eossec": "2028-08-04",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r580-linux",
+        "codename": null,
+        "label": "R580-Linux (LTSB)",
+        "releaseDate": "2025-08-04",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-08-04",
+        "isEol": false,
+        "eolFrom": "2028-08-04",
+        "isMaintained": true,
+        "latest": {
+          "name": "580.178.04",
+          "date": "2026-08-03",
+          "link": "https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-580-178-04/index.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r580-windows",
+      "name": "R580-Windows (LTSB)",
+      "milestones": {
+        "ga": "2025-06-03",
+        "eos": null,
+        "eossec": "2028-08-04",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r580-windows",
+        "codename": null,
+        "label": "R580-Windows (LTSB)",
+        "releaseDate": "2025-06-03",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-08-04",
+        "isEol": false,
+        "eolFrom": "2028-08-04",
+        "isMaintained": true,
+        "latest": {
+          "name": "582.78",
+          "date": "2026-08-03",
+          "link": "https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-580-178-04/index.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r575-linux",
+      "name": "R575-Linux (NFB)",
+      "milestones": {
+        "ga": "2025-06-03",
+        "eos": null,
+        "eossec": "2026-06-03",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r575-linux",
+        "codename": null,
+        "label": "R575-Linux (NFB)",
+        "releaseDate": "2025-06-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-06-03",
+        "isMaintained": false,
+        "latest": {
+          "name": "575.57.08",
+          "date": "2025-06-03",
+          "link": "https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-575-57-08/index.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r575-windows",
+      "name": "R575-Windows (NFB)",
+      "milestones": {
+        "ga": "2025-06-03",
+        "eos": null,
+        "eossec": "2026-06-03",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r575-windows",
+        "codename": null,
+        "label": "R575-Windows (NFB)",
+        "releaseDate": "2025-06-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-06-03",
+        "isMaintained": false,
+        "latest": {
+          "name": "576.57",
+          "date": "2025-06-03",
+          "link": "https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-575-57-08/index.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r570-linux",
+      "name": "R570-Linux (PB)",
+      "milestones": {
+        "ga": "2025-01-27",
+        "eos": null,
+        "eossec": "2026-01-27",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r570-linux",
+        "codename": null,
+        "label": "R570-Linux (PB)",
+        "releaseDate": "2025-01-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-01-27",
+        "isEol": true,
+        "eolFrom": "2026-01-27",
+        "isMaintained": false,
+        "latest": {
+          "name": "570.211.01",
+          "date": "2026-01-13",
+          "link": "https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-570-211-01/index.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r570-windows",
+      "name": "R570-Windows (PB)",
+      "milestones": {
+        "ga": "2025-01-27",
+        "eos": null,
+        "eossec": "2026-01-27",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r570-windows",
+        "codename": null,
+        "label": "R570-Windows (PB)",
+        "releaseDate": "2025-01-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-01-27",
+        "isEol": true,
+        "eolFrom": "2026-01-27",
+        "isMaintained": false,
+        "latest": {
+          "name": "573.76",
+          "date": "2025-09-30",
+          "link": "https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-570-195-03/index.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r565-linux",
+      "name": "R565-Linux (PB)",
+      "milestones": {
+        "ga": "2024-10-29",
+        "eos": null,
+        "eossec": "2025-10-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r565-linux",
+        "codename": null,
+        "label": "R565-Linux (PB)",
+        "releaseDate": "2024-10-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-10-01",
+        "isEol": true,
+        "eolFrom": "2025-10-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "565.57.01",
+          "date": "2024-10-29",
+          "link": "https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-565-57-01/index.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r565-windows",
+      "name": "R565-Windows (PB)",
+      "milestones": {
+        "ga": "2024-10-22",
+        "eos": null,
+        "eossec": "2025-10-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r565-windows",
+        "codename": null,
+        "label": "R565-Windows (PB)",
+        "releaseDate": "2024-10-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-10-01",
+        "isEol": true,
+        "eolFrom": "2025-10-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "566.03",
+          "date": "2024-10-29",
+          "link": "https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-565-57-01/index.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r560-linux",
+      "name": "R560-Linux (PB)",
+      "milestones": {
+        "ga": "2024-08-22",
+        "eos": null,
+        "eossec": "2025-08-22",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r560-linux",
+        "codename": null,
+        "label": "R560-Linux (PB)",
+        "releaseDate": "2024-08-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-08-22",
+        "isEol": true,
+        "eolFrom": "2025-08-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "560.35.03",
+          "date": "2024-08-22",
+          "link": "https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-560-35-03/index.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r560-windows",
+      "name": "R560-Windows (PB)",
+      "milestones": {
+        "ga": "2024-07-30",
+        "eos": null,
+        "eossec": "2025-07-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r560-windows",
+        "codename": null,
+        "label": "R560-Windows (PB)",
+        "releaseDate": "2024-07-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-07-30",
+        "isEol": true,
+        "eolFrom": "2025-07-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "560.94",
+          "date": "2024-08-22",
+          "link": "https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-560-35-03/index.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r555-linux",
+      "name": "R555-Linux (NFB)",
+      "milestones": {
+        "ga": "2024-06-04",
+        "eos": null,
+        "eossec": "2025-06-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r555-linux",
+        "codename": null,
+        "label": "R555-Linux (NFB)",
+        "releaseDate": "2024-06-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-06-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "555.58.02",
+          "date": "2024-07-01",
+          "link": "https://www.nvidia.com/Download/driverResults.aspx/228410/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r555-windows",
+      "name": "R555-Windows (NFB)",
+      "milestones": {
+        "ga": "2024-06-04",
+        "eos": null,
+        "eossec": "2025-06-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r555-windows",
+        "codename": null,
+        "label": "R555-Windows (NFB)",
+        "releaseDate": "2024-06-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-06-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "555.99",
+          "date": "2024-06-04",
+          "link": "https://www.nvidia.com/download/driverResults.aspx/228179/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r550-linux",
+      "name": "R550-Linux (PB)",
+      "milestones": {
+        "ga": "2024-02-23",
+        "eos": null,
+        "eossec": "2025-04-17",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r550-linux",
+        "codename": null,
+        "label": "R550-Linux (PB)",
+        "releaseDate": "2024-02-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-02-01",
+        "isEol": true,
+        "eolFrom": "2025-04-17",
+        "isMaintained": false,
+        "latest": {
+          "name": "550.163.01",
+          "date": "2025-04-17",
+          "link": "https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-550-163-01/index.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r550-windows",
+      "name": "R550-Windows (PB)",
+      "milestones": {
+        "ga": "2024-02-22",
+        "eos": null,
+        "eossec": "2025-04-17",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r550-windows",
+        "codename": null,
+        "label": "R550-Windows (PB)",
+        "releaseDate": "2024-02-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-02-01",
+        "isEol": true,
+        "eolFrom": "2025-04-17",
+        "isMaintained": false,
+        "latest": {
+          "name": "553.74",
+          "date": "2025-04-17",
+          "link": "https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-550-163-01/index.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r545-linux",
+      "name": "R545-Linux (NFB)",
+      "milestones": {
+        "ga": "2023-10-31",
+        "eos": null,
+        "eossec": "2024-10-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r545-linux",
+        "codename": null,
+        "label": "R545-Linux (NFB)",
+        "releaseDate": "2023-10-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-10-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "545.29.06",
+          "date": "2023-11-22",
+          "link": "https://www.nvidia.com/download/driverResults.aspx/216530/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r545-windows",
+      "name": "R545-Windows (NFB)",
+      "milestones": {
+        "ga": "2023-10-17",
+        "eos": null,
+        "eossec": "2024-10-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r545-windows",
+        "codename": null,
+        "label": "R545-Windows (NFB)",
+        "releaseDate": "2023-10-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-10-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "546.01",
+          "date": "2023-10-31",
+          "link": "https://www.nvidia.com/Download/driverResults.aspx/216365/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r535-linux",
+      "name": "R535-Linux (LTSB)",
+      "milestones": {
+        "ga": "2023-06-14",
+        "eos": null,
+        "eossec": "2026-06-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r535-linux",
+        "codename": null,
+        "label": "R535-Linux (LTSB)",
+        "releaseDate": "2023-06-14",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-06-01",
+        "isEol": true,
+        "eolFrom": "2026-06-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "535.309.01",
+          "date": "2026-04-28",
+          "link": "https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-535-309-01/index.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r535-windows",
+      "name": "R535-Windows (LTSB)",
+      "milestones": {
+        "ga": "2023-05-30",
+        "eos": null,
+        "eossec": "2026-06-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r535-windows",
+        "codename": null,
+        "label": "R535-Windows (LTSB)",
+        "releaseDate": "2023-05-30",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-06-01",
+        "isEol": true,
+        "eolFrom": "2026-06-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "539.72",
+          "date": "2026-04-28",
+          "link": "https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-535-309-01/index.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r530-linux",
+      "name": "R530-Linux (NFB)",
+      "milestones": {
+        "ga": "2023-03-23",
+        "eos": null,
+        "eossec": "2023-06-24",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r530-linux",
+        "codename": null,
+        "label": "R530-Linux (NFB)",
+        "releaseDate": "2023-03-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-06-24",
+        "isMaintained": false,
+        "latest": {
+          "name": "530.41.03",
+          "date": "2023-03-23",
+          "link": "https://www.nvidia.com/Download/driverResults.aspx/200481/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r530-windows",
+      "name": "R530-Windows (NFB)",
+      "milestones": {
+        "ga": "2023-02-28",
+        "eos": null,
+        "eossec": "2023-06-24",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r530-windows",
+        "codename": null,
+        "label": "R530-Windows (NFB)",
+        "releaseDate": "2023-02-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-06-24",
+        "isMaintained": false,
+        "latest": {
+          "name": "531.79",
+          "date": "2023-05-02",
+          "link": "https://www.nvidia.com/Download/driverResults.aspx/204772/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r525-windows",
+      "name": "R525-Windows (PB)",
+      "milestones": {
+        "ga": "2022-11-10",
+        "eos": null,
+        "eossec": "2023-12-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r525-windows",
+        "codename": null,
+        "label": "R525-Windows (PB)",
+        "releaseDate": "2022-11-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-12-01",
+        "isEol": true,
+        "eolFrom": "2023-12-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "529.19",
+          "date": "2023-10-31",
+          "link": "https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-525-147-05/index.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r525-linux",
+      "name": "R525-Linux (PB)",
+      "milestones": {
+        "ga": "2022-11-10",
+        "eos": null,
+        "eossec": "2023-12-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r525-linux",
+        "codename": null,
+        "label": "R525-Linux (PB)",
+        "releaseDate": "2022-11-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-12-01",
+        "isEol": true,
+        "eolFrom": "2023-12-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "525.147.05",
+          "date": "2023-10-31",
+          "link": "https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-525-147-05/index.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r520-linux",
+      "name": "R520-Linux (NFB)",
+      "milestones": {
+        "ga": "2022-10-12",
+        "eos": null,
+        "eossec": "2023-10-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r520-linux",
+        "codename": null,
+        "label": "R520-Linux (NFB)",
+        "releaseDate": "2022-10-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-10-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "520.56.06",
+          "date": "2022-10-07",
+          "link": "https://download.nvidia.com/XFree86/Linux-x86_64/520.56.06/README/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r515-windows",
+      "name": "R515-Windows (PB)",
+      "milestones": {
+        "ga": "2022-05-11",
+        "eos": null,
+        "eossec": "2023-05-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r515-windows",
+        "codename": null,
+        "label": "R515-Windows (PB)",
+        "releaseDate": "2022-05-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-05-01",
+        "isEol": true,
+        "eolFrom": "2023-05-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "518.03",
+          "date": "2023-03-30",
+          "link": "https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-515-105-01/index.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r515-linux",
+      "name": "R515-Linux (PB)",
+      "milestones": {
+        "ga": "2022-05-11",
+        "eos": null,
+        "eossec": "2023-05-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r515-linux",
+        "codename": null,
+        "label": "R515-Linux (PB)",
+        "releaseDate": "2022-05-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-05-01",
+        "isEol": true,
+        "eolFrom": "2023-05-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "515.105.01",
+          "date": "2023-03-30",
+          "link": "https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-515-105-01/index.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r510-windows",
+      "name": "R510-Windows (PB)",
+      "milestones": {
+        "ga": "2022-01-14",
+        "eos": null,
+        "eossec": "2023-01-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r510-windows",
+        "codename": null,
+        "label": "R510-Windows (PB)",
+        "releaseDate": "2022-01-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-01-01",
+        "isEol": true,
+        "eolFrom": "2023-01-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "514.08",
+          "date": "2022-12-20",
+          "link": "https://www.nvidia.com/download/driverResults.aspx/197675/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r510-linux",
+      "name": "R510-Linux (PB)",
+      "milestones": {
+        "ga": "2022-01-14",
+        "eos": null,
+        "eossec": "2023-01-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r510-linux",
+        "codename": null,
+        "label": "R510-Linux (PB)",
+        "releaseDate": "2022-01-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-01-01",
+        "isEol": true,
+        "eolFrom": "2023-01-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "510.108.03",
+          "date": "2022-11-22",
+          "link": "https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-510-108-03/index.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r495-linux",
+      "name": "R495-Linux (NFB)",
+      "milestones": {
+        "ga": "2021-10-26",
+        "eos": null,
+        "eossec": "2022-10-12",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r495-linux",
+        "codename": null,
+        "label": "R495-Linux (NFB)",
+        "releaseDate": "2021-10-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-10-12",
+        "isMaintained": false,
+        "latest": {
+          "name": "495.46",
+          "date": "2021-12-13",
+          "link": "https://www.nvidia.com/Download/driverResults.aspx/184248/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r495-windows",
+      "name": "R495-Windows (NFB)",
+      "milestones": {
+        "ga": "2021-10-12",
+        "eos": null,
+        "eossec": "2022-01-14",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r495-windows",
+        "codename": null,
+        "label": "R495-Windows (NFB)",
+        "releaseDate": "2021-10-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-01-14",
+        "isMaintained": false,
+        "latest": {
+          "name": "497.29",
+          "date": "2021-12-20",
+          "link": "https://www.nvidia.com/Download/driverResults.aspx/184717/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r470-linux",
+      "name": "R470-Linux (LTSB)",
+      "milestones": {
+        "ga": "2021-07-19",
+        "eos": null,
+        "eossec": "2024-07-20",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r470-linux",
+        "codename": null,
+        "label": "R470-Linux (LTSB)",
+        "releaseDate": "2021-07-19",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-10-26",
+        "isEol": true,
+        "eolFrom": "2024-07-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "470.256.02",
+          "date": "2024-06-04",
+          "link": "https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-470-256-02/index.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r470-windows",
+      "name": "R470-Windows (LTSB)",
+      "milestones": {
+        "ga": "2021-06-22",
+        "eos": null,
+        "eossec": "2024-07-09",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r470-windows",
+        "codename": null,
+        "label": "R470-Windows (LTSB)",
+        "releaseDate": "2021-06-22",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-09-20",
+        "isEol": true,
+        "eolFrom": "2024-07-09",
+        "isMaintained": false,
+        "latest": {
+          "name": "475.14",
+          "date": "2024-07-09",
+          "link": "https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-475-14/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r465-linux",
+      "name": "R465-Linux (NFB)",
+      "milestones": {
+        "ga": "2021-04-19",
+        "eos": null,
+        "eossec": "2022-04-19",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r465-linux",
+        "codename": null,
+        "label": "R465-Linux (NFB)",
+        "releaseDate": "2021-04-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-04-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "465.24.02",
+          "date": "2021-04-19",
+          "link": "https://download.nvidia.com/XFree86/Linux-x86_64/465.24.02/README/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r460-linux",
+      "name": "R460-Linux (PB)",
+      "milestones": {
+        "ga": "2021-01-07",
+        "eos": null,
+        "eossec": "2022-01-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r460-linux",
+        "codename": null,
+        "label": "R460-Linux (PB)",
+        "releaseDate": "2021-01-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-07-19",
+        "isEol": true,
+        "eolFrom": "2022-01-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "460.106.00",
+          "date": "2021-10-26",
+          "link": "https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-460-106-00/index.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r460-windows",
+      "name": "R460-Windows (PB)",
+      "milestones": {
+        "ga": "2020-12-15",
+        "eos": null,
+        "eossec": "2022-01-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r460-windows",
+        "codename": null,
+        "label": "R460-Windows (PB)",
+        "releaseDate": "2020-12-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-06-23",
+        "isEol": true,
+        "eolFrom": "2022-01-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "463.15",
+          "date": "2021-10-26",
+          "link": "https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-460-106-00/index.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r450-windows",
+      "name": "R450-Windows (LTSB)",
+      "milestones": {
+        "ga": "2020-06-24",
+        "eos": null,
+        "eossec": "2023-07-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r450-windows",
+        "codename": null,
+        "label": "R450-Windows (LTSB)",
+        "releaseDate": "2020-06-24",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-12-15",
+        "isEol": true,
+        "eolFrom": "2023-07-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "454.23",
+          "date": "2023-06-26",
+          "link": "https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-450-248-02/index.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r450-linux",
+      "name": "R450-Linux (LTSB)",
+      "milestones": {
+        "ga": "2020-06-24",
+        "eos": null,
+        "eossec": "2023-07-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r450-linux",
+        "codename": null,
+        "label": "R450-Linux (LTSB)",
+        "releaseDate": "2020-06-24",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-10-07",
+        "isEol": true,
+        "eolFrom": "2023-07-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "450.248.02",
+          "date": "2023-06-26",
+          "link": "https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-450-248-02/index.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r418-windows",
+      "name": "R418-Windows (LTSB)",
+      "milestones": {
+        "ga": "2019-02-04",
+        "eos": null,
+        "eossec": "2022-03-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r418-windows",
+        "codename": null,
+        "label": "R418-Windows (LTSB)",
+        "releaseDate": "2019-02-04",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2019-04-23",
+        "isEol": true,
+        "eolFrom": "2022-03-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "427.45",
+          "date": "2021-04-20",
+          "link": "https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-418-19702/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r418-linux",
+      "name": "R418-Linux (LTSB)",
+      "milestones": {
+        "ga": "2019-01-30",
+        "eos": null,
+        "eossec": "2022-03-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r418-linux",
+        "codename": null,
+        "label": "R418-Linux (LTSB)",
+        "releaseDate": "2019-01-30",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2019-03-20",
+        "isEol": true,
+        "eolFrom": "2022-03-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "418.197.02",
+          "date": "2021-04-19",
+          "link": "https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-418-19702/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r390-windows",
+      "name": "R390-Windows (LTSB)",
+      "milestones": {
+        "ga": "2018-01-08",
+        "eos": null,
+        "eossec": "2021-10-26",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r390-windows",
+        "codename": null,
+        "label": "R390-Windows (LTSB)",
+        "releaseDate": "2018-01-08",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2018-07-31",
+        "isEol": true,
+        "eolFrom": "2021-10-26",
+        "isMaintained": false,
+        "latest": {
+          "name": "392.68",
+          "date": "2021-10-26",
+          "link": "https://www.nvidia.com/download/driverResults.aspx/181267/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "r390-linux",
+      "name": "R390-Linux (LTSB)",
+      "milestones": {
+        "ga": "2018-01-04",
+        "eos": null,
+        "eossec": "2022-11-22",
+        "eol": null
+      },
+      "upstream": {
+        "name": "r390-linux",
+        "codename": null,
+        "label": "R390-Linux (LTSB)",
+        "releaseDate": "2018-01-04",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2018-03-10",
+        "isEol": true,
+        "eolFrom": "2022-11-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "390.157",
+          "date": "2022-11-22",
+          "link": "https://www.nvidia.com/Download/driverResults.aspx/196214/"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/nvidia/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-14T20:01:01+00:00"
+  }
+}

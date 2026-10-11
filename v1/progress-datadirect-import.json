@@ -1,0 +1,139 @@
+{
+  "verifier": "deterministic-progress-datadirect",
+  "checked_at": "2026-09-26T22:30:41Z",
+  "source_url": "https://docs.progress.com/bundle/datadirect-product-life-cycle/page/topics/datadirect_life_cycle/datadirect-product-life-cycle.html",
+  "policy_url": "https://docs-be.progress.com/bundle/datadirect-pdfs/raw/resource/enus/datadirect-life-cycle-policy.pdf",
+  "discontinued_url": "https://www.progress.com/docs/default-source/datadirect/progress-datadirect-dis-products-eol---faq_final-02-20-24.pdf",
+  "record_scope": "Progress DataDirect drivers: one software record per driver the vendor's life cycle page states, plus the products named only in its discontinued-products notice, at the day or month precision each cell states",
+  "rows": {
+    "seen": 99,
+    "published": 93,
+    "retained": 0,
+    "excluded": 6,
+    "notice_only": 1
+  },
+  "tables": [
+    {
+      "table": "current release streams",
+      "rows": 69,
+      "drivers": 69
+    },
+    {
+      "table": "end-of-support release streams",
+      "rows": 24,
+      "drivers": 24
+    },
+    {
+      "table": "platform footnote",
+      "rows": 4,
+      "drivers": 0,
+      "marked": [
+        "OpenAccess SDK JDBC Client**",
+        "OpenAccess SDK Local Client for ODBC and IP SDK**",
+        "OpenAccess SDK ODBC Client**",
+        "OpenAccess SDK Server And IP SDK**"
+      ],
+      "quote": "OpenAccess SDK 9.0 is supported only on Windows and Linux (both 32-bit and 64-bit), and on AIX (64-bit only)"
+    },
+    {
+      "table": "ODBC Third-party Components Compatibility Matrix",
+      "rows": 6,
+      "drivers": 0
+    }
+  ],
+  "excluded": [
+    {
+      "table": "ODBC Third-party Components Compatibility Matrix",
+      "context": "third-party component",
+      "rows": 1,
+      "component": "ICU All Platforms",
+      "library_version": "4.2",
+      "build": "07.1.6",
+      "build_number": "07.16.0129",
+      "release_date": "2024-12-02",
+      "reason": "a third-party component bundled into Progress DataDirect ODBC drivers, not a Progress product lifecycle: the page's own sentence scopes this table to 'the latest builds of third-party components for Progress DataDirect for ODBC Drivers that are built or modified by Progress DataDirect', and its own note limits it to a non-comprehensive list"
+    },
+    {
+      "table": "ODBC Third-party Components Compatibility Matrix",
+      "context": "third-party component",
+      "rows": 1,
+      "component": "ICU Linux IA 64 and Linux PPC 32",
+      "library_version": "4.2",
+      "build": "8.0.2",
+      "build_number": "08.02.0124",
+      "release_date": "2024-12-02",
+      "reason": "a third-party component bundled into Progress DataDirect ODBC drivers, not a Progress product lifecycle: the page's own sentence scopes this table to 'the latest builds of third-party components for Progress DataDirect for ODBC Drivers that are built or modified by Progress DataDirect', and its own note limits it to a non-comprehensive list"
+    },
+    {
+      "table": "ODBC Third-party Components Compatibility Matrix",
+      "context": "third-party component",
+      "rows": 1,
+      "component": "ICU Windows, Linux, AIX, Solaris, Linux Z/OS 64, Linux PPC 64 and Power 8 64 (Linux PPC Little Endian)",
+      "library_version": "74.1",
+      "build": "8.0.2",
+      "build_number": "08.02.1799",
+      "release_date": "2025-09-30",
+      "reason": "a third-party component bundled into Progress DataDirect ODBC drivers, not a Progress product lifecycle: the page's own sentence scopes this table to 'the latest builds of third-party components for Progress DataDirect for ODBC Drivers that are built or modified by Progress DataDirect', and its own note limits it to a non-comprehensive list"
+    },
+    {
+      "table": "ODBC Third-party Components Compatibility Matrix",
+      "context": "third-party component",
+      "rows": 1,
+      "component": "Libcurl",
+      "library_version": "8.4.0",
+      "build": "8.0.2",
+      "build_number": "08.02.2143",
+      "release_date": "2026-05-11",
+      "reason": "a third-party component bundled into Progress DataDirect ODBC drivers, not a Progress product lifecycle: the page's own sentence scopes this table to 'the latest builds of third-party components for Progress DataDirect for ODBC Drivers that are built or modified by Progress DataDirect', and its own note limits it to a non-comprehensive list"
+    },
+    {
+      "table": "ODBC Third-party Components Compatibility Matrix",
+      "context": "third-party component",
+      "rows": 1,
+      "component": "OpenLDAP",
+      "library_version": "2.6.10",
+      "build": "8.0.2",
+      "build_number": "08.02.0131",
+      "release_date": "2026-05-11",
+      "reason": "a third-party component bundled into Progress DataDirect ODBC drivers, not a Progress product lifecycle: the page's own sentence scopes this table to 'the latest builds of third-party components for Progress DataDirect for ODBC Drivers that are built or modified by Progress DataDirect', and its own note limits it to a non-comprehensive list"
+    },
+    {
+      "table": "ODBC Third-party Components Compatibility Matrix",
+      "context": "third-party component",
+      "rows": 1,
+      "component": "OpenSSL 3.5",
+      "library_version": "3.5.7",
+      "build": "8.0.2",
+      "build_number": "08.02.0161",
+      "release_date": "2026-09-02",
+      "reason": "a third-party component bundled into Progress DataDirect ODBC drivers, not a Progress product lifecycle: the page's own sentence scopes this table to 'the latest builds of third-party components for Progress DataDirect for ODBC Drivers that are built or modified by Progress DataDirect', and its own note limits it to a non-comprehensive list"
+    }
+  ],
+  "retained": [],
+  "notice_only": [
+    "Stylus Studio XML"
+  ],
+  "end_of_life_notice": {
+    "title": "Progress DataDirect DIS Products End of Life Frequently Asked Questions",
+    "date_stated": "February 20, 2024",
+    "products": [
+      "DataDirect XML Converters",
+      "DataDirect XQuery",
+      "Stylus Studio XML"
+    ],
+    "eol": "2024-11-30",
+    "definition": "End of Life status will no longer be updated",
+    "quote": "officially announcing today the End of Life (EOL) of its Data Integration Suite (DIS) products"
+  },
+  "total_records": 94,
+  "limitations": [
+    "A stream's Latest Release Date is that release's own date and is the only column that becomes a milestone. The page frames the stages it tracks as running from General Availability (GA) to retirement.",
+    "Stream Retirement Date becomes no milestone. The policy sets it one year after a stream is reclassified and then puts that stream's most recent release in the Sunset phase, with the prior releases in the Retired phase, so a sunset release is still in a supported phase and the stream's target date is not its terminal support end. The cell is retained verbatim.",
+    "The DataDirect page states six date shapes in one column and all six are accepted: a two-digit year, a four-digit year, a spelled month, an unpadded day, a padded day, and a month with no day at all. The month-only cell publishes a month and is never widened into a day. An unrecognized shape refuses the run.",
+    "The table's stream retirement target and the notice's announced end of life are different milestones and both are kept. The notice is the only place the vendor states a terminal date, and it defines that date as the point after which the product is no longer updated; it is the only eol this source publishes.",
+    "The third-party component table is excluded row by row: it lists the builds of ICU, Libcurl, OpenLDAP and OpenSSL that Progress's ODBC drivers bundle, which the page's own sentence scopes to third-party components and whose own note limits it to a non-comprehensive list. They are not Progress product lifecycles.",
+    "The two product tables carry the same shape and the page gives neither a caption nor a label, so they are read in document order and the count of two is required. A driver stated in both would refuse the run rather than be published twice.",
+    "A driver's ``**`` platform footnote stays on the driver name that carries it, the footnote text is required verbatim, and the run refuses if no driver still carries the mark — the mark is the vendor's only link between a row and its platform limitation, and a page keeping the footnote while dropping every mark would state a limitation nothing refers to. The marked drivers are named in the report.",
+    "The vendor states no publication cadence for this page. It carries its own 'Last Updated' date, which the refresh records but does not interpret."
+  ]
+}

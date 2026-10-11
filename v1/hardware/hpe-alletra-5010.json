@@ -1,0 +1,91 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "hpe-alletra-5010",
+  "name": "HPE Alletra 5010",
+  "category": "hardware",
+  "vendor": "HPE",
+  "product_line": "Alletra Storage 5000",
+  "family": "Alletra Storage",
+  "model_number": "Alletra 5010",
+  "milestones": {
+    "ga": null,
+    "eos": "2026-10-31",
+    "eossec": null,
+    "eol": "2031-12-31"
+  },
+  "status": "supported",
+  "upstream": {
+    "Product": {
+      "text": "HPE Alletra 5010",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "Alletra 5010",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Alletra Storage 5000",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Sale Date": {
+      "text": "Oct. 31, 2026",
+      "datetime": "2026-10-31",
+      "value": "2026-10-31",
+      "role": "eos",
+      "links": []
+    },
+    "Discontinuance Date": {
+      "text": "Sep. 30, 2026",
+      "datetime": "2026-09-30",
+      "value": "2026-09-30",
+      "role": null,
+      "links": []
+    },
+    "End of Service Date": {
+      "text": "Dec. 31, 2031",
+      "datetime": "2031-12-31",
+      "value": "2031-12-31",
+      "role": "eol",
+      "links": []
+    },
+    "EOL Announcement Date": {
+      "text": "May. 01, 2026",
+      "datetime": "2026-05-01",
+      "value": "2026-05-01",
+      "role": null,
+      "links": []
+    },
+    "End of Hardware Upgrades Date": {
+      "text": "Oct. 31, 2029",
+      "datetime": "2029-10-31",
+      "value": "2029-10-31",
+      "role": null,
+      "links": []
+    },
+    "End of Engineering Support Date": {
+      "text": "Dec. 31, 2031",
+      "datetime": "2031-12-31",
+      "value": "2031-12-31",
+      "role": null,
+      "links": [
+        "https://support.hpe.com/hpesc/docDisplay?docLocale=en_US&docId=a00159357en_us"
+      ]
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/vendor/hpe/alletra-storage/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

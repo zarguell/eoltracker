@@ -1,0 +1,885 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "grafana",
+  "name": "Grafana",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "grafana"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/grafana/grafana"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:golang/github.com/grafana/grafana"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:grafana:grafana"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/grafana.svg",
+    "html": "https://endoflife.date/grafana",
+    "releasePolicy": null
+  },
+  "releases": [
+    {
+      "id": "13.2",
+      "name": "13.2",
+      "milestones": {
+        "ga": "2026-08-18",
+        "eos": null,
+        "eossec": "2027-05-18",
+        "eol": null
+      },
+      "upstream": {
+        "name": "13.2",
+        "codename": null,
+        "label": "13.2",
+        "releaseDate": "2026-08-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-05-18",
+        "isMaintained": true,
+        "latest": {
+          "name": "13.2.2",
+          "date": "2026-09-15",
+          "link": "https://github.com/grafana/grafana/releases/tag/v13.2.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "13.1",
+      "name": "13.1",
+      "milestones": {
+        "ga": "2026-06-23",
+        "eos": null,
+        "eossec": "2027-03-20",
+        "eol": null
+      },
+      "upstream": {
+        "name": "13.1",
+        "codename": null,
+        "label": "13.1",
+        "releaseDate": "2026-06-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-08-18",
+        "isEol": false,
+        "eolFrom": "2027-03-20",
+        "isMaintained": true,
+        "latest": {
+          "name": "13.1.6",
+          "date": "2026-09-15",
+          "link": "https://github.com/grafana/grafana/releases/tag/v13.1.6"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "13.0",
+      "name": "13.0",
+      "milestones": {
+        "ga": "2026-04-14",
+        "eos": null,
+        "eossec": "2027-01-09",
+        "eol": null
+      },
+      "upstream": {
+        "name": "13.0",
+        "codename": null,
+        "label": "13.0",
+        "releaseDate": "2026-04-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-06-22",
+        "isEol": false,
+        "eolFrom": "2027-01-09",
+        "isMaintained": true,
+        "latest": {
+          "name": "13.0.9",
+          "date": "2026-09-15",
+          "link": "https://github.com/grafana/grafana/releases/tag/v13.0.9"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "12.4",
+      "name": "12.4",
+      "milestones": {
+        "ga": "2026-02-24",
+        "eos": null,
+        "eossec": "2027-05-24",
+        "eol": null
+      },
+      "upstream": {
+        "name": "12.4",
+        "codename": null,
+        "label": "12.4",
+        "releaseDate": "2026-02-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-04-17",
+        "isEol": false,
+        "eolFrom": "2027-05-24",
+        "isMaintained": true,
+        "latest": {
+          "name": "12.4.11",
+          "date": "2026-09-15",
+          "link": "https://github.com/grafana/grafana/releases/tag/v12.4.11"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "12.3",
+      "name": "12.3",
+      "milestones": {
+        "ga": "2025-11-19",
+        "eos": null,
+        "eossec": "2026-08-19",
+        "eol": null
+      },
+      "upstream": {
+        "name": "12.3",
+        "codename": null,
+        "label": "12.3",
+        "releaseDate": "2025-11-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-02-24",
+        "isEol": true,
+        "eolFrom": "2026-08-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "12.3.11",
+          "date": "2026-08-18",
+          "link": "https://github.com/grafana/grafana/releases/tag/v12.3.11"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "12.2",
+      "name": "12.2",
+      "milestones": {
+        "ga": "2025-09-23",
+        "eos": null,
+        "eossec": "2026-06-23",
+        "eol": null
+      },
+      "upstream": {
+        "name": "12.2",
+        "codename": null,
+        "label": "12.2",
+        "releaseDate": "2025-09-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-11-19",
+        "isEol": true,
+        "eolFrom": "2026-06-23",
+        "isMaintained": false,
+        "latest": {
+          "name": "12.2.10",
+          "date": "2026-06-23",
+          "link": "https://github.com/grafana/grafana/releases/tag/v12.2.10"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "12.1",
+      "name": "12.1",
+      "milestones": {
+        "ga": "2025-07-22",
+        "eos": null,
+        "eossec": "2026-04-22",
+        "eol": null
+      },
+      "upstream": {
+        "name": "12.1",
+        "codename": null,
+        "label": "12.1",
+        "releaseDate": "2025-07-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-09-23",
+        "isEol": true,
+        "eolFrom": "2026-04-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "12.1.10+security-01",
+          "date": "2026-03-25",
+          "link": "https://github.com/grafana/grafana/releases/tag/v12.1.10+security-01"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "12.0",
+      "name": "12.0",
+      "milestones": {
+        "ga": "2025-05-05",
+        "eos": null,
+        "eossec": "2026-02-05",
+        "eol": null
+      },
+      "upstream": {
+        "name": "12.0",
+        "codename": null,
+        "label": "12.0",
+        "releaseDate": "2025-05-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-07-22",
+        "isEol": true,
+        "eolFrom": "2026-02-05",
+        "isMaintained": false,
+        "latest": {
+          "name": "12.0.10",
+          "date": "2026-02-12",
+          "link": "https://github.com/grafana/grafana/releases/tag/v12.0.10"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "11.6",
+      "name": "11.6",
+      "milestones": {
+        "ga": "2025-03-25",
+        "eos": null,
+        "eossec": "2026-06-25",
+        "eol": null
+      },
+      "upstream": {
+        "name": "11.6",
+        "codename": null,
+        "label": "11.6",
+        "releaseDate": "2025-03-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-05-05",
+        "isEol": true,
+        "eolFrom": "2026-06-25",
+        "isMaintained": false,
+        "latest": {
+          "name": "11.6.16",
+          "date": "2026-06-23",
+          "link": "https://github.com/grafana/grafana/releases/tag/v11.6.16"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "11.5",
+      "name": "11.5",
+      "milestones": {
+        "ga": "2025-01-28",
+        "eos": null,
+        "eossec": "2025-10-28",
+        "eol": null
+      },
+      "upstream": {
+        "name": "11.5",
+        "codename": null,
+        "label": "11.5",
+        "releaseDate": "2025-01-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-03-25",
+        "isEol": true,
+        "eolFrom": "2025-10-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "11.5.10",
+          "date": "2025-10-21",
+          "link": "https://github.com/grafana/grafana/releases/tag/v11.5.10"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "11.4",
+      "name": "11.4",
+      "milestones": {
+        "ga": "2024-12-05",
+        "eos": null,
+        "eossec": "2025-09-05",
+        "eol": null
+      },
+      "upstream": {
+        "name": "11.4",
+        "codename": null,
+        "label": "11.4",
+        "releaseDate": "2024-12-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-01-28",
+        "isEol": true,
+        "eolFrom": "2025-09-05",
+        "isMaintained": false,
+        "latest": {
+          "name": "11.4.8",
+          "date": "2025-08-12",
+          "link": "https://github.com/grafana/grafana/releases/tag/v11.4.8"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "11.3",
+      "name": "11.3",
+      "milestones": {
+        "ga": "2024-10-22",
+        "eos": null,
+        "eossec": "2025-07-22",
+        "eol": null
+      },
+      "upstream": {
+        "name": "11.3",
+        "codename": null,
+        "label": "11.3",
+        "releaseDate": "2024-10-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-12-05",
+        "isEol": true,
+        "eolFrom": "2025-07-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "11.3.9",
+          "date": "2025-07-18",
+          "link": "https://github.com/grafana/grafana/releases/tag/v11.3.9"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "11.2",
+      "name": "11.2",
+      "milestones": {
+        "ga": "2024-08-27",
+        "eos": null,
+        "eossec": "2025-05-27",
+        "eol": null
+      },
+      "upstream": {
+        "name": "11.2",
+        "codename": null,
+        "label": "11.2",
+        "releaseDate": "2024-08-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-10-22",
+        "isEol": true,
+        "eolFrom": "2025-05-27",
+        "isMaintained": false,
+        "latest": {
+          "name": "11.2.10+security-01",
+          "date": "2025-05-28",
+          "link": "https://github.com/grafana/grafana/releases/tag/v11.2.10+security-01"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "11.1",
+      "name": "11.1",
+      "milestones": {
+        "ga": "2024-06-25",
+        "eos": null,
+        "eossec": "2025-04-23",
+        "eol": null
+      },
+      "upstream": {
+        "name": "11.1",
+        "codename": null,
+        "label": "11.1",
+        "releaseDate": "2024-06-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-08-27",
+        "isEol": true,
+        "eolFrom": "2025-04-23",
+        "isMaintained": false,
+        "latest": {
+          "name": "11.1.13",
+          "date": "2025-03-21",
+          "link": "https://github.com/grafana/grafana/releases/tag/v11.1.13"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "11.0",
+      "name": "11.0",
+      "milestones": {
+        "ga": "2024-05-14",
+        "eos": null,
+        "eossec": "2025-02-14",
+        "eol": null
+      },
+      "upstream": {
+        "name": "11.0",
+        "codename": null,
+        "label": "11.0",
+        "releaseDate": "2024-05-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-06-21",
+        "isEol": true,
+        "eolFrom": "2025-02-14",
+        "isMaintained": false,
+        "latest": {
+          "name": "11.0.11",
+          "date": "2025-02-14",
+          "link": "https://github.com/grafana/grafana/releases/tag/v11.0.11"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "10.4",
+      "name": "10.4",
+      "milestones": {
+        "ga": "2024-03-05",
+        "eos": null,
+        "eossec": "2025-06-05",
+        "eol": null
+      },
+      "upstream": {
+        "name": "10.4",
+        "codename": null,
+        "label": "10.4",
+        "releaseDate": "2024-03-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-05-13",
+        "isEol": true,
+        "eolFrom": "2025-06-05",
+        "isMaintained": false,
+        "latest": {
+          "name": "10.4.19+security-01",
+          "date": "2025-06-12",
+          "link": "https://github.com/grafana/grafana/releases/tag/v10.4.19+security-01"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "10.3",
+      "name": "10.3",
+      "milestones": {
+        "ga": "2024-01-23",
+        "eos": null,
+        "eossec": "2024-10-23",
+        "eol": null
+      },
+      "upstream": {
+        "name": "10.3",
+        "codename": null,
+        "label": "10.3",
+        "releaseDate": "2024-01-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-03-06",
+        "isEol": true,
+        "eolFrom": "2024-10-23",
+        "isMaintained": false,
+        "latest": {
+          "name": "10.3.12",
+          "date": "2024-10-18",
+          "link": "https://github.com/grafana/grafana/releases/tag/v10.3.12"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "10.2",
+      "name": "10.2",
+      "milestones": {
+        "ga": "2023-10-24",
+        "eos": null,
+        "eossec": "2024-07-24",
+        "eol": null
+      },
+      "upstream": {
+        "name": "10.2",
+        "codename": null,
+        "label": "10.2",
+        "releaseDate": "2023-10-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-01-23",
+        "isEol": true,
+        "eolFrom": "2024-07-24",
+        "isMaintained": false,
+        "latest": {
+          "name": "10.2.9",
+          "date": "2024-07-23",
+          "link": "https://github.com/grafana/grafana/releases/tag/v10.2.9"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "10.1",
+      "name": "10.1",
+      "milestones": {
+        "ga": "2023-08-23",
+        "eos": null,
+        "eossec": "2024-01-23",
+        "eol": null
+      },
+      "upstream": {
+        "name": "10.1",
+        "codename": null,
+        "label": "10.1",
+        "releaseDate": "2023-08-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-10-24",
+        "isEol": true,
+        "eolFrom": "2024-01-23",
+        "isMaintained": false,
+        "latest": {
+          "name": "10.1.10",
+          "date": "2024-05-13",
+          "link": "https://github.com/grafana/grafana/releases/tag/v10.1.10"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "10.0",
+      "name": "10.0",
+      "milestones": {
+        "ga": "2023-06-09",
+        "eos": null,
+        "eossec": "2023-10-24",
+        "eol": null
+      },
+      "upstream": {
+        "name": "10.0",
+        "codename": null,
+        "label": "10.0",
+        "releaseDate": "2023-06-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-08-23",
+        "isEol": true,
+        "eolFrom": "2023-10-24",
+        "isMaintained": false,
+        "latest": {
+          "name": "10.0.13",
+          "date": "2024-03-25",
+          "link": "https://github.com/grafana/grafana/releases/tag/v10.0.13"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.5",
+      "name": "9.5",
+      "milestones": {
+        "ga": "2023-04-06",
+        "eos": null,
+        "eossec": "2024-05-14",
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.5",
+        "codename": null,
+        "label": "9.5",
+        "releaseDate": "2023-04-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-06-09",
+        "isEol": true,
+        "eolFrom": "2024-05-14",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.5.21",
+          "date": "2024-07-25",
+          "link": "https://github.com/grafana/grafana/releases/tag/v9.5.21"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.4",
+      "name": "9.4",
+      "milestones": {
+        "ga": "2023-02-27",
+        "eos": null,
+        "eossec": "2023-06-09",
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.4",
+        "codename": null,
+        "label": "9.4",
+        "releaseDate": "2023-02-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-04-06",
+        "isEol": true,
+        "eolFrom": "2023-06-09",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.4.17",
+          "date": "2023-10-11",
+          "link": "https://github.com/grafana/grafana/releases/tag/v9.4.17"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.3",
+      "name": "9.3",
+      "milestones": {
+        "ga": "2022-11-29",
+        "eos": null,
+        "eossec": "2023-04-06",
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.3",
+        "codename": null,
+        "label": "9.3",
+        "releaseDate": "2022-11-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-02-27",
+        "isEol": true,
+        "eolFrom": "2023-04-06",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.3.16",
+          "date": "2023-06-07",
+          "link": "https://github.com/grafana/grafana/releases/tag/v9.3.16"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.2",
+      "name": "9.2",
+      "milestones": {
+        "ga": "2022-10-11",
+        "eos": null,
+        "eossec": "2023-02-27",
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.2",
+        "codename": null,
+        "label": "9.2",
+        "releaseDate": "2022-10-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-11-29",
+        "isEol": true,
+        "eolFrom": "2023-02-27",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.2.20",
+          "date": "2023-06-07",
+          "link": "https://github.com/grafana/grafana/releases/tag/v9.2.20"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.1",
+      "name": "9.1",
+      "milestones": {
+        "ga": "2022-08-16",
+        "eos": null,
+        "eossec": "2022-11-29",
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.1",
+        "codename": null,
+        "label": "9.1",
+        "releaseDate": "2022-08-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-10-11",
+        "isEol": true,
+        "eolFrom": "2022-11-29",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.1.8",
+          "date": "2022-10-11",
+          "link": "https://github.com/grafana/grafana/releases/tag/v9.1.8"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.0",
+      "name": "9.0",
+      "milestones": {
+        "ga": "2022-06-13",
+        "eos": null,
+        "eossec": "2022-10-11",
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.0",
+        "codename": null,
+        "label": "9.0",
+        "releaseDate": "2022-06-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-08-16",
+        "isEol": true,
+        "eolFrom": "2022-10-11",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.0.9",
+          "date": "2022-09-20",
+          "link": "https://github.com/grafana/grafana/releases/tag/v9.0.9"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8",
+      "name": "8",
+      "milestones": {
+        "ga": "2021-06-08",
+        "eos": null,
+        "eossec": "2023-06-09",
+        "eol": null
+      },
+      "upstream": {
+        "name": "8",
+        "codename": null,
+        "label": "8",
+        "releaseDate": "2021-06-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-06-13",
+        "isEol": true,
+        "eolFrom": "2023-06-09",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.5.27",
+          "date": "2023-06-07",
+          "link": "https://github.com/grafana/grafana/releases/tag/v8.5.27"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7",
+      "name": "7",
+      "milestones": {
+        "ga": "2020-05-15",
+        "eos": null,
+        "eossec": "2022-06-14",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7",
+        "codename": null,
+        "label": "7",
+        "releaseDate": "2020-05-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-06-08",
+        "isEol": true,
+        "eolFrom": "2022-06-14",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.5.17",
+          "date": "2022-09-26",
+          "link": "https://github.com/grafana/grafana/releases/tag/v7.5.17"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6",
+      "name": "6",
+      "milestones": {
+        "ga": "2019-02-25",
+        "eos": null,
+        "eossec": "2021-06-08",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6",
+        "codename": null,
+        "label": "6",
+        "releaseDate": "2019-02-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-05-15",
+        "isEol": true,
+        "eolFrom": "2021-06-08",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.7.6",
+          "date": "2021-03-18",
+          "link": "https://github.com/grafana/grafana/releases/tag/v6.7.6"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/grafana/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-16T00:07:55+00:00"
+  }
+}

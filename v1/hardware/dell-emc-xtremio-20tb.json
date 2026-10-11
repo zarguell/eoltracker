@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-xtremio-20tb",
+  "name": "XtremIO 20TB",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC XtremIO",
+  "family": "XtremIO",
+  "model_number": "XtremIO 20TB",
+  "milestones": {
+    "ga": "2014-02-01",
+    "eos": "2018-08-31",
+    "eossec": null,
+    "eol": "2023-04-30"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "XtremIO 20TB",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "XtremIO 20TB",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC XtremIO",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2018-08-31",
+      "datetime": null,
+      "value": "2018-08-31",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Feb. 01, 2014",
+      "datetime": "2014-02-01",
+      "value": "2014-02-01",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2023-04-30",
+      "datetime": null,
+      "value": "2023-04-30",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/san-storage/vendor/dell-emc/xtremio/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

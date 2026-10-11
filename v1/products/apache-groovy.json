@@ -1,0 +1,226 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "apache-groovy",
+  "name": "Apache Groovy",
+  "category": "software",
+  "upstream_category": "lang",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "groovy"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:apache:groovy"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:apache:groovy"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:maven/org.apache.groovy/groovy"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:maven/org.codehaus.groovy/groovy"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:maven/org.codehaus.groovy/groovy-all"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Bug and Security Fixes",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/apachegroovy.svg",
+    "html": "https://endoflife.date/apache-groovy",
+    "releasePolicy": "https://groovy.apache.org/versioning.html"
+  },
+  "releases": [
+    {
+      "id": "5.1",
+      "name": "5.1",
+      "milestones": {
+        "ga": "2026-08-15",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.1",
+        "codename": null,
+        "label": "5.1",
+        "releaseDate": "2026-08-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "5.1.2",
+          "date": "2026-09-04",
+          "link": "https://groovy-lang.org/changelogs/changelog-5.1.2.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.0",
+      "name": "5.0",
+      "milestones": {
+        "ga": "2025-08-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.0",
+        "codename": null,
+        "label": "5.0",
+        "releaseDate": "2025-08-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-08-15",
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "5.0.8",
+          "date": "2026-07-29",
+          "link": "https://groovy-lang.org/changelogs/changelog-5.0.8.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.0",
+      "name": "4.0",
+      "milestones": {
+        "ga": "2022-01-25",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.0",
+        "codename": null,
+        "label": "4.0",
+        "releaseDate": "2022-01-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-08-21",
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "4.0.33",
+          "date": "2026-07-29",
+          "link": "https://groovy-lang.org/changelogs/changelog-4.0.33.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.0",
+      "name": "3.0",
+      "milestones": {
+        "ga": "2020-02-10",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.0",
+        "codename": null,
+        "label": "3.0",
+        "releaseDate": "2020-02-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-01-25",
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "3.0.25",
+          "date": "2025-05-24",
+          "link": "https://groovy-lang.org/changelogs/changelog-3.0.25.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.5",
+      "name": "2.5",
+      "milestones": {
+        "ga": "2018-05-30",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.5",
+        "codename": null,
+        "label": "2.5",
+        "releaseDate": "2018-05-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-04-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.5.23",
+          "date": "2023-08-19",
+          "link": "https://groovy-lang.org/changelogs/changelog-2.5.23.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.4",
+      "name": "2.4",
+      "milestones": {
+        "ga": "2015-01-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.4",
+        "codename": null,
+        "label": "2.4",
+        "releaseDate": "2015-01-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "2.4.21",
+          "date": "2020-11-30",
+          "link": "https://groovy-lang.org/changelogs/changelog-2.4.21.html"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/apache-groovy/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-05T00:06:48+00:00"
+  }
+}

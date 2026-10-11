@@ -1,0 +1,54 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "hpe-primera-600",
+  "name": "HPE Primera 600",
+  "category": "hardware",
+  "vendor": "HPE",
+  "product_line": "HPE Primera Storage",
+  "family": "Primera",
+  "model_number": "Primera 600",
+  "milestones": {
+    "ga": null,
+    "eos": null,
+    "eossec": null,
+    "eol": "2030-05-31"
+  },
+  "status": "supported",
+  "upstream": {
+    "Product": {
+      "text": "HPE Primera 600",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "Primera 600",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "HPE Primera Storage",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Service": {
+      "text": "2030-05-31",
+      "datetime": null,
+      "value": "2030-05-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/vendor/hpe/primera/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

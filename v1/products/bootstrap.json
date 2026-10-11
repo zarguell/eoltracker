@@ -1,0 +1,176 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "bootstrap",
+  "name": "Bootstrap",
+  "category": "software",
+  "upstream_category": "framework",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "bootstrap"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:npm/bootstrap"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:nuget/bootstrap"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:gem/bootstrap"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:composer/twbs/bootstrap"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/twbs/bootstrap"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Critical Support",
+    "eoes": "Commercial Support"
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/bootstrap.svg",
+    "html": "https://endoflife.date/bootstrap",
+    "releasePolicy": "https://github.com/twbs/release"
+  },
+  "releases": [
+    {
+      "id": "5",
+      "name": "5 (LTS)",
+      "milestones": {
+        "ga": "2021-05-05",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5",
+        "codename": null,
+        "label": "5 (LTS)",
+        "releaseDate": "2021-05-05",
+        "isLts": true,
+        "ltsFrom": "2022-07-19",
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "5.3.8",
+          "date": "2025-08-25",
+          "link": "https://github.com/twbs/bootstrap/releases/tag/v5.3.8"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4",
+      "name": "4 (LTS)",
+      "milestones": {
+        "ga": "2018-01-18",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4",
+        "codename": null,
+        "label": "4 (LTS)",
+        "releaseDate": "2018-01-18",
+        "isLts": true,
+        "ltsFrom": "2019-11-26",
+        "isEoas": true,
+        "eoasFrom": "2021-11-01",
+        "isEol": true,
+        "eolFrom": "2023-01-01",
+        "isEoes": false,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "4.6.2",
+          "date": "2022-07-19",
+          "link": "https://github.com/twbs/bootstrap/releases/tag/v4.6.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3",
+      "name": "3 (LTS)",
+      "milestones": {
+        "ga": "2013-08-19",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3",
+        "codename": null,
+        "label": "3 (LTS)",
+        "releaseDate": "2013-08-19",
+        "isLts": true,
+        "ltsFrom": "2014-11-01",
+        "isEoas": true,
+        "eoasFrom": "2016-09-05",
+        "isEol": true,
+        "eolFrom": "2019-07-24",
+        "isEoes": false,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "3.4.1",
+          "date": "2019-02-13",
+          "link": "https://github.com/twbs/bootstrap/releases/tag/v3.4.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2",
+      "name": "2",
+      "milestones": {
+        "ga": "2012-01-31",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2",
+        "codename": null,
+        "label": "2",
+        "releaseDate": "2012-01-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2013-08-19",
+        "isEol": true,
+        "eolFrom": "2013-08-19",
+        "isEoes": false,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "2.3.2",
+          "date": "2013-07-26",
+          "link": "https://github.com/twbs/bootstrap/releases/tag/v2.3.2"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/bootstrap/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-08-30T16:26:03+00:00"
+  }
+}

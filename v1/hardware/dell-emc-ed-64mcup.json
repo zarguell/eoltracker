@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-ed-64mcup",
+  "name": "ED-64MCUP",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Connectrix - McData",
+  "family": "Connectrix - McData",
+  "model_number": "ED-64MCUP",
+  "milestones": {
+    "ga": "2002-04-01",
+    "eos": "2005-06-30",
+    "eossec": null,
+    "eol": "2010-06-30"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "ED-64MCUP",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "ED-64MCUP",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Connectrix - McData",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2005-06-30",
+      "datetime": null,
+      "value": "2005-06-30",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Apr. 01, 2002",
+      "datetime": "2002-04-01",
+      "value": "2002-04-01",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2010-06-30",
+      "datetime": null,
+      "value": "2010-06-30",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/san-switches/vendor/dell-emc/connectrix-mcdata/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

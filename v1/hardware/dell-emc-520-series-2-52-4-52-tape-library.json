@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-520-series-2-52-4-52-tape-library",
+  "name": "520 Series (2/52, 4/52) Tape Library",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC EMC Data Manager (EDM)",
+  "family": "EMC Data Manager (EDM)",
+  "model_number": "520 Series (2/52, 4/52) Tape Library",
+  "milestones": {
+    "ga": "1995-03-01",
+    "eos": "2000-03-31",
+    "eossec": null,
+    "eol": "2005-03-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "520 Series (2/52, 4/52) Tape Library",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "520 Series (2/52, 4/52) Tape Library",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC EMC Data Manager (EDM)",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2000-03-31",
+      "datetime": null,
+      "value": "2000-03-31",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Mar. 01, 1995",
+      "datetime": "1995-03-01",
+      "value": "1995-03-01",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2005-03-31",
+      "datetime": null,
+      "value": "2005-03-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/backup/vendor/dell-emc/emc-data-manager-edm/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

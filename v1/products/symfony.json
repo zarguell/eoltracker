@@ -1,0 +1,910 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "symfony",
+  "name": "Symfony",
+  "category": "software",
+  "upstream_category": "framework",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "php:symfony"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:sensiolabs:symfony"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:sensiolabs:symfony"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/symfony.svg",
+    "html": "https://endoflife.date/symfony",
+    "releasePolicy": "https://symfony.com/releases"
+  },
+  "releases": [
+    {
+      "id": "8.1",
+      "name": "8.1",
+      "milestones": {
+        "ga": "2026-05-29",
+        "eos": null,
+        "eossec": "2027-01-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "8.1",
+        "codename": null,
+        "label": "8.1",
+        "releaseDate": "2026-05-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": "2027-01-31",
+        "isEol": false,
+        "eolFrom": "2027-01-31",
+        "isMaintained": true,
+        "latest": {
+          "name": "8.1.7",
+          "date": "2026-09-15",
+          "link": "https://symfony.com/blog/symfony-8-1-7-released"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.0",
+      "name": "8.0",
+      "milestones": {
+        "ga": "2025-11-27",
+        "eos": null,
+        "eossec": "2026-07-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "8.0",
+        "codename": null,
+        "label": "8.0",
+        "releaseDate": "2025-11-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-07-31",
+        "isEol": true,
+        "eolFrom": "2026-07-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.0.16",
+          "date": "2026-07-29",
+          "link": "https://symfony.com/blog/symfony-8-0-16-released"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.4",
+      "name": "7.4 (LTS)",
+      "milestones": {
+        "ga": "2025-11-27",
+        "eos": null,
+        "eossec": "2029-11-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.4",
+        "codename": null,
+        "label": "7.4 (LTS)",
+        "releaseDate": "2025-11-27",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": "2028-11-30",
+        "isEol": false,
+        "eolFrom": "2029-11-30",
+        "isMaintained": true,
+        "latest": {
+          "name": "7.4.19",
+          "date": "2026-09-15",
+          "link": "https://symfony.com/blog/symfony-7-4-19-released"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.3",
+      "name": "7.3",
+      "milestones": {
+        "ga": "2025-05-29",
+        "eos": null,
+        "eossec": "2026-01-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.3",
+        "codename": null,
+        "label": "7.3",
+        "releaseDate": "2025-05-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-01-31",
+        "isEol": true,
+        "eolFrom": "2026-01-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.3.11",
+          "date": "2026-01-28",
+          "link": "https://symfony.com/blog/symfony-7-3-11-released"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.2",
+      "name": "7.2",
+      "milestones": {
+        "ga": "2024-11-29",
+        "eos": null,
+        "eossec": "2025-07-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.2",
+        "codename": null,
+        "label": "7.2",
+        "releaseDate": "2024-11-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-07-31",
+        "isEol": true,
+        "eolFrom": "2025-07-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.2.9",
+          "date": "2025-07-31",
+          "link": "https://symfony.com/blog/symfony-7-2-9-released"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.1",
+      "name": "7.1",
+      "milestones": {
+        "ga": "2024-05-31",
+        "eos": null,
+        "eossec": "2025-01-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.1",
+        "codename": null,
+        "label": "7.1",
+        "releaseDate": "2024-05-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-01-31",
+        "isEol": true,
+        "eolFrom": "2025-01-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.1.11",
+          "date": "2025-01-29",
+          "link": "https://symfony.com/blog/symfony-7-1-11-released"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.0",
+      "name": "7.0",
+      "milestones": {
+        "ga": "2023-11-29",
+        "eos": null,
+        "eossec": "2024-07-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.0",
+        "codename": null,
+        "label": "7.0",
+        "releaseDate": "2023-11-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-07-31",
+        "isEol": true,
+        "eolFrom": "2024-07-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.0.10",
+          "date": "2024-07-26",
+          "link": "https://symfony.com/blog/symfony-7-0-10-released"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.4",
+      "name": "6.4 (LTS)",
+      "milestones": {
+        "ga": "2023-11-29",
+        "eos": null,
+        "eossec": "2027-11-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.4",
+        "codename": null,
+        "label": "6.4 (LTS)",
+        "releaseDate": "2023-11-29",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": "2026-11-30",
+        "isEol": false,
+        "eolFrom": "2027-11-30",
+        "isMaintained": true,
+        "latest": {
+          "name": "6.4.46",
+          "date": "2026-09-15",
+          "link": "https://symfony.com/blog/symfony-6-4-46-released"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.3",
+      "name": "6.3",
+      "milestones": {
+        "ga": "2023-05-30",
+        "eos": null,
+        "eossec": "2024-01-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.3",
+        "codename": null,
+        "label": "6.3",
+        "releaseDate": "2023-05-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-01-31",
+        "isEol": true,
+        "eolFrom": "2024-01-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.3.12",
+          "date": "2024-01-30",
+          "link": "https://symfony.com/blog/symfony-6-3-12-released"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.2",
+      "name": "6.2",
+      "milestones": {
+        "ga": "2022-11-30",
+        "eos": null,
+        "eossec": "2023-07-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.2",
+        "codename": null,
+        "label": "6.2",
+        "releaseDate": "2022-11-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-07-31",
+        "isEol": true,
+        "eolFrom": "2023-07-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.2.14",
+          "date": "2023-07-31",
+          "link": "https://symfony.com/blog/symfony-6-2-14-released"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.1",
+      "name": "6.1",
+      "milestones": {
+        "ga": "2022-05-27",
+        "eos": null,
+        "eossec": "2023-01-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.1",
+        "codename": null,
+        "label": "6.1",
+        "releaseDate": "2022-05-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-01-31",
+        "isEol": true,
+        "eolFrom": "2023-01-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.1.12",
+          "date": "2023-02-01",
+          "link": "https://symfony.com/blog/symfony-6-1-12-released"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.0",
+      "name": "6.0",
+      "milestones": {
+        "ga": "2021-11-29",
+        "eos": null,
+        "eossec": "2023-01-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.0",
+        "codename": null,
+        "label": "6.0",
+        "releaseDate": "2021-11-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-01-31",
+        "isEol": true,
+        "eolFrom": "2023-01-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.0.20",
+          "date": "2023-02-01",
+          "link": "https://symfony.com/blog/symfony-6-0-20-released"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.4",
+      "name": "5.4 (LTS)",
+      "milestones": {
+        "ga": "2021-11-29",
+        "eos": null,
+        "eossec": "2029-02-28",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.4",
+        "codename": null,
+        "label": "5.4 (LTS)",
+        "releaseDate": "2021-11-29",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-11-30",
+        "isEol": false,
+        "eolFrom": "2029-02-28",
+        "isMaintained": true,
+        "latest": {
+          "name": "5.4.53",
+          "date": "2026-05-27",
+          "link": "https://symfony.com/blog/symfony-5-4-53-released"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.3",
+      "name": "5.3",
+      "milestones": {
+        "ga": "2021-05-31",
+        "eos": null,
+        "eossec": "2022-01-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.3",
+        "codename": null,
+        "label": "5.3",
+        "releaseDate": "2021-05-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-01-01",
+        "isEol": true,
+        "eolFrom": "2022-01-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.3.16",
+          "date": "2022-03-01",
+          "link": "https://symfony.com/blog/symfony-5-3-16-released"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.2",
+      "name": "5.2",
+      "milestones": {
+        "ga": "2020-11-30",
+        "eos": null,
+        "eossec": "2021-07-21",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.2",
+        "codename": null,
+        "label": "5.2",
+        "releaseDate": "2020-11-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-07-21",
+        "isEol": true,
+        "eolFrom": "2021-07-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.2.14",
+          "date": "2021-07-29",
+          "link": "https://symfony.com/blog/symfony-5-2-14-released"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.1",
+      "name": "5.1",
+      "milestones": {
+        "ga": "2020-05-31",
+        "eos": null,
+        "eossec": "2021-01-21",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.1",
+        "codename": null,
+        "label": "5.1",
+        "releaseDate": "2020-05-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-01-21",
+        "isEol": true,
+        "eolFrom": "2021-01-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.1.11",
+          "date": "2021-01-27",
+          "link": "https://symfony.com/blog/symfony-5-1-11-released"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.0",
+      "name": "5.0",
+      "milestones": {
+        "ga": "2019-11-21",
+        "eos": null,
+        "eossec": "2020-07-21",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.0",
+        "codename": null,
+        "label": "5.0",
+        "releaseDate": "2019-11-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-07-21",
+        "isEol": true,
+        "eolFrom": "2020-07-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.0.11",
+          "date": "2020-07-24",
+          "link": "https://symfony.com/blog/symfony-5-0-11-released"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.4",
+      "name": "4.4 (LTS)",
+      "milestones": {
+        "ga": "2019-11-21",
+        "eos": null,
+        "eossec": "2023-11-21",
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.4",
+        "codename": null,
+        "label": "4.4 (LTS)",
+        "releaseDate": "2019-11-21",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-11-21",
+        "isEol": true,
+        "eolFrom": "2023-11-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.4.51",
+          "date": "2023-11-10",
+          "link": "https://symfony.com/blog/symfony-4-4-51-released"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.3",
+      "name": "4.3",
+      "milestones": {
+        "ga": "2019-05-30",
+        "eos": null,
+        "eossec": "2020-07-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.3",
+        "codename": null,
+        "label": "4.3",
+        "releaseDate": "2019-05-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-01-01",
+        "isEol": true,
+        "eolFrom": "2020-07-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.3.11",
+          "date": "2020-01-31",
+          "link": "https://symfony.com/blog/symfony-4-3-11-released"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.2",
+      "name": "4.2",
+      "milestones": {
+        "ga": "2018-11-30",
+        "eos": null,
+        "eossec": "2020-01-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.2",
+        "codename": null,
+        "label": "4.2",
+        "releaseDate": "2018-11-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2019-07-01",
+        "isEol": true,
+        "eolFrom": "2020-01-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.2.12",
+          "date": "2019-11-13",
+          "link": "https://symfony.com/blog/symfony-4-2-12-released"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.1",
+      "name": "4.1",
+      "milestones": {
+        "ga": "2018-05-30",
+        "eos": null,
+        "eossec": "2019-07-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.1",
+        "codename": null,
+        "label": "4.1",
+        "releaseDate": "2018-05-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2019-01-01",
+        "isEol": true,
+        "eolFrom": "2019-07-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.1.13",
+          "date": "2019-04-17",
+          "link": "https://symfony.com/blog/symfony-4-1-12-released"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.0",
+      "name": "4.0",
+      "milestones": {
+        "ga": "2017-11-30",
+        "eos": null,
+        "eossec": "2019-01-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.0",
+        "codename": null,
+        "label": "4.0",
+        "releaseDate": "2017-11-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2018-07-01",
+        "isEol": true,
+        "eolFrom": "2019-01-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.0.15",
+          "date": "2018-12-06",
+          "link": "https://symfony.com/blog/symfony-4-0-15-released"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.4",
+      "name": "3.4 (LTS)",
+      "milestones": {
+        "ga": "2017-11-30",
+        "eos": null,
+        "eossec": "2021-11-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.4",
+        "codename": null,
+        "label": "3.4 (LTS)",
+        "releaseDate": "2017-11-30",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-11-01",
+        "isEol": true,
+        "eolFrom": "2021-11-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.4.49",
+          "date": "2021-05-19",
+          "link": "https://symfony.com/blog/symfony-3-4-49-released"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.3",
+      "name": "3.3",
+      "milestones": {
+        "ga": "2017-05-29",
+        "eos": null,
+        "eossec": "2018-07-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.3",
+        "codename": null,
+        "label": "3.3",
+        "releaseDate": "2017-05-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2018-01-01",
+        "isEol": true,
+        "eolFrom": "2018-07-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.3.18",
+          "date": "2018-08-01",
+          "link": "https://symfony.com/blog/symfony-3-3-18-released"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.2",
+      "name": "3.2",
+      "milestones": {
+        "ga": "2016-11-30",
+        "eos": null,
+        "eossec": "2018-01-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.2",
+        "codename": null,
+        "label": "3.2",
+        "releaseDate": "2016-11-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2017-07-01",
+        "isEol": true,
+        "eolFrom": "2018-01-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.2.14",
+          "date": "2017-11-16",
+          "link": "https://symfony.com/blog/symfony-3-2-14-released"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.1",
+      "name": "3.1",
+      "milestones": {
+        "ga": "2016-05-30",
+        "eos": null,
+        "eossec": "2017-07-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.1",
+        "codename": null,
+        "label": "3.1",
+        "releaseDate": "2016-05-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2017-01-01",
+        "isEol": true,
+        "eolFrom": "2017-07-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.1.10",
+          "date": "2017-01-27",
+          "link": "https://symfony.com/blog/symfony-3-1-10-released"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.0",
+      "name": "3.0",
+      "milestones": {
+        "ga": "2015-11-30",
+        "eos": null,
+        "eossec": "2017-01-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.0",
+        "codename": null,
+        "label": "3.0",
+        "releaseDate": "2015-11-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2016-07-01",
+        "isEol": true,
+        "eolFrom": "2017-01-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.0.9",
+          "date": "2016-07-30",
+          "link": "https://symfony.com/blog/symfony-3-0-9-released"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.8",
+      "name": "2.8 (LTS)",
+      "milestones": {
+        "ga": "2015-11-30",
+        "eos": null,
+        "eossec": "2019-11-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.8",
+        "codename": null,
+        "label": "2.8 (LTS)",
+        "releaseDate": "2015-11-30",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2018-11-01",
+        "isEol": true,
+        "eolFrom": "2019-11-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.8.52",
+          "date": "2019-11-13",
+          "link": "https://symfony.com/blog/symfony-2-8-52-released"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.7",
+      "name": "2.7 (LTS)",
+      "milestones": {
+        "ga": "2015-05-30",
+        "eos": null,
+        "eossec": "2019-05-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.7",
+        "codename": null,
+        "label": "2.7 (LTS)",
+        "releaseDate": "2015-05-30",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2018-05-01",
+        "isEol": true,
+        "eolFrom": "2019-05-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.7.52",
+          "date": "2019-04-17",
+          "link": "https://symfony.com/blog/symfony-2-7-51-released"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.3",
+      "name": "2.3 (LTS)",
+      "milestones": {
+        "ga": "2013-06-03",
+        "eos": null,
+        "eossec": "2017-05-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.3",
+        "codename": null,
+        "label": "2.3 (LTS)",
+        "releaseDate": "2013-06-03",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2016-05-01",
+        "isEol": true,
+        "eolFrom": "2017-05-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.3.42",
+          "date": "2016-05-30",
+          "link": "https://symfony.com/blog/symfony-2-3-42-released"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/symfony/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-16T00:07:55+00:00"
+  }
+}

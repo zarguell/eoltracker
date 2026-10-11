@@ -1,0 +1,137 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "cisco-nx-os",
+  "name": "Cisco NX-OS",
+  "category": "software",
+  "upstream_category": "os",
+  "identifiers": [],
+  "labels": {
+    "eossec": "EoVSS/LDoS",
+    "eol": "EoVSS/LDoS"
+  },
+  "links": {
+    "html": "https://www.cisco.com/c/en/us/products/collateral/ios-nx-os-software/nx-os-software/guide_c07-658595.html"
+  },
+  "releases": [
+    {
+      "id": "10.2",
+      "name": "Cisco NX-OS 10.2(x)",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": "2025-02-28",
+        "eol": "2025-08-31"
+      },
+      "upstream": {
+        "name": "10.2(x)",
+        "cells": {
+          "NX-OS Major Release": "10.2(x)",
+          "EoSWM Date": "Nov 30 2023",
+          "EoVSS/LDoS": "Feb 28 2025/Aug 31 2025"
+        },
+        "table": "NX-OS EoL Milestones"
+      }
+    },
+    {
+      "id": "10.3",
+      "name": "Cisco NX-OS 10.3(x)",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": "2027-02-28",
+        "eol": "2027-02-28"
+      },
+      "upstream": {
+        "name": "10.3(x)",
+        "cells": {
+          "NX-OS Major Release": "10.3(x)",
+          "EoSWM Date": "Nov 30 2024",
+          "EoVSS/LDoS": "Feb 28 2027 *"
+        },
+        "table": "NX-OS EoL Milestones"
+      }
+    },
+    {
+      "id": "10.4",
+      "name": "Cisco NX-OS 10.4(x)",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": "2028-02-29",
+        "eol": "2028-02-29"
+      },
+      "upstream": {
+        "name": "10.4(x)",
+        "cells": {
+          "NX-OS Major Release": "10.4(x)",
+          "EoSWM Date": "Feb 28 2026",
+          "EoVSS/LDoS": "Feb 29 2028"
+        },
+        "table": "NX-OS EoL Milestones"
+      }
+    },
+    {
+      "id": "10.5",
+      "name": "Cisco NX-OS 10.5(x)",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": "2029-02-28",
+        "eol": "2029-02-28"
+      },
+      "upstream": {
+        "name": "10.5(x)",
+        "cells": {
+          "NX-OS Major Release": "10.5(x)",
+          "EoSWM Date": "Feb 28 2027",
+          "EoVSS/LDoS": "Feb 28 2029"
+        },
+        "table": "NX-OS EoL Milestones"
+      }
+    },
+    {
+      "id": "10.6",
+      "name": "Cisco NX-OS 10.6(x)",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": "2030-02-28",
+        "eol": "2030-02-28"
+      },
+      "upstream": {
+        "name": "10.6(x)",
+        "cells": {
+          "NX-OS Major Release": "10.6(x)",
+          "EoSWM Date": "Feb 29 2028",
+          "EoVSS/LDoS": "Feb 28 2030"
+        },
+        "table": "NX-OS EoL Milestones"
+      }
+    },
+    {
+      "id": "10.7",
+      "name": "Cisco NX-OS 10.7(x)",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": "2031-02-28",
+        "eol": "2031-02-28"
+      },
+      "upstream": {
+        "name": "10.7(x)",
+        "cells": {
+          "NX-OS Major Release": "10.7(x)",
+          "EoSWM Date": "Feb 28 2029",
+          "EoVSS/LDoS": "Feb 28 2031"
+        },
+        "table": "NX-OS EoL Milestones"
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://www.cisco.com/c/en/us/products/collateral/ios-nx-os-software/nx-os-software/guide_c07-658595.html",
+    "verifier": "deterministic-cisco-nx-os",
+    "last_checked": "2026-09-17T23:51:22Z",
+    "upstream_modified": null
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-isilon-a100-with-16gb-dimm",
+  "name": "Isilon A100 with 16GB DIMM",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC PowerScale / Isilon",
+  "family": "PowerScale / Isilon",
+  "model_number": "Isilon A100 with 16GB DIMM",
+  "milestones": {
+    "ga": "2013-07-01",
+    "eos": "2016-01-31",
+    "eossec": null,
+    "eol": "2024-02-29"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "Isilon A100 with 16GB DIMM",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "Isilon A100 with 16GB DIMM",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC PowerScale / Isilon",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2016-01-31",
+      "datetime": null,
+      "value": "2016-01-31",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Jul. 01, 2013",
+      "datetime": "2013-07-01",
+      "value": "2013-07-01",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2024-02-29",
+      "datetime": null,
+      "value": "2024-02-29",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/nas-storage/vendor/dell-emc/powerscale-isilon/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "source_url": "https://www.extremenetworks.com/support/end-of-sale-and-end-of-support-products/",
+  "index_url": "https://www.extremenetworks.com/support/end-of-sale-and-end-of-support-products/",
+  "verifier": "deterministic-extreme",
+  "checked_at": "2026-09-26T20:44:31Z",
+  "record_scope": "Extreme Networks products: one hardware record per marketing part number stated in the vendor's end-of-sale and end-of-service-life extracts, at the day precision each cell states",
+  "rows": {
+    "seen": 7846,
+    "published": 7846,
+    "restated": 0,
+    "sheets": 2,
+    "with_eos": 7845,
+    "with_eol": 7736
+  },
+  "sheets": {
+    "EOS": {
+      "url": "https://extr-p-001.sitecorecontenthub.cloud/api/public/content/7625ff270f974e338948ad890b5f9ec4?v=6d523767",
+      "run_date": "December 16, 2025",
+      "rows": 1779
+    },
+    "EOSL": {
+      "url": "https://extr-p-001.sitecorecontenthub.cloud/api/public/content/0617d83b2519466f83534df56bc3c9c1?v=bc6e33f0",
+      "run_date": "December 16, 2025",
+      "rows": 6067
+    }
+  },
+  "restated": [],
+  "collisions": [
+    {
+      "slug": "rps9dc-i",
+      "part_numbers": [
+        "RPS9DC+I",
+        "RPS9DC-I"
+      ]
+    },
+    {
+      "slug": "salsa-ent-edition-xl",
+      "part_numbers": [
+        "SALSA-Ent-edition XL",
+        "SALSA-Ent-edition-XL"
+      ]
+    }
+  ],
+  "total_records": 7846,
+  "limitations": [
+    "EOS date becomes eos and EOSL date becomes eol, in the vendor's own definitions: the last date the product is available for sale, and the last date to receive service and support from the vendor's technical assistance team.",
+    "EOSM is published verbatim and never mapped. It is the date software stops receiving maintenance releases, which is a maintenance window and not a stated security-support end, so eossec is null everywhere.",
+    "No date is derived. The index page states a five-year support window from the end of sale for hardware; this collector applies it nowhere, and every published date is a cell the vendor wrote.",
+    "The dates are stored as Excel serials, an encoding the vendor documents nowhere. The reader is explicit: a serial at or below 59 is refused because the 1900 epoch cannot distinguish those days, and a serial resolving outside 1990-2100 is refused rather than published. Each record keeps the raw serial beside the day read.",
+    "The three identifier columns carry no data dictionary, so they are published verbatim and the part number is the record's identity only because the vendor's own file is keyed on it. No identifier is invented and no two products are merged.",
+    "A part number stated in both extracts is reconciled: the same dates are one product, and different dates for the same part refuse the run rather than choosing one. As published the two extracts share no part number - 1,779 rows in EOS and 6,067 in EOSL - and the vendor states no membership rule for either cut, so the row counts are reported and the cuts are not characterised.",
+    "Part numbers that differ only in punctuation are never merged. The vendor's own file states RPS9DC-I and RPS9DC+I, which are different hardware, and one product twice with two spellings; the colliding group is listed in collisions and each part keeps a distinct record, because fusing two real SKUs would be worse than publishing one product twice for a human to reconcile.",
+    "The sheet's own 'Run date' cell is required and published, because a spreadsheet that reshapes usually re-dates itself first. The vendor states no publication cadence."
+  ]
+}

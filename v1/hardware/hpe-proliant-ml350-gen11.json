@@ -1,0 +1,61 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "hpe-proliant-ml350-gen11",
+  "name": "ProLiant ML350 Gen11",
+  "category": "hardware",
+  "vendor": "HPE",
+  "product_line": "HPE ProLiant Servers",
+  "family": "ProLiant",
+  "model_number": "ProLiant ML350 Gen11",
+  "milestones": {
+    "ga": "2023-01-10",
+    "eos": null,
+    "eossec": null,
+    "eol": null
+  },
+  "status": "supported",
+  "upstream": {
+    "Product": {
+      "text": "ProLiant ML350 Gen11",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "ProLiant ML350 Gen11",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "HPE ProLiant Servers",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Jan. 10, 2023",
+      "datetime": "2023-01-10",
+      "value": "2023-01-10",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support": {
+      "text": "",
+      "datetime": null,
+      "value": null,
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/servers/vendor/hpe/proliant/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

@@ -1,0 +1,1113 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "wagtail",
+  "name": "Wagtail",
+  "category": "software",
+  "upstream_category": "framework",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "python:wagtail"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:pypi/wagtail"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:torchbox:wagtail"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/wagtail.svg",
+    "html": "https://endoflife.date/wagtail",
+    "releasePolicy": "https://github.com/wagtail/wagtail/wiki/Release-schedule"
+  },
+  "releases": [
+    {
+      "id": "8.0",
+      "name": "8.0",
+      "milestones": {
+        "ga": "2026-08-25",
+        "eos": null,
+        "eossec": "2027-02-02",
+        "eol": null
+      },
+      "upstream": {
+        "name": "8.0",
+        "codename": null,
+        "label": "8.0",
+        "releaseDate": "2026-08-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": "2026-11-03",
+        "isEol": false,
+        "eolFrom": "2027-02-02",
+        "isMaintained": true,
+        "latest": {
+          "name": "8.0",
+          "date": "2026-08-25",
+          "link": "https://docs.wagtail.org/en/stable/releases/8.0.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.4",
+      "name": "7.4 (LTS)",
+      "milestones": {
+        "ga": "2026-05-04",
+        "eos": null,
+        "eossec": "2027-11-02",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.4",
+        "codename": null,
+        "label": "7.4 (LTS)",
+        "releaseDate": "2026-05-04",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": "2027-11-02",
+        "isEol": false,
+        "eolFrom": "2027-11-02",
+        "isMaintained": true,
+        "latest": {
+          "name": "7.4.3",
+          "date": "2026-08-20",
+          "link": "https://docs.wagtail.org/en/stable/releases/7.4.3.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.3",
+      "name": "7.3",
+      "milestones": {
+        "ga": "2026-02-02",
+        "eos": null,
+        "eossec": "2026-08-25",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.3",
+        "codename": null,
+        "label": "7.3",
+        "releaseDate": "2026-02-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-05-04",
+        "isEol": true,
+        "eolFrom": "2026-08-25",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.3.4",
+          "date": "2026-08-20",
+          "link": "https://docs.wagtail.org/en/stable/releases/7.3.4.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.2",
+      "name": "7.2",
+      "milestones": {
+        "ga": "2025-11-05",
+        "eos": null,
+        "eossec": "2026-05-04",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.2",
+        "codename": null,
+        "label": "7.2",
+        "releaseDate": "2025-11-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-02-02",
+        "isEol": true,
+        "eolFrom": "2026-05-04",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.2.3",
+          "date": "2026-03-03",
+          "link": "https://docs.wagtail.org/en/stable/releases/7.2.3.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.1",
+      "name": "7.1",
+      "milestones": {
+        "ga": "2025-08-04",
+        "eos": null,
+        "eossec": "2026-02-02",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.1",
+        "codename": null,
+        "label": "7.1",
+        "releaseDate": "2025-08-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-11-05",
+        "isEol": true,
+        "eolFrom": "2026-02-02",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.1.3",
+          "date": "2026-02-03",
+          "link": "https://docs.wagtail.org/en/stable/releases/7.1.3.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.0",
+      "name": "7.0 (LTS)",
+      "milestones": {
+        "ga": "2025-05-06",
+        "eos": null,
+        "eossec": "2026-11-02",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.0",
+        "codename": null,
+        "label": "7.0 (LTS)",
+        "releaseDate": "2025-05-06",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": "2026-11-02",
+        "isEol": false,
+        "eolFrom": "2026-11-02",
+        "isMaintained": true,
+        "latest": {
+          "name": "7.0.9",
+          "date": "2026-08-20",
+          "link": "https://docs.wagtail.org/en/stable/releases/7.0.9.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.4",
+      "name": "6.4",
+      "milestones": {
+        "ga": "2025-02-03",
+        "eos": null,
+        "eossec": "2025-08-04",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.4",
+        "codename": null,
+        "label": "6.4",
+        "releaseDate": "2025-02-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-05-06",
+        "isEol": true,
+        "eolFrom": "2025-08-04",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.4.2",
+          "date": "2025-06-12",
+          "link": "https://docs.wagtail.org/en/stable/releases/6.4.2.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.3",
+      "name": "6.3 (LTS)",
+      "milestones": {
+        "ga": "2024-11-01",
+        "eos": null,
+        "eossec": "2026-05-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.3",
+        "codename": null,
+        "label": "6.3 (LTS)",
+        "releaseDate": "2024-11-01",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-05-01",
+        "isEol": true,
+        "eolFrom": "2026-05-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.3.8",
+          "date": "2026-03-03",
+          "link": "https://docs.wagtail.org/en/stable/releases/6.3.8.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.2",
+      "name": "6.2",
+      "milestones": {
+        "ga": "2024-08-01",
+        "eos": null,
+        "eossec": "2025-02-03",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.2",
+        "codename": null,
+        "label": "6.2",
+        "releaseDate": "2024-08-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-11-01",
+        "isEol": true,
+        "eolFrom": "2025-02-03",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.2.4",
+          "date": "2025-06-17",
+          "link": "https://docs.wagtail.org/en/stable/releases/6.2.4.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.1",
+      "name": "6.1",
+      "milestones": {
+        "ga": "2024-05-01",
+        "eos": null,
+        "eossec": "2024-11-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.1",
+        "codename": null,
+        "label": "6.1",
+        "releaseDate": "2024-05-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-08-01",
+        "isEol": true,
+        "eolFrom": "2024-11-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.1.3",
+          "date": "2024-07-11",
+          "link": "https://docs.wagtail.org/en/stable/releases/6.1.3.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6.0",
+      "name": "6.0",
+      "milestones": {
+        "ga": "2024-02-07",
+        "eos": null,
+        "eossec": "2024-08-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.0",
+        "codename": null,
+        "label": "6.0",
+        "releaseDate": "2024-02-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-05-01",
+        "isEol": true,
+        "eolFrom": "2024-08-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.0.6",
+          "date": "2024-07-11",
+          "link": "https://docs.wagtail.org/en/stable/releases/6.0.6.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.2",
+      "name": "5.2 (LTS)",
+      "milestones": {
+        "ga": "2023-11-01",
+        "eos": null,
+        "eossec": "2025-05-06",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.2",
+        "codename": null,
+        "label": "5.2 (LTS)",
+        "releaseDate": "2023-11-01",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-05-06",
+        "isEol": true,
+        "eolFrom": "2025-05-06",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.2.8",
+          "date": "2025-02-03",
+          "link": "https://docs.wagtail.org/en/stable/releases/5.2.8.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.1",
+      "name": "5.1",
+      "milestones": {
+        "ga": "2023-08-01",
+        "eos": null,
+        "eossec": "2024-02-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.1",
+        "codename": null,
+        "label": "5.1",
+        "releaseDate": "2023-08-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-11-01",
+        "isEol": true,
+        "eolFrom": "2024-02-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.1.3",
+          "date": "2023-10-19",
+          "link": "https://docs.wagtail.org/en/stable/releases/5.1.3.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.0",
+      "name": "5.0",
+      "milestones": {
+        "ga": "2023-05-02",
+        "eos": null,
+        "eossec": "2023-11-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.0",
+        "codename": null,
+        "label": "5.0",
+        "releaseDate": "2023-05-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-08-01",
+        "isEol": true,
+        "eolFrom": "2023-11-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.0.5",
+          "date": "2023-10-19",
+          "link": "https://docs.wagtail.org/en/stable/releases/5.0.5.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.2",
+      "name": "4.2",
+      "milestones": {
+        "ga": "2023-02-01",
+        "eos": null,
+        "eossec": "2023-08-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.2",
+        "codename": null,
+        "label": "4.2",
+        "releaseDate": "2023-02-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-05-02",
+        "isEol": true,
+        "eolFrom": "2023-08-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.2.4",
+          "date": "2023-05-25",
+          "link": "https://docs.wagtail.org/en/stable/releases/4.2.4.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.1",
+      "name": "4.1 (LTS)",
+      "milestones": {
+        "ga": "2022-11-01",
+        "eos": null,
+        "eossec": "2024-02-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.1",
+        "codename": null,
+        "label": "4.1 (LTS)",
+        "releaseDate": "2022-11-01",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-02-01",
+        "isEol": true,
+        "eolFrom": "2024-02-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.1.9",
+          "date": "2023-10-19",
+          "link": "https://docs.wagtail.org/en/stable/releases/4.1.9.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.0",
+      "name": "4.0",
+      "milestones": {
+        "ga": "2022-08-31",
+        "eos": null,
+        "eossec": "2023-02-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.0",
+        "codename": null,
+        "label": "4.0",
+        "releaseDate": "2022-08-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-11-01",
+        "isEol": true,
+        "eolFrom": "2023-02-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.0.4",
+          "date": "2022-10-18",
+          "link": "https://docs.wagtail.org/en/stable/releases/4.0.4.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.0",
+      "name": "3.0",
+      "milestones": {
+        "ga": "2022-05-16",
+        "eos": null,
+        "eossec": "2022-11-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.0",
+        "codename": null,
+        "label": "3.0",
+        "releaseDate": "2022-05-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-08-31",
+        "isEol": true,
+        "eolFrom": "2022-11-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.0.3",
+          "date": "2022-09-05",
+          "link": "https://docs.wagtail.org/en/stable/releases/3.0.3.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.16",
+      "name": "2.16",
+      "milestones": {
+        "ga": "2022-02-07",
+        "eos": null,
+        "eossec": "2022-08-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.16",
+        "codename": null,
+        "label": "2.16",
+        "releaseDate": "2022-02-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-05-01",
+        "isEol": true,
+        "eolFrom": "2022-08-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.16.3",
+          "date": "2022-09-05",
+          "link": "https://docs.wagtail.org/en/stable/releases/2.16.3.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.15",
+      "name": "2.15 (LTS)",
+      "milestones": {
+        "ga": "2021-11-04",
+        "eos": null,
+        "eossec": "2023-02-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.15",
+        "codename": null,
+        "label": "2.15 (LTS)",
+        "releaseDate": "2021-11-04",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-02-01",
+        "isEol": true,
+        "eolFrom": "2023-02-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.15.6",
+          "date": "2022-09-05",
+          "link": "https://docs.wagtail.org/en/stable/releases/2.15.6.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.14",
+      "name": "2.14",
+      "milestones": {
+        "ga": "2021-08-01",
+        "eos": null,
+        "eossec": "2022-02-07",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.14",
+        "codename": null,
+        "label": "2.14",
+        "releaseDate": "2021-08-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-11-04",
+        "isEol": true,
+        "eolFrom": "2022-02-07",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.14.2",
+          "date": "2021-10-14",
+          "link": "https://docs.wagtail.org/en/stable/releases/2.14.2.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.13",
+      "name": "2.13",
+      "milestones": {
+        "ga": "2021-05-12",
+        "eos": null,
+        "eossec": "2021-11-04",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.13",
+        "codename": null,
+        "label": "2.13",
+        "releaseDate": "2021-05-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-08-01",
+        "isEol": true,
+        "eolFrom": "2021-11-04",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.13.5",
+          "date": "2021-10-14",
+          "link": "https://docs.wagtail.org/en/stable/releases/2.13.5.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.12",
+      "name": "2.12",
+      "milestones": {
+        "ga": "2021-02-02",
+        "eos": null,
+        "eossec": "2021-08-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.12",
+        "codename": null,
+        "label": "2.12",
+        "releaseDate": "2021-02-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-05-12",
+        "isEol": true,
+        "eolFrom": "2021-08-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.12.6",
+          "date": "2021-07-13",
+          "link": "https://docs.wagtail.org/en/stable/releases/2.12.6.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.11",
+      "name": "2.11 (LTS)",
+      "milestones": {
+        "ga": "2020-11-02",
+        "eos": null,
+        "eossec": "2022-02-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.11",
+        "codename": null,
+        "label": "2.11 (LTS)",
+        "releaseDate": "2020-11-02",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-02-01",
+        "isEol": true,
+        "eolFrom": "2022-02-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.11.9",
+          "date": "2022-01-24",
+          "link": "https://docs.wagtail.org/en/stable/releases/2.11.9.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.10",
+      "name": "2.10",
+      "milestones": {
+        "ga": "2020-08-11",
+        "eos": null,
+        "eossec": "2021-02-02",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.10",
+        "codename": null,
+        "label": "2.10",
+        "releaseDate": "2020-08-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-11-01",
+        "isEol": true,
+        "eolFrom": "2021-02-02",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.10.2",
+          "date": "2020-09-25",
+          "link": "https://docs.wagtail.org/en/stable/releases/2.10.2.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.9",
+      "name": "2.9",
+      "milestones": {
+        "ga": "2020-05-04",
+        "eos": null,
+        "eossec": "2020-11-02",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.9",
+        "codename": null,
+        "label": "2.9",
+        "releaseDate": "2020-05-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-08-11",
+        "isEol": true,
+        "eolFrom": "2020-11-02",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.9.3",
+          "date": "2020-07-20",
+          "link": "https://docs.wagtail.org/en/stable/releases/2.9.3.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.8",
+      "name": "2.8",
+      "milestones": {
+        "ga": "2020-02-03",
+        "eos": null,
+        "eossec": "2020-08-11",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.8",
+        "codename": null,
+        "label": "2.8",
+        "releaseDate": "2020-02-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-05-04",
+        "isEol": true,
+        "eolFrom": "2020-08-11",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.8.2",
+          "date": "2020-05-04",
+          "link": "https://docs.wagtail.org/en/stable/releases/2.8.2.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.7",
+      "name": "2.7 (LTS)",
+      "milestones": {
+        "ga": "2019-11-06",
+        "eos": null,
+        "eossec": "2021-02-03",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.7",
+        "codename": null,
+        "label": "2.7 (LTS)",
+        "releaseDate": "2019-11-06",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-02-03",
+        "isEol": true,
+        "eolFrom": "2021-02-03",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.7.4",
+          "date": "2020-07-20",
+          "link": "https://docs.wagtail.org/en/stable/releases/2.7.4.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.6",
+      "name": "2.6",
+      "milestones": {
+        "ga": "2019-08-01",
+        "eos": null,
+        "eossec": "2020-02-03",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.6",
+        "codename": null,
+        "label": "2.6",
+        "releaseDate": "2019-08-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2019-11-01",
+        "isEol": true,
+        "eolFrom": "2020-02-03",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.6.3",
+          "date": "2019-10-22",
+          "link": "https://docs.wagtail.org/en/stable/releases/2.6.3.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.5",
+      "name": "2.5",
+      "milestones": {
+        "ga": "2019-04-24",
+        "eos": null,
+        "eossec": "2019-11-06",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.5",
+        "codename": null,
+        "label": "2.5",
+        "releaseDate": "2019-04-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2019-08-01",
+        "isEol": true,
+        "eolFrom": "2019-11-06",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.5.2",
+          "date": "2019-08-01",
+          "link": "https://docs.wagtail.org/en/stable/releases/2.5.2.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.4",
+      "name": "2.4",
+      "milestones": {
+        "ga": "2018-12-19",
+        "eos": null,
+        "eossec": "2019-08-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.4",
+        "codename": null,
+        "label": "2.4",
+        "releaseDate": "2018-12-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2019-04-30",
+        "isEol": true,
+        "eolFrom": "2019-08-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.4",
+          "date": "2018-12-19",
+          "link": "https://docs.wagtail.org/en/stable/releases/2.4.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.3",
+      "name": "2.3 (LTS)",
+      "milestones": {
+        "ga": "2018-10-31",
+        "eos": null,
+        "eossec": "2020-02-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.3",
+        "codename": null,
+        "label": "2.3 (LTS)",
+        "releaseDate": "2018-10-31",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-02-01",
+        "isEol": true,
+        "eolFrom": "2020-02-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.3",
+          "date": "2018-10-23",
+          "link": "https://docs.wagtail.org/en/stable/releases/2.3.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.13",
+      "name": "1.13 (LTS)",
+      "milestones": {
+        "ga": "2017-10-31",
+        "eos": null,
+        "eossec": "2019-04-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.13",
+        "codename": null,
+        "label": "1.13 (LTS)",
+        "releaseDate": "2017-10-31",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2019-04-30",
+        "isEol": true,
+        "eolFrom": "2019-04-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.13.4",
+          "date": "2018-08-13",
+          "link": "https://docs.wagtail.org/en/stable/releases/1.13.4.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.12",
+      "name": "1.12 (LTS)",
+      "milestones": {
+        "ga": "2017-08-31",
+        "eos": null,
+        "eossec": "2018-11-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.12",
+        "codename": null,
+        "label": "1.12 (LTS)",
+        "releaseDate": "2017-08-31",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2018-11-30",
+        "isEol": true,
+        "eolFrom": "2018-11-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.12.6",
+          "date": "2018-08-13",
+          "link": "https://docs.wagtail.org/en/stable/releases/1.12.6.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.8",
+      "name": "1.8 (LTS)",
+      "milestones": {
+        "ga": "2016-12-31",
+        "eos": null,
+        "eossec": "2017-08-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.8",
+        "codename": null,
+        "label": "1.8 (LTS)",
+        "releaseDate": "2016-12-31",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2017-08-31",
+        "isEol": true,
+        "eolFrom": "2017-08-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.8.2",
+          "date": "2017-04-21",
+          "link": "https://docs.wagtail.org/en/stable/releases/1.8.2.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.4",
+      "name": "1.4 (LTS)",
+      "milestones": {
+        "ga": "2016-03-31",
+        "eos": null,
+        "eossec": "2016-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.4",
+        "codename": null,
+        "label": "1.4 (LTS)",
+        "releaseDate": "2016-03-31",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2016-12-31",
+        "isEol": true,
+        "eolFrom": "2016-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.4.6",
+          "date": "2016-07-18",
+          "link": "https://docs.wagtail.org/en/stable/releases/1.4.6.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.8",
+      "name": "0.8 (LTS)",
+      "milestones": {
+        "ga": "2014-11-30",
+        "eos": null,
+        "eossec": "2016-03-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.8",
+        "codename": null,
+        "label": "0.8 (LTS)",
+        "releaseDate": "2014-11-30",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2016-03-31",
+        "isEol": true,
+        "eolFrom": "2016-03-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "0.8.10",
+          "date": "2015-09-16",
+          "link": "https://docs.wagtail.org/en/stable/releases/0.8.10.html"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/wagtail/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-08-30T06:26:29+00:00"
+  }
+}

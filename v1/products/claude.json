@@ -1,0 +1,891 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "claude",
+  "name": "Anthropic Claude",
+  "category": "software",
+  "upstream_category": "service",
+  "identifiers": [],
+  "labels": {
+    "eoas": "Active support",
+    "discontinued": null,
+    "eol": "Deprecated support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/anthropic.svg",
+    "html": "https://endoflife.date/claude",
+    "releasePolicy": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+  },
+  "releases": [
+    {
+      "id": "claude-mythos-5-1",
+      "name": "Claude Mythos 5.1",
+      "milestones": {
+        "ga": "2026-09-01",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "claude-mythos-5-1",
+        "codename": null,
+        "label": "Claude Mythos 5.1",
+        "releaseDate": "2026-09-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": null,
+        "custom": {
+          "recommendedReplacement": "N/A"
+        }
+      }
+    },
+    {
+      "id": "claude-fable-5-1",
+      "name": "Claude Fable 5.1",
+      "milestones": {
+        "ga": "2026-09-01",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "claude-fable-5-1",
+        "codename": null,
+        "label": "Claude Fable 5.1",
+        "releaseDate": "2026-09-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-09-01",
+        "isMaintained": true,
+        "latest": null,
+        "custom": {
+          "recommendedReplacement": "N/A"
+        }
+      }
+    },
+    {
+      "id": "claude-opus-5",
+      "name": "Claude Opus 5",
+      "milestones": {
+        "ga": "2026-07-24",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "claude-opus-5",
+        "codename": null,
+        "label": "Claude Opus 5",
+        "releaseDate": "2026-07-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-07-24",
+        "isMaintained": true,
+        "latest": null,
+        "custom": {
+          "recommendedReplacement": "N/A"
+        }
+      }
+    },
+    {
+      "id": "claude-sonnet-5",
+      "name": "Claude Sonnet 5",
+      "milestones": {
+        "ga": "2026-06-30",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "claude-sonnet-5",
+        "codename": null,
+        "label": "Claude Sonnet 5",
+        "releaseDate": "2026-06-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-06-30",
+        "isMaintained": true,
+        "latest": null,
+        "custom": {
+          "recommendedReplacement": "N/A"
+        }
+      }
+    },
+    {
+      "id": "claude-mythos-5",
+      "name": "Claude Mythos 5",
+      "milestones": {
+        "ga": "2026-06-09",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "claude-mythos-5",
+        "codename": null,
+        "label": "Claude Mythos 5",
+        "releaseDate": "2026-06-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": null,
+        "custom": {
+          "recommendedReplacement": "N/A"
+        }
+      }
+    },
+    {
+      "id": "claude-fable-5",
+      "name": "Claude Fable 5",
+      "milestones": {
+        "ga": "2026-06-09",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "claude-fable-5",
+        "codename": null,
+        "label": "Claude Fable 5",
+        "releaseDate": "2026-06-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-06-09",
+        "isMaintained": true,
+        "latest": null,
+        "custom": {
+          "recommendedReplacement": "N/A"
+        }
+      }
+    },
+    {
+      "id": "claude-opus-4-8",
+      "name": "Claude Opus 4.8",
+      "milestones": {
+        "ga": "2026-05-28",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "claude-opus-4-8",
+        "codename": null,
+        "label": "Claude Opus 4.8",
+        "releaseDate": "2026-05-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-05-28",
+        "isMaintained": true,
+        "latest": null,
+        "custom": {
+          "recommendedReplacement": "N/A"
+        }
+      }
+    },
+    {
+      "id": "claude-opus-4-7",
+      "name": "Claude Opus 4.7",
+      "milestones": {
+        "ga": "2026-04-16",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "claude-opus-4-7",
+        "codename": null,
+        "label": "Claude Opus 4.7",
+        "releaseDate": "2026-04-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-04-16",
+        "isMaintained": true,
+        "latest": null,
+        "custom": {
+          "recommendedReplacement": "N/A"
+        }
+      }
+    },
+    {
+      "id": "claude-sonnet-4-6",
+      "name": "Claude Sonnet 4.6",
+      "milestones": {
+        "ga": "2026-02-17",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "claude-sonnet-4-6",
+        "codename": null,
+        "label": "Claude Sonnet 4.6",
+        "releaseDate": "2026-02-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-02-17",
+        "isMaintained": true,
+        "latest": null,
+        "custom": {
+          "recommendedReplacement": "N/A"
+        }
+      }
+    },
+    {
+      "id": "claude-opus-4-6",
+      "name": "Claude Opus 4.6",
+      "milestones": {
+        "ga": "2026-02-05",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "claude-opus-4-6",
+        "codename": null,
+        "label": "Claude Opus 4.6",
+        "releaseDate": "2026-02-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-02-05",
+        "isMaintained": true,
+        "latest": null,
+        "custom": {
+          "recommendedReplacement": "N/A"
+        }
+      }
+    },
+    {
+      "id": "claude-opus-4-5-20251101",
+      "name": "Claude Opus 4.5",
+      "milestones": {
+        "ga": "2025-11-24",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "claude-opus-4-5-20251101",
+        "codename": null,
+        "label": "Claude Opus 4.5",
+        "releaseDate": "2025-11-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": "2026-11-24",
+        "isMaintained": true,
+        "latest": null,
+        "custom": {
+          "recommendedReplacement": "N/A"
+        }
+      }
+    },
+    {
+      "id": "claude-haiku-4-5-20251001",
+      "name": "Claude Haiku 4.5",
+      "milestones": {
+        "ga": "2025-10-15",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "claude-haiku-4-5-20251001",
+        "codename": null,
+        "label": "Claude Haiku 4.5",
+        "releaseDate": "2025-10-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": "2026-10-15",
+        "isMaintained": true,
+        "latest": null,
+        "custom": {
+          "recommendedReplacement": "N/A"
+        }
+      }
+    },
+    {
+      "id": "claude-sonnet-4-5-20250929",
+      "name": "Claude Sonnet 4.5",
+      "milestones": {
+        "ga": "2025-09-29",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "claude-sonnet-4-5-20250929",
+        "codename": null,
+        "label": "Claude Sonnet 4.5",
+        "releaseDate": "2025-09-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": "2026-09-29",
+        "isMaintained": true,
+        "latest": null,
+        "custom": {
+          "recommendedReplacement": "N/A"
+        }
+      }
+    },
+    {
+      "id": "claude-opus-4-1-20250805",
+      "name": "Claude Opus 4.1",
+      "milestones": {
+        "ga": "2025-08-05",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "claude-opus-4-1-20250805",
+        "codename": null,
+        "label": "Claude Opus 4.1",
+        "releaseDate": "2025-08-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-06-05",
+        "isEol": true,
+        "eolFrom": "2026-08-05",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "recommendedReplacement": "claude-opus-4-8"
+        }
+      }
+    },
+    {
+      "id": "claude-sonnet-4-20250514",
+      "name": "Claude Sonnet 4",
+      "milestones": {
+        "ga": "2025-05-22",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "claude-sonnet-4-20250514",
+        "codename": null,
+        "label": "Claude Sonnet 4",
+        "releaseDate": "2025-05-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-04-14",
+        "isEol": true,
+        "eolFrom": "2026-06-15",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "recommendedReplacement": "claude-sonnet-4-6"
+        }
+      }
+    },
+    {
+      "id": "claude-opus-4-20250514",
+      "name": "Claude Opus 4",
+      "milestones": {
+        "ga": "2025-05-22",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "claude-opus-4-20250514",
+        "codename": null,
+        "label": "Claude Opus 4",
+        "releaseDate": "2025-05-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-04-14",
+        "isEol": true,
+        "eolFrom": "2026-06-15",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "recommendedReplacement": "claude-opus-4-8"
+        }
+      }
+    },
+    {
+      "id": "claude-3-7-sonnet-20250219",
+      "name": "Claude Sonnet 3.7",
+      "milestones": {
+        "ga": "2025-02-24",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "claude-3-7-sonnet-20250219",
+        "codename": null,
+        "label": "Claude Sonnet 3.7",
+        "releaseDate": "2025-02-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-10-28",
+        "isEol": true,
+        "eolFrom": "2026-02-19",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "recommendedReplacement": "claude-sonnet-4-6"
+        }
+      }
+    },
+    {
+      "id": "claude-3-5-haiku-20241022",
+      "name": "Claude Haiku 3.5",
+      "milestones": {
+        "ga": "2024-10-22",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "claude-3-5-haiku-20241022",
+        "codename": null,
+        "label": "Claude Haiku 3.5",
+        "releaseDate": "2024-10-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-12-19",
+        "isEol": true,
+        "eolFrom": "2026-02-19",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "recommendedReplacement": "claude-haiku-4-5-20251001"
+        }
+      }
+    },
+    {
+      "id": "claude-3-5-sonnet-20241022",
+      "name": "Claude Sonnet 3.5 (20241022)",
+      "milestones": {
+        "ga": "2024-10-22",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "claude-3-5-sonnet-20241022",
+        "codename": null,
+        "label": "Claude Sonnet 3.5 (20241022)",
+        "releaseDate": "2024-10-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-08-13",
+        "isEol": true,
+        "eolFrom": "2025-10-28",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "recommendedReplacement": "claude-sonnet-4-6"
+        }
+      }
+    },
+    {
+      "id": "claude-3-5-sonnet-20240620",
+      "name": "Claude Sonnet 3.5 (20240620)",
+      "milestones": {
+        "ga": "2024-06-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "claude-3-5-sonnet-20240620",
+        "codename": null,
+        "label": "Claude Sonnet 3.5 (20240620)",
+        "releaseDate": "2024-06-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-08-13",
+        "isEol": true,
+        "eolFrom": "2025-10-28",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "recommendedReplacement": "claude-sonnet-4-6"
+        }
+      }
+    },
+    {
+      "id": "claude-3-haiku-20240307",
+      "name": "Claude Haiku 3",
+      "milestones": {
+        "ga": "2024-03-13",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "claude-3-haiku-20240307",
+        "codename": null,
+        "label": "Claude Haiku 3",
+        "releaseDate": "2024-03-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-02-19",
+        "isEol": true,
+        "eolFrom": "2026-04-20",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "recommendedReplacement": "claude-haiku-4-5-20251001"
+        }
+      }
+    },
+    {
+      "id": "claude-3-opus-20240229",
+      "name": "Claude Opus 3",
+      "milestones": {
+        "ga": "2024-03-04",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "claude-3-opus-20240229",
+        "codename": null,
+        "label": "Claude Opus 3",
+        "releaseDate": "2024-03-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-06-30",
+        "isEol": true,
+        "eolFrom": "2026-01-05",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "recommendedReplacement": "claude-opus-4-8"
+        }
+      }
+    },
+    {
+      "id": "claude-3-sonnet-20240229",
+      "name": "Claude Sonnet 3",
+      "milestones": {
+        "ga": "2024-03-04",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "claude-3-sonnet-20240229",
+        "codename": null,
+        "label": "Claude Sonnet 3",
+        "releaseDate": "2024-03-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-01-21",
+        "isEol": true,
+        "eolFrom": "2025-07-21",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "recommendedReplacement": "claude-sonnet-4-6"
+        }
+      }
+    },
+    {
+      "id": "claude-2.1",
+      "name": "Claude 2.1",
+      "milestones": {
+        "ga": "2023-11-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "claude-2.1",
+        "codename": null,
+        "label": "Claude 2.1",
+        "releaseDate": "2023-11-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-01-21",
+        "isEol": true,
+        "eolFrom": "2025-07-21",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "recommendedReplacement": "claude-opus-4-8"
+        }
+      }
+    },
+    {
+      "id": "claude-instant-1.2",
+      "name": "Claude Instant 1.2",
+      "milestones": {
+        "ga": "2023-08-09",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "claude-instant-1.2",
+        "codename": null,
+        "label": "Claude Instant 1.2",
+        "releaseDate": "2023-08-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-11-06",
+        "isEol": true,
+        "eolFrom": "2024-11-06",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "recommendedReplacement": "claude-haiku-4-5-20251001"
+        }
+      }
+    },
+    {
+      "id": "claude-2.0",
+      "name": "Claude 2.0",
+      "milestones": {
+        "ga": "2023-07-11",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "claude-2.0",
+        "codename": null,
+        "label": "Claude 2.0",
+        "releaseDate": "2023-07-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-01-21",
+        "isEol": true,
+        "eolFrom": "2025-07-21",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "recommendedReplacement": "claude-opus-4-8"
+        }
+      }
+    },
+    {
+      "id": "claude-1.3",
+      "name": "Claude 1.3",
+      "milestones": {
+        "ga": "2023-04-18",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "claude-1.3",
+        "codename": null,
+        "label": "Claude 1.3",
+        "releaseDate": "2023-04-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-09-04",
+        "isEol": true,
+        "eolFrom": "2024-11-06",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "recommendedReplacement": "claude-haiku-4-5-20251001"
+        }
+      }
+    },
+    {
+      "id": "claude-instant-1.1",
+      "name": "Claude Instant 1.1",
+      "milestones": {
+        "ga": "2023-03-31",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "claude-instant-1.1",
+        "codename": null,
+        "label": "Claude Instant 1.1",
+        "releaseDate": "2023-03-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-11-06",
+        "isEol": true,
+        "eolFrom": "2024-11-06",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "recommendedReplacement": "claude-haiku-4-5-20251001"
+        }
+      }
+    },
+    {
+      "id": "claude-1.2",
+      "name": "Claude 1.2",
+      "milestones": {
+        "ga": "2023-03-14",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "claude-1.2",
+        "codename": null,
+        "label": "Claude 1.2",
+        "releaseDate": "2023-03-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-09-04",
+        "isEol": true,
+        "eolFrom": "2024-11-06",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "recommendedReplacement": "claude-haiku-4-5-20251001"
+        }
+      }
+    },
+    {
+      "id": "claude-1.1",
+      "name": "Claude 1.1",
+      "milestones": {
+        "ga": "2023-03-14",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "claude-1.1",
+        "codename": null,
+        "label": "Claude 1.1",
+        "releaseDate": "2023-03-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-09-04",
+        "isEol": true,
+        "eolFrom": "2024-11-06",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "recommendedReplacement": "claude-haiku-4-5-20251001"
+        }
+      }
+    },
+    {
+      "id": "claude-instant-1.0",
+      "name": "Claude Instant 1.0",
+      "milestones": {
+        "ga": "2023-03-14",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "claude-instant-1.0",
+        "codename": null,
+        "label": "Claude Instant 1.0",
+        "releaseDate": "2023-03-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-09-04",
+        "isEol": true,
+        "eolFrom": "2024-11-06",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "recommendedReplacement": "claude-haiku-4-5-20251001"
+        }
+      }
+    },
+    {
+      "id": "claude-1.0",
+      "name": "Claude 1.0",
+      "milestones": {
+        "ga": "2023-03-14",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "claude-1.0",
+        "codename": null,
+        "label": "Claude 1.0",
+        "releaseDate": "2023-03-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-09-04",
+        "isEol": true,
+        "eolFrom": "2024-11-06",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "recommendedReplacement": "claude-haiku-4-5-20251001"
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/claude/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-01T19:30:30+00:00"
+  }
+}

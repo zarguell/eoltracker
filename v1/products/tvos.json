@@ -1,0 +1,360 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "tvos",
+  "name": "Apple tvOS",
+  "category": "software",
+  "upstream_category": "os",
+  "identifiers": [
+    {
+      "type": "cpe",
+      "id": "cpe:/o:apple:tvos"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:o:apple:tvos"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Service Status",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/apple.svg",
+    "html": "https://endoflife.date/tvos",
+    "releasePolicy": null
+  },
+  "releases": [
+    {
+      "id": "27",
+      "name": "27",
+      "milestones": {
+        "ga": "2026-09-14",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "27",
+        "codename": null,
+        "label": "27",
+        "releaseDate": "2026-09-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "27",
+          "date": "2026-09-14",
+          "link": "https://developer.apple.com/documentation/tvos-release-notes/tvos-27-release-notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "26",
+      "name": "26",
+      "milestones": {
+        "ga": "2025-09-15",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "26",
+        "codename": null,
+        "label": "26",
+        "releaseDate": "2025-09-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-09-14",
+        "isMaintained": false,
+        "latest": {
+          "name": "26.6",
+          "date": "2026-07-27",
+          "link": "https://developer.apple.com/documentation/tvos-release-notes/tvos-26-release-notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18",
+      "name": "18",
+      "milestones": {
+        "ga": "2024-09-16",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "18",
+        "codename": null,
+        "label": "18",
+        "releaseDate": "2024-09-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-09-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.6",
+          "date": "2025-07-29",
+          "link": "https://developer.apple.com/documentation/tvos-release-notes/tvos-18-release-notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "17",
+      "name": "17",
+      "milestones": {
+        "ga": "2023-09-18",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "17",
+        "codename": null,
+        "label": "17",
+        "releaseDate": "2023-09-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-09-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "17.6.1",
+          "date": "2024-08-19",
+          "link": "https://developer.apple.com/documentation/tvos-release-notes/tvos-17-release-notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "16",
+      "name": "16",
+      "milestones": {
+        "ga": "2022-09-12",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "16",
+        "codename": null,
+        "label": "16",
+        "releaseDate": "2022-09-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-09-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "16.6",
+          "date": "2023-07-24",
+          "link": "https://developer.apple.com/documentation/tvos-release-notes/tvos-16-release-notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "15",
+      "name": "15",
+      "milestones": {
+        "ga": "2021-09-20",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "15",
+        "codename": null,
+        "label": "15",
+        "releaseDate": "2021-09-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-09-12",
+        "isMaintained": false,
+        "latest": {
+          "name": "15.6",
+          "date": "2022-07-20",
+          "link": "https://developer.apple.com/documentation/tvos-release-notes/tvos-15-release-notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "14",
+      "name": "14",
+      "milestones": {
+        "ga": "2020-09-16",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "14",
+        "codename": null,
+        "label": "14",
+        "releaseDate": "2020-09-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-09-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "14.7",
+          "date": "2021-07-19",
+          "link": "https://developer.apple.com/documentation/tvos-release-notes/tvos-14-release-notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "13",
+      "name": "13",
+      "milestones": {
+        "ga": "2019-09-24",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "13",
+        "codename": null,
+        "label": "13",
+        "releaseDate": "2019-09-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-09-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "13.4.8",
+          "date": "2020-07-15",
+          "link": "https://developer.apple.com/documentation/tvos-release-notes/tvos-13-release-notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "12",
+      "name": "12",
+      "milestones": {
+        "ga": "2018-09-17",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "12",
+        "codename": null,
+        "label": "12",
+        "releaseDate": "2018-09-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-09-24",
+        "isMaintained": false,
+        "latest": {
+          "name": "12.4.1",
+          "date": "2019-08-26",
+          "link": "https://developer.apple.com/documentation/tvos-release-notes/tvos-12-release-notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "11",
+      "name": "11",
+      "milestones": {
+        "ga": "2017-09-19",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "11",
+        "codename": null,
+        "label": "11",
+        "releaseDate": "2017-09-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-09-17",
+        "isMaintained": false,
+        "latest": {
+          "name": "11.4.1",
+          "date": "2018-07-09",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "10",
+      "name": "10",
+      "milestones": {
+        "ga": "2016-09-13",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "10",
+        "codename": null,
+        "label": "10",
+        "releaseDate": "2016-09-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-09-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "10.2.2",
+          "date": "2017-07-19",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9",
+      "name": "9",
+      "milestones": {
+        "ga": "2015-10-29",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "9",
+        "codename": null,
+        "label": "9",
+        "releaseDate": "2015-10-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2016-09-13",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.2.2",
+          "date": "2016-07-18",
+          "link": null
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/tvos/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-15T06:42:32+00:00"
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "devuan",
+  "name": "Devuan",
+  "category": "software",
+  "upstream_category": "os",
+  "identifiers": [],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/devuan",
+    "releasePolicy": "https://www.devuan.org/os/releases"
+  },
+  "releases": [
+    {
+      "id": "6",
+      "name": "6 (Excalibur) (Upcoming LTS)",
+      "milestones": {
+        "ga": "2025-11-02",
+        "eos": null,
+        "eossec": "2030-06-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6",
+        "codename": "Excalibur",
+        "label": "6 (Excalibur) (Upcoming LTS)",
+        "releaseDate": "2025-11-02",
+        "isLts": false,
+        "ltsFrom": "2028-08-09",
+        "isEol": false,
+        "eolFrom": "2030-06-30",
+        "isMaintained": true,
+        "latest": {
+          "name": "6.0.0",
+          "date": "2025-11-03",
+          "link": "https://www.devuan.org/os/announce/excalibur-release-announce-2025-11-02"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5",
+      "name": "5 (Daedalus) (LTS)",
+      "milestones": {
+        "ga": "2023-08-15",
+        "eos": null,
+        "eossec": "2028-06-10",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5",
+        "codename": "Daedalus",
+        "label": "5 (Daedalus) (LTS)",
+        "releaseDate": "2023-08-15",
+        "isLts": true,
+        "ltsFrom": "2026-06-10",
+        "isEol": false,
+        "eolFrom": "2028-06-10",
+        "isMaintained": true,
+        "latest": {
+          "name": "5.0.0",
+          "date": "2023-08-15",
+          "link": "https://www.devuan.org/os/announce/daedalus-release-announce-2023-08-14"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4",
+      "name": "4 (Chimaera) (LTS)",
+      "milestones": {
+        "ga": "2021-10-14",
+        "eos": null,
+        "eossec": "2026-08-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "4",
+        "codename": "Chimaera",
+        "label": "4 (Chimaera) (LTS)",
+        "releaseDate": "2021-10-14",
+        "isLts": true,
+        "ltsFrom": "2024-07-01",
+        "isEol": true,
+        "eolFrom": "2026-08-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.0.0",
+          "date": "2021-10-14",
+          "link": "https://www.devuan.org/os/announce/chimaera-release-announce-2021-10-14"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3",
+      "name": "3 (Beowulf) (LTS)",
+      "milestones": {
+        "ga": "2020-06-02",
+        "eos": null,
+        "eossec": "2024-06-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3",
+        "codename": "Beowulf",
+        "label": "3 (Beowulf) (LTS)",
+        "releaseDate": "2020-06-02",
+        "isLts": true,
+        "ltsFrom": "2022-07-01",
+        "isEol": true,
+        "eolFrom": "2024-06-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.1.0",
+          "date": "2021-02-15",
+          "link": "https://www.devuan.org/os/announce/beowulf-point-release-announce-021421"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2",
+      "name": "2 (ASCII) (LTS)",
+      "milestones": {
+        "ga": "2018-06-09",
+        "eos": null,
+        "eossec": "2022-06-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2",
+        "codename": "ASCII",
+        "label": "2 (ASCII) (LTS)",
+        "releaseDate": "2018-06-09",
+        "isLts": true,
+        "ltsFrom": "2020-06-06",
+        "isEol": true,
+        "eolFrom": "2022-06-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.1",
+          "date": "2019-11-25",
+          "link": "https://www.devuan.org/os/announce/ascii-point-release-announce-112119"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1",
+      "name": "1 (Jessie) (LTS)",
+      "milestones": {
+        "ga": "2017-05-25",
+        "eos": null,
+        "eossec": "2020-06-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1",
+        "codename": "Jessie",
+        "label": "1 (Jessie) (LTS)",
+        "releaseDate": "2017-05-25",
+        "isLts": true,
+        "ltsFrom": "2018-06-17",
+        "isEol": true,
+        "eolFrom": "2020-06-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.0.0",
+          "date": "2017-05-25",
+          "link": "https://www.devuan.org/os/announce/stable-jessie-announce-052517.html"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/devuan/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-05-01T09:58:42+00:00"
+  }
+}

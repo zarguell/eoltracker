@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-dd565-appliance",
+  "name": "DD565 Appliance",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Data Domain",
+  "family": "Data Domain",
+  "model_number": "DD565 Appliance",
+  "milestones": {
+    "ga": "2007-04-23",
+    "eos": "2010-03-31",
+    "eossec": null,
+    "eol": "2015-03-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "DD565 Appliance",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "DD565 Appliance",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Data Domain",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2010-03-31",
+      "datetime": null,
+      "value": "2010-03-31",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Apr. 23, 2007",
+      "datetime": "2007-04-23",
+      "value": "2007-04-23",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2015-03-31",
+      "datetime": null,
+      "value": "2015-03-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/backup/vendor/dell-emc/data-domain/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

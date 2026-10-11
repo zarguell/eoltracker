@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-mds-fcoe-8",
+  "name": "MDS-FCOE-8",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Connectrix - Cisco",
+  "family": "Connectrix - Cisco",
+  "model_number": "MDS-FCOE-8",
+  "milestones": {
+    "ga": "2011-10-10",
+    "eos": "2015-03-31",
+    "eossec": null,
+    "eol": "2020-04-30"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "MDS-FCOE-8",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "MDS-FCOE-8",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Connectrix - Cisco",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2015-03-31",
+      "datetime": null,
+      "value": "2015-03-31",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Oct. 10, 2011",
+      "datetime": "2011-10-10",
+      "value": "2011-10-10",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2020-04-30",
+      "datetime": null,
+      "value": "2020-04-30",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/san-switches/vendor/dell-emc/connectrix-cisco/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

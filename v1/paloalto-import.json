@@ -1,0 +1,26 @@
+{
+  "source_url": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+  "software_url": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/end-of-life-summary",
+  "verifier": "deterministic-paloalto",
+  "checked_at": "2026-09-26T18:53:25Z",
+  "record_scope": "Palo Alto Networks hardware: one hardware record per product row of the vendor's hardware end-of-life table, at the day precision each cell states",
+  "rows": {
+    "seen": 34,
+    "published": 34,
+    "excluded": 0,
+    "tables": 1,
+    "with_eos": 34,
+    "with_eol": 34,
+    "skus": 80,
+    "os_window_beyond_eol": 10
+  },
+  "excluded": [],
+  "total_records": 34,
+  "limitations": [
+    "End-of-Sale Date becomes eos and End-of-Life Date becomes eol, in the vendor's own headings. ga and eossec are null: the table states no release date and no security-support date, and neither is inferred from the gap between the two dates.",
+    "One record is one product line, not one SKU. A row states one pair of dates for the line and the SKUs under it; the published name is the line and the model number is the full SKU list, as this catalog already handles a grouped part list.",
+    "Last Supported OS is published verbatim and never used to extend an end-of-life date. For some rows that window names a year later than the row's own End-of-Life Date; both statements are the vendor's and both are published, and the report counts the rows so a reader is not surprised.",
+    "The vendor's End-of-Life (EOL) Policy and End-of-Sale Announcement pages carry no dated product tables and are not sources. The vendor's software and SaaS schedule lives at software_url, a different page and a different record shape, and is not read here.",
+    "A row the vendor marks with a trailing (EOL) has a date that has already passed; the marker is removed to read the day and the raw cell is kept verbatim."
+  ]
+}

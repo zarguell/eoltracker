@@ -1,0 +1,61 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "cisco-hyperflex-hx220c-m6",
+  "name": "HyperFlex HX220c M6",
+  "category": "hardware",
+  "vendor": "Cisco",
+  "product_line": "Cisco HyperFlex",
+  "family": "HYPERFLEX",
+  "model_number": "HyperFlex HX220c M6",
+  "milestones": {
+    "ga": "2021-07-01",
+    "eos": null,
+    "eossec": null,
+    "eol": null
+  },
+  "status": "supported",
+  "upstream": {
+    "Product": {
+      "text": "HyperFlex HX220c M6",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "HyperFlex HX220c M6",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Cisco HyperFlex",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Jul. 01, 2021",
+      "datetime": "2021-07-01",
+      "value": "2021-07-01",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support": {
+      "text": "",
+      "datetime": null,
+      "value": null,
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/hyper-converged/vendor/cisco/hyperflex/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "hpe-1-0x",
+  "name": "GreenLake for Backup and Recovery",
+  "category": "hardware",
+  "vendor": "HPE",
+  "product_line": "HPE",
+  "family": "Backup and Recovery",
+  "model_number": "1.0x",
+  "milestones": {
+    "ga": null,
+    "eos": null,
+    "eossec": null,
+    "eol": "2026-11-30"
+  },
+  "status": "expiring",
+  "upstream": {
+    "Product": {
+      "text": "",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Product Name": {
+      "text": "GreenLake for Backup and Recovery",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Version": {
+      "text": "1.0x",
+      "datetime": null,
+      "value": null,
+      "role": "version",
+      "links": []
+    },
+    "End of Support": {
+      "text": "2026-11-30",
+      "datetime": null,
+      "value": "2026-11-30",
+      "role": "eol",
+      "links": [
+        "https://support.hpe.com/connect/s/product?language=en_US&ismnp=0&l5oid=1010144353&platformId=16184"
+      ]
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/backup/vendor/hpe/backup-and-recovery/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

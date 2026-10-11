@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-scale-io",
+  "name": "Scale IO",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Scale IO SDDC",
+  "family": "Scale IO SDDC",
+  "model_number": "Scale IO",
+  "milestones": {
+    "ga": null,
+    "eos": "2019-08-16",
+    "eossec": null,
+    "eol": "2019-12-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "Scale IO",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "Scale IO",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Scale IO SDDC",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2019-08-16",
+      "datetime": null,
+      "value": "2019-08-16",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Not Announced",
+      "datetime": "TBD",
+      "value": null,
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2019-12-31",
+      "datetime": null,
+      "value": "2019-12-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/software-defined-storage/vendor/dell-emc/scale-io-sddc/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

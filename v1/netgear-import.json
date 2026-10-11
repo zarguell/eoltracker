@@ -1,0 +1,30 @@
+{
+  "source_url": "https://www.netgear.com/about/eos/",
+  "verifier": "deterministic-netgear",
+  "checked_at": "2026-09-27T00:07:25Z",
+  "fetch_profile": "rendered",
+  "operator_switch": "EOLTRACKER_ALLOW_RENDER=on",
+  "record_scope": "NETGEAR products on the vendor's own End of Service page: one hardware record per item number, at the day precision the row's own note states",
+  "rows": {
+    "seen": 9405,
+    "published": 9405,
+    "with_eol": 7641,
+    "not_yet_eos": 1764,
+    "scheduled": 255,
+    "duplicates": 0,
+    "earlier_unnamed_date": 767
+  },
+  "categories": 68,
+  "tables": 68,
+  "duplicates": [],
+  "total_records": 9405,
+  "limitations": [
+    "The page is read through the opt-in rendering profile because the product list is assembled client-side: the server HTML is roughly 480 KB of application shell with no dates and no table cells. A record from this source carries fetch='rendered' in its provenance, permanently.",
+    "The page states no column names anywhere - no caption, no header row, no data-title and no aria-label - and each row is five bare cells. eol is therefore the date in the row's own note, which is DD-MMM-YYYY and unambiguous, not either date cell.",
+    "The two date cells are retained verbatim and the second is verified against the row's note on every dated row, accepting either order, because the cells' own order is ambiguous: 9/12/2013 is 9 December on one row and 12 September on another. A second cell that reconciles with the note in neither order refuses the row.",
+    "The first of the two date cells is a separate, unnamed date: it equals the end of service on most rows and is years earlier on the rest, and the page states no column name for it. It looks like a last-sale date and is mapped to nothing rather than given an eos the vendor never wrote; the count of rows where it differs is in rows.earlier_unnamed_date.",
+    "One record per item number, not per model, because the page's own policy says 'the last sale date may be limited to a particular SKU in an identified country or region' and the data agrees: 783 of 1,273 dated models have item numbers that disagree on the end-of-service date.",
+    "A product that has not yet reached the end of service is published with a null eol and the vendor's own sentence retained, because the page lists it as a current product and a fleet manager needs to see that it is not yet affected.",
+    "EOS is a terminal support end, not a sale or a security-only date: the page states that products which reach EOS 'no longer receive firmware updates, including important security updates'. eos and eossec are null everywhere."
+  ]
+}

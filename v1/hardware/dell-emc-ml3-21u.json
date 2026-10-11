@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-ml3-21u",
+  "name": "ML3 (21U)",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC PowerVault Tape",
+  "family": "PowerVault Tape",
+  "model_number": "ML3 (21U)",
+  "milestones": {
+    "ga": "2018-02-20",
+    "eos": "2025-04-30",
+    "eossec": null,
+    "eol": "2032-04-30"
+  },
+  "status": "supported",
+  "upstream": {
+    "Product": {
+      "text": "ML3 (21U)",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "ML3 (21U)",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC PowerVault Tape",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2025-04-30",
+      "datetime": null,
+      "value": "2025-04-30",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Feb. 20, 2018",
+      "datetime": "2018-02-20",
+      "value": "2018-02-20",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2032-04-30",
+      "datetime": null,
+      "value": "2032-04-30",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/backup/vendor/dell-emc/powervault-tape/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

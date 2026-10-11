@@ -1,0 +1,491 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "ios",
+  "name": "Apple iOS",
+  "category": "software",
+  "upstream_category": "os",
+  "identifiers": [],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/ios.svg",
+    "html": "https://endoflife.date/ios",
+    "releasePolicy": null
+  },
+  "releases": [
+    {
+      "id": "27",
+      "name": "27",
+      "milestones": {
+        "ga": "2026-09-14",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "27",
+        "codename": null,
+        "label": "27",
+        "releaseDate": "2026-09-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "27",
+          "date": "2026-09-14",
+          "link": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-27-release-notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "26",
+      "name": "26",
+      "milestones": {
+        "ga": "2025-09-15",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "26",
+        "codename": null,
+        "label": "26",
+        "releaseDate": "2025-09-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-09-14",
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "26.7",
+          "date": "2026-09-14",
+          "link": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26-release-notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18",
+      "name": "18",
+      "milestones": {
+        "ga": "2024-09-16",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "18",
+        "codename": null,
+        "label": "18",
+        "releaseDate": "2024-09-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-09-15",
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "18.7.10",
+          "date": "2026-08-17",
+          "link": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "17",
+      "name": "17",
+      "milestones": {
+        "ga": "2023-09-18",
+        "eos": null,
+        "eossec": "2025-05-13",
+        "eol": null
+      },
+      "upstream": {
+        "name": "17",
+        "codename": null,
+        "label": "17",
+        "releaseDate": "2023-09-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-09-16",
+        "isEol": true,
+        "eolFrom": "2025-05-13",
+        "isMaintained": false,
+        "latest": {
+          "name": "17.7.7",
+          "date": "2025-05-13",
+          "link": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-17-release-notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "16",
+      "name": "16",
+      "milestones": {
+        "ga": "2022-09-12",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "16",
+        "codename": null,
+        "label": "16",
+        "releaseDate": "2022-09-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-09-18",
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "16.7.16",
+          "date": "2026-05-11",
+          "link": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-16-release-notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "15",
+      "name": "15",
+      "milestones": {
+        "ga": "2021-09-20",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "15",
+        "codename": null,
+        "label": "15",
+        "releaseDate": "2021-09-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-09-12",
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "15.8.8",
+          "date": "2026-05-11",
+          "link": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-15-release-notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "14",
+      "name": "14",
+      "milestones": {
+        "ga": "2020-09-16",
+        "eos": null,
+        "eossec": "2021-10-26",
+        "eol": null
+      },
+      "upstream": {
+        "name": "14",
+        "codename": null,
+        "label": "14",
+        "releaseDate": "2020-09-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-09-20",
+        "isEol": true,
+        "eolFrom": "2021-10-26",
+        "isMaintained": false,
+        "latest": {
+          "name": "14.8.1",
+          "date": "2021-10-26",
+          "link": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14-release-notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "13",
+      "name": "13",
+      "milestones": {
+        "ga": "2019-09-19",
+        "eos": null,
+        "eossec": "2020-09-16",
+        "eol": null
+      },
+      "upstream": {
+        "name": "13",
+        "codename": null,
+        "label": "13",
+        "releaseDate": "2019-09-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-09-16",
+        "isEol": true,
+        "eolFrom": "2020-09-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "13.7",
+          "date": "2020-09-01",
+          "link": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-13-release-notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "12",
+      "name": "12",
+      "milestones": {
+        "ga": "2018-09-17",
+        "eos": null,
+        "eossec": "2026-01-26",
+        "eol": null
+      },
+      "upstream": {
+        "name": "12",
+        "codename": null,
+        "label": "12",
+        "releaseDate": "2018-09-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2019-09-19",
+        "isEol": true,
+        "eolFrom": "2026-01-26",
+        "isMaintained": false,
+        "latest": {
+          "name": "12.5.8",
+          "date": "2026-01-26",
+          "link": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-12-release-notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "11",
+      "name": "11",
+      "milestones": {
+        "ga": "2017-09-19",
+        "eos": null,
+        "eossec": "2018-10-08",
+        "eol": null
+      },
+      "upstream": {
+        "name": "11",
+        "codename": null,
+        "label": "11",
+        "releaseDate": "2017-09-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2018-09-17",
+        "isEol": true,
+        "eolFrom": "2018-10-08",
+        "isMaintained": false,
+        "latest": {
+          "name": "11.4.1",
+          "date": "2018-07-09",
+          "link": "https://support.apple.com/HT208067"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "10",
+      "name": "10",
+      "milestones": {
+        "ga": "2016-09-13",
+        "eos": null,
+        "eossec": "2019-07-22",
+        "eol": null
+      },
+      "upstream": {
+        "name": "10",
+        "codename": null,
+        "label": "10",
+        "releaseDate": "2016-09-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2017-09-19",
+        "isEol": true,
+        "eolFrom": "2019-07-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "10.3.4",
+          "date": "2019-07-22",
+          "link": "https://support.apple.com/HT208011"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9",
+      "name": "9",
+      "milestones": {
+        "ga": "2015-09-16",
+        "eos": null,
+        "eossec": "2019-07-22",
+        "eol": null
+      },
+      "upstream": {
+        "name": "9",
+        "codename": null,
+        "label": "9",
+        "releaseDate": "2015-09-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2016-09-13",
+        "isEol": true,
+        "eolFrom": "2019-07-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.3.6",
+          "date": "2019-07-22",
+          "link": "https://support.apple.com/HT208010"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8",
+      "name": "8",
+      "milestones": {
+        "ga": "2014-09-17",
+        "eos": null,
+        "eossec": "2015-09-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "8",
+        "codename": null,
+        "label": "8",
+        "releaseDate": "2014-09-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2015-09-16",
+        "isEol": true,
+        "eolFrom": "2015-09-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.4.1",
+          "date": "2015-08-13",
+          "link": "https://support.apple.com/HT208000"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7",
+      "name": "7",
+      "milestones": {
+        "ga": "2013-09-18",
+        "eos": null,
+        "eossec": "2014-10-20",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7",
+        "codename": null,
+        "label": "7",
+        "releaseDate": "2013-09-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2014-09-17",
+        "isEol": true,
+        "eolFrom": "2014-10-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.1.2",
+          "date": "2014-06-30",
+          "link": "https://support.apple.com/HT207979"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6",
+      "name": "6",
+      "milestones": {
+        "ga": "2012-09-19",
+        "eos": null,
+        "eossec": "2013-09-26",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6",
+        "codename": null,
+        "label": "6",
+        "releaseDate": "2012-09-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2013-09-18",
+        "isEol": true,
+        "eolFrom": "2013-09-26",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.1.6",
+          "date": "2014-02-21",
+          "link": "https://support.apple.com/HT212584"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5",
+      "name": "5",
+      "milestones": {
+        "ga": "2011-10-12",
+        "eos": null,
+        "eossec": "2012-11-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5",
+        "codename": null,
+        "label": "5",
+        "releaseDate": "2011-10-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2012-09-19",
+        "isEol": true,
+        "eolFrom": "2012-11-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.1.1",
+          "date": "2012-05-07",
+          "link": "https://support.apple.com/HT212597"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/ios/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-15T06:42:19+00:00"
+  }
+}

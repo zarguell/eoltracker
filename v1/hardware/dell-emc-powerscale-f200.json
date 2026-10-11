@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-powerscale-f200",
+  "name": "PowerScale F200",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC PowerScale / Isilon",
+  "family": "PowerScale / Isilon",
+  "model_number": "PowerScale F200",
+  "milestones": {
+    "ga": "2020-06-16",
+    "eos": "2025-05-02",
+    "eossec": null,
+    "eol": null
+  },
+  "status": "supported",
+  "upstream": {
+    "Product": {
+      "text": "PowerScale F200",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "PowerScale F200",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC PowerScale / Isilon",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2025-05-02",
+      "datetime": null,
+      "value": "2025-05-02",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Jun. 16, 2020",
+      "datetime": "2020-06-16",
+      "value": "2020-06-16",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "TBD",
+      "datetime": null,
+      "value": null,
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/nas-storage/vendor/dell-emc/powerscale-isilon/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

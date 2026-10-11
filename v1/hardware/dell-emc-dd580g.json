@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-dd580g",
+  "name": "DD580g",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Data Domain",
+  "family": "Data Domain",
+  "model_number": "DD580g",
+  "milestones": {
+    "ga": "2007-04-23",
+    "eos": "2009-07-31",
+    "eossec": null,
+    "eol": "2013-12-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "DD580g",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "DD580g",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Data Domain",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2009-07-31",
+      "datetime": null,
+      "value": "2009-07-31",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Apr. 23, 2007",
+      "datetime": "2007-04-23",
+      "value": "2007-04-23",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2013-12-31",
+      "datetime": null,
+      "value": "2013-12-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/backup/vendor/dell-emc/data-domain/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

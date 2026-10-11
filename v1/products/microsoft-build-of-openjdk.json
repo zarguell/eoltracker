@@ -1,0 +1,135 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "microsoft-build-of-openjdk",
+  "name": "Microsoft Build of OpenJDK",
+  "category": "software",
+  "upstream_category": "lang",
+  "identifiers": [],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/openjdk.svg",
+    "html": "https://endoflife.date/microsoft-build-of-openjdk",
+    "releasePolicy": "https://learn.microsoft.com/java/openjdk/support"
+  },
+  "releases": [
+    {
+      "id": "25",
+      "name": "25 (LTS)",
+      "milestones": {
+        "ga": "2025-09-16",
+        "eos": null,
+        "eossec": "2030-09-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "25",
+        "codename": null,
+        "label": "25 (LTS)",
+        "releaseDate": "2025-09-16",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2030-09-30",
+        "isMaintained": true,
+        "latest": {
+          "name": "25.0.4.1",
+          "date": "2026-08-07",
+          "link": "https://learn.microsoft.com/java/openjdk/release-notes#openjdk-25"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "21",
+      "name": "21 (LTS)",
+      "milestones": {
+        "ga": "2023-09-19",
+        "eos": null,
+        "eossec": "2028-09-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "21",
+        "codename": null,
+        "label": "21 (LTS)",
+        "releaseDate": "2023-09-19",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2028-09-30",
+        "isMaintained": true,
+        "latest": {
+          "name": "21.0.12.1",
+          "date": "2026-08-07",
+          "link": "https://learn.microsoft.com/java/openjdk/release-notes#openjdk-21"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "17",
+      "name": "17 (LTS)",
+      "milestones": {
+        "ga": "2021-09-14",
+        "eos": null,
+        "eossec": "2027-09-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "17",
+        "codename": null,
+        "label": "17 (LTS)",
+        "releaseDate": "2021-09-14",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-09-30",
+        "isMaintained": true,
+        "latest": {
+          "name": "17.0.20.1",
+          "date": "2026-08-07",
+          "link": "https://learn.microsoft.com/java/openjdk/release-notes#openjdk-17"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "11",
+      "name": "11 (LTS)",
+      "milestones": {
+        "ga": "2019-01-21",
+        "eos": null,
+        "eossec": "2027-09-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "11",
+        "codename": null,
+        "label": "11 (LTS)",
+        "releaseDate": "2019-01-21",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-09-30",
+        "isMaintained": true,
+        "latest": {
+          "name": "11.0.32.1",
+          "date": "2026-08-19",
+          "link": "https://learn.microsoft.com/java/openjdk/release-notes#openjdk-11"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/microsoft-build-of-openjdk/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-08-20T00:09:04+00:00"
+  }
+}

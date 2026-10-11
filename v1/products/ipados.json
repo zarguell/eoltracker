@@ -1,0 +1,288 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "ipados",
+  "name": "Apple iPadOS",
+  "category": "software",
+  "upstream_category": "os",
+  "identifiers": [],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/apple.svg",
+    "html": "https://endoflife.date/ipados",
+    "releasePolicy": null
+  },
+  "releases": [
+    {
+      "id": "27",
+      "name": "27",
+      "milestones": {
+        "ga": "2026-09-14",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "27",
+        "codename": null,
+        "label": "27",
+        "releaseDate": "2026-09-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "27",
+          "date": "2026-09-14",
+          "link": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-27-release-notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "26",
+      "name": "26",
+      "milestones": {
+        "ga": "2025-09-15",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "26",
+        "codename": null,
+        "label": "26",
+        "releaseDate": "2025-09-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-09-14",
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "26.7",
+          "date": "2026-09-14",
+          "link": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26-release-notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18",
+      "name": "18",
+      "milestones": {
+        "ga": "2024-09-16",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "18",
+        "codename": null,
+        "label": "18",
+        "releaseDate": "2024-09-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-09-15",
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "18.7.10",
+          "date": "2026-08-17",
+          "link": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "17",
+      "name": "17",
+      "milestones": {
+        "ga": "2023-09-18",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "17",
+        "codename": null,
+        "label": "17",
+        "releaseDate": "2023-09-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-08-19",
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "17.7.11",
+          "date": "2026-05-11",
+          "link": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-17-release-notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "16",
+      "name": "16",
+      "milestones": {
+        "ga": "2022-10-24",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "16",
+        "codename": null,
+        "label": "16",
+        "releaseDate": "2022-10-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-09-18",
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "16.7.16",
+          "date": "2026-05-11",
+          "link": "https://developer.apple.com/documentation/ios-ipados-release-notes/ipados-16-release-notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "15",
+      "name": "15",
+      "milestones": {
+        "ga": "2021-09-20",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "15",
+        "codename": null,
+        "label": "15",
+        "releaseDate": "2021-09-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-10-24",
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "15.8.8",
+          "date": "2026-05-11",
+          "link": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-15-release-notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "14",
+      "name": "14",
+      "milestones": {
+        "ga": "2020-09-16",
+        "eos": null,
+        "eossec": "2021-10-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "14",
+        "codename": null,
+        "label": "14",
+        "releaseDate": "2020-09-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-09-20",
+        "isEol": true,
+        "eolFrom": "2021-10-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "14.8.1",
+          "date": "2021-10-26",
+          "link": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14-release-notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "13",
+      "name": "13",
+      "milestones": {
+        "ga": "2019-09-24",
+        "eos": null,
+        "eossec": "2020-09-16",
+        "eol": null
+      },
+      "upstream": {
+        "name": "13",
+        "codename": null,
+        "label": "13",
+        "releaseDate": "2019-09-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-09-16",
+        "isEol": true,
+        "eolFrom": "2020-09-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "13.6",
+          "date": "2020-07-15",
+          "link": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-13_1-release-notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "12",
+      "name": "12",
+      "milestones": {
+        "ga": "2018-09-17",
+        "eos": null,
+        "eossec": "2019-09-24",
+        "eol": null
+      },
+      "upstream": {
+        "name": "12",
+        "codename": null,
+        "label": "12",
+        "releaseDate": "2018-09-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2019-09-24",
+        "isEol": true,
+        "eolFrom": "2019-09-24",
+        "isMaintained": false,
+        "latest": {
+          "name": "12.5.8",
+          "date": "2026-01-26",
+          "link": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-12-release-notes"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/ipados/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-16T21:10:15+00:00"
+  }
+}

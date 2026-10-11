@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-powermax-2500",
+  "name": "PowerMax 2500",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Symmetrix",
+  "family": "Symmetrix",
+  "model_number": "PowerMax 2500",
+  "milestones": {
+    "ga": "2022-07-19",
+    "eos": null,
+    "eossec": null,
+    "eol": null
+  },
+  "status": "supported",
+  "upstream": {
+    "Product": {
+      "text": "PowerMax 2500",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "PowerMax 2500",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Symmetrix",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "TBD",
+      "datetime": null,
+      "value": null,
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Jul. 19, 2022",
+      "datetime": "2022-07-19",
+      "value": "2022-07-19",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "TBD",
+      "datetime": null,
+      "value": null,
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/san-storage/vendor/dell-emc/symmetrix/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

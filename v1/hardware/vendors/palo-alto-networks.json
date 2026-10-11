@@ -1,0 +1,3095 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-09-17T18:35:21Z",
+  "hardware_count": 34,
+  "vendor": "Palo Alto Networks",
+  "hardware": [
+    {
+      "id": "paloalto-gp-100",
+      "name": "GP-100",
+      "vendor": "Palo Alto Networks",
+      "product_line": "GP-100",
+      "family": "Palo Alto Networks hardware",
+      "model_number": "GP-100",
+      "status": "eol",
+      "search": "gp-100 paloalto-gp-100 palo alto networks gp-100 palo alto networks hardware gp-100",
+      "coverage": [
+        {
+          "key": "ga",
+          "short": "GA",
+          "label": "General availability",
+          "detail": "First availability, when the source publishes a release or launch date. Opengear does not publish GA in its lifecycle tables.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eos",
+          "short": "EoS",
+          "label": "End of sale",
+          "detail": "Last day sold: eosl.date's end-of-life-date column or Opengear's End of Sale / Old Part Sales End.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        },
+        {
+          "key": "eossec",
+          "short": "EoSS",
+          "label": "End of security support",
+          "detail": "No separate security-support deadline is normalized from these sources. Opengear contract exceptions remain in raw policy notes.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eol",
+          "short": "EoL",
+          "label": "End of support",
+          "detail": "Published support end: eosl.date's EOSL/LDOS or Opengear's End of Support / Old Part Support Ends. Individual contract exceptions may apply.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        }
+      ],
+      "milestones": {
+        "ga": null,
+        "eos": "2016-04-30",
+        "eossec": null,
+        "eol": "2021-04-30"
+      },
+      "next": null,
+      "json": "https://zarguell.github.io/eoltracker/v1/hardware/paloalto-gp-100.json",
+      "page": "https://zarguell.github.io/eoltracker/hardware/paloalto-gp-100/",
+      "source": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+      "source_urls": [
+        "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates"
+      ],
+      "source_links": [
+        {
+          "url": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+          "label": "Palo Alto Networks hardware end-of-life dates"
+        }
+      ],
+      "catalog": {
+        "is_catalog": false,
+        "catalog": null,
+        "lifecycle": null,
+        "listed": null,
+        "listing": null,
+        "notice": {
+          "key": "no-notice",
+          "label": "No matching notice",
+          "detail": "No published lifecycle notice resolves to this exact model, so no support end is known for it. The vendor lists it; that is not an entitlement."
+        },
+        "matched": false,
+        "matches": [],
+        "source_url": null,
+        "state": null,
+        "match_links": [],
+        "unresolved_matches": []
+      },
+      "research": false
+    },
+    {
+      "id": "paloalto-ion-1000",
+      "name": "ION 1000",
+      "vendor": "Palo Alto Networks",
+      "product_line": "ION 1000",
+      "family": "Palo Alto Networks hardware",
+      "model_number": "ION 1000",
+      "status": "expiring",
+      "search": "ion 1000 paloalto-ion-1000 palo alto networks ion 1000 palo alto networks hardware ion 1000",
+      "coverage": [
+        {
+          "key": "ga",
+          "short": "GA",
+          "label": "General availability",
+          "detail": "First availability, when the source publishes a release or launch date. Opengear does not publish GA in its lifecycle tables.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eos",
+          "short": "EoS",
+          "label": "End of sale",
+          "detail": "Last day sold: eosl.date's end-of-life-date column or Opengear's End of Sale / Old Part Sales End.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        },
+        {
+          "key": "eossec",
+          "short": "EoSS",
+          "label": "End of security support",
+          "detail": "No separate security-support deadline is normalized from these sources. Opengear contract exceptions remain in raw policy notes.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eol",
+          "short": "EoL",
+          "label": "End of support",
+          "detail": "Published support end: eosl.date's EOSL/LDOS or Opengear's End of Support / Old Part Support Ends. Individual contract exceptions may apply.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        }
+      ],
+      "milestones": {
+        "ga": null,
+        "eos": "2024-02-01",
+        "eossec": null,
+        "eol": "2029-02-01"
+      },
+      "next": {
+        "release": "ION 1000",
+        "release_id": "paloalto-ion-1000",
+        "milestone": "End of support",
+        "key": "eol",
+        "date": "2029-02-01",
+        "month": false,
+        "human": "Feb 1, 2029",
+        "days": 868
+      },
+      "json": "https://zarguell.github.io/eoltracker/v1/hardware/paloalto-ion-1000.json",
+      "page": "https://zarguell.github.io/eoltracker/hardware/paloalto-ion-1000/",
+      "source": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+      "source_urls": [
+        "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates"
+      ],
+      "source_links": [
+        {
+          "url": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+          "label": "Palo Alto Networks hardware end-of-life dates"
+        }
+      ],
+      "catalog": {
+        "is_catalog": false,
+        "catalog": null,
+        "lifecycle": null,
+        "listed": null,
+        "listing": null,
+        "notice": {
+          "key": "no-notice",
+          "label": "No matching notice",
+          "detail": "No published lifecycle notice resolves to this exact model, so no support end is known for it. The vendor lists it; that is not an entitlement."
+        },
+        "matched": false,
+        "matches": [],
+        "source_url": null,
+        "state": null,
+        "match_links": [],
+        "unresolved_matches": []
+      },
+      "research": false
+    },
+    {
+      "id": "paloalto-ion-1200-c-row",
+      "name": "ION 1200-C-ROW",
+      "vendor": "Palo Alto Networks",
+      "product_line": "ION 1200-C-ROW",
+      "family": "Palo Alto Networks hardware",
+      "model_number": "ION 1200-C-ROW ION 1200-C-NA ION 1200-S-C-ROW ION 1200-S-C-NA ION 1200-C5G-EXP",
+      "status": "expiring",
+      "search": "ion 1200-c-row paloalto-ion-1200-c-row palo alto networks ion 1200-c-row palo alto networks hardware ion 1200-c-row ion 1200-c-na ion 1200-s-c-row ion 1200-s-c-na ion 1200-c5g-exp",
+      "coverage": [
+        {
+          "key": "ga",
+          "short": "GA",
+          "label": "General availability",
+          "detail": "First availability, when the source publishes a release or launch date. Opengear does not publish GA in its lifecycle tables.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eos",
+          "short": "EoS",
+          "label": "End of sale",
+          "detail": "Last day sold: eosl.date's end-of-life-date column or Opengear's End of Sale / Old Part Sales End.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        },
+        {
+          "key": "eossec",
+          "short": "EoSS",
+          "label": "End of security support",
+          "detail": "No separate security-support deadline is normalized from these sources. Opengear contract exceptions remain in raw policy notes.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eol",
+          "short": "EoL",
+          "label": "End of support",
+          "detail": "Published support end: eosl.date's EOSL/LDOS or Opengear's End of Support / Old Part Support Ends. Individual contract exceptions may apply.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        }
+      ],
+      "milestones": {
+        "ga": null,
+        "eos": "2026-09-01",
+        "eossec": null,
+        "eol": "2031-08-31"
+      },
+      "next": {
+        "release": "ION 1200-C-ROW",
+        "release_id": "paloalto-ion-1200-c-row",
+        "milestone": "End of support",
+        "key": "eol",
+        "date": "2031-08-31",
+        "month": false,
+        "human": "Aug 31, 2031",
+        "days": 1809
+      },
+      "json": "https://zarguell.github.io/eoltracker/v1/hardware/paloalto-ion-1200-c-row.json",
+      "page": "https://zarguell.github.io/eoltracker/hardware/paloalto-ion-1200-c-row/",
+      "source": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+      "source_urls": [
+        "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates"
+      ],
+      "source_links": [
+        {
+          "url": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+          "label": "Palo Alto Networks hardware end-of-life dates"
+        }
+      ],
+      "catalog": {
+        "is_catalog": false,
+        "catalog": null,
+        "lifecycle": null,
+        "listed": null,
+        "listing": null,
+        "notice": {
+          "key": "no-notice",
+          "label": "No matching notice",
+          "detail": "No published lifecycle notice resolves to this exact model, so no support end is known for it. The vendor lists it; that is not an entitlement."
+        },
+        "matched": false,
+        "matches": [],
+        "source_url": null,
+        "state": null,
+        "match_links": [],
+        "unresolved_matches": []
+      },
+      "research": false
+    },
+    {
+      "id": "paloalto-ion-2000",
+      "name": "ION 2000",
+      "vendor": "Palo Alto Networks",
+      "product_line": "ION 2000",
+      "family": "Palo Alto Networks hardware",
+      "model_number": "ION 2000",
+      "status": "expiring",
+      "search": "ion 2000 paloalto-ion-2000 palo alto networks ion 2000 palo alto networks hardware ion 2000",
+      "coverage": [
+        {
+          "key": "ga",
+          "short": "GA",
+          "label": "General availability",
+          "detail": "First availability, when the source publishes a release or launch date. Opengear does not publish GA in its lifecycle tables.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eos",
+          "short": "EoS",
+          "label": "End of sale",
+          "detail": "Last day sold: eosl.date's end-of-life-date column or Opengear's End of Sale / Old Part Sales End.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        },
+        {
+          "key": "eossec",
+          "short": "EoSS",
+          "label": "End of security support",
+          "detail": "No separate security-support deadline is normalized from these sources. Opengear contract exceptions remain in raw policy notes.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eol",
+          "short": "EoL",
+          "label": "End of support",
+          "detail": "Published support end: eosl.date's EOSL/LDOS or Opengear's End of Support / Old Part Support Ends. Individual contract exceptions may apply.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        }
+      ],
+      "milestones": {
+        "ga": null,
+        "eos": "2024-02-01",
+        "eossec": null,
+        "eol": "2029-02-01"
+      },
+      "next": {
+        "release": "ION 2000",
+        "release_id": "paloalto-ion-2000",
+        "milestone": "End of support",
+        "key": "eol",
+        "date": "2029-02-01",
+        "month": false,
+        "human": "Feb 1, 2029",
+        "days": 868
+      },
+      "json": "https://zarguell.github.io/eoltracker/v1/hardware/paloalto-ion-2000.json",
+      "page": "https://zarguell.github.io/eoltracker/hardware/paloalto-ion-2000/",
+      "source": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+      "source_urls": [
+        "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates"
+      ],
+      "source_links": [
+        {
+          "url": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+          "label": "Palo Alto Networks hardware end-of-life dates"
+        }
+      ],
+      "catalog": {
+        "is_catalog": false,
+        "catalog": null,
+        "lifecycle": null,
+        "listed": null,
+        "listing": null,
+        "notice": {
+          "key": "no-notice",
+          "label": "No matching notice",
+          "detail": "No published lifecycle notice resolves to this exact model, so no support end is known for it. The vendor lists it; that is not an entitlement."
+        },
+        "matched": false,
+        "matches": [],
+        "source_url": null,
+        "state": null,
+        "match_links": [],
+        "unresolved_matches": []
+      },
+      "research": false
+    },
+    {
+      "id": "paloalto-ion-3000",
+      "name": "ION 3000",
+      "vendor": "Palo Alto Networks",
+      "product_line": "ION 3000",
+      "family": "Palo Alto Networks hardware",
+      "model_number": "ION 3000",
+      "status": "expiring",
+      "search": "ion 3000 paloalto-ion-3000 palo alto networks ion 3000 palo alto networks hardware ion 3000",
+      "coverage": [
+        {
+          "key": "ga",
+          "short": "GA",
+          "label": "General availability",
+          "detail": "First availability, when the source publishes a release or launch date. Opengear does not publish GA in its lifecycle tables.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eos",
+          "short": "EoS",
+          "label": "End of sale",
+          "detail": "Last day sold: eosl.date's end-of-life-date column or Opengear's End of Sale / Old Part Sales End.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        },
+        {
+          "key": "eossec",
+          "short": "EoSS",
+          "label": "End of security support",
+          "detail": "No separate security-support deadline is normalized from these sources. Opengear contract exceptions remain in raw policy notes.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eol",
+          "short": "EoL",
+          "label": "End of support",
+          "detail": "Published support end: eosl.date's EOSL/LDOS or Opengear's End of Support / Old Part Support Ends. Individual contract exceptions may apply.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        }
+      ],
+      "milestones": {
+        "ga": null,
+        "eos": "2024-03-15",
+        "eossec": null,
+        "eol": "2029-08-01"
+      },
+      "next": {
+        "release": "ION 3000",
+        "release_id": "paloalto-ion-3000",
+        "milestone": "End of support",
+        "key": "eol",
+        "date": "2029-08-01",
+        "month": false,
+        "human": "Aug 1, 2029",
+        "days": 1049
+      },
+      "json": "https://zarguell.github.io/eoltracker/v1/hardware/paloalto-ion-3000.json",
+      "page": "https://zarguell.github.io/eoltracker/hardware/paloalto-ion-3000/",
+      "source": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+      "source_urls": [
+        "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates"
+      ],
+      "source_links": [
+        {
+          "url": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+          "label": "Palo Alto Networks hardware end-of-life dates"
+        }
+      ],
+      "catalog": {
+        "is_catalog": false,
+        "catalog": null,
+        "lifecycle": null,
+        "listed": null,
+        "listing": null,
+        "notice": {
+          "key": "no-notice",
+          "label": "No matching notice",
+          "detail": "No published lifecycle notice resolves to this exact model, so no support end is known for it. The vendor lists it; that is not an entitlement."
+        },
+        "matched": false,
+        "matches": [],
+        "source_url": null,
+        "state": null,
+        "match_links": [],
+        "unresolved_matches": []
+      },
+      "research": false
+    },
+    {
+      "id": "paloalto-ion-7000",
+      "name": "ION 7000",
+      "vendor": "Palo Alto Networks",
+      "product_line": "ION 7000",
+      "family": "Palo Alto Networks hardware",
+      "model_number": "ION 7000",
+      "status": "expiring",
+      "search": "ion 7000 paloalto-ion-7000 palo alto networks ion 7000 palo alto networks hardware ion 7000",
+      "coverage": [
+        {
+          "key": "ga",
+          "short": "GA",
+          "label": "General availability",
+          "detail": "First availability, when the source publishes a release or launch date. Opengear does not publish GA in its lifecycle tables.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eos",
+          "short": "EoS",
+          "label": "End of sale",
+          "detail": "Last day sold: eosl.date's end-of-life-date column or Opengear's End of Sale / Old Part Sales End.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        },
+        {
+          "key": "eossec",
+          "short": "EoSS",
+          "label": "End of security support",
+          "detail": "No separate security-support deadline is normalized from these sources. Opengear contract exceptions remain in raw policy notes.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eol",
+          "short": "EoL",
+          "label": "End of support",
+          "detail": "Published support end: eosl.date's EOSL/LDOS or Opengear's End of Support / Old Part Support Ends. Individual contract exceptions may apply.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        }
+      ],
+      "milestones": {
+        "ga": null,
+        "eos": "2022-02-01",
+        "eossec": null,
+        "eol": "2027-02-01"
+      },
+      "next": {
+        "release": "ION 7000",
+        "release_id": "paloalto-ion-7000",
+        "milestone": "End of support",
+        "key": "eol",
+        "date": "2027-02-01",
+        "month": false,
+        "human": "Feb 1, 2027",
+        "days": 137
+      },
+      "json": "https://zarguell.github.io/eoltracker/v1/hardware/paloalto-ion-7000.json",
+      "page": "https://zarguell.github.io/eoltracker/hardware/paloalto-ion-7000/",
+      "source": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+      "source_urls": [
+        "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates"
+      ],
+      "source_links": [
+        {
+          "url": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+          "label": "Palo Alto Networks hardware end-of-life dates"
+        }
+      ],
+      "catalog": {
+        "is_catalog": false,
+        "catalog": null,
+        "lifecycle": null,
+        "listed": null,
+        "listing": null,
+        "notice": {
+          "key": "no-notice",
+          "label": "No matching notice",
+          "detail": "No published lifecycle notice resolves to this exact model, so no support end is known for it. The vendor lists it; that is not an entitlement."
+        },
+        "matched": false,
+        "matches": [],
+        "source_url": null,
+        "state": null,
+        "match_links": [],
+        "unresolved_matches": []
+      },
+      "research": false
+    },
+    {
+      "id": "paloalto-ion-9000",
+      "name": "ION 9000",
+      "vendor": "Palo Alto Networks",
+      "product_line": "ION 9000",
+      "family": "Palo Alto Networks hardware",
+      "model_number": "ION 9000",
+      "status": "expiring",
+      "search": "ion 9000 paloalto-ion-9000 palo alto networks ion 9000 palo alto networks hardware ion 9000",
+      "coverage": [
+        {
+          "key": "ga",
+          "short": "GA",
+          "label": "General availability",
+          "detail": "First availability, when the source publishes a release or launch date. Opengear does not publish GA in its lifecycle tables.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eos",
+          "short": "EoS",
+          "label": "End of sale",
+          "detail": "Last day sold: eosl.date's end-of-life-date column or Opengear's End of Sale / Old Part Sales End.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        },
+        {
+          "key": "eossec",
+          "short": "EoSS",
+          "label": "End of security support",
+          "detail": "No separate security-support deadline is normalized from these sources. Opengear contract exceptions remain in raw policy notes.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eol",
+          "short": "EoL",
+          "label": "End of support",
+          "detail": "Published support end: eosl.date's EOSL/LDOS or Opengear's End of Support / Old Part Support Ends. Individual contract exceptions may apply.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        }
+      ],
+      "milestones": {
+        "ga": null,
+        "eos": "2024-06-15",
+        "eossec": null,
+        "eol": "2029-08-01"
+      },
+      "next": {
+        "release": "ION 9000",
+        "release_id": "paloalto-ion-9000",
+        "milestone": "End of support",
+        "key": "eol",
+        "date": "2029-08-01",
+        "month": false,
+        "human": "Aug 1, 2029",
+        "days": 1049
+      },
+      "json": "https://zarguell.github.io/eoltracker/v1/hardware/paloalto-ion-9000.json",
+      "page": "https://zarguell.github.io/eoltracker/hardware/paloalto-ion-9000/",
+      "source": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+      "source_urls": [
+        "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates"
+      ],
+      "source_links": [
+        {
+          "url": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+          "label": "Palo Alto Networks hardware end-of-life dates"
+        }
+      ],
+      "catalog": {
+        "is_catalog": false,
+        "catalog": null,
+        "lifecycle": null,
+        "listed": null,
+        "listing": null,
+        "notice": {
+          "key": "no-notice",
+          "label": "No matching notice",
+          "detail": "No published lifecycle notice resolves to this exact model, so no support end is known for it. The vendor lists it; that is not an entitlement."
+        },
+        "matched": false,
+        "matches": [],
+        "source_url": null,
+        "state": null,
+        "match_links": [],
+        "unresolved_matches": []
+      },
+      "research": false
+    },
+    {
+      "id": "paloalto-k2-series",
+      "name": "K2-Series",
+      "vendor": "Palo Alto Networks",
+      "product_line": "K2-Series",
+      "family": "Palo Alto Networks hardware",
+      "model_number": "K2-Series (PA-5280-K2, PA-7050-K2, PA-7080-K2)",
+      "status": "eol",
+      "search": "k2-series paloalto-k2-series palo alto networks k2-series palo alto networks hardware k2-series (pa-5280-k2, pa-7050-k2, pa-7080-k2)",
+      "coverage": [
+        {
+          "key": "ga",
+          "short": "GA",
+          "label": "General availability",
+          "detail": "First availability, when the source publishes a release or launch date. Opengear does not publish GA in its lifecycle tables.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eos",
+          "short": "EoS",
+          "label": "End of sale",
+          "detail": "Last day sold: eosl.date's end-of-life-date column or Opengear's End of Sale / Old Part Sales End.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        },
+        {
+          "key": "eossec",
+          "short": "EoSS",
+          "label": "End of security support",
+          "detail": "No separate security-support deadline is normalized from these sources. Opengear contract exceptions remain in raw policy notes.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eol",
+          "short": "EoL",
+          "label": "End of support",
+          "detail": "Published support end: eosl.date's EOSL/LDOS or Opengear's End of Support / Old Part Support Ends. Individual contract exceptions may apply.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        }
+      ],
+      "milestones": {
+        "ga": null,
+        "eos": "2021-02-28",
+        "eossec": null,
+        "eol": "2026-02-28"
+      },
+      "next": null,
+      "json": "https://zarguell.github.io/eoltracker/v1/hardware/paloalto-k2-series.json",
+      "page": "https://zarguell.github.io/eoltracker/hardware/paloalto-k2-series/",
+      "source": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+      "source_urls": [
+        "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates"
+      ],
+      "source_links": [
+        {
+          "url": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+          "label": "Palo Alto Networks hardware end-of-life dates"
+        }
+      ],
+      "catalog": {
+        "is_catalog": false,
+        "catalog": null,
+        "lifecycle": null,
+        "listed": null,
+        "listing": null,
+        "notice": {
+          "key": "no-notice",
+          "label": "No matching notice",
+          "detail": "No published lifecycle notice resolves to this exact model, so no support end is known for it. The vendor lists it; that is not an entitlement."
+        },
+        "matched": false,
+        "matches": [],
+        "source_url": null,
+        "state": null,
+        "match_links": [],
+        "unresolved_matches": []
+      },
+      "research": false
+    },
+    {
+      "id": "paloalto-lightcyber-magna-detector",
+      "name": "LightCyber Magna Detector",
+      "vendor": "Palo Alto Networks",
+      "product_line": "LightCyber Magna Detector",
+      "family": "Palo Alto Networks hardware",
+      "model_number": "LightCyber Magna Detector (D-300, D-500, D-1000)",
+      "status": "eol",
+      "search": "lightcyber magna detector paloalto-lightcyber-magna-detector palo alto networks lightcyber magna detector palo alto networks hardware lightcyber magna detector (d-300, d-500, d-1000)",
+      "coverage": [
+        {
+          "key": "ga",
+          "short": "GA",
+          "label": "General availability",
+          "detail": "First availability, when the source publishes a release or launch date. Opengear does not publish GA in its lifecycle tables.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eos",
+          "short": "EoS",
+          "label": "End of sale",
+          "detail": "Last day sold: eosl.date's end-of-life-date column or Opengear's End of Sale / Old Part Sales End.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        },
+        {
+          "key": "eossec",
+          "short": "EoSS",
+          "label": "End of security support",
+          "detail": "No separate security-support deadline is normalized from these sources. Opengear contract exceptions remain in raw policy notes.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eol",
+          "short": "EoL",
+          "label": "End of support",
+          "detail": "Published support end: eosl.date's EOSL/LDOS or Opengear's End of Support / Old Part Support Ends. Individual contract exceptions may apply.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        }
+      ],
+      "milestones": {
+        "ga": null,
+        "eos": "2017-12-31",
+        "eossec": null,
+        "eol": "2020-12-31"
+      },
+      "next": null,
+      "json": "https://zarguell.github.io/eoltracker/v1/hardware/paloalto-lightcyber-magna-detector.json",
+      "page": "https://zarguell.github.io/eoltracker/hardware/paloalto-lightcyber-magna-detector/",
+      "source": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+      "source_urls": [
+        "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates"
+      ],
+      "source_links": [
+        {
+          "url": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+          "label": "Palo Alto Networks hardware end-of-life dates"
+        }
+      ],
+      "catalog": {
+        "is_catalog": false,
+        "catalog": null,
+        "lifecycle": null,
+        "listed": null,
+        "listing": null,
+        "notice": {
+          "key": "no-notice",
+          "label": "No matching notice",
+          "detail": "No published lifecycle notice resolves to this exact model, so no support end is known for it. The vendor lists it; that is not an entitlement."
+        },
+        "matched": false,
+        "matches": [],
+        "source_url": null,
+        "state": null,
+        "match_links": [],
+        "unresolved_matches": []
+      },
+      "research": false
+    },
+    {
+      "id": "paloalto-lightcyber-magna-master-m-100",
+      "name": "LightCyber Magna Master (M-100)",
+      "vendor": "Palo Alto Networks",
+      "product_line": "LightCyber Magna Master (M-100)",
+      "family": "Palo Alto Networks hardware",
+      "model_number": "LightCyber Magna Master (M-100)",
+      "status": "eol",
+      "search": "lightcyber magna master (m-100) paloalto-lightcyber-magna-master-m-100 palo alto networks lightcyber magna master (m-100) palo alto networks hardware lightcyber magna master (m-100)",
+      "coverage": [
+        {
+          "key": "ga",
+          "short": "GA",
+          "label": "General availability",
+          "detail": "First availability, when the source publishes a release or launch date. Opengear does not publish GA in its lifecycle tables.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eos",
+          "short": "EoS",
+          "label": "End of sale",
+          "detail": "Last day sold: eosl.date's end-of-life-date column or Opengear's End of Sale / Old Part Sales End.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        },
+        {
+          "key": "eossec",
+          "short": "EoSS",
+          "label": "End of security support",
+          "detail": "No separate security-support deadline is normalized from these sources. Opengear contract exceptions remain in raw policy notes.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eol",
+          "short": "EoL",
+          "label": "End of support",
+          "detail": "Published support end: eosl.date's EOSL/LDOS or Opengear's End of Support / Old Part Support Ends. Individual contract exceptions may apply.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        }
+      ],
+      "milestones": {
+        "ga": null,
+        "eos": "2017-12-31",
+        "eossec": null,
+        "eol": "2020-12-31"
+      },
+      "next": null,
+      "json": "https://zarguell.github.io/eoltracker/v1/hardware/paloalto-lightcyber-magna-master-m-100.json",
+      "page": "https://zarguell.github.io/eoltracker/hardware/paloalto-lightcyber-magna-master-m-100/",
+      "source": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+      "source_urls": [
+        "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates"
+      ],
+      "source_links": [
+        {
+          "url": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+          "label": "Palo Alto Networks hardware end-of-life dates"
+        }
+      ],
+      "catalog": {
+        "is_catalog": false,
+        "catalog": null,
+        "lifecycle": null,
+        "listed": null,
+        "listing": null,
+        "notice": {
+          "key": "no-notice",
+          "label": "No matching notice",
+          "detail": "No published lifecycle notice resolves to this exact model, so no support end is known for it. The vendor lists it; that is not an entitlement."
+        },
+        "matched": false,
+        "matches": [],
+        "source_url": null,
+        "state": null,
+        "match_links": [],
+        "unresolved_matches": []
+      },
+      "research": false
+    },
+    {
+      "id": "paloalto-lightcyber-magna-probe",
+      "name": "LightCyber Magna Probe",
+      "vendor": "Palo Alto Networks",
+      "product_line": "LightCyber Magna Probe",
+      "family": "Palo Alto Networks hardware",
+      "model_number": "LightCyber Magna Probe (P-50T)",
+      "status": "eol",
+      "search": "lightcyber magna probe paloalto-lightcyber-magna-probe palo alto networks lightcyber magna probe palo alto networks hardware lightcyber magna probe (p-50t)",
+      "coverage": [
+        {
+          "key": "ga",
+          "short": "GA",
+          "label": "General availability",
+          "detail": "First availability, when the source publishes a release or launch date. Opengear does not publish GA in its lifecycle tables.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eos",
+          "short": "EoS",
+          "label": "End of sale",
+          "detail": "Last day sold: eosl.date's end-of-life-date column or Opengear's End of Sale / Old Part Sales End.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        },
+        {
+          "key": "eossec",
+          "short": "EoSS",
+          "label": "End of security support",
+          "detail": "No separate security-support deadline is normalized from these sources. Opengear contract exceptions remain in raw policy notes.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eol",
+          "short": "EoL",
+          "label": "End of support",
+          "detail": "Published support end: eosl.date's EOSL/LDOS or Opengear's End of Support / Old Part Support Ends. Individual contract exceptions may apply.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        }
+      ],
+      "milestones": {
+        "ga": null,
+        "eos": "2017-12-31",
+        "eossec": null,
+        "eol": "2020-12-31"
+      },
+      "next": null,
+      "json": "https://zarguell.github.io/eoltracker/v1/hardware/paloalto-lightcyber-magna-probe.json",
+      "page": "https://zarguell.github.io/eoltracker/hardware/paloalto-lightcyber-magna-probe/",
+      "source": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+      "source_urls": [
+        "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates"
+      ],
+      "source_links": [
+        {
+          "url": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+          "label": "Palo Alto Networks hardware end-of-life dates"
+        }
+      ],
+      "catalog": {
+        "is_catalog": false,
+        "catalog": null,
+        "lifecycle": null,
+        "listed": null,
+        "listing": null,
+        "notice": {
+          "key": "no-notice",
+          "label": "No matching notice",
+          "detail": "No published lifecycle notice resolves to this exact model, so no support end is known for it. The vendor lists it; that is not an entitlement."
+        },
+        "matched": false,
+        "matches": [],
+        "source_url": null,
+        "state": null,
+        "match_links": [],
+        "unresolved_matches": []
+      },
+      "research": false
+    },
+    {
+      "id": "paloalto-m-100",
+      "name": "M-100",
+      "vendor": "Palo Alto Networks",
+      "product_line": "M-100",
+      "family": "Palo Alto Networks hardware",
+      "model_number": "M-100",
+      "status": "eol",
+      "search": "m-100 paloalto-m-100 palo alto networks m-100 palo alto networks hardware m-100",
+      "coverage": [
+        {
+          "key": "ga",
+          "short": "GA",
+          "label": "General availability",
+          "detail": "First availability, when the source publishes a release or launch date. Opengear does not publish GA in its lifecycle tables.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eos",
+          "short": "EoS",
+          "label": "End of sale",
+          "detail": "Last day sold: eosl.date's end-of-life-date column or Opengear's End of Sale / Old Part Sales End.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        },
+        {
+          "key": "eossec",
+          "short": "EoSS",
+          "label": "End of security support",
+          "detail": "No separate security-support deadline is normalized from these sources. Opengear contract exceptions remain in raw policy notes.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eol",
+          "short": "EoL",
+          "label": "End of support",
+          "detail": "Published support end: eosl.date's EOSL/LDOS or Opengear's End of Support / Old Part Support Ends. Individual contract exceptions may apply.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        }
+      ],
+      "milestones": {
+        "ga": null,
+        "eos": "2018-10-31",
+        "eossec": null,
+        "eol": "2023-10-31"
+      },
+      "next": null,
+      "json": "https://zarguell.github.io/eoltracker/v1/hardware/paloalto-m-100.json",
+      "page": "https://zarguell.github.io/eoltracker/hardware/paloalto-m-100/",
+      "source": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+      "source_urls": [
+        "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates"
+      ],
+      "source_links": [
+        {
+          "url": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+          "label": "Palo Alto Networks hardware end-of-life dates"
+        }
+      ],
+      "catalog": {
+        "is_catalog": false,
+        "catalog": null,
+        "lifecycle": null,
+        "listed": null,
+        "listing": null,
+        "notice": {
+          "key": "no-notice",
+          "label": "No matching notice",
+          "detail": "No published lifecycle notice resolves to this exact model, so no support end is known for it. The vendor lists it; that is not an entitlement."
+        },
+        "matched": false,
+        "matches": [],
+        "source_url": null,
+        "state": null,
+        "match_links": [],
+        "unresolved_matches": []
+      },
+      "research": false
+    },
+    {
+      "id": "paloalto-m-200-and-m-600",
+      "name": "M-200 and M-600",
+      "vendor": "Palo Alto Networks",
+      "product_line": "M-200 and M-600",
+      "family": "Palo Alto Networks hardware",
+      "model_number": "M-200 and M-600",
+      "status": "expiring",
+      "search": "m-200 and m-600 paloalto-m-200-and-m-600 palo alto networks m-200 and m-600 palo alto networks hardware m-200 and m-600",
+      "coverage": [
+        {
+          "key": "ga",
+          "short": "GA",
+          "label": "General availability",
+          "detail": "First availability, when the source publishes a release or launch date. Opengear does not publish GA in its lifecycle tables.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eos",
+          "short": "EoS",
+          "label": "End of sale",
+          "detail": "Last day sold: eosl.date's end-of-life-date column or Opengear's End of Sale / Old Part Sales End.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        },
+        {
+          "key": "eossec",
+          "short": "EoSS",
+          "label": "End of security support",
+          "detail": "No separate security-support deadline is normalized from these sources. Opengear contract exceptions remain in raw policy notes.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eol",
+          "short": "EoL",
+          "label": "End of support",
+          "detail": "Published support end: eosl.date's EOSL/LDOS or Opengear's End of Support / Old Part Support Ends. Individual contract exceptions may apply.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        }
+      ],
+      "milestones": {
+        "ga": null,
+        "eos": "2024-02-15",
+        "eossec": null,
+        "eol": "2029-02-15"
+      },
+      "next": {
+        "release": "M-200 and M-600",
+        "release_id": "paloalto-m-200-and-m-600",
+        "milestone": "End of support",
+        "key": "eol",
+        "date": "2029-02-15",
+        "month": false,
+        "human": "Feb 15, 2029",
+        "days": 882
+      },
+      "json": "https://zarguell.github.io/eoltracker/v1/hardware/paloalto-m-200-and-m-600.json",
+      "page": "https://zarguell.github.io/eoltracker/hardware/paloalto-m-200-and-m-600/",
+      "source": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+      "source_urls": [
+        "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates"
+      ],
+      "source_links": [
+        {
+          "url": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+          "label": "Palo Alto Networks hardware end-of-life dates"
+        }
+      ],
+      "catalog": {
+        "is_catalog": false,
+        "catalog": null,
+        "lifecycle": null,
+        "listed": null,
+        "listing": null,
+        "notice": {
+          "key": "no-notice",
+          "label": "No matching notice",
+          "detail": "No published lifecycle notice resolves to this exact model, so no support end is known for it. The vendor lists it; that is not an entitlement."
+        },
+        "matched": false,
+        "matches": [],
+        "source_url": null,
+        "state": null,
+        "match_links": [],
+        "unresolved_matches": []
+      },
+      "research": false
+    },
+    {
+      "id": "paloalto-m-500",
+      "name": "M-500",
+      "vendor": "Palo Alto Networks",
+      "product_line": "M-500",
+      "family": "Palo Alto Networks hardware",
+      "model_number": "M-500",
+      "status": "eol",
+      "search": "m-500 paloalto-m-500 palo alto networks m-500 palo alto networks hardware m-500",
+      "coverage": [
+        {
+          "key": "ga",
+          "short": "GA",
+          "label": "General availability",
+          "detail": "First availability, when the source publishes a release or launch date. Opengear does not publish GA in its lifecycle tables.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eos",
+          "short": "EoS",
+          "label": "End of sale",
+          "detail": "Last day sold: eosl.date's end-of-life-date column or Opengear's End of Sale / Old Part Sales End.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        },
+        {
+          "key": "eossec",
+          "short": "EoSS",
+          "label": "End of security support",
+          "detail": "No separate security-support deadline is normalized from these sources. Opengear contract exceptions remain in raw policy notes.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eol",
+          "short": "EoL",
+          "label": "End of support",
+          "detail": "Published support end: eosl.date's EOSL/LDOS or Opengear's End of Support / Old Part Support Ends. Individual contract exceptions may apply.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        }
+      ],
+      "milestones": {
+        "ga": null,
+        "eos": "2020-02-29",
+        "eossec": null,
+        "eol": "2025-02-28"
+      },
+      "next": null,
+      "json": "https://zarguell.github.io/eoltracker/v1/hardware/paloalto-m-500.json",
+      "page": "https://zarguell.github.io/eoltracker/hardware/paloalto-m-500/",
+      "source": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+      "source_urls": [
+        "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates"
+      ],
+      "source_links": [
+        {
+          "url": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+          "label": "Palo Alto Networks hardware end-of-life dates"
+        }
+      ],
+      "catalog": {
+        "is_catalog": false,
+        "catalog": null,
+        "lifecycle": null,
+        "listed": null,
+        "listing": null,
+        "notice": {
+          "key": "no-notice",
+          "label": "No matching notice",
+          "detail": "No published lifecycle notice resolves to this exact model, so no support end is known for it. The vendor lists it; that is not an entitlement."
+        },
+        "matched": false,
+        "matches": [],
+        "source_url": null,
+        "state": null,
+        "match_links": [],
+        "unresolved_matches": []
+      },
+      "research": false
+    },
+    {
+      "id": "paloalto-pa-200",
+      "name": "PA-200",
+      "vendor": "Palo Alto Networks",
+      "product_line": "PA-200",
+      "family": "Palo Alto Networks hardware",
+      "model_number": "PA-200",
+      "status": "eol",
+      "search": "pa-200 paloalto-pa-200 palo alto networks pa-200 palo alto networks hardware pa-200",
+      "coverage": [
+        {
+          "key": "ga",
+          "short": "GA",
+          "label": "General availability",
+          "detail": "First availability, when the source publishes a release or launch date. Opengear does not publish GA in its lifecycle tables.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eos",
+          "short": "EoS",
+          "label": "End of sale",
+          "detail": "Last day sold: eosl.date's end-of-life-date column or Opengear's End of Sale / Old Part Sales End.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        },
+        {
+          "key": "eossec",
+          "short": "EoSS",
+          "label": "End of security support",
+          "detail": "No separate security-support deadline is normalized from these sources. Opengear contract exceptions remain in raw policy notes.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eol",
+          "short": "EoL",
+          "label": "End of support",
+          "detail": "Published support end: eosl.date's EOSL/LDOS or Opengear's End of Support / Old Part Support Ends. Individual contract exceptions may apply.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        }
+      ],
+      "milestones": {
+        "ga": null,
+        "eos": "2018-10-31",
+        "eossec": null,
+        "eol": "2023-10-31"
+      },
+      "next": null,
+      "json": "https://zarguell.github.io/eoltracker/v1/hardware/paloalto-pa-200.json",
+      "page": "https://zarguell.github.io/eoltracker/hardware/paloalto-pa-200/",
+      "source": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+      "source_urls": [
+        "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates"
+      ],
+      "source_links": [
+        {
+          "url": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+          "label": "Palo Alto Networks hardware end-of-life dates"
+        }
+      ],
+      "catalog": {
+        "is_catalog": false,
+        "catalog": null,
+        "lifecycle": null,
+        "listed": null,
+        "listing": null,
+        "notice": {
+          "key": "no-notice",
+          "label": "No matching notice",
+          "detail": "No published lifecycle notice resolves to this exact model, so no support end is known for it. The vendor lists it; that is not an entitlement."
+        },
+        "matched": false,
+        "matches": [],
+        "source_url": null,
+        "state": null,
+        "match_links": [],
+        "unresolved_matches": []
+      },
+      "research": false
+    },
+    {
+      "id": "paloalto-pa-2000-series",
+      "name": "PA-2000 Series",
+      "vendor": "Palo Alto Networks",
+      "product_line": "PA-2000 Series",
+      "family": "Palo Alto Networks hardware",
+      "model_number": "PA-2000 Series (PA-2020, PA-2050)",
+      "status": "eol",
+      "search": "pa-2000 series paloalto-pa-2000-series palo alto networks pa-2000 series palo alto networks hardware pa-2000 series (pa-2020, pa-2050)",
+      "coverage": [
+        {
+          "key": "ga",
+          "short": "GA",
+          "label": "General availability",
+          "detail": "First availability, when the source publishes a release or launch date. Opengear does not publish GA in its lifecycle tables.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eos",
+          "short": "EoS",
+          "label": "End of sale",
+          "detail": "Last day sold: eosl.date's end-of-life-date column or Opengear's End of Sale / Old Part Sales End.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        },
+        {
+          "key": "eossec",
+          "short": "EoSS",
+          "label": "End of security support",
+          "detail": "No separate security-support deadline is normalized from these sources. Opengear contract exceptions remain in raw policy notes.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eol",
+          "short": "EoL",
+          "label": "End of support",
+          "detail": "Published support end: eosl.date's EOSL/LDOS or Opengear's End of Support / Old Part Support Ends. Individual contract exceptions may apply.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        }
+      ],
+      "milestones": {
+        "ga": null,
+        "eos": "2015-04-30",
+        "eossec": null,
+        "eol": "2020-04-30"
+      },
+      "next": null,
+      "json": "https://zarguell.github.io/eoltracker/v1/hardware/paloalto-pa-2000-series.json",
+      "page": "https://zarguell.github.io/eoltracker/hardware/paloalto-pa-2000-series/",
+      "source": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+      "source_urls": [
+        "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates"
+      ],
+      "source_links": [
+        {
+          "url": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+          "label": "Palo Alto Networks hardware end-of-life dates"
+        }
+      ],
+      "catalog": {
+        "is_catalog": false,
+        "catalog": null,
+        "lifecycle": null,
+        "listed": null,
+        "listing": null,
+        "notice": {
+          "key": "no-notice",
+          "label": "No matching notice",
+          "detail": "No published lifecycle notice resolves to this exact model, so no support end is known for it. The vendor lists it; that is not an entitlement."
+        },
+        "matched": false,
+        "matches": [],
+        "source_url": null,
+        "state": null,
+        "match_links": [],
+        "unresolved_matches": []
+      },
+      "research": false
+    },
+    {
+      "id": "paloalto-pa-220",
+      "name": "PA-220",
+      "vendor": "Palo Alto Networks",
+      "product_line": "PA-220",
+      "family": "Palo Alto Networks hardware",
+      "model_number": "PA-220",
+      "status": "expiring",
+      "search": "pa-220 paloalto-pa-220 palo alto networks pa-220 palo alto networks hardware pa-220",
+      "coverage": [
+        {
+          "key": "ga",
+          "short": "GA",
+          "label": "General availability",
+          "detail": "First availability, when the source publishes a release or launch date. Opengear does not publish GA in its lifecycle tables.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eos",
+          "short": "EoS",
+          "label": "End of sale",
+          "detail": "Last day sold: eosl.date's end-of-life-date column or Opengear's End of Sale / Old Part Sales End.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        },
+        {
+          "key": "eossec",
+          "short": "EoSS",
+          "label": "End of security support",
+          "detail": "No separate security-support deadline is normalized from these sources. Opengear contract exceptions remain in raw policy notes.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eol",
+          "short": "EoL",
+          "label": "End of support",
+          "detail": "Published support end: eosl.date's EOSL/LDOS or Opengear's End of Support / Old Part Support Ends. Individual contract exceptions may apply.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        }
+      ],
+      "milestones": {
+        "ga": null,
+        "eos": "2023-01-31",
+        "eossec": null,
+        "eol": "2028-01-31"
+      },
+      "next": {
+        "release": "PA-220",
+        "release_id": "paloalto-pa-220",
+        "milestone": "End of support",
+        "key": "eol",
+        "date": "2028-01-31",
+        "month": false,
+        "human": "Jan 31, 2028",
+        "days": 501
+      },
+      "json": "https://zarguell.github.io/eoltracker/v1/hardware/paloalto-pa-220.json",
+      "page": "https://zarguell.github.io/eoltracker/hardware/paloalto-pa-220/",
+      "source": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+      "source_urls": [
+        "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates"
+      ],
+      "source_links": [
+        {
+          "url": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+          "label": "Palo Alto Networks hardware end-of-life dates"
+        }
+      ],
+      "catalog": {
+        "is_catalog": false,
+        "catalog": null,
+        "lifecycle": null,
+        "listed": null,
+        "listing": null,
+        "notice": {
+          "key": "no-notice",
+          "label": "No matching notice",
+          "detail": "No published lifecycle notice resolves to this exact model, so no support end is known for it. The vendor lists it; that is not an entitlement."
+        },
+        "matched": false,
+        "matches": [],
+        "source_url": null,
+        "state": null,
+        "match_links": [],
+        "unresolved_matches": []
+      },
+      "research": false
+    },
+    {
+      "id": "paloalto-pa-220r",
+      "name": "PA-220R",
+      "vendor": "Palo Alto Networks",
+      "product_line": "PA-220R",
+      "family": "Palo Alto Networks hardware",
+      "model_number": "PA-220R",
+      "status": "expiring",
+      "search": "pa-220r paloalto-pa-220r palo alto networks pa-220r palo alto networks hardware pa-220r",
+      "coverage": [
+        {
+          "key": "ga",
+          "short": "GA",
+          "label": "General availability",
+          "detail": "First availability, when the source publishes a release or launch date. Opengear does not publish GA in its lifecycle tables.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eos",
+          "short": "EoS",
+          "label": "End of sale",
+          "detail": "Last day sold: eosl.date's end-of-life-date column or Opengear's End of Sale / Old Part Sales End.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        },
+        {
+          "key": "eossec",
+          "short": "EoSS",
+          "label": "End of security support",
+          "detail": "No separate security-support deadline is normalized from these sources. Opengear contract exceptions remain in raw policy notes.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eol",
+          "short": "EoL",
+          "label": "End of support",
+          "detail": "Published support end: eosl.date's EOSL/LDOS or Opengear's End of Support / Old Part Support Ends. Individual contract exceptions may apply.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        }
+      ],
+      "milestones": {
+        "ga": null,
+        "eos": "2025-01-31",
+        "eossec": null,
+        "eol": "2030-01-31"
+      },
+      "next": {
+        "release": "PA-220R",
+        "release_id": "paloalto-pa-220r",
+        "milestone": "End of support",
+        "key": "eol",
+        "date": "2030-01-31",
+        "month": false,
+        "human": "Jan 31, 2030",
+        "days": 1232
+      },
+      "json": "https://zarguell.github.io/eoltracker/v1/hardware/paloalto-pa-220r.json",
+      "page": "https://zarguell.github.io/eoltracker/hardware/paloalto-pa-220r/",
+      "source": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+      "source_urls": [
+        "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates"
+      ],
+      "source_links": [
+        {
+          "url": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+          "label": "Palo Alto Networks hardware end-of-life dates"
+        }
+      ],
+      "catalog": {
+        "is_catalog": false,
+        "catalog": null,
+        "lifecycle": null,
+        "listed": null,
+        "listing": null,
+        "notice": {
+          "key": "no-notice",
+          "label": "No matching notice",
+          "detail": "No published lifecycle notice resolves to this exact model, so no support end is known for it. The vendor lists it; that is not an entitlement."
+        },
+        "matched": false,
+        "matches": [],
+        "source_url": null,
+        "state": null,
+        "match_links": [],
+        "unresolved_matches": []
+      },
+      "research": false
+    },
+    {
+      "id": "paloalto-pa-3000-series",
+      "name": "PA-3000 Series",
+      "vendor": "Palo Alto Networks",
+      "product_line": "PA-3000 Series",
+      "family": "Palo Alto Networks hardware",
+      "model_number": "PA-3000 Series (PA-3020, PA-3050, PA-3060)",
+      "status": "eol",
+      "search": "pa-3000 series paloalto-pa-3000-series palo alto networks pa-3000 series palo alto networks hardware pa-3000 series (pa-3020, pa-3050, pa-3060)",
+      "coverage": [
+        {
+          "key": "ga",
+          "short": "GA",
+          "label": "General availability",
+          "detail": "First availability, when the source publishes a release or launch date. Opengear does not publish GA in its lifecycle tables.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eos",
+          "short": "EoS",
+          "label": "End of sale",
+          "detail": "Last day sold: eosl.date's end-of-life-date column or Opengear's End of Sale / Old Part Sales End.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        },
+        {
+          "key": "eossec",
+          "short": "EoSS",
+          "label": "End of security support",
+          "detail": "No separate security-support deadline is normalized from these sources. Opengear contract exceptions remain in raw policy notes.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eol",
+          "short": "EoL",
+          "label": "End of support",
+          "detail": "Published support end: eosl.date's EOSL/LDOS or Opengear's End of Support / Old Part Support Ends. Individual contract exceptions may apply.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        }
+      ],
+      "milestones": {
+        "ga": null,
+        "eos": "2019-10-31",
+        "eossec": null,
+        "eol": "2024-10-31"
+      },
+      "next": null,
+      "json": "https://zarguell.github.io/eoltracker/v1/hardware/paloalto-pa-3000-series.json",
+      "page": "https://zarguell.github.io/eoltracker/hardware/paloalto-pa-3000-series/",
+      "source": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+      "source_urls": [
+        "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates"
+      ],
+      "source_links": [
+        {
+          "url": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+          "label": "Palo Alto Networks hardware end-of-life dates"
+        }
+      ],
+      "catalog": {
+        "is_catalog": false,
+        "catalog": null,
+        "lifecycle": null,
+        "listed": null,
+        "listing": null,
+        "notice": {
+          "key": "no-notice",
+          "label": "No matching notice",
+          "detail": "No published lifecycle notice resolves to this exact model, so no support end is known for it. The vendor lists it; that is not an entitlement."
+        },
+        "matched": false,
+        "matches": [],
+        "source_url": null,
+        "state": null,
+        "match_links": [],
+        "unresolved_matches": []
+      },
+      "research": false
+    },
+    {
+      "id": "paloalto-pa-3200-series",
+      "name": "PA-3200 Series",
+      "vendor": "Palo Alto Networks",
+      "product_line": "PA-3200 Series",
+      "family": "Palo Alto Networks hardware",
+      "model_number": "PA-3200 Series (PA-3220, PA-3250, PA-3260) (PA-3220-ZTP, PA-3250-ZTP, PA-3260-ZTP)",
+      "status": "expiring",
+      "search": "pa-3200 series paloalto-pa-3200-series palo alto networks pa-3200 series palo alto networks hardware pa-3200 series (pa-3220, pa-3250, pa-3260) (pa-3220-ztp, pa-3250-ztp, pa-3260-ztp)",
+      "coverage": [
+        {
+          "key": "ga",
+          "short": "GA",
+          "label": "General availability",
+          "detail": "First availability, when the source publishes a release or launch date. Opengear does not publish GA in its lifecycle tables.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eos",
+          "short": "EoS",
+          "label": "End of sale",
+          "detail": "Last day sold: eosl.date's end-of-life-date column or Opengear's End of Sale / Old Part Sales End.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        },
+        {
+          "key": "eossec",
+          "short": "EoSS",
+          "label": "End of security support",
+          "detail": "No separate security-support deadline is normalized from these sources. Opengear contract exceptions remain in raw policy notes.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eol",
+          "short": "EoL",
+          "label": "End of support",
+          "detail": "Published support end: eosl.date's EOSL/LDOS or Opengear's End of Support / Old Part Support Ends. Individual contract exceptions may apply.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        }
+      ],
+      "milestones": {
+        "ga": null,
+        "eos": "2023-08-31",
+        "eossec": null,
+        "eol": "2028-08-31"
+      },
+      "next": {
+        "release": "PA-3200 Series",
+        "release_id": "paloalto-pa-3200-series",
+        "milestone": "End of support",
+        "key": "eol",
+        "date": "2028-08-31",
+        "month": false,
+        "human": "Aug 31, 2028",
+        "days": 714
+      },
+      "json": "https://zarguell.github.io/eoltracker/v1/hardware/paloalto-pa-3200-series.json",
+      "page": "https://zarguell.github.io/eoltracker/hardware/paloalto-pa-3200-series/",
+      "source": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+      "source_urls": [
+        "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates"
+      ],
+      "source_links": [
+        {
+          "url": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+          "label": "Palo Alto Networks hardware end-of-life dates"
+        }
+      ],
+      "catalog": {
+        "is_catalog": false,
+        "catalog": null,
+        "lifecycle": null,
+        "listed": null,
+        "listing": null,
+        "notice": {
+          "key": "no-notice",
+          "label": "No matching notice",
+          "detail": "No published lifecycle notice resolves to this exact model, so no support end is known for it. The vendor lists it; that is not an entitlement."
+        },
+        "matched": false,
+        "matches": [],
+        "source_url": null,
+        "state": null,
+        "match_links": [],
+        "unresolved_matches": []
+      },
+      "research": false
+    },
+    {
+      "id": "paloalto-pa-4000-series",
+      "name": "PA-4000 Series",
+      "vendor": "Palo Alto Networks",
+      "product_line": "PA-4000 Series",
+      "family": "Palo Alto Networks hardware",
+      "model_number": "PA-4000 Series (PA-4020, PA-4050, PA-4060)",
+      "status": "eol",
+      "search": "pa-4000 series paloalto-pa-4000-series palo alto networks pa-4000 series palo alto networks hardware pa-4000 series (pa-4020, pa-4050, pa-4060)",
+      "coverage": [
+        {
+          "key": "ga",
+          "short": "GA",
+          "label": "General availability",
+          "detail": "First availability, when the source publishes a release or launch date. Opengear does not publish GA in its lifecycle tables.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eos",
+          "short": "EoS",
+          "label": "End of sale",
+          "detail": "Last day sold: eosl.date's end-of-life-date column or Opengear's End of Sale / Old Part Sales End.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        },
+        {
+          "key": "eossec",
+          "short": "EoSS",
+          "label": "End of security support",
+          "detail": "No separate security-support deadline is normalized from these sources. Opengear contract exceptions remain in raw policy notes.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eol",
+          "short": "EoL",
+          "label": "End of support",
+          "detail": "Published support end: eosl.date's EOSL/LDOS or Opengear's End of Support / Old Part Support Ends. Individual contract exceptions may apply.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        }
+      ],
+      "milestones": {
+        "ga": null,
+        "eos": "2014-04-30",
+        "eossec": null,
+        "eol": "2019-04-30"
+      },
+      "next": null,
+      "json": "https://zarguell.github.io/eoltracker/v1/hardware/paloalto-pa-4000-series.json",
+      "page": "https://zarguell.github.io/eoltracker/hardware/paloalto-pa-4000-series/",
+      "source": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+      "source_urls": [
+        "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates"
+      ],
+      "source_links": [
+        {
+          "url": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+          "label": "Palo Alto Networks hardware end-of-life dates"
+        }
+      ],
+      "catalog": {
+        "is_catalog": false,
+        "catalog": null,
+        "lifecycle": null,
+        "listed": null,
+        "listing": null,
+        "notice": {
+          "key": "no-notice",
+          "label": "No matching notice",
+          "detail": "No published lifecycle notice resolves to this exact model, so no support end is known for it. The vendor lists it; that is not an entitlement."
+        },
+        "matched": false,
+        "matches": [],
+        "source_url": null,
+        "state": null,
+        "match_links": [],
+        "unresolved_matches": []
+      },
+      "research": false
+    },
+    {
+      "id": "paloalto-pa-500",
+      "name": "PA-500",
+      "vendor": "Palo Alto Networks",
+      "product_line": "PA-500",
+      "family": "Palo Alto Networks hardware",
+      "model_number": "PA-500",
+      "status": "eol",
+      "search": "pa-500 paloalto-pa-500 palo alto networks pa-500 palo alto networks hardware pa-500",
+      "coverage": [
+        {
+          "key": "ga",
+          "short": "GA",
+          "label": "General availability",
+          "detail": "First availability, when the source publishes a release or launch date. Opengear does not publish GA in its lifecycle tables.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eos",
+          "short": "EoS",
+          "label": "End of sale",
+          "detail": "Last day sold: eosl.date's end-of-life-date column or Opengear's End of Sale / Old Part Sales End.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        },
+        {
+          "key": "eossec",
+          "short": "EoSS",
+          "label": "End of security support",
+          "detail": "No separate security-support deadline is normalized from these sources. Opengear contract exceptions remain in raw policy notes.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eol",
+          "short": "EoL",
+          "label": "End of support",
+          "detail": "Published support end: eosl.date's EOSL/LDOS or Opengear's End of Support / Old Part Support Ends. Individual contract exceptions may apply.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        }
+      ],
+      "milestones": {
+        "ga": null,
+        "eos": "2018-10-31",
+        "eossec": null,
+        "eol": "2023-10-31"
+      },
+      "next": null,
+      "json": "https://zarguell.github.io/eoltracker/v1/hardware/paloalto-pa-500.json",
+      "page": "https://zarguell.github.io/eoltracker/hardware/paloalto-pa-500/",
+      "source": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+      "source_urls": [
+        "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates"
+      ],
+      "source_links": [
+        {
+          "url": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+          "label": "Palo Alto Networks hardware end-of-life dates"
+        }
+      ],
+      "catalog": {
+        "is_catalog": false,
+        "catalog": null,
+        "lifecycle": null,
+        "listed": null,
+        "listing": null,
+        "notice": {
+          "key": "no-notice",
+          "label": "No matching notice",
+          "detail": "No published lifecycle notice resolves to this exact model, so no support end is known for it. The vendor lists it; that is not an entitlement."
+        },
+        "matched": false,
+        "matches": [],
+        "source_url": null,
+        "state": null,
+        "match_links": [],
+        "unresolved_matches": []
+      },
+      "research": false
+    },
+    {
+      "id": "paloalto-pa-5000-series",
+      "name": "PA-5000 Series",
+      "vendor": "Palo Alto Networks",
+      "product_line": "PA-5000 Series",
+      "family": "Palo Alto Networks hardware",
+      "model_number": "PA-5000 Series (PA-5020, PA-5050, PA-5060)",
+      "status": "eol",
+      "search": "pa-5000 series paloalto-pa-5000-series palo alto networks pa-5000 series palo alto networks hardware pa-5000 series (pa-5020, pa-5050, pa-5060)",
+      "coverage": [
+        {
+          "key": "ga",
+          "short": "GA",
+          "label": "General availability",
+          "detail": "First availability, when the source publishes a release or launch date. Opengear does not publish GA in its lifecycle tables.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eos",
+          "short": "EoS",
+          "label": "End of sale",
+          "detail": "Last day sold: eosl.date's end-of-life-date column or Opengear's End of Sale / Old Part Sales End.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        },
+        {
+          "key": "eossec",
+          "short": "EoSS",
+          "label": "End of security support",
+          "detail": "No separate security-support deadline is normalized from these sources. Opengear contract exceptions remain in raw policy notes.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eol",
+          "short": "EoL",
+          "label": "End of support",
+          "detail": "Published support end: eosl.date's EOSL/LDOS or Opengear's End of Support / Old Part Support Ends. Individual contract exceptions may apply.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        }
+      ],
+      "milestones": {
+        "ga": null,
+        "eos": "2019-01-31",
+        "eossec": null,
+        "eol": "2024-01-31"
+      },
+      "next": null,
+      "json": "https://zarguell.github.io/eoltracker/v1/hardware/paloalto-pa-5000-series.json",
+      "page": "https://zarguell.github.io/eoltracker/hardware/paloalto-pa-5000-series/",
+      "source": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+      "source_urls": [
+        "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates"
+      ],
+      "source_links": [
+        {
+          "url": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+          "label": "Palo Alto Networks hardware end-of-life dates"
+        }
+      ],
+      "catalog": {
+        "is_catalog": false,
+        "catalog": null,
+        "lifecycle": null,
+        "listed": null,
+        "listing": null,
+        "notice": {
+          "key": "no-notice",
+          "label": "No matching notice",
+          "detail": "No published lifecycle notice resolves to this exact model, so no support end is known for it. The vendor lists it; that is not an entitlement."
+        },
+        "matched": false,
+        "matches": [],
+        "source_url": null,
+        "state": null,
+        "match_links": [],
+        "unresolved_matches": []
+      },
+      "research": false
+    },
+    {
+      "id": "paloalto-pa-5200-series",
+      "name": "PA-5200 Series",
+      "vendor": "Palo Alto Networks",
+      "product_line": "PA-5200 Series",
+      "family": "Palo Alto Networks hardware",
+      "model_number": "PA-5200 Series (PA-5220, PA-5250, PA-5260, PA-5280)",
+      "status": "expiring",
+      "search": "pa-5200 series paloalto-pa-5200-series palo alto networks pa-5200 series palo alto networks hardware pa-5200 series (pa-5220, pa-5250, pa-5260, pa-5280)",
+      "coverage": [
+        {
+          "key": "ga",
+          "short": "GA",
+          "label": "General availability",
+          "detail": "First availability, when the source publishes a release or launch date. Opengear does not publish GA in its lifecycle tables.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eos",
+          "short": "EoS",
+          "label": "End of sale",
+          "detail": "Last day sold: eosl.date's end-of-life-date column or Opengear's End of Sale / Old Part Sales End.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        },
+        {
+          "key": "eossec",
+          "short": "EoSS",
+          "label": "End of security support",
+          "detail": "No separate security-support deadline is normalized from these sources. Opengear contract exceptions remain in raw policy notes.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eol",
+          "short": "EoL",
+          "label": "End of support",
+          "detail": "Published support end: eosl.date's EOSL/LDOS or Opengear's End of Support / Old Part Support Ends. Individual contract exceptions may apply.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        }
+      ],
+      "milestones": {
+        "ga": null,
+        "eos": "2023-08-31",
+        "eossec": null,
+        "eol": "2028-08-31"
+      },
+      "next": {
+        "release": "PA-5200 Series",
+        "release_id": "paloalto-pa-5200-series",
+        "milestone": "End of support",
+        "key": "eol",
+        "date": "2028-08-31",
+        "month": false,
+        "human": "Aug 31, 2028",
+        "days": 714
+      },
+      "json": "https://zarguell.github.io/eoltracker/v1/hardware/paloalto-pa-5200-series.json",
+      "page": "https://zarguell.github.io/eoltracker/hardware/paloalto-pa-5200-series/",
+      "source": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+      "source_urls": [
+        "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates"
+      ],
+      "source_links": [
+        {
+          "url": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+          "label": "Palo Alto Networks hardware end-of-life dates"
+        }
+      ],
+      "catalog": {
+        "is_catalog": false,
+        "catalog": null,
+        "lifecycle": null,
+        "listed": null,
+        "listing": null,
+        "notice": {
+          "key": "no-notice",
+          "label": "No matching notice",
+          "detail": "No published lifecycle notice resolves to this exact model, so no support end is known for it. The vendor lists it; that is not an entitlement."
+        },
+        "matched": false,
+        "matches": [],
+        "source_url": null,
+        "state": null,
+        "match_links": [],
+        "unresolved_matches": []
+      },
+      "research": false
+    },
+    {
+      "id": "paloalto-pa-5450-series",
+      "name": "PA-5450 Series",
+      "vendor": "Palo Alto Networks",
+      "product_line": "PA-5450 Series",
+      "family": "Palo Alto Networks hardware",
+      "model_number": "PA-5450 Series PAN-PA-5450-AC-SYS PAN-PA-5450-DC-SYS PAN-PA-5400-DPC-A PAN-PA-5400-NC-A PAN-PA-5400-MPC-A PAN-PWR-2200W-AC PAN-PWR-2200W-DC PAN-E1.S-4TB",
+      "status": "expiring",
+      "search": "pa-5450 series paloalto-pa-5450-series palo alto networks pa-5450 series palo alto networks hardware pa-5450 series pan-pa-5450-ac-sys pan-pa-5450-dc-sys pan-pa-5400-dpc-a pan-pa-5400-nc-a pan-pa-5400-mpc-a pan-pwr-2200w-ac pan-pwr-2200w-dc pan-e1.s-4tb",
+      "coverage": [
+        {
+          "key": "ga",
+          "short": "GA",
+          "label": "General availability",
+          "detail": "First availability, when the source publishes a release or launch date. Opengear does not publish GA in its lifecycle tables.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eos",
+          "short": "EoS",
+          "label": "End of sale",
+          "detail": "Last day sold: eosl.date's end-of-life-date column or Opengear's End of Sale / Old Part Sales End.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        },
+        {
+          "key": "eossec",
+          "short": "EoSS",
+          "label": "End of security support",
+          "detail": "No separate security-support deadline is normalized from these sources. Opengear contract exceptions remain in raw policy notes.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eol",
+          "short": "EoL",
+          "label": "End of support",
+          "detail": "Published support end: eosl.date's EOSL/LDOS or Opengear's End of Support / Old Part Support Ends. Individual contract exceptions may apply.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        }
+      ],
+      "milestones": {
+        "ga": null,
+        "eos": "2026-11-22",
+        "eossec": null,
+        "eol": "2031-11-21"
+      },
+      "next": {
+        "release": "PA-5450 Series",
+        "release_id": "paloalto-pa-5450-series",
+        "milestone": "End of sale",
+        "key": "eos",
+        "date": "2026-11-22",
+        "month": false,
+        "human": "Nov 22, 2026",
+        "days": 66
+      },
+      "json": "https://zarguell.github.io/eoltracker/v1/hardware/paloalto-pa-5450-series.json",
+      "page": "https://zarguell.github.io/eoltracker/hardware/paloalto-pa-5450-series/",
+      "source": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+      "source_urls": [
+        "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates"
+      ],
+      "source_links": [
+        {
+          "url": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+          "label": "Palo Alto Networks hardware end-of-life dates"
+        }
+      ],
+      "catalog": {
+        "is_catalog": false,
+        "catalog": null,
+        "lifecycle": null,
+        "listed": null,
+        "listing": null,
+        "notice": {
+          "key": "no-notice",
+          "label": "No matching notice",
+          "detail": "No published lifecycle notice resolves to this exact model, so no support end is known for it. The vendor lists it; that is not an entitlement."
+        },
+        "matched": false,
+        "matches": [],
+        "source_url": null,
+        "state": null,
+        "match_links": [],
+        "unresolved_matches": []
+      },
+      "research": false
+    },
+    {
+      "id": "paloalto-pa-7000-20g-npc",
+      "name": "PA-7000-20G-NPC",
+      "vendor": "Palo Alto Networks",
+      "product_line": "PA-7000-20G-NPC",
+      "family": "Palo Alto Networks hardware",
+      "model_number": "PA-7000-20G-NPC PA-7000-20GQ-NPC",
+      "status": "eol",
+      "search": "pa-7000-20g-npc paloalto-pa-7000-20g-npc palo alto networks pa-7000-20g-npc palo alto networks hardware pa-7000-20g-npc pa-7000-20gq-npc",
+      "coverage": [
+        {
+          "key": "ga",
+          "short": "GA",
+          "label": "General availability",
+          "detail": "First availability, when the source publishes a release or launch date. Opengear does not publish GA in its lifecycle tables.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eos",
+          "short": "EoS",
+          "label": "End of sale",
+          "detail": "Last day sold: eosl.date's end-of-life-date column or Opengear's End of Sale / Old Part Sales End.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        },
+        {
+          "key": "eossec",
+          "short": "EoSS",
+          "label": "End of security support",
+          "detail": "No separate security-support deadline is normalized from these sources. Opengear contract exceptions remain in raw policy notes.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eol",
+          "short": "EoL",
+          "label": "End of support",
+          "detail": "Published support end: eosl.date's EOSL/LDOS or Opengear's End of Support / Old Part Support Ends. Individual contract exceptions may apply.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        }
+      ],
+      "milestones": {
+        "ga": null,
+        "eos": "2019-01-31",
+        "eossec": null,
+        "eol": "2024-01-31"
+      },
+      "next": null,
+      "json": "https://zarguell.github.io/eoltracker/v1/hardware/paloalto-pa-7000-20g-npc.json",
+      "page": "https://zarguell.github.io/eoltracker/hardware/paloalto-pa-7000-20g-npc/",
+      "source": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+      "source_urls": [
+        "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates"
+      ],
+      "source_links": [
+        {
+          "url": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+          "label": "Palo Alto Networks hardware end-of-life dates"
+        }
+      ],
+      "catalog": {
+        "is_catalog": false,
+        "catalog": null,
+        "lifecycle": null,
+        "listed": null,
+        "listing": null,
+        "notice": {
+          "key": "no-notice",
+          "label": "No matching notice",
+          "detail": "No published lifecycle notice resolves to this exact model, so no support end is known for it. The vendor lists it; that is not an entitlement."
+        },
+        "matched": false,
+        "matches": [],
+        "source_url": null,
+        "state": null,
+        "match_links": [],
+        "unresolved_matches": []
+      },
+      "research": false
+    },
+    {
+      "id": "paloalto-pa-7000-20gxm-npc",
+      "name": "PA-7000-20GXM-NPC",
+      "vendor": "Palo Alto Networks",
+      "product_line": "PA-7000-20GXM-NPC",
+      "family": "Palo Alto Networks hardware",
+      "model_number": "PA-7000-20GXM-NPC PA-7000-20GQXM-NPC",
+      "status": "eol",
+      "search": "pa-7000-20gxm-npc paloalto-pa-7000-20gxm-npc palo alto networks pa-7000-20gxm-npc palo alto networks hardware pa-7000-20gxm-npc pa-7000-20gqxm-npc",
+      "coverage": [
+        {
+          "key": "ga",
+          "short": "GA",
+          "label": "General availability",
+          "detail": "First availability, when the source publishes a release or launch date. Opengear does not publish GA in its lifecycle tables.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eos",
+          "short": "EoS",
+          "label": "End of sale",
+          "detail": "Last day sold: eosl.date's end-of-life-date column or Opengear's End of Sale / Old Part Sales End.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        },
+        {
+          "key": "eossec",
+          "short": "EoSS",
+          "label": "End of security support",
+          "detail": "No separate security-support deadline is normalized from these sources. Opengear contract exceptions remain in raw policy notes.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eol",
+          "short": "EoL",
+          "label": "End of support",
+          "detail": "Published support end: eosl.date's EOSL/LDOS or Opengear's End of Support / Old Part Support Ends. Individual contract exceptions may apply.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        }
+      ],
+      "milestones": {
+        "ga": null,
+        "eos": "2021-05-08",
+        "eossec": null,
+        "eol": "2026-05-08"
+      },
+      "next": null,
+      "json": "https://zarguell.github.io/eoltracker/v1/hardware/paloalto-pa-7000-20gxm-npc.json",
+      "page": "https://zarguell.github.io/eoltracker/hardware/paloalto-pa-7000-20gxm-npc/",
+      "source": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+      "source_urls": [
+        "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates"
+      ],
+      "source_links": [
+        {
+          "url": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+          "label": "Palo Alto Networks hardware end-of-life dates"
+        }
+      ],
+      "catalog": {
+        "is_catalog": false,
+        "catalog": null,
+        "lifecycle": null,
+        "listed": null,
+        "listing": null,
+        "notice": {
+          "key": "no-notice",
+          "label": "No matching notice",
+          "detail": "No published lifecycle notice resolves to this exact model, so no support end is known for it. The vendor lists it; that is not an entitlement."
+        },
+        "matched": false,
+        "matches": [],
+        "source_url": null,
+        "state": null,
+        "match_links": [],
+        "unresolved_matches": []
+      },
+      "research": false
+    },
+    {
+      "id": "paloalto-pa-7000-series",
+      "name": "PA-7000 Series",
+      "vendor": "Palo Alto Networks",
+      "product_line": "PA-7000 Series",
+      "family": "Palo Alto Networks hardware",
+      "model_number": "PA-7000 Series (PAN-PA-7000-100G-NPC-A, PAN-PA-7000-LFC-A, PAN-PA-7000-DPC-A, PAN-PA-7080-AC-SYS, PAN-PA-7080-DC-SYS, PAN-PA-7050-AC-SYS, PAN-PA-7050-DC-SYS, PAN-PA-7050-SMC-B, PAN-PA-7080-SMC-B, PAN-PA-7050-SMC-B-SYS-UPG, PAN-PA-7080-SMC-B-SYS-UPG, PAN-PA-7000-LFC-A-SYS-UPG)",
+      "status": "expiring",
+      "search": "pa-7000 series paloalto-pa-7000-series palo alto networks pa-7000 series palo alto networks hardware pa-7000 series (pan-pa-7000-100g-npc-a, pan-pa-7000-lfc-a, pan-pa-7000-dpc-a, pan-pa-7080-ac-sys, pan-pa-7080-dc-sys, pan-pa-7050-ac-sys, pan-pa-7050-dc-sys, pan-pa-7050-smc-b, pan-pa-7080-smc-b, pan-pa-7050-smc-b-sys-upg, pan-pa-7080-smc-b-sys-upg, pan-pa-7000-lfc-a-sys-upg)",
+      "coverage": [
+        {
+          "key": "ga",
+          "short": "GA",
+          "label": "General availability",
+          "detail": "First availability, when the source publishes a release or launch date. Opengear does not publish GA in its lifecycle tables.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eos",
+          "short": "EoS",
+          "label": "End of sale",
+          "detail": "Last day sold: eosl.date's end-of-life-date column or Opengear's End of Sale / Old Part Sales End.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        },
+        {
+          "key": "eossec",
+          "short": "EoSS",
+          "label": "End of security support",
+          "detail": "No separate security-support deadline is normalized from these sources. Opengear contract exceptions remain in raw policy notes.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eol",
+          "short": "EoL",
+          "label": "End of support",
+          "detail": "Published support end: eosl.date's EOSL/LDOS or Opengear's End of Support / Old Part Support Ends. Individual contract exceptions may apply.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        }
+      ],
+      "milestones": {
+        "ga": null,
+        "eos": "2025-12-31",
+        "eossec": null,
+        "eol": "2030-12-31"
+      },
+      "next": {
+        "release": "PA-7000 Series",
+        "release_id": "paloalto-pa-7000-series",
+        "milestone": "End of support",
+        "key": "eol",
+        "date": "2030-12-31",
+        "month": false,
+        "human": "Dec 31, 2030",
+        "days": 1566
+      },
+      "json": "https://zarguell.github.io/eoltracker/v1/hardware/paloalto-pa-7000-series.json",
+      "page": "https://zarguell.github.io/eoltracker/hardware/paloalto-pa-7000-series/",
+      "source": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+      "source_urls": [
+        "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates"
+      ],
+      "source_links": [
+        {
+          "url": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+          "label": "Palo Alto Networks hardware end-of-life dates"
+        }
+      ],
+      "catalog": {
+        "is_catalog": false,
+        "catalog": null,
+        "lifecycle": null,
+        "listed": null,
+        "listing": null,
+        "notice": {
+          "key": "no-notice",
+          "label": "No matching notice",
+          "detail": "No published lifecycle notice resolves to this exact model, so no support end is known for it. The vendor lists it; that is not an entitlement."
+        },
+        "matched": false,
+        "matches": [],
+        "source_url": null,
+        "state": null,
+        "match_links": [],
+        "unresolved_matches": []
+      },
+      "research": false
+    },
+    {
+      "id": "paloalto-pa-7050-smc",
+      "name": "PA-7050-SMC",
+      "vendor": "Palo Alto Networks",
+      "product_line": "PA-7050-SMC",
+      "family": "Palo Alto Networks hardware",
+      "model_number": "PA-7050-SMC PA-7080-SMC PA-7000-LPC",
+      "status": "eol",
+      "search": "pa-7050-smc paloalto-pa-7050-smc palo alto networks pa-7050-smc palo alto networks hardware pa-7050-smc pa-7080-smc pa-7000-lpc",
+      "coverage": [
+        {
+          "key": "ga",
+          "short": "GA",
+          "label": "General availability",
+          "detail": "First availability, when the source publishes a release or launch date. Opengear does not publish GA in its lifecycle tables.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eos",
+          "short": "EoS",
+          "label": "End of sale",
+          "detail": "Last day sold: eosl.date's end-of-life-date column or Opengear's End of Sale / Old Part Sales End.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        },
+        {
+          "key": "eossec",
+          "short": "EoSS",
+          "label": "End of security support",
+          "detail": "No separate security-support deadline is normalized from these sources. Opengear contract exceptions remain in raw policy notes.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eol",
+          "short": "EoL",
+          "label": "End of support",
+          "detail": "Published support end: eosl.date's EOSL/LDOS or Opengear's End of Support / Old Part Support Ends. Individual contract exceptions may apply.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        }
+      ],
+      "milestones": {
+        "ga": null,
+        "eos": "2021-02-28",
+        "eossec": null,
+        "eol": "2026-02-28"
+      },
+      "next": null,
+      "json": "https://zarguell.github.io/eoltracker/v1/hardware/paloalto-pa-7050-smc.json",
+      "page": "https://zarguell.github.io/eoltracker/hardware/paloalto-pa-7050-smc/",
+      "source": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+      "source_urls": [
+        "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates"
+      ],
+      "source_links": [
+        {
+          "url": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+          "label": "Palo Alto Networks hardware end-of-life dates"
+        }
+      ],
+      "catalog": {
+        "is_catalog": false,
+        "catalog": null,
+        "lifecycle": null,
+        "listed": null,
+        "listing": null,
+        "notice": {
+          "key": "no-notice",
+          "label": "No matching notice",
+          "detail": "No published lifecycle notice resolves to this exact model, so no support end is known for it. The vendor lists it; that is not an entitlement."
+        },
+        "matched": false,
+        "matches": [],
+        "source_url": null,
+        "state": null,
+        "match_links": [],
+        "unresolved_matches": []
+      },
+      "research": false
+    },
+    {
+      "id": "paloalto-pa-800-series",
+      "name": "PA-800 Series",
+      "vendor": "Palo Alto Networks",
+      "product_line": "PA-800 Series",
+      "family": "Palo Alto Networks hardware",
+      "model_number": "PA-800 Series (PA-820, PA-850) (PA-820-ZTP, PA-850-ZTP)",
+      "status": "expiring",
+      "search": "pa-800 series paloalto-pa-800-series palo alto networks pa-800 series palo alto networks hardware pa-800 series (pa-820, pa-850) (pa-820-ztp, pa-850-ztp)",
+      "coverage": [
+        {
+          "key": "ga",
+          "short": "GA",
+          "label": "General availability",
+          "detail": "First availability, when the source publishes a release or launch date. Opengear does not publish GA in its lifecycle tables.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eos",
+          "short": "EoS",
+          "label": "End of sale",
+          "detail": "Last day sold: eosl.date's end-of-life-date column or Opengear's End of Sale / Old Part Sales End.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        },
+        {
+          "key": "eossec",
+          "short": "EoSS",
+          "label": "End of security support",
+          "detail": "No separate security-support deadline is normalized from these sources. Opengear contract exceptions remain in raw policy notes.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eol",
+          "short": "EoL",
+          "label": "End of support",
+          "detail": "Published support end: eosl.date's EOSL/LDOS or Opengear's End of Support / Old Part Support Ends. Individual contract exceptions may apply.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        }
+      ],
+      "milestones": {
+        "ga": null,
+        "eos": "2024-08-31",
+        "eossec": null,
+        "eol": "2029-08-31"
+      },
+      "next": {
+        "release": "PA-800 Series",
+        "release_id": "paloalto-pa-800-series",
+        "milestone": "End of support",
+        "key": "eol",
+        "date": "2029-08-31",
+        "month": false,
+        "human": "Aug 31, 2029",
+        "days": 1079
+      },
+      "json": "https://zarguell.github.io/eoltracker/v1/hardware/paloalto-pa-800-series.json",
+      "page": "https://zarguell.github.io/eoltracker/hardware/paloalto-pa-800-series/",
+      "source": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+      "source_urls": [
+        "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates"
+      ],
+      "source_links": [
+        {
+          "url": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+          "label": "Palo Alto Networks hardware end-of-life dates"
+        }
+      ],
+      "catalog": {
+        "is_catalog": false,
+        "catalog": null,
+        "lifecycle": null,
+        "listed": null,
+        "listing": null,
+        "notice": {
+          "key": "no-notice",
+          "label": "No matching notice",
+          "detail": "No published lifecycle notice resolves to this exact model, so no support end is known for it. The vendor lists it; that is not an entitlement."
+        },
+        "matched": false,
+        "matches": [],
+        "source_url": null,
+        "state": null,
+        "match_links": [],
+        "unresolved_matches": []
+      },
+      "research": false
+    },
+    {
+      "id": "paloalto-pan-2-5in-hdd-2tb-pair",
+      "name": "PAN-2.5IN-HDD-2TB-PAIR",
+      "vendor": "Palo Alto Networks",
+      "product_line": "PAN-2.5IN-HDD-2TB-PAIR",
+      "family": "Palo Alto Networks hardware",
+      "model_number": "PAN-2.5IN-HDD-2TB-PAIR",
+      "status": "expiring",
+      "search": "pan-2.5in-hdd-2tb-pair paloalto-pan-2-5in-hdd-2tb-pair palo alto networks pan-2.5in-hdd-2tb-pair palo alto networks hardware pan-2.5in-hdd-2tb-pair",
+      "coverage": [
+        {
+          "key": "ga",
+          "short": "GA",
+          "label": "General availability",
+          "detail": "First availability, when the source publishes a release or launch date. Opengear does not publish GA in its lifecycle tables.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eos",
+          "short": "EoS",
+          "label": "End of sale",
+          "detail": "Last day sold: eosl.date's end-of-life-date column or Opengear's End of Sale / Old Part Sales End.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        },
+        {
+          "key": "eossec",
+          "short": "EoSS",
+          "label": "End of security support",
+          "detail": "No separate security-support deadline is normalized from these sources. Opengear contract exceptions remain in raw policy notes.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eol",
+          "short": "EoL",
+          "label": "End of support",
+          "detail": "Published support end: eosl.date's EOSL/LDOS or Opengear's End of Support / Old Part Support Ends. Individual contract exceptions may apply.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        }
+      ],
+      "milestones": {
+        "ga": null,
+        "eos": "2024-08-01",
+        "eossec": null,
+        "eol": "2028-08-31"
+      },
+      "next": {
+        "release": "PAN-2.5IN-HDD-2TB-PAIR",
+        "release_id": "paloalto-pan-2-5in-hdd-2tb-pair",
+        "milestone": "End of support",
+        "key": "eol",
+        "date": "2028-08-31",
+        "month": false,
+        "human": "Aug 31, 2028",
+        "days": 714
+      },
+      "json": "https://zarguell.github.io/eoltracker/v1/hardware/paloalto-pan-2-5in-hdd-2tb-pair.json",
+      "page": "https://zarguell.github.io/eoltracker/hardware/paloalto-pan-2-5in-hdd-2tb-pair/",
+      "source": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+      "source_urls": [
+        "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates"
+      ],
+      "source_links": [
+        {
+          "url": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+          "label": "Palo Alto Networks hardware end-of-life dates"
+        }
+      ],
+      "catalog": {
+        "is_catalog": false,
+        "catalog": null,
+        "lifecycle": null,
+        "listed": null,
+        "listing": null,
+        "notice": {
+          "key": "no-notice",
+          "label": "No matching notice",
+          "detail": "No published lifecycle notice resolves to this exact model, so no support end is known for it. The vendor lists it; that is not an entitlement."
+        },
+        "matched": false,
+        "matches": [],
+        "source_url": null,
+        "state": null,
+        "match_links": [],
+        "unresolved_matches": []
+      },
+      "research": false
+    },
+    {
+      "id": "paloalto-pan-pa-410",
+      "name": "PAN-PA-410",
+      "vendor": "Palo Alto Networks",
+      "product_line": "PAN-PA-410",
+      "family": "Palo Alto Networks hardware",
+      "model_number": "PAN-PA-410 PAN-PA-415 PAN-PA-440 PAN-PA-445 PAN-PA-450 PAN-PA-455 PAN-PA-460",
+      "status": "expiring",
+      "search": "pan-pa-410 paloalto-pan-pa-410 palo alto networks pan-pa-410 palo alto networks hardware pan-pa-410 pan-pa-415 pan-pa-440 pan-pa-445 pan-pa-450 pan-pa-455 pan-pa-460",
+      "coverage": [
+        {
+          "key": "ga",
+          "short": "GA",
+          "label": "General availability",
+          "detail": "First availability, when the source publishes a release or launch date. Opengear does not publish GA in its lifecycle tables.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eos",
+          "short": "EoS",
+          "label": "End of sale",
+          "detail": "Last day sold: eosl.date's end-of-life-date column or Opengear's End of Sale / Old Part Sales End.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        },
+        {
+          "key": "eossec",
+          "short": "EoSS",
+          "label": "End of security support",
+          "detail": "No separate security-support deadline is normalized from these sources. Opengear contract exceptions remain in raw policy notes.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eol",
+          "short": "EoL",
+          "label": "End of support",
+          "detail": "Published support end: eosl.date's EOSL/LDOS or Opengear's End of Support / Old Part Support Ends. Individual contract exceptions may apply.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        }
+      ],
+      "milestones": {
+        "ga": null,
+        "eos": "2027-03-22",
+        "eossec": null,
+        "eol": "2032-03-21"
+      },
+      "next": {
+        "release": "PAN-PA-410",
+        "release_id": "paloalto-pan-pa-410",
+        "milestone": "End of sale",
+        "key": "eos",
+        "date": "2027-03-22",
+        "month": false,
+        "human": "Mar 22, 2027",
+        "days": 186
+      },
+      "json": "https://zarguell.github.io/eoltracker/v1/hardware/paloalto-pan-pa-410.json",
+      "page": "https://zarguell.github.io/eoltracker/hardware/paloalto-pan-pa-410/",
+      "source": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+      "source_urls": [
+        "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates"
+      ],
+      "source_links": [
+        {
+          "url": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+          "label": "Palo Alto Networks hardware end-of-life dates"
+        }
+      ],
+      "catalog": {
+        "is_catalog": false,
+        "catalog": null,
+        "lifecycle": null,
+        "listed": null,
+        "listing": null,
+        "notice": {
+          "key": "no-notice",
+          "label": "No matching notice",
+          "detail": "No published lifecycle notice resolves to this exact model, so no support end is known for it. The vendor lists it; that is not an entitlement."
+        },
+        "matched": false,
+        "matches": [],
+        "source_url": null,
+        "state": null,
+        "match_links": [],
+        "unresolved_matches": []
+      },
+      "research": false
+    },
+    {
+      "id": "paloalto-pan-qsfp-40gbase-lm4",
+      "name": "PAN-QSFP-40GBASE-LM4",
+      "vendor": "Palo Alto Networks",
+      "product_line": "PAN-QSFP-40GBASE-LM4",
+      "family": "Palo Alto Networks hardware",
+      "model_number": "PAN-QSFP-40GBASE-LM4",
+      "status": "expiring",
+      "search": "pan-qsfp-40gbase-lm4 paloalto-pan-qsfp-40gbase-lm4 palo alto networks pan-qsfp-40gbase-lm4 palo alto networks hardware pan-qsfp-40gbase-lm4",
+      "coverage": [
+        {
+          "key": "ga",
+          "short": "GA",
+          "label": "General availability",
+          "detail": "First availability, when the source publishes a release or launch date. Opengear does not publish GA in its lifecycle tables.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eos",
+          "short": "EoS",
+          "label": "End of sale",
+          "detail": "Last day sold: eosl.date's end-of-life-date column or Opengear's End of Sale / Old Part Sales End.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        },
+        {
+          "key": "eossec",
+          "short": "EoSS",
+          "label": "End of security support",
+          "detail": "No separate security-support deadline is normalized from these sources. Opengear contract exceptions remain in raw policy notes.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eol",
+          "short": "EoL",
+          "label": "End of support",
+          "detail": "Published support end: eosl.date's EOSL/LDOS or Opengear's End of Support / Old Part Support Ends. Individual contract exceptions may apply.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        }
+      ],
+      "milestones": {
+        "ga": null,
+        "eos": "2024-05-16",
+        "eossec": null,
+        "eol": "2029-05-16"
+      },
+      "next": {
+        "release": "PAN-QSFP-40GBASE-LM4",
+        "release_id": "paloalto-pan-qsfp-40gbase-lm4",
+        "milestone": "End of support",
+        "key": "eol",
+        "date": "2029-05-16",
+        "month": false,
+        "human": "May 16, 2029",
+        "days": 972
+      },
+      "json": "https://zarguell.github.io/eoltracker/v1/hardware/paloalto-pan-qsfp-40gbase-lm4.json",
+      "page": "https://zarguell.github.io/eoltracker/hardware/paloalto-pan-qsfp-40gbase-lm4/",
+      "source": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+      "source_urls": [
+        "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates"
+      ],
+      "source_links": [
+        {
+          "url": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+          "label": "Palo Alto Networks hardware end-of-life dates"
+        }
+      ],
+      "catalog": {
+        "is_catalog": false,
+        "catalog": null,
+        "lifecycle": null,
+        "listed": null,
+        "listing": null,
+        "notice": {
+          "key": "no-notice",
+          "label": "No matching notice",
+          "detail": "No published lifecycle notice resolves to this exact model, so no support end is known for it. The vendor lists it; that is not an entitlement."
+        },
+        "matched": false,
+        "matches": [],
+        "source_url": null,
+        "state": null,
+        "match_links": [],
+        "unresolved_matches": []
+      },
+      "research": false
+    },
+    {
+      "id": "paloalto-wf-500",
+      "name": "WF-500",
+      "vendor": "Palo Alto Networks",
+      "product_line": "WF-500",
+      "family": "Palo Alto Networks hardware",
+      "model_number": "WF-500",
+      "status": "expiring",
+      "search": "wf-500 paloalto-wf-500 palo alto networks wf-500 palo alto networks hardware wf-500",
+      "coverage": [
+        {
+          "key": "ga",
+          "short": "GA",
+          "label": "General availability",
+          "detail": "First availability, when the source publishes a release or launch date. Opengear does not publish GA in its lifecycle tables.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eos",
+          "short": "EoS",
+          "label": "End of sale",
+          "detail": "Last day sold: eosl.date's end-of-life-date column or Opengear's End of Sale / Old Part Sales End.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        },
+        {
+          "key": "eossec",
+          "short": "EoSS",
+          "label": "End of security support",
+          "detail": "No separate security-support deadline is normalized from these sources. Opengear contract exceptions remain in raw policy notes.",
+          "known": 0,
+          "total": 1,
+          "percent": 0
+        },
+        {
+          "key": "eol",
+          "short": "EoL",
+          "label": "End of support",
+          "detail": "Published support end: eosl.date's EOSL/LDOS or Opengear's End of Support / Old Part Support Ends. Individual contract exceptions may apply.",
+          "known": 1,
+          "total": 1,
+          "percent": 100
+        }
+      ],
+      "milestones": {
+        "ga": null,
+        "eos": "2023-12-31",
+        "eossec": null,
+        "eol": "2028-12-31"
+      },
+      "next": {
+        "release": "WF-500",
+        "release_id": "paloalto-wf-500",
+        "milestone": "End of support",
+        "key": "eol",
+        "date": "2028-12-31",
+        "month": false,
+        "human": "Dec 31, 2028",
+        "days": 836
+      },
+      "json": "https://zarguell.github.io/eoltracker/v1/hardware/paloalto-wf-500.json",
+      "page": "https://zarguell.github.io/eoltracker/hardware/paloalto-wf-500/",
+      "source": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+      "source_urls": [
+        "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates"
+      ],
+      "source_links": [
+        {
+          "url": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates",
+          "label": "Palo Alto Networks hardware end-of-life dates"
+        }
+      ],
+      "catalog": {
+        "is_catalog": false,
+        "catalog": null,
+        "lifecycle": null,
+        "listed": null,
+        "listing": null,
+        "notice": {
+          "key": "no-notice",
+          "label": "No matching notice",
+          "detail": "No published lifecycle notice resolves to this exact model, so no support end is known for it. The vendor lists it; that is not an entitlement."
+        },
+        "matched": false,
+        "matches": [],
+        "source_url": null,
+        "state": null,
+        "match_links": [],
+        "unresolved_matches": []
+      },
+      "research": false
+    }
+  ],
+  "researched_count": 0
+}

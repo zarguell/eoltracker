@@ -1,0 +1,1330 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "electron",
+  "name": "Electron",
+  "category": "software",
+  "upstream_category": "framework",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "electron"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:electronjs:electron"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:electronjs:electron"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Supported",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/electron.svg",
+    "html": "https://endoflife.date/electron",
+    "releasePolicy": "https://www.electronjs.org/docs/latest/tutorial/electron-timelines"
+  },
+  "releases": [
+    {
+      "id": "44",
+      "name": "44",
+      "milestones": {
+        "ga": "2026-08-25",
+        "eos": null,
+        "eossec": null,
+        "eol": "2027-03-02"
+      },
+      "upstream": {
+        "name": "44",
+        "codename": null,
+        "label": "44",
+        "releaseDate": "2026-08-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-03-02",
+        "isMaintained": true,
+        "latest": {
+          "name": "44.4.1",
+          "date": "2026-09-16",
+          "link": "https://releases.electronjs.org/release/v44.4.1"
+        },
+        "custom": {
+          "chromeVersion": "M152",
+          "nodeVersion": "24"
+        }
+      }
+    },
+    {
+      "id": "43",
+      "name": "43",
+      "milestones": {
+        "ga": "2026-06-30",
+        "eos": null,
+        "eossec": null,
+        "eol": "2027-01-05"
+      },
+      "upstream": {
+        "name": "43",
+        "codename": null,
+        "label": "43",
+        "releaseDate": "2026-06-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-01-05",
+        "isMaintained": true,
+        "latest": {
+          "name": "43.7.1",
+          "date": "2026-09-15",
+          "link": "https://releases.electronjs.org/release/v43.7.1"
+        },
+        "custom": {
+          "chromeVersion": "M150",
+          "nodeVersion": "24"
+        }
+      }
+    },
+    {
+      "id": "42",
+      "name": "42",
+      "milestones": {
+        "ga": "2026-05-05",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-10-20"
+      },
+      "upstream": {
+        "name": "42",
+        "codename": null,
+        "label": "42",
+        "releaseDate": "2026-05-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2026-10-20",
+        "isMaintained": true,
+        "latest": {
+          "name": "42.11.4",
+          "date": "2026-09-15",
+          "link": "https://releases.electronjs.org/release/v42.11.4"
+        },
+        "custom": {
+          "chromeVersion": "M148",
+          "nodeVersion": "24"
+        }
+      }
+    },
+    {
+      "id": "41",
+      "name": "41",
+      "milestones": {
+        "ga": "2026-03-10",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-08-25"
+      },
+      "upstream": {
+        "name": "41",
+        "codename": null,
+        "label": "41",
+        "releaseDate": "2026-03-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-08-25",
+        "isMaintained": false,
+        "latest": {
+          "name": "41.10.7",
+          "date": "2026-08-25",
+          "link": "https://releases.electronjs.org/release/v41.10.7"
+        },
+        "custom": {
+          "chromeVersion": "M146",
+          "nodeVersion": "24"
+        }
+      }
+    },
+    {
+      "id": "40",
+      "name": "40",
+      "milestones": {
+        "ga": "2026-01-13",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-06-30"
+      },
+      "upstream": {
+        "name": "40",
+        "codename": null,
+        "label": "40",
+        "releaseDate": "2026-01-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-06-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "40.10.6",
+          "date": "2026-07-01",
+          "link": "https://releases.electronjs.org/release/v40.10.6"
+        },
+        "custom": {
+          "chromeVersion": "M144",
+          "nodeVersion": "24"
+        }
+      }
+    },
+    {
+      "id": "39",
+      "name": "39",
+      "milestones": {
+        "ga": "2025-10-28",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-05-05"
+      },
+      "upstream": {
+        "name": "39",
+        "codename": null,
+        "label": "39",
+        "releaseDate": "2025-10-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-05-05",
+        "isMaintained": false,
+        "latest": {
+          "name": "39.8.10",
+          "date": "2026-05-05",
+          "link": "https://releases.electronjs.org/release/v39.8.10"
+        },
+        "custom": {
+          "chromeVersion": "M142",
+          "nodeVersion": "22"
+        }
+      }
+    },
+    {
+      "id": "38",
+      "name": "38",
+      "milestones": {
+        "ga": "2025-09-02",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-03-10"
+      },
+      "upstream": {
+        "name": "38",
+        "codename": null,
+        "label": "38",
+        "releaseDate": "2025-09-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-03-10",
+        "isMaintained": false,
+        "latest": {
+          "name": "38.8.6",
+          "date": "2026-03-11",
+          "link": "https://releases.electronjs.org/release/v38.8.6"
+        },
+        "custom": {
+          "chromeVersion": "M140",
+          "nodeVersion": "22"
+        }
+      }
+    },
+    {
+      "id": "37",
+      "name": "37",
+      "milestones": {
+        "ga": "2025-06-24",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-01-13"
+      },
+      "upstream": {
+        "name": "37",
+        "codename": null,
+        "label": "37",
+        "releaseDate": "2025-06-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-01-13",
+        "isMaintained": false,
+        "latest": {
+          "name": "37.10.3",
+          "date": "2025-11-26",
+          "link": "https://releases.electronjs.org/release/v37.10.3"
+        },
+        "custom": {
+          "chromeVersion": "M138",
+          "nodeVersion": "22"
+        }
+      }
+    },
+    {
+      "id": "36",
+      "name": "36",
+      "milestones": {
+        "ga": "2025-04-29",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-10-28"
+      },
+      "upstream": {
+        "name": "36",
+        "codename": null,
+        "label": "36",
+        "releaseDate": "2025-04-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-10-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "36.9.5",
+          "date": "2025-10-15",
+          "link": "https://releases.electronjs.org/release/v36.9.5"
+        },
+        "custom": {
+          "chromeVersion": "M136",
+          "nodeVersion": "22"
+        }
+      }
+    },
+    {
+      "id": "35",
+      "name": "35",
+      "milestones": {
+        "ga": "2025-03-04",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-09-02"
+      },
+      "upstream": {
+        "name": "35",
+        "codename": null,
+        "label": "35",
+        "releaseDate": "2025-03-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-09-02",
+        "isMaintained": false,
+        "latest": {
+          "name": "35.7.5",
+          "date": "2025-08-19",
+          "link": "https://releases.electronjs.org/release/v35.7.5"
+        },
+        "custom": {
+          "chromeVersion": "M134",
+          "nodeVersion": "22"
+        }
+      }
+    },
+    {
+      "id": "34",
+      "name": "34",
+      "milestones": {
+        "ga": "2025-01-14",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-06-24"
+      },
+      "upstream": {
+        "name": "34",
+        "codename": null,
+        "label": "34",
+        "releaseDate": "2025-01-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-06-24",
+        "isMaintained": false,
+        "latest": {
+          "name": "34.5.8",
+          "date": "2025-06-04",
+          "link": "https://releases.electronjs.org/release/v34.5.8"
+        },
+        "custom": {
+          "chromeVersion": "M132",
+          "nodeVersion": "20"
+        }
+      }
+    },
+    {
+      "id": "33",
+      "name": "33",
+      "milestones": {
+        "ga": "2024-10-15",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-04-29"
+      },
+      "upstream": {
+        "name": "33",
+        "codename": null,
+        "label": "33",
+        "releaseDate": "2024-10-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-04-29",
+        "isMaintained": false,
+        "latest": {
+          "name": "33.4.11",
+          "date": "2025-04-26",
+          "link": "https://releases.electronjs.org/release/v33.4.11"
+        },
+        "custom": {
+          "chromeVersion": "M130",
+          "nodeVersion": "20"
+        }
+      }
+    },
+    {
+      "id": "32",
+      "name": "32",
+      "milestones": {
+        "ga": "2024-08-20",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-03-04"
+      },
+      "upstream": {
+        "name": "32",
+        "codename": null,
+        "label": "32",
+        "releaseDate": "2024-08-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-03-04",
+        "isMaintained": false,
+        "latest": {
+          "name": "32.3.3",
+          "date": "2025-03-03",
+          "link": "https://releases.electronjs.org/release/v32.3.3"
+        },
+        "custom": {
+          "chromeVersion": "M128",
+          "nodeVersion": "20"
+        }
+      }
+    },
+    {
+      "id": "31",
+      "name": "31",
+      "milestones": {
+        "ga": "2024-06-11",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-01-14"
+      },
+      "upstream": {
+        "name": "31",
+        "codename": null,
+        "label": "31",
+        "releaseDate": "2024-06-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-01-14",
+        "isMaintained": false,
+        "latest": {
+          "name": "31.7.7",
+          "date": "2025-01-14",
+          "link": "https://releases.electronjs.org/release/v31.7.7"
+        },
+        "custom": {
+          "chromeVersion": "M126",
+          "nodeVersion": "20"
+        }
+      }
+    },
+    {
+      "id": "30",
+      "name": "30",
+      "milestones": {
+        "ga": "2024-04-16",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-10-15"
+      },
+      "upstream": {
+        "name": "30",
+        "codename": null,
+        "label": "30",
+        "releaseDate": "2024-04-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-10-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "30.5.1",
+          "date": "2024-09-13",
+          "link": "https://releases.electronjs.org/release/v30.5.1"
+        },
+        "custom": {
+          "chromeVersion": "M124",
+          "nodeVersion": "20"
+        }
+      }
+    },
+    {
+      "id": "29",
+      "name": "29",
+      "milestones": {
+        "ga": "2024-02-20",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-08-20"
+      },
+      "upstream": {
+        "name": "29",
+        "codename": null,
+        "label": "29",
+        "releaseDate": "2024-02-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-08-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "29.4.6",
+          "date": "2024-08-17",
+          "link": "https://releases.electronjs.org/release/v29.4.6"
+        },
+        "custom": {
+          "chromeVersion": "M122",
+          "nodeVersion": "20"
+        }
+      }
+    },
+    {
+      "id": "28",
+      "name": "28",
+      "milestones": {
+        "ga": "2023-12-05",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-06-11"
+      },
+      "upstream": {
+        "name": "28",
+        "codename": null,
+        "label": "28",
+        "releaseDate": "2023-12-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-06-11",
+        "isMaintained": false,
+        "latest": {
+          "name": "28.3.3",
+          "date": "2024-05-23",
+          "link": "https://releases.electronjs.org/release/v28.3.3"
+        },
+        "custom": {
+          "chromeVersion": "M120",
+          "nodeVersion": "18"
+        }
+      }
+    },
+    {
+      "id": "27",
+      "name": "27",
+      "milestones": {
+        "ga": "2023-10-10",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-04-16"
+      },
+      "upstream": {
+        "name": "27",
+        "codename": null,
+        "label": "27",
+        "releaseDate": "2023-10-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-04-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "27.3.11",
+          "date": "2024-04-16",
+          "link": "https://releases.electronjs.org/release/v27.3.11"
+        },
+        "custom": {
+          "chromeVersion": "M118",
+          "nodeVersion": "18"
+        }
+      }
+    },
+    {
+      "id": "26",
+      "name": "26",
+      "milestones": {
+        "ga": "2023-08-15",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-02-20"
+      },
+      "upstream": {
+        "name": "26",
+        "codename": null,
+        "label": "26",
+        "releaseDate": "2023-08-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-02-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "26.6.10",
+          "date": "2024-02-19",
+          "link": "https://releases.electronjs.org/release/v26.6.10"
+        },
+        "custom": {
+          "chromeVersion": "M116",
+          "nodeVersion": "18"
+        }
+      }
+    },
+    {
+      "id": "25",
+      "name": "25",
+      "milestones": {
+        "ga": "2023-05-30",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-12-05"
+      },
+      "upstream": {
+        "name": "25",
+        "codename": null,
+        "label": "25",
+        "releaseDate": "2023-05-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-12-05",
+        "isMaintained": false,
+        "latest": {
+          "name": "25.9.8",
+          "date": "2023-12-06",
+          "link": "https://releases.electronjs.org/release/v25.9.8"
+        },
+        "custom": {
+          "chromeVersion": "M114",
+          "nodeVersion": "18"
+        }
+      }
+    },
+    {
+      "id": "24",
+      "name": "24",
+      "milestones": {
+        "ga": "2023-04-04",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-10-10"
+      },
+      "upstream": {
+        "name": "24",
+        "codename": null,
+        "label": "24",
+        "releaseDate": "2023-04-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-10-10",
+        "isMaintained": false,
+        "latest": {
+          "name": "24.8.8",
+          "date": "2023-10-11",
+          "link": "https://releases.electronjs.org/release/v24.8.8"
+        },
+        "custom": {
+          "chromeVersion": "M112",
+          "nodeVersion": "18"
+        }
+      }
+    },
+    {
+      "id": "23",
+      "name": "23",
+      "milestones": {
+        "ga": "2023-02-07",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-08-15"
+      },
+      "upstream": {
+        "name": "23",
+        "codename": null,
+        "label": "23",
+        "releaseDate": "2023-02-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-08-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "23.3.13",
+          "date": "2023-08-16",
+          "link": "https://releases.electronjs.org/release/v23.3.13"
+        },
+        "custom": {
+          "chromeVersion": "M110",
+          "nodeVersion": "18"
+        }
+      }
+    },
+    {
+      "id": "22",
+      "name": "22",
+      "milestones": {
+        "ga": "2022-11-29",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-10-10"
+      },
+      "upstream": {
+        "name": "22",
+        "codename": null,
+        "label": "22",
+        "releaseDate": "2022-11-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-10-10",
+        "isMaintained": false,
+        "latest": {
+          "name": "22.3.27",
+          "date": "2023-10-09",
+          "link": "https://releases.electronjs.org/release/v22.3.27"
+        },
+        "custom": {
+          "chromeVersion": "M108",
+          "nodeVersion": "16"
+        }
+      }
+    },
+    {
+      "id": "21",
+      "name": "21",
+      "milestones": {
+        "ga": "2022-09-27",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-04-04"
+      },
+      "upstream": {
+        "name": "21",
+        "codename": null,
+        "label": "21",
+        "releaseDate": "2022-09-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-04-04",
+        "isMaintained": false,
+        "latest": {
+          "name": "21.4.4",
+          "date": "2023-04-04",
+          "link": "https://releases.electronjs.org/release/v21.4.4"
+        },
+        "custom": {
+          "chromeVersion": "M106",
+          "nodeVersion": "16"
+        }
+      }
+    },
+    {
+      "id": "20",
+      "name": "20",
+      "milestones": {
+        "ga": "2022-08-02",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-02-07"
+      },
+      "upstream": {
+        "name": "20",
+        "codename": null,
+        "label": "20",
+        "releaseDate": "2022-08-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-02-07",
+        "isMaintained": false,
+        "latest": {
+          "name": "20.3.12",
+          "date": "2023-02-09",
+          "link": "https://releases.electronjs.org/release/v20.3.12"
+        },
+        "custom": {
+          "chromeVersion": "M104",
+          "nodeVersion": "16"
+        }
+      }
+    },
+    {
+      "id": "19",
+      "name": "19",
+      "milestones": {
+        "ga": "2022-05-24",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-11-29"
+      },
+      "upstream": {
+        "name": "19",
+        "codename": null,
+        "label": "19",
+        "releaseDate": "2022-05-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-11-29",
+        "isMaintained": false,
+        "latest": {
+          "name": "19.1.9",
+          "date": "2022-11-30",
+          "link": "https://releases.electronjs.org/release/v19.1.9"
+        },
+        "custom": {
+          "chromeVersion": "M102",
+          "nodeVersion": "16"
+        }
+      }
+    },
+    {
+      "id": "18",
+      "name": "18",
+      "milestones": {
+        "ga": "2022-03-29",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-09-27"
+      },
+      "upstream": {
+        "name": "18",
+        "codename": null,
+        "label": "18",
+        "releaseDate": "2022-03-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-09-27",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.3.15",
+          "date": "2022-09-27",
+          "link": "https://releases.electronjs.org/release/v18.3.15"
+        },
+        "custom": {
+          "chromeVersion": "M100",
+          "nodeVersion": "16"
+        }
+      }
+    },
+    {
+      "id": "17",
+      "name": "17",
+      "milestones": {
+        "ga": "2022-02-01",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-08-02"
+      },
+      "upstream": {
+        "name": "17",
+        "codename": null,
+        "label": "17",
+        "releaseDate": "2022-02-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-08-02",
+        "isMaintained": false,
+        "latest": {
+          "name": "17.4.11",
+          "date": "2022-08-01",
+          "link": "https://releases.electronjs.org/release/v17.4.11"
+        },
+        "custom": {
+          "chromeVersion": "M98",
+          "nodeVersion": "16"
+        }
+      }
+    },
+    {
+      "id": "16",
+      "name": "16",
+      "milestones": {
+        "ga": "2021-11-16",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-05-24"
+      },
+      "upstream": {
+        "name": "16",
+        "codename": null,
+        "label": "16",
+        "releaseDate": "2021-11-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-05-24",
+        "isMaintained": false,
+        "latest": {
+          "name": "16.2.8",
+          "date": "2022-05-24",
+          "link": "https://releases.electronjs.org/release/v16.2.8"
+        },
+        "custom": {
+          "chromeVersion": "M96",
+          "nodeVersion": "16"
+        }
+      }
+    },
+    {
+      "id": "15",
+      "name": "15",
+      "milestones": {
+        "ga": "2021-09-21",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-05-24"
+      },
+      "upstream": {
+        "name": "15",
+        "codename": null,
+        "label": "15",
+        "releaseDate": "2021-09-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-05-24",
+        "isMaintained": false,
+        "latest": {
+          "name": "15.5.7",
+          "date": "2022-05-24",
+          "link": "https://releases.electronjs.org/release/v15.5.7"
+        },
+        "custom": {
+          "chromeVersion": "M94",
+          "nodeVersion": "16"
+        }
+      }
+    },
+    {
+      "id": "14",
+      "name": "14",
+      "milestones": {
+        "ga": "2021-08-31",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-03-29"
+      },
+      "upstream": {
+        "name": "14",
+        "codename": null,
+        "label": "14",
+        "releaseDate": "2021-08-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-03-29",
+        "isMaintained": false,
+        "latest": {
+          "name": "14.2.9",
+          "date": "2022-03-30",
+          "link": "https://releases.electronjs.org/release/v14.2.9"
+        },
+        "custom": {
+          "chromeVersion": "M93",
+          "nodeVersion": "14"
+        }
+      }
+    },
+    {
+      "id": "13",
+      "name": "13",
+      "milestones": {
+        "ga": "2021-05-25",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-02-01"
+      },
+      "upstream": {
+        "name": "13",
+        "codename": null,
+        "label": "13",
+        "releaseDate": "2021-05-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-02-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "13.6.9",
+          "date": "2022-02-01",
+          "link": "https://releases.electronjs.org/release/v13.6.9"
+        },
+        "custom": {
+          "chromeVersion": "M91",
+          "nodeVersion": "14"
+        }
+      }
+    },
+    {
+      "id": "12",
+      "name": "12",
+      "milestones": {
+        "ga": "2021-03-02",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-11-16"
+      },
+      "upstream": {
+        "name": "12",
+        "codename": null,
+        "label": "12",
+        "releaseDate": "2021-03-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-11-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "12.2.3",
+          "date": "2021-11-15",
+          "link": "https://releases.electronjs.org/release/v12.2.3"
+        },
+        "custom": {
+          "chromeVersion": "M89",
+          "nodeVersion": "14"
+        }
+      }
+    },
+    {
+      "id": "11",
+      "name": "11",
+      "milestones": {
+        "ga": "2020-11-17",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-08-31"
+      },
+      "upstream": {
+        "name": "11",
+        "codename": null,
+        "label": "11",
+        "releaseDate": "2020-11-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-08-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "11.5.0",
+          "date": "2021-08-31",
+          "link": "https://releases.electronjs.org/release/v11.5.0"
+        },
+        "custom": {
+          "chromeVersion": "M87",
+          "nodeVersion": "12"
+        }
+      }
+    },
+    {
+      "id": "10",
+      "name": "10",
+      "milestones": {
+        "ga": "2020-08-25",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-05-25"
+      },
+      "upstream": {
+        "name": "10",
+        "codename": null,
+        "label": "10",
+        "releaseDate": "2020-08-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-05-25",
+        "isMaintained": false,
+        "latest": {
+          "name": "10.4.7",
+          "date": "2021-05-24",
+          "link": "https://releases.electronjs.org/release/v10.4.7"
+        },
+        "custom": {
+          "chromeVersion": "M85",
+          "nodeVersion": "12"
+        }
+      }
+    },
+    {
+      "id": "9",
+      "name": "9",
+      "milestones": {
+        "ga": "2020-05-19",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-03-02"
+      },
+      "upstream": {
+        "name": "9",
+        "codename": null,
+        "label": "9",
+        "releaseDate": "2020-05-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-03-02",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.4.4",
+          "date": "2021-03-03",
+          "link": "https://releases.electronjs.org/release/v9.4.4"
+        },
+        "custom": {
+          "chromeVersion": "M83",
+          "nodeVersion": "12"
+        }
+      }
+    },
+    {
+      "id": "8",
+      "name": "8",
+      "milestones": {
+        "ga": "2020-02-04",
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-11-17"
+      },
+      "upstream": {
+        "name": "8",
+        "codename": null,
+        "label": "8",
+        "releaseDate": "2020-02-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-11-17",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.5.5",
+          "date": "2020-11-18",
+          "link": "https://releases.electronjs.org/release/v8.5.5"
+        },
+        "custom": {
+          "chromeVersion": "M80",
+          "nodeVersion": "12"
+        }
+      }
+    },
+    {
+      "id": "7",
+      "name": "7",
+      "milestones": {
+        "ga": "2019-10-22",
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-08-25"
+      },
+      "upstream": {
+        "name": "7",
+        "codename": null,
+        "label": "7",
+        "releaseDate": "2019-10-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-08-25",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.3.3",
+          "date": "2020-08-25",
+          "link": "https://releases.electronjs.org/release/v7.3.3"
+        },
+        "custom": {
+          "chromeVersion": "M78",
+          "nodeVersion": "12"
+        }
+      }
+    },
+    {
+      "id": "6",
+      "name": "6",
+      "milestones": {
+        "ga": "2019-07-30",
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-05-19"
+      },
+      "upstream": {
+        "name": "6",
+        "codename": null,
+        "label": "6",
+        "releaseDate": "2019-07-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-05-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.1.12",
+          "date": "2020-05-18",
+          "link": "https://releases.electronjs.org/release/v6.1.12"
+        },
+        "custom": {
+          "chromeVersion": "M76",
+          "nodeVersion": "12"
+        }
+      }
+    },
+    {
+      "id": "5",
+      "name": "5",
+      "milestones": {
+        "ga": "2019-04-23",
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-02-04"
+      },
+      "upstream": {
+        "name": "5",
+        "codename": null,
+        "label": "5",
+        "releaseDate": "2019-04-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-02-04",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.0.13",
+          "date": "2019-12-17",
+          "link": "https://releases.electronjs.org/release/v5.0.13"
+        },
+        "custom": {
+          "chromeVersion": "M73",
+          "nodeVersion": "12"
+        }
+      }
+    },
+    {
+      "id": "4",
+      "name": "4",
+      "milestones": {
+        "ga": "2018-12-20",
+        "eos": null,
+        "eossec": null,
+        "eol": "2019-10-22"
+      },
+      "upstream": {
+        "name": "4",
+        "codename": null,
+        "label": "4",
+        "releaseDate": "2018-12-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-10-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.2.12",
+          "date": "2019-10-16",
+          "link": "https://releases.electronjs.org/release/v4.2.12"
+        },
+        "custom": {
+          "chromeVersion": "M69",
+          "nodeVersion": "10"
+        }
+      }
+    },
+    {
+      "id": "3",
+      "name": "3",
+      "milestones": {
+        "ga": "2018-09-18",
+        "eos": null,
+        "eossec": null,
+        "eol": "2019-07-30"
+      },
+      "upstream": {
+        "name": "3",
+        "codename": null,
+        "label": "3",
+        "releaseDate": "2018-09-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-07-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.1.13",
+          "date": "2019-07-31",
+          "link": "https://releases.electronjs.org/release/v3.1.13"
+        },
+        "custom": {
+          "chromeVersion": "M66",
+          "nodeVersion": "10"
+        }
+      }
+    },
+    {
+      "id": "2",
+      "name": "2",
+      "milestones": {
+        "ga": "2018-05-01",
+        "eos": null,
+        "eossec": null,
+        "eol": "2019-04-23"
+      },
+      "upstream": {
+        "name": "2",
+        "codename": null,
+        "label": "2",
+        "releaseDate": "2018-05-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-04-23",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.0.18",
+          "date": "2019-03-08",
+          "link": "https://releases.electronjs.org/release/v2.0.18"
+        },
+        "custom": {
+          "chromeVersion": "M61",
+          "nodeVersion": "8"
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/electron/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-17T00:08:37+00:00"
+  }
+}

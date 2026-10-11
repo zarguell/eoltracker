@@ -1,0 +1,143 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "amazon-aurora-mysql",
+  "name": "Amazon Aurora MySQL",
+  "category": "software",
+  "upstream_category": "service",
+  "identifiers": [],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": "Extended Support"
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/amazonrds.svg",
+    "html": "https://endoflife.date/amazon-aurora-mysql",
+    "releasePolicy": "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraMySQLReleaseNotes/AuroraMySQL.release-calendars.html"
+  },
+  "releases": [
+    {
+      "id": "8.4",
+      "name": "8.4",
+      "milestones": {
+        "ga": "2026-05-21",
+        "eos": null,
+        "eossec": "2032-04-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "8.4",
+        "codename": null,
+        "label": "8.4",
+        "releaseDate": "2026-05-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2032-04-30",
+        "isEoes": false,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "8.4.8",
+          "date": "2026-09-03",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3",
+      "name": "3 (MySQL 8.0)",
+      "milestones": {
+        "ga": "2021-11-23",
+        "eos": null,
+        "eossec": "2028-04-30",
+        "eol": "2029-07-31"
+      },
+      "upstream": {
+        "name": "3",
+        "codename": null,
+        "label": "3 (MySQL 8.0)",
+        "releaseDate": "2021-11-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2028-04-30",
+        "isEoes": false,
+        "eoesFrom": "2029-07-31",
+        "isMaintained": true,
+        "latest": {
+          "name": "3.13",
+          "date": "2026-08-27",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2",
+      "name": "2 (MySQL 5.7)",
+      "milestones": {
+        "ga": "2018-02-06",
+        "eos": null,
+        "eossec": "2024-10-31",
+        "eol": "2029-06-30"
+      },
+      "upstream": {
+        "name": "2",
+        "codename": null,
+        "label": "2 (MySQL 5.7)",
+        "releaseDate": "2018-02-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-10-31",
+        "isEoes": false,
+        "eoesFrom": "2029-06-30",
+        "isMaintained": true,
+        "latest": {
+          "name": "2.12",
+          "date": "2023-07-25",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1",
+      "name": "1 (MySQL 5.6)",
+      "milestones": {
+        "ga": "2015-07-27",
+        "eos": null,
+        "eossec": "2023-02-28",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1",
+        "codename": null,
+        "label": "1 (MySQL 5.6)",
+        "releaseDate": "2015-07-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-02-28",
+        "isEoes": true,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "1.23.4",
+          "date": "2022-08-11",
+          "link": null
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/amazon-aurora-mysql/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-04T00:07:10+00:00"
+  }
+}

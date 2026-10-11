@@ -1,0 +1,29 @@
+{
+  "source_url": "https://github.com/owncloud/core/wiki/Maintenance-and-Release-Schedule",
+  "support_url": "https://owncloud.com/support/",
+  "verifier": "deterministic-owncloud",
+  "checked_at": "2026-09-26T22:45:19Z",
+  "record_scope": "ownCloud Server major release lines: one software record with one release per line the schedule states, at the precision each column states",
+  "rows": {
+    "seen": 15,
+    "published": 15,
+    "retained": 0,
+    "triggers": 1
+  },
+  "triggers": [
+    {
+      "line": "11",
+      "cell": "maintained, EOL TBA",
+      "reason": "the schedule states the line is maintained with no announced end of life; it is a vendor trigger, not an unknown date, so eol is null and the cell is kept verbatim"
+    }
+  ],
+  "total_records": 1,
+  "limitations": [
+    "A release line's own release date is its ga. The current-version column states a patch release and that patch's own date, which is a different fact, so it is kept as the vendor's cell and never becomes the line's ga.",
+    "End of life is a month the schedule states without a day, so it is published at month precision and never widened into a day. Those events are not syndicated into the exact-day Atom, RSS and iCalendar feeds; v1/feed-exclusions.json enumerates them instead.",
+    "The schedule states 'maintained, EOL TBA' for a line that is supported with no announced end. That is the vendor's own trigger rather than an unknown date, so eol is null, the cell is kept verbatim, and the run refuses if the schedule stops stating it.",
+    "A line that is long retired states '-' for its current version and 'End of Life' for its next one. Both are the page's own vocabulary for a version that does not exist, not missing data, and neither is read as a date.",
+    "The source is the owncloud/core project wiki, which owncloud.com/support/ designates for Server releases. It is the vendor's own project statement, and the record names ownCloud as the vendor rather than Kiteworks (issue #126). A wiki page is editable by the project, so the page's own title is required verbatim and a renamed or replaced page refuses rather than being read as this schedule.",
+    "The schedule states no publication cadence and no page-level version; the refresh records when it last checked and what it found."
+  ]
+}

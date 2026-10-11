@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-exf900-gen-3",
+  "name": "EXF900 Gen 3",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Elastic Cloud Storage (ECS)",
+  "family": "Elastic Cloud Storage (ECS)",
+  "model_number": "EXF900 Gen 3",
+  "milestones": {
+    "ga": "2020-11-18",
+    "eos": null,
+    "eossec": null,
+    "eol": null
+  },
+  "status": "supported",
+  "upstream": {
+    "Product": {
+      "text": "EXF900 Gen 3",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "EXF900 Gen 3",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Elastic Cloud Storage (ECS)",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "TBD",
+      "datetime": null,
+      "value": null,
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Nov. 18, 2020",
+      "datetime": "2020-11-18",
+      "value": "2020-11-18",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "TBD",
+      "datetime": null,
+      "value": null,
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/cloud-storage/vendor/dell-emc/elastic-cloud-storage-ecs/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

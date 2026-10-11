@@ -1,0 +1,333 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "watchos",
+  "name": "Apple watchOS",
+  "category": "software",
+  "upstream_category": "os",
+  "identifiers": [
+    {
+      "type": "cpe",
+      "id": "cpe:/o:apple:watch_os"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:o:apple:watch_os"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/apple.svg",
+    "html": "https://endoflife.date/watchos",
+    "releasePolicy": null
+  },
+  "releases": [
+    {
+      "id": "27",
+      "name": "27",
+      "milestones": {
+        "ga": "2026-09-14",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "27",
+        "codename": null,
+        "label": "27",
+        "releaseDate": "2026-09-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "27",
+          "date": "2026-09-14",
+          "link": "https://developer.apple.com/documentation/watchos-release-notes/watchos-27-release-notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "26",
+      "name": "26",
+      "milestones": {
+        "ga": "2025-09-15",
+        "eos": null,
+        "eossec": "2026-09-14",
+        "eol": null
+      },
+      "upstream": {
+        "name": "26",
+        "codename": null,
+        "label": "26",
+        "releaseDate": "2025-09-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-09-14",
+        "isMaintained": false,
+        "latest": {
+          "name": "26.6",
+          "date": "2026-07-27",
+          "link": "https://developer.apple.com/documentation/watchos-release-notes/watchos-26-release-notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "11",
+      "name": "11",
+      "milestones": {
+        "ga": "2024-09-16",
+        "eos": null,
+        "eossec": "2025-09-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "11",
+        "codename": null,
+        "label": "11",
+        "releaseDate": "2024-09-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-09-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "11.6.2",
+          "date": "2026-02-05",
+          "link": "https://developer.apple.com/documentation/watchos-release-notes/watchos-11-release-notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "10",
+      "name": "10",
+      "milestones": {
+        "ga": "2023-09-18",
+        "eos": null,
+        "eossec": "2024-09-16",
+        "eol": null
+      },
+      "upstream": {
+        "name": "10",
+        "codename": null,
+        "label": "10",
+        "releaseDate": "2023-09-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-09-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "10.6.2",
+          "date": "2026-02-02",
+          "link": "https://developer.apple.com/documentation/watchos-release-notes/watchos-10-release-notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9",
+      "name": "9",
+      "milestones": {
+        "ga": "2022-09-12",
+        "eos": null,
+        "eossec": "2023-09-18",
+        "eol": null
+      },
+      "upstream": {
+        "name": "9",
+        "codename": null,
+        "label": "9",
+        "releaseDate": "2022-09-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-09-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.6.4",
+          "date": "2026-02-02",
+          "link": "https://developer.apple.com/documentation/watchos-release-notes/watchos-9-release-notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8",
+      "name": "8",
+      "milestones": {
+        "ga": "2021-09-20",
+        "eos": null,
+        "eossec": "2022-09-12",
+        "eol": null
+      },
+      "upstream": {
+        "name": "8",
+        "codename": null,
+        "label": "8",
+        "releaseDate": "2021-09-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-09-12",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.8.2",
+          "date": "2026-03-24",
+          "link": "https://developer.apple.com/documentation/watchos-release-notes/watchos-8-release-notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7",
+      "name": "7",
+      "milestones": {
+        "ga": "2020-09-16",
+        "eos": null,
+        "eossec": "2021-09-20",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7",
+        "codename": null,
+        "label": "7",
+        "releaseDate": "2020-09-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-09-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.6.2",
+          "date": "2021-09-13",
+          "link": "https://developer.apple.com/documentation/watchos-release-notes/watchos-7-release-notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6",
+      "name": "6",
+      "milestones": {
+        "ga": "2019-09-19",
+        "eos": null,
+        "eossec": "2020-09-16",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6",
+        "codename": null,
+        "label": "6",
+        "releaseDate": "2019-09-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-09-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.3.1",
+          "date": "2026-02-02",
+          "link": "https://developer.apple.com/documentation/watchos-release-notes/watchos-6-release-notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5",
+      "name": "5",
+      "milestones": {
+        "ga": "2018-09-17",
+        "eos": null,
+        "eossec": "2019-09-19",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5",
+        "codename": null,
+        "label": "5",
+        "releaseDate": "2018-09-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-09-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.3.10",
+          "date": "2026-03-24",
+          "link": "https://developer.apple.com/documentation/watchos-release-notes/watchos-5-release-notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4",
+      "name": "4",
+      "milestones": {
+        "ga": "2017-09-19",
+        "eos": null,
+        "eossec": "2018-09-17",
+        "eol": null
+      },
+      "upstream": {
+        "name": "4",
+        "codename": null,
+        "label": "4",
+        "releaseDate": "2017-09-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-09-17",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.3.2",
+          "date": "2018-07-09",
+          "link": "https://support.apple.com/HT208071"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3",
+      "name": "3",
+      "milestones": {
+        "ga": "2016-09-13",
+        "eos": null,
+        "eossec": "2017-09-19",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3",
+        "codename": null,
+        "label": "3",
+        "releaseDate": "2016-09-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-09-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.2.3",
+          "date": "2017-07-19",
+          "link": "https://support.apple.com/kb/DL1894"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/watchos/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-16T05:57:07+00:00"
+  }
+}

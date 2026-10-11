@@ -1,0 +1,580 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "kubernetes-csi-node-driver-registrar",
+  "name": "Kubernetes CSI Node Driver Registrar",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "purl",
+      "id": "pkg:oci/csi-node-driver-registrar?repository_url=k8s.gcr.io/sig-storage"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/kubernetes-csi/node-driver-registrar"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:golang/github.com/kubernetes-csi/node-driver-registrar"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/kubernetes-csi-node-driver-registrar",
+    "releasePolicy": null
+  },
+  "releases": [
+    {
+      "id": "2.18",
+      "name": "2.18",
+      "milestones": {
+        "ga": "2026-09-03",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.18",
+        "codename": null,
+        "label": "2.18",
+        "releaseDate": "2026-09-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "2.18.0",
+          "date": "2026-09-03",
+          "link": "https://github.com/kubernetes-csi/node-driver-registrar/releases/tag/v2.18.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.17",
+      "name": "2.17",
+      "milestones": {
+        "ga": "2026-05-21",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-09-03"
+      },
+      "upstream": {
+        "name": "2.17",
+        "codename": null,
+        "label": "2.17",
+        "releaseDate": "2026-05-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-09-03",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.17.0",
+          "date": "2026-05-21",
+          "link": "https://github.com/kubernetes-csi/node-driver-registrar/releases/tag/v2.17.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.16",
+      "name": "2.16",
+      "milestones": {
+        "ga": "2026-02-12",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-05-21"
+      },
+      "upstream": {
+        "name": "2.16",
+        "codename": null,
+        "label": "2.16",
+        "releaseDate": "2026-02-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-05-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.16.0",
+          "date": "2026-02-12",
+          "link": "https://github.com/kubernetes-csi/node-driver-registrar/releases/tag/v2.16.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.15",
+      "name": "2.15",
+      "milestones": {
+        "ga": "2025-09-12",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-02-12"
+      },
+      "upstream": {
+        "name": "2.15",
+        "codename": null,
+        "label": "2.15",
+        "releaseDate": "2025-09-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-02-12",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.15.0",
+          "date": "2025-09-12",
+          "link": "https://github.com/kubernetes-csi/node-driver-registrar/releases/tag/v2.15.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.14",
+      "name": "2.14",
+      "milestones": {
+        "ga": "2025-05-30",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-09-12"
+      },
+      "upstream": {
+        "name": "2.14",
+        "codename": null,
+        "label": "2.14",
+        "releaseDate": "2025-05-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-09-12",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.14.0",
+          "date": "2025-05-30",
+          "link": "https://github.com/kubernetes-csi/node-driver-registrar/releases/tag/v2.14.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.13",
+      "name": "2.13",
+      "milestones": {
+        "ga": "2024-12-19",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-05-30"
+      },
+      "upstream": {
+        "name": "2.13",
+        "codename": null,
+        "label": "2.13",
+        "releaseDate": "2024-12-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-05-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.13.0",
+          "date": "2024-12-19",
+          "link": "https://github.com/kubernetes-csi/node-driver-registrar/releases/tag/v2.13.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.12",
+      "name": "2.12",
+      "milestones": {
+        "ga": "2024-08-22",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-12-19"
+      },
+      "upstream": {
+        "name": "2.12",
+        "codename": null,
+        "label": "2.12",
+        "releaseDate": "2024-08-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-12-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.12.0",
+          "date": "2024-08-22",
+          "link": "https://github.com/kubernetes-csi/node-driver-registrar/releases/tag/v2.12.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.11",
+      "name": "2.11",
+      "milestones": {
+        "ga": "2024-05-22",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-08-22"
+      },
+      "upstream": {
+        "name": "2.11",
+        "codename": null,
+        "label": "2.11",
+        "releaseDate": "2024-05-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-08-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.11.1",
+          "date": "2024-07-16",
+          "link": "https://github.com/kubernetes-csi/node-driver-registrar/releases/tag/v2.11.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.10",
+      "name": "2.10",
+      "milestones": {
+        "ga": "2024-01-04",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-05-22"
+      },
+      "upstream": {
+        "name": "2.10",
+        "codename": null,
+        "label": "2.10",
+        "releaseDate": "2024-01-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-05-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.10.1",
+          "date": "2024-03-20",
+          "link": "https://github.com/kubernetes-csi/node-driver-registrar/releases/tag/v2.10.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.9",
+      "name": "2.9",
+      "milestones": {
+        "ga": "2023-09-11",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-01-04"
+      },
+      "upstream": {
+        "name": "2.9",
+        "codename": null,
+        "label": "2.9",
+        "releaseDate": "2023-09-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-01-04",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.9.4",
+          "date": "2024-03-20",
+          "link": "https://github.com/kubernetes-csi/node-driver-registrar/releases/tag/v2.9.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.8",
+      "name": "2.8",
+      "milestones": {
+        "ga": "2023-04-27",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-09-11"
+      },
+      "upstream": {
+        "name": "2.8",
+        "codename": null,
+        "label": "2.8",
+        "releaseDate": "2023-04-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-09-11",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.8.0",
+          "date": "2023-04-27",
+          "link": "https://github.com/kubernetes-csi/node-driver-registrar/releases/tag/v2.8.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.7",
+      "name": "2.7",
+      "milestones": {
+        "ga": "2022-12-28",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-04-27"
+      },
+      "upstream": {
+        "name": "2.7",
+        "codename": null,
+        "label": "2.7",
+        "releaseDate": "2022-12-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-04-27",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.7.0",
+          "date": "2022-12-28",
+          "link": "https://github.com/kubernetes-csi/node-driver-registrar/releases/tag/v2.7.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.6",
+      "name": "2.6",
+      "milestones": {
+        "ga": "2022-10-20",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-12-28"
+      },
+      "upstream": {
+        "name": "2.6",
+        "codename": null,
+        "label": "2.6",
+        "releaseDate": "2022-10-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-12-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.6.3",
+          "date": "2023-01-23",
+          "link": "https://github.com/kubernetes-csi/node-driver-registrar/releases/tag/v2.6.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.5",
+      "name": "2.5",
+      "milestones": {
+        "ga": "2022-02-02",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-10-20"
+      },
+      "upstream": {
+        "name": "2.5",
+        "codename": null,
+        "label": "2.5",
+        "releaseDate": "2022-02-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-10-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.5.1",
+          "date": "2022-05-06",
+          "link": "https://github.com/kubernetes-csi/node-driver-registrar/releases/tag/v2.5.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.4",
+      "name": "2.4",
+      "milestones": {
+        "ga": "2021-11-09",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-11-09"
+      },
+      "upstream": {
+        "name": "2.4",
+        "codename": null,
+        "label": "2.4",
+        "releaseDate": "2021-11-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-11-09",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.4.0",
+          "date": "2021-11-09",
+          "link": "https://github.com/kubernetes-csi/node-driver-registrar/releases/tag/v2.4.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.3",
+      "name": "2.3",
+      "milestones": {
+        "ga": "2021-08-11",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-11-09"
+      },
+      "upstream": {
+        "name": "2.3",
+        "codename": null,
+        "label": "2.3",
+        "releaseDate": "2021-08-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-11-09",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.3.0",
+          "date": "2021-08-11",
+          "link": "https://github.com/kubernetes-csi/node-driver-registrar/releases/tag/v2.3.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.2",
+      "name": "2.2",
+      "milestones": {
+        "ga": "2021-04-27",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-08-11"
+      },
+      "upstream": {
+        "name": "2.2",
+        "codename": null,
+        "label": "2.2",
+        "releaseDate": "2021-04-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-08-11",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.2.0",
+          "date": "2021-04-27",
+          "link": "https://github.com/kubernetes-csi/node-driver-registrar/releases/tag/v2.2.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.1",
+      "name": "2.1",
+      "milestones": {
+        "ga": "2020-12-17",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-04-27"
+      },
+      "upstream": {
+        "name": "2.1",
+        "codename": null,
+        "label": "2.1",
+        "releaseDate": "2020-12-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-04-27",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.1.0",
+          "date": "2020-12-17",
+          "link": "https://github.com/kubernetes-csi/node-driver-registrar/releases/tag/v2.1.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.0",
+      "name": "2.0",
+      "milestones": {
+        "ga": "2020-08-28",
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-12-17"
+      },
+      "upstream": {
+        "name": "2.0",
+        "codename": null,
+        "label": "2.0",
+        "releaseDate": "2020-08-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-12-17",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.0.1",
+          "date": "2020-09-03",
+          "link": "https://github.com/kubernetes-csi/node-driver-registrar/releases/tag/v2.0.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.2",
+      "name": "1.2",
+      "milestones": {
+        "ga": "2019-09-09",
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-08-28"
+      },
+      "upstream": {
+        "name": "1.2",
+        "codename": null,
+        "label": "1.2",
+        "releaseDate": "2019-09-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-08-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.2.0",
+          "date": "2019-09-09",
+          "link": "https://github.com/kubernetes-csi/node-driver-registrar/releases/tag/v1.2.0"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/kubernetes-csi-node-driver-registrar/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-05T13:33:27+00:00"
+  }
+}

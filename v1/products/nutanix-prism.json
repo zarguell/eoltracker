@@ -1,0 +1,810 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "nutanix-prism",
+  "name": "Nutanix Prism Central",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [],
+  "labels": {
+    "eoas": "End of Maintenance",
+    "discontinued": null,
+    "eol": "End of Support Life",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/nutanix.svg",
+    "html": "https://endoflife.date/nutanix-prism",
+    "releasePolicy": "https://www.nutanix.com/support-services/product-support/support-policies-and-faqs"
+  },
+  "releases": [
+    {
+      "id": "pc.7.6",
+      "name": "pc.7.6",
+      "milestones": {
+        "ga": "2026-07-27",
+        "eos": null,
+        "eossec": null,
+        "eol": "2028-07-31"
+      },
+      "upstream": {
+        "name": "pc.7.6",
+        "codename": null,
+        "label": "pc.7.6",
+        "releaseDate": "2026-07-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": "2027-10-31",
+        "isEol": false,
+        "eolFrom": "2028-07-31",
+        "isMaintained": true,
+        "latest": {
+          "name": "pc.7.6.0.6",
+          "date": "2026-08-31",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "pc.7.5",
+      "name": "pc.7.5",
+      "milestones": {
+        "ga": "2025-12-09",
+        "eos": null,
+        "eossec": null,
+        "eol": "2027-11-30"
+      },
+      "upstream": {
+        "name": "pc.7.5",
+        "codename": null,
+        "label": "pc.7.5",
+        "releaseDate": "2025-12-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": "2027-02-28",
+        "isEol": false,
+        "eolFrom": "2027-11-30",
+        "isMaintained": true,
+        "latest": {
+          "name": "pc.7.5.1.12",
+          "date": "2026-08-26",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "pc.7.3",
+      "name": "pc.7.3",
+      "milestones": {
+        "ga": "2025-06-24",
+        "eos": null,
+        "eossec": null,
+        "eol": "2027-06-30"
+      },
+      "upstream": {
+        "name": "pc.7.3",
+        "codename": null,
+        "label": "pc.7.3",
+        "releaseDate": "2025-06-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": "2026-09-30",
+        "isEol": false,
+        "eolFrom": "2027-06-30",
+        "isMaintained": true,
+        "latest": {
+          "name": "pc.7.3.1.16",
+          "date": "2026-09-01",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "pc.2024.3",
+      "name": "pc.2024.3",
+      "milestones": {
+        "ga": "2024-12-05",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-12-31"
+      },
+      "upstream": {
+        "name": "pc.2024.3",
+        "codename": null,
+        "label": "pc.2024.3",
+        "releaseDate": "2024-12-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-03-31",
+        "isEol": false,
+        "eolFrom": "2026-12-31",
+        "isMaintained": true,
+        "latest": {
+          "name": "pc.2024.3.1.14",
+          "date": "2026-03-24",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "pc.2024.2",
+      "name": "pc.2024.2",
+      "milestones": {
+        "ga": "2024-09-17",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-10-31"
+      },
+      "upstream": {
+        "name": "pc.2024.2",
+        "codename": null,
+        "label": "pc.2024.2",
+        "releaseDate": "2024-09-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-01-31",
+        "isEol": false,
+        "eolFrom": "2026-10-31",
+        "isMaintained": true,
+        "latest": {
+          "name": "pc.2024.2.0.15",
+          "date": "2026-02-10",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "pc.2024.1",
+      "name": "pc.2024.1",
+      "milestones": {
+        "ga": "2024-05-15",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-02-28"
+      },
+      "upstream": {
+        "name": "pc.2024.1",
+        "codename": null,
+        "label": "pc.2024.1",
+        "releaseDate": "2024-05-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-11-30",
+        "isEol": true,
+        "eolFrom": "2025-02-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "pc.2024.1.0.2",
+          "date": "2024-08-05",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "pc.2023.4",
+      "name": "pc.2023.4",
+      "milestones": {
+        "ga": "2023-08-28",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-06-30"
+      },
+      "upstream": {
+        "name": "pc.2023.4",
+        "codename": null,
+        "label": "pc.2023.4",
+        "releaseDate": "2023-08-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-10-31",
+        "isEol": true,
+        "eolFrom": "2025-06-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "pc.2023.4.0.5",
+          "date": "2024-11-20",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "pc.2023.3",
+      "name": "pc.2023.3",
+      "milestones": {
+        "ga": "2023-08-28",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-08-31"
+      },
+      "upstream": {
+        "name": "pc.2023.3",
+        "codename": null,
+        "label": "pc.2023.3",
+        "releaseDate": "2023-08-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-02-29",
+        "isEol": true,
+        "eolFrom": "2024-08-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "pc.2023.3.0.1",
+          "date": "2023-11-28",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "pc.2023.1",
+      "name": "pc.2023.1",
+      "milestones": {
+        "ga": "2023-03-15",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-01-31"
+      },
+      "upstream": {
+        "name": "pc.2023.1",
+        "codename": null,
+        "label": "pc.2023.1",
+        "releaseDate": "2023-03-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-10-31",
+        "isEol": true,
+        "eolFrom": "2024-01-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "pc.2023.1.0.2",
+          "date": "2023-07-17",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "pc.2022.9",
+      "name": "pc.2022.9",
+      "milestones": {
+        "ga": "2023-01-23",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-09-30"
+      },
+      "upstream": {
+        "name": "pc.2022.9",
+        "codename": null,
+        "label": "pc.2022.9",
+        "releaseDate": "2023-01-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-06-30",
+        "isEol": true,
+        "eolFrom": "2023-09-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "pc.2022.9",
+          "date": "2023-01-23",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "pc.2022.6",
+      "name": "pc.2022.6",
+      "milestones": {
+        "ga": "2022-08-03",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-06-30"
+      },
+      "upstream": {
+        "name": "pc.2022.6",
+        "codename": null,
+        "label": "pc.2022.6",
+        "releaseDate": "2022-08-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-08-31",
+        "isEol": true,
+        "eolFrom": "2025-06-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "pc.2022.6.0.11",
+          "date": "2024-06-05",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "pc.2022.4",
+      "name": "pc.2022.4",
+      "milestones": {
+        "ga": "2022-05-16",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-01-31"
+      },
+      "upstream": {
+        "name": "pc.2022.4",
+        "codename": null,
+        "label": "pc.2022.4",
+        "releaseDate": "2022-05-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-10-31",
+        "isEol": true,
+        "eolFrom": "2023-01-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "pc.2022.4.0.2",
+          "date": "2022-07-25",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "pc.2022.1",
+      "name": "pc.2022.1",
+      "milestones": {
+        "ga": "2022-02-24",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-10-31"
+      },
+      "upstream": {
+        "name": "pc.2022.1",
+        "codename": null,
+        "label": "pc.2022.1",
+        "releaseDate": "2022-02-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-07-31",
+        "isEol": true,
+        "eolFrom": "2022-10-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "pc.2022.1.0.2",
+          "date": "2022-03-21",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "pc.2021.9",
+      "name": "pc.2021.9",
+      "milestones": {
+        "ga": "2021-10-06",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-10-31"
+      },
+      "upstream": {
+        "name": "pc.2021.9",
+        "codename": null,
+        "label": "pc.2021.9",
+        "releaseDate": "2021-10-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-04-30",
+        "isEol": true,
+        "eolFrom": "2022-10-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "pc.2021.9.0.6",
+          "date": "2022-07-29",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "pc.2021.8",
+      "name": "pc.2021.8",
+      "milestones": {
+        "ga": "2021-08-31",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-03-31"
+      },
+      "upstream": {
+        "name": "pc.2021.8",
+        "codename": null,
+        "label": "pc.2021.8",
+        "releaseDate": "2021-08-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-12-31",
+        "isEol": true,
+        "eolFrom": "2022-03-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "pc.2021.8.0.1",
+          "date": "2021-09-14",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "pc.2021.7",
+      "name": "pc.2021.7",
+      "milestones": {
+        "ga": "2021-08-04",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-02-28"
+      },
+      "upstream": {
+        "name": "pc.2021.7",
+        "codename": null,
+        "label": "pc.2021.7",
+        "releaseDate": "2021-08-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-11-30",
+        "isEol": true,
+        "eolFrom": "2022-02-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "pc.2021.7",
+          "date": "2021-08-04",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "pc.2021.5",
+      "name": "pc.2021.5",
+      "milestones": {
+        "ga": "2021-06-14",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-01-31"
+      },
+      "upstream": {
+        "name": "pc.2021.5",
+        "codename": null,
+        "label": "pc.2021.5",
+        "releaseDate": "2021-06-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-10-31",
+        "isEol": true,
+        "eolFrom": "2022-01-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "pc.2021.5.0.1",
+          "date": "2021-07-01",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "pc.2021.3",
+      "name": "pc.2021.3",
+      "milestones": {
+        "ga": "2021-04-13",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-11-30"
+      },
+      "upstream": {
+        "name": "pc.2021.3",
+        "codename": null,
+        "label": "pc.2021.3",
+        "releaseDate": "2021-04-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-08-31",
+        "isEol": true,
+        "eolFrom": "2021-11-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "pc.2021.3.0.2",
+          "date": "2021-05-19",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "pc.2021.1",
+      "name": "pc.2021.1",
+      "milestones": {
+        "ga": "2021-02-04",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-09-30"
+      },
+      "upstream": {
+        "name": "pc.2021.1",
+        "codename": null,
+        "label": "pc.2021.1",
+        "releaseDate": "2021-02-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-06-30",
+        "isEol": true,
+        "eolFrom": "2021-09-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "pc.2021.1.0.1",
+          "date": "2021-02-22",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "pc.2020.11",
+      "name": "pc.2020.11",
+      "milestones": {
+        "ga": "2020-12-16",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-07-31"
+      },
+      "upstream": {
+        "name": "pc.2020.11",
+        "codename": null,
+        "label": "pc.2020.11",
+        "releaseDate": "2020-12-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-04-30",
+        "isEol": true,
+        "eolFrom": "2021-07-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "pc.2020.11.0.1",
+          "date": "2020-12-31",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "pc.2020.9",
+      "name": "pc.2020.9",
+      "milestones": {
+        "ga": "2020-10-01",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-05-31"
+      },
+      "upstream": {
+        "name": "pc.2020.9",
+        "codename": null,
+        "label": "pc.2020.9",
+        "releaseDate": "2020-10-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-02-28",
+        "isEol": true,
+        "eolFrom": "2021-05-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "pc.2020.9.0.1",
+          "date": "2020-10-19",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "pc.2020.8",
+      "name": "pc.2020.8",
+      "milestones": {
+        "ga": "2020-08-25",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-03-31"
+      },
+      "upstream": {
+        "name": "pc.2020.8",
+        "codename": null,
+        "label": "pc.2020.8",
+        "releaseDate": "2020-08-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-12-31",
+        "isEol": true,
+        "eolFrom": "2021-03-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "pc.2020.8.0.1",
+          "date": "2020-09-09",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "pc.2020.7",
+      "name": "pc.2020.7",
+      "milestones": {
+        "ga": "2020-07-27",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-01-31"
+      },
+      "upstream": {
+        "name": "pc.2020.7",
+        "codename": null,
+        "label": "pc.2020.7",
+        "releaseDate": "2020-07-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-10-31",
+        "isEol": true,
+        "eolFrom": "2021-01-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "pc.2020.7",
+          "date": "2020-07-27",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.17",
+      "name": "5.17",
+      "milestones": {
+        "ga": "2020-05-31",
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-11-30"
+      },
+      "upstream": {
+        "name": "5.17",
+        "codename": null,
+        "label": "5.17",
+        "releaseDate": "2020-05-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-08-31",
+        "isEol": true,
+        "eolFrom": "2020-11-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.17.1.1",
+          "date": "2020-05-31",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.16",
+      "name": "5.16",
+      "milestones": {
+        "ga": "2020-01-31",
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-08-31"
+      },
+      "upstream": {
+        "name": "5.16",
+        "codename": null,
+        "label": "5.16",
+        "releaseDate": "2020-01-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-05-31",
+        "isEol": true,
+        "eolFrom": "2020-08-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.16.2",
+          "date": "2020-01-31",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.11",
+      "name": "5.11",
+      "milestones": {
+        "ga": "2019-08-31",
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-04-30"
+      },
+      "upstream": {
+        "name": "5.11",
+        "codename": null,
+        "label": "5.11",
+        "releaseDate": "2019-08-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-01-31",
+        "isEol": true,
+        "eolFrom": "2020-04-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.11.3",
+          "date": "2019-08-31",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.10",
+      "name": "5.10",
+      "milestones": {
+        "ga": "2018-11-30",
+        "eos": null,
+        "eossec": null,
+        "eol": "2019-11-30"
+      },
+      "upstream": {
+        "name": "5.10",
+        "codename": null,
+        "label": "5.10",
+        "releaseDate": "2018-11-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2019-08-31",
+        "isEol": true,
+        "eolFrom": "2019-11-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.10.6",
+          "date": "2018-11-30",
+          "link": null
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/nutanix-prism/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T14:54:07Z",
+    "upstream_modified": "2026-09-05T00:06:48+00:00"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "barracuda-m12-3g-umts-eol",
+  "name": "M12 (3G/UMTS) (EoL)",
+  "category": "hardware",
+  "vendor": "Barracuda",
+  "product_line": "Barracuda Modem",
+  "family": "Barracuda",
+  "model_number": "2017-08-31",
+  "milestones": {
+    "ga": null,
+    "eos": "2017-08-31",
+    "eossec": null,
+    "eol": "2022-08-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Barracuda Modem": {
+      "text": "M12 (3G/UMTS) (EoL)",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "Part Number": {
+      "text": "BNGM12a",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "EoS": {
+      "text": "2017-08-31",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "EoL": {
+      "text": "2022-08-31",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "Successor Model": {
+      "text": "M30",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "End of Firmware Support note": {
+      "text": "2022-08-31",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": [],
+      "note": "this is the last firmware release that supports the model. Barracuda states the product is not completely End-of-Life until that release itself reaches its end of support, so this date is the model's end of firmware support rather than a claim about the product's last day."
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://documentation.campus.barracuda.com/wiki/spaces/NGFEOL/pages/5505036"
+    ],
+    "verifier": "deterministic-barracuda",
+    "last_checked": "2026-09-26T19:57:34Z"
+  }
+}

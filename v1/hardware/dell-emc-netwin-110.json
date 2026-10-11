@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-netwin-110",
+  "name": "NetWin 110",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC NetWin",
+  "family": "NetWin",
+  "model_number": "NetWin 110",
+  "milestones": {
+    "ga": "2004-07-01",
+    "eos": "2005-11-30",
+    "eossec": null,
+    "eol": "2010-11-30"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "NetWin 110",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "NetWin 110",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC NetWin",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2005-11-30",
+      "datetime": null,
+      "value": "2005-11-30",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Jul. 01, 2004",
+      "datetime": "2004-07-01",
+      "value": "2004-07-01",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2010-11-30",
+      "datetime": null,
+      "value": "2010-11-30",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/nas-storage/vendor/dell-emc/netwin/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

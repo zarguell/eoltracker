@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-5900",
+  "name": "5900",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Symmetrix",
+  "family": "Symmetrix",
+  "model_number": "5900",
+  "milestones": {
+    "ga": "1998-01-01",
+    "eos": "2003-09-30",
+    "eossec": null,
+    "eol": "2011-03-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "5900",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "5900",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Symmetrix",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2003-09-30",
+      "datetime": null,
+      "value": "2003-09-30",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Jan. 01, 1998",
+      "datetime": "1998-01-01",
+      "value": "1998-01-01",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2011-03-31",
+      "datetime": null,
+      "value": "2011-03-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/san-storage/vendor/dell-emc/symmetrix/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

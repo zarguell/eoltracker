@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-dd6400-appliance",
+  "name": "DD6400 Appliance",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Data Domain",
+  "family": "Data Domain",
+  "model_number": "DD6400 Appliance",
+  "milestones": {
+    "ga": "2021-12-14",
+    "eos": "2025-06-18",
+    "eossec": null,
+    "eol": "2030-06-30"
+  },
+  "status": "supported",
+  "upstream": {
+    "Product": {
+      "text": "DD6400 Appliance",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "DD6400 Appliance",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Data Domain",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2025-06-18",
+      "datetime": null,
+      "value": "2025-06-18",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Dec. 14, 2021",
+      "datetime": "2021-12-14",
+      "value": "2021-12-14",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2030-06-30",
+      "datetime": null,
+      "value": "2030-06-30",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/backup/vendor/dell-emc/data-domain/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

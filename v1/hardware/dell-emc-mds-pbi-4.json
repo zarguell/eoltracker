@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-mds-pbi-4",
+  "name": "MDS-PBI-4",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Connectrix - Cisco",
+  "family": "Connectrix - Cisco",
+  "model_number": "MDS-PBI-4",
+  "milestones": {
+    "ga": "2004-07-01",
+    "eos": "2006-05-31",
+    "eossec": null,
+    "eol": "2011-10-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "MDS-PBI-4",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "MDS-PBI-4",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Connectrix - Cisco",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2006-05-31",
+      "datetime": null,
+      "value": "2006-05-31",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Jul. 01, 2004",
+      "datetime": "2004-07-01",
+      "value": "2004-07-01",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2011-10-31",
+      "datetime": null,
+      "value": "2011-10-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/san-switches/vendor/dell-emc/connectrix-cisco/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

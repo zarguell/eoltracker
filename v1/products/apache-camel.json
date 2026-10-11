@@ -1,0 +1,1411 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "apache-camel",
+  "name": "Apache Camel",
+  "category": "software",
+  "upstream_category": "framework",
+  "identifiers": [
+    {
+      "type": "cpe",
+      "id": "cpe:/a:apache:camel"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:apache:camel"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/apache/camel"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/apache/camel"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:maven/org.apache.camel/camel"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Bug and Security Fixes",
+    "eoes": null
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/apache-camel",
+    "releasePolicy": "https://web.archive.org/web/20260216193908/https://camel.apache.org/blog/2020/03/LTS-Release-Schedule/"
+  },
+  "releases": [
+    {
+      "id": "4.22",
+      "name": "4.22 (LTS)",
+      "milestones": {
+        "ga": "2026-08-11",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.22",
+        "codename": null,
+        "label": "4.22 (LTS)",
+        "releaseDate": "2026-08-11",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-08-11",
+        "isMaintained": true,
+        "latest": {
+          "name": "4.22.1",
+          "date": "2026-09-13",
+          "link": "https://camel.apache.org/releases/release-4.22.1/"
+        },
+        "custom": {
+          "supportedJavaVersions": "17, 21, 25"
+        }
+      }
+    },
+    {
+      "id": "4.21",
+      "name": "4.21",
+      "milestones": {
+        "ga": "2026-06-26",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.21",
+        "codename": null,
+        "label": "4.21",
+        "releaseDate": "2026-06-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-08-11",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.21.0",
+          "date": "2026-06-26",
+          "link": "https://camel.apache.org/releases/release-4.21.0/"
+        },
+        "custom": {
+          "supportedJavaVersions": "17, 21, 25"
+        }
+      }
+    },
+    {
+      "id": "4.20",
+      "name": "4.20",
+      "milestones": {
+        "ga": "2026-04-23",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.20",
+        "codename": null,
+        "label": "4.20",
+        "releaseDate": "2026-04-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-06-26",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.20.0",
+          "date": "2026-04-23",
+          "link": "https://camel.apache.org/releases/release-4.20.0/"
+        },
+        "custom": {
+          "supportedJavaVersions": "17, 21, 25"
+        }
+      }
+    },
+    {
+      "id": "4.19",
+      "name": "4.19",
+      "milestones": {
+        "ga": "2026-04-18",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.19",
+        "codename": null,
+        "label": "4.19",
+        "releaseDate": "2026-04-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-04-23",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.19.0",
+          "date": "2026-04-12",
+          "link": "https://camel.apache.org/releases/release-4.19.0/"
+        },
+        "custom": {
+          "supportedJavaVersions": "17, 21"
+        }
+      }
+    },
+    {
+      "id": "4.18",
+      "name": "4.18 (LTS)",
+      "milestones": {
+        "ga": "2026-02-17",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.18",
+        "codename": null,
+        "label": "4.18 (LTS)",
+        "releaseDate": "2026-02-17",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-02-17",
+        "isMaintained": true,
+        "latest": {
+          "name": "4.18.4",
+          "date": "2026-08-10",
+          "link": "https://camel.apache.org/releases/release-4.18.4/"
+        },
+        "custom": {
+          "supportedJavaVersions": "17, 21"
+        }
+      }
+    },
+    {
+      "id": "4.17",
+      "name": "4.17",
+      "milestones": {
+        "ga": "2026-01-12",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.17",
+        "codename": null,
+        "label": "4.17",
+        "releaseDate": "2026-01-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-02-17",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.17.0",
+          "date": "2026-01-08",
+          "link": "https://camel.apache.org/releases/release-4.17.0/"
+        },
+        "custom": {
+          "supportedJavaVersions": "17, 21"
+        }
+      }
+    },
+    {
+      "id": "4.16",
+      "name": "4.16",
+      "milestones": {
+        "ga": "2025-11-05",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.16",
+        "codename": null,
+        "label": "4.16",
+        "releaseDate": "2025-11-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-01-12",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.16.0",
+          "date": "2025-11-01",
+          "link": "https://camel.apache.org/releases/release-4.16.0/"
+        },
+        "custom": {
+          "supportedJavaVersions": "17, 21"
+        }
+      }
+    },
+    {
+      "id": "4.15",
+      "name": "4.15",
+      "milestones": {
+        "ga": "2025-10-07",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.15",
+        "codename": null,
+        "label": "4.15",
+        "releaseDate": "2025-10-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-11-05",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.15.0",
+          "date": "2025-10-03",
+          "link": "https://camel.apache.org/releases/release-4.15.0/"
+        },
+        "custom": {
+          "supportedJavaVersions": "17, 21"
+        }
+      }
+    },
+    {
+      "id": "4.14",
+      "name": "4.14 (LTS)",
+      "milestones": {
+        "ga": "2025-08-15",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.14",
+        "codename": null,
+        "label": "4.14 (LTS)",
+        "releaseDate": "2025-08-15",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-08-11",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.14.9",
+          "date": "2026-08-09",
+          "link": "https://camel.apache.org/releases/release-4.14.9/"
+        },
+        "custom": {
+          "supportedJavaVersions": "17, 21"
+        }
+      }
+    },
+    {
+      "id": "4.13",
+      "name": "4.13",
+      "milestones": {
+        "ga": "2025-07-04",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.13",
+        "codename": null,
+        "label": "4.13",
+        "releaseDate": "2025-07-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-08-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.13.0",
+          "date": "2025-07-04",
+          "link": "https://camel.apache.org/releases/release-4.13.0/"
+        },
+        "custom": {
+          "supportedJavaVersions": "17, 21"
+        }
+      }
+    },
+    {
+      "id": "4.12",
+      "name": "4.12",
+      "milestones": {
+        "ga": "2025-05-23",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.12",
+        "codename": null,
+        "label": "4.12",
+        "releaseDate": "2025-05-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-07-04",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.12.0",
+          "date": "2025-05-23",
+          "link": "https://camel.apache.org/releases/release-4.12.0/"
+        },
+        "custom": {
+          "supportedJavaVersions": "17, 21"
+        }
+      }
+    },
+    {
+      "id": "4.11",
+      "name": "4.11",
+      "milestones": {
+        "ga": "2025-03-29",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.11",
+        "codename": null,
+        "label": "4.11",
+        "releaseDate": "2025-03-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-05-29",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.11.0",
+          "date": "2025-03-29",
+          "link": "https://camel.apache.org/releases/release-4.11.0/"
+        },
+        "custom": {
+          "supportedJavaVersions": "17, 21"
+        }
+      }
+    },
+    {
+      "id": "4.10",
+      "name": "4.10 (LTS)",
+      "milestones": {
+        "ga": "2025-02-07",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.10",
+        "codename": null,
+        "label": "4.10 (LTS)",
+        "releaseDate": "2025-02-07",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-02-11",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.10.9",
+          "date": "2026-02-07",
+          "link": "https://camel.apache.org/releases/release-4.10.9/"
+        },
+        "custom": {
+          "supportedJavaVersions": "17, 21"
+        }
+      }
+    },
+    {
+      "id": "4.9",
+      "name": "4.9",
+      "milestones": {
+        "ga": "2024-11-29",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.9",
+        "codename": null,
+        "label": "4.9",
+        "releaseDate": "2024-11-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-02-11",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.9.0",
+          "date": "2024-11-29",
+          "link": "https://camel.apache.org/releases/release-4.9.0/"
+        },
+        "custom": {
+          "supportedJavaVersions": "17, 21"
+        }
+      }
+    },
+    {
+      "id": "4.8",
+      "name": "4.8 (LTS)",
+      "milestones": {
+        "ga": "2024-09-10",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.8",
+        "codename": null,
+        "label": "4.8 (LTS)",
+        "releaseDate": "2024-09-10",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-09-10",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.8.9",
+          "date": "2025-09-13",
+          "link": "https://camel.apache.org/releases/release-4.8.9/"
+        },
+        "custom": {
+          "supportedJavaVersions": "17, 21"
+        }
+      }
+    },
+    {
+      "id": "4.7",
+      "name": "4.7",
+      "milestones": {
+        "ga": "2024-07-09",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.7",
+        "codename": null,
+        "label": "4.7",
+        "releaseDate": "2024-07-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-09-10",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.7.0",
+          "date": "2024-07-09",
+          "link": "https://camel.apache.org/releases/release-4.7.0/"
+        },
+        "custom": {
+          "supportedJavaVersions": "17, 21"
+        }
+      }
+    },
+    {
+      "id": "4.6",
+      "name": "4.6",
+      "milestones": {
+        "ga": "2024-05-05",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.6",
+        "codename": null,
+        "label": "4.6",
+        "releaseDate": "2024-05-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-07-13",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.6.0",
+          "date": "2024-05-05",
+          "link": "https://camel.apache.org/releases/release-4.6.0/"
+        },
+        "custom": {
+          "supportedJavaVersions": "17, 21"
+        }
+      }
+    },
+    {
+      "id": "4.5",
+      "name": "4.5",
+      "milestones": {
+        "ga": "2024-03-23",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.5",
+        "codename": null,
+        "label": "4.5",
+        "releaseDate": "2024-03-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-05-10",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.5.0",
+          "date": "2024-03-23",
+          "link": "https://camel.apache.org/releases/release-4.5.0/"
+        },
+        "custom": {
+          "supportedJavaVersions": "17, 21"
+        }
+      }
+    },
+    {
+      "id": "4.4",
+      "name": "4.4 (LTS)",
+      "milestones": {
+        "ga": "2024-02-12",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.4",
+        "codename": null,
+        "label": "4.4 (LTS)",
+        "releaseDate": "2024-02-12",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-02-12",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.4.5",
+          "date": "2025-01-17",
+          "link": "https://camel.apache.org/releases/release-4.4.5/"
+        },
+        "custom": {
+          "supportedJavaVersions": "17, 21"
+        }
+      }
+    },
+    {
+      "id": "3.22",
+      "name": "3.22 (LTS)",
+      "milestones": {
+        "ga": "2023-12-19",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.22",
+        "codename": null,
+        "label": "3.22 (LTS)",
+        "releaseDate": "2023-12-19",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-12-26",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.22.4",
+          "date": "2025-03-05",
+          "link": "https://camel.apache.org/releases/release-3.22.4/"
+        },
+        "custom": {
+          "supportedJavaVersions": "11, 17"
+        }
+      }
+    },
+    {
+      "id": "4.3",
+      "name": "4.3",
+      "milestones": {
+        "ga": "2023-12-11",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.3",
+        "codename": null,
+        "label": "4.3",
+        "releaseDate": "2023-12-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-02-12",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.3.0",
+          "date": "2023-12-11",
+          "link": "https://camel.apache.org/releases/release-4.3.0/"
+        },
+        "custom": {
+          "supportedJavaVersions": "17, 21"
+        }
+      }
+    },
+    {
+      "id": "4.2",
+      "name": "4.2",
+      "milestones": {
+        "ga": "2023-11-10",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.2",
+        "codename": null,
+        "label": "4.2",
+        "releaseDate": "2023-11-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-12-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.2.0",
+          "date": "2023-11-10",
+          "link": "https://camel.apache.org/releases/release-4.2.0/"
+        },
+        "custom": {
+          "supportedJavaVersions": "17, 21"
+        }
+      }
+    },
+    {
+      "id": "4.1",
+      "name": "4.1",
+      "milestones": {
+        "ga": "2023-10-06",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.1",
+        "codename": null,
+        "label": "4.1",
+        "releaseDate": "2023-10-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-11-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.1.0",
+          "date": "2023-10-06",
+          "link": "https://camel.apache.org/releases/release-4.1.0/"
+        },
+        "custom": {
+          "supportedJavaVersions": "17"
+        }
+      }
+    },
+    {
+      "id": "4.0",
+      "name": "4.0 (LTS)",
+      "milestones": {
+        "ga": "2023-08-10",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.0",
+        "codename": null,
+        "label": "4.0 (LTS)",
+        "releaseDate": "2023-08-10",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-08-10",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.0.6",
+          "date": "2024-08-06",
+          "link": "https://camel.apache.org/releases/release-4.0.6/"
+        },
+        "custom": {
+          "supportedJavaVersions": "17"
+        }
+      }
+    },
+    {
+      "id": "3.21",
+      "name": "3.21 (LTS)",
+      "milestones": {
+        "ga": "2023-06-23",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.21",
+        "codename": null,
+        "label": "3.21 (LTS)",
+        "releaseDate": "2023-06-23",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-06-23",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.21.5",
+          "date": "2024-06-13",
+          "link": "https://camel.apache.org/releases/release-3.21.5/"
+        },
+        "custom": {
+          "supportedJavaVersions": "11, 17"
+        }
+      }
+    },
+    {
+      "id": "3.20",
+      "name": "3.20 (LTS)",
+      "milestones": {
+        "ga": "2022-12-16",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.20",
+        "codename": null,
+        "label": "3.20 (LTS)",
+        "releaseDate": "2022-12-16",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.20.9",
+          "date": "2023-12-08",
+          "link": "https://camel.apache.org/releases/release-3.20.9/"
+        },
+        "custom": {
+          "supportedJavaVersions": "11, 17"
+        }
+      }
+    },
+    {
+      "id": "3.19",
+      "name": "3.19",
+      "milestones": {
+        "ga": "2022-09-29",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.19",
+        "codename": null,
+        "label": "3.19",
+        "releaseDate": "2022-09-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-12-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.19.0",
+          "date": "2022-09-29",
+          "link": "https://camel.apache.org/releases/release-3.19.0/"
+        },
+        "custom": {
+          "supportedJavaVersions": "11, 17"
+        }
+      }
+    },
+    {
+      "id": "3.18",
+      "name": "3.18 (LTS)",
+      "milestones": {
+        "ga": "2022-07-02",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.18",
+        "codename": null,
+        "label": "3.18 (LTS)",
+        "releaseDate": "2022-07-02",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-07-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.18.8",
+          "date": "2023-06-10",
+          "link": "https://camel.apache.org/releases/release-3.18.8/"
+        },
+        "custom": {
+          "supportedJavaVersions": "11, 17"
+        }
+      }
+    },
+    {
+      "id": "3.17",
+      "name": "3.17",
+      "milestones": {
+        "ga": "2022-05-15",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.17",
+        "codename": null,
+        "label": "3.17",
+        "releaseDate": "2022-05-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-07-02",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.17.0",
+          "date": "2022-05-15",
+          "link": "https://camel.apache.org/releases/release-3.17.0/"
+        },
+        "custom": {
+          "supportedJavaVersions": "11, 17"
+        }
+      }
+    },
+    {
+      "id": "3.16",
+      "name": "3.16",
+      "milestones": {
+        "ga": "2022-03-22",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.16",
+        "codename": null,
+        "label": "3.16",
+        "releaseDate": "2022-03-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-05-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.16.0",
+          "date": "2022-03-22",
+          "link": "https://camel.apache.org/releases/release-3.16.0/"
+        },
+        "custom": {
+          "supportedJavaVersions": "11"
+        }
+      }
+    },
+    {
+      "id": "3.15",
+      "name": "3.15",
+      "milestones": {
+        "ga": "2022-01-31",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.15",
+        "codename": null,
+        "label": "3.15",
+        "releaseDate": "2022-01-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-03-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.15.0",
+          "date": "2022-01-31",
+          "link": "https://camel.apache.org/releases/release-3.15.0/"
+        },
+        "custom": {
+          "supportedJavaVersions": "11"
+        }
+      }
+    },
+    {
+      "id": "3.14",
+      "name": "3.14 (LTS)",
+      "milestones": {
+        "ga": "2021-12-12",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.14",
+        "codename": null,
+        "label": "3.14 (LTS)",
+        "releaseDate": "2021-12-12",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.14.10",
+          "date": "2023-11-04",
+          "link": "https://camel.apache.org/releases/release-3.14.10/"
+        },
+        "custom": {
+          "supportedJavaVersions": "8, 11"
+        }
+      }
+    },
+    {
+      "id": "3.13",
+      "name": "3.13",
+      "milestones": {
+        "ga": "2021-11-08",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.13",
+        "codename": null,
+        "label": "3.13",
+        "releaseDate": "2021-11-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-12-12",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.13.0",
+          "date": "2021-11-08",
+          "link": "https://camel.apache.org/releases/release-3.13.0/"
+        },
+        "custom": {
+          "supportedJavaVersions": "8, 11"
+        }
+      }
+    },
+    {
+      "id": "3.12",
+      "name": "3.12",
+      "milestones": {
+        "ga": "2021-09-28",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.12",
+        "codename": null,
+        "label": "3.12",
+        "releaseDate": "2021-09-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-11-08",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.12.0",
+          "date": "2021-09-28",
+          "link": "https://camel.apache.org/releases/release-3.12.0/"
+        },
+        "custom": {
+          "supportedJavaVersions": "8, 11"
+        }
+      }
+    },
+    {
+      "id": "3.11",
+      "name": "3.11 (LTS)",
+      "milestones": {
+        "ga": "2021-06-23",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.11",
+        "codename": null,
+        "label": "3.11 (LTS)",
+        "releaseDate": "2021-06-23",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-06-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.11.7",
+          "date": "2022-05-01",
+          "link": "https://camel.apache.org/releases/release-3.11.7/"
+        },
+        "custom": {
+          "supportedJavaVersions": "8, 11"
+        }
+      }
+    },
+    {
+      "id": "3.10",
+      "name": "3.10",
+      "milestones": {
+        "ga": "2021-05-15",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.10",
+        "codename": null,
+        "label": "3.10",
+        "releaseDate": "2021-05-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-06-23",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.10.0",
+          "date": "2021-05-15",
+          "link": "https://camel.apache.org/releases/release-3.10.0/"
+        },
+        "custom": {
+          "supportedJavaVersions": "8, 11"
+        }
+      }
+    },
+    {
+      "id": "3.9",
+      "name": "3.9",
+      "milestones": {
+        "ga": "2021-03-22",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.9",
+        "codename": null,
+        "label": "3.9",
+        "releaseDate": "2021-03-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-05-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.9.0",
+          "date": "2021-03-22",
+          "link": "https://camel.apache.org/releases/release-3.9.0/"
+        },
+        "custom": {
+          "supportedJavaVersions": "8, 11"
+        }
+      }
+    },
+    {
+      "id": "3.8",
+      "name": "3.8",
+      "milestones": {
+        "ga": "2021-02-09",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.8",
+        "codename": null,
+        "label": "3.8",
+        "releaseDate": "2021-02-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-03-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.8.0",
+          "date": "2021-02-09",
+          "link": "https://camel.apache.org/releases/release-3.8.0/"
+        },
+        "custom": {
+          "supportedJavaVersions": "8, 11"
+        }
+      }
+    },
+    {
+      "id": "3.7",
+      "name": "3.7 (LTS)",
+      "milestones": {
+        "ga": "2020-12-11",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.7",
+        "codename": null,
+        "label": "3.7 (LTS)",
+        "releaseDate": "2020-12-11",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.7.7",
+          "date": "2021-12-17",
+          "link": "https://camel.apache.org/releases/release-3.7.7/"
+        },
+        "custom": {
+          "supportedJavaVersions": "8, 11"
+        }
+      }
+    },
+    {
+      "id": "3.6",
+      "name": "3.6",
+      "milestones": {
+        "ga": "2020-10-16",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.6",
+        "codename": null,
+        "label": "3.6",
+        "releaseDate": "2020-10-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-12-11",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.6.0",
+          "date": "2020-10-15",
+          "link": "https://camel.apache.org/releases/release-3.6.0/"
+        },
+        "custom": {
+          "supportedJavaVersions": "8, 11"
+        }
+      }
+    },
+    {
+      "id": "3.5",
+      "name": "3.5",
+      "milestones": {
+        "ga": "2020-08-31",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.5",
+        "codename": null,
+        "label": "3.5",
+        "releaseDate": "2020-08-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-10-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.5.0",
+          "date": "2020-08-31",
+          "link": "https://camel.apache.org/releases/release-3.5.0/"
+        },
+        "custom": {
+          "supportedJavaVersions": "8, 11"
+        }
+      }
+    },
+    {
+      "id": "3.4",
+      "name": "3.4 (LTS)",
+      "milestones": {
+        "ga": "2020-06-14",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.4",
+        "codename": null,
+        "label": "3.4 (LTS)",
+        "releaseDate": "2020-06-14",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-06-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.4.6",
+          "date": "2021-06-17",
+          "link": "https://camel.apache.org/releases/release-3.4.6/"
+        },
+        "custom": {
+          "supportedJavaVersions": "8, 11"
+        }
+      }
+    },
+    {
+      "id": "3.3",
+      "name": "3.3",
+      "milestones": {
+        "ga": "2020-05-10",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.3",
+        "codename": null,
+        "label": "3.3",
+        "releaseDate": "2020-05-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-06-14",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.3.0",
+          "date": "2020-05-10",
+          "link": "https://camel.apache.org/releases/release-3.3.0/"
+        },
+        "custom": {
+          "supportedJavaVersions": "8, 11"
+        }
+      }
+    },
+    {
+      "id": "3.2",
+      "name": "3.2",
+      "milestones": {
+        "ga": "2020-04-01",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.2",
+        "codename": null,
+        "label": "3.2",
+        "releaseDate": "2020-04-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-05-10",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.2.0",
+          "date": "2020-04-01",
+          "link": "https://camel.apache.org/releases/release-3.2.0/"
+        },
+        "custom": {
+          "supportedJavaVersions": "8, 11"
+        }
+      }
+    },
+    {
+      "id": "3.1",
+      "name": "3.1",
+      "milestones": {
+        "ga": "2020-02-20",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.1",
+        "codename": null,
+        "label": "3.1",
+        "releaseDate": "2020-02-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-04-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.1.0",
+          "date": "2020-02-20",
+          "link": "https://camel.apache.org/releases/release-3.1.0/"
+        },
+        "custom": {
+          "supportedJavaVersions": "8, 11"
+        }
+      }
+    },
+    {
+      "id": "2.25",
+      "name": "2.25 (LTS)",
+      "milestones": {
+        "ga": "2020-01-19",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.25",
+        "codename": null,
+        "label": "2.25 (LTS)",
+        "releaseDate": "2020-01-19",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-01-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.25.4",
+          "date": "2021-05-24",
+          "link": "https://camel.apache.org/releases/release-2.25.4/"
+        },
+        "custom": {
+          "supportedJavaVersions": "8"
+        }
+      }
+    },
+    {
+      "id": "3.0",
+      "name": "3.0",
+      "milestones": {
+        "ga": "2019-11-24",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.0",
+        "codename": null,
+        "label": "3.0",
+        "releaseDate": "2019-11-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-02-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.0.1",
+          "date": "2020-01-11",
+          "link": "https://camel.apache.org/releases/release-3.0.1/"
+        },
+        "custom": {
+          "supportedJavaVersions": "8, 11"
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/apache-camel/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-14T00:07:43+00:00"
+  }
+}

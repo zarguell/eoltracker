@@ -1,0 +1,52 @@
+{
+  "source_url": "https://www.cisco.com/c/en/us/products/collateral/ios-nx-os-software/nx-os-software/guide_c07-658595.html",
+  "verifier": "deterministic-cisco-nx-os",
+  "checked_at": "2026-09-17T23:51:22Z",
+  "record_scope": "Cisco NX-OS major release trains: one software record with one release per major release of the vendor's Software Lifecycle Support Statement for Cisco NX-OS on Cisco Nexus 9000, at the day precision that table states",
+  "rows": {
+    "page_tables": 2,
+    "seen": 10,
+    "published": 6,
+    "retained": 0,
+    "excluded": 4,
+    "milestones": {
+      "ga": 0,
+      "eos": 0,
+      "eossec": 6,
+      "eol": 6
+    }
+  },
+  "excluded": [
+    {
+      "table": "Cisco NX-OS Software release types",
+      "row": "Major+ release | A major+ release is considered a superset train, which carries all the attributes of a major release but can also have additional key changes (for example, 64-bit kernel) or other significant changes that require increasing the release numbering . A major+ release consists of multiple major releases. Example: Release 10.x(x)",
+      "reason": "not the NX-OS EoL Milestones table: this row states a release taxonomy, not a major-release lifecycle date"
+    },
+    {
+      "table": "Cisco NX-OS Software release types",
+      "row": "Major release | A major release or software train introduces significant new features, functions, and/or hardware platforms. Each major release consists of multiple feature releases and maintenance releases and is its own train. Examples: Release 10.3(x), 10.4(x), 10.5(x)",
+      "reason": "not the NX-OS EoL Milestones table: this row states a release taxonomy, not a major-release lifecycle date"
+    },
+    {
+      "table": "Cisco NX-OS Software release types",
+      "row": "Feature release | Each major include will receive new features, functions, and hardware platforms in the first few releases (typically 3 releases) of the major train. These are designated as feature releases. Examples: Release 10.5(1)F, 10.5(2)F, 10.5(3)F",
+      "reason": "not the NX-OS EoL Milestones table: this row states a release taxonomy, not a major-release lifecycle date"
+    },
+    {
+      "table": "Cisco NX-OS Software release types",
+      "row": "Maintenance release | Once a major train has reached maturity through the first few feature releases, it will then transition to the maintenance phase, where it will receive bug fixes and security enhancements only. No new features will be developed on a maintenance release, to ensure the integrity and stability of the overall major release train. Examples: Releases 10.5(4)M, 10.5(5)M, 10.5(6)M",
+      "reason": "not the NX-OS EoL Milestones table: this row states a release taxonomy, not a major-release lifecycle date"
+    }
+  ],
+  "retained": [],
+  "total_records": 1,
+  "limitations": [
+    "The vendor publishes this train table for Cisco NX-OS on Cisco Nexus 9000 only. Other NX-OS trains are announced per platform in per-family bulletins (Nexus 7000 NX-OS 8.x, MDS NX-OS 9.2(2), Nexus 3000/9000 7.0(3)/9.x) and are not collected, so this record is the vendor's train-level lifecycle statement, not every NX-OS announcement in existence.",
+    "ga is absent: the table publishes no general-availability date, and the page's 'a new major release will be launched in Q3 of each calendar year' cadence is a policy statement, never a date (AGENTS.md rule 2).",
+    "EoSWM (End of Software Maintenance) is retained verbatim as a cell and never mapped: the same page states a major release past that date 'receives only PSIRT fixes', so it is a maintenance end, not a terminal or security-only end.",
+    "eos is absent: the table publishes no end-of-sale column, and the page's End-of-Sale milestones belong to hardware/product bulletins.",
+    "A single EoVSS/LDoS date (10.3(x)) fills both eossec and eol only because the page states the two milestones align and that no support is provided beyond that date; a split cell (10.2(x)) fills each from its own half.",
+    "The footnote marker on 10.3(x) ('will be extended to support EX platforms till their Last Date of Support (LDOS)') is kept verbatim in the cell and never read as a software date: the extension is scoped to EX platforms by the vendor's own note.",
+    "Hardware Last Date of Support is not a software end: the same page directs readers to the hardware EoL announcement for hardware milestones, and no hardware record is published here."
+  ]
+}

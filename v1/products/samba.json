@@ -1,0 +1,756 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "samba",
+  "name": "Samba",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [],
+  "labels": {},
+  "links": {
+    "html": "https://wiki.samba.org/index.php/Samba_Release_Planning"
+  },
+  "releases": [
+    {
+      "id": "samba-4.25",
+      "name": "Samba 4.25",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.25",
+        "cells": {
+          "series": "4.25 (details)",
+          "git branch": "v4-25-test",
+          "status": "next upcoming release series",
+          "started": "~2026-09",
+          "maintenance": "~2027-03",
+          "security": "~2027-09",
+          "discontinued (EOL)": "~2028-03"
+        },
+        "table": "Samba Release Planning and Supported Release Lifetime"
+      }
+    },
+    {
+      "id": "samba-4.24",
+      "name": "Samba 4.24",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.24",
+        "cells": {
+          "series": "4.24 (details)",
+          "git branch": "v4-24-test",
+          "status": "current stable release series",
+          "started": "~2026-03",
+          "maintenance": "~2026-09",
+          "security": "~2027-03",
+          "discontinued (EOL)": "~2027-09"
+        },
+        "table": "Samba Release Planning and Supported Release Lifetime"
+      }
+    },
+    {
+      "id": "samba-4.23",
+      "name": "Samba 4.23",
+      "milestones": {
+        "ga": "2025-09-12",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.23",
+        "cells": {
+          "series": "4.23 (details)",
+          "git branch": "v4-23-test",
+          "status": "maintenance mode",
+          "started": "2025-09-12",
+          "maintenance": "~2026-03",
+          "security": "~2026-09",
+          "discontinued (EOL)": "~2027-03"
+        },
+        "table": "Samba Release Planning and Supported Release Lifetime"
+      }
+    },
+    {
+      "id": "samba-4.22",
+      "name": "Samba 4.22",
+      "milestones": {
+        "ga": "2025-03-06",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.22",
+        "cells": {
+          "series": "4.22 (details)",
+          "git branch": "v4-22-test",
+          "status": "security fixes only",
+          "started": "2025-03-06",
+          "maintenance": "2025-09-12",
+          "security": "~2026-03",
+          "discontinued (EOL)": "~2026-09"
+        },
+        "table": "Samba Release Planning and Supported Release Lifetime"
+      }
+    },
+    {
+      "id": "samba-4.21",
+      "name": "Samba 4.21",
+      "milestones": {
+        "ga": "2024-09-02",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.21",
+        "cells": {
+          "series": "4.21 (details)",
+          "git branch": "v4-21-test",
+          "status": "discontinued (EOL)",
+          "started": "2024-09-02",
+          "maintenance": "2025-03-06",
+          "security": "2025-09-12",
+          "discontinued (EOL)": "~2026-03"
+        },
+        "table": "Samba Release Planning and Supported Release Lifetime"
+      }
+    },
+    {
+      "id": "samba-4.20",
+      "name": "Samba 4.20",
+      "milestones": {
+        "ga": "2024-03-27",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-09-12"
+      },
+      "upstream": {
+        "name": "4.20",
+        "cells": {
+          "series": "4.20 (details)",
+          "git branch": "v4-20-test",
+          "status": "discontinued (EOL)",
+          "started": "2024-03-27",
+          "maintenance": "2024-09-02",
+          "security": "2025-03-06",
+          "discontinued (EOL)": "2025-09-12"
+        },
+        "table": "Samba Release Planning and Supported Release Lifetime"
+      }
+    },
+    {
+      "id": "samba-4.19",
+      "name": "Samba 4.19",
+      "milestones": {
+        "ga": "2023-09-04",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-03-06"
+      },
+      "upstream": {
+        "name": "4.19",
+        "cells": {
+          "series": "4.19 (details)",
+          "git branch": "v4-19-test",
+          "status": "discontinued (EOL)",
+          "started": "2023-09-04",
+          "maintenance": "2024-03-27",
+          "security": "2024-09-02",
+          "discontinued (EOL)": "2025-03-06"
+        },
+        "table": "Samba Release Planning and Supported Release Lifetime"
+      }
+    },
+    {
+      "id": "samba-4.18",
+      "name": "Samba 4.18",
+      "milestones": {
+        "ga": "2023-03-08",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-09-02"
+      },
+      "upstream": {
+        "name": "4.18",
+        "cells": {
+          "series": "4.18 (details)",
+          "git branch": "v4-18-test",
+          "status": "discontinued (EOL)",
+          "started": "2023-03-08",
+          "maintenance": "2023-09-04",
+          "security": "2024-03-27",
+          "discontinued (EOL)": "2024-09-02"
+        },
+        "table": "Samba Release Planning and Supported Release Lifetime"
+      }
+    },
+    {
+      "id": "samba-4.17",
+      "name": "Samba 4.17",
+      "milestones": {
+        "ga": "2022-09-13",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-03-27"
+      },
+      "upstream": {
+        "name": "4.17",
+        "cells": {
+          "series": "4.17 (details)",
+          "git branch": "v4-17-test",
+          "status": "discontinued (EOL)",
+          "started": "2022-09-13",
+          "maintenance": "2023-03-08",
+          "security": "2023-09-04",
+          "discontinued (EOL)": "2024-03-27"
+        },
+        "table": "Samba Release Planning and Supported Release Lifetime"
+      }
+    },
+    {
+      "id": "samba-4.16",
+      "name": "Samba 4.16",
+      "milestones": {
+        "ga": "2022-03-21",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-09-04"
+      },
+      "upstream": {
+        "name": "4.16",
+        "cells": {
+          "series": "4.16 (details)",
+          "git branch": "v4-16-test",
+          "status": "discontinued (EOL)",
+          "started": "2022-03-21",
+          "maintenance": "2022-09-13",
+          "security": "2023-03-08",
+          "discontinued (EOL)": "2023-09-04"
+        },
+        "table": "Samba Release Planning and Supported Release Lifetime"
+      }
+    },
+    {
+      "id": "samba-4.15",
+      "name": "Samba 4.15",
+      "milestones": {
+        "ga": "2021-09-20",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-03-08"
+      },
+      "upstream": {
+        "name": "4.15",
+        "cells": {
+          "series": "4.15 (details)",
+          "git branch": "v4-15-test",
+          "status": "discontinued (EOL)",
+          "started": "2021-09-20",
+          "maintenance": "2022-03-21",
+          "security": "2022-09-13",
+          "discontinued (EOL)": "2023-03-08"
+        },
+        "table": "Samba Release Planning and Supported Release Lifetime"
+      }
+    },
+    {
+      "id": "samba-4.14",
+      "name": "Samba 4.14",
+      "milestones": {
+        "ga": "2021-03-09",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-09-13"
+      },
+      "upstream": {
+        "name": "4.14",
+        "cells": {
+          "series": "4.14 (details)",
+          "git branch": "v4-14-test",
+          "status": "discontinued (EOL)",
+          "started": "2021-03-09",
+          "maintenance": "2021-09-20",
+          "security": "2022-03-21",
+          "discontinued (EOL)": "2022-09-13"
+        },
+        "table": "Samba Release Planning and Supported Release Lifetime"
+      }
+    },
+    {
+      "id": "samba-4.13",
+      "name": "Samba 4.13",
+      "milestones": {
+        "ga": "2020-09-22",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-03-21"
+      },
+      "upstream": {
+        "name": "4.13",
+        "cells": {
+          "series": "4.13 (details)",
+          "git branch": "v4-13-test",
+          "status": "discontinued (EOL)",
+          "started": "2020-09-22",
+          "maintenance": "2021-03-09",
+          "security": "2021-09-20",
+          "discontinued (EOL)": "2022-03-21"
+        },
+        "table": "Samba Release Planning and Supported Release Lifetime"
+      }
+    },
+    {
+      "id": "samba-4.12",
+      "name": "Samba 4.12",
+      "milestones": {
+        "ga": "2020-03-03",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-09-20"
+      },
+      "upstream": {
+        "name": "4.12",
+        "cells": {
+          "series": "4.12 (details)",
+          "git branch": "v4-12-test",
+          "status": "discontinued (EOL)",
+          "started": "2020-03-03",
+          "maintenance": "2020-09-22",
+          "security": "2021-03-09",
+          "discontinued (EOL)": "2021-09-20"
+        },
+        "table": "Samba Release Planning and Supported Release Lifetime"
+      }
+    },
+    {
+      "id": "samba-4.11",
+      "name": "Samba 4.11",
+      "milestones": {
+        "ga": "2019-09-17",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-03-09"
+      },
+      "upstream": {
+        "name": "4.11",
+        "cells": {
+          "series": "4.11 (details)",
+          "git branch": "v4-11-test",
+          "status": "discontinued (EOL)",
+          "started": "2019-09-17",
+          "maintenance": "2020-03-03",
+          "security": "2020-12-03",
+          "discontinued (EOL)": "2021-03-09"
+        },
+        "table": "Samba Release Planning and Supported Release Lifetime"
+      }
+    },
+    {
+      "id": "samba-4.10",
+      "name": "Samba 4.10",
+      "milestones": {
+        "ga": "2019-03-19",
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-09-22"
+      },
+      "upstream": {
+        "name": "4.10",
+        "cells": {
+          "series": "4.10 (details)",
+          "git branch": "v4-10-test",
+          "status": "discontinued (EOL)",
+          "started": "2019-03-19",
+          "maintenance": "2019-09-17",
+          "security": "2020-03-03",
+          "discontinued (EOL)": "2020-09-22"
+        },
+        "table": "Samba Release Planning and Supported Release Lifetime"
+      }
+    },
+    {
+      "id": "samba-4.9",
+      "name": "Samba 4.9",
+      "milestones": {
+        "ga": "2018-09-13",
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-03-03"
+      },
+      "upstream": {
+        "name": "4.9",
+        "cells": {
+          "series": "4.9 (details)",
+          "git branch": "v4-9-test",
+          "status": "discontinued (EOL)",
+          "started": "2018-09-13",
+          "maintenance": "2019-03-19",
+          "security": "2019-09-17",
+          "discontinued (EOL)": "2020-03-03"
+        },
+        "table": "Samba Release Planning and Supported Release Lifetime"
+      }
+    },
+    {
+      "id": "samba-4.8",
+      "name": "Samba 4.8",
+      "milestones": {
+        "ga": "2018-03-13",
+        "eos": null,
+        "eossec": null,
+        "eol": "2019-09-17"
+      },
+      "upstream": {
+        "name": "4.8",
+        "cells": {
+          "series": "4.8 (details)",
+          "git branch": "v4-8-test",
+          "status": "discontinued (EOL)",
+          "started": "2018-03-13",
+          "maintenance": "2018-09-13",
+          "security": "2019-03-19",
+          "discontinued (EOL)": "2019-09-17"
+        },
+        "table": "Samba Release Planning and Supported Release Lifetime"
+      }
+    },
+    {
+      "id": "samba-4.7",
+      "name": "Samba 4.7",
+      "milestones": {
+        "ga": "2017-09-21",
+        "eos": null,
+        "eossec": null,
+        "eol": "2019-03-19"
+      },
+      "upstream": {
+        "name": "4.7",
+        "cells": {
+          "series": "4.7 (details)",
+          "git branch": "v4-7-test",
+          "status": "discontinued (EOL)",
+          "started": "2017-09-21",
+          "maintenance": "2018-03-13",
+          "security": "2018-09-13",
+          "discontinued (EOL)": "2019-03-19"
+        },
+        "table": "Samba Release Planning and Supported Release Lifetime"
+      }
+    },
+    {
+      "id": "samba-4.6",
+      "name": "Samba 4.6",
+      "milestones": {
+        "ga": "2017-03-07",
+        "eos": null,
+        "eossec": null,
+        "eol": "2018-09-13"
+      },
+      "upstream": {
+        "name": "4.6",
+        "cells": {
+          "series": "4.6 (details)",
+          "git branch": "v4-6-test",
+          "status": "discontinued (EOL)",
+          "started": "2017-03-07",
+          "maintenance": "2017-09-21",
+          "security": "2018-03-13",
+          "discontinued (EOL)": "2018-09-13"
+        },
+        "table": "Samba Release Planning and Supported Release Lifetime"
+      }
+    },
+    {
+      "id": "samba-4.5",
+      "name": "Samba 4.5",
+      "milestones": {
+        "ga": "2016-09-07",
+        "eos": null,
+        "eossec": null,
+        "eol": "2018-03-13"
+      },
+      "upstream": {
+        "name": "4.5",
+        "cells": {
+          "series": "4.5 (details)",
+          "git branch": "v4-5-test",
+          "status": "discontinued (EOL)",
+          "started": "2016-09-07",
+          "maintenance": "2017-03-07",
+          "security": "2017-09-21",
+          "discontinued (EOL)": "2018-03-13"
+        },
+        "table": "Samba Release Planning and Supported Release Lifetime"
+      }
+    },
+    {
+      "id": "samba-4.4",
+      "name": "Samba 4.4",
+      "milestones": {
+        "ga": "2016-03-22",
+        "eos": null,
+        "eossec": null,
+        "eol": "2017-09-21"
+      },
+      "upstream": {
+        "name": "4.4",
+        "cells": {
+          "series": "4.4 (details)",
+          "git branch": "v4-4-test",
+          "status": "discontinued (EOL)",
+          "started": "2016-03-22",
+          "maintenance": "2016-09-07",
+          "security": "2017-03-07",
+          "discontinued (EOL)": "2017-09-21"
+        },
+        "table": "Samba Release Planning and Supported Release Lifetime"
+      }
+    },
+    {
+      "id": "samba-4.3",
+      "name": "Samba 4.3",
+      "milestones": {
+        "ga": "2015-09-08",
+        "eos": null,
+        "eossec": null,
+        "eol": "2017-03-07"
+      },
+      "upstream": {
+        "name": "4.3",
+        "cells": {
+          "series": "4.3 (details)",
+          "git branch": "v4-3-test",
+          "status": "discontinued (EOL)",
+          "started": "2015-09-08",
+          "maintenance": "2016-03-22",
+          "security": "2016-09-07",
+          "discontinued (EOL)": "2017-03-07"
+        },
+        "table": "Samba Release Planning and Supported Release Lifetime"
+      }
+    },
+    {
+      "id": "samba-4.2",
+      "name": "Samba 4.2",
+      "milestones": {
+        "ga": "2015-03-04",
+        "eos": null,
+        "eossec": null,
+        "eol": "2016-09-07"
+      },
+      "upstream": {
+        "name": "4.2",
+        "cells": {
+          "series": "4.2 (details)",
+          "git branch": "v4-2-test",
+          "status": "discontinued (EOL)",
+          "started": "2015-03-04",
+          "maintenance": "2015-09-08",
+          "security": "2016-03-22",
+          "discontinued (EOL)": "2016-09-07"
+        },
+        "table": "Samba Release Planning and Supported Release Lifetime"
+      }
+    },
+    {
+      "id": "samba-4.1",
+      "name": "Samba 4.1",
+      "milestones": {
+        "ga": "2013-10-11",
+        "eos": null,
+        "eossec": null,
+        "eol": "2016-03-22"
+      },
+      "upstream": {
+        "name": "4.1",
+        "cells": {
+          "series": "4.1 (details)",
+          "git branch": "v4-1-test",
+          "status": "discontinued (EOL)",
+          "started": "2013-10-11",
+          "maintenance": "2015-03-04",
+          "security": "2015-09-08",
+          "discontinued (EOL)": "2016-03-22"
+        },
+        "table": "Samba Release Planning and Supported Release Lifetime"
+      }
+    },
+    {
+      "id": "samba-4.0",
+      "name": "Samba 4.0",
+      "milestones": {
+        "ga": "2012-12-11",
+        "eos": null,
+        "eossec": null,
+        "eol": "2015-09-08"
+      },
+      "upstream": {
+        "name": "4.0",
+        "cells": {
+          "series": "4.0 (details)",
+          "git branch": "v4-0-test",
+          "status": "discontinued (EOL)",
+          "started": "2012-12-11",
+          "maintenance": "2013-10-11",
+          "security": "2015-03-04",
+          "discontinued (EOL)": "2015-09-08"
+        },
+        "table": "Samba Release Planning and Supported Release Lifetime"
+      }
+    },
+    {
+      "id": "samba-3.6",
+      "name": "Samba 3.6",
+      "milestones": {
+        "ga": "2011-08-09",
+        "eos": null,
+        "eossec": null,
+        "eol": "2015-03-04"
+      },
+      "upstream": {
+        "name": "3.6",
+        "cells": {
+          "series": "3.6 (details)",
+          "git branch": "v3-6-test",
+          "status": "discontinued (EOL)",
+          "started": "2011-08-09",
+          "maintenance": "2012-12-11",
+          "security": "2013-11-29",
+          "discontinued (EOL)": "2015-03-04"
+        },
+        "table": "Samba Release Planning and Supported Release Lifetime"
+      }
+    },
+    {
+      "id": "samba-3.5",
+      "name": "Samba 3.5",
+      "milestones": {
+        "ga": "2010-03-01",
+        "eos": null,
+        "eossec": null,
+        "eol": "2013-10-11"
+      },
+      "upstream": {
+        "name": "3.5",
+        "cells": {
+          "series": "3.5 (details)",
+          "git branch": "v3-5-test",
+          "status": "discontinued (EOL)",
+          "started": "2010-03-01",
+          "maintenance": "2011-08-09",
+          "security": "~2012-12-17",
+          "discontinued (EOL)": "2013-10-11"
+        },
+        "table": "Samba Release Planning and Supported Release Lifetime"
+      }
+    },
+    {
+      "id": "samba-3.4",
+      "name": "Samba 3.4",
+      "milestones": {
+        "ga": "2009-07-03",
+        "eos": null,
+        "eossec": null,
+        "eol": "2012-12-11"
+      },
+      "upstream": {
+        "name": "3.4",
+        "cells": {
+          "series": "3.4 (details)",
+          "git branch": "v3-4-test",
+          "status": "discontinued (EOL)",
+          "started": "2009-07-03",
+          "maintenance": "2010-03-01",
+          "security": "~2011-08-23",
+          "discontinued (EOL)": "2012-12-11"
+        },
+        "table": "Samba Release Planning and Supported Release Lifetime"
+      }
+    },
+    {
+      "id": "samba-3.3",
+      "name": "Samba 3.3",
+      "milestones": {
+        "ga": "2009-01-27",
+        "eos": null,
+        "eossec": null,
+        "eol": "2011-08-09"
+      },
+      "upstream": {
+        "name": "3.3",
+        "cells": {
+          "series": "3.3 (details)",
+          "git branch": "v3-3-test",
+          "status": "discontinued (EOL)",
+          "started": "2009-01-27",
+          "maintenance": "2009-07-03",
+          "security": "2010-03-01",
+          "discontinued (EOL)": "2011-08-09"
+        },
+        "table": "Samba Release Planning and Supported Release Lifetime"
+      }
+    },
+    {
+      "id": "samba-3.2",
+      "name": "Samba 3.2",
+      "milestones": {
+        "ga": "2008-07-02",
+        "eos": null,
+        "eossec": null,
+        "eol": "2010-03-01"
+      },
+      "upstream": {
+        "name": "3.2",
+        "cells": {
+          "series": "3.2 (details)",
+          "git branch": "v3-2-test",
+          "status": "discontinued (EOL)",
+          "started": "2008-07-02",
+          "maintenance": "2009-01-27",
+          "security": "2009-08-11",
+          "discontinued (EOL)": "2010-03-01"
+        },
+        "table": "Samba Release Planning and Supported Release Lifetime"
+      }
+    },
+    {
+      "id": "samba-3.0",
+      "name": "Samba 3.0",
+      "milestones": {
+        "ga": "2003-09-24",
+        "eos": null,
+        "eossec": null,
+        "eol": "2009-08-05"
+      },
+      "upstream": {
+        "name": "3.0",
+        "cells": {
+          "series": "3.0 (details)",
+          "git branch": "v3-0-test",
+          "status": "discontinued (EOL)",
+          "started": "2003-09-24",
+          "maintenance": "2008-07-02",
+          "security": "2009-01-27",
+          "discontinued (EOL)": "2009-08-05"
+        },
+        "table": "Samba Release Planning and Supported Release Lifetime"
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://wiki.samba.org/index.php/Samba_Release_Planning",
+    "verifier": "deterministic-samba",
+    "last_checked": "2026-09-17T22:46:55Z",
+    "upstream_modified": null
+  }
+}

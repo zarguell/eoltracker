@@ -1,0 +1,71 @@
+{
+  "source_url": "https://docs.progress.com/bundle/openedge-life-cycle/page/OpenEdge-Life-Cycle.html",
+  "verifier": "deterministic-progress-openedge",
+  "checked_at": "2026-09-26T14:36:12Z",
+  "record_scope": "Progress OpenEdge and OpenEdge Pro2 release families: two software records, one release per vendor row, at the month or day precision the vendor's own cell states",
+  "rows": {
+    "seen": 39,
+    "published": 38,
+    "retained": 0,
+    "excluded": 1
+  },
+  "tables": [
+    {
+      "table": "OpenEdge Product Life Cycle",
+      "rows": 3,
+      "published": 3,
+      "excluded": 0
+    },
+    {
+      "table": "OpenEdge Pro2 Life Cycle",
+      "rows": 1,
+      "published": 1,
+      "excluded": 0
+    },
+    {
+      "table": "Retired OpenEdge Releases",
+      "rows": 26,
+      "published": 26,
+      "excluded": 0
+    },
+    {
+      "table": "Retired OpenEdge Pro2 Releases",
+      "rows": 8,
+      "published": 8,
+      "excluded": 0
+    }
+  ],
+  "excluded": [
+    {
+      "table": "OpenEdge Life Cycle",
+      "context": "navigation",
+      "rows": 1,
+      "cells": [
+        "",
+        "OpenEdge Product Life Cycle OpenEdge Pro2 Life Cycle OpenEdge Third-Party Product Life Cycle Retired Product Releases"
+      ],
+      "reason": "the page's jump list of section links is navigation, not a lifecycle row"
+    },
+    {
+      "table": "OpenEdge Third-Party Product Life Cycle",
+      "context": "third-party",
+      "rows": 0,
+      "quote": "Progress resells third-party products along with OpenEdge",
+      "reason": "the vendor states this section covers third-party products Progress resells, whose lifecycles Progress does not govern; it publishes no OpenEdge lifecycle row"
+    }
+  ],
+  "retained": [],
+  "products": {
+    "openedge": 29,
+    "openedge-pro2": 9
+  },
+  "total_records": 2,
+  "limitations": [
+    "Sunset is the vendor's own phase, not a normalized milestone: the page states that updates and certifications continue in it, so it never fills eossec (a generic support date) and stays verbatim under upstream.cells.",
+    "OpenEdge 13.0's Retired cell is TBD*, and the page's footnote states the release trigger ('will retire when the next OpenEdge release becomes generally available') without a dated release; no eol is published, and no date is derived.",
+    "Pro2 6.5's Sunset cell is a date whose column the page footnotes as contingent on the next LTS GA and 'subject to revision', so it is retained as a cell and never published as a settled date.",
+    "Month and day precision are both present in one column on this page; each cell keeps the width the vendor states and neither width is padded into the other.",
+    "The page's third-party section is not a Progress lifecycle and is excluded with the vendor's own sentence as its reason.",
+    "Progress publishes no eos for any OpenEdge release, so eos is null everywhere."
+  ]
+}

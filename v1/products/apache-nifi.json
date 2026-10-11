@@ -1,0 +1,669 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "apache-nifi",
+  "name": "Apache NiFi",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "nifi"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:apache:nifi"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/apache/nifi"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/apache/nifi"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:maven/org.apache.nifi/nifi"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/apachenifi.svg",
+    "html": "https://endoflife.date/apache-nifi",
+    "releasePolicy": null
+  },
+  "releases": [
+    {
+      "id": "2.12",
+      "name": "2.12",
+      "milestones": {
+        "ga": "2026-09-13",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.12",
+        "codename": null,
+        "label": "2.12",
+        "releaseDate": "2026-09-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "2.12.0",
+          "date": "2026-09-13",
+          "link": "https://cwiki.apache.org/confluence/display/NIFI/Release+Notes#ReleaseNotes-Version2.12.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.11",
+      "name": "2.11",
+      "milestones": {
+        "ga": "2026-08-03",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-09-13"
+      },
+      "upstream": {
+        "name": "2.11",
+        "codename": null,
+        "label": "2.11",
+        "releaseDate": "2026-08-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-09-13",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.11.0",
+          "date": "2026-08-03",
+          "link": "https://cwiki.apache.org/confluence/display/NIFI/Release+Notes#ReleaseNotes-Version2.11.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.10",
+      "name": "2.10",
+      "milestones": {
+        "ga": "2026-06-18",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-08-03"
+      },
+      "upstream": {
+        "name": "2.10",
+        "codename": null,
+        "label": "2.10",
+        "releaseDate": "2026-06-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-08-03",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.10.0",
+          "date": "2026-06-18",
+          "link": "https://cwiki.apache.org/confluence/display/NIFI/Release+Notes#ReleaseNotes-Version2.10.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.9",
+      "name": "2.9",
+      "milestones": {
+        "ga": "2026-04-10",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-06-18"
+      },
+      "upstream": {
+        "name": "2.9",
+        "codename": null,
+        "label": "2.9",
+        "releaseDate": "2026-04-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-06-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.9.0",
+          "date": "2026-04-10",
+          "link": "https://cwiki.apache.org/confluence/display/NIFI/Release+Notes#ReleaseNotes-Version2.9.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.8",
+      "name": "2.8",
+      "milestones": {
+        "ga": "2026-02-13",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-04-10"
+      },
+      "upstream": {
+        "name": "2.8",
+        "codename": null,
+        "label": "2.8",
+        "releaseDate": "2026-02-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-04-10",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.8.0",
+          "date": "2026-02-13",
+          "link": "https://cwiki.apache.org/confluence/display/NIFI/Release+Notes#ReleaseNotes-Version2.8.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.7",
+      "name": "2.7",
+      "milestones": {
+        "ga": "2025-12-09",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-02-13"
+      },
+      "upstream": {
+        "name": "2.7",
+        "codename": null,
+        "label": "2.7",
+        "releaseDate": "2025-12-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-02-13",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.7.2",
+          "date": "2025-12-17",
+          "link": "https://cwiki.apache.org/confluence/display/NIFI/Release+Notes#ReleaseNotes-Version2.7.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.6",
+      "name": "2.6",
+      "milestones": {
+        "ga": "2025-09-21",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-12-09"
+      },
+      "upstream": {
+        "name": "2.6",
+        "codename": null,
+        "label": "2.6",
+        "releaseDate": "2025-09-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-12-09",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.6.0",
+          "date": "2025-09-21",
+          "link": "https://cwiki.apache.org/confluence/display/NIFI/Release+Notes#ReleaseNotes-Version2.6.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.5",
+      "name": "2.5",
+      "milestones": {
+        "ga": "2025-07-22",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-09-21"
+      },
+      "upstream": {
+        "name": "2.5",
+        "codename": null,
+        "label": "2.5",
+        "releaseDate": "2025-07-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-09-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.5.0",
+          "date": "2025-07-22",
+          "link": "https://cwiki.apache.org/confluence/display/NIFI/Release+Notes#ReleaseNotes-Version2.5.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.4",
+      "name": "2.4",
+      "milestones": {
+        "ga": "2025-05-01",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-07-22"
+      },
+      "upstream": {
+        "name": "2.4",
+        "codename": null,
+        "label": "2.4",
+        "releaseDate": "2025-05-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-07-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.4.0",
+          "date": "2025-05-01",
+          "link": "https://cwiki.apache.org/confluence/display/NIFI/Release+Notes#ReleaseNotes-Version2.4.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.3",
+      "name": "2.3",
+      "milestones": {
+        "ga": "2025-03-11",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-05-01"
+      },
+      "upstream": {
+        "name": "2.3",
+        "codename": null,
+        "label": "2.3",
+        "releaseDate": "2025-03-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-05-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.3.0",
+          "date": "2025-03-11",
+          "link": "https://cwiki.apache.org/confluence/display/NIFI/Release+Notes#ReleaseNotes-Version2.3.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.2",
+      "name": "2.2",
+      "milestones": {
+        "ga": "2025-01-27",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-03-11"
+      },
+      "upstream": {
+        "name": "2.2",
+        "codename": null,
+        "label": "2.2",
+        "releaseDate": "2025-01-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-03-11",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.2.0",
+          "date": "2025-01-27",
+          "link": "https://cwiki.apache.org/confluence/display/NIFI/Release+Notes#ReleaseNotes-Version2.2.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.1",
+      "name": "2.1",
+      "milestones": {
+        "ga": "2024-12-23",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-01-27"
+      },
+      "upstream": {
+        "name": "2.1",
+        "codename": null,
+        "label": "2.1",
+        "releaseDate": "2024-12-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-01-27",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.1.0",
+          "date": "2024-12-23",
+          "link": "https://cwiki.apache.org/confluence/display/NIFI/Release+Notes#ReleaseNotes-Version2.1.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.0",
+      "name": "2.0",
+      "milestones": {
+        "ga": "2024-11-01",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-12-23"
+      },
+      "upstream": {
+        "name": "2.0",
+        "codename": null,
+        "label": "2.0",
+        "releaseDate": "2024-11-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-12-23",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.0.0",
+          "date": "2024-11-01",
+          "link": "https://cwiki.apache.org/confluence/display/NIFI/Release+Notes#ReleaseNotes-Version2.0.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.28",
+      "name": "1.28",
+      "milestones": {
+        "ga": "2024-10-26",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-12-08"
+      },
+      "upstream": {
+        "name": "1.28",
+        "codename": null,
+        "label": "1.28",
+        "releaseDate": "2024-10-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-12-08",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.28.1",
+          "date": "2024-11-19",
+          "link": "https://cwiki.apache.org/confluence/display/NIFI/Release+Notes#ReleaseNotes-Version1.28.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.27",
+      "name": "1.27",
+      "milestones": {
+        "ga": "2024-07-07",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-10-26"
+      },
+      "upstream": {
+        "name": "1.27",
+        "codename": null,
+        "label": "1.27",
+        "releaseDate": "2024-07-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-10-26",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.27.0",
+          "date": "2024-07-07",
+          "link": "https://cwiki.apache.org/confluence/display/NIFI/Release+Notes#ReleaseNotes-Version1.27.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.26",
+      "name": "1.26",
+      "milestones": {
+        "ga": "2024-05-06",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-07-07"
+      },
+      "upstream": {
+        "name": "1.26",
+        "codename": null,
+        "label": "1.26",
+        "releaseDate": "2024-05-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-07-07",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.26.0",
+          "date": "2024-05-06",
+          "link": "https://cwiki.apache.org/confluence/display/NIFI/Release+Notes#ReleaseNotes-Version1.26.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.25",
+      "name": "1.25",
+      "milestones": {
+        "ga": "2024-01-29",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-05-06"
+      },
+      "upstream": {
+        "name": "1.25",
+        "codename": null,
+        "label": "1.25",
+        "releaseDate": "2024-01-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-05-06",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.25.0",
+          "date": "2024-01-30",
+          "link": "https://cwiki.apache.org/confluence/display/NIFI/Release+Notes#ReleaseNotes-Version1.25.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.24",
+      "name": "1.24",
+      "milestones": {
+        "ga": "2023-11-27",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-01-29"
+      },
+      "upstream": {
+        "name": "1.24",
+        "codename": null,
+        "label": "1.24",
+        "releaseDate": "2023-11-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-01-29",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.24.0",
+          "date": "2023-11-27",
+          "link": "https://cwiki.apache.org/confluence/display/NIFI/Release+Notes#ReleaseNotes-Version1.24.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.23",
+      "name": "1.23",
+      "milestones": {
+        "ga": "2023-07-25",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-11-27"
+      },
+      "upstream": {
+        "name": "1.23",
+        "codename": null,
+        "label": "1.23",
+        "releaseDate": "2023-07-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-11-27",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.23.2",
+          "date": "2023-08-22",
+          "link": "https://cwiki.apache.org/confluence/display/NIFI/Release+Notes#ReleaseNotes-Version1.23.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.22",
+      "name": "1.22",
+      "milestones": {
+        "ga": "2023-06-11",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-07-25"
+      },
+      "upstream": {
+        "name": "1.22",
+        "codename": null,
+        "label": "1.22",
+        "releaseDate": "2023-06-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-07-25",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.22.0",
+          "date": "2023-06-11",
+          "link": "https://cwiki.apache.org/confluence/display/NIFI/Release+Notes#ReleaseNotes-Version1.22.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.21",
+      "name": "1.21",
+      "milestones": {
+        "ga": "2023-04-07",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-06-11"
+      },
+      "upstream": {
+        "name": "1.21",
+        "codename": null,
+        "label": "1.21",
+        "releaseDate": "2023-04-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-06-11",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.21.0",
+          "date": "2023-04-07",
+          "link": "https://cwiki.apache.org/confluence/display/NIFI/Release+Notes#ReleaseNotes-Version1.21.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.20",
+      "name": "1.20",
+      "milestones": {
+        "ga": "2023-02-09",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-04-07"
+      },
+      "upstream": {
+        "name": "1.20",
+        "codename": null,
+        "label": "1.20",
+        "releaseDate": "2023-02-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-04-07",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.20.0",
+          "date": "2023-02-09",
+          "link": "https://cwiki.apache.org/confluence/display/NIFI/Release+Notes#ReleaseNotes-Version1.20.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.19",
+      "name": "1.19",
+      "milestones": {
+        "ga": "2022-11-28",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-02-09"
+      },
+      "upstream": {
+        "name": "1.19",
+        "codename": null,
+        "label": "1.19",
+        "releaseDate": "2022-11-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-02-09",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.19.1",
+          "date": "2022-12-07",
+          "link": "https://cwiki.apache.org/confluence/display/NIFI/Release+Notes#ReleaseNotes-Version1.19.1"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/apache-nifi/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-17T06:50:50+00:00"
+  }
+}

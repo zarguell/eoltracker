@@ -1,0 +1,142 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "amazon-mq-activemq",
+  "name": "Amazon MQ for ActiveMQ",
+  "category": "software",
+  "upstream_category": "service",
+  "identifiers": [],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/amazon-mq-activemq",
+    "releasePolicy": "https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/activemq-version-management.html"
+  },
+  "releases": [
+    {
+      "id": "5.19",
+      "name": "5.19",
+      "milestones": {
+        "ga": "2025-03-07",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.19",
+        "codename": null,
+        "label": "5.19",
+        "releaseDate": "2025-03-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "5.18",
+      "name": "5.18",
+      "milestones": {
+        "ga": "2023-03-18",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.18",
+        "codename": null,
+        "label": "5.18",
+        "releaseDate": "2023-03-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "5.17",
+      "name": "5.17",
+      "milestones": {
+        "ga": "2022-03-09",
+        "eos": null,
+        "eossec": "2025-06-16",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.17",
+        "codename": null,
+        "label": "5.17",
+        "releaseDate": "2022-03-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-06-16",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "5.16",
+      "name": "5.16",
+      "milestones": {
+        "ga": "2020-06-25",
+        "eos": null,
+        "eossec": "2024-11-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.16",
+        "codename": null,
+        "label": "5.16",
+        "releaseDate": "2020-06-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-11-15",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "5.15",
+      "name": "5.15",
+      "milestones": {
+        "ga": "2017-06-27",
+        "eos": null,
+        "eossec": "2024-09-16",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.15",
+        "codename": null,
+        "label": "5.15",
+        "releaseDate": "2017-06-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-09-16",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/amazon-mq-activemq/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-08-23T19:39:55+00:00"
+  }
+}

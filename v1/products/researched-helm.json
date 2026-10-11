@@ -1,0 +1,143 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "researched-helm",
+  "name": "Helm",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "purl",
+      "id": "pkg:github/helm/helm"
+    }
+  ],
+  "labels": {},
+  "links": {
+    "releasePolicy": "https://helm.sh/community/release_policy/",
+    "versionSkew": "https://helm.sh/docs/topics/version_skew/"
+  },
+  "releases": [
+    {
+      "id": "2",
+      "name": "2",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": "2020-11-13",
+        "eol": "2020-11-13"
+      },
+      "upstream": {
+        "name": "2",
+        "Contribution": {
+          "text": "After November 13, 2020, you will see these changes: No further Helm v2 releases (even for security patches) And today, we are announcing the official end of support for Helm 2. Security fixes end February 10th, 2027 (extended from November 2026). After February 2027, Helm 3 will no longer receive any updates: including Kubernetes client library and security patches . The Helm project maintains a release branch for the most recent minor release. Applicable fixes, including security fixes, are cherry-picked into the release branch, depending on severity and feasibility.",
+          "value": null,
+          "datetime": null,
+          "role": null,
+          "links": [
+            "https://helm.sh/blog/helm-v2-deprecation-timeline/",
+            "https://helm.sh/blog/helm-2-becomes-unsupported/",
+            "https://helm.sh/blog/helm-v3-end-of-life/",
+            "https://helm.sh/docs/topics/version_skew/"
+          ]
+        }
+      }
+    },
+    {
+      "id": "3",
+      "name": "3",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": "2027-02-10",
+        "eol": "2027-02-10"
+      },
+      "upstream": {
+        "name": "3",
+        "Contribution": {
+          "text": "After November 13, 2020, you will see these changes: No further Helm v2 releases (even for security patches) And today, we are announcing the official end of support for Helm 2. Security fixes end February 10th, 2027 (extended from November 2026). After February 2027, Helm 3 will no longer receive any updates: including Kubernetes client library and security patches . The Helm project maintains a release branch for the most recent minor release. Applicable fixes, including security fixes, are cherry-picked into the release branch, depending on severity and feasibility.",
+          "value": null,
+          "datetime": null,
+          "role": null,
+          "links": [
+            "https://helm.sh/blog/helm-v2-deprecation-timeline/",
+            "https://helm.sh/blog/helm-2-becomes-unsupported/",
+            "https://helm.sh/blog/helm-v3-end-of-life/",
+            "https://helm.sh/docs/topics/version_skew/"
+          ]
+        }
+      }
+    },
+    {
+      "id": "4",
+      "name": "4",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4",
+        "Contribution": {
+          "text": "After November 13, 2020, you will see these changes: No further Helm v2 releases (even for security patches) And today, we are announcing the official end of support for Helm 2. Security fixes end February 10th, 2027 (extended from November 2026). After February 2027, Helm 3 will no longer receive any updates: including Kubernetes client library and security patches . The Helm project maintains a release branch for the most recent minor release. Applicable fixes, including security fixes, are cherry-picked into the release branch, depending on severity and feasibility.",
+          "value": null,
+          "datetime": null,
+          "role": null,
+          "links": [
+            "https://helm.sh/blog/helm-v2-deprecation-timeline/",
+            "https://helm.sh/blog/helm-2-becomes-unsupported/",
+            "https://helm.sh/blog/helm-v3-end-of-life/",
+            "https://helm.sh/docs/topics/version_skew/"
+          ]
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "verifier": "researched-zarguell",
+    "last_checked": "2026-09-17T19:24:49Z",
+    "research": {
+      "quote": "After November 13, 2020, you will see these changes: No further Helm v2 releases (even for security patches) And today, we are announcing the official end of support for Helm 2. Security fixes end February 10th, 2027 (extended from November 2026). After February 2027, Helm 3 will no longer receive any updates: including Kubernetes client library and security patches . The Helm project maintains a release branch for the most recent minor release. Applicable fixes, including security fixes, are cherry-picked into the release branch, depending on severity and feasibility.",
+      "source_url": "https://helm.sh/blog/helm-v2-deprecation-timeline/",
+      "retrieved_at": "2026-09-17",
+      "contributor": "zarguell",
+      "method": "agent",
+      "verified_at": "2026-09-17T19:24:49Z",
+      "stale_after": "2027-03-10",
+      "evidence": [
+        {
+          "quote": "After November 13, 2020, you will see these changes: No further Helm v2 releases (even for security patches)",
+          "source_url": "https://helm.sh/blog/helm-v2-deprecation-timeline/",
+          "retrieved_at": "2026-09-17",
+          "milestones": [
+            "eossec",
+            "eol"
+          ]
+        },
+        {
+          "quote": "And today, we are announcing the official end of support for Helm 2.",
+          "source_url": "https://helm.sh/blog/helm-2-becomes-unsupported/",
+          "retrieved_at": "2026-09-17"
+        },
+        {
+          "quote": "Security fixes end February 10th, 2027 (extended from November 2026). After February 2027, Helm 3 will no longer receive any updates: including Kubernetes client library and security patches .",
+          "source_url": "https://helm.sh/blog/helm-v3-end-of-life/",
+          "retrieved_at": "2026-09-17",
+          "milestones": [
+            "eossec",
+            "eol"
+          ]
+        },
+        {
+          "quote": "The Helm project maintains a release branch for the most recent minor release. Applicable fixes, including security fixes, are cherry-picked into the release branch, depending on severity and feasibility.",
+          "source_url": "https://helm.sh/docs/topics/version_skew/",
+          "retrieved_at": "2026-09-17"
+        }
+      ],
+      "vendor": "Helm (CNCF)",
+      "summary": "The Kubernetes package manager. Each major branch is published separately: Helm 2 and Helm 3 carry the end dates their own project notices state, and Helm 4 carries none because the project has announced none.",
+      "notes": "Full-picture coverage across the majors the Helm project has published lifecycle statements for. Helm 2: the deprecation timeline states no Helm v2 releases after November 13, 2020, even for security patches, so eossec and eol share that day; the project's own post of 2020-11-13 confirms the official end of support. Helm 3: the end-of-life notice states security fixes end February 10th, 2027 and that no releases of any kind follow, so eossec and eol share that day. Helm 4: undated. The release-schedule page announces release dates and the version-skew page states a rolling rule -- only the most recent minor release branch receives fixes -- and neither states an end date for any branch, so no Helm 4 date exists to publish and none was inferred. A rolling policy is compatibility guidance, not a lifecycle date, and is recorded here as the evidence for that absence rather than as a date. Helm 4.0.0 general availability (2025-11-12, per the project's GitHub release) is deliberately not published: the quoted notice does not state it, and every stored date must appear in a stored quote. No deterministic source covers Helm -- the upstream catalog publishes no Helm product and the official release calendar is machine-readable but carries release-planning events only, zero lifecycle events. ga and eos stay null on every branch because no quoted notice states them. Nothing here shadows a deterministic record."
+    },
+    "source_url": "https://helm.sh/blog/helm-v2-deprecation-timeline/",
+    "upstream_modified": null
+  }
+}

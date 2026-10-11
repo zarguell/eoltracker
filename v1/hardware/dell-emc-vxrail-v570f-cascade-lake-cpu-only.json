@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-vxrail-v570f-cascade-lake-cpu-only",
+  "name": "VxRail V570F (Cascade Lake CPU only)",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC VxRail",
+  "family": "VxRail",
+  "model_number": "VxRail V570F (Cascade Lake CPU only)",
+  "milestones": {
+    "ga": "2017-12-29",
+    "eos": "2023-05-09",
+    "eossec": null,
+    "eol": "2028-04-30"
+  },
+  "status": "supported",
+  "upstream": {
+    "Product": {
+      "text": "VxRail V570F (Cascade Lake CPU only)",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "VxRail V570F (Cascade Lake CPU only)",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC VxRail",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2023-05-09",
+      "datetime": null,
+      "value": "2023-05-09",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Dec. 29, 2017",
+      "datetime": "2017-12-29",
+      "value": "2017-12-29",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2028-04-30",
+      "datetime": null,
+      "value": "2028-04-30",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/hyper-converged/vendor/dell-emc/vxrail/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

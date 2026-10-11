@@ -1,0 +1,540 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "amazon-msk",
+  "name": "Amazon MSK",
+  "category": "software",
+  "upstream_category": "service",
+  "identifiers": [],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/amazonaws.svg",
+    "html": "https://endoflife.date/amazon-msk",
+    "releasePolicy": "https://docs.aws.amazon.com/msk/latest/developerguide/version-support.html"
+  },
+  "releases": [
+    {
+      "id": "4.2",
+      "name": "4.2",
+      "milestones": {
+        "ga": "2026-07-15",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.2",
+        "codename": null,
+        "label": "4.2",
+        "releaseDate": "2026-07-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "4.2.x",
+          "date": "2026-07-15",
+          "link": "https://docs.aws.amazon.com/msk/latest/developerguide/supported-kafka-versions.html#4.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.1",
+      "name": "4.1",
+      "milestones": {
+        "ga": "2025-10-15",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.1",
+        "codename": null,
+        "label": "4.1",
+        "releaseDate": "2025-10-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "4.1.x",
+          "date": "2025-10-15",
+          "link": "https://docs.aws.amazon.com/msk/latest/developerguide/supported-kafka-versions.html#4.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.0",
+      "name": "4.0",
+      "milestones": {
+        "ga": "2025-05-16",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.0",
+        "codename": null,
+        "label": "4.0",
+        "releaseDate": "2025-05-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "4.0.x",
+          "date": "2025-05-16",
+          "link": "https://docs.aws.amazon.com/msk/latest/developerguide/supported-kafka-versions.html#4.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.9",
+      "name": "3.9",
+      "milestones": {
+        "ga": "2025-04-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.9",
+        "codename": null,
+        "label": "3.9",
+        "releaseDate": "2025-04-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "3.9.x",
+          "date": "2025-04-21",
+          "link": "https://docs.aws.amazon.com/msk/latest/developerguide/supported-kafka-versions.html#3.9"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.8",
+      "name": "3.8",
+      "milestones": {
+        "ga": "2025-02-20",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.8",
+        "codename": null,
+        "label": "3.8",
+        "releaseDate": "2025-02-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "3.8.x",
+          "date": "2025-02-20",
+          "link": "https://docs.aws.amazon.com/msk/latest/developerguide/supported-kafka-versions.html#3.8"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.7",
+      "name": "3.7",
+      "milestones": {
+        "ga": "2024-05-29",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-09-01"
+      },
+      "upstream": {
+        "name": "3.7",
+        "codename": null,
+        "label": "3.7",
+        "releaseDate": "2024-05-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-09-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.7.x",
+          "date": "2024-05-29",
+          "link": "https://docs.aws.amazon.com/msk/latest/developerguide/supported-kafka-versions.html#3.7"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.6",
+      "name": "3.6",
+      "milestones": {
+        "ga": "2023-11-16",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-06-01"
+      },
+      "upstream": {
+        "name": "3.6",
+        "codename": null,
+        "label": "3.6",
+        "releaseDate": "2023-11-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-06-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.6.0",
+          "date": "2023-11-16",
+          "link": "https://docs.aws.amazon.com/msk/latest/developerguide/supported-kafka-versions.html#3.6.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.5",
+      "name": "3.5",
+      "milestones": {
+        "ga": "2023-09-26",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-10-23"
+      },
+      "upstream": {
+        "name": "3.5",
+        "codename": null,
+        "label": "3.5",
+        "releaseDate": "2023-09-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-10-23",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.5.1",
+          "date": "2023-09-26",
+          "link": "https://docs.aws.amazon.com/msk/latest/developerguide/supported-kafka-versions.html#3.5.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.4",
+      "name": "3.4",
+      "milestones": {
+        "ga": "2023-05-04",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-08-04"
+      },
+      "upstream": {
+        "name": "3.4",
+        "codename": null,
+        "label": "3.4",
+        "releaseDate": "2023-05-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-08-04",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.4.0",
+          "date": "2023-05-04",
+          "link": "https://docs.aws.amazon.com/msk/latest/developerguide/supported-kafka-versions.html#3.4.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.3",
+      "name": "3.3",
+      "milestones": {
+        "ga": "2022-10-26",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-09-11"
+      },
+      "upstream": {
+        "name": "3.3",
+        "codename": null,
+        "label": "3.3",
+        "releaseDate": "2022-10-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-09-11",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.3.2",
+          "date": "2023-03-02",
+          "link": "https://docs.aws.amazon.com/msk/latest/developerguide/supported-kafka-versions.html#3.3.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.2",
+      "name": "3.2",
+      "milestones": {
+        "ga": "2022-06-22",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-09-11"
+      },
+      "upstream": {
+        "name": "3.2",
+        "codename": null,
+        "label": "3.2",
+        "releaseDate": "2022-06-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-09-11",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.2.0",
+          "date": "2022-06-22",
+          "link": "https://docs.aws.amazon.com/msk/latest/developerguide/supported-kafka-versions.html#3.2.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.1",
+      "name": "3.1",
+      "milestones": {
+        "ga": "2022-06-22",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-09-11"
+      },
+      "upstream": {
+        "name": "3.1",
+        "codename": null,
+        "label": "3.1",
+        "releaseDate": "2022-06-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-09-11",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.1.1",
+          "date": "2022-06-22",
+          "link": "https://docs.aws.amazon.com/msk/latest/developerguide/supported-kafka-versions.html#3.1.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.8",
+      "name": "2.8",
+      "milestones": {
+        "ga": "2021-05-19",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-01-14"
+      },
+      "upstream": {
+        "name": "2.8",
+        "codename": null,
+        "label": "2.8",
+        "releaseDate": "2021-05-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-01-14",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.8.2-tiered",
+          "date": "2022-10-28",
+          "link": "https://docs.aws.amazon.com/msk/latest/developerguide/supported-kafka-versions.html#2.8.2-tiered"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.7",
+      "name": "2.7",
+      "milestones": {
+        "ga": "2020-12-29",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-09-11"
+      },
+      "upstream": {
+        "name": "2.7",
+        "codename": null,
+        "label": "2.7",
+        "releaseDate": "2020-12-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-09-11",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.7.2",
+          "date": "2021-12-21",
+          "link": "https://docs.aws.amazon.com/msk/latest/developerguide/supported-kafka-versions.html#2.7.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.6",
+      "name": "2.6",
+      "milestones": {
+        "ga": "2020-10-21",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-09-11"
+      },
+      "upstream": {
+        "name": "2.6",
+        "codename": null,
+        "label": "2.6",
+        "releaseDate": "2020-10-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-09-11",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.6.3",
+          "date": "2021-12-21",
+          "link": "https://docs.aws.amazon.com/msk/latest/developerguide/supported-kafka-versions.html#2.6.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.5",
+      "name": "2.5",
+      "milestones": {
+        "ga": "2020-09-30",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-06-08"
+      },
+      "upstream": {
+        "name": "2.5",
+        "codename": null,
+        "label": "2.5",
+        "releaseDate": "2020-09-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-06-08",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.5.1",
+          "date": "2020-09-30",
+          "link": "https://docs.aws.amazon.com/msk/latest/developerguide/supported-kafka-versions.html#2.5.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.4",
+      "name": "2.4",
+      "milestones": {
+        "ga": "2019-12-19",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-06-08"
+      },
+      "upstream": {
+        "name": "2.4",
+        "codename": null,
+        "label": "2.4",
+        "releaseDate": "2019-12-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-06-08",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.4.1.1",
+          "date": "2020-09-09",
+          "link": "https://docs.aws.amazon.com/msk/latest/developerguide/supported-kafka-versions.html#2.4.1.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.3",
+      "name": "2.3",
+      "milestones": {
+        "ga": "2019-12-19",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-06-08"
+      },
+      "upstream": {
+        "name": "2.3",
+        "codename": null,
+        "label": "2.3",
+        "releaseDate": "2019-12-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-06-08",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.3.1",
+          "date": "2019-12-19",
+          "link": "https://docs.aws.amazon.com/msk/latest/developerguide/supported-kafka-versions.html#2.3.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.2",
+      "name": "2.2",
+      "milestones": {
+        "ga": "2019-07-31",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-06-08"
+      },
+      "upstream": {
+        "name": "2.2",
+        "codename": null,
+        "label": "2.2",
+        "releaseDate": "2019-07-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-06-08",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.2.1",
+          "date": "2019-07-31",
+          "link": "https://docs.aws.amazon.com/msk/latest/developerguide/supported-kafka-versions.html#2.2.1"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/amazon-msk/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-07-23T21:55:27+00:00"
+  }
+}

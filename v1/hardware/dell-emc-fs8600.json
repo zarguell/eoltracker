@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-fs8600",
+  "name": "FS8600",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC FluidFS",
+  "family": "FluidFS",
+  "model_number": "FS8600",
+  "milestones": {
+    "ga": null,
+    "eos": "2018-08-03",
+    "eossec": null,
+    "eol": "2023-08-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "FS8600",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "FS8600",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC FluidFS",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2018-08-03",
+      "datetime": null,
+      "value": "2018-08-03",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Not Announced",
+      "datetime": "TBD",
+      "value": null,
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2023-08-31",
+      "datetime": null,
+      "value": "2023-08-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/nas-storage/vendor/dell-emc/fluidfs/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

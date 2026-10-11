@@ -1,0 +1,342 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "perl",
+  "name": "Perl",
+  "category": "software",
+  "upstream_category": "lang",
+  "identifiers": [
+    {
+      "type": "purl",
+      "id": "pkg:apk/alpine/perl"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:deb/debian/perl"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:generic/perl"
+    },
+    {
+      "type": "repology",
+      "id": "perl"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:perl:perl"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:perl:perl"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Critical security patches",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/perl.svg",
+    "html": "https://endoflife.date/perl",
+    "releasePolicy": "https://perldoc.perl.org/perlpolicy#MAINTENANCE-AND-SUPPORT"
+  },
+  "releases": [
+    {
+      "id": "5.44",
+      "name": "5.44",
+      "milestones": {
+        "ga": "2026-07-15",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.44",
+        "codename": null,
+        "label": "5.44",
+        "releaseDate": "2026-07-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": "2029-07-15",
+        "isMaintained": true,
+        "latest": {
+          "name": "5.44.0",
+          "date": "2026-07-15",
+          "link": "https://perldoc.perl.org/5.44.0/perldelta"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.42",
+      "name": "5.42",
+      "milestones": {
+        "ga": "2025-07-03",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.42",
+        "codename": null,
+        "label": "5.42",
+        "releaseDate": "2025-07-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": "2028-07-03",
+        "isMaintained": true,
+        "latest": {
+          "name": "5.42.3",
+          "date": "2026-08-02",
+          "link": "https://perldoc.perl.org/5.42.3/perldelta"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.40",
+      "name": "5.40",
+      "milestones": {
+        "ga": "2024-06-09",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.40",
+        "codename": null,
+        "label": "5.40",
+        "releaseDate": "2024-06-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-07-15",
+        "isEol": false,
+        "eolFrom": "2027-06-09",
+        "isMaintained": true,
+        "latest": {
+          "name": "5.40.5",
+          "date": "2026-08-02",
+          "link": "https://perldoc.perl.org/5.40.5/perldelta"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.38",
+      "name": "5.38",
+      "milestones": {
+        "ga": "2023-07-02",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.38",
+        "codename": null,
+        "label": "5.38",
+        "releaseDate": "2023-07-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-07-03",
+        "isEol": true,
+        "eolFrom": "2026-07-02",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.38.5",
+          "date": "2025-08-03",
+          "link": "https://perldoc.perl.org/5.38.5/perldelta"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.36",
+      "name": "5.36",
+      "milestones": {
+        "ga": "2022-05-27",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.36",
+        "codename": null,
+        "label": "5.36",
+        "releaseDate": "2022-05-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-06-09",
+        "isEol": true,
+        "eolFrom": "2025-05-27",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.36.3",
+          "date": "2023-11-29",
+          "link": "https://perldoc.perl.org/5.36.3/perldelta"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.34",
+      "name": "5.34",
+      "milestones": {
+        "ga": "2021-05-20",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.34",
+        "codename": null,
+        "label": "5.34",
+        "releaseDate": "2021-05-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-07-02",
+        "isEol": true,
+        "eolFrom": "2024-05-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.34.3",
+          "date": "2023-11-29",
+          "link": "https://perldoc.perl.org/5.34.3/perldelta"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.32",
+      "name": "5.32",
+      "milestones": {
+        "ga": "2020-06-20",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.32",
+        "codename": null,
+        "label": "5.32",
+        "releaseDate": "2020-06-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-05-27",
+        "isEol": true,
+        "eolFrom": "2023-06-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.32.1",
+          "date": "2021-01-23",
+          "link": "https://perldoc.perl.org/5.32.1/perldelta"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.30",
+      "name": "5.30",
+      "milestones": {
+        "ga": "2019-05-22",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.30",
+        "codename": null,
+        "label": "5.30",
+        "releaseDate": "2019-05-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-05-20",
+        "isEol": true,
+        "eolFrom": "2022-05-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.30.3",
+          "date": "2020-05-29",
+          "link": "https://perldoc.perl.org/5.30.3/perldelta"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.28",
+      "name": "5.28",
+      "milestones": {
+        "ga": "2018-06-22",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.28",
+        "codename": null,
+        "label": "5.28",
+        "releaseDate": "2018-06-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-06-20",
+        "isEol": true,
+        "eolFrom": "2021-06-23",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.28.3",
+          "date": "2020-05-29",
+          "link": "https://perldoc.perl.org/5.28.3/perldelta"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.26",
+      "name": "5.26",
+      "milestones": {
+        "ga": "2017-05-30",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.26",
+        "codename": null,
+        "label": "5.26",
+        "releaseDate": "2017-05-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2019-05-22",
+        "isEol": true,
+        "eolFrom": "2020-05-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.26.3",
+          "date": "2018-11-28",
+          "link": "https://perldoc.perl.org/5.26.3/perldelta"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/perl/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-08-03T00:07:00+00:00"
+  }
+}

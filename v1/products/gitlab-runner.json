@@ -1,0 +1,500 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "gitlab-runner",
+  "name": "GitLab Runner",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "purl",
+      "id": "pkg:docker/gitlab/gitlab-runner"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:gitlab:runner"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Maintenance Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/gitlab.svg",
+    "html": "https://endoflife.date/gitlab-runner",
+    "releasePolicy": "https://docs.gitlab.com/runner/#gitlab-runner-versions"
+  },
+  "releases": [
+    {
+      "id": "19.3",
+      "name": "19.3",
+      "milestones": {
+        "ga": "2026-08-20",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "19.3",
+        "codename": null,
+        "label": "19.3",
+        "releaseDate": "2026-08-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": "2026-09-17",
+        "isEol": false,
+        "eolFrom": "2026-11-19",
+        "isMaintained": true,
+        "latest": {
+          "name": "19.3.3",
+          "date": "2026-09-15",
+          "link": "https://gitlab.com/gitlab-org/gitlab-runner/-/releases/v19.3.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "19.2",
+      "name": "19.2",
+      "milestones": {
+        "ga": "2026-07-16",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "19.2",
+        "codename": null,
+        "label": "19.2",
+        "releaseDate": "2026-07-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-08-20",
+        "isEol": false,
+        "eolFrom": "2026-10-15",
+        "isMaintained": true,
+        "latest": {
+          "name": "19.2.6",
+          "date": "2026-09-15",
+          "link": "https://gitlab.com/gitlab-org/gitlab-runner/-/releases/v19.2.6"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "19.1",
+      "name": "19.1",
+      "milestones": {
+        "ga": "2026-06-18",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "19.1",
+        "codename": null,
+        "label": "19.1",
+        "releaseDate": "2026-06-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-07-16",
+        "isEol": false,
+        "eolFrom": "2026-09-17",
+        "isMaintained": true,
+        "latest": {
+          "name": "19.1.5",
+          "date": "2026-09-15",
+          "link": "https://gitlab.com/gitlab-org/gitlab-runner/-/releases/v19.1.5"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "19.0",
+      "name": "19.0",
+      "milestones": {
+        "ga": "2026-05-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "19.0",
+        "codename": null,
+        "label": "19.0",
+        "releaseDate": "2026-05-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-06-18",
+        "isEol": true,
+        "eolFrom": "2026-08-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "19.0.3",
+          "date": "2026-07-28",
+          "link": "https://gitlab.com/gitlab-org/gitlab-runner/-/releases/v19.0.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.11",
+      "name": "18.11",
+      "milestones": {
+        "ga": "2026-04-16",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "18.11",
+        "codename": null,
+        "label": "18.11",
+        "releaseDate": "2026-04-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-05-21",
+        "isEol": true,
+        "eolFrom": "2026-07-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.11.4",
+          "date": "2026-06-29",
+          "link": "https://gitlab.com/gitlab-org/gitlab-runner/-/releases/v18.11.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.10",
+      "name": "18.10",
+      "milestones": {
+        "ga": "2026-03-19",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "18.10",
+        "codename": null,
+        "label": "18.10",
+        "releaseDate": "2026-03-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-04-16",
+        "isEol": true,
+        "eolFrom": "2026-06-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.10.1",
+          "date": "2026-04-05",
+          "link": "https://gitlab.com/gitlab-org/gitlab-runner/-/releases/v18.10.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.9",
+      "name": "18.9",
+      "milestones": {
+        "ga": "2026-02-19",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "18.9",
+        "codename": null,
+        "label": "18.9",
+        "releaseDate": "2026-02-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-03-19",
+        "isEol": true,
+        "eolFrom": "2026-05-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.9.0",
+          "date": "2026-02-19",
+          "link": "https://gitlab.com/gitlab-org/gitlab-runner/-/releases/v18.9.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.8",
+      "name": "18.8",
+      "milestones": {
+        "ga": "2026-01-15",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "18.8",
+        "codename": null,
+        "label": "18.8",
+        "releaseDate": "2026-01-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-02-19",
+        "isEol": true,
+        "eolFrom": "2026-04-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.8.0",
+          "date": "2026-01-15",
+          "link": "https://gitlab.com/gitlab-org/gitlab-runner/-/releases/v18.8.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.7",
+      "name": "18.7",
+      "milestones": {
+        "ga": "2025-12-18",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "18.7",
+        "codename": null,
+        "label": "18.7",
+        "releaseDate": "2025-12-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-01-15",
+        "isEol": true,
+        "eolFrom": "2026-03-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.7.2",
+          "date": "2026-01-08",
+          "link": "https://gitlab.com/gitlab-org/gitlab-runner/-/releases/v18.7.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.6",
+      "name": "18.6",
+      "milestones": {
+        "ga": "2025-11-20",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "18.6",
+        "codename": null,
+        "label": "18.6",
+        "releaseDate": "2025-11-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-12-18",
+        "isEol": true,
+        "eolFrom": "2026-02-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.6.6",
+          "date": "2025-12-09",
+          "link": "https://gitlab.com/gitlab-org/gitlab-runner/-/releases/v18.6.6"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.5",
+      "name": "18.5",
+      "milestones": {
+        "ga": "2025-10-16",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "18.5",
+        "codename": null,
+        "label": "18.5",
+        "releaseDate": "2025-10-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-11-20",
+        "isEol": true,
+        "eolFrom": "2026-01-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.5.0",
+          "date": "2025-10-13",
+          "link": "https://gitlab.com/gitlab-org/gitlab-runner/-/releases/v18.5.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.4",
+      "name": "18.4",
+      "milestones": {
+        "ga": "2025-09-18",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "18.4",
+        "codename": null,
+        "label": "18.4",
+        "releaseDate": "2025-09-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-10-16",
+        "isEol": true,
+        "eolFrom": "2025-12-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.4.0",
+          "date": "2025-09-12",
+          "link": "https://gitlab.com/gitlab-org/gitlab-runner/-/releases/v18.4.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.3",
+      "name": "18.3",
+      "milestones": {
+        "ga": "2025-08-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "18.3",
+        "codename": null,
+        "label": "18.3",
+        "releaseDate": "2025-08-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-09-18",
+        "isEol": true,
+        "eolFrom": "2025-11-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.3.1",
+          "date": "2025-09-04",
+          "link": "https://gitlab.com/gitlab-org/gitlab-runner/-/releases/v18.3.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.2",
+      "name": "18.2",
+      "milestones": {
+        "ga": "2025-07-16",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "18.2",
+        "codename": null,
+        "label": "18.2",
+        "releaseDate": "2025-07-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-08-21",
+        "isEol": true,
+        "eolFrom": "2025-10-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.2.2",
+          "date": "2025-08-19",
+          "link": "https://gitlab.com/gitlab-org/gitlab-runner/-/releases/v18.2.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.1",
+      "name": "18.1",
+      "milestones": {
+        "ga": "2025-06-18",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "18.1",
+        "codename": null,
+        "label": "18.1",
+        "releaseDate": "2025-06-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-07-16",
+        "isEol": true,
+        "eolFrom": "2025-09-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.1.3",
+          "date": "2025-07-28",
+          "link": "https://gitlab.com/gitlab-org/gitlab-runner/-/releases/v18.1.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.0",
+      "name": "18.0",
+      "milestones": {
+        "ga": "2025-05-14",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "18.0",
+        "codename": null,
+        "label": "18.0",
+        "releaseDate": "2025-05-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-06-18",
+        "isEol": true,
+        "eolFrom": "2025-08-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.0.5",
+          "date": "2025-07-28",
+          "link": "https://gitlab.com/gitlab-org/gitlab-runner/-/releases/v18.0.5"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/gitlab-runner/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-16T00:07:55+00:00"
+  }
+}

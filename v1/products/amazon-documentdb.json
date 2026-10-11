@@ -1,0 +1,127 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "amazon-documentdb",
+  "name": "Amazon DocumentDB",
+  "category": "software",
+  "upstream_category": "service",
+  "identifiers": [],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Standard Support",
+    "eoes": "Extended Support"
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/amazondocumentdb.svg",
+    "html": "https://endoflife.date/amazon-documentdb",
+    "releasePolicy": null
+  },
+  "releases": [
+    {
+      "id": "8.0",
+      "name": "8.0",
+      "milestones": {
+        "ga": "2025-11-14",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "8.0",
+        "codename": null,
+        "label": "8.0",
+        "releaseDate": "2025-11-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isEoes": false,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "5.0",
+      "name": "5.0 (LTS)",
+      "milestones": {
+        "ga": "2023-03-01",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.0",
+        "codename": null,
+        "label": "5.0 (LTS)",
+        "releaseDate": "2023-03-01",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isEoes": false,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "4.0",
+      "name": "4.0",
+      "milestones": {
+        "ga": "2020-11-09",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.0",
+        "codename": null,
+        "label": "4.0",
+        "releaseDate": "2020-11-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isEoes": false,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "3.6",
+      "name": "3.6",
+      "milestones": {
+        "ga": "2019-01-09",
+        "eos": null,
+        "eossec": null,
+        "eol": "2029-03-30"
+      },
+      "upstream": {
+        "name": "3.6",
+        "codename": null,
+        "label": "3.6",
+        "releaseDate": "2019-01-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-03-30",
+        "isEoes": false,
+        "eoesFrom": "2029-03-30",
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/amazon-documentdb/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-11T23:17:24+00:00"
+  }
+}

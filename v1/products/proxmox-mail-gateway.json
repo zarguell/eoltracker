@@ -1,0 +1,194 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "proxmox-mail-gateway",
+  "name": "Proxmox Mail Gateway",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "purl",
+      "id": "pkg:github/proxmox/pmg-api"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/proxmox.svg",
+    "html": "https://endoflife.date/proxmox-mail-gateway",
+    "releasePolicy": "https://pmg.proxmox.com/wiki/index.php/Roadmap"
+  },
+  "releases": [
+    {
+      "id": "9",
+      "name": "9",
+      "milestones": {
+        "ga": "2025-10-01",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "9",
+        "codename": null,
+        "label": "9",
+        "releaseDate": "2025-10-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "9.0",
+          "date": "2025-10-01",
+          "link": "https://www.proxmox.com/en/about/company-details/press-releases/proxmox-mail-gateway-9-0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8",
+      "name": "8",
+      "milestones": {
+        "ga": "2023-06-29",
+        "eos": null,
+        "eossec": "2026-08-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "8",
+        "codename": null,
+        "label": "8",
+        "releaseDate": "2023-06-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-08-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.2",
+          "date": "2025-02-27",
+          "link": "https://www.proxmox.com/en/about/company-details/press-releases/proxmox-mail-gateway-8-2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7",
+      "name": "7",
+      "milestones": {
+        "ga": "2021-07-15",
+        "eos": null,
+        "eossec": "2024-07-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7",
+        "codename": null,
+        "label": "7",
+        "releaseDate": "2021-07-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-07-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.4",
+          "date": "2024-02-29",
+          "link": "https://www.proxmox.com/en/about/company-details/press-releases/proxmox-mail-gateway-7-0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6",
+      "name": "6",
+      "milestones": {
+        "ga": "2019-08-27",
+        "eos": null,
+        "eossec": "2022-09-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6",
+        "codename": null,
+        "label": "6",
+        "releaseDate": "2019-08-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-09-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.4",
+          "date": "2021-03-30",
+          "link": "https://www.proxmox.com/en/about/company-details/press-releases/proxmox-mail-gateway-6-4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5",
+      "name": "5",
+      "milestones": {
+        "ga": "2018-01-23",
+        "eos": null,
+        "eossec": "2020-08-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5",
+        "codename": null,
+        "label": "5",
+        "releaseDate": "2018-01-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-08-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.2",
+          "date": "2019-03-26",
+          "link": "https://www.proxmox.com/en/about/company-details/press-releases/proxmox-mail-gateway-5-2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4",
+      "name": "4",
+      "milestones": {
+        "ga": "2015-01-20",
+        "eos": null,
+        "eossec": "2018-06-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "4",
+        "codename": null,
+        "label": "4",
+        "releaseDate": "2015-01-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-06-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.1",
+          "date": "2016-08-22",
+          "link": "https://www.proxmox.com/en/about/company-details/press-releases/proxmox-mail-gateway-4-1-released"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/proxmox-mail-gateway/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-07-26T11:13:19+00:00"
+  }
+}

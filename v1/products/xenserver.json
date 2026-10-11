@@ -1,0 +1,741 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "xenserver",
+  "name": "XenServer",
+  "category": "software",
+  "upstream_category": "os",
+  "identifiers": [],
+  "labels": {},
+  "links": {
+    "html": "https://www.xenserver.com/support"
+  },
+  "releases": [
+    {
+      "id": "9",
+      "name": "XenServer 9",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2031-07-31"
+      },
+      "upstream": {
+        "name": "9",
+        "cells": {
+          "Product": "XenServer",
+          "Version": "9",
+          "Language": "EN",
+          "NSC": "02-07-2026",
+          "EOS": "NA",
+          "EOM & EOL": "07-31-2031",
+          "Notes": "XenServer specific licence required"
+        },
+        "table": "XenServer product matrix",
+        "page": "https://www.xenserver.com/support"
+      }
+    },
+    {
+      "id": "8.4",
+      "name": "XenServer 8.4",
+      "milestones": {
+        "ga": null,
+        "eos": "2024-06-03",
+        "eossec": null,
+        "eol": "2028-11-30"
+      },
+      "upstream": {
+        "name": "8.4",
+        "cells": {
+          "Product": "XenServer",
+          "Version": "8.4",
+          "Language": "EN",
+          "NSC": "03-26-2024",
+          "EOS": "06-03-2024",
+          "EOM & EOL": "11-30-2028",
+          "Notes": "XenServer specific licence required"
+        },
+        "table": "XenServer product matrix",
+        "page": "https://www.xenserver.com/support"
+      }
+    },
+    {
+      "id": "8.2-ltsr",
+      "name": "XenServer 8.2 LTSR",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-06-25"
+      },
+      "upstream": {
+        "name": "8.2 LTSR",
+        "cells": {
+          "Product/Component Name": "Citrix Hypervisor",
+          "Version/Model": "8.2 LTSR",
+          "Language": "EN, SC, JA",
+          "NSC": "01-May-24",
+          "EOM": "03-Jun-24",
+          "EOL": "25-Jun-25",
+          "EOES": "N/A"
+        },
+        "table": "Citrix Hypervisor tab",
+        "page": "https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html",
+        "statement": {
+          "article": "CTX692513",
+          "url": "https://support.citrix.com/external/article?articleUrl=CTX692513-prepare-for-citrix-hypervisor-82-cumulative-update-1-end-of-life",
+          "quote": "Citrix Hypervisor 8.2 Cumulative Update 1 becomes End of Life on June 25, 2025."
+        }
+      }
+    },
+    {
+      "id": "8.1-cr",
+      "name": "XenServer 8.1 CR",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-12-17"
+      },
+      "upstream": {
+        "name": "8.1 CR",
+        "cells": {
+          "Product/Component Name": "Citrix Hypervisor",
+          "Version/Model": "8.1 CR",
+          "Language": "EN, SC, JA",
+          "NSC": "17-Dec-19",
+          "EOM": "N/A",
+          "EOL": "17-Dec-20",
+          "EOES": "N/A"
+        },
+        "table": "Citrix Hypervisor tab",
+        "page": "https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html"
+      }
+    },
+    {
+      "id": "8.0-cr",
+      "name": "XenServer 8.0 CR",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-08-31"
+      },
+      "upstream": {
+        "name": "8.0 CR",
+        "cells": {
+          "Product/Component Name": "Citrix Hypervisor",
+          "Version/Model": "8.0 CR",
+          "Language": "EN, SC, JA",
+          "NSC": "25-Apr-19",
+          "EOM": "N/A",
+          "EOL": "31-Aug-20",
+          "EOES": "N/A"
+        },
+        "table": "Citrix Hypervisor tab",
+        "page": "https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html"
+      }
+    },
+    {
+      "id": "7.6-cr",
+      "name": "XenServer 7.6 CR",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-01-10"
+      },
+      "upstream": {
+        "name": "7.6 CR",
+        "cells": {
+          "Product/Component Name": "XenServer",
+          "Version/Model": "7.6 CR",
+          "Language": "EN, SC, JA",
+          "NSC": "6-Sep-18",
+          "EOS": "N/A",
+          "EOM": "N/A",
+          "EOL": "10-Jan-20",
+          "EOES": "N/A"
+        },
+        "table": "XenServer tab / Current Release (CR) Lifecycle Dates",
+        "page": "https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html"
+      }
+    },
+    {
+      "id": "7.5-cr",
+      "name": "XenServer 7.5 CR",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2019-05-07"
+      },
+      "upstream": {
+        "name": "7.5 CR",
+        "cells": {
+          "Product/Component Name": "XenServer",
+          "Version/Model": "7.5 CR",
+          "Language": "EN, SC, JA",
+          "NSC": "30-May-18",
+          "EOS": "N/A",
+          "EOM": "N/A",
+          "EOL": "7-May-19",
+          "EOES": "N/A"
+        },
+        "table": "XenServer tab / Current Release (CR) Lifecycle Dates",
+        "page": "https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html"
+      }
+    },
+    {
+      "id": "7.4-cr",
+      "name": "XenServer 7.4 CR",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2018-10-06"
+      },
+      "upstream": {
+        "name": "7.4 CR",
+        "cells": {
+          "Product/Component Name": "XenServer",
+          "Version/Model": "7.4 CR",
+          "Language": "EN, SC, JA",
+          "NSC": "28-Feb-18",
+          "EOS": "N/A",
+          "EOM": "N/A",
+          "EOL": "6-Oct-18",
+          "EOES": "N/A"
+        },
+        "table": "XenServer tab / Current Release (CR) Lifecycle Dates",
+        "page": "https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html"
+      }
+    },
+    {
+      "id": "7.3-cr",
+      "name": "XenServer 7.3 CR",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2018-06-27"
+      },
+      "upstream": {
+        "name": "7.3 CR",
+        "cells": {
+          "Product/Component Name": "XenServer",
+          "Version/Model": "7.3 CR",
+          "Language": "EN, SC, JA",
+          "NSC": "13-Dec-17",
+          "EOS": "N/A",
+          "EOM": "N/A",
+          "EOL": "27-Jun-18",
+          "EOES": "N/A"
+        },
+        "table": "XenServer tab / Current Release (CR) Lifecycle Dates",
+        "page": "https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html"
+      }
+    },
+    {
+      "id": "7.2-cr",
+      "name": "XenServer 7.2 CR",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2018-04-13"
+      },
+      "upstream": {
+        "name": "7.2 CR",
+        "cells": {
+          "Product/Component Name": "XenServer",
+          "Version/Model": "7.2 CR",
+          "Language": "EN, SC, JA",
+          "NSC": "25-May-17",
+          "EOS": "N/A",
+          "EOM": "N/A",
+          "EOL": "13-Apr-18",
+          "EOES": "N/A"
+        },
+        "table": "XenServer tab / Current Release (CR) Lifecycle Dates",
+        "page": "https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html"
+      }
+    },
+    {
+      "id": "7.1-ltsr",
+      "name": "XenServer 7.1 LTSR",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-08-15"
+      },
+      "upstream": {
+        "name": "7.1 LTSR",
+        "cells": {
+          "Product/Component Name": "XenServer",
+          "Version/Model": "7.1 LTSR",
+          "Language": "EN, SC, JA",
+          "NSC": "23-Apr-17",
+          "EOM": "N/A",
+          "EOL": "15-Aug-22",
+          "EOES": "N/A",
+          "Notes": "Maintenance for this release is only available on Cumulative Update 2"
+        },
+        "table": "XenServer tab / Long Term Service Release (LTSR) Lifecycle Dates",
+        "page": "https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html"
+      }
+    },
+    {
+      "id": "7.0-cr",
+      "name": "XenServer 7.0 CR",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-05-19"
+      },
+      "upstream": {
+        "name": "7.0 CR",
+        "cells": {
+          "Product/Component Name": "XenServer",
+          "Version/Model": "7.0 CR",
+          "Language": "EN, SC, JA",
+          "NSC": "19-Apr-16",
+          "EOS": "N/A",
+          "EOM": "19-May-19",
+          "EOL": "19-May-21",
+          "EOES": "N/A"
+        },
+        "table": "XenServer tab / Current Release (CR) Lifecycle Dates",
+        "page": "https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html"
+      }
+    },
+    {
+      "id": "6.5",
+      "name": "XenServer 6.5",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2018-06-26"
+      },
+      "upstream": {
+        "name": "6.5",
+        "cells": {
+          "Product/Component Name": "XenServer",
+          "Version/Model": "6.5",
+          "Language": "EN, SC, JA",
+          "NSC": "28-Jan-15",
+          "EOS": "N/A",
+          "EOM": "30-Sep-17",
+          "EOL": "26-Jun-18",
+          "EOES": "N/A"
+        },
+        "table": "XenServer tab / Current Release (CR) Lifecycle Dates",
+        "page": "https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html"
+      }
+    },
+    {
+      "id": "6.2",
+      "name": "XenServer 6.2",
+      "milestones": {
+        "ga": null,
+        "eos": "2015-05-13",
+        "eossec": null,
+        "eol": "2018-06-26"
+      },
+      "upstream": {
+        "name": "6.2",
+        "cells": {
+          "Product/Component Name": "XenServer",
+          "Version/Model": "6.2",
+          "Language": "EN",
+          "NSC": "11-Feb-15",
+          "EOS": "13-May-15",
+          "EOM": "30-Sep-16",
+          "EOL": "26-Jun-18",
+          "EOES": "N/A"
+        },
+        "table": "XenServer tab / Current Release (CR) Lifecycle Dates",
+        "page": "https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html"
+      }
+    },
+    {
+      "id": "6.1",
+      "name": "XenServer 6.1",
+      "milestones": {
+        "ga": null,
+        "eos": "2015-03-31",
+        "eossec": null,
+        "eol": "2016-09-30"
+      },
+      "upstream": {
+        "name": "6.1",
+        "cells": {
+          "Product/Component Name": "XenServer",
+          "Version/Model": "6.1",
+          "Language": "EN, SC, JA",
+          "NSC": "25-Jun-13",
+          "EOS": "31-Mar-15",
+          "EOM": "30-Sep-16",
+          "EOL": "30-Sep-16",
+          "EOES": "N/A"
+        },
+        "table": "XenServer tab / Current Release (CR) Lifecycle Dates",
+        "page": "https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html"
+      }
+    },
+    {
+      "id": "6.0.2-cc",
+      "name": "XenServer 6.0.2 CC",
+      "milestones": {
+        "ga": null,
+        "eos": "2013-07-25",
+        "eossec": null,
+        "eol": "2018-06-26"
+      },
+      "upstream": {
+        "name": "6.0.2 CC",
+        "cells": {
+          "Product/Component Name": "XenServer",
+          "Version/Model": "6.0.2 CC",
+          "Language": "EN",
+          "NSC": "26-Nov-13",
+          "EOS": "25-Jul-13",
+          "EOM": "26-Jun-14",
+          "EOL": "26-Jun-18",
+          "EOES": "N/A"
+        },
+        "table": "XenServer tab / Current Release (CR) Lifecycle Dates",
+        "page": "https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html"
+      }
+    },
+    {
+      "id": "6.0.2",
+      "name": "XenServer 6.0.2",
+      "milestones": {
+        "ga": null,
+        "eos": "2013-07-25",
+        "eossec": null,
+        "eol": "2016-09-26"
+      },
+      "upstream": {
+        "name": "6.0.2",
+        "cells": {
+          "Product/Component Name": "XenServer",
+          "Version/Model": "6.0.2",
+          "Language": "EN, SC, JA",
+          "NSC": "25-Apr-16",
+          "EOS": "25-Jul-13",
+          "EOM": "26-Sep-14",
+          "EOL": "26-Sep-16",
+          "EOES": "N/A"
+        },
+        "table": "XenServer tab / Current Release (CR) Lifecycle Dates",
+        "page": "https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html"
+      }
+    },
+    {
+      "id": "6.0.0",
+      "name": "XenServer 6.0.0",
+      "milestones": {
+        "ga": null,
+        "eos": "2013-07-25",
+        "eossec": null,
+        "eol": "2016-09-26"
+      },
+      "upstream": {
+        "name": "6.0.0",
+        "cells": {
+          "Product/Component Name": "XenServer",
+          "Version/Model": "6.0.0",
+          "Language": "EN, SC",
+          "NSC": "25-Jun-13",
+          "EOS": "25-Jul-13",
+          "EOM": "26-Sep-14",
+          "EOL": "26-Sep-16",
+          "EOES": "N/A"
+        },
+        "table": "XenServer tab / Current Release (CR) Lifecycle Dates",
+        "page": "https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html"
+      }
+    },
+    {
+      "id": "6.0.0-ja",
+      "name": "XenServer 6.0.0",
+      "milestones": {
+        "ga": null,
+        "eos": "2013-09-23",
+        "eossec": null,
+        "eol": "2016-09-26"
+      },
+      "upstream": {
+        "name": "6.0.0",
+        "cells": {
+          "Product/Component Name": "XenServer",
+          "Version/Model": "6.0.0",
+          "Language": "JA",
+          "NSC": "25-Jun-13",
+          "EOS": "23-Sep-13",
+          "EOM": "26-Sep-14",
+          "EOL": "26-Sep-16",
+          "EOES": "N/A"
+        },
+        "table": "XenServer tab / Current Release (CR) Lifecycle Dates",
+        "page": "https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html"
+      }
+    },
+    {
+      "id": "5.6",
+      "name": "XenServer 5.6",
+      "milestones": {
+        "ga": null,
+        "eos": "2013-07-25",
+        "eossec": null,
+        "eol": "2014-03-31"
+      },
+      "upstream": {
+        "name": "5.6",
+        "cells": {
+          "Product/Component Name": "XenServer",
+          "Version/Model": "5.6",
+          "Language": "EN",
+          "NSC": "25-Jun-13",
+          "EOS": "25-Jul-13",
+          "EOM": "30-Jun-12",
+          "EOL": "31-Mar-14",
+          "EOES": ""
+        },
+        "table": "XenServer tab / Current Release (CR) Lifecycle Dates",
+        "page": "https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html"
+      }
+    },
+    {
+      "id": "5.6-ja",
+      "name": "XenServer 5.6",
+      "milestones": {
+        "ga": null,
+        "eos": "2013-09-23",
+        "eossec": null,
+        "eol": "2014-03-31"
+      },
+      "upstream": {
+        "name": "5.6",
+        "cells": {
+          "Product/Component Name": "XenServer",
+          "Version/Model": "5.6",
+          "Language": "JA",
+          "NSC": "25-Jun-13",
+          "EOS": "23-Sept-13",
+          "EOM": "30-Jun-12",
+          "EOL": "31-Mar-14",
+          "EOES": ""
+        },
+        "table": "XenServer tab / Current Release (CR) Lifecycle Dates",
+        "page": "https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html"
+      }
+    },
+    {
+      "id": "5.5",
+      "name": "XenServer 5.5",
+      "milestones": {
+        "ga": null,
+        "eos": "2013-07-25",
+        "eossec": null,
+        "eol": "2013-09-15"
+      },
+      "upstream": {
+        "name": "5.5",
+        "cells": {
+          "Product/Component Name": "XenServer",
+          "Version/Model": "5.5",
+          "Language": "EN",
+          "NSC": "25-Jun-13",
+          "EOS": "25-Jul-13",
+          "EOM": "15-Sep-11",
+          "EOL": "15-Sep-13",
+          "EOES": ""
+        },
+        "table": "XenServer tab / Current Release (CR) Lifecycle Dates",
+        "page": "https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html"
+      }
+    },
+    {
+      "id": "5.5-ja",
+      "name": "XenServer 5.5",
+      "milestones": {
+        "ga": null,
+        "eos": "2013-09-23",
+        "eossec": null,
+        "eol": "2013-09-15"
+      },
+      "upstream": {
+        "name": "5.5",
+        "cells": {
+          "Product/Component Name": "XenServer",
+          "Version/Model": "5.5",
+          "Language": "JA",
+          "NSC": "25-Jun-13",
+          "EOS": "23-Sept-13",
+          "EOM": "15-Sep-11",
+          "EOL": "15-Sep-13",
+          "EOES": ""
+        },
+        "table": "XenServer tab / Current Release (CR) Lifecycle Dates",
+        "page": "https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html"
+      }
+    },
+    {
+      "id": "5",
+      "name": "XenServer 5",
+      "milestones": {
+        "ga": null,
+        "eos": "2013-07-25",
+        "eossec": null,
+        "eol": "2013-09-15"
+      },
+      "upstream": {
+        "name": "5",
+        "cells": {
+          "Product/Component Name": "XenServer",
+          "Version/Model": "5",
+          "Language": "EN",
+          "NSC": "25-Jun-13",
+          "EOS": "25-Jul-13",
+          "EOM": "15-Sep-11",
+          "EOL": "15-Sep-13",
+          "EOES": ""
+        },
+        "table": "XenServer tab / Current Release (CR) Lifecycle Dates",
+        "page": "https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html"
+      }
+    },
+    {
+      "id": "5-ja",
+      "name": "XenServer 5",
+      "milestones": {
+        "ga": null,
+        "eos": "2013-09-23",
+        "eossec": null,
+        "eol": "2013-09-15"
+      },
+      "upstream": {
+        "name": "5",
+        "cells": {
+          "Product/Component Name": "XenServer",
+          "Version/Model": "5",
+          "Language": "JA",
+          "NSC": "25-Jun-13",
+          "EOS": "23-Sept-13",
+          "EOM": "15-Sep-11",
+          "EOL": "15-Sep-13",
+          "EOES": ""
+        },
+        "table": "XenServer tab / Current Release (CR) Lifecycle Dates",
+        "page": "https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html"
+      }
+    },
+    {
+      "id": "4.1",
+      "name": "XenServer 4.1",
+      "milestones": {
+        "ga": null,
+        "eos": "2008-09-15",
+        "eossec": null,
+        "eol": "2009-12-13"
+      },
+      "upstream": {
+        "name": "4.1",
+        "cells": {
+          "Product/Component Name": "XenServer",
+          "Version/Model": "4.1",
+          "Language": "EN, JA",
+          "NSC": "15-Jun-08",
+          "EOS": "15-Sep-08",
+          "EOM": "14-Sep-09",
+          "EOL": "13-Dec-09"
+        },
+        "table": "XenSource XenServer tab",
+        "page": "https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html"
+      }
+    },
+    {
+      "id": "4.0-express-standard-and-enterprise-edition",
+      "name": "XenServer 4.0 Express, Standard, and Enterprise Edition",
+      "milestones": {
+        "ga": null,
+        "eos": "2008-03-31",
+        "eossec": null,
+        "eol": "2009-06-29"
+      },
+      "upstream": {
+        "name": "4.0 Express, Standard, and Enterprise Edition",
+        "cells": {
+          "Product/Component Name": "XenServer",
+          "Version/Model": "4.0 Express, Standard, and Enterprise Edition",
+          "Language": "EN",
+          "NSC": "31-Dec-07",
+          "EOS": "31-Mar-08",
+          "EOM": "30-Mar-09",
+          "EOL": "29-Jun-09"
+        },
+        "table": "XenSource XenServer tab",
+        "page": "https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html"
+      }
+    },
+    {
+      "id": "3.2-xenexpress-xenserver-xenenterprise",
+      "name": "XenServer 3.2 XenExpress, XenServer, XenEnterprise",
+      "milestones": {
+        "ga": null,
+        "eos": "2007-08-31",
+        "eossec": null,
+        "eol": "2009-03-31"
+      },
+      "upstream": {
+        "name": "3.2 XenExpress, XenServer, XenEnterprise",
+        "cells": {
+          "Product/Component Name": "XenServer",
+          "Version/Model": "3.2 XenExpress, XenServer, XenEnterprise",
+          "Language": "EN",
+          "NSC": "10-Mar-08",
+          "EOS": "31-Aug-07",
+          "EOM": "30-Sep-08",
+          "EOL": "31-Mar-09"
+        },
+        "table": "XenSource XenServer tab",
+        "page": "https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html"
+      }
+    },
+    {
+      "id": "3.1-and-earlier",
+      "name": "XenServer 3.1 and earlier",
+      "milestones": {
+        "ga": null,
+        "eos": "2007-04-30",
+        "eossec": null,
+        "eol": "2007-12-31"
+      },
+      "upstream": {
+        "name": "3.1 and earlier",
+        "cells": {
+          "Product/Component Name": "XenServer",
+          "Version/Model": "3.1 and earlier",
+          "Language": "EN",
+          "NSC": "10-Mar-08",
+          "EOS": "30-Apr-07 XenExpress, XenServer, XenEnterprise",
+          "EOM": "31-Dec-07",
+          "EOL": "31-Dec-07"
+        },
+        "table": "XenSource XenServer tab",
+        "page": "https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html"
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://www.xenserver.com/support",
+    "verifier": "deterministic-xenserver",
+    "last_checked": "2026-09-24T01:06:33Z",
+    "upstream_modified": null
+  }
+}
