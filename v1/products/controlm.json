@@ -1,0 +1,210 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "controlm",
+  "name": "Control-M",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:bmc:control-m"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:bmc:control-m"
+    }
+  ],
+  "labels": {
+    "eoas": "Full Support",
+    "discontinued": null,
+    "eol": "Limited Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/bmcsoftware.svg",
+    "html": "https://endoflife.date/controlm",
+    "releasePolicy": "http://www.bmc.com/support/product-support-policy.html"
+  },
+  "releases": [
+    {
+      "id": "9.0.22",
+      "name": "9.0.22",
+      "milestones": {
+        "ga": "2025-05-19",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.0.22",
+        "codename": null,
+        "label": "9.0.22",
+        "releaseDate": "2025-05-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": "2028-05-19",
+        "isEol": false,
+        "eolFrom": "2030-05-19",
+        "isMaintained": true,
+        "latest": {
+          "name": "9.0.22.100",
+          "date": "2026-06-17",
+          "link": "https://docs.bmc.com/xwiki/bin/view/Control-M-Orchestration/Control-M/ctm9022/Control-M-Server-9-0-22-100-Release-Notes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.0.21",
+      "name": "9.0.21",
+      "milestones": {
+        "ga": "2022-09-08",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.0.21",
+        "codename": null,
+        "label": "9.0.21",
+        "releaseDate": "2022-09-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": "2026-09-30",
+        "isEol": false,
+        "eolFrom": "2027-09-08",
+        "isMaintained": true,
+        "latest": {
+          "name": "9.0.21.300",
+          "date": "2024-08-19",
+          "link": "https://docs.bmc.com/xwiki/bin/view/Control-M-Orchestration/Control-M/ctm9021/Control-M-9-0-21-300-Release-Notes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.0.20",
+      "name": "9.0.20",
+      "milestones": {
+        "ga": "2020-07-24",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.0.20",
+        "codename": null,
+        "label": "9.0.20",
+        "releaseDate": "2020-07-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-04-30",
+        "isEol": true,
+        "eolFrom": "2025-07-23",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.0.20.200",
+          "date": "2021-10-28",
+          "link": "https://docs.bmc.com/xwiki/bin/view/Control-M-Orchestration/Control-M/ctm9020/Control-M-Version-9-0-20-200-Release-Notes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.0.19",
+      "name": "9.0.19",
+      "milestones": {
+        "ga": "2019-03-04",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.0.19",
+        "codename": null,
+        "label": "9.0.19",
+        "releaseDate": "2019-03-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-12-31",
+        "isEol": true,
+        "eolFrom": "2024-03-04",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.0.19.200",
+          "date": "2020-01-16",
+          "link": "https://docs.bmc.com/xwiki/bin/view/Control-M-Orchestration/Control-M/ctm9019/Control-M-Version-9-0-19-200-Release-Notes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.0.18",
+      "name": "9.0.18",
+      "milestones": {
+        "ga": "2018-01-03",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.0.18",
+        "codename": null,
+        "label": "9.0.18",
+        "releaseDate": "2018-01-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-03-31",
+        "isEol": true,
+        "eolFrom": "2023-03-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.0.18.200",
+          "date": "2018-10-04",
+          "link": "https://docs.bmc.com/xwiki/bin/view/Control-M-Orchestration/Control-M/ctm9018/Control-M-Version-9-0-18-200-Release-Notes/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.0.0",
+      "name": "9.0.0",
+      "milestones": {
+        "ga": "2015-07-15",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.0.0",
+        "codename": null,
+        "label": "9.0.0",
+        "releaseDate": "2015-07-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2018-08-01",
+        "isEol": true,
+        "eolFrom": "2020-10-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.0.00.200",
+          "date": "2016-06-21",
+          "link": "https://documents.bmc.com/supportu/952/78/79/477879/477879.pdf"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/controlm/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-08-26T21:10:37+00:00"
+  }
+}

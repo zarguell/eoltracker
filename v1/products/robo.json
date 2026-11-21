@@ -1,0 +1,195 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "robo",
+  "name": "Robo",
+  "category": "software",
+  "upstream_category": "framework",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "robo"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:composer/consolidation/robo"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/consolidation/robo"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/robo",
+    "releasePolicy": null
+  },
+  "releases": [
+    {
+      "id": "5",
+      "name": "5",
+      "milestones": {
+        "ga": "2024-04-17",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5",
+        "codename": null,
+        "label": "5",
+        "releaseDate": "2024-04-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "5.1.1",
+          "date": "2025-11-14",
+          "link": null
+        },
+        "custom": {
+          "supportedPHPVersions": "8.2 - 8.3"
+        }
+      }
+    },
+    {
+      "id": "4",
+      "name": "4",
+      "milestones": {
+        "ga": "2022-04-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4",
+        "codename": null,
+        "label": "4",
+        "releaseDate": "2022-04-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "4.0.6",
+          "date": "2023-04-30",
+          "link": null
+        },
+        "custom": {
+          "supportedPHPVersions": "8.0 - 8.3"
+        }
+      }
+    },
+    {
+      "id": "3",
+      "name": "3",
+      "milestones": {
+        "ga": "2021-02-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3",
+        "codename": null,
+        "label": "3",
+        "releaseDate": "2021-02-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "3.0.12",
+          "date": "2023-04-30",
+          "link": null
+        },
+        "custom": {
+          "supportedPHPVersions": "7.1 - 8.1"
+        }
+      }
+    },
+    {
+      "id": "2",
+      "name": "2",
+      "milestones": {
+        "ga": "2019-10-29",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2",
+        "codename": null,
+        "label": "2",
+        "releaseDate": "2019-10-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "2.2.2",
+          "date": "2020-12-18",
+          "link": null
+        },
+        "custom": {
+          "supportedPHPVersions": "7.1 - 7.4"
+        }
+      }
+    },
+    {
+      "id": "1",
+      "name": "1",
+      "milestones": {
+        "ga": "2016-10-13",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1",
+        "codename": null,
+        "label": "1",
+        "releaseDate": "2016-10-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "1.5.0",
+          "date": "2021-10-07",
+          "link": null
+        },
+        "custom": {
+          "supportedPHPVersions": "5.5 - 7.4"
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/robo/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-07-06T14:46:10+00:00"
+  }
+}

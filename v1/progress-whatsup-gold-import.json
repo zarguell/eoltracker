@@ -1,0 +1,115 @@
+{
+  "source_url": "https://docs.progress.com/bundle/whatsup-gold-life-cycle/page/Life-Cycle.html",
+  "policy_url": "https://docs.progress.com/bundle/product-eos-policy/page/Policy.html",
+  "verifier": "deterministic-progress-whatsup-gold",
+  "checked_at": "2026-09-26T14:52:56Z",
+  "record_scope": "Progress WhatsUp Gold release families and deprecated releases: one software record, one release per vendor row, at the month precision the page states",
+  "rows": {
+    "seen": 29,
+    "published": 22,
+    "retained": 0,
+    "excluded": 7
+  },
+  "tables": [
+    {
+      "table": "WhatsUp Gold Life Cycle",
+      "rows": 1,
+      "published": 1,
+      "excluded": 0
+    },
+    {
+      "table": "Retired WhatsUp Gold Releases",
+      "rows": 1,
+      "published": 1,
+      "excluded": 0
+    },
+    {
+      "table": "Deprecated WhatsUp Gold Releases",
+      "rows": 20,
+      "published": 20,
+      "excluded": 0
+    }
+  ],
+  "excluded": [
+    {
+      "table": "End-of-Sale (EoS) Offerings",
+      "context": "offering",
+      "rows": 1,
+      "offering": "Standard Edition",
+      "eos": "2024-01",
+      "suggested_replacement": "Business, Enterprise, or Enterprise Plus Edition",
+      "reason": "an offering (edition, add-on or license type), not a release: the vendor's End-of-Sale Policy defines the EoS date as orderability, not support end, and the schema models eos per release"
+    },
+    {
+      "table": "End-of-Sale (EoS) Offerings",
+      "context": "offering",
+      "rows": 1,
+      "offering": "Total Edition",
+      "eos": "2024-01",
+      "suggested_replacement": "Enterprise or Enterprise Plus Edition",
+      "reason": "an offering (edition, add-on or license type), not a release: the vendor's End-of-Sale Policy defines the EoS date as orderability, not support end, and the schema models eos per release"
+    },
+    {
+      "table": "End-of-Sale (EoS) Offerings",
+      "context": "offering",
+      "rows": 1,
+      "offering": "MSP Edition",
+      "eos": "2023-10",
+      "suggested_replacement": "Enterprise or Enterprise Plus Edition",
+      "reason": "an offering (edition, add-on or license type), not a release: the vendor's End-of-Sale Policy defines the EoS date as orderability, not support end, and the schema models eos per release"
+    },
+    {
+      "table": "End-of-Sale (EoS) Offerings",
+      "context": "offering",
+      "rows": 1,
+      "offering": "Unrestricted Licenses",
+      "eos": "2024-10",
+      "suggested_replacement": "10k, 15k, 20k, or 25k device license",
+      "reason": "an offering (edition, add-on or license type), not a release: the vendor's End-of-Sale Policy defines the EoS date as orderability, not support end, and the schema models eos per release"
+    },
+    {
+      "table": "End-of-Sale (EoS) Offerings",
+      "context": "offering",
+      "rows": 1,
+      "offering": "Failover Manager add-on License",
+      "eos": "2025-01",
+      "suggested_replacement": "Total Plus, Enterprise, or Enterprise Plus",
+      "reason": "an offering (edition, add-on or license type), not a release: the vendor's End-of-Sale Policy defines the EoS date as orderability, not support end, and the schema models eos per release"
+    },
+    {
+      "table": "End-of-Sale (EoS) Offerings",
+      "context": "offering",
+      "rows": 1,
+      "offering": "VoIP Monitor add-on License",
+      "eos": "2025-01",
+      "suggested_replacement": "Total Plus, Enterprise, or Enterprise Plus",
+      "reason": "an offering (edition, add-on or license type), not a release: the vendor's End-of-Sale Policy defines the EoS date as orderability, not support end, and the schema models eos per release"
+    },
+    {
+      "table": "Life Cycle",
+      "context": "navigation",
+      "rows": 1,
+      "cells": [
+        "",
+        "WhatsUp Gold Life Cycle Retired WhatsUp Gold Releases Deprecated WhatsUp Gold Releases End-of-Sale (EoS) Offerings"
+      ],
+      "reason": "the page's jump list of section links is navigation, not a lifecycle row"
+    }
+  ],
+  "retained": [],
+  "total_records": 1,
+  "offering_scope_decision": {
+    "decision": "excluded",
+    "offerings": 6,
+    "quote": "cannot be renewed at the next support and maintenance anniversary",
+    "policy_url": "https://docs.progress.com/bundle/product-eos-policy/page/Policy.html",
+    "reason": "the six EoS rows name offerings (editions, add-on licenses), not releases; the vendor's policy defines the EoS date as the end of orderability and renewal, and the schema has no offering scope, so they are reported as exclusions rather than republished as invented releases"
+  },
+  "limitations": [
+    "The deprecated table states its phase columns as 'Retired | Deprecated', the reverse of the tables above; columns are resolved by label, so 24.0 is Retired 2025-Jun and Deprecated 2026-Apr.",
+    "Deprecated is not a support end: the vendor's policy defines it as no new features with critical security fixes on a case-by-case basis, so the cell stays a vendor cell and never fills eol or eossec.",
+    "26.0's Retired cell is Next-GA, a named release trigger whose calendar date the page states is not yet announced, so its eol is null and no date is derived.",
+    "The deprecated table states no 'Active' column, so those releases have no ga date and none is inferred from their retirement date.",
+    "eos is null for every release: the page's only end-of-sale data is offering-level, and an offering EoS date is never mapped to a release milestone."
+  ]
+}

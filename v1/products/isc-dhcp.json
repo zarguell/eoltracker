@@ -1,0 +1,144 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "isc-dhcp",
+  "name": "ISC DHCP",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "dhcp"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/networkboot/dhcpd"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/isc-dhcp",
+    "releasePolicy": "https://kb.isc.org/docs/aa-00896#isc-dhcp-eol"
+  },
+  "releases": [
+    {
+      "id": "4.4",
+      "name": "4.4",
+      "milestones": {
+        "ga": "2018-01-31",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-10-05"
+      },
+      "upstream": {
+        "name": "4.4",
+        "codename": null,
+        "label": "4.4",
+        "releaseDate": "2018-01-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-10-05",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.4.3-P1",
+          "date": "2022-10-05",
+          "link": "https://ftp.isc.org/isc/dhcp/4.4.3-P1/dhcp-4.4.3-P1-RELNOTES"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.3",
+      "name": "4.3",
+      "milestones": {
+        "ga": "2014-02-04",
+        "eos": null,
+        "eossec": null,
+        "eol": "2018-02-28"
+      },
+      "upstream": {
+        "name": "4.3",
+        "codename": null,
+        "label": "4.3",
+        "releaseDate": "2014-02-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-02-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.3.6-P1",
+          "date": "2018-02-28",
+          "link": "https://ftp.isc.org/isc/dhcp/4.3.6-P1/dhcp-4.3.6-P1-RELNOTES"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.2",
+      "name": "4.2",
+      "milestones": {
+        "ga": "2010-07-15",
+        "eos": null,
+        "eossec": null,
+        "eol": "2015-03-05"
+      },
+      "upstream": {
+        "name": "4.2",
+        "codename": null,
+        "label": "4.2",
+        "releaseDate": "2010-07-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2015-03-05",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.2.8",
+          "date": "2015-03-05",
+          "link": "https://ftp.isc.org/isc/dhcp/4.2.8/dhcp-4.2.8-RELNOTES"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.1",
+      "name": "4.1",
+      "milestones": {
+        "ga": "2008-12-19",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-10-05"
+      },
+      "upstream": {
+        "name": "4.1",
+        "codename": null,
+        "label": "4.1",
+        "releaseDate": "2008-12-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-10-05",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.1-ESV-R16-P2",
+          "date": "2022-10-05",
+          "link": "https://ftp.isc.org/isc/dhcp/4.1-ESV-R16-P2/dhcp-4.1-ESV-R16-P2-RELNOTES"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/isc-dhcp/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-05-01T09:58:42+00:00"
+  }
+}

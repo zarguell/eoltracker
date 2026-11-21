@@ -1,0 +1,446 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "scala",
+  "name": "Scala",
+  "category": "software",
+  "upstream_category": "lang",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "scala"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:scala-lang:scala"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:scala-lang:scala"
+    }
+  ],
+  "labels": {
+    "eoas": "Current Releases",
+    "discontinued": null,
+    "eol": "Maintenance Releases",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/scala.svg",
+    "html": "https://endoflife.date/scala",
+    "releasePolicy": "https://www.scala-lang.org/download/all.html"
+  },
+  "releases": [
+    {
+      "id": "3.9",
+      "name": "3.9 (LTS)",
+      "milestones": {
+        "ga": "2026-09-03",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.9",
+        "codename": null,
+        "label": "3.9 (LTS)",
+        "releaseDate": "2026-09-03",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "3.9.0",
+          "date": "2026-09-03",
+          "link": "https://github.com/lampepfl/dotty/releases/tag/3.9.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.8",
+      "name": "3.8",
+      "milestones": {
+        "ga": "2026-01-22",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.8",
+        "codename": null,
+        "label": "3.8",
+        "releaseDate": "2026-01-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-09-03",
+        "isEol": true,
+        "eolFrom": "2026-09-03",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.8.4",
+          "date": "2026-06-05",
+          "link": "https://github.com/lampepfl/dotty/releases/tag/3.8.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.7",
+      "name": "3.7",
+      "milestones": {
+        "ga": "2025-05-07",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.7",
+        "codename": null,
+        "label": "3.7",
+        "releaseDate": "2025-05-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-01-22",
+        "isEol": true,
+        "eolFrom": "2026-01-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.7.4",
+          "date": "2025-11-11",
+          "link": "https://github.com/lampepfl/dotty/releases/tag/3.7.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.6",
+      "name": "3.6",
+      "milestones": {
+        "ga": "2024-12-10",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.6",
+        "codename": null,
+        "label": "3.6",
+        "releaseDate": "2024-12-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-05-07",
+        "isEol": true,
+        "eolFrom": "2025-05-07",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.6.4",
+          "date": "2025-03-07",
+          "link": "https://github.com/lampepfl/dotty/releases/tag/3.6.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.5",
+      "name": "3.5",
+      "milestones": {
+        "ga": "2024-08-22",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.5",
+        "codename": null,
+        "label": "3.5",
+        "releaseDate": "2024-08-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-12-10",
+        "isEol": true,
+        "eolFrom": "2024-12-10",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.5.2",
+          "date": "2024-10-22",
+          "link": "https://github.com/lampepfl/dotty/releases/tag/3.5.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.4",
+      "name": "3.4",
+      "milestones": {
+        "ga": "2024-02-14",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.4",
+        "codename": null,
+        "label": "3.4",
+        "releaseDate": "2024-02-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-08-22",
+        "isEol": true,
+        "eolFrom": "2024-08-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.4.3",
+          "date": "2024-08-23",
+          "link": "https://github.com/lampepfl/dotty/releases/tag/3.4.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.3",
+      "name": "3.3 (LTS)",
+      "milestones": {
+        "ga": "2023-05-23",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.3",
+        "codename": null,
+        "label": "3.3 (LTS)",
+        "releaseDate": "2023-05-23",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "3.3.8",
+          "date": "2026-06-11",
+          "link": "https://github.com/lampepfl/dotty/releases/tag/3.3.8"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.2",
+      "name": "3.2",
+      "milestones": {
+        "ga": "2022-08-31",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.2",
+        "codename": null,
+        "label": "3.2",
+        "releaseDate": "2022-08-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-05-23",
+        "isEol": true,
+        "eolFrom": "2023-05-23",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.2.2",
+          "date": "2023-01-30",
+          "link": "https://github.com/lampepfl/dotty/releases/tag/3.2.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.1",
+      "name": "3.1",
+      "milestones": {
+        "ga": "2021-10-18",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.1",
+        "codename": null,
+        "label": "3.1",
+        "releaseDate": "2021-10-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-09-01",
+        "isEol": true,
+        "eolFrom": "2022-09-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.1.3",
+          "date": "2022-06-21",
+          "link": "https://github.com/lampepfl/dotty/releases/tag/3.1.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.0",
+      "name": "3.0",
+      "milestones": {
+        "ga": "2021-05-13",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.0",
+        "codename": null,
+        "label": "3.0",
+        "releaseDate": "2021-05-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-10-18",
+        "isEol": true,
+        "eolFrom": "2021-10-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.0.2",
+          "date": "2021-09-01",
+          "link": "https://github.com/lampepfl/dotty/releases/tag/3.0.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.13",
+      "name": "2.13",
+      "milestones": {
+        "ga": "2019-06-07",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.13",
+        "codename": null,
+        "label": "2.13",
+        "releaseDate": "2019-06-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "2.13.18",
+          "date": "2025-11-17",
+          "link": "https://github.com/scala/scala/releases/tag/v2.13.18"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.12",
+      "name": "2.12",
+      "milestones": {
+        "ga": "2016-10-28",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.12",
+        "codename": null,
+        "label": "2.12",
+        "releaseDate": "2016-10-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2019-06-07",
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "2.12.21",
+          "date": "2025-12-08",
+          "link": "https://github.com/scala/scala/releases/tag/v2.12.21"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.11",
+      "name": "2.11",
+      "milestones": {
+        "ga": "2014-04-16",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.11",
+        "codename": null,
+        "label": "2.11",
+        "releaseDate": "2014-04-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2016-11-03",
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "2.11.12",
+          "date": "2017-11-09",
+          "link": "https://github.com/scala/scala/releases/tag/v2.11.12"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.10",
+      "name": "2.10",
+      "milestones": {
+        "ga": "2012-12-19",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.10",
+        "codename": null,
+        "label": "2.10",
+        "releaseDate": "2012-12-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2014-04-17",
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "2.10.7",
+          "date": "2017-11-09",
+          "link": "https://github.com/scala/scala/releases/tag/v2.10.7"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/scala/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-05T13:29:12+00:00"
+  }
+}

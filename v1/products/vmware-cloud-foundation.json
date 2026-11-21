@@ -1,0 +1,459 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "vmware-cloud-foundation",
+  "name": "VMware Cloud Foundation",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "General Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/vmware.svg",
+    "html": "https://endoflife.date/vmware-cloud-foundation",
+    "releasePolicy": "https://ftpdocs.broadcom.com/WebInterface/phpdocs/0/MSPSaccount/COMPAT/AllProdDates.HTML"
+  },
+  "releases": [
+    {
+      "id": "9.1",
+      "name": "9.1",
+      "milestones": {
+        "ga": "2026-05-12",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.1",
+        "codename": null,
+        "label": "9.1",
+        "releaseDate": "2026-05-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2028-08-12",
+        "isMaintained": true,
+        "latest": {
+          "name": "9.1.1.0",
+          "date": "2026-09-03",
+          "link": "https://techdocs.broadcom.com/us/en/vmware-cis/vcf/vcf-9-0-and-later/9-1/release-notes/vmware-cloud-foundation-9-1-1-0-release-notes.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.0",
+      "name": "9.0",
+      "milestones": {
+        "ga": "2025-06-17",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.0",
+        "codename": null,
+        "label": "9.0",
+        "releaseDate": "2025-06-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-09-17",
+        "isMaintained": true,
+        "latest": {
+          "name": "9.0.2.0",
+          "date": "2026-01-20",
+          "link": "https://techdocs.broadcom.com/us/en/vmware-cis/vcf/vcf-9-0-and-later/9-0/release-notes/vmware-cloud-foundation-9-0-2-release-notes.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.2",
+      "name": "5.2",
+      "milestones": {
+        "ga": "2024-07-23",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.2",
+        "codename": null,
+        "label": "5.2",
+        "releaseDate": "2024-07-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-10-11",
+        "isMaintained": true,
+        "latest": {
+          "name": "5.2.3",
+          "date": "2026-02-24",
+          "link": "https://techdocs.broadcom.com/us/en/vmware-cis/vcf/vcf-5-2-and-earlier/5-2/vcf-release-notes/vmware-cloud-foundation-523-release-notes.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.1",
+      "name": "5.1",
+      "milestones": {
+        "ga": "2023-11-07",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.1",
+        "codename": null,
+        "label": "5.1",
+        "releaseDate": "2023-11-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-06-01",
+        "isMaintained": true,
+        "latest": {
+          "name": "5.1.1",
+          "date": "2024-03-26",
+          "link": "https://techdocs.broadcom.com/us/en/vmware-cis/vcf/vcf-5-2-and-earlier/5-1/vcf-release-notes/vmware-cloud-foundation-511-release-notes.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.0",
+      "name": "5.0",
+      "milestones": {
+        "ga": "2023-06-01",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.0",
+        "codename": null,
+        "label": "5.0",
+        "releaseDate": "2023-06-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-06-01",
+        "isMaintained": true,
+        "latest": {
+          "name": "5.0.0.1",
+          "date": "2023-09-29",
+          "link": "https://techdocs.broadcom.com/us/en/vmware-cis/vcf/vcf-5-2-and-earlier/5-0/vcf-release-notes/vmware-cloud-foundation-50-release-notes.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.5",
+      "name": "4.5",
+      "milestones": {
+        "ga": "2022-10-11",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.5",
+        "codename": null,
+        "label": "4.5",
+        "releaseDate": "2022-10-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-05-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.5.2",
+          "date": "2023-08-17",
+          "link": "https://techdocs.broadcom.com/us/en/vmware-cis/vcf/vcf-5-2-and-earlier/4-5/vcf-release-notes/vmware-cloud-foundation-452-release-notes.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.11",
+      "name": "3.11",
+      "milestones": {
+        "ga": "2022-02-14",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.11",
+        "codename": null,
+        "label": "3.11",
+        "releaseDate": "2022-02-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-04-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.11.0.1",
+          "date": "2022-04-07",
+          "link": "https://web.archive.org/web/20250130132930/https://docs.vmware.com/en/VMware-Cloud-Foundation/3.11/rn/vmware-cloud-foundation-311-release-notes/index.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.4",
+      "name": "4.4",
+      "milestones": {
+        "ga": "2022-02-10",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.4",
+        "codename": null,
+        "label": "4.4",
+        "releaseDate": "2022-02-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-09-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.4.1",
+          "date": "2022-05-12",
+          "link": "https://web.archive.org/web/20241225104101/https://docs.vmware.com/en/VMware-Cloud-Foundation/4.4/rn/vmware-cloud-foundation-44-release-notes/index.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.3",
+      "name": "4.3",
+      "milestones": {
+        "ga": "2021-08-24",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.3",
+        "codename": null,
+        "label": "4.3",
+        "releaseDate": "2021-08-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-10-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.3.1",
+          "date": "2021-09-21",
+          "link": "https://web.archive.org/web/20231208122710/https://docs.vmware.com/en/VMware-Cloud-Foundation/4.3/rn/vmware-cloud-foundation-43-release-notes/index.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.2",
+      "name": "4.2",
+      "milestones": {
+        "ga": "2021-02-04",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.2",
+        "codename": null,
+        "label": "4.2",
+        "releaseDate": "2021-02-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-05-25",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.2.1",
+          "date": "2021-05-25",
+          "link": "https://web.archive.org/web/20230207182610/https://docs.vmware.com/en/VMware-Cloud-Foundation/4.2/rn/vmware-cloud-foundation-42-release-notes/index.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.1",
+      "name": "4.1",
+      "milestones": {
+        "ga": "2020-10-06",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.1",
+        "codename": null,
+        "label": "4.1",
+        "releaseDate": "2020-10-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-02-10",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.1.0",
+          "date": "2020-10-06",
+          "link": "https://web.archive.org/web/20220818043622/https://docs.vmware.com/en/VMware-Cloud-Foundation/4.1/rn/vmware-cloud-foundation-41-release-notes/index.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.10",
+      "name": "3.10",
+      "milestones": {
+        "ga": "2020-05-26",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.10",
+        "codename": null,
+        "label": "3.10",
+        "releaseDate": "2020-05-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-09-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.10.2",
+          "date": "2021-04-14",
+          "link": "https://web.archive.org/web/20250130102316/https://docs.vmware.com/en/VMware-Cloud-Foundation/3.10/rn/vmware-cloud-foundation-310-release-notes/index.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.0",
+      "name": "4.0",
+      "milestones": {
+        "ga": "2020-04-14",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.0",
+        "codename": null,
+        "label": "4.0",
+        "releaseDate": "2020-04-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-08-24",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.0.1",
+          "date": "2020-06-25",
+          "link": "https://web.archive.org/web/20230207120731/https://docs.vmware.com/en/VMware-Cloud-Foundation/4.0/rn/vmware-cloud-foundation-40-release-notes/index.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.9",
+      "name": "3.9",
+      "milestones": {
+        "ga": "2019-10-24",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.9",
+        "codename": null,
+        "label": "3.9",
+        "releaseDate": "2019-10-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-10-24",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.9.1",
+          "date": "2020-01-14",
+          "link": "https://web.archive.org/web/20200104170220/https://docs.vmware.com/en/VMware-Cloud-Foundation/3.9/rn/VMware-Cloud-Foundation-39-Release-Notes.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.8",
+      "name": "3.8",
+      "milestones": {
+        "ga": "2019-07-18",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.8",
+        "codename": null,
+        "label": "3.8",
+        "releaseDate": "2019-07-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-07-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.8.1",
+          "date": "2019-09-03",
+          "link": "https://web.archive.org/web/20200106141656mp_/https://docs.vmware.com/en/VMware-Cloud-Foundation/3.8.1/rn/VMware-Cloud-Foundation-381-Release-Notes.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.3",
+      "name": "2.3",
+      "milestones": {
+        "ga": "2018-08-15",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.3",
+        "codename": null,
+        "label": "2.3",
+        "releaseDate": "2018-08-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-11-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.3.2",
+          "date": "2018-04-24",
+          "link": "https://web.archive.org/web/20230429044053/https://docs.vmware.com/en/VMware-Cloud-Foundation/2.3/vcf-23x-doc.zip"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/vmware-cloud-foundation/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-05T09:13:51+00:00"
+  }
+}

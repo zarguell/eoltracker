@@ -1,0 +1,62 @@
+{
+  "verifier": "deterministic-samba",
+  "rows": {
+    "seen": 32,
+    "published": 32,
+    "retained": 0,
+    "excluded": 0
+  },
+  "milestones": {
+    "ga_stated": 30,
+    "ga_forecast": 2,
+    "eol_stated": 27,
+    "eol_forecast": 5
+  },
+  "forecast_ga": [
+    {
+      "id": "samba-4.25",
+      "name": "Samba 4.25",
+      "cell": "~2026-09"
+    },
+    {
+      "id": "samba-4.24",
+      "name": "Samba 4.24",
+      "cell": "~2026-03"
+    }
+  ],
+  "forecast_eol": [
+    {
+      "id": "samba-4.25",
+      "name": "Samba 4.25",
+      "cell": "~2028-03"
+    },
+    {
+      "id": "samba-4.24",
+      "name": "Samba 4.24",
+      "cell": "~2027-09"
+    },
+    {
+      "id": "samba-4.23",
+      "name": "Samba 4.23",
+      "cell": "~2027-03"
+    },
+    {
+      "id": "samba-4.22",
+      "name": "Samba 4.22",
+      "cell": "~2026-09"
+    },
+    {
+      "id": "samba-4.21",
+      "name": "Samba 4.21",
+      "cell": "~2026-03"
+    }
+  ],
+  "limitations": [
+    "The vendor marks future dates '~': simple forecasts based on the historical release pattern. Forecasts are retained verbatim in upstream.cells and never become milestones.",
+    "The 'security' column dates entry into security-fixes-only mode; security fixes continue until the realized 'discontinued (EOL)' date, so no eossec is published.",
+    "Third-party Samba-AD packaging matrices are out of scope."
+  ],
+  "total_records": 1,
+  "checked_at": "2026-09-17T22:46:55Z",
+  "source_url": "https://wiki.samba.org/index.php/Samba_Release_Planning"
+}

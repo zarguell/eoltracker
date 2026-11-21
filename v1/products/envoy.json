@@ -1,0 +1,1164 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "envoy",
+  "name": "Envoy",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "envoy-proxy"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/envoyproxy/envoy"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/envoyproxy/envoy-alpine"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/envoyproxy/envoy-alpine-debug"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/envoyproxy/envoy-distroless"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/bitnami/envoy"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/rapidfort/envoy-official"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/hashicorp/envoy-fips"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/envoyproxy/envoy"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:golang/github.com/envoyproxy/envoy"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:oci/envoy?repository_url=cgr.dev/chainguard"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:oci/envoy-fips?repository_url=cgr.dev/chainguard"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:envoyproxy:envoy"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:envoyproxy:envoy"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/envoyproxy.svg",
+    "html": "https://endoflife.date/envoy",
+    "releasePolicy": "https://github.com/envoyproxy/envoy/blob/main/RELEASES.md#major-release-schedule"
+  },
+  "releases": [
+    {
+      "id": "1.39",
+      "name": "1.39",
+      "milestones": {
+        "ga": "2026-07-14",
+        "eos": null,
+        "eossec": "2027-07-14",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.39",
+        "codename": null,
+        "label": "1.39",
+        "releaseDate": "2026-07-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-07-14",
+        "isMaintained": true,
+        "latest": {
+          "name": "1.39.1",
+          "date": "2026-08-27",
+          "link": "https://github.com/envoyproxy/envoy/releases/tag/v1.39.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.38",
+      "name": "1.38",
+      "milestones": {
+        "ga": "2026-04-23",
+        "eos": null,
+        "eossec": "2027-04-23",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.38",
+        "codename": null,
+        "label": "1.38",
+        "releaseDate": "2026-04-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-04-23",
+        "isMaintained": true,
+        "latest": {
+          "name": "1.38.4",
+          "date": "2026-08-27",
+          "link": "https://github.com/envoyproxy/envoy/releases/tag/v1.38.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.37",
+      "name": "1.37",
+      "milestones": {
+        "ga": "2026-01-13",
+        "eos": null,
+        "eossec": "2027-01-13",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.37",
+        "codename": null,
+        "label": "1.37",
+        "releaseDate": "2026-01-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-01-13",
+        "isMaintained": true,
+        "latest": {
+          "name": "1.37.6",
+          "date": "2026-08-26",
+          "link": "https://github.com/envoyproxy/envoy/releases/tag/v1.37.6"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.36",
+      "name": "1.36",
+      "milestones": {
+        "ga": "2025-10-14",
+        "eos": null,
+        "eossec": "2026-10-14",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.36",
+        "codename": null,
+        "label": "1.36",
+        "releaseDate": "2025-10-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2026-10-14",
+        "isMaintained": true,
+        "latest": {
+          "name": "1.36.10",
+          "date": "2026-08-26",
+          "link": "https://github.com/envoyproxy/envoy/releases/tag/v1.36.10"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.35",
+      "name": "1.35",
+      "milestones": {
+        "ga": "2025-07-23",
+        "eos": null,
+        "eossec": "2026-07-23",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.35",
+        "codename": null,
+        "label": "1.35",
+        "releaseDate": "2025-07-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-07-23",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.35.13",
+          "date": "2026-06-23",
+          "link": "https://github.com/envoyproxy/envoy/releases/tag/v1.35.13"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.34",
+      "name": "1.34",
+      "milestones": {
+        "ga": "2025-04-15",
+        "eos": null,
+        "eossec": "2026-04-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.34",
+        "codename": null,
+        "label": "1.34",
+        "releaseDate": "2025-04-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-04-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.34.14",
+          "date": "2026-04-10",
+          "link": "https://github.com/envoyproxy/envoy/releases/tag/v1.34.14"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.33",
+      "name": "1.33",
+      "milestones": {
+        "ga": "2025-01-14",
+        "eos": null,
+        "eossec": "2026-01-14",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.33",
+        "codename": null,
+        "label": "1.33",
+        "releaseDate": "2025-01-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-01-14",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.33.14",
+          "date": "2025-12-10",
+          "link": "https://github.com/envoyproxy/envoy/releases/tag/v1.33.14"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.32",
+      "name": "1.32",
+      "milestones": {
+        "ga": "2024-10-15",
+        "eos": null,
+        "eossec": "2025-10-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.32",
+        "codename": null,
+        "label": "1.32",
+        "releaseDate": "2024-10-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-10-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.32.13",
+          "date": "2025-10-13",
+          "link": "https://github.com/envoyproxy/envoy/releases/tag/v1.32.13"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.31",
+      "name": "1.31",
+      "milestones": {
+        "ga": "2024-07-19",
+        "eos": null,
+        "eossec": "2025-07-19",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.31",
+        "codename": null,
+        "label": "1.31",
+        "releaseDate": "2024-07-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-07-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.31.10",
+          "date": "2025-07-18",
+          "link": "https://github.com/envoyproxy/envoy/releases/tag/v1.31.10"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.30",
+      "name": "1.30",
+      "milestones": {
+        "ga": "2024-04-16",
+        "eos": null,
+        "eossec": "2025-04-16",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.30",
+        "codename": null,
+        "label": "1.30",
+        "releaseDate": "2024-04-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-04-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.30.11",
+          "date": "2025-03-25",
+          "link": "https://github.com/envoyproxy/envoy/releases/tag/v1.30.11"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.29",
+      "name": "1.29",
+      "milestones": {
+        "ga": "2024-01-16",
+        "eos": null,
+        "eossec": "2025-01-16",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.29",
+        "codename": null,
+        "label": "1.29",
+        "releaseDate": "2024-01-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-01-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.29.12",
+          "date": "2024-12-18",
+          "link": "https://github.com/envoyproxy/envoy/releases/tag/v1.29.12"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.28",
+      "name": "1.28",
+      "milestones": {
+        "ga": "2023-10-19",
+        "eos": null,
+        "eossec": "2024-10-19",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.28",
+        "codename": null,
+        "label": "1.28",
+        "releaseDate": "2023-10-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-10-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.28.7",
+          "date": "2024-09-19",
+          "link": "https://github.com/envoyproxy/envoy/releases/tag/v1.28.7"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.27",
+      "name": "1.27",
+      "milestones": {
+        "ga": "2023-07-27",
+        "eos": null,
+        "eossec": "2024-07-27",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.27",
+        "codename": null,
+        "label": "1.27",
+        "releaseDate": "2023-07-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-07-27",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.27.7",
+          "date": "2024-06-29",
+          "link": "https://github.com/envoyproxy/envoy/releases/tag/v1.27.7"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.26",
+      "name": "1.26",
+      "milestones": {
+        "ga": "2023-04-18",
+        "eos": null,
+        "eossec": "2024-04-18",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.26",
+        "codename": null,
+        "label": "1.26",
+        "releaseDate": "2023-04-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-04-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.26.8",
+          "date": "2024-04-04",
+          "link": "https://github.com/envoyproxy/envoy/releases/tag/v1.26.8"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.25",
+      "name": "1.25",
+      "milestones": {
+        "ga": "2023-01-18",
+        "eos": null,
+        "eossec": "2024-01-18",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.25",
+        "codename": null,
+        "label": "1.25",
+        "releaseDate": "2023-01-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-01-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.25.11",
+          "date": "2023-10-17",
+          "link": "https://github.com/envoyproxy/envoy/releases/tag/v1.25.11"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.24",
+      "name": "1.24",
+      "milestones": {
+        "ga": "2022-10-19",
+        "eos": null,
+        "eossec": "2023-10-19",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.24",
+        "codename": null,
+        "label": "1.24",
+        "releaseDate": "2022-10-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-10-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.24.12",
+          "date": "2023-10-17",
+          "link": "https://github.com/envoyproxy/envoy/releases/tag/v1.24.12"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.23",
+      "name": "1.23",
+      "milestones": {
+        "ga": "2022-07-15",
+        "eos": null,
+        "eossec": "2023-07-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.23",
+        "codename": null,
+        "label": "1.23",
+        "releaseDate": "2022-07-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-07-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.23.12",
+          "date": "2023-07-25",
+          "link": "https://github.com/envoyproxy/envoy/releases/tag/v1.23.12"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.22",
+      "name": "1.22",
+      "milestones": {
+        "ga": "2022-04-15",
+        "eos": null,
+        "eossec": "2023-04-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.22",
+        "codename": null,
+        "label": "1.22",
+        "releaseDate": "2022-04-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-04-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.22.11",
+          "date": "2023-04-12",
+          "link": "https://github.com/envoyproxy/envoy/releases/tag/v1.22.11"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.21",
+      "name": "1.21",
+      "milestones": {
+        "ga": "2022-01-12",
+        "eos": null,
+        "eossec": "2023-01-12",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.21",
+        "codename": null,
+        "label": "1.21",
+        "releaseDate": "2022-01-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-01-12",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.21.6",
+          "date": "2022-11-28",
+          "link": "https://github.com/envoyproxy/envoy/releases/tag/v1.21.6"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.20",
+      "name": "1.20",
+      "milestones": {
+        "ga": "2021-10-05",
+        "eos": null,
+        "eossec": "2022-10-05",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.20",
+        "codename": null,
+        "label": "1.20",
+        "releaseDate": "2021-10-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-10-05",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.20.7",
+          "date": "2022-07-21",
+          "link": "https://github.com/envoyproxy/envoy/releases/tag/v1.20.7"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.19",
+      "name": "1.19",
+      "milestones": {
+        "ga": "2021-07-13",
+        "eos": null,
+        "eossec": "2022-07-13",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.19",
+        "codename": null,
+        "label": "1.19",
+        "releaseDate": "2021-07-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-07-13",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.19.5",
+          "date": "2022-06-08",
+          "link": "https://github.com/envoyproxy/envoy/releases/tag/v1.19.5"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.18",
+      "name": "1.18",
+      "milestones": {
+        "ga": "2021-04-15",
+        "eos": null,
+        "eossec": "2022-04-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.18",
+        "codename": null,
+        "label": "1.18",
+        "releaseDate": "2021-04-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-04-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.18.6",
+          "date": "2022-02-21",
+          "link": "https://github.com/envoyproxy/envoy/releases/tag/v1.18.6"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.17",
+      "name": "1.17",
+      "milestones": {
+        "ga": "2021-01-11",
+        "eos": null,
+        "eossec": "2022-01-11",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.17",
+        "codename": null,
+        "label": "1.17",
+        "releaseDate": "2021-01-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-01-11",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.17.4",
+          "date": "2021-08-24",
+          "link": "https://github.com/envoyproxy/envoy/releases/tag/v1.17.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.16",
+      "name": "1.16",
+      "milestones": {
+        "ga": "2020-10-08",
+        "eos": null,
+        "eossec": "2021-10-08",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.16",
+        "codename": null,
+        "label": "1.16",
+        "releaseDate": "2020-10-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-10-08",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.16.5",
+          "date": "2021-08-24",
+          "link": "https://github.com/envoyproxy/envoy/releases/tag/v1.16.5"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.15",
+      "name": "1.15",
+      "milestones": {
+        "ga": "2020-07-07",
+        "eos": null,
+        "eossec": "2021-07-07",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.15",
+        "codename": null,
+        "label": "1.15",
+        "releaseDate": "2020-07-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-07-07",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.15.5",
+          "date": "2021-05-11",
+          "link": "https://github.com/envoyproxy/envoy/releases/tag/v1.15.5"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.14",
+      "name": "1.14",
+      "milestones": {
+        "ga": "2020-04-08",
+        "eos": null,
+        "eossec": "2021-04-08",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.14",
+        "codename": null,
+        "label": "1.14",
+        "releaseDate": "2020-04-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-04-08",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.14.7",
+          "date": "2021-04-15",
+          "link": "https://github.com/envoyproxy/envoy/releases/tag/v1.14.7"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.13",
+      "name": "1.13",
+      "milestones": {
+        "ga": "2020-01-20",
+        "eos": null,
+        "eossec": "2021-01-20",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.13",
+        "codename": null,
+        "label": "1.13",
+        "releaseDate": "2020-01-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-01-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.13.8",
+          "date": "2021-01-17",
+          "link": "https://github.com/envoyproxy/envoy/releases/tag/v1.13.8"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.12",
+      "name": "1.12",
+      "milestones": {
+        "ga": "2019-10-31",
+        "eos": null,
+        "eossec": "2020-10-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.12",
+        "codename": null,
+        "label": "1.12",
+        "releaseDate": "2019-10-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-10-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.12.7",
+          "date": "2020-09-29",
+          "link": "https://github.com/envoyproxy/envoy/releases/tag/v1.12.7"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.11",
+      "name": "1.11",
+      "milestones": {
+        "ga": "2019-07-11",
+        "eos": null,
+        "eossec": "2019-10-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.11",
+        "codename": null,
+        "label": "1.11",
+        "releaseDate": "2019-07-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-10-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.11.2",
+          "date": "2019-10-08",
+          "link": "https://github.com/envoyproxy/envoy/releases/tag/v1.11.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.10",
+      "name": "1.10",
+      "milestones": {
+        "ga": "2019-04-05",
+        "eos": null,
+        "eossec": "2019-07-11",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.10",
+        "codename": null,
+        "label": "1.10",
+        "releaseDate": "2019-04-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-07-11",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.10.0",
+          "date": "2019-04-05",
+          "link": "https://github.com/envoyproxy/envoy/releases/tag/v1.10.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.9",
+      "name": "1.9",
+      "milestones": {
+        "ga": "2018-12-20",
+        "eos": null,
+        "eossec": "2019-04-05",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.9",
+        "codename": null,
+        "label": "1.9",
+        "releaseDate": "2018-12-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-04-05",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.9.1",
+          "date": "2019-04-04",
+          "link": "https://github.com/envoyproxy/envoy/releases/tag/v1.9.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.8",
+      "name": "1.8",
+      "milestones": {
+        "ga": "2018-10-04",
+        "eos": null,
+        "eossec": "2018-12-20",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.8",
+        "codename": null,
+        "label": "1.8",
+        "releaseDate": "2018-10-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-12-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.8.0",
+          "date": "2018-10-04",
+          "link": "https://github.com/envoyproxy/envoy/releases/tag/v1.8.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.7",
+      "name": "1.7",
+      "milestones": {
+        "ga": "2018-06-21",
+        "eos": null,
+        "eossec": "2018-10-04",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.7",
+        "codename": null,
+        "label": "1.7",
+        "releaseDate": "2018-06-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-10-04",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.7.1",
+          "date": "2018-08-03",
+          "link": "https://github.com/envoyproxy/envoy/releases/tag/v1.7.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.6",
+      "name": "1.6",
+      "milestones": {
+        "ga": "2018-03-20",
+        "eos": null,
+        "eossec": "2018-06-21",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.6",
+        "codename": null,
+        "label": "1.6",
+        "releaseDate": "2018-03-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-06-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.6.0",
+          "date": "2018-03-20",
+          "link": "https://github.com/envoyproxy/envoy/releases/tag/v1.6.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.5",
+      "name": "1.5",
+      "milestones": {
+        "ga": "2017-12-04",
+        "eos": null,
+        "eossec": "2018-03-20",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.5",
+        "codename": null,
+        "label": "1.5",
+        "releaseDate": "2017-12-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-03-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.5.0",
+          "date": "2017-12-04",
+          "link": "https://github.com/envoyproxy/envoy/releases/tag/v1.5.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.4",
+      "name": "1.4",
+      "milestones": {
+        "ga": "2017-08-24",
+        "eos": null,
+        "eossec": "2017-12-04",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.4",
+        "codename": null,
+        "label": "1.4",
+        "releaseDate": "2017-08-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-12-04",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.4.0",
+          "date": "2017-08-24",
+          "link": "https://github.com/envoyproxy/envoy/releases/tag/v1.4.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.3",
+      "name": "1.3",
+      "milestones": {
+        "ga": "2017-05-17",
+        "eos": null,
+        "eossec": "2017-08-24",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.3",
+        "codename": null,
+        "label": "1.3",
+        "releaseDate": "2017-05-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-08-24",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.3.0",
+          "date": "2017-05-17",
+          "link": "https://github.com/envoyproxy/envoy/releases/tag/v1.3.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.2",
+      "name": "1.2",
+      "milestones": {
+        "ga": "2017-03-07",
+        "eos": null,
+        "eossec": "2017-05-17",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.2",
+        "codename": null,
+        "label": "1.2",
+        "releaseDate": "2017-03-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-05-17",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.2.0",
+          "date": "2017-03-07",
+          "link": "https://github.com/envoyproxy/envoy/releases/tag/v1.2.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.1",
+      "name": "1.1",
+      "milestones": {
+        "ga": "2016-11-30",
+        "eos": null,
+        "eossec": "2017-03-07",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.1",
+        "codename": null,
+        "label": "1.1",
+        "releaseDate": "2016-11-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-03-07",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.1.0",
+          "date": "2016-11-30",
+          "link": "https://github.com/envoyproxy/envoy/releases/tag/v1.1.0"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.0",
+      "name": "1.0",
+      "milestones": {
+        "ga": "2016-09-12",
+        "eos": null,
+        "eossec": "2016-11-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.0",
+        "codename": null,
+        "label": "1.0",
+        "releaseDate": "2016-09-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2016-11-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.0.0",
+          "date": "2016-09-12",
+          "link": "https://github.com/envoyproxy/envoy/releases/tag/v1.0.0"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/envoy/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-08-28T00:07:00+00:00"
+  }
+}

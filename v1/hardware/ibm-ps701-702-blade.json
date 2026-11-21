@@ -1,0 +1,61 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "ibm-ps701-702-blade",
+  "name": "PS701/702 Blade",
+  "category": "hardware",
+  "vendor": "IBM",
+  "product_line": "IBM pSeries",
+  "family": "pSeries",
+  "model_number": "PS701/702 Blade",
+  "milestones": {
+    "ga": null,
+    "eos": null,
+    "eossec": null,
+    "eol": "2019-09-30"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "PS701/702 Blade",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "PS701/702 Blade",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "IBM pSeries",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Not Announced",
+      "datetime": "",
+      "value": null,
+      "role": "ga",
+      "links": []
+    },
+    "End of Support": {
+      "text": "2019-09-30",
+      "datetime": null,
+      "value": "2019-09-30",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/servers/vendor/ibm/pseries/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

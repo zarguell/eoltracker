@@ -1,0 +1,142 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "pci-dss",
+  "name": "PCI-DSS",
+  "category": "software",
+  "upstream_category": "standard",
+  "identifiers": [],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Acceptance",
+    "eoes": null
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/pci-dss",
+    "releasePolicy": "https://blog.pcisecuritystandards.org/updated-pci-dss-v4.0-timeline"
+  },
+  "releases": [
+    {
+      "id": "4.0.1",
+      "name": "4.0.1",
+      "milestones": {
+        "ga": "2024-06-11",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.0.1",
+        "codename": null,
+        "label": "4.0.1",
+        "releaseDate": "2024-06-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "4.0",
+      "name": "4.0",
+      "milestones": {
+        "ga": "2022-03-31",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.0",
+        "codename": null,
+        "label": "4.0",
+        "releaseDate": "2022-03-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-12-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "3.2.1",
+      "name": "3.2.1",
+      "milestones": {
+        "ga": "2018-05-01",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.2.1",
+        "codename": null,
+        "label": "3.2.1",
+        "releaseDate": "2018-05-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-03-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "3.2",
+      "name": "3.2",
+      "milestones": {
+        "ga": "2016-04-01",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.2",
+        "codename": null,
+        "label": "3.2",
+        "releaseDate": "2016-04-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-12-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    },
+    {
+      "id": "3.1",
+      "name": "3.1",
+      "milestones": {
+        "ga": "2015-04-01",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.1",
+        "codename": null,
+        "label": "3.1",
+        "releaseDate": "2015-04-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2016-10-31",
+        "isMaintained": false,
+        "latest": null,
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/pci-dss/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-05-01T09:58:42+00:00"
+  }
+}

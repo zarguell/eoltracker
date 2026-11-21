@@ -1,0 +1,442 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "ghc",
+  "name": "Glasgow Haskell Compiler (GHC)",
+  "category": "software",
+  "upstream_category": "lang",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "ghc"
+    },
+    {
+      "type": "repology",
+      "id": "haskell:ghc"
+    }
+  ],
+  "labels": {
+    "eoas": "Further releases planned",
+    "discontinued": null,
+    "eol": "Recommended for use",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/haskell.svg",
+    "html": "https://endoflife.date/ghc",
+    "releasePolicy": "https://gitlab.haskell.org/ghc/ghc/-/wikis/GHC-status"
+  },
+  "releases": [
+    {
+      "id": "9.14",
+      "name": "9.14 (LTS)",
+      "milestones": {
+        "ga": "2025-12-19",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.14",
+        "codename": null,
+        "label": "9.14 (LTS)",
+        "releaseDate": "2025-12-19",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "9.14.1",
+          "date": "2025-12-19",
+          "link": "https://downloads.haskell.org/ghc/9.14.1/docs/users_guide/9.14.1-notes.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.12",
+      "name": "9.12",
+      "milestones": {
+        "ga": "2024-11-15",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.12",
+        "codename": null,
+        "label": "9.12",
+        "releaseDate": "2024-11-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "9.12.4",
+          "date": "2026-03-27",
+          "link": "https://downloads.haskell.org/ghc/9.12.4/docs/users_guide/9.12.4-notes.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.10",
+      "name": "9.10",
+      "milestones": {
+        "ga": "2024-05-10",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.10",
+        "codename": null,
+        "label": "9.10",
+        "releaseDate": "2024-05-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "9.10.3",
+          "date": "2025-09-11",
+          "link": "https://downloads.haskell.org/ghc/9.10.3/docs/users_guide/9.10.3-notes.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.8",
+      "name": "9.8",
+      "milestones": {
+        "ga": "2023-10-09",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.8",
+        "codename": null,
+        "label": "9.8",
+        "releaseDate": "2023-10-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "9.8.4",
+          "date": "2024-12-02",
+          "link": "https://downloads.haskell.org/ghc/9.8.4/docs/users_guide/9.8.4-notes.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.6",
+      "name": "9.6",
+      "milestones": {
+        "ga": "2023-03-10",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.6",
+        "codename": null,
+        "label": "9.6",
+        "releaseDate": "2023-03-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "9.6.7",
+          "date": "2025-03-24",
+          "link": "https://downloads.haskell.org/ghc/9.6.7/docs/users_guide/9.6.7-notes.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.4",
+      "name": "9.4",
+      "milestones": {
+        "ga": "2022-08-07",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.4",
+        "codename": null,
+        "label": "9.4",
+        "releaseDate": "2022-08-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "9.4.8",
+          "date": "2023-11-10",
+          "link": "https://downloads.haskell.org/ghc/9.4.8/docs/users_guide/9.4.8-notes.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.2",
+      "name": "9.2",
+      "milestones": {
+        "ga": "2021-10-29",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.2",
+        "codename": null,
+        "label": "9.2",
+        "releaseDate": "2021-10-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "9.2.8",
+          "date": "2023-05-26",
+          "link": "https://downloads.haskell.org/~ghc/9.2.8/docs/html/users_guide/9.2.8-notes.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.0",
+      "name": "9.0",
+      "milestones": {
+        "ga": "2021-02-03",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.0",
+        "codename": null,
+        "label": "9.0",
+        "releaseDate": "2021-02-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "9.0.2",
+          "date": "2021-12-25",
+          "link": "https://downloads.haskell.org/~ghc/9.0.2/docs/html/users_guide/9.0.2-notes.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.10",
+      "name": "8.10",
+      "milestones": {
+        "ga": "2020-03-22",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "8.10",
+        "codename": null,
+        "label": "8.10",
+        "releaseDate": "2020-03-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "8.10.7",
+          "date": "2021-08-27",
+          "link": "https://downloads.haskell.org/~ghc/8.10.7/docs/html/users_guide/8.10.7-notes.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.8",
+      "name": "8.8",
+      "milestones": {
+        "ga": "2019-08-25",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "8.8",
+        "codename": null,
+        "label": "8.8",
+        "releaseDate": "2019-08-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "8.8.4",
+          "date": "2020-07-15",
+          "link": "https://downloads.haskell.org/~ghc/8.8.4/docs/html/users_guide/8.8.4-notes.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.6",
+      "name": "8.6",
+      "milestones": {
+        "ga": "2018-09-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "8.6",
+        "codename": null,
+        "label": "8.6",
+        "releaseDate": "2018-09-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "8.6.5",
+          "date": "2019-04-23",
+          "link": "https://downloads.haskell.org/~ghc/8.6.5/docs/html/users_guide/8.6.5-notes.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.4",
+      "name": "8.4",
+      "milestones": {
+        "ga": "2018-03-08",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "8.4",
+        "codename": null,
+        "label": "8.4",
+        "releaseDate": "2018-03-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "8.4.4",
+          "date": "2018-10-14",
+          "link": "https://downloads.haskell.org/~ghc/8.4.4/docs/html/users_guide/8.4.4-notes.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.2",
+      "name": "8.2",
+      "milestones": {
+        "ga": "2017-07-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "8.2",
+        "codename": null,
+        "label": "8.2",
+        "releaseDate": "2017-07-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "8.2.2",
+          "date": "2017-07-22",
+          "link": "https://downloads.haskell.org/~ghc/8.2.2/docs/html/users_guide/8.2.2-notes.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.0",
+      "name": "8.0",
+      "milestones": {
+        "ga": "2016-05-17",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "8.0",
+        "codename": null,
+        "label": "8.0",
+        "releaseDate": "2016-05-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "8.0.2",
+          "date": "2017-01-11",
+          "link": "https://downloads.haskell.org/~ghc/8.0.2/docs/html/users_guide/8.0.2-notes.html"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/ghc/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-06-20T11:54:04+00:00"
+  }
+}

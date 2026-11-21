@@ -1,0 +1,61 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "ibm-fastt200-storage-server",
+  "name": "FAStT200 Storage Server",
+  "category": "hardware",
+  "vendor": "IBM",
+  "product_line": "IBM eServer",
+  "family": "eServer",
+  "model_number": "FAStT200 Storage Server",
+  "milestones": {
+    "ga": null,
+    "eos": null,
+    "eossec": null,
+    "eol": "2009-12-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "FAStT200 Storage Server",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "FAStT200 Storage Server",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "IBM eServer",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Not Announced",
+      "datetime": "",
+      "value": null,
+      "role": "ga",
+      "links": []
+    },
+    "End of Support": {
+      "text": "2009-12-31",
+      "datetime": null,
+      "value": "2009-12-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/servers/vendor/ibm/eserver/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

@@ -1,0 +1,310 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "researched-powerdns-recursor",
+  "name": "PowerDNS Recursor",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:powerdns:recursor"
+    }
+  ],
+  "labels": {},
+  "links": {
+    "html": "https://doc.powerdns.com/recursor/appendices/EOL.html",
+    "releasePolicy": "https://www.powerdns.com/support-commitment"
+  },
+  "releases": [
+    {
+      "id": "5.5",
+      "name": "5.5 (pre-release)",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.5 (pre-release)",
+        "Contribution": {
+          "text": "Recursor Release First Customer Shipment (FCS) Supported Commitment v5.4.0 2026-03-09 Discontinued Support (since 2026-07-22) v5.4.6 2026-09-03 Support Commitment v5.3.0 2025-08-28 Discontinued Support (since 2026-01-22) v5.3.10 2026-08-06 Support Commitment (until 2027-03-09) v5.2.0 2025-01-14 Discontinued Support (since 2025-07-09) v5.2.13 2026-08-06 Discontinued Support (since 2026-08-28) v5.1.0 2024-07-10 Discontinued Support (since 2024-10-23) v5.1.10 2026-02-09 Discontinued Support (since 2026-01-14) v5.0.12 2025-07-21 Discontinued Support (since 2025-07-10) We support older release trains with critical updates for one year after the subsequent major release. Older releases are marked end of life and receive no updates at all. The currently supported release train of the PowerDNS Recursor is 5.4. PowerDNS Recursor 5.3 will only receive critical updates and will be End of Life one year after PowerDNS Recursor 5.4 was released. PowerDNS Recursor 5.2 will only receive critical updates and will be End of Life one year after PowerDNS Recursor 5.3 was released. PowerDNS Recursor 5.1, 5.0, 4.x, 3.x, and 2.x are End of Life. Please refer to the support commitment for details on which versions are supported. Pre-releases do not receive immediate security updates. Users with a commercial agreement with PowerDNS.com B.V. or Open-Xchange can receive support for releases which are End Of Life. If you are such a user, these EOL statements do not apply to you.",
+          "value": null,
+          "datetime": null,
+          "role": null,
+          "links": [
+            "https://www.powerdns.com/support-commitment",
+            "https://doc.powerdns.com/recursor/appendices/EOL.html"
+          ]
+        }
+      }
+    },
+    {
+      "id": "5.4",
+      "name": "5.4",
+      "milestones": {
+        "ga": "2026-03-09",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.4",
+        "Contribution": {
+          "text": "Recursor Release First Customer Shipment (FCS) Supported Commitment v5.4.0 2026-03-09 Discontinued Support (since 2026-07-22) v5.4.6 2026-09-03 Support Commitment v5.3.0 2025-08-28 Discontinued Support (since 2026-01-22) v5.3.10 2026-08-06 Support Commitment (until 2027-03-09) v5.2.0 2025-01-14 Discontinued Support (since 2025-07-09) v5.2.13 2026-08-06 Discontinued Support (since 2026-08-28) v5.1.0 2024-07-10 Discontinued Support (since 2024-10-23) v5.1.10 2026-02-09 Discontinued Support (since 2026-01-14) v5.0.12 2025-07-21 Discontinued Support (since 2025-07-10) We support older release trains with critical updates for one year after the subsequent major release. Older releases are marked end of life and receive no updates at all. The currently supported release train of the PowerDNS Recursor is 5.4. PowerDNS Recursor 5.3 will only receive critical updates and will be End of Life one year after PowerDNS Recursor 5.4 was released. PowerDNS Recursor 5.2 will only receive critical updates and will be End of Life one year after PowerDNS Recursor 5.3 was released. PowerDNS Recursor 5.1, 5.0, 4.x, 3.x, and 2.x are End of Life. Please refer to the support commitment for details on which versions are supported. Pre-releases do not receive immediate security updates. Users with a commercial agreement with PowerDNS.com B.V. or Open-Xchange can receive support for releases which are End Of Life. If you are such a user, these EOL statements do not apply to you.",
+          "value": null,
+          "datetime": null,
+          "role": null,
+          "links": [
+            "https://www.powerdns.com/support-commitment",
+            "https://doc.powerdns.com/recursor/appendices/EOL.html"
+          ]
+        }
+      }
+    },
+    {
+      "id": "5.3",
+      "name": "5.3",
+      "milestones": {
+        "ga": "2025-08-28",
+        "eos": null,
+        "eossec": null,
+        "eol": "2027-03-09"
+      },
+      "upstream": {
+        "name": "5.3",
+        "Contribution": {
+          "text": "Recursor Release First Customer Shipment (FCS) Supported Commitment v5.4.0 2026-03-09 Discontinued Support (since 2026-07-22) v5.4.6 2026-09-03 Support Commitment v5.3.0 2025-08-28 Discontinued Support (since 2026-01-22) v5.3.10 2026-08-06 Support Commitment (until 2027-03-09) v5.2.0 2025-01-14 Discontinued Support (since 2025-07-09) v5.2.13 2026-08-06 Discontinued Support (since 2026-08-28) v5.1.0 2024-07-10 Discontinued Support (since 2024-10-23) v5.1.10 2026-02-09 Discontinued Support (since 2026-01-14) v5.0.12 2025-07-21 Discontinued Support (since 2025-07-10) We support older release trains with critical updates for one year after the subsequent major release. Older releases are marked end of life and receive no updates at all. The currently supported release train of the PowerDNS Recursor is 5.4. PowerDNS Recursor 5.3 will only receive critical updates and will be End of Life one year after PowerDNS Recursor 5.4 was released. PowerDNS Recursor 5.2 will only receive critical updates and will be End of Life one year after PowerDNS Recursor 5.3 was released. PowerDNS Recursor 5.1, 5.0, 4.x, 3.x, and 2.x are End of Life. Please refer to the support commitment for details on which versions are supported. Pre-releases do not receive immediate security updates. Users with a commercial agreement with PowerDNS.com B.V. or Open-Xchange can receive support for releases which are End Of Life. If you are such a user, these EOL statements do not apply to you.",
+          "value": null,
+          "datetime": null,
+          "role": null,
+          "links": [
+            "https://www.powerdns.com/support-commitment",
+            "https://doc.powerdns.com/recursor/appendices/EOL.html"
+          ]
+        }
+      }
+    },
+    {
+      "id": "5.2",
+      "name": "5.2",
+      "milestones": {
+        "ga": "2025-01-14",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-08-28"
+      },
+      "upstream": {
+        "name": "5.2",
+        "Contribution": {
+          "text": "Recursor Release First Customer Shipment (FCS) Supported Commitment v5.4.0 2026-03-09 Discontinued Support (since 2026-07-22) v5.4.6 2026-09-03 Support Commitment v5.3.0 2025-08-28 Discontinued Support (since 2026-01-22) v5.3.10 2026-08-06 Support Commitment (until 2027-03-09) v5.2.0 2025-01-14 Discontinued Support (since 2025-07-09) v5.2.13 2026-08-06 Discontinued Support (since 2026-08-28) v5.1.0 2024-07-10 Discontinued Support (since 2024-10-23) v5.1.10 2026-02-09 Discontinued Support (since 2026-01-14) v5.0.12 2025-07-21 Discontinued Support (since 2025-07-10) We support older release trains with critical updates for one year after the subsequent major release. Older releases are marked end of life and receive no updates at all. The currently supported release train of the PowerDNS Recursor is 5.4. PowerDNS Recursor 5.3 will only receive critical updates and will be End of Life one year after PowerDNS Recursor 5.4 was released. PowerDNS Recursor 5.2 will only receive critical updates and will be End of Life one year after PowerDNS Recursor 5.3 was released. PowerDNS Recursor 5.1, 5.0, 4.x, 3.x, and 2.x are End of Life. Please refer to the support commitment for details on which versions are supported. Pre-releases do not receive immediate security updates. Users with a commercial agreement with PowerDNS.com B.V. or Open-Xchange can receive support for releases which are End Of Life. If you are such a user, these EOL statements do not apply to you.",
+          "value": null,
+          "datetime": null,
+          "role": null,
+          "links": [
+            "https://www.powerdns.com/support-commitment",
+            "https://doc.powerdns.com/recursor/appendices/EOL.html"
+          ]
+        }
+      }
+    },
+    {
+      "id": "5.1",
+      "name": "5.1",
+      "milestones": {
+        "ga": "2024-07-10",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-01-14"
+      },
+      "upstream": {
+        "name": "5.1",
+        "Contribution": {
+          "text": "Recursor Release First Customer Shipment (FCS) Supported Commitment v5.4.0 2026-03-09 Discontinued Support (since 2026-07-22) v5.4.6 2026-09-03 Support Commitment v5.3.0 2025-08-28 Discontinued Support (since 2026-01-22) v5.3.10 2026-08-06 Support Commitment (until 2027-03-09) v5.2.0 2025-01-14 Discontinued Support (since 2025-07-09) v5.2.13 2026-08-06 Discontinued Support (since 2026-08-28) v5.1.0 2024-07-10 Discontinued Support (since 2024-10-23) v5.1.10 2026-02-09 Discontinued Support (since 2026-01-14) v5.0.12 2025-07-21 Discontinued Support (since 2025-07-10) We support older release trains with critical updates for one year after the subsequent major release. Older releases are marked end of life and receive no updates at all. The currently supported release train of the PowerDNS Recursor is 5.4. PowerDNS Recursor 5.3 will only receive critical updates and will be End of Life one year after PowerDNS Recursor 5.4 was released. PowerDNS Recursor 5.2 will only receive critical updates and will be End of Life one year after PowerDNS Recursor 5.3 was released. PowerDNS Recursor 5.1, 5.0, 4.x, 3.x, and 2.x are End of Life. Please refer to the support commitment for details on which versions are supported. Pre-releases do not receive immediate security updates. Users with a commercial agreement with PowerDNS.com B.V. or Open-Xchange can receive support for releases which are End Of Life. If you are such a user, these EOL statements do not apply to you.",
+          "value": null,
+          "datetime": null,
+          "role": null,
+          "links": [
+            "https://www.powerdns.com/support-commitment",
+            "https://doc.powerdns.com/recursor/appendices/EOL.html"
+          ]
+        }
+      }
+    },
+    {
+      "id": "5.0",
+      "name": "5.0",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-07-10"
+      },
+      "upstream": {
+        "name": "5.0",
+        "Contribution": {
+          "text": "Recursor Release First Customer Shipment (FCS) Supported Commitment v5.4.0 2026-03-09 Discontinued Support (since 2026-07-22) v5.4.6 2026-09-03 Support Commitment v5.3.0 2025-08-28 Discontinued Support (since 2026-01-22) v5.3.10 2026-08-06 Support Commitment (until 2027-03-09) v5.2.0 2025-01-14 Discontinued Support (since 2025-07-09) v5.2.13 2026-08-06 Discontinued Support (since 2026-08-28) v5.1.0 2024-07-10 Discontinued Support (since 2024-10-23) v5.1.10 2026-02-09 Discontinued Support (since 2026-01-14) v5.0.12 2025-07-21 Discontinued Support (since 2025-07-10) We support older release trains with critical updates for one year after the subsequent major release. Older releases are marked end of life and receive no updates at all. The currently supported release train of the PowerDNS Recursor is 5.4. PowerDNS Recursor 5.3 will only receive critical updates and will be End of Life one year after PowerDNS Recursor 5.4 was released. PowerDNS Recursor 5.2 will only receive critical updates and will be End of Life one year after PowerDNS Recursor 5.3 was released. PowerDNS Recursor 5.1, 5.0, 4.x, 3.x, and 2.x are End of Life. Please refer to the support commitment for details on which versions are supported. Pre-releases do not receive immediate security updates. Users with a commercial agreement with PowerDNS.com B.V. or Open-Xchange can receive support for releases which are End Of Life. If you are such a user, these EOL statements do not apply to you.",
+          "value": null,
+          "datetime": null,
+          "role": null,
+          "links": [
+            "https://www.powerdns.com/support-commitment",
+            "https://doc.powerdns.com/recursor/appendices/EOL.html"
+          ]
+        }
+      }
+    },
+    {
+      "id": "4.x-and-older",
+      "name": "4.x, 3.x and 2.x",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.x, 3.x and 2.x",
+        "Contribution": {
+          "text": "Recursor Release First Customer Shipment (FCS) Supported Commitment v5.4.0 2026-03-09 Discontinued Support (since 2026-07-22) v5.4.6 2026-09-03 Support Commitment v5.3.0 2025-08-28 Discontinued Support (since 2026-01-22) v5.3.10 2026-08-06 Support Commitment (until 2027-03-09) v5.2.0 2025-01-14 Discontinued Support (since 2025-07-09) v5.2.13 2026-08-06 Discontinued Support (since 2026-08-28) v5.1.0 2024-07-10 Discontinued Support (since 2024-10-23) v5.1.10 2026-02-09 Discontinued Support (since 2026-01-14) v5.0.12 2025-07-21 Discontinued Support (since 2025-07-10) We support older release trains with critical updates for one year after the subsequent major release. Older releases are marked end of life and receive no updates at all. The currently supported release train of the PowerDNS Recursor is 5.4. PowerDNS Recursor 5.3 will only receive critical updates and will be End of Life one year after PowerDNS Recursor 5.4 was released. PowerDNS Recursor 5.2 will only receive critical updates and will be End of Life one year after PowerDNS Recursor 5.3 was released. PowerDNS Recursor 5.1, 5.0, 4.x, 3.x, and 2.x are End of Life. Please refer to the support commitment for details on which versions are supported. Pre-releases do not receive immediate security updates. Users with a commercial agreement with PowerDNS.com B.V. or Open-Xchange can receive support for releases which are End Of Life. If you are such a user, these EOL statements do not apply to you.",
+          "value": null,
+          "datetime": null,
+          "role": null,
+          "links": [
+            "https://www.powerdns.com/support-commitment",
+            "https://doc.powerdns.com/recursor/appendices/EOL.html"
+          ]
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "verifier": "researched-zarguell",
+    "last_checked": "2026-09-17T22:04:44Z",
+    "research": {
+      "quote": "Recursor Release First Customer Shipment (FCS) Supported Commitment v5.4.0 2026-03-09 Discontinued Support (since 2026-07-22) v5.4.6 2026-09-03 Support Commitment v5.3.0 2025-08-28 Discontinued Support (since 2026-01-22) v5.3.10 2026-08-06 Support Commitment (until 2027-03-09) v5.2.0 2025-01-14 Discontinued Support (since 2025-07-09) v5.2.13 2026-08-06 Discontinued Support (since 2026-08-28) v5.1.0 2024-07-10 Discontinued Support (since 2024-10-23) v5.1.10 2026-02-09 Discontinued Support (since 2026-01-14) v5.0.12 2025-07-21 Discontinued Support (since 2025-07-10) We support older release trains with critical updates for one year after the subsequent major release. Older releases are marked end of life and receive no updates at all. The currently supported release train of the PowerDNS Recursor is 5.4. PowerDNS Recursor 5.3 will only receive critical updates and will be End of Life one year after PowerDNS Recursor 5.4 was released. PowerDNS Recursor 5.2 will only receive critical updates and will be End of Life one year after PowerDNS Recursor 5.3 was released. PowerDNS Recursor 5.1, 5.0, 4.x, 3.x, and 2.x are End of Life. Please refer to the support commitment for details on which versions are supported. Pre-releases do not receive immediate security updates. Users with a commercial agreement with PowerDNS.com B.V. or Open-Xchange can receive support for releases which are End Of Life. If you are such a user, these EOL statements do not apply to you.",
+      "source_url": "https://www.powerdns.com/support-commitment",
+      "retrieved_at": "2026-09-17",
+      "contributor": "zarguell",
+      "method": "agent",
+      "verified_at": "2026-09-17T22:04:44Z",
+      "stale_after": null,
+      "evidence": [
+        {
+          "quote": "Recursor Release First Customer Shipment (FCS) Supported Commitment",
+          "source_url": "https://www.powerdns.com/support-commitment",
+          "retrieved_at": "2026-09-17"
+        },
+        {
+          "quote": "v5.4.0 2026-03-09 Discontinued Support (since 2026-07-22)",
+          "source_url": "https://www.powerdns.com/support-commitment",
+          "retrieved_at": "2026-09-17",
+          "milestones": [
+            "ga"
+          ]
+        },
+        {
+          "quote": "v5.4.6 2026-09-03 Support Commitment",
+          "source_url": "https://www.powerdns.com/support-commitment",
+          "retrieved_at": "2026-09-17"
+        },
+        {
+          "quote": "v5.3.0 2025-08-28 Discontinued Support (since 2026-01-22)",
+          "source_url": "https://www.powerdns.com/support-commitment",
+          "retrieved_at": "2026-09-17",
+          "milestones": [
+            "ga"
+          ]
+        },
+        {
+          "quote": "v5.3.10 2026-08-06 Support Commitment (until 2027-03-09)",
+          "source_url": "https://www.powerdns.com/support-commitment",
+          "retrieved_at": "2026-09-17",
+          "milestones": [
+            "eol"
+          ]
+        },
+        {
+          "quote": "v5.2.0 2025-01-14 Discontinued Support (since 2025-07-09)",
+          "source_url": "https://www.powerdns.com/support-commitment",
+          "retrieved_at": "2026-09-17",
+          "milestones": [
+            "ga"
+          ]
+        },
+        {
+          "quote": "v5.2.13 2026-08-06 Discontinued Support (since 2026-08-28)",
+          "source_url": "https://www.powerdns.com/support-commitment",
+          "retrieved_at": "2026-09-17",
+          "milestones": [
+            "eol"
+          ]
+        },
+        {
+          "quote": "v5.1.0 2024-07-10 Discontinued Support (since 2024-10-23)",
+          "source_url": "https://www.powerdns.com/support-commitment",
+          "retrieved_at": "2026-09-17",
+          "milestones": [
+            "ga"
+          ]
+        },
+        {
+          "quote": "v5.1.10 2026-02-09 Discontinued Support (since 2026-01-14)",
+          "source_url": "https://www.powerdns.com/support-commitment",
+          "retrieved_at": "2026-09-17",
+          "milestones": [
+            "eol"
+          ]
+        },
+        {
+          "quote": "v5.0.12 2025-07-21 Discontinued Support (since 2025-07-10)",
+          "source_url": "https://www.powerdns.com/support-commitment",
+          "retrieved_at": "2026-09-17",
+          "milestones": [
+            "eol"
+          ]
+        },
+        {
+          "quote": "We support older release trains with critical updates for one year after the subsequent major release. Older releases are marked end of life and receive no updates at all.",
+          "source_url": "https://doc.powerdns.com/recursor/appendices/EOL.html",
+          "retrieved_at": "2026-09-17"
+        },
+        {
+          "quote": "The currently supported release train of the PowerDNS Recursor is 5.4.",
+          "source_url": "https://doc.powerdns.com/recursor/appendices/EOL.html",
+          "retrieved_at": "2026-09-17"
+        },
+        {
+          "quote": "PowerDNS Recursor 5.3 will only receive critical updates and will be End of Life one year after PowerDNS Recursor 5.4 was released. PowerDNS Recursor 5.2 will only receive critical updates and will be End of Life one year after PowerDNS Recursor 5.3 was released.",
+          "source_url": "https://doc.powerdns.com/recursor/appendices/EOL.html",
+          "retrieved_at": "2026-09-17"
+        },
+        {
+          "quote": "PowerDNS Recursor 5.1, 5.0, 4.x, 3.x, and 2.x are End of Life.",
+          "source_url": "https://doc.powerdns.com/recursor/appendices/EOL.html",
+          "retrieved_at": "2026-09-17"
+        },
+        {
+          "quote": "Please refer to the support commitment for details on which versions are supported.",
+          "source_url": "https://doc.powerdns.com/recursor/appendices/EOL.html",
+          "retrieved_at": "2026-09-17"
+        },
+        {
+          "quote": "Pre-releases do not receive immediate security updates.",
+          "source_url": "https://doc.powerdns.com/recursor/appendices/EOL.html",
+          "retrieved_at": "2026-09-17"
+        },
+        {
+          "quote": "Users with a commercial agreement with PowerDNS.com B.V. or Open-Xchange can receive support for releases which are End Of Life. If you are such a user, these EOL statements do not apply to you.",
+          "source_url": "https://doc.powerdns.com/recursor/appendices/EOL.html",
+          "retrieved_at": "2026-09-17"
+        }
+      ],
+      "vendor": "PowerDNS",
+      "summary": "Caching/recursive DNS resolver by PowerDNS (PowerDNS.COM BV) — the Recursor product, separate from PowerDNS Authoritative Server, dnsdist and weakforced",
+      "notes": "No deterministic source covers this product: endoflife.date lists 475 products and no Recursor/pdns slug, and the Recursor's own EOL page (doc.powerdns.com/recursor/appendices/EOL.html) is prose policy with <table count = 0 — it publishes no dated lifecycle table, which is the only reason no collector exists. This researched record exists because the vendor DOES publish dates elsewhere, at www.powerdns.com/support-commitment, whose Recursor grid has columns 'Release | First Customer Shipment (FCS) | Supported Commitment' and day-precision cells. Every date above is one of those cells quoted verbatim; nothing is derived. The EOL page itself points at that page ('Please refer to the support commitment for details on which versions are supported.'), which is why a source outside the product's own docs is admissible here. MODELING: one row per release TRAIN (5.5, 5.4, 5.3, 5.2, 5.1, 5.0, 4.x-and-older), matching engine/powerdns.py's train granularity for PowerDNS Authoritative Server, not one row per minor (the vendor grid lists 74 Recursor rows down to v5.4.6; a per-minor record would be ~74 lines of build metadata with no lifecycle meaning — trains are what the vendor's EOL statement and the one-year policy actually talk about). ga is the train's .0 FCS cell. eol is the vendor's own support end for the train: the terminal 'Support Commitment (until ...)' cell on the train's last listed minor, or the 'Discontinued Support (since ...)' cell on it once support has ended. NOT DERIVED: the relative policy quoted above ('critical updates for one year after the subsequent major release', and the 5.3/5.2 sentences) is stored as evidence and deliberately never converted into a date. It is corroboration only: the four train-end cells are exactly one year after the following train's .0 FCS (5.2.13's 2026-08-28 = 5.3.0 2025-08-28 + 1y; 5.1.10's 2026-01-14 = 5.2.0 2025-01-14 + 1y; 5.0.12's 2025-07-10 = 5.1.0 2024-07-10 + 1y; 5.3.10's 2027-03-09 = 5.4.0 2026-03-09 + 1y), but each stored date is the vendor's published cell, not our arithmetic. UNDATED ROWS: 5.4 is the current train and its last minor reads 'Support Commitment' with no end date, so eol stays null — an absent announcement is a fact, not a gap; 5.4's ga is dated from v5.4.0's FCS cell. 5.5 is a pre-release line (only 5.5.0-alpha1 exists); the notice covers it and ends it (pre-releases get no immediate security updates) but publishes no date, so it is published with no dates rather than dropped. 5.0's ga is null because the vendor's Recursor grid has NO v5.0.0 row (it starts at v5.0.1, 2024-01-10) and doc.powerdns.com/recursor/changelog/5.0.html has no 5.0.0 heading — only 5.0.0-rc1/rc2/beta1/alpha1 — so the train's GA day is unpublished and 5.0.1's FCS is not silently promoted into it. SOURCE LIMITATIONS, stated honestly: (1) this page is titled a commercial 'Support Commitment' (it is the commitment PowerDNS/Open-Xchange publishes for Recursor, Authoritative, DNSdist, dstore and ZoneControl), so these cells are the vendor's support-commitment dates rather than an open-source-only lifecycle table; the EOL page's own pointer and the exact one-year alignment above are why they are the product's best published lifecycle dates. (2) The grids also state 'Minor Releases: ... will support the two most recent Minor Release for 3 months in parallel', so a non-final minor's 'until' cell is a minor-parallel window, not a train end — only the last minor of each train backs a stored eol here. (3) 4.x is published as ONE undated row: the EOL page groups '4.x, 3.x, and 2.x' as End of Life without dates, and the vendor grid's 4.7/4.8 Recursor cells are internally inconsistent (v4.8.0 FCS 2023-01-06 is EARLIER than v4.7.5's 2023-03-29), so per-train 4.x dates would rest on scrambled rows and are not published. (4) The grid contains at least one impossible cell, 'Discontinued Support (since 2023-04-31)' on v4.8.1 (April 31 does not exist), which is a further reason 4.x stays grouped and undated. (5) Commercial agreements can extend support past these dates (quoted above), so an eol here is the community/support-commitment end, not a statement about a customer's agreement. (6) engine/powerdns.py covers only PowerDNS Authoritative Server today; if it is ever extended to this support-commitment page, this researched record must be retired in favour of that deterministic collector (AGENTS.md rule 8 — a researched record may never shadow a pipeline). Product scope is the caching/recursive resolver only; Authoritative Server (already covered deterministically), dnsdist and weakforced are out of scope."
+    },
+    "source_url": "https://www.powerdns.com/support-commitment",
+    "upstream_modified": null
+  }
+}

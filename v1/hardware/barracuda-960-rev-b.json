@@ -1,0 +1,69 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "barracuda-960-rev-b",
+  "name": "960 Rev B",
+  "category": "hardware",
+  "vendor": "Barracuda",
+  "product_line": "Barracuda WAF Models",
+  "family": "Barracuda",
+  "model_number": "960",
+  "milestones": {
+    "ga": null,
+    "eos": "2018-01-30",
+    "eossec": null,
+    "eol": "2023-01-30"
+  },
+  "status": "eol",
+  "upstream": {
+    "Barracuda WAF Models": {
+      "text": "960",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "Model Revision": {
+      "text": "Rev B",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "End of Sale": {
+      "text": "2018/01/30",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "End of Life": {
+      "text": "2023/01/30",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "Successor Models": {
+      "text": "Rev C",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "End of Firmware Support note": {
+      "text": "2023/01/30",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": [],
+      "note": "this is the last firmware release that supports the model. Barracuda states the product is not completely End-of-Life until that release itself reaches its end of support, so this date is the model's end of firmware support rather than a claim about the product's last day."
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://documentation.campus.barracuda.com/wiki/spaces/NGFEOL/pages/5505036"
+    ],
+    "verifier": "deterministic-barracuda",
+    "last_checked": "2026-09-26T19:57:34Z"
+  }
+}

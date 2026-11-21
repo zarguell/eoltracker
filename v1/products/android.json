@@ -1,0 +1,886 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "android",
+  "name": "Android OS",
+  "category": "software",
+  "upstream_category": "os",
+  "identifiers": [
+    {
+      "type": "cpe",
+      "id": "cpe:/o:google:android"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:o:google:android"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/android.svg",
+    "html": "https://endoflife.date/android",
+    "releasePolicy": "https://developer.android.com/about/versions"
+  },
+  "releases": [
+    {
+      "id": "17",
+      "name": "17 'Cinnamon Bun'",
+      "milestones": {
+        "ga": "2026-06-16",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "17",
+        "codename": "Cinnamon Bun",
+        "label": "17 'Cinnamon Bun'",
+        "releaseDate": "2026-06-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": null,
+        "custom": {
+          "apiVersion": "37"
+        }
+      }
+    },
+    {
+      "id": "16",
+      "name": "16 'Baklava'",
+      "milestones": {
+        "ga": "2025-06-10",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "16",
+        "codename": "Baklava",
+        "label": "16 'Baklava'",
+        "releaseDate": "2025-06-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": null,
+        "custom": {
+          "apiVersion": "36"
+        }
+      }
+    },
+    {
+      "id": "15",
+      "name": "15 'Vanilla Ice Cream'",
+      "milestones": {
+        "ga": "2024-09-03",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "15",
+        "codename": "Vanilla Ice Cream",
+        "label": "15 'Vanilla Ice Cream'",
+        "releaseDate": "2024-09-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": null,
+        "custom": {
+          "apiVersion": "35"
+        }
+      }
+    },
+    {
+      "id": "14",
+      "name": "14 'Upside Down Cake'",
+      "milestones": {
+        "ga": "2023-10-04",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "14",
+        "codename": "Upside Down Cake",
+        "label": "14 'Upside Down Cake'",
+        "releaseDate": "2023-10-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": null,
+        "custom": {
+          "apiVersion": "34"
+        }
+      }
+    },
+    {
+      "id": "13",
+      "name": "13 'Tiramisu'",
+      "milestones": {
+        "ga": "2022-08-15",
+        "eos": null,
+        "eossec": "2026-03-02",
+        "eol": null
+      },
+      "upstream": {
+        "name": "13",
+        "codename": "Tiramisu",
+        "label": "13 'Tiramisu'",
+        "releaseDate": "2022-08-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-03-02",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "apiVersion": "33"
+        }
+      }
+    },
+    {
+      "id": "12.1",
+      "name": "12.1 'Snow Cone v2' (aka 12L)",
+      "milestones": {
+        "ga": "2022-03-07",
+        "eos": null,
+        "eossec": "2025-03-03",
+        "eol": null
+      },
+      "upstream": {
+        "name": "12.1",
+        "codename": "Snow Cone v2",
+        "label": "12.1 'Snow Cone v2' (aka 12L)",
+        "releaseDate": "2022-03-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-03-03",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "apiVersion": "32"
+        }
+      }
+    },
+    {
+      "id": "12",
+      "name": "12 'Snow Cone'",
+      "milestones": {
+        "ga": "2021-10-04",
+        "eos": null,
+        "eossec": "2025-03-03",
+        "eol": null
+      },
+      "upstream": {
+        "name": "12",
+        "codename": "Snow Cone",
+        "label": "12 'Snow Cone'",
+        "releaseDate": "2021-10-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-03-03",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "apiVersion": "31"
+        }
+      }
+    },
+    {
+      "id": "11",
+      "name": "11 'Red Velvet Cake'",
+      "milestones": {
+        "ga": "2020-09-08",
+        "eos": null,
+        "eossec": "2024-02-05",
+        "eol": null
+      },
+      "upstream": {
+        "name": "11",
+        "codename": "Red Velvet Cake",
+        "label": "11 'Red Velvet Cake'",
+        "releaseDate": "2020-09-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-02-05",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "apiVersion": "30"
+        }
+      }
+    },
+    {
+      "id": "10",
+      "name": "10 'Queen Cake'",
+      "milestones": {
+        "ga": "2019-09-03",
+        "eos": null,
+        "eossec": "2023-03-06",
+        "eol": null
+      },
+      "upstream": {
+        "name": "10",
+        "codename": "Queen Cake",
+        "label": "10 'Queen Cake'",
+        "releaseDate": "2019-09-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-03-06",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "apiVersion": "29"
+        }
+      }
+    },
+    {
+      "id": "9",
+      "name": "9 'Pie'",
+      "milestones": {
+        "ga": "2018-08-06",
+        "eos": null,
+        "eossec": "2022-01-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "9",
+        "codename": "Pie",
+        "label": "9 'Pie'",
+        "releaseDate": "2018-08-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-01-01",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "apiVersion": "28"
+        }
+      }
+    },
+    {
+      "id": "8.1",
+      "name": "8.1 'Oreo'",
+      "milestones": {
+        "ga": "2017-12-05",
+        "eos": null,
+        "eossec": "2021-01-10",
+        "eol": null
+      },
+      "upstream": {
+        "name": "8.1",
+        "codename": "Oreo",
+        "label": "8.1 'Oreo'",
+        "releaseDate": "2017-12-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-01-10",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "apiVersion": "27"
+        }
+      }
+    },
+    {
+      "id": "8.0",
+      "name": "8.0 'Oreo'",
+      "milestones": {
+        "ga": "2017-08-21",
+        "eos": null,
+        "eossec": "2021-01-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "8.0",
+        "codename": "Oreo",
+        "label": "8.0 'Oreo'",
+        "releaseDate": "2017-08-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-01-01",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "apiVersion": "26"
+        }
+      }
+    },
+    {
+      "id": "7.1",
+      "name": "7.1 'Nougat'",
+      "milestones": {
+        "ga": "2016-12-01",
+        "eos": null,
+        "eossec": "2019-10-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.1",
+        "codename": "Nougat",
+        "label": "7.1 'Nougat'",
+        "releaseDate": "2016-12-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-10-01",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "apiVersion": "25"
+        }
+      }
+    },
+    {
+      "id": "7.0",
+      "name": "7.0 'Nougat'",
+      "milestones": {
+        "ga": "2016-08-22",
+        "eos": null,
+        "eossec": "2019-10-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.0",
+        "codename": "Nougat",
+        "label": "7.0 'Nougat'",
+        "releaseDate": "2016-08-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-10-01",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "apiVersion": "24"
+        }
+      }
+    },
+    {
+      "id": "6.0",
+      "name": "6.0 'Marshmallow'",
+      "milestones": {
+        "ga": "2015-10-05",
+        "eos": null,
+        "eossec": "2018-08-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.0",
+        "codename": "Marshmallow",
+        "label": "6.0 'Marshmallow'",
+        "releaseDate": "2015-10-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-08-01",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "apiVersion": "23"
+        }
+      }
+    },
+    {
+      "id": "5.1",
+      "name": "5.1 'Lollipop'",
+      "milestones": {
+        "ga": "2015-03-01",
+        "eos": null,
+        "eossec": "2018-03-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.1",
+        "codename": "Lollipop",
+        "label": "5.1 'Lollipop'",
+        "releaseDate": "2015-03-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-03-01",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "apiVersion": "22"
+        }
+      }
+    },
+    {
+      "id": "5.0",
+      "name": "5.0 'Lollipop'",
+      "milestones": {
+        "ga": "2014-11-12",
+        "eos": null,
+        "eossec": "2018-03-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.0",
+        "codename": "Lollipop",
+        "label": "5.0 'Lollipop'",
+        "releaseDate": "2014-11-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-03-01",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "apiVersion": "21"
+        }
+      }
+    },
+    {
+      "id": "4.4w",
+      "name": "4.4W",
+      "milestones": {
+        "ga": "2014-03-31",
+        "eos": null,
+        "eossec": "2017-10-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.4w",
+        "codename": "KitKatW",
+        "label": "4.4W",
+        "releaseDate": "2014-03-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-10-01",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "apiVersion": "20"
+        }
+      }
+    },
+    {
+      "id": "4.4",
+      "name": "4.4 'KitKat'",
+      "milestones": {
+        "ga": "2013-10-31",
+        "eos": null,
+        "eossec": "2017-10-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.4",
+        "codename": "KitKat",
+        "label": "4.4 'KitKat'",
+        "releaseDate": "2013-10-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2017-10-01",
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "apiVersion": "19"
+        }
+      }
+    },
+    {
+      "id": "4.3",
+      "name": "4.3 'Jelly Bean'",
+      "milestones": {
+        "ga": "2013-07-24",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.3",
+        "codename": "Jelly Bean",
+        "label": "4.3 'Jelly Bean'",
+        "releaseDate": "2013-07-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "apiVersion": "18"
+        }
+      }
+    },
+    {
+      "id": "4.2",
+      "name": "4.2 'Jelly Bean'",
+      "milestones": {
+        "ga": "2012-11-13",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.2",
+        "codename": "Jelly Bean",
+        "label": "4.2 'Jelly Bean'",
+        "releaseDate": "2012-11-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "apiVersion": "17"
+        }
+      }
+    },
+    {
+      "id": "4.1",
+      "name": "4.1 'Jelly Bean'",
+      "milestones": {
+        "ga": "2012-07-09",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.1",
+        "codename": "Jelly Bean",
+        "label": "4.1 'Jelly Bean'",
+        "releaseDate": "2012-07-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "apiVersion": "16"
+        }
+      }
+    },
+    {
+      "id": "4.0",
+      "name": "4.0 'Ice Cream Sandwich'",
+      "milestones": {
+        "ga": "2011-10-18",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.0",
+        "codename": "Ice Cream Sandwich",
+        "label": "4.0 'Ice Cream Sandwich'",
+        "releaseDate": "2011-10-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "apiVersion": "14-15"
+        }
+      }
+    },
+    {
+      "id": "3.2",
+      "name": "3.2 'Honeycomb'",
+      "milestones": {
+        "ga": "2011-07-15",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.2",
+        "codename": "Honeycomb",
+        "label": "3.2 'Honeycomb'",
+        "releaseDate": "2011-07-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "apiVersion": "13"
+        }
+      }
+    },
+    {
+      "id": "3.1",
+      "name": "3.1 'Honeycomb'",
+      "milestones": {
+        "ga": "2011-05-10",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.1",
+        "codename": "Honeycomb",
+        "label": "3.1 'Honeycomb'",
+        "releaseDate": "2011-05-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "apiVersion": "12"
+        }
+      }
+    },
+    {
+      "id": "3.0",
+      "name": "3.0 'Honeycomb'",
+      "milestones": {
+        "ga": "2011-02-22",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.0",
+        "codename": "Honeycomb",
+        "label": "3.0 'Honeycomb'",
+        "releaseDate": "2011-02-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "apiVersion": "11"
+        }
+      }
+    },
+    {
+      "id": "2.3",
+      "name": "2.3 'Gingerbread'",
+      "milestones": {
+        "ga": "2010-12-06",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.3",
+        "codename": "Gingerbread",
+        "label": "2.3 'Gingerbread'",
+        "releaseDate": "2010-12-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "apiVersion": "9-10"
+        }
+      }
+    },
+    {
+      "id": "2.2",
+      "name": "2.2 'Froyo'",
+      "milestones": {
+        "ga": "2010-05-20",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.2",
+        "codename": "Froyo",
+        "label": "2.2 'Froyo'",
+        "releaseDate": "2010-05-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "apiVersion": "8"
+        }
+      }
+    },
+    {
+      "id": "2.1",
+      "name": "2.1 'Eclair'",
+      "milestones": {
+        "ga": "2010-01-11",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.1",
+        "codename": "Eclair",
+        "label": "2.1 'Eclair'",
+        "releaseDate": "2010-01-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "apiVersion": "7"
+        }
+      }
+    },
+    {
+      "id": "2.0",
+      "name": "2.0 'Eclair'",
+      "milestones": {
+        "ga": "2009-10-26",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.0",
+        "codename": "Eclair",
+        "label": "2.0 'Eclair'",
+        "releaseDate": "2009-10-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "apiVersion": "5-6"
+        }
+      }
+    },
+    {
+      "id": "1.6",
+      "name": "1.6 'Donut'",
+      "milestones": {
+        "ga": "2009-09-15",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.6",
+        "codename": "Donut",
+        "label": "1.6 'Donut'",
+        "releaseDate": "2009-09-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "apiVersion": "4"
+        }
+      }
+    },
+    {
+      "id": "1.5",
+      "name": "1.5 'Cupcake'",
+      "milestones": {
+        "ga": "2009-04-27",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.5",
+        "codename": "Cupcake",
+        "label": "1.5 'Cupcake'",
+        "releaseDate": "2009-04-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "apiVersion": "3"
+        }
+      }
+    },
+    {
+      "id": "1.1",
+      "name": "1.1 'Petit Four'",
+      "milestones": {
+        "ga": "2009-02-09",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.1",
+        "codename": "Petit Four",
+        "label": "1.1 'Petit Four'",
+        "releaseDate": "2009-02-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "apiVersion": "2"
+        }
+      }
+    },
+    {
+      "id": "1.0",
+      "name": "1.0",
+      "milestones": {
+        "ga": "2008-09-23",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.0",
+        "codename": null,
+        "label": "1.0",
+        "releaseDate": "2008-09-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": null,
+        "custom": {
+          "apiVersion": "1"
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/android/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-06-16T21:30:36+00:00"
+  }
+}

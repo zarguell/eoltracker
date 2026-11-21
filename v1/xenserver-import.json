@@ -1,0 +1,70 @@
+{
+  "source_url": "https://www.xenserver.com/support",
+  "legacy_url": "https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html",
+  "statement_url": "https://support.citrix.com/external/article?articleUrl=CTX692513-prepare-for-citrix-hypervisor-82-cumulative-update-1-end-of-life",
+  "verifier": "deterministic-xenserver",
+  "checked_at": "2026-09-24T01:06:33Z",
+  "record_scope": "XenServer hypervisor lines: one software record with one release per vendor line, from the current xenserver.com product matrix, Citrix's legacy product matrix and the CTX692513 support article, at the day precision those tables state",
+  "rows": {
+    "seen": 29,
+    "published": 29,
+    "retained": 0,
+    "excluded": 0
+  },
+  "tables": [
+    {
+      "table": "XenServer product matrix",
+      "page": "https://www.xenserver.com/support",
+      "rows": 2,
+      "published": 2,
+      "excluded": 0
+    },
+    {
+      "table": "Citrix Hypervisor tab",
+      "page": "https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html",
+      "rows": 3,
+      "published": 3,
+      "excluded": 0
+    },
+    {
+      "table": "XenServer tab / Current Release (CR) Lifecycle Dates",
+      "page": "https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html",
+      "rows": 19,
+      "published": 19,
+      "excluded": 0
+    },
+    {
+      "table": "XenServer tab / Long Term Service Release (LTSR) Lifecycle Dates",
+      "page": "https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html",
+      "rows": 1,
+      "published": 1,
+      "excluded": 0
+    },
+    {
+      "table": "XenSource XenServer tab",
+      "page": "https://www.citrix.com/support/product-lifecycle/legacy-product-matrix.html",
+      "rows": 4,
+      "published": 4,
+      "excluded": 0
+    }
+  ],
+  "excluded": [],
+  "retained": [],
+  "statement": {
+    "article": "CTX692513",
+    "url": "https://support.citrix.com/external/article?articleUrl=CTX692513-prepare-for-citrix-hypervisor-82-cumulative-update-1-end-of-life",
+    "quote": "Citrix Hypervisor 8.2 Cumulative Update 1 becomes End of Life on June 25, 2025.",
+    "date": "2025-06-25"
+  },
+  "total_records": 1,
+  "limitations": [
+    "Citrix Hypervisor 8.0 and 8.1 are published from the legacy matrix's Citrix Hypervisor tab, which states only NSC, EOM and EOL: neither line has a published end of sales, general-availability date or security-support end, and the current matrix publishes no historical rows, so those milestones remain unresolved rather than being inferred.",
+    "NSC is a notice of status change, not general availability. No parsed table states a GA date - the current matrix publishes no GA column at all - so every release keeps ga null even where NSC shares its date with a vendor launch announcement.",
+    "EOM never fills a normalized milestone: the vendor states maintenance and life separately, so EOM stays a stored cell. EOES is End of Extended Support, a support-program phase rather than a security-only end, so it is retained as a cell and eossec stays null.",
+    "The current matrix states one combined 'EOM & EOL' day. eol takes that date and the header and cell are retained verbatim, so a parser expecting separate EOM and EOL columns cannot silently mis-model the table.",
+    "Citrix Hypervisor 8.2's terminal date is stated by both the legacy matrix row and the public support article CTX692513; the refresh requires the two to agree and refuses rather than choosing one. The article's 'Updated On' field renders empty, so no update date is inferred from it.",
+    "The current matrix lists two rows by its own design, which is not evidence that older releases never existed; the legacy matrix supplies the historical lines, and a line it drops is retained from the committed record.",
+    "Edition-language splits are reconciled per line: a language edition whose cells differ (6.0.0, 5.6, 5.5, 5) is published as its own release whose id appends the language, so a differing end of sales is never merged into another edition's row.",
+    "The XenSource XenServer tab's rows keep the names that tab states (4.1, 4.0, 3.2, 3.1 and earlier, with their edition scopes in the version cell); they are the same hypervisor lineage as the Citrix Hypervisor and XenServer rows, published under the vendor's own label rather than renamed."
+  ]
+}

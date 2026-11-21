@@ -1,0 +1,1640 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "teamcity",
+  "name": "TeamCity On-Premises",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [],
+  "labels": {
+    "ga": "Release date",
+    "eos": "TeamCity On-Premises End of Sale",
+    "eol": "TeamCity On-Premises End of Support"
+  },
+  "links": {
+    "html": "https://www.jetbrains.com/help/teamcity/previous-releases-downloads.html",
+    "release cycle policy": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html"
+  },
+  "releases": [
+    {
+      "id": "2026.2",
+      "name": "TeamCity On-Premises 2026.2",
+      "milestones": {
+        "ga": "2026-09-02",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2026.2",
+        "cells": {
+          "Heading": "Current version: TeamCity 2026.2",
+          "Release date": "Release date: 2 September 2026\nBuild number: 238924"
+        },
+        "table": "Previous Releases Downloads"
+      }
+    },
+    {
+      "id": "2026.1",
+      "name": "TeamCity On-Premises 2026.1",
+      "milestones": {
+        "ga": "2026-05-11",
+        "eos": "2026-09-02",
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2026.1",
+        "cells": {
+          "Heading": "TeamCity 2026.1",
+          "Release date": "Release date: 11 May 2026\nBuild number: 222521"
+        },
+        "table": "Previous Releases Downloads"
+      },
+      "milestone_provenance": {
+        "eos": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs for the previous major version with the release of the next major version.",
+          "base_date": "2026-05-11",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "2026.2",
+            "date": "2026-09-02",
+            "label": "the next major version"
+          }
+        }
+      }
+    },
+    {
+      "id": "2025.11",
+      "name": "TeamCity On-Premises 2025.11",
+      "milestones": {
+        "ga": "2025-11-27",
+        "eos": "2026-05-11",
+        "eossec": null,
+        "eol": "2026-09-02"
+      },
+      "upstream": {
+        "name": "2025.11",
+        "cells": {
+          "Heading": "TeamCity 2025.11",
+          "Release date": "Release date: 27 November 2025\nBuild number: 207946"
+        },
+        "table": "Previous Releases Downloads"
+      },
+      "milestone_provenance": {
+        "eos": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs for the previous major version with the release of the next major version.",
+          "base_date": "2025-11-27",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "2026.1",
+            "date": "2026-05-11",
+            "label": "the next major version"
+          }
+        },
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs with the release of two newer major versions.",
+          "base_date": "2025-11-27",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "2026.2",
+            "date": "2026-09-02",
+            "label": "the second newer major version"
+          }
+        }
+      }
+    },
+    {
+      "id": "2025.07",
+      "name": "TeamCity On-Premises 2025.07",
+      "milestones": {
+        "ga": "2025-07-23",
+        "eos": "2025-11-27",
+        "eossec": null,
+        "eol": "2026-05-11"
+      },
+      "upstream": {
+        "name": "2025.07",
+        "cells": {
+          "Heading": "TeamCity 2025.07",
+          "Release date": "Release date: 23 July 2025\nBuild number: 197242"
+        },
+        "table": "Previous Releases Downloads"
+      },
+      "milestone_provenance": {
+        "eos": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs for the previous major version with the release of the next major version.",
+          "base_date": "2025-07-23",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "2025.11",
+            "date": "2025-11-27",
+            "label": "the next major version"
+          }
+        },
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs with the release of two newer major versions.",
+          "base_date": "2025-07-23",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "2026.1",
+            "date": "2026-05-11",
+            "label": "the second newer major version"
+          }
+        }
+      }
+    },
+    {
+      "id": "2025.03",
+      "name": "TeamCity On-Premises 2025.03",
+      "milestones": {
+        "ga": "2025-03-20",
+        "eos": "2025-07-23",
+        "eossec": null,
+        "eol": "2025-11-27"
+      },
+      "upstream": {
+        "name": "2025.03",
+        "cells": {
+          "Heading": "TeamCity 2025.03",
+          "Release date": "Release date: 20 March 2025\nBuild 186049"
+        },
+        "table": "Previous Releases Downloads"
+      },
+      "milestone_provenance": {
+        "eos": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs for the previous major version with the release of the next major version.",
+          "base_date": "2025-03-20",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "2025.07",
+            "date": "2025-07-23",
+            "label": "the next major version"
+          }
+        },
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs with the release of two newer major versions.",
+          "base_date": "2025-03-20",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "2025.11",
+            "date": "2025-11-27",
+            "label": "the second newer major version"
+          }
+        }
+      }
+    },
+    {
+      "id": "2024.12",
+      "name": "TeamCity On-Premises 2024.12",
+      "milestones": {
+        "ga": "2024-12-05",
+        "eos": "2025-03-20",
+        "eossec": null,
+        "eol": "2025-07-23"
+      },
+      "upstream": {
+        "name": "2024.12",
+        "cells": {
+          "Heading": "TeamCity 2024.12",
+          "Release date": "Release date: 5 December 2024\nBuild 174331"
+        },
+        "table": "Previous Releases Downloads"
+      },
+      "milestone_provenance": {
+        "eos": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs for the previous major version with the release of the next major version.",
+          "base_date": "2024-12-05",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "2025.03",
+            "date": "2025-03-20",
+            "label": "the next major version"
+          }
+        },
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs with the release of two newer major versions.",
+          "base_date": "2024-12-05",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "2025.07",
+            "date": "2025-07-23",
+            "label": "the second newer major version"
+          }
+        }
+      }
+    },
+    {
+      "id": "2024.07",
+      "name": "TeamCity On-Premises 2024.07",
+      "milestones": {
+        "ga": "2024-07-18",
+        "eos": "2024-12-05",
+        "eossec": null,
+        "eol": "2025-03-20"
+      },
+      "upstream": {
+        "name": "2024.07",
+        "cells": {
+          "Heading": "TeamCity 2024.07",
+          "Release date": "Release date: 18 July 2024\nBuild 160569"
+        },
+        "table": "Previous Releases Downloads"
+      },
+      "milestone_provenance": {
+        "eos": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs for the previous major version with the release of the next major version.",
+          "base_date": "2024-07-18",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "2024.12",
+            "date": "2024-12-05",
+            "label": "the next major version"
+          }
+        },
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs with the release of two newer major versions.",
+          "base_date": "2024-07-18",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "2025.03",
+            "date": "2025-03-20",
+            "label": "the second newer major version"
+          }
+        }
+      }
+    },
+    {
+      "id": "2024.03",
+      "name": "TeamCity On-Premises 2024.03",
+      "milestones": {
+        "ga": "2024-03-27",
+        "eos": "2024-07-18",
+        "eossec": null,
+        "eol": "2024-12-05"
+      },
+      "upstream": {
+        "name": "2024.03",
+        "cells": {
+          "Heading": "TeamCity 2024.03",
+          "Release date": "Release date: 27 March 2024\nBuild 156166"
+        },
+        "table": "Previous Releases Downloads"
+      },
+      "milestone_provenance": {
+        "eos": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs for the previous major version with the release of the next major version.",
+          "base_date": "2024-03-27",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "2024.07",
+            "date": "2024-07-18",
+            "label": "the next major version"
+          }
+        },
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs with the release of two newer major versions.",
+          "base_date": "2024-03-27",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "2024.12",
+            "date": "2024-12-05",
+            "label": "the second newer major version"
+          }
+        }
+      }
+    },
+    {
+      "id": "2023.11",
+      "name": "TeamCity On-Premises 2023.11",
+      "milestones": {
+        "ga": "2023-11-28",
+        "eos": "2024-03-27",
+        "eossec": null,
+        "eol": "2024-07-18"
+      },
+      "upstream": {
+        "name": "2023.11",
+        "cells": {
+          "Heading": "TeamCity 2023.11",
+          "Release date": "Release date: 28 November 2023\nBuild 147331"
+        },
+        "table": "Previous Releases Downloads"
+      },
+      "milestone_provenance": {
+        "eos": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs for the previous major version with the release of the next major version.",
+          "base_date": "2023-11-28",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "2024.03",
+            "date": "2024-03-27",
+            "label": "the next major version"
+          }
+        },
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs with the release of two newer major versions.",
+          "base_date": "2023-11-28",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "2024.07",
+            "date": "2024-07-18",
+            "label": "the second newer major version"
+          }
+        }
+      }
+    },
+    {
+      "id": "2023.05",
+      "name": "TeamCity On-Premises 2023.05",
+      "milestones": {
+        "ga": "2023-05-26",
+        "eos": "2023-11-28",
+        "eossec": null,
+        "eol": "2024-03-27"
+      },
+      "upstream": {
+        "name": "2023.05",
+        "cells": {
+          "Heading": "TeamCity 2023.05",
+          "Release date": "Release date: 26 May 2023\nBuild 129203"
+        },
+        "table": "Previous Releases Downloads"
+      },
+      "milestone_provenance": {
+        "eos": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs for the previous major version with the release of the next major version.",
+          "base_date": "2023-05-26",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "2023.11",
+            "date": "2023-11-28",
+            "label": "the next major version"
+          }
+        },
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs with the release of two newer major versions.",
+          "base_date": "2023-05-26",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "2024.03",
+            "date": "2024-03-27",
+            "label": "the second newer major version"
+          }
+        }
+      }
+    },
+    {
+      "id": "2022.10",
+      "name": "TeamCity On-Premises 2022.10",
+      "milestones": {
+        "ga": "2022-10-27",
+        "eos": "2023-05-26",
+        "eossec": null,
+        "eol": "2023-11-28"
+      },
+      "upstream": {
+        "name": "2022.10",
+        "cells": {
+          "Heading": "TeamCity 2022.10",
+          "Release date": "Release date: 27 October 2022\nBuild 116751"
+        },
+        "table": "Previous Releases Downloads"
+      },
+      "milestone_provenance": {
+        "eos": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs for the previous major version with the release of the next major version.",
+          "base_date": "2022-10-27",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "2023.05",
+            "date": "2023-05-26",
+            "label": "the next major version"
+          }
+        },
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs with the release of two newer major versions.",
+          "base_date": "2022-10-27",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "2023.11",
+            "date": "2023-11-28",
+            "label": "the second newer major version"
+          }
+        }
+      }
+    },
+    {
+      "id": "2022.04",
+      "name": "TeamCity On-Premises 2022.04",
+      "milestones": {
+        "ga": "2022-04-28",
+        "eos": "2022-10-27",
+        "eossec": null,
+        "eol": "2023-05-26"
+      },
+      "upstream": {
+        "name": "2022.04",
+        "cells": {
+          "Heading": "TeamCity 2022.04",
+          "Release date": "Release date: 28 April 2022\nBuild 108502"
+        },
+        "table": "Previous Releases Downloads"
+      },
+      "milestone_provenance": {
+        "eos": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs for the previous major version with the release of the next major version.",
+          "base_date": "2022-04-28",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "2022.10",
+            "date": "2022-10-27",
+            "label": "the next major version"
+          }
+        },
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs with the release of two newer major versions.",
+          "base_date": "2022-04-28",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "2023.05",
+            "date": "2023-05-26",
+            "label": "the second newer major version"
+          }
+        }
+      }
+    },
+    {
+      "id": "2021.2",
+      "name": "TeamCity On-Premises 2021.2",
+      "milestones": {
+        "ga": "2021-10-25",
+        "eos": "2022-04-28",
+        "eossec": null,
+        "eol": "2022-10-27"
+      },
+      "upstream": {
+        "name": "2021.2",
+        "cells": {
+          "Heading": "TeamCity 2021.2",
+          "Release date": "Release date: 25 October 2021\nBuild 99542"
+        },
+        "table": "Previous Releases Downloads"
+      },
+      "milestone_provenance": {
+        "eos": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs for the previous major version with the release of the next major version.",
+          "base_date": "2021-10-25",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "2022.04",
+            "date": "2022-04-28",
+            "label": "the next major version"
+          }
+        },
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs with the release of two newer major versions.",
+          "base_date": "2021-10-25",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "2022.10",
+            "date": "2022-10-27",
+            "label": "the second newer major version"
+          }
+        }
+      }
+    },
+    {
+      "id": "2021.1",
+      "name": "TeamCity On-Premises 2021.1",
+      "milestones": {
+        "ga": "2021-05-20",
+        "eos": "2021-10-25",
+        "eossec": null,
+        "eol": "2022-04-28"
+      },
+      "upstream": {
+        "name": "2021.1",
+        "cells": {
+          "Heading": "TeamCity 2021.1",
+          "Release date": "Release date: 20 May 2021\nBuild 92597"
+        },
+        "table": "Previous Releases Downloads"
+      },
+      "milestone_provenance": {
+        "eos": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs for the previous major version with the release of the next major version.",
+          "base_date": "2021-05-20",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "2021.2",
+            "date": "2021-10-25",
+            "label": "the next major version"
+          }
+        },
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs with the release of two newer major versions.",
+          "base_date": "2021-05-20",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "2022.04",
+            "date": "2022-04-28",
+            "label": "the second newer major version"
+          }
+        }
+      }
+    },
+    {
+      "id": "2020.2",
+      "name": "TeamCity On-Premises 2020.2",
+      "milestones": {
+        "ga": "2020-11-23",
+        "eos": "2021-05-20",
+        "eossec": null,
+        "eol": "2021-10-25"
+      },
+      "upstream": {
+        "name": "2020.2",
+        "cells": {
+          "Heading": "TeamCity 2020.2",
+          "Release date": "Release date: 23 November 2020\nBuild 85487"
+        },
+        "table": "Previous Releases Downloads"
+      },
+      "milestone_provenance": {
+        "eos": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs for the previous major version with the release of the next major version.",
+          "base_date": "2020-11-23",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "2021.1",
+            "date": "2021-05-20",
+            "label": "the next major version"
+          }
+        },
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs with the release of two newer major versions.",
+          "base_date": "2020-11-23",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "2021.2",
+            "date": "2021-10-25",
+            "label": "the second newer major version"
+          }
+        }
+      }
+    },
+    {
+      "id": "2020.1",
+      "name": "TeamCity On-Premises 2020.1",
+      "milestones": {
+        "ga": "2020-05-18",
+        "eos": "2020-11-23",
+        "eossec": null,
+        "eol": "2021-05-20"
+      },
+      "upstream": {
+        "name": "2020.1",
+        "cells": {
+          "Heading": "TeamCity 2020.1",
+          "Release date": "Release date: 18 May 2020\nBuild 78475"
+        },
+        "table": "Previous Releases Downloads"
+      },
+      "milestone_provenance": {
+        "eos": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs for the previous major version with the release of the next major version.",
+          "base_date": "2020-05-18",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "2020.2",
+            "date": "2020-11-23",
+            "label": "the next major version"
+          }
+        },
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs with the release of two newer major versions.",
+          "base_date": "2020-05-18",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "2021.1",
+            "date": "2021-05-20",
+            "label": "the second newer major version"
+          }
+        }
+      }
+    },
+    {
+      "id": "2019.2",
+      "name": "TeamCity On-Premises 2019.2",
+      "milestones": {
+        "ga": "2019-12-09",
+        "eos": "2020-05-18",
+        "eossec": null,
+        "eol": "2020-11-23"
+      },
+      "upstream": {
+        "name": "2019.2",
+        "cells": {
+          "Heading": "TeamCity 2019.2",
+          "Release date": "Release date: 9 December 2019\nBuild 71499"
+        },
+        "table": "Previous Releases Downloads"
+      },
+      "milestone_provenance": {
+        "eos": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs for the previous major version with the release of the next major version.",
+          "base_date": "2019-12-09",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "2020.1",
+            "date": "2020-05-18",
+            "label": "the next major version"
+          }
+        },
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs with the release of two newer major versions.",
+          "base_date": "2019-12-09",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "2020.2",
+            "date": "2020-11-23",
+            "label": "the second newer major version"
+          }
+        }
+      }
+    },
+    {
+      "id": "2019.1",
+      "name": "TeamCity On-Premises 2019.1",
+      "milestones": {
+        "ga": "2019-05-23",
+        "eos": "2019-12-09",
+        "eossec": null,
+        "eol": "2020-05-18"
+      },
+      "upstream": {
+        "name": "2019.1",
+        "cells": {
+          "Heading": "TeamCity 2019.1",
+          "Release date": "**Release date: 23 May 2019\n**Build 65998"
+        },
+        "table": "Previous Releases Downloads"
+      },
+      "milestone_provenance": {
+        "eos": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs for the previous major version with the release of the next major version.",
+          "base_date": "2019-05-23",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "2019.2",
+            "date": "2019-12-09",
+            "label": "the next major version"
+          }
+        },
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs with the release of two newer major versions.",
+          "base_date": "2019-05-23",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "2020.1",
+            "date": "2020-05-18",
+            "label": "the second newer major version"
+          }
+        }
+      }
+    },
+    {
+      "id": "2018.2",
+      "name": "TeamCity On-Premises 2018.2",
+      "milestones": {
+        "ga": "2018-12-06",
+        "eos": "2019-05-23",
+        "eossec": null,
+        "eol": "2019-12-09"
+      },
+      "upstream": {
+        "name": "2018.2",
+        "cells": {
+          "Heading": "TeamCity 2018.2",
+          "Release date": "Release date: 06 December 2018\nBuild 60925"
+        },
+        "table": "Previous Releases Downloads"
+      },
+      "milestone_provenance": {
+        "eos": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs for the previous major version with the release of the next major version.",
+          "base_date": "2018-12-06",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "2019.1",
+            "date": "2019-05-23",
+            "label": "the next major version"
+          }
+        },
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs with the release of two newer major versions.",
+          "base_date": "2018-12-06",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "2019.2",
+            "date": "2019-12-09",
+            "label": "the second newer major version"
+          }
+        }
+      }
+    },
+    {
+      "id": "2018.1",
+      "name": "TeamCity On-Premises 2018.1",
+      "milestones": {
+        "ga": "2018-06-21",
+        "eos": "2018-12-06",
+        "eossec": null,
+        "eol": "2019-05-23"
+      },
+      "upstream": {
+        "name": "2018.1",
+        "cells": {
+          "Heading": "TeamCity 2018.1",
+          "Release date": "Release date: 21 June 2018\nBuild 58245"
+        },
+        "table": "Previous Releases Downloads"
+      },
+      "milestone_provenance": {
+        "eos": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs for the previous major version with the release of the next major version.",
+          "base_date": "2018-06-21",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "2018.2",
+            "date": "2018-12-06",
+            "label": "the next major version"
+          }
+        },
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs with the release of two newer major versions.",
+          "base_date": "2018-06-21",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "2019.1",
+            "date": "2019-05-23",
+            "label": "the second newer major version"
+          }
+        }
+      }
+    },
+    {
+      "id": "2017.2",
+      "name": "TeamCity On-Premises 2017.2",
+      "milestones": {
+        "ga": "2017-11-27",
+        "eos": "2018-06-21",
+        "eossec": null,
+        "eol": "2018-12-06"
+      },
+      "upstream": {
+        "name": "2017.2",
+        "cells": {
+          "Heading": "TeamCity 2017.2",
+          "Release date": "Release date: 27 November 2017\nBuild 50574"
+        },
+        "table": "Previous Releases Downloads"
+      },
+      "milestone_provenance": {
+        "eos": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs for the previous major version with the release of the next major version.",
+          "base_date": "2017-11-27",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "2018.1",
+            "date": "2018-06-21",
+            "label": "the next major version"
+          }
+        },
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs with the release of two newer major versions.",
+          "base_date": "2017-11-27",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "2018.2",
+            "date": "2018-12-06",
+            "label": "the second newer major version"
+          }
+        }
+      }
+    },
+    {
+      "id": "2017.1",
+      "name": "TeamCity On-Premises 2017.1",
+      "milestones": {
+        "ga": "2017-04-10",
+        "eos": "2017-11-27",
+        "eossec": null,
+        "eol": "2018-06-21"
+      },
+      "upstream": {
+        "name": "2017.1",
+        "cells": {
+          "Heading": "TeamCity 2017.1",
+          "Release date": "Release date: 10 April 2017\nBuild 46533"
+        },
+        "table": "Previous Releases Downloads"
+      },
+      "milestone_provenance": {
+        "eos": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs for the previous major version with the release of the next major version.",
+          "base_date": "2017-04-10",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "2017.2",
+            "date": "2017-11-27",
+            "label": "the next major version"
+          }
+        },
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs with the release of two newer major versions.",
+          "base_date": "2017-04-10",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "2018.1",
+            "date": "2018-06-21",
+            "label": "the second newer major version"
+          }
+        }
+      }
+    },
+    {
+      "id": "10.0",
+      "name": "TeamCity On-Premises 10.0",
+      "milestones": {
+        "ga": "2016-07-21",
+        "eos": "2017-04-10",
+        "eossec": null,
+        "eol": "2017-11-27"
+      },
+      "upstream": {
+        "name": "10.0",
+        "cells": {
+          "Heading": "TeamCity 10.0",
+          "Release date": "Release date: 21 July 2016\nBuild 42002"
+        },
+        "table": "Previous Releases Downloads"
+      },
+      "milestone_provenance": {
+        "eos": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs for the previous major version with the release of the next major version.",
+          "base_date": "2016-07-21",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "2017.1",
+            "date": "2017-04-10",
+            "label": "the next major version"
+          }
+        },
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs with the release of two newer major versions.",
+          "base_date": "2016-07-21",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "2017.2",
+            "date": "2017-11-27",
+            "label": "the second newer major version"
+          }
+        }
+      }
+    },
+    {
+      "id": "9.1",
+      "name": "TeamCity On-Premises 9.1",
+      "milestones": {
+        "ga": "2015-07-15",
+        "eos": "2016-07-21",
+        "eossec": null,
+        "eol": "2017-04-10"
+      },
+      "upstream": {
+        "name": "9.1",
+        "cells": {
+          "Heading": "TeamCity 9.1",
+          "Release date": "Release date: 15 July 2015\nBuild 36973"
+        },
+        "table": "Previous Releases Downloads"
+      },
+      "milestone_provenance": {
+        "eos": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs for the previous major version with the release of the next major version.",
+          "base_date": "2015-07-15",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "10.0",
+            "date": "2016-07-21",
+            "label": "the next major version"
+          }
+        },
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs with the release of two newer major versions.",
+          "base_date": "2015-07-15",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "2017.1",
+            "date": "2017-04-10",
+            "label": "the second newer major version"
+          }
+        }
+      }
+    },
+    {
+      "id": "9.0",
+      "name": "TeamCity On-Premises 9.0",
+      "milestones": {
+        "ga": "2014-12-11",
+        "eos": "2015-07-15",
+        "eossec": null,
+        "eol": "2016-07-21"
+      },
+      "upstream": {
+        "name": "9.0",
+        "cells": {
+          "Heading": "TeamCity 9.0",
+          "Release date": "Release date: 11 December 2014\nBuild 32060"
+        },
+        "table": "Previous Releases Downloads"
+      },
+      "milestone_provenance": {
+        "eos": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs for the previous major version with the release of the next major version.",
+          "base_date": "2014-12-11",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "9.1",
+            "date": "2015-07-15",
+            "label": "the next major version"
+          }
+        },
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs with the release of two newer major versions.",
+          "base_date": "2014-12-11",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "10.0",
+            "date": "2016-07-21",
+            "label": "the second newer major version"
+          }
+        }
+      }
+    },
+    {
+      "id": "8.1",
+      "name": "TeamCity On-Premises 8.1",
+      "milestones": {
+        "ga": "2014-02-12",
+        "eos": "2014-12-11",
+        "eossec": null,
+        "eol": "2015-07-15"
+      },
+      "upstream": {
+        "name": "8.1",
+        "cells": {
+          "Heading": "TeamCity 8.1",
+          "Release date": "Release date: 12 February 2014\nBuild 29879"
+        },
+        "table": "Previous Releases Downloads"
+      },
+      "milestone_provenance": {
+        "eos": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs for the previous major version with the release of the next major version.",
+          "base_date": "2014-02-12",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "9.0",
+            "date": "2014-12-11",
+            "label": "the next major version"
+          }
+        },
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs with the release of two newer major versions.",
+          "base_date": "2014-02-12",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "9.1",
+            "date": "2015-07-15",
+            "label": "the second newer major version"
+          }
+        }
+      }
+    },
+    {
+      "id": "8.0",
+      "name": "TeamCity On-Premises 8.0",
+      "milestones": {
+        "ga": "2013-06-20",
+        "eos": "2014-02-12",
+        "eossec": null,
+        "eol": "2014-12-11"
+      },
+      "upstream": {
+        "name": "8.0",
+        "cells": {
+          "Heading": "TeamCity 8.0",
+          "Release date": "Release date: 20 June 2013\nBuild 27402"
+        },
+        "table": "Previous Releases Downloads"
+      },
+      "milestone_provenance": {
+        "eos": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs for the previous major version with the release of the next major version.",
+          "base_date": "2013-06-20",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "8.1",
+            "date": "2014-02-12",
+            "label": "the next major version"
+          }
+        },
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs with the release of two newer major versions.",
+          "base_date": "2013-06-20",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "9.0",
+            "date": "2014-12-11",
+            "label": "the second newer major version"
+          }
+        }
+      }
+    },
+    {
+      "id": "7.1",
+      "name": "TeamCity On-Premises 7.1",
+      "milestones": {
+        "ga": "2012-08-07",
+        "eos": "2013-06-20",
+        "eossec": null,
+        "eol": "2014-02-12"
+      },
+      "upstream": {
+        "name": "7.1",
+        "cells": {
+          "Heading": "TeamCity 7.1",
+          "Release date": "Release date: 7 August 2012\nBuild 23907"
+        },
+        "table": "Previous Releases Downloads"
+      },
+      "milestone_provenance": {
+        "eos": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs for the previous major version with the release of the next major version.",
+          "base_date": "2012-08-07",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "8.0",
+            "date": "2013-06-20",
+            "label": "the next major version"
+          }
+        },
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs with the release of two newer major versions.",
+          "base_date": "2012-08-07",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "8.1",
+            "date": "2014-02-12",
+            "label": "the second newer major version"
+          }
+        }
+      }
+    },
+    {
+      "id": "7.0",
+      "name": "TeamCity On-Premises 7.0",
+      "milestones": {
+        "ga": "2012-02-22",
+        "eos": "2012-08-07",
+        "eossec": null,
+        "eol": "2013-06-20"
+      },
+      "upstream": {
+        "name": "7.0",
+        "cells": {
+          "Heading": "TeamCity 7.0",
+          "Release date": "Release date: 22 February 2012\nBuild 21241"
+        },
+        "table": "Previous Releases Downloads"
+      },
+      "milestone_provenance": {
+        "eos": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs for the previous major version with the release of the next major version.",
+          "base_date": "2012-02-22",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "7.1",
+            "date": "2012-08-07",
+            "label": "the next major version"
+          }
+        },
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs with the release of two newer major versions.",
+          "base_date": "2012-02-22",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "8.0",
+            "date": "2013-06-20",
+            "label": "the second newer major version"
+          }
+        }
+      }
+    },
+    {
+      "id": "6.5",
+      "name": "TeamCity On-Premises 6.5",
+      "milestones": {
+        "ga": "2011-05-24",
+        "eos": "2012-02-22",
+        "eossec": null,
+        "eol": "2012-08-07"
+      },
+      "upstream": {
+        "name": "6.5",
+        "cells": {
+          "Heading": "TeamCity 6.5",
+          "Release date": "Release date: 24 May 2011\nBuild 17795"
+        },
+        "table": "Previous Releases Downloads"
+      },
+      "milestone_provenance": {
+        "eos": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs for the previous major version with the release of the next major version.",
+          "base_date": "2011-05-24",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "7.0",
+            "date": "2012-02-22",
+            "label": "the next major version"
+          }
+        },
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs with the release of two newer major versions.",
+          "base_date": "2011-05-24",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "7.1",
+            "date": "2012-08-07",
+            "label": "the second newer major version"
+          }
+        }
+      }
+    },
+    {
+      "id": "6.0",
+      "name": "TeamCity On-Premises 6.0",
+      "milestones": {
+        "ga": "2010-11-30",
+        "eos": "2011-05-24",
+        "eossec": null,
+        "eol": "2012-02-22"
+      },
+      "upstream": {
+        "name": "6.0",
+        "cells": {
+          "Heading": "TeamCity 6.0",
+          "Release date": "Release date: 30 November 2010\nBuild 15772"
+        },
+        "table": "Previous Releases Downloads"
+      },
+      "milestone_provenance": {
+        "eos": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs for the previous major version with the release of the next major version.",
+          "base_date": "2010-11-30",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "6.5",
+            "date": "2011-05-24",
+            "label": "the next major version"
+          }
+        },
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs with the release of two newer major versions.",
+          "base_date": "2010-11-30",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "7.0",
+            "date": "2012-02-22",
+            "label": "the second newer major version"
+          }
+        }
+      }
+    },
+    {
+      "id": "5.1",
+      "name": "TeamCity On-Premises 5.1",
+      "milestones": {
+        "ga": "2010-04-21",
+        "eos": "2010-11-30",
+        "eossec": null,
+        "eol": "2011-05-24"
+      },
+      "upstream": {
+        "name": "5.1",
+        "cells": {
+          "Heading": "TeamCity 5.1",
+          "Release date": "Release date: 21 April 2010\nBuild 13360"
+        },
+        "table": "Previous Releases Downloads"
+      },
+      "milestone_provenance": {
+        "eos": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs for the previous major version with the release of the next major version.",
+          "base_date": "2010-04-21",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "6.0",
+            "date": "2010-11-30",
+            "label": "the next major version"
+          }
+        },
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs with the release of two newer major versions.",
+          "base_date": "2010-04-21",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "6.5",
+            "date": "2011-05-24",
+            "label": "the second newer major version"
+          }
+        }
+      }
+    },
+    {
+      "id": "5.0",
+      "name": "TeamCity On-Premises 5.0",
+      "milestones": {
+        "ga": "2009-12-02",
+        "eos": "2010-04-21",
+        "eossec": null,
+        "eol": "2010-11-30"
+      },
+      "upstream": {
+        "name": "5.0",
+        "cells": {
+          "Heading": "TeamCity 5.0",
+          "Release date": "Release date: 02 December 2009\nBuild 10669"
+        },
+        "table": "Previous Releases Downloads"
+      },
+      "milestone_provenance": {
+        "eos": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs for the previous major version with the release of the next major version.",
+          "base_date": "2009-12-02",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "5.1",
+            "date": "2010-04-21",
+            "label": "the next major version"
+          }
+        },
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs with the release of two newer major versions.",
+          "base_date": "2009-12-02",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "6.0",
+            "date": "2010-11-30",
+            "label": "the second newer major version"
+          }
+        }
+      }
+    },
+    {
+      "id": "4.5",
+      "name": "TeamCity On-Premises 4.5",
+      "milestones": {
+        "ga": "2009-04-23",
+        "eos": "2009-12-02",
+        "eossec": null,
+        "eol": "2010-04-21"
+      },
+      "upstream": {
+        "name": "4.5",
+        "cells": {
+          "Heading": "TeamCity 4.5",
+          "Release date": "Release date: 23 April 2009\nBuild 8944"
+        },
+        "table": "Previous Releases Downloads"
+      },
+      "milestone_provenance": {
+        "eos": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs for the previous major version with the release of the next major version.",
+          "base_date": "2009-04-23",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "5.0",
+            "date": "2009-12-02",
+            "label": "the next major version"
+          }
+        },
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs with the release of two newer major versions.",
+          "base_date": "2009-04-23",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "5.1",
+            "date": "2010-04-21",
+            "label": "the second newer major version"
+          }
+        }
+      }
+    },
+    {
+      "id": "4.0",
+      "name": "TeamCity On-Premises 4.0",
+      "milestones": {
+        "ga": "2008-12-10",
+        "eos": "2009-04-23",
+        "eossec": null,
+        "eol": "2009-12-02"
+      },
+      "upstream": {
+        "name": "4.0",
+        "cells": {
+          "Heading": "TeamCity 4.0",
+          "Release date": "Release date: 10 December 2008\nBuild 8080"
+        },
+        "table": "Previous Releases Downloads"
+      },
+      "milestone_provenance": {
+        "eos": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs for the previous major version with the release of the next major version.",
+          "base_date": "2008-12-10",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "4.5",
+            "date": "2009-04-23",
+            "label": "the next major version"
+          }
+        },
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs with the release of two newer major versions.",
+          "base_date": "2008-12-10",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "5.0",
+            "date": "2009-12-02",
+            "label": "the second newer major version"
+          }
+        }
+      }
+    },
+    {
+      "id": "3.1",
+      "name": "TeamCity On-Premises 3.1",
+      "milestones": {
+        "ga": "2008-03-04",
+        "eos": "2008-12-10",
+        "eossec": null,
+        "eol": "2009-04-23"
+      },
+      "upstream": {
+        "name": "3.1",
+        "cells": {
+          "Heading": "TeamCity 3.1",
+          "Release date": "Release date: 4 March 2008"
+        },
+        "table": "Previous Releases Downloads"
+      },
+      "milestone_provenance": {
+        "eos": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs for the previous major version with the release of the next major version.",
+          "base_date": "2008-03-04",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "4.0",
+            "date": "2008-12-10",
+            "label": "the next major version"
+          }
+        },
+        "eol": {
+          "kind": "derived",
+          "method": "release-trigger",
+          "source_url": "https://www.jetbrains.com/help/teamcity/teamcity-release-cycle.html",
+          "quote": "Occurs with the release of two newer major versions.",
+          "base_date": "2008-03-04",
+          "base_label": "general availability",
+          "trigger": {
+            "release_id": "4.5",
+            "date": "2009-04-23",
+            "label": "the second newer major version"
+          }
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://www.jetbrains.com/help/teamcity/previous-releases-downloads.html",
+    "verifier": "deterministic-teamcity",
+    "last_checked": "2026-09-23T17:32:41Z",
+    "upstream_modified": null
+  }
+}

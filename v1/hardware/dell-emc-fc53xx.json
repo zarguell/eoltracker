@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-fc53xx",
+  "name": "FC53xx",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC CLARiiON FC",
+  "family": "CLARiiON FC",
+  "model_number": "FC53xx",
+  "milestones": {
+    "ga": "1999-07-01",
+    "eos": "2002-09-30",
+    "eossec": null,
+    "eol": "2007-09-30"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "FC53xx",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "FC53xx",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC CLARiiON FC",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2002-09-30",
+      "datetime": null,
+      "value": "2002-09-30",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Jul. 01, 1999",
+      "datetime": "1999-07-01",
+      "value": "1999-07-01",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2007-09-30",
+      "datetime": null,
+      "value": "2007-09-30",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/san-storage/vendor/dell-emc/clariion-fc/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

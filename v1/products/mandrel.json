@@ -1,0 +1,491 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "mandrel",
+  "name": "Mandrel",
+  "category": "software",
+  "upstream_category": "lang",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "mandrel"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Maintenance",
+    "eoes": null
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/mandrel",
+    "releasePolicy": null
+  },
+  "releases": [
+    {
+      "id": "25.0",
+      "name": "25.0 (JDK 25) (LTS)",
+      "milestones": {
+        "ga": "2025-10-02",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "25.0",
+        "codename": null,
+        "label": "25.0 (JDK 25) (LTS)",
+        "releaseDate": "2025-10-02",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "25.0.4.1",
+          "date": "2026-08-28",
+          "link": "https://github.com/graalvm/mandrel/releases/tag/mandrel-25.0.4.1-Final"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "24.2",
+      "name": "24.2 (JDK 24)",
+      "milestones": {
+        "ga": "2025-03-25",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "24.2",
+        "codename": null,
+        "label": "24.2 (JDK 24)",
+        "releaseDate": "2025-03-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-10-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "24.2.2.0",
+          "date": "2025-08-05",
+          "link": "https://github.com/graalvm/mandrel/releases/tag/mandrel-24.2.2.0-Final"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "24.1",
+      "name": "24.1 (JDK 23)",
+      "milestones": {
+        "ga": "2024-09-23",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "24.1",
+        "codename": null,
+        "label": "24.1 (JDK 23)",
+        "releaseDate": "2024-09-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-04-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "24.1.2.0",
+          "date": "2025-01-30",
+          "link": "https://github.com/graalvm/mandrel/releases/tag/mandrel-24.1.2.0-Final"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "24.0",
+      "name": "24.0 (JDK 22)",
+      "milestones": {
+        "ga": "2024-03-27",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "24.0",
+        "codename": null,
+        "label": "24.0 (JDK 22)",
+        "releaseDate": "2024-03-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-10-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "24.0.2.0",
+          "date": "2024-07-21",
+          "link": "https://github.com/graalvm/mandrel/releases/tag/mandrel-24.0.2.0-Final"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "23.1",
+      "name": "23.1 (JDK 21) (LTS)",
+      "milestones": {
+        "ga": "2023-10-12",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "23.1",
+        "codename": null,
+        "label": "23.1 (JDK 21) (LTS)",
+        "releaseDate": "2023-10-12",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "23.1.12.1",
+          "date": "2026-08-28",
+          "link": "https://github.com/graalvm/mandrel/releases/tag/mandrel-23.1.12.1-Final"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "23.0",
+      "name": "23.0 (JDK 17) (LTS)",
+      "milestones": {
+        "ga": "2023-06-14",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "23.0",
+        "codename": null,
+        "label": "23.0 (JDK 17) (LTS)",
+        "releaseDate": "2023-06-14",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-01-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "23.0.6.0",
+          "date": "2024-10-22",
+          "link": "https://github.com/graalvm/mandrel/releases/tag/mandrel-23.0.6.0-Final"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "22.3",
+      "name": "22.3 (JDK 17) (LTS)",
+      "milestones": {
+        "ga": "2022-11-02",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "22.3",
+        "codename": null,
+        "label": "22.3 (JDK 17) (LTS)",
+        "releaseDate": "2022-11-02",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-04-17",
+        "isMaintained": false,
+        "latest": {
+          "name": "22.3.5.0",
+          "date": "2024-01-24",
+          "link": "https://github.com/graalvm/mandrel/releases/tag/mandrel-22.3.5.0-Final"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "22.2",
+      "name": "22.2 (JDK 11, JDK 17)",
+      "milestones": {
+        "ga": "2022-07-27",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "22.2",
+        "codename": null,
+        "label": "22.2 (JDK 11, JDK 17)",
+        "releaseDate": "2022-07-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-10-25",
+        "isMaintained": false,
+        "latest": {
+          "name": "22.2.0.0",
+          "date": "2022-07-27",
+          "link": "https://github.com/graalvm/mandrel/releases/tag/mandrel-22.2.0.0-Final"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "22.1",
+      "name": "22.1 (JDK 11, JDK 17)",
+      "milestones": {
+        "ga": "2022-04-27",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "22.1",
+        "codename": null,
+        "label": "22.1 (JDK 11, JDK 17)",
+        "releaseDate": "2022-04-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-07-26",
+        "isMaintained": false,
+        "latest": {
+          "name": "22.1.0.0",
+          "date": "2022-04-27",
+          "link": "https://github.com/graalvm/mandrel/releases/tag/mandrel-22.1.0.0-Final"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "22.0",
+      "name": "22.1 (JDK 11, JDK 17)",
+      "milestones": {
+        "ga": "2022-01-26",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "22.0",
+        "codename": null,
+        "label": "22.1 (JDK 11, JDK 17)",
+        "releaseDate": "2022-01-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-04-26",
+        "isMaintained": false,
+        "latest": {
+          "name": "22.0.0.2",
+          "date": "2022-01-26",
+          "link": "https://github.com/graalvm/mandrel/releases/tag/mandrel-22.0.0.2-Final"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "21.3",
+      "name": "21.3 (JDK 11, JDK 17) (LTS)",
+      "milestones": {
+        "ga": "2021-10-20",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "21.3",
+        "codename": null,
+        "label": "21.3 (JDK 11, JDK 17) (LTS)",
+        "releaseDate": "2021-10-20",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-07-17",
+        "isMaintained": false,
+        "latest": {
+          "name": "21.3.6.0",
+          "date": "2023-04-21",
+          "link": "https://github.com/graalvm/mandrel/releases/tag/mandrel-21.3.6.0-Final"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "21.2",
+      "name": "21.2 (JDK 11) (LTS)",
+      "milestones": {
+        "ga": "2021-07-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "21.2",
+        "codename": null,
+        "label": "21.2 (JDK 11) (LTS)",
+        "releaseDate": "2021-07-21",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-01-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "21.2.0.2",
+          "date": "2021-10-20",
+          "link": "https://github.com/graalvm/mandrel/releases/tag/mandrel-21.2.0.2-Final"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "21.1",
+      "name": "21.1 (JDK 11)",
+      "milestones": {
+        "ga": "2021-04-26",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "21.1",
+        "codename": null,
+        "label": "21.1 (JDK 11)",
+        "releaseDate": "2021-04-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-07-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "21.1.0.0",
+          "date": "2021-04-26",
+          "link": "https://github.com/graalvm/mandrel/releases/tag/mandrel-21.1.0.0-Final"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "21.0",
+      "name": "21.0 (JDK 11)",
+      "milestones": {
+        "ga": "2021-02-01",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "21.0",
+        "codename": null,
+        "label": "21.0 (JDK 11)",
+        "releaseDate": "2021-02-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-04-26",
+        "isMaintained": false,
+        "latest": {
+          "name": "21.0.0.0",
+          "date": "2021-02-01",
+          "link": "https://github.com/graalvm/mandrel/releases/tag/mandrel-21.0.0.0.Final"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "20.3",
+      "name": "20.3 (JDK 11) (LTS)",
+      "milestones": {
+        "ga": "2021-01-08",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "20.3",
+        "codename": null,
+        "label": "20.3 (JDK 11) (LTS)",
+        "releaseDate": "2021-01-08",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-10-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "20.3.3.0",
+          "date": "2021-07-21",
+          "link": "https://github.com/graalvm/mandrel/releases/tag/mandrel-20.3.3.0-Final"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "20.2",
+      "name": "20.2 (JDK 11)",
+      "milestones": {
+        "ga": "2020-10-26",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "20.2",
+        "codename": null,
+        "label": "20.2 (JDK 11)",
+        "releaseDate": "2020-10-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-01-08",
+        "isMaintained": false,
+        "latest": {
+          "name": "20.2.0.0",
+          "date": "2020-10-26",
+          "link": "https://github.com/graalvm/mandrel/releases/tag/mandrel-20.2.0.0.Final"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "20.1",
+      "name": "20.1 (JDK 11)",
+      "milestones": {
+        "ga": "2020-08-11",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "20.1",
+        "codename": null,
+        "label": "20.1 (JDK 11)",
+        "releaseDate": "2020-08-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-04-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "20.1.0.4",
+          "date": "2021-01-21",
+          "link": "https://github.com/graalvm/mandrel/releases/tag/mandrel-20.1.0.4.Final"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/mandrel/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-08-29T00:06:26+00:00"
+  }
+}

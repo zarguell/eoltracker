@@ -1,0 +1,61 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "ibm-storage-ts1120-tape-controller",
+  "name": "Storage TS1120 Tape Controller",
+  "category": "hardware",
+  "vendor": "IBM",
+  "product_line": "IBM Tape Storage",
+  "family": "Tape Storage",
+  "model_number": "Storage TS1120 Tape Controller",
+  "milestones": {
+    "ga": null,
+    "eos": null,
+    "eossec": null,
+    "eol": "2018-01-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "Storage TS1120 Tape Controller",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "Storage TS1120 Tape Controller",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "IBM Tape Storage",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Not Announced",
+      "datetime": "",
+      "value": null,
+      "role": "ga",
+      "links": []
+    },
+    "End of Support": {
+      "text": "2018-01-31",
+      "datetime": null,
+      "value": "2018-01-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/backup/vendor/ibm/tape-storage/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

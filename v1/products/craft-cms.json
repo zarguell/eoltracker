@@ -1,0 +1,152 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "craft-cms",
+  "name": "Craft CMS",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:craftcms:craft_cms"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:craftcms:craft_cms"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/craftcms.svg",
+    "html": "https://endoflife.date/craft-cms",
+    "releasePolicy": "https://craftcms.com/knowledge-base/supported-versions"
+  },
+  "releases": [
+    {
+      "id": "5",
+      "name": "5",
+      "milestones": {
+        "ga": "2024-03-26",
+        "eos": null,
+        "eossec": "2031-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5",
+        "codename": null,
+        "label": "5",
+        "releaseDate": "2024-03-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": "2030-12-31",
+        "isEol": false,
+        "eolFrom": "2031-12-31",
+        "isMaintained": true,
+        "latest": {
+          "name": "5.11.1",
+          "date": "2026-09-02",
+          "link": "https://craftcms.com/docs/5.x/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4",
+      "name": "4",
+      "milestones": {
+        "ga": "2022-05-04",
+        "eos": null,
+        "eossec": "2026-04-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "4",
+        "codename": null,
+        "label": "4",
+        "releaseDate": "2022-05-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-04-30",
+        "isEol": true,
+        "eolFrom": "2026-04-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.18.8",
+          "date": "2026-09-01",
+          "link": "https://craftcms.com/docs/4.x/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3",
+      "name": "3",
+      "milestones": {
+        "ga": "2018-04-04",
+        "eos": null,
+        "eossec": "2024-04-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3",
+        "codename": null,
+        "label": "3",
+        "releaseDate": "2018-04-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-04-30",
+        "isEol": true,
+        "eolFrom": "2024-04-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.9.15",
+          "date": "2025-04-10",
+          "link": "https://craftcms.com/docs/3.x/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2",
+      "name": "2",
+      "milestones": {
+        "ga": "2014-04-01",
+        "eos": null,
+        "eossec": "2022-01-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2",
+        "codename": null,
+        "label": "2",
+        "releaseDate": "2014-04-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-01-31",
+        "isEol": true,
+        "eolFrom": "2022-01-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.9.2",
+          "date": "2020-03-06",
+          "link": "https://craftcms.com/docs/2.x/"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/craft-cms/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-03T00:07:10+00:00"
+  }
+}

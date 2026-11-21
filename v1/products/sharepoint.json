@@ -1,0 +1,201 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "sharepoint",
+  "name": "Microsoft SharePoint",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/sharepoint",
+    "releasePolicy": "https://learn.microsoft.com/lifecycle/products/?terms=SharePoint%20Server"
+  },
+  "releases": [
+    {
+      "id": "subscription",
+      "name": "Subscription Edition",
+      "milestones": {
+        "ga": "2021-11-02",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "subscription",
+        "codename": null,
+        "label": "Subscription Edition",
+        "releaseDate": "2021-11-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "16.0.20326.20136",
+          "date": "2026-09-08",
+          "link": "https://support.microsoft.com/help/5002908"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2019",
+      "name": "2019",
+      "milestones": {
+        "ga": "2018-10-22",
+        "eos": null,
+        "eossec": "2026-07-14",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2019",
+        "codename": null,
+        "label": "2019",
+        "releaseDate": "2018-10-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-01-09",
+        "isEol": true,
+        "eolFrom": "2026-07-14",
+        "isMaintained": false,
+        "latest": {
+          "name": "16.0.10417.20198",
+          "date": "2026-08-11",
+          "link": "https://support.microsoft.com/help/5002896"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2016",
+      "name": "2016",
+      "milestones": {
+        "ga": "2016-05-01",
+        "eos": null,
+        "eossec": "2026-07-14",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2016",
+        "codename": null,
+        "label": "2016",
+        "releaseDate": "2016-05-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-07-13",
+        "isEol": true,
+        "eolFrom": "2026-07-14",
+        "isMaintained": false,
+        "latest": {
+          "name": "16.0.5565.1001",
+          "date": "2026-08-11",
+          "link": "https://support.microsoft.com/help/5002906"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2013",
+      "name": "2013 SP1",
+      "milestones": {
+        "ga": "2013-01-09",
+        "eos": null,
+        "eossec": "2023-04-11",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2013",
+        "codename": null,
+        "label": "2013 SP1",
+        "releaseDate": "2013-01-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2018-04-10",
+        "isEol": true,
+        "eolFrom": "2023-04-11",
+        "isMaintained": false,
+        "latest": {
+          "name": "15.0.5545.1000",
+          "date": "2023-04-11",
+          "link": "https://support.microsoft.com/help/5002379"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2010",
+      "name": "2010 SP2",
+      "milestones": {
+        "ga": "2010-07-05",
+        "eos": null,
+        "eossec": "2021-04-13",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2010",
+        "codename": null,
+        "label": "2010 SP2",
+        "releaseDate": "2010-07-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2015-10-13",
+        "isEol": true,
+        "eolFrom": "2021-04-13",
+        "isMaintained": false,
+        "latest": {
+          "name": "14.0.7268.5000",
+          "date": "2021-04-13",
+          "link": "https://support.microsoft.com/help/4504709"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2007",
+      "name": "2007 SP3",
+      "milestones": {
+        "ga": "2007-01-27",
+        "eos": null,
+        "eossec": "2017-10-10",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2007",
+        "codename": null,
+        "label": "2007 SP3",
+        "releaseDate": "2007-01-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2012-10-09",
+        "isEol": true,
+        "eolFrom": "2017-10-10",
+        "isMaintained": false,
+        "latest": {
+          "name": "12.0.6690.5000",
+          "date": "2014-05-13",
+          "link": "https://support.microsoft.com/topic/70d30e40-2571-df91-5994-8109c8bc0f8b"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/sharepoint/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-14T19:59:14+00:00"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "source_url": "https://documentation.campus.barracuda.com/wiki/spaces/NGFEOL/pages/5505036",
+  "space_index": "https://documentation.campus.barracuda.com/wiki/spaces/NGFEOL/pages/5505528",
+  "content_api": "https://documentation.campus.barracuda.com/wiki/rest/api/content",
+  "verifier": "deterministic-barracuda",
+  "checked_at": "2026-09-26T19:57:34Z",
+  "record_scope": "Barracuda appliances: one hardware record per model-revision row of the vendor's end-of-support tables, across the CloudGen/NextGen firewall, load balancer ADC, web application firewall and SecureEdge product spaces, at the day precision each cell states",
+  "rows": {
+    "seen": 122,
+    "published": 120,
+    "excluded": 2,
+    "spaces": 4,
+    "with_eos": 75,
+    "with_eol": 71,
+    "revisions": 111
+  },
+  "spaces": {
+    "BWAFv76": {
+      "page_id": "2721616",
+      "title": "Hardware End of Sale/End of Life",
+      "product": "Barracuda Web Application Firewall"
+    },
+    "LBADCv50": {
+      "page_id": "7414557",
+      "title": "Hardware End of Sale/End of Life",
+      "product": "Barracuda Load Balancer ADC"
+    },
+    "NGFEOL": {
+      "page_id": "5505036",
+      "title": "Barracuda NextGen and CloudGen Firewall Appliances - EoS / EoL Definitions",
+      "product": "Barracuda CloudGen / NextGen Firewall"
+    },
+    "SEPPI": {
+      "page_id": "61374758",
+      "title": "Barracuda SecureEdge Appliances - EoS / EoL Definitions",
+      "product": "Barracuda SecureEdge"
+    }
+  },
+  "excluded": [
+    {
+      "space": "NGFEOL",
+      "row": "F900 Rev. A",
+      "reason": "Barracuda NGFEOL table 1 row 57 end of sale: '2016-11-31' is not a real calendar day"
+    },
+    {
+      "space": "NGFEOL",
+      "table": "Barracuda License Model",
+      "rows": 0,
+      "reason": "the table heads 'Barracuda License Model' and carries neither a revision nor a part-number column: its rows are a licence or subscription lifecycle, a different record shape from a hardware appliance, so they are reported here and none of them is read"
+    }
+  ],
+  "total_records": 120,
+  "limitations": [
+    "The end-of-sale column becomes eos and the end-of-firmware-support column becomes eol, in the vendor's own definitions. Where the column is headed EoS & EoHS, the hardware-support half of the same orderability date is on the same day.",
+    "The eol published here is the model's end of firmware support, not the product's total end of life: Barracuda states the product is not completely End-of-Life until that release itself reaches its end of support. The distinction is published beside the date rather than folded into the milestone.",
+    "ga and eossec are null: no page states an availability date or a security-support date, and neither is inferred from the gap between the two dates that are stated.",
+    "One record is one model revision. A model with Rev. A and Rev. B has two records, because the vendor gives the revisions different dates; the model name is carried forward from the row-spanned cell above, which is how the page states it.",
+    "A model cell naming several models ('SC20, SC21') is one vendor row with one pair of dates, so it is one record keeping the vendor's own label.",
+    "not set and Not Set are the vendor's 'no date' cells and publish nothing; they are never coerced into a sentinel date. The parenthesised firmware version in the end-of-firmware-support cell is kept verbatim and never merged into the date.",
+    "Each space's dated page is found by walking that space through the site's public content API and accepting a page only when it carries dated rows. The load balancer and WAF spaces keep that page as a child of their policy page, so reading a space index alone does not show it.",
+    "The Barracuda Cloud Control space (BCC) publishes an end-of-life notice for a cloud service rather than dated appliance models, so it is not this source's; its notice is named in limitations rather than read into an appliance record."
+  ]
+}

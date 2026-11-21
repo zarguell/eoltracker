@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-es30-60-sas",
+  "name": "ES30-60 SAS",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Data Domain",
+  "family": "Data Domain",
+  "model_number": "ES30-60 SAS",
+  "milestones": {
+    "ga": "2015-10-15",
+    "eos": null,
+    "eossec": null,
+    "eol": null
+  },
+  "status": "supported",
+  "upstream": {
+    "Product": {
+      "text": "ES30-60 SAS",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "ES30-60 SAS",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Data Domain",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "TBD",
+      "datetime": null,
+      "value": null,
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Oct. 15, 2015",
+      "datetime": "2015-10-15",
+      "value": "2015-10-15",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "TBD",
+      "datetime": null,
+      "value": null,
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/backup/vendor/dell-emc/data-domain/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

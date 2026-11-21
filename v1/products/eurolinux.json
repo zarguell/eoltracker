@@ -1,0 +1,152 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "eurolinux",
+  "name": "EuroLinux",
+  "category": "software",
+  "upstream_category": "os",
+  "identifiers": [
+    {
+      "type": "cpe",
+      "id": "cpe:/o:eurolinux:eurolinux"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:o:eurolinux:eurolinux"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/eurolinux",
+    "releasePolicy": "https://web.archive.org/web/20240916162852/https://euro-linux.com/en/software/eurolinux/specification/"
+  },
+  "releases": [
+    {
+      "id": "9",
+      "name": "9",
+      "milestones": {
+        "ga": "2022-06-14",
+        "eos": null,
+        "eossec": "2024-11-03",
+        "eol": null
+      },
+      "upstream": {
+        "name": "9",
+        "codename": null,
+        "label": "9",
+        "releaseDate": "2022-06-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-10-23",
+        "isEol": true,
+        "eolFrom": "2024-11-03",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.4",
+          "date": "2024-05-10",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8",
+      "name": "8",
+      "milestones": {
+        "ga": "2021-07-12",
+        "eos": null,
+        "eossec": "2024-11-03",
+        "eol": null
+      },
+      "upstream": {
+        "name": "8",
+        "codename": null,
+        "label": "8",
+        "releaseDate": "2021-07-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-10-23",
+        "isEol": true,
+        "eolFrom": "2024-11-03",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.10",
+          "date": "2024-05-27",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7",
+      "name": "7",
+      "milestones": {
+        "ga": "2020-11-25",
+        "eos": null,
+        "eossec": "2024-07-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7",
+        "codename": null,
+        "label": "7",
+        "releaseDate": "2020-11-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-07-31",
+        "isEol": true,
+        "eolFrom": "2024-07-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.9",
+          "date": "2020-11-25",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6",
+      "name": "6",
+      "milestones": {
+        "ga": "2015-02-16",
+        "eos": null,
+        "eossec": "2020-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "6",
+        "codename": null,
+        "label": "6",
+        "releaseDate": "2015-02-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-12-31",
+        "isEol": true,
+        "eolFrom": "2020-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.10",
+          "date": "2018-07-25",
+          "link": null
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/eurolinux/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-05-01T09:58:42+00:00"
+  }
+}

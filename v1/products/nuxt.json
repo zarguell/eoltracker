@@ -1,0 +1,168 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "nuxt",
+  "name": "Nuxt",
+  "category": "software",
+  "upstream_category": "framework",
+  "identifiers": [
+    {
+      "type": "cpe",
+      "id": "cpe:/a:nuxt:framework"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:nuxt:framework"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:npm/nuxt"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/nuxt/nuxt"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Development",
+    "discontinued": null,
+    "eol": "Maintenance Support",
+    "eoes": "Commercial Support"
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/nuxt.svg",
+    "html": "https://endoflife.date/nuxt",
+    "releasePolicy": "https://nuxt.com/docs/community/roadmap"
+  },
+  "releases": [
+    {
+      "id": "4",
+      "name": "4",
+      "milestones": {
+        "ga": "2025-07-16",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4",
+        "codename": null,
+        "label": "4",
+        "releaseDate": "2025-07-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "4.5.2",
+          "date": "2026-08-05",
+          "link": "https://github.com/nuxt/nuxt/releases/tag/v4.5.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3",
+      "name": "3",
+      "milestones": {
+        "ga": "2022-11-16",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "3",
+        "codename": null,
+        "label": "3",
+        "releaseDate": "2022-11-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-07-16",
+        "isEol": true,
+        "eolFrom": "2026-07-31",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "3.21.11",
+          "date": "2026-08-05",
+          "link": "https://github.com/nuxt/nuxt/releases/tag/v3.21.11"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2",
+      "name": "2",
+      "milestones": {
+        "ga": "2018-09-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2",
+        "codename": null,
+        "label": "2",
+        "releaseDate": "2018-09-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-11-16",
+        "isEol": true,
+        "eolFrom": "2024-06-30",
+        "isEoes": false,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "2.18.1",
+          "date": "2024-06-28",
+          "link": "https://github.com/nuxt/nuxt/releases/tag/v2.18.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1",
+      "name": "1",
+      "milestones": {
+        "ga": "2018-01-08",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1",
+        "codename": null,
+        "label": "1",
+        "releaseDate": "2018-01-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2018-09-21",
+        "isEol": true,
+        "eolFrom": "2019-09-21",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "1.4.5",
+          "date": "2018-11-27",
+          "link": "https://github.com/nuxt/nuxt/releases/tag/v1.4.5"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/nuxt/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-08-06T00:07:43+00:00"
+  }
+}

@@ -1,0 +1,224 @@
+{
+  "source_url": "https://www.checkpoint.com/support-services/support-life-cycle-policy/",
+  "verifier": "deterministic-checkpoint-appliances",
+  "checked_at": "2026-09-26T19:30:03Z",
+  "record_scope": "Check Point appliances: one hardware record per appliance row of the vendor's support-lifecycle policy page, at the day or month precision the vendor's own cell states",
+  "rows": {
+    "seen": 315,
+    "published": 298,
+    "excluded": 17,
+    "tables": 36,
+    "with_eol": 248,
+    "month_precision": {
+      "General Availability": 282,
+      "End of Sale": 158,
+      "End of Support": 141
+    },
+    "day_precision": {
+      "General Availability": 2,
+      "End of Sale": 41,
+      "End of Support": 107
+    },
+    "month_precision_withheld": {
+      "General Availability": 282,
+      "End of Sale": 158,
+      "End of Support": 141
+    },
+    "withheld_cells": 14
+  },
+  "excluded": [
+    {
+      "table": "Latest Announcements",
+      "rows": 51,
+      "columns": [
+        "Product",
+        "End of Sale",
+        "End of Support",
+        "Recommended Successor Product",
+        "Notification"
+      ],
+      "reason": "not a Check Point appliance schedule: this table carries the vendor's software or service vocabulary, and those rows are read by the sibling software source engine.checkpoint, which publishes them into the software catalog. They are named here so this page's full table count reconciles across both reports."
+    },
+    {
+      "table": "Security Gateway & Management",
+      "rows": 17,
+      "columns": [
+        "Major Version",
+        "General Availability",
+        "Affected Versions",
+        "Support Until"
+      ],
+      "reason": "not a Check Point appliance schedule: this table carries the vendor's software or service vocabulary, and those rows are read by the sibling software source engine.checkpoint, which publishes them into the software catalog. They are named here so this page's full table count reconciles across both reports."
+    },
+    {
+      "table": "Check Point GenAI Protect",
+      "rows": 1,
+      "columns": [
+        "Service",
+        "End of Sale",
+        "End of Support"
+      ],
+      "reason": "not a Check Point appliance schedule: this table carries the vendor's software or service vocabulary, and those rows are read by the sibling software source engine.checkpoint, which publishes them into the software catalog. They are named here so this page's full table count reconciles across both reports."
+    },
+    {
+      "table": "Cloudguard CNAPP",
+      "rows": 3,
+      "columns": [
+        "Service",
+        "End of development",
+        "End of new sales",
+        "End of renewals",
+        "End of support"
+      ],
+      "reason": "not a Check Point appliance schedule: this table carries the vendor's software or service vocabulary, and those rows are read by the sibling software source engine.checkpoint, which publishes them into the software catalog. They are named here so this page's full table count reconciles across both reports."
+    },
+    {
+      "table": "Check Point Spark Firewall Security Gateways",
+      "rows": 11,
+      "columns": [
+        "Major Version",
+        "General Availability",
+        "Affected Versions",
+        "Support Until"
+      ],
+      "reason": "not a Check Point appliance schedule: this table carries the vendor's software or service vocabulary, and those rows are read by the sibling software source engine.checkpoint, which publishes them into the software catalog. They are named here so this page's full table count reconciles across both reports."
+    },
+    {
+      "table": "Scalable Platforms (Maestro, 40000 & 60000)",
+      "rows": 4,
+      "columns": [
+        "Major Version",
+        "General Availability",
+        "Affected Versions",
+        "Support Until"
+      ],
+      "reason": "not a Check Point appliance schedule: this table carries the vendor's software or service vocabulary, and those rows are read by the sibling software source engine.checkpoint, which publishes them into the software catalog. They are named here so this page's full table count reconciles across both reports."
+    },
+    {
+      "table": "Endpoint Security and Remote Access for Windows and Mac as of June 1, 2022",
+      "rows": 62,
+      "columns": [
+        "Version",
+        "General Availability",
+        "Support Until"
+      ],
+      "reason": "not a Check Point appliance schedule: this table carries the vendor's software or service vocabulary, and those rows are read by the sibling software source engine.checkpoint, which publishes them into the software catalog. They are named here so this page's full table count reconciles across both reports."
+    },
+    {
+      "table": "Endpoint Security and Remote Access for Windows and Mac up to Jun 1, 2022",
+      "rows": 10,
+      "columns": [
+        "Major Version",
+        "General Availability",
+        "Affected Versions",
+        "Support Until"
+      ],
+      "reason": "not a Check Point appliance schedule: this table carries the vendor's software or service vocabulary, and those rows are read by the sibling software source engine.checkpoint, which publishes them into the software catalog. They are named here so this page's full table count reconciles across both reports."
+    },
+    {
+      "table": "Check Point NDR",
+      "rows": 1,
+      "columns": [
+        "Service",
+        "End of Sale",
+        "End of Support"
+      ],
+      "reason": "not a Check Point appliance schedule: this table carries the vendor's software or service vocabulary, and those rows are read by the sibling software source engine.checkpoint, which publishes them into the software catalog. They are named here so this page's full table count reconciles across both reports."
+    },
+    {
+      "table": "Workspace Security Connect",
+      "rows": 1,
+      "columns": [
+        "Service",
+        "General Availability",
+        "End of sale",
+        "End of life",
+        "Successor"
+      ],
+      "reason": "not a Check Point appliance schedule: this table carries the vendor's software or service vocabulary, and those rows are read by the sibling software source engine.checkpoint, which publishes them into the software catalog. They are named here so this page's full table count reconciles across both reports."
+    },
+    {
+      "table": "Workspace Security App Protect",
+      "rows": 1,
+      "columns": [
+        "Product",
+        "End of sale",
+        "End of support"
+      ],
+      "reason": "not a Check Point appliance schedule: this table carries the vendor's software or service vocabulary, and those rows are read by the sibling software source engine.checkpoint, which publishes them into the software catalog. They are named here so this page's full table count reconciles across both reports."
+    },
+    {
+      "table": "Check Point Edge",
+      "rows": 1,
+      "columns": [
+        "Service",
+        "General Availability",
+        "End of sale",
+        "End of life",
+        "Successor"
+      ],
+      "reason": "not a Check Point appliance schedule: this table carries the vendor's software or service vocabulary, and those rows are read by the sibling software source engine.checkpoint, which publishes them into the software catalog. They are named here so this page's full table count reconciles across both reports."
+    },
+    {
+      "table": "Check Point IoT Protect Firmware",
+      "rows": 1,
+      "columns": [
+        "Service",
+        "End of sale",
+        "End of Support"
+      ],
+      "reason": "not a Check Point appliance schedule: this table carries the vendor's software or service vocabulary, and those rows are read by the sibling software source engine.checkpoint, which publishes them into the software catalog. They are named here so this page's full table count reconciles across both reports."
+    },
+    {
+      "table": "Capsule Workspace",
+      "rows": 1,
+      "columns": [
+        "Service",
+        "End of sale",
+        "End of life"
+      ],
+      "reason": "not a Check Point appliance schedule: this table carries the vendor's software or service vocabulary, and those rows are read by the sibling software source engine.checkpoint, which publishes them into the software catalog. They are named here so this page's full table count reconciles across both reports."
+    },
+    {
+      "table": "Unsupported Products",
+      "rows": 35,
+      "columns": [
+        "Major Version",
+        "Last Supported Version",
+        "Support Until"
+      ],
+      "reason": "not a Check Point appliance schedule: this table carries the vendor's software or service vocabulary, and those rows are read by the sibling software source engine.checkpoint, which publishes them into the software catalog. They are named here so this page's full table count reconciles across both reports."
+    },
+    {
+      "table": "IP Appliances",
+      "rows": 2,
+      "columns": [
+        "IPSO Operating System Support"
+      ],
+      "reason": "not a Check Point appliance schedule: this table carries the vendor's software or service vocabulary, and those rows are read by the sibling software source engine.checkpoint, which publishes them into the software catalog. They are named here so this page's full table count reconciles across both reports."
+    },
+    {
+      "table": "IAS R Series Appliances",
+      "rows": 15,
+      "columns": [
+        "Appliance Product/Model",
+        "Status",
+        "General Availability",
+        "End of Sale",
+        "Successor Appliance",
+        "Availability",
+        "End of Engineering Support"
+      ],
+      "reason": "not a Check Point appliance schedule: this table carries the vendor's software or service vocabulary, and those rows are read by the sibling software source engine.checkpoint, which publishes them into the software catalog. They are named here so this page's full table count reconciles across both reports."
+    }
+  ],
+  "total_records": 298,
+  "limitations": [
+    "General Availability becomes ga, End of Sale becomes eos and End of Support becomes eol, each at the precision the vendor's cell states; this is the only vendor in the priority set that publishes all three separately.",
+    "End of Engineering Support is published as a vendor cell and never mapped: Check Point defines it as maintenance releases until three years after end of sale, which is a maintenance window and not a security-support end, so eossec is null everywhere.",
+    "The page mixes day and month precision inside one column. Each cell is stored at the width the vendor stated and neither width is padded into the other; the report counts the day- and month-precision cells per column, and a month-precision milestone is published to the feed exclusion document rather than syndicated as an exact day.",
+    "A cell stating a two-digit year publishes no milestone and is counted by name: the schema holds a four-digit year and the century is not stated, so choosing one would invent half the date.",
+    "The vendor's Status column (Active, Successor Product Available, End of Support) is kept verbatim. Where the vendor states End of Support without a date, the status claim is published and no milestone is invented.",
+    "The page also carries software and service schedules. They are reported here and read by engine.checkpoint, which publishes the Security Gateway & Management trains into the software catalog. Between the two reports every table on the page is accounted exactly once."
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "barracuda-f900-rev-b",
+  "name": "F900 Rev. B",
+  "category": "hardware",
+  "vendor": "Barracuda",
+  "product_line": "Barracuda CloudGen Firewall",
+  "family": "Barracuda",
+  "model_number": "2025-02-28",
+  "milestones": {
+    "ga": null,
+    "eos": "2025-02-28",
+    "eossec": null,
+    "eol": "2030-02-28"
+  },
+  "status": "expiring",
+  "upstream": {
+    "Barracuda CloudGen Firewall": {
+      "text": "F900",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "Model Revision": {
+      "text": "Rev. B",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "Part Number": {
+      "text": "BNGF900a",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "EoS & EoHS": {
+      "text": "2025-02-28",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "EoFS (EoL: last supporting release)": {
+      "text": "2030-02-28",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "Successor Model": {
+      "text": "F900 Rev. C",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "End of Firmware Support note": {
+      "text": "2030-02-28",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": [],
+      "note": "this is the last firmware release that supports the model. Barracuda states the product is not completely End-of-Life until that release itself reaches its end of support, so this date is the model's end of firmware support rather than a claim about the product's last day."
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://documentation.campus.barracuda.com/wiki/spaces/NGFEOL/pages/5505036"
+    ],
+    "verifier": "deterministic-barracuda",
+    "last_checked": "2026-09-26T19:57:34Z"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "apple-mac-pro-m2-ultra-2023",
+  "name": "Mac Pro (M2 Ultra, 2023)",
+  "category": "hardware",
+  "vendor": "Apple",
+  "product_line": "Apple",
+  "family": "Mac Pro",
+  "model_number": "Mac Pro (M2 Ultra, 2023)",
+  "milestones": {
+    "ga": "2023-06-13",
+    "eos": null,
+    "eossec": null,
+    "eol": null
+  },
+  "status": "supported",
+  "upstream": {
+    "Product": {
+      "text": "Mac Pro (M2 Ultra, 2023)",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Name": {
+      "text": "Mac Pro (M2 Ultra, 2023)",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Launch Date": {
+      "text": "Jun. 13, 2023",
+      "datetime": "2023-06-13",
+      "value": "2023-06-13",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support (EOSL)": {
+      "text": "",
+      "datetime": null,
+      "value": null,
+      "role": "eol",
+      "links": [
+        "https://support.apple.com/en-us/111900"
+      ]
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/mac/vendor/apple/mac-pro/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

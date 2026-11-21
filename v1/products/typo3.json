@@ -1,0 +1,288 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "typo3",
+  "name": "TYPO3",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "typo3"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:composer/typo3/cms"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:typo3:typo3"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": "Extended Long Term Support"
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/typo3.svg",
+    "html": "https://endoflife.date/typo3",
+    "releasePolicy": "https://get.typo3.org/"
+  },
+  "releases": [
+    {
+      "id": "14",
+      "name": "14",
+      "milestones": {
+        "ga": "2025-11-25",
+        "eos": null,
+        "eossec": "2029-06-30",
+        "eol": "2032-06-30"
+      },
+      "upstream": {
+        "name": "14",
+        "codename": null,
+        "label": "14",
+        "releaseDate": "2025-11-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": "2027-12-31",
+        "isEol": false,
+        "eolFrom": "2029-06-30",
+        "isEoes": false,
+        "eoesFrom": "2032-06-30",
+        "isMaintained": true,
+        "latest": {
+          "name": "14.3.7",
+          "date": "2026-09-08",
+          "link": "https://get.typo3.org/release-notes/14.3.7"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "13",
+      "name": "13",
+      "milestones": {
+        "ga": "2024-01-30",
+        "eos": null,
+        "eossec": "2027-12-31",
+        "eol": "2030-12-31"
+      },
+      "upstream": {
+        "name": "13",
+        "codename": null,
+        "label": "13",
+        "releaseDate": "2024-01-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-06-30",
+        "isEol": false,
+        "eolFrom": "2027-12-31",
+        "isEoes": false,
+        "eoesFrom": "2030-12-31",
+        "isMaintained": true,
+        "latest": {
+          "name": "13.4.35",
+          "date": "2026-09-08",
+          "link": "https://get.typo3.org/release-notes/13.4.35"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "12",
+      "name": "12",
+      "milestones": {
+        "ga": "2022-10-04",
+        "eos": null,
+        "eossec": "2026-04-30",
+        "eol": "2029-04-30"
+      },
+      "upstream": {
+        "name": "12",
+        "codename": null,
+        "label": "12",
+        "releaseDate": "2022-10-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-10-31",
+        "isEol": true,
+        "eolFrom": "2026-04-30",
+        "isEoes": false,
+        "eoesFrom": "2029-04-30",
+        "isMaintained": true,
+        "latest": {
+          "name": "12.4.49",
+          "date": "2026-09-08",
+          "link": "https://get.typo3.org/release-notes/12.4.49"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "11",
+      "name": "11 (LTS)",
+      "milestones": {
+        "ga": "2020-12-22",
+        "eos": null,
+        "eossec": "2024-10-31",
+        "eol": "2027-10-31"
+      },
+      "upstream": {
+        "name": "11",
+        "codename": null,
+        "label": "11 (LTS)",
+        "releaseDate": "2020-12-22",
+        "isLts": true,
+        "ltsFrom": "2021-10-05",
+        "isEoas": true,
+        "eoasFrom": "2023-03-31",
+        "isEol": true,
+        "eolFrom": "2024-10-31",
+        "isEoes": false,
+        "eoesFrom": "2027-10-31",
+        "isMaintained": true,
+        "latest": {
+          "name": "11.5.54",
+          "date": "2026-09-08",
+          "link": "https://get.typo3.org/release-notes/11.5.54"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "10",
+      "name": "10 (LTS)",
+      "milestones": {
+        "ga": "2019-07-23",
+        "eos": null,
+        "eossec": "2023-04-30",
+        "eol": "2026-04-30"
+      },
+      "upstream": {
+        "name": "10",
+        "codename": null,
+        "label": "10 (LTS)",
+        "releaseDate": "2019-07-23",
+        "isLts": true,
+        "ltsFrom": "2020-04-07",
+        "isEoas": true,
+        "eoasFrom": "2021-10-31",
+        "isEol": true,
+        "eolFrom": "2023-04-30",
+        "isEoes": true,
+        "eoesFrom": "2026-04-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "10.4.60",
+          "date": "2026-09-08",
+          "link": "https://get.typo3.org/release-notes/10.4.60"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9",
+      "name": "9",
+      "milestones": {
+        "ga": "2017-12-12",
+        "eos": null,
+        "eossec": "2021-09-30",
+        "eol": "2024-09-30"
+      },
+      "upstream": {
+        "name": "9",
+        "codename": null,
+        "label": "9",
+        "releaseDate": "2017-12-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-04-30",
+        "isEol": true,
+        "eolFrom": "2021-09-30",
+        "isEoes": true,
+        "eoesFrom": "2024-09-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.5.55",
+          "date": "2025-09-09",
+          "link": "https://get.typo3.org/release-notes/9.5.55"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8",
+      "name": "8",
+      "milestones": {
+        "ga": "2016-03-22",
+        "eos": null,
+        "eossec": "2020-03-31",
+        "eol": "2024-03-31"
+      },
+      "upstream": {
+        "name": "8",
+        "codename": null,
+        "label": "8",
+        "releaseDate": "2016-03-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2018-09-30",
+        "isEol": true,
+        "eolFrom": "2020-03-31",
+        "isEoes": true,
+        "eoesFrom": "2024-03-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.7.58",
+          "date": "2024-02-14",
+          "link": "https://get.typo3.org/release-notes/8.7.58"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7",
+      "name": "7",
+      "milestones": {
+        "ga": "2014-12-02",
+        "eos": null,
+        "eossec": "2018-12-01",
+        "eol": "2022-11-30"
+      },
+      "upstream": {
+        "name": "7",
+        "codename": null,
+        "label": "7",
+        "releaseDate": "2014-12-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2017-04-01",
+        "isEol": true,
+        "eolFrom": "2018-12-01",
+        "isEoes": true,
+        "eoesFrom": "2022-11-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.6.58",
+          "date": "2022-09-12",
+          "link": "https://get.typo3.org/release-notes/7.6.58"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/typo3/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-09T00:07:20+00:00"
+  }
+}

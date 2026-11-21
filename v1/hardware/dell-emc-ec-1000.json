@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-ec-1000",
+  "name": "EC-1000",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Connectrix - Cabinets",
+  "family": "Connectrix - Cabinets",
+  "model_number": "EC-1000",
+  "milestones": {
+    "ga": "1999-01-01",
+    "eos": "2000-05-31",
+    "eossec": null,
+    "eol": "2005-05-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "EC-1000",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "EC-1000",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Connectrix - Cabinets",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2000-05-31",
+      "datetime": null,
+      "value": "2000-05-31",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Jan. 01, 1999",
+      "datetime": "1999-01-01",
+      "value": "1999-01-01",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2005-05-31",
+      "datetime": null,
+      "value": "2005-05-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/san-switches/vendor/dell-emc/connectrix-cabinets/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

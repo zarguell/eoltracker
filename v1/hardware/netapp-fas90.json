@@ -1,0 +1,61 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "netapp-fas90",
+  "name": "FAS90",
+  "category": "hardware",
+  "vendor": "NetApp",
+  "product_line": "NetApp FAS",
+  "family": "FAS",
+  "model_number": "FAS90",
+  "milestones": {
+    "ga": "2024-11-01",
+    "eos": null,
+    "eossec": null,
+    "eol": null
+  },
+  "status": "supported",
+  "upstream": {
+    "Product": {
+      "text": "FAS90",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "FAS90",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "NetApp FAS",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Nov. 01, 2024",
+      "datetime": "2024-11-01",
+      "value": "2024-11-01",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support": {
+      "text": "",
+      "datetime": null,
+      "value": null,
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/vendor/netapp/fas/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

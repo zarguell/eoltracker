@@ -1,0 +1,79 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "netgear-rn526xd4-100ajs",
+  "name": "NETGEAR RN526X (RN526XD4-100AJS)",
+  "category": "hardware",
+  "vendor": "NETGEAR",
+  "product_line": "Desktop",
+  "family": "Desktop",
+  "model_number": "RN526XD4-100AJS",
+  "milestones": {
+    "ga": null,
+    "eos": null,
+    "eossec": null,
+    "eol": "2025-11-30"
+  },
+  "status": "eol",
+  "upstream": {
+    "Category": {
+      "text": "Desktop",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": [],
+      "note": "the page's own category heading for this row"
+    },
+    "Model": {
+      "text": "RN526X",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "Item Number": {
+      "text": "RN526XD4-100AJS",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": [],
+      "note": "the SKU this record dates; the page states its end of service may be limited to a particular SKU in a particular region"
+    },
+    "Date 1": {
+      "text": "1/12/2022",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": [],
+      "note": "a date the page states beside the end of service without naming the column. It equals the end-of-service date on most rows and is years earlier on the rest. It is published verbatim and mapped to nothing, because giving it a milestone would be inventing a column name the vendor never wrote.",
+      "differs from the end of service": "yes"
+    },
+    "Date 2": {
+      "text": "11/30/2025",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": [],
+      "note": "the cell the page prints beside the row's own end-of-service sentence, and the one verified against it on every dated row"
+    },
+    "Note": {
+      "text": "The product reached EOS on 30-NOV-2025. We encourage you to replace your device with a newer NETGEAR device.",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": [],
+      "note": "the row's own statement, and the source of the published end-of-service date"
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://www.netgear.com/about/eos/"
+    ],
+    "verifier": "deterministic-netgear",
+    "last_checked": "2026-09-27T00:02:48Z",
+    "fetch": {
+      "fetch": "rendered",
+      "rendered_by": "playwright chromium (headless); the page is the vendor's own published URL, requested as a headless browser with no user-agent override, no identity rewriting and no challenge solving",
+      "operator_switch": "EOLTRACKER_ALLOW_RENDER"
+    }
+  }
+}

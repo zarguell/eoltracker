@@ -1,0 +1,1954 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "gitlab",
+  "name": "GitLab",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "gitlab"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:gitlab:gitlab"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:gitlab:gitlab"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Maintenance Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/gitlab.svg",
+    "html": "https://endoflife.date/gitlab",
+    "releasePolicy": "https://docs.gitlab.com/policy/maintenance/"
+  },
+  "releases": [
+    {
+      "id": "19.3",
+      "name": "19.3",
+      "milestones": {
+        "ga": "2026-08-20",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "19.3",
+        "codename": null,
+        "label": "19.3",
+        "releaseDate": "2026-08-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": "2026-09-17",
+        "isEol": false,
+        "eolFrom": "2026-11-19",
+        "isMaintained": true,
+        "latest": {
+          "name": "19.3.2",
+          "date": "2026-09-10",
+          "link": "https://docs.gitlab.com/releases/19/gitlab-19-3-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "19.2",
+      "name": "19.2",
+      "milestones": {
+        "ga": "2026-07-16",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "19.2",
+        "codename": null,
+        "label": "19.2",
+        "releaseDate": "2026-07-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-08-20",
+        "isEol": false,
+        "eolFrom": "2026-10-15",
+        "isMaintained": true,
+        "latest": {
+          "name": "19.2.6",
+          "date": "2026-09-10",
+          "link": "https://docs.gitlab.com/releases/19/gitlab-19-2-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "19.1",
+      "name": "19.1",
+      "milestones": {
+        "ga": "2026-06-18",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "19.1",
+        "codename": null,
+        "label": "19.1",
+        "releaseDate": "2026-06-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-07-16",
+        "isEol": false,
+        "eolFrom": "2026-09-17",
+        "isMaintained": true,
+        "latest": {
+          "name": "19.1.8",
+          "date": "2026-09-10",
+          "link": "https://docs.gitlab.com/releases/19/gitlab-19-1-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "19.0",
+      "name": "19.0",
+      "milestones": {
+        "ga": "2026-05-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "19.0",
+        "codename": null,
+        "label": "19.0",
+        "releaseDate": "2026-05-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-06-18",
+        "isEol": true,
+        "eolFrom": "2026-08-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "19.0.8",
+          "date": "2026-08-14",
+          "link": "https://docs.gitlab.com/releases/19/gitlab-19-0-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.11",
+      "name": "18.11",
+      "milestones": {
+        "ga": "2026-04-16",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "18.11",
+        "codename": null,
+        "label": "18.11",
+        "releaseDate": "2026-04-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-05-21",
+        "isEol": true,
+        "eolFrom": "2026-07-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.11.11",
+          "date": "2026-08-14",
+          "link": "https://docs.gitlab.com/releases/18/gitlab-18-11-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.10",
+      "name": "18.10",
+      "milestones": {
+        "ga": "2026-03-19",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "18.10",
+        "codename": null,
+        "label": "18.10",
+        "releaseDate": "2026-03-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-04-16",
+        "isEol": true,
+        "eolFrom": "2026-06-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.10.8",
+          "date": "2026-06-10",
+          "link": "https://docs.gitlab.com/releases/18/gitlab-18-10-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.9",
+      "name": "18.9",
+      "milestones": {
+        "ga": "2026-02-19",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "18.9",
+        "codename": null,
+        "label": "18.9",
+        "releaseDate": "2026-02-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-03-19",
+        "isEol": true,
+        "eolFrom": "2026-05-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.9.8",
+          "date": "2026-05-25",
+          "link": "https://docs.gitlab.com/releases/18/gitlab-18-9-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.8",
+      "name": "18.8",
+      "milestones": {
+        "ga": "2026-01-15",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "18.8",
+        "codename": null,
+        "label": "18.8",
+        "releaseDate": "2026-01-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-02-19",
+        "isEol": true,
+        "eolFrom": "2026-04-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.8.11",
+          "date": "2026-06-29",
+          "link": "https://docs.gitlab.com/releases/18/gitlab-18-8-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.7",
+      "name": "18.7",
+      "milestones": {
+        "ga": "2025-12-18",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "18.7",
+        "codename": null,
+        "label": "18.7",
+        "releaseDate": "2025-12-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-01-15",
+        "isEol": true,
+        "eolFrom": "2026-03-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.7.7",
+          "date": "2026-05-25",
+          "link": "https://docs.gitlab.com/releases/18/gitlab-18-7-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.6",
+      "name": "18.6",
+      "milestones": {
+        "ga": "2025-11-20",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "18.6",
+        "codename": null,
+        "label": "18.6",
+        "releaseDate": "2025-11-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-12-18",
+        "isEol": true,
+        "eolFrom": "2026-02-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.6.8",
+          "date": "2026-05-26",
+          "link": "https://docs.gitlab.com/releases/18/gitlab-18-6-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.5",
+      "name": "18.5",
+      "milestones": {
+        "ga": "2025-10-16",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "18.5",
+        "codename": null,
+        "label": "18.5",
+        "releaseDate": "2025-10-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-11-20",
+        "isEol": true,
+        "eolFrom": "2026-01-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.5.7",
+          "date": "2026-05-26",
+          "link": "https://docs.gitlab.com/releases/18/gitlab-18-5-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.4",
+      "name": "18.4",
+      "milestones": {
+        "ga": "2025-09-18",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "18.4",
+        "codename": null,
+        "label": "18.4",
+        "releaseDate": "2025-09-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-10-16",
+        "isEol": true,
+        "eolFrom": "2025-12-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.4.6",
+          "date": "2025-12-10",
+          "link": "https://docs.gitlab.com/releases/18/gitlab-18-4-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.3",
+      "name": "18.3",
+      "milestones": {
+        "ga": "2025-08-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "18.3",
+        "codename": null,
+        "label": "18.3",
+        "releaseDate": "2025-08-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-09-18",
+        "isEol": true,
+        "eolFrom": "2025-11-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.3.6",
+          "date": "2025-11-11",
+          "link": "https://docs.gitlab.com/releases/18/gitlab-18-3-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.2",
+      "name": "18.2",
+      "milestones": {
+        "ga": "2025-07-16",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "18.2",
+        "codename": null,
+        "label": "18.2",
+        "releaseDate": "2025-07-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-08-21",
+        "isEol": true,
+        "eolFrom": "2025-10-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.2.8",
+          "date": "2025-10-08",
+          "link": "https://docs.gitlab.com/releases/18/gitlab-18-2-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.1",
+      "name": "18.1",
+      "milestones": {
+        "ga": "2025-06-18",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "18.1",
+        "codename": null,
+        "label": "18.1",
+        "releaseDate": "2025-06-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-07-17",
+        "isEol": true,
+        "eolFrom": "2025-09-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.1.6",
+          "date": "2025-09-09",
+          "link": "https://docs.gitlab.com/releases/18/gitlab-18-1-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.0",
+      "name": "18.0",
+      "milestones": {
+        "ga": "2025-05-14",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "18.0",
+        "codename": null,
+        "label": "18.0",
+        "releaseDate": "2025-05-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-06-19",
+        "isEol": true,
+        "eolFrom": "2025-08-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.0.6",
+          "date": "2025-08-12",
+          "link": "https://docs.gitlab.com/releases/18/gitlab-18-0-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "17.11",
+      "name": "17.11",
+      "milestones": {
+        "ga": "2025-04-16",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "17.11",
+        "codename": null,
+        "label": "17.11",
+        "releaseDate": "2025-04-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-05-15",
+        "isEol": true,
+        "eolFrom": "2025-07-17",
+        "isMaintained": false,
+        "latest": {
+          "name": "17.11.7",
+          "date": "2025-08-14",
+          "link": "https://docs.gitlab.com/releases/17/gitlab-17-11-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "17.10",
+      "name": "17.10",
+      "milestones": {
+        "ga": "2025-03-19",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "17.10",
+        "codename": null,
+        "label": "17.10",
+        "releaseDate": "2025-03-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-04-17",
+        "isEol": true,
+        "eolFrom": "2025-06-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "17.10.8",
+          "date": "2025-06-11",
+          "link": "https://docs.gitlab.com/releases/17/gitlab-17-10-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "17.9",
+      "name": "17.9",
+      "milestones": {
+        "ga": "2025-02-19",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "17.9",
+        "codename": null,
+        "label": "17.9",
+        "releaseDate": "2025-02-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-03-20",
+        "isEol": true,
+        "eolFrom": "2025-05-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "17.9.8",
+          "date": "2025-05-07",
+          "link": "https://docs.gitlab.com/releases/17/gitlab-17-9-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "17.8",
+      "name": "17.8",
+      "milestones": {
+        "ga": "2025-01-15",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "17.8",
+        "codename": null,
+        "label": "17.8",
+        "releaseDate": "2025-01-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-02-20",
+        "isEol": true,
+        "eolFrom": "2025-04-17",
+        "isMaintained": false,
+        "latest": {
+          "name": "17.8.7",
+          "date": "2025-04-09",
+          "link": "https://docs.gitlab.com/releases/17/gitlab-17-8-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "17.7",
+      "name": "17.7",
+      "milestones": {
+        "ga": "2024-12-18",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "17.7",
+        "codename": null,
+        "label": "17.7",
+        "releaseDate": "2024-12-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-01-16",
+        "isEol": true,
+        "eolFrom": "2025-03-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "17.7.7",
+          "date": "2025-03-11",
+          "link": "https://docs.gitlab.com/releases/17/gitlab-17-7-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "17.6",
+      "name": "17.6",
+      "milestones": {
+        "ga": "2024-11-20",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "17.6",
+        "codename": null,
+        "label": "17.6",
+        "releaseDate": "2024-11-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-12-19",
+        "isEol": true,
+        "eolFrom": "2025-02-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "17.6.5",
+          "date": "2025-02-11",
+          "link": "https://docs.gitlab.com/releases/17/gitlab-17-6-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "17.5",
+      "name": "17.5",
+      "milestones": {
+        "ga": "2024-10-16",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "17.5",
+        "codename": null,
+        "label": "17.5",
+        "releaseDate": "2024-10-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-11-21",
+        "isEol": true,
+        "eolFrom": "2025-01-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "17.5.5",
+          "date": "2025-01-08",
+          "link": "https://docs.gitlab.com/releases/17/gitlab-17-5-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "17.4",
+      "name": "17.4",
+      "milestones": {
+        "ga": "2024-09-18",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "17.4",
+        "codename": null,
+        "label": "17.4",
+        "releaseDate": "2024-09-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-10-17",
+        "isEol": true,
+        "eolFrom": "2024-12-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "17.4.6",
+          "date": "2024-12-10",
+          "link": "https://docs.gitlab.com/releases/17/gitlab-17-4-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "17.3",
+      "name": "17.3",
+      "milestones": {
+        "ga": "2024-08-14",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "17.3",
+        "codename": null,
+        "label": "17.3",
+        "releaseDate": "2024-08-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-09-19",
+        "isEol": true,
+        "eolFrom": "2024-11-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "17.3.7",
+          "date": "2024-11-12",
+          "link": "https://docs.gitlab.com/releases/17/gitlab-17-3-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "17.2",
+      "name": "17.2",
+      "milestones": {
+        "ga": "2024-07-17",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "17.2",
+        "codename": null,
+        "label": "17.2",
+        "releaseDate": "2024-07-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-08-15",
+        "isEol": true,
+        "eolFrom": "2024-10-17",
+        "isMaintained": false,
+        "latest": {
+          "name": "17.2.9",
+          "date": "2024-10-09",
+          "link": "https://docs.gitlab.com/releases/17/gitlab-17-2-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "17.1",
+      "name": "17.1",
+      "milestones": {
+        "ga": "2024-06-19",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "17.1",
+        "codename": null,
+        "label": "17.1",
+        "releaseDate": "2024-06-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-07-18",
+        "isEol": true,
+        "eolFrom": "2024-09-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "17.1.8",
+          "date": "2024-09-16",
+          "link": "https://docs.gitlab.com/releases/17/gitlab-17-1-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "17.0",
+      "name": "17.0",
+      "milestones": {
+        "ga": "2024-05-15",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "17.0",
+        "codename": null,
+        "label": "17.0",
+        "releaseDate": "2024-05-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-06-20",
+        "isEol": true,
+        "eolFrom": "2024-08-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "17.0.8",
+          "date": "2024-09-16",
+          "link": "https://docs.gitlab.com/releases/17/gitlab-17-0-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "16.11",
+      "name": "16.11",
+      "milestones": {
+        "ga": "2024-04-17",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "16.11",
+        "codename": null,
+        "label": "16.11",
+        "releaseDate": "2024-04-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-05-16",
+        "isEol": true,
+        "eolFrom": "2024-07-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "16.11.10",
+          "date": "2024-09-16",
+          "link": "https://docs.gitlab.com/releases/16/gitlab-16-11-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "16.10",
+      "name": "16.10",
+      "milestones": {
+        "ga": "2024-03-20",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "16.10",
+        "codename": null,
+        "label": "16.10",
+        "releaseDate": "2024-03-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-04-18",
+        "isEol": true,
+        "eolFrom": "2024-06-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "16.10.10",
+          "date": "2024-09-19",
+          "link": "https://docs.gitlab.com/releases/16/gitlab-16-10-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "16.9",
+      "name": "16.9",
+      "milestones": {
+        "ga": "2024-02-14",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "16.9",
+        "codename": null,
+        "label": "16.9",
+        "releaseDate": "2024-02-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-03-21",
+        "isEol": true,
+        "eolFrom": "2024-05-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "16.9.11",
+          "date": "2024-09-19",
+          "link": "https://docs.gitlab.com/releases/16/gitlab-16-9-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "16.8",
+      "name": "16.8",
+      "milestones": {
+        "ga": "2024-01-17",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "16.8",
+        "codename": null,
+        "label": "16.8",
+        "releaseDate": "2024-01-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-02-15",
+        "isEol": true,
+        "eolFrom": "2024-04-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "16.8.10",
+          "date": "2024-09-20",
+          "link": "https://docs.gitlab.com/releases/16/gitlab-16-8-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "16.7",
+      "name": "16.7",
+      "milestones": {
+        "ga": "2023-12-20",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "16.7",
+        "codename": null,
+        "label": "16.7",
+        "releaseDate": "2023-12-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-01-18",
+        "isEol": true,
+        "eolFrom": "2024-03-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "16.7.10",
+          "date": "2024-09-20",
+          "link": "https://docs.gitlab.com/releases/16/gitlab-16-7-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "16.6",
+      "name": "16.6",
+      "milestones": {
+        "ga": "2023-11-15",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "16.6",
+        "codename": null,
+        "label": "16.6",
+        "releaseDate": "2023-11-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-12-21",
+        "isEol": true,
+        "eolFrom": "2024-02-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "16.6.10",
+          "date": "2024-09-20",
+          "link": "https://docs.gitlab.com/releases/16/gitlab-16-6-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "16.5",
+      "name": "16.5",
+      "milestones": {
+        "ga": "2023-10-20",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "16.5",
+        "codename": null,
+        "label": "16.5",
+        "releaseDate": "2023-10-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-11-16",
+        "isEol": true,
+        "eolFrom": "2024-01-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "16.5.10",
+          "date": "2024-09-20",
+          "link": "https://docs.gitlab.com/releases/16/gitlab-16-5-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "16.4",
+      "name": "16.4",
+      "milestones": {
+        "ga": "2023-09-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "16.4",
+        "codename": null,
+        "label": "16.4",
+        "releaseDate": "2023-09-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-10-22",
+        "isEol": true,
+        "eolFrom": "2023-12-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "16.4.7",
+          "date": "2024-09-20",
+          "link": "https://docs.gitlab.com/releases/16/gitlab-16-4-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "16.3",
+      "name": "16.3",
+      "milestones": {
+        "ga": "2023-08-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "16.3",
+        "codename": null,
+        "label": "16.3",
+        "releaseDate": "2023-08-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-09-22",
+        "isEol": true,
+        "eolFrom": "2023-11-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "16.3.9",
+          "date": "2024-09-20",
+          "link": "https://docs.gitlab.com/releases/16/gitlab-16-3-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "16.2",
+      "name": "16.2",
+      "milestones": {
+        "ga": "2023-07-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "16.2",
+        "codename": null,
+        "label": "16.2",
+        "releaseDate": "2023-07-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-08-22",
+        "isEol": true,
+        "eolFrom": "2023-10-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "16.2.11",
+          "date": "2024-09-23",
+          "link": "https://docs.gitlab.com/releases/16/gitlab-16-2-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "16.1",
+      "name": "16.1",
+      "milestones": {
+        "ga": "2023-06-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "16.1",
+        "codename": null,
+        "label": "16.1",
+        "releaseDate": "2023-06-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-07-22",
+        "isEol": true,
+        "eolFrom": "2023-09-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "16.1.8",
+          "date": "2024-09-23",
+          "link": "https://docs.gitlab.com/releases/16/gitlab-16-1-released/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "16.0",
+      "name": "16.0",
+      "milestones": {
+        "ga": "2023-05-18",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "16.0",
+        "codename": null,
+        "label": "16.0",
+        "releaseDate": "2023-05-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-06-22",
+        "isEol": true,
+        "eolFrom": "2023-08-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "16.0.10",
+          "date": "2024-09-23",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "15.11",
+      "name": "15.11",
+      "milestones": {
+        "ga": "2023-04-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "15.11",
+        "codename": null,
+        "label": "15.11",
+        "releaseDate": "2023-04-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-05-22",
+        "isEol": true,
+        "eolFrom": "2023-07-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "15.11.13",
+          "date": "2023-07-27",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "15.10",
+      "name": "15.10",
+      "milestones": {
+        "ga": "2023-03-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "15.10",
+        "codename": null,
+        "label": "15.10",
+        "releaseDate": "2023-03-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-04-22",
+        "isEol": true,
+        "eolFrom": "2023-06-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "15.10.8",
+          "date": "2023-06-05",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "15.9",
+      "name": "15.9",
+      "milestones": {
+        "ga": "2023-02-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "15.9",
+        "codename": null,
+        "label": "15.9",
+        "releaseDate": "2023-02-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-03-22",
+        "isEol": true,
+        "eolFrom": "2023-05-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "15.9.8",
+          "date": "2023-05-10",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "15.8",
+      "name": "15.8",
+      "milestones": {
+        "ga": "2023-01-20",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "15.8",
+        "codename": null,
+        "label": "15.8",
+        "releaseDate": "2023-01-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-02-22",
+        "isEol": true,
+        "eolFrom": "2023-04-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "15.8.6",
+          "date": "2023-04-18",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "15.7",
+      "name": "15.7",
+      "milestones": {
+        "ga": "2022-12-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "15.7",
+        "codename": null,
+        "label": "15.7",
+        "releaseDate": "2022-12-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-01-22",
+        "isEol": true,
+        "eolFrom": "2023-03-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "15.7.9",
+          "date": "2023-04-20",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "15.6",
+      "name": "15.6",
+      "milestones": {
+        "ga": "2022-11-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "15.6",
+        "codename": null,
+        "label": "15.6",
+        "releaseDate": "2022-11-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-12-22",
+        "isEol": true,
+        "eolFrom": "2023-02-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "15.6.8",
+          "date": "2023-02-10",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "15.5",
+      "name": "15.5",
+      "milestones": {
+        "ga": "2022-10-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "15.5",
+        "codename": null,
+        "label": "15.5",
+        "releaseDate": "2022-10-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-11-22",
+        "isEol": true,
+        "eolFrom": "2023-01-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "15.5.9",
+          "date": "2023-01-12",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "15.4",
+      "name": "15.4",
+      "milestones": {
+        "ga": "2022-09-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "15.4",
+        "codename": null,
+        "label": "15.4",
+        "releaseDate": "2022-09-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-10-22",
+        "isEol": true,
+        "eolFrom": "2022-12-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "15.4.6",
+          "date": "2022-11-30",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "15.3",
+      "name": "15.3",
+      "milestones": {
+        "ga": "2022-08-19",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "15.3",
+        "codename": null,
+        "label": "15.3",
+        "releaseDate": "2022-08-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-09-22",
+        "isEol": true,
+        "eolFrom": "2022-11-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "15.3.5",
+          "date": "2022-11-02",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "15.2",
+      "name": "15.2",
+      "milestones": {
+        "ga": "2022-07-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "15.2",
+        "codename": null,
+        "label": "15.2",
+        "releaseDate": "2022-07-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-08-22",
+        "isEol": true,
+        "eolFrom": "2022-10-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "15.2.5",
+          "date": "2022-09-29",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "15.1",
+      "name": "15.1",
+      "milestones": {
+        "ga": "2022-06-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "15.1",
+        "codename": null,
+        "label": "15.1",
+        "releaseDate": "2022-06-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-07-22",
+        "isEol": true,
+        "eolFrom": "2022-09-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "15.1.6",
+          "date": "2022-08-30",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "15.0",
+      "name": "15.0",
+      "milestones": {
+        "ga": "2022-05-20",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "15.0",
+        "codename": null,
+        "label": "15.0",
+        "releaseDate": "2022-05-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-06-22",
+        "isEol": true,
+        "eolFrom": "2022-08-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "15.0.5",
+          "date": "2022-07-28",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "14.10",
+      "name": "14.10",
+      "milestones": {
+        "ga": "2022-04-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "14.10",
+        "codename": null,
+        "label": "14.10",
+        "releaseDate": "2022-04-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-05-22",
+        "isEol": true,
+        "eolFrom": "2022-07-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "14.10.5",
+          "date": "2022-06-30",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "14.9",
+      "name": "14.9",
+      "milestones": {
+        "ga": "2022-03-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "14.9",
+        "codename": null,
+        "label": "14.9",
+        "releaseDate": "2022-03-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-04-22",
+        "isEol": true,
+        "eolFrom": "2022-06-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "14.9.5",
+          "date": "2022-06-01",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "14.8",
+      "name": "14.8",
+      "milestones": {
+        "ga": "2022-02-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "14.8",
+        "codename": null,
+        "label": "14.8",
+        "releaseDate": "2022-02-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-03-22",
+        "isEol": true,
+        "eolFrom": "2022-05-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "14.8.6",
+          "date": "2022-04-29",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "14.7",
+      "name": "14.7",
+      "milestones": {
+        "ga": "2022-01-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "14.7",
+        "codename": null,
+        "label": "14.7",
+        "releaseDate": "2022-01-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-02-22",
+        "isEol": true,
+        "eolFrom": "2022-04-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "14.7.7",
+          "date": "2022-03-31",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "14.6",
+      "name": "14.6",
+      "milestones": {
+        "ga": "2021-12-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "14.6",
+        "codename": null,
+        "label": "14.6",
+        "releaseDate": "2021-12-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-01-22",
+        "isEol": true,
+        "eolFrom": "2022-03-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "14.6.7",
+          "date": "2022-03-31",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "14.5",
+      "name": "14.5",
+      "milestones": {
+        "ga": "2021-11-19",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "14.5",
+        "codename": null,
+        "label": "14.5",
+        "releaseDate": "2021-11-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-12-22",
+        "isEol": true,
+        "eolFrom": "2022-02-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "14.5.4",
+          "date": "2022-02-03",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "14.4",
+      "name": "14.4",
+      "milestones": {
+        "ga": "2021-10-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "14.4",
+        "codename": null,
+        "label": "14.4",
+        "releaseDate": "2021-10-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-11-22",
+        "isEol": true,
+        "eolFrom": "2022-01-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "14.4.5",
+          "date": "2022-01-11",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "14.3",
+      "name": "14.3",
+      "milestones": {
+        "ga": "2021-09-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "14.3",
+        "codename": null,
+        "label": "14.3",
+        "releaseDate": "2021-09-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-10-22",
+        "isEol": true,
+        "eolFrom": "2021-12-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "14.3.6",
+          "date": "2021-12-03",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "14.2",
+      "name": "14.2",
+      "milestones": {
+        "ga": "2021-08-20",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "14.2",
+        "codename": null,
+        "label": "14.2",
+        "releaseDate": "2021-08-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-09-22",
+        "isEol": true,
+        "eolFrom": "2021-11-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "14.2.7",
+          "date": "2021-11-26",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "14.1",
+      "name": "14.1",
+      "milestones": {
+        "ga": "2021-07-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "14.1",
+        "codename": null,
+        "label": "14.1",
+        "releaseDate": "2021-07-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-08-22",
+        "isEol": true,
+        "eolFrom": "2021-10-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "14.1.8",
+          "date": "2021-11-15",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "14.0",
+      "name": "14.0",
+      "milestones": {
+        "ga": "2021-06-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "14.0",
+        "codename": null,
+        "label": "14.0",
+        "releaseDate": "2021-06-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-07-22",
+        "isEol": true,
+        "eolFrom": "2021-09-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "14.0.12",
+          "date": "2021-11-05",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "13.12",
+      "name": "13.12",
+      "milestones": {
+        "ga": "2021-05-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "13.12",
+        "codename": null,
+        "label": "13.12",
+        "releaseDate": "2021-05-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-06-22",
+        "isEol": true,
+        "eolFrom": "2021-08-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "13.12.15",
+          "date": "2021-11-03",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "13.11",
+      "name": "13.11",
+      "milestones": {
+        "ga": "2021-04-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "13.11",
+        "codename": null,
+        "label": "13.11",
+        "releaseDate": "2021-04-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-05-22",
+        "isEol": true,
+        "eolFrom": "2021-07-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "13.11.7",
+          "date": "2021-07-07",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "13.10",
+      "name": "13.10",
+      "milestones": {
+        "ga": "2021-03-18",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "13.10",
+        "codename": null,
+        "label": "13.10",
+        "releaseDate": "2021-03-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-04-22",
+        "isEol": true,
+        "eolFrom": "2021-06-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "13.10.5",
+          "date": "2021-06-01",
+          "link": null
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/gitlab/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-12T00:06:51+00:00"
+  }
+}

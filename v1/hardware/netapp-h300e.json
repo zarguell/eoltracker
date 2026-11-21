@@ -1,0 +1,61 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "netapp-h300e",
+  "name": "H300E",
+  "category": "hardware",
+  "vendor": "NetApp",
+  "product_line": "NetApp H",
+  "family": "H",
+  "model_number": "H300E",
+  "milestones": {
+    "ga": null,
+    "eos": null,
+    "eossec": null,
+    "eol": "2024-06-30"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "H300E",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "H300E",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "NetApp H",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Not Announced",
+      "datetime": "",
+      "value": null,
+      "role": "ga",
+      "links": []
+    },
+    "End of Support": {
+      "text": "2024-06-30",
+      "datetime": null,
+      "value": "2024-06-30",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/object-storage/vendor/netapp/h/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

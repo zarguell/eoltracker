@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-sparc-1000",
+  "name": "Sparc 1000",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC EMC Data Manager (EDM)",
+  "family": "EMC Data Manager (EDM)",
+  "model_number": "Sparc 1000",
+  "milestones": {
+    "ga": "1995-11-01",
+    "eos": "1997-04-30",
+    "eossec": null,
+    "eol": "2003-05-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "Sparc 1000",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "Sparc 1000",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC EMC Data Manager (EDM)",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "1997-04-30",
+      "datetime": null,
+      "value": "1997-04-30",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Nov. 01, 1995",
+      "datetime": "1995-11-01",
+      "value": "1995-11-01",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2003-05-31",
+      "datetime": null,
+      "value": "2003-05-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/backup/vendor/dell-emc/emc-data-manager-edm/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

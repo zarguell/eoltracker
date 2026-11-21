@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-recoverpoint-gen1-server",
+  "name": "RecoverPoint Gen1 Server",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC RecoverPoint",
+  "family": "RecoverPoint",
+  "model_number": "RecoverPoint Gen1 Server",
+  "milestones": {
+    "ga": "2006-12-01",
+    "eos": "2008-03-31",
+    "eossec": null,
+    "eol": "2013-03-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "RecoverPoint Gen1 Server",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "RecoverPoint Gen1 Server",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC RecoverPoint",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2008-03-31",
+      "datetime": null,
+      "value": "2008-03-31",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Dec. 01, 2006",
+      "datetime": "2006-12-01",
+      "value": "2006-12-01",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2013-03-31",
+      "datetime": null,
+      "value": "2013-03-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/data-replication/vendor/dell-emc/recoverpoint/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

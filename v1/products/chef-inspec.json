@@ -1,0 +1,239 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "chef-inspec",
+  "name": "Chef InSpec",
+  "category": "software",
+  "upstream_category": "app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "inspec"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:chef:inspec"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/chef.svg",
+    "html": "https://endoflife.date/chef-inspec",
+    "releasePolicy": "https://docs.chef.io/versions/"
+  },
+  "releases": [
+    {
+      "id": "7",
+      "name": "7",
+      "milestones": {
+        "ga": "2025-10-16",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "7",
+        "codename": null,
+        "label": "7",
+        "releaseDate": "2025-10-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "7.2.1",
+          "date": "2026-08-07",
+          "link": "https://docs.chef.io/release_notes_inspec/#7.2.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6",
+      "name": "6",
+      "milestones": {
+        "ga": "2023-11-14",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6",
+        "codename": null,
+        "label": "6",
+        "releaseDate": "2023-11-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-10-16",
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "6.8.24",
+          "date": "2025-01-23",
+          "link": "https://docs.chef.io/release_notes_inspec/#6.8.24"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5",
+      "name": "5",
+      "milestones": {
+        "ga": "2022-03-17",
+        "eos": null,
+        "eossec": "2025-10-16",
+        "eol": null
+      },
+      "upstream": {
+        "name": "5",
+        "codename": null,
+        "label": "5",
+        "releaseDate": "2022-03-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-11-14",
+        "isEol": true,
+        "eolFrom": "2025-10-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.24.24",
+          "date": "2026-06-24",
+          "link": "https://docs.chef.io/release_notes_inspec/#5.24.24"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4",
+      "name": "4",
+      "milestones": {
+        "ga": "2019-04-30",
+        "eos": null,
+        "eossec": "2023-11-14",
+        "eol": null
+      },
+      "upstream": {
+        "name": "4",
+        "codename": null,
+        "label": "4",
+        "releaseDate": "2019-04-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-03-17",
+        "isEol": true,
+        "eolFrom": "2023-11-14",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.56.58",
+          "date": "2023-10-24",
+          "link": "https://docs.chef.io/release_notes_inspec/#4.56.58"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3",
+      "name": "3",
+      "milestones": {
+        "ga": "2018-10-15",
+        "eos": null,
+        "eossec": "2020-04-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3",
+        "codename": null,
+        "label": "3",
+        "releaseDate": "2018-10-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2019-04-30",
+        "isEol": true,
+        "eolFrom": "2020-04-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.9.3",
+          "date": "2019-04-11",
+          "link": "https://docs.chef.io/release_notes_inspec/#3.9.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2",
+      "name": "2",
+      "milestones": {
+        "ga": "2018-02-20",
+        "eos": null,
+        "eossec": "2019-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2",
+        "codename": null,
+        "label": "2",
+        "releaseDate": "2018-02-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2018-10-15",
+        "isEol": true,
+        "eolFrom": "2019-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.3.28",
+          "date": "2019-02-08",
+          "link": "https://docs.chef.io/release_notes_inspec/#2.3.28"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1",
+      "name": "1",
+      "milestones": {
+        "ga": "2016-09-26",
+        "eos": null,
+        "eossec": "2019-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1",
+        "codename": null,
+        "label": "1",
+        "releaseDate": "2016-09-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2018-02-20",
+        "isEol": true,
+        "eolFrom": "2019-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.51.31",
+          "date": "2019-03-06",
+          "link": "https://docs.chef.io/release_notes_inspec/#1.51.31"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/chef-inspec/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-03T00:07:10+00:00"
+  }
+}

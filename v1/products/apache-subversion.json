@@ -1,0 +1,437 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "apache-subversion",
+  "name": "Apache Subversion",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "subversion"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/subversion.svg",
+    "html": "https://endoflife.date/apache-subversion",
+    "releasePolicy": "https://subversion.apache.org/roadmap.html"
+  },
+  "releases": [
+    {
+      "id": "1.14",
+      "name": "1.14 (LTS)",
+      "milestones": {
+        "ga": "2020-05-27",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.14",
+        "codename": null,
+        "label": "1.14 (LTS)",
+        "releaseDate": "2020-05-27",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "1.14.5",
+          "date": "2024-12-08",
+          "link": "https://subversion.apache.org/docs/release-notes/1.14.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.13",
+      "name": "1.13",
+      "milestones": {
+        "ga": "2019-10-30",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.13",
+        "codename": null,
+        "label": "1.13",
+        "releaseDate": "2019-10-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "1.13.0",
+          "date": "2019-10-30",
+          "link": "https://subversion.apache.org/docs/release-notes/1.13.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.12",
+      "name": "1.12",
+      "milestones": {
+        "ga": "2019-04-24",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.12",
+        "codename": null,
+        "label": "1.12",
+        "releaseDate": "2019-04-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "1.12.2",
+          "date": "2019-07-24",
+          "link": "https://subversion.apache.org/docs/release-notes/1.12.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.11",
+      "name": "1.11",
+      "milestones": {
+        "ga": "2018-10-30",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.11",
+        "codename": null,
+        "label": "1.11",
+        "releaseDate": "2018-10-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "1.11.1",
+          "date": "2019-01-11",
+          "link": "https://subversion.apache.org/docs/release-notes/1.11.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.10",
+      "name": "1.10 (LTS)",
+      "milestones": {
+        "ga": "2018-04-12",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.10",
+        "codename": null,
+        "label": "1.10 (LTS)",
+        "releaseDate": "2018-04-12",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "1.10.8",
+          "date": "2022-04-12",
+          "link": "https://subversion.apache.org/docs/release-notes/1.10.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.9",
+      "name": "1.9 (LTS)",
+      "milestones": {
+        "ga": "2015-08-05",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.9",
+        "codename": null,
+        "label": "1.9 (LTS)",
+        "releaseDate": "2015-08-05",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "1.9.12",
+          "date": "2019-07-24",
+          "link": "https://subversion.apache.org/docs/release-notes/1.9.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.8",
+      "name": "1.8 (LTS)",
+      "milestones": {
+        "ga": "2013-06-18",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.8",
+        "codename": null,
+        "label": "1.8 (LTS)",
+        "releaseDate": "2013-06-18",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "1.8.19",
+          "date": "2017-08-10",
+          "link": "https://subversion.apache.org/docs/release-notes/1.8.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.7",
+      "name": "1.7 (LTS)",
+      "milestones": {
+        "ga": "2011-10-11",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.7",
+        "codename": null,
+        "label": "1.7 (LTS)",
+        "releaseDate": "2011-10-11",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "1.7.22",
+          "date": "2015-08-14",
+          "link": "https://subversion.apache.org/docs/release-notes/1.7.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.6",
+      "name": "1.6 (LTS)",
+      "milestones": {
+        "ga": "2009-03-20",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.6",
+        "codename": null,
+        "label": "1.6 (LTS)",
+        "releaseDate": "2009-03-20",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "1.6.23",
+          "date": "2013-05-31",
+          "link": "https://subversion.apache.org/docs/release-notes/1.6.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.5",
+      "name": "1.5 (LTS)",
+      "milestones": {
+        "ga": "2008-06-19",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.5",
+        "codename": null,
+        "label": "1.5 (LTS)",
+        "releaseDate": "2008-06-19",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "1.5.9",
+          "date": "2010-12-22",
+          "link": "https://subversion.apache.org/docs/release-notes/1.5.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.4",
+      "name": "1.4 (LTS)",
+      "milestones": {
+        "ga": "2006-09-10",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.4",
+        "codename": null,
+        "label": "1.4 (LTS)",
+        "releaseDate": "2006-09-10",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "1.4.6",
+          "date": "2007-12-20",
+          "link": "https://subversion.apache.org/docs/release-notes/1.4.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.3",
+      "name": "1.3 (LTS)",
+      "milestones": {
+        "ga": "2005-12-30",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.3",
+        "codename": null,
+        "label": "1.3 (LTS)",
+        "releaseDate": "2005-12-30",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "1.3.2",
+          "date": "2006-05-31",
+          "link": "https://subversion.apache.org/docs/release-notes/1.3.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.2",
+      "name": "1.2 (LTS)",
+      "milestones": {
+        "ga": "2005-05-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.2",
+        "codename": null,
+        "label": "1.2 (LTS)",
+        "releaseDate": "2005-05-21",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "1.2.3",
+          "date": "2005-08-25",
+          "link": "https://subversion.apache.org/docs/release-notes/1.2.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.1",
+      "name": "1.1 (LTS)",
+      "milestones": {
+        "ga": "2004-09-29",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.1",
+        "codename": null,
+        "label": "1.1 (LTS)",
+        "releaseDate": "2004-09-29",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "1.1.4",
+          "date": "2005-04-01",
+          "link": "https://subversion.apache.org/docs/release-notes/1.1.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.0",
+      "name": "1.0 (LTS)",
+      "milestones": {
+        "ga": "2004-02-23",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.0",
+        "codename": null,
+        "label": "1.0 (LTS)",
+        "releaseDate": "2004-02-23",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "1.0.9",
+          "date": "2004-10-13",
+          "link": null
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/apache-subversion/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-05-01T09:58:42+00:00"
+  }
+}

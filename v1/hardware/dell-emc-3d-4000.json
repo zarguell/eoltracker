@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-3d-4000",
+  "name": "3D 4000",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC EMC Disk Library (EDL)",
+  "family": "EMC Disk Library (EDL)",
+  "model_number": "3D 4000",
+  "milestones": {
+    "ga": "2008-08-29",
+    "eos": "2010-01-31",
+    "eossec": null,
+    "eol": "2015-01-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "3D 4000",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "3D 4000",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC EMC Disk Library (EDL)",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2010-01-31",
+      "datetime": null,
+      "value": "2010-01-31",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Aug. 29, 2008",
+      "datetime": "2008-08-29",
+      "value": "2008-08-29",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2015-01-31",
+      "datetime": null,
+      "value": "2015-01-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/backup/vendor/dell-emc/emc-disk-library-edl/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

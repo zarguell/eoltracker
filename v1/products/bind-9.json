@@ -1,0 +1,144 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "bind-9",
+  "name": "BIND 9",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "bind"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/internetsystemsconsortium/bind9"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/bind-9",
+    "releasePolicy": "https://kb.isc.org/docs/aa-00896"
+  },
+  "releases": [
+    {
+      "id": "9.21",
+      "name": "9.21 (Development)",
+      "milestones": {
+        "ga": "2024-08-13",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.21",
+        "codename": null,
+        "label": "9.21 (Development)",
+        "releaseDate": "2024-08-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "9.21.25",
+          "date": "2026-08-05",
+          "link": "https://bind9.readthedocs.io/en/v9.21.25/notes.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.20",
+      "name": "9.20 (Stable) (LTS)",
+      "milestones": {
+        "ga": "2024-07-08",
+        "eos": null,
+        "eossec": "2028-07-08",
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.20",
+        "codename": null,
+        "label": "9.20 (Stable) (LTS)",
+        "releaseDate": "2024-07-08",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2028-07-08",
+        "isMaintained": true,
+        "latest": {
+          "name": "9.20.27",
+          "date": "2026-08-05",
+          "link": "https://bind9.readthedocs.io/en/v9.20.27/notes.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.18",
+      "name": "9.18 (ESV) (LTS)",
+      "milestones": {
+        "ga": "2022-01-24",
+        "eos": null,
+        "eossec": "2026-06-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.18",
+        "codename": null,
+        "label": "9.18 (ESV) (LTS)",
+        "releaseDate": "2022-01-24",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-06-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.18.50",
+          "date": "2026-06-08",
+          "link": "https://bind9.readthedocs.io/en/v9.18.50/notes.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.16",
+      "name": "9.16 (LTS)",
+      "milestones": {
+        "ga": "2020-02-12",
+        "eos": null,
+        "eossec": "2024-03-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.16",
+        "codename": null,
+        "label": "9.16 (LTS)",
+        "releaseDate": "2020-02-12",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-03-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.16.50",
+          "date": "2024-04-03",
+          "link": "https://bind9.readthedocs.io/en/v9.16.50/notes.html"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/bind-9/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-14T20:09:39+00:00"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-exabyte-18d-tape-drive",
+  "name": "Exabyte 18D Tape Drive",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC EMC Data Manager (EDM)",
+  "family": "EMC Data Manager (EDM)",
+  "model_number": "Exabyte 18D Tape Drive",
+  "milestones": {
+    "ga": "1997-09-01",
+    "eos": "1999-09-30",
+    "eossec": null,
+    "eol": "2004-12-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "Exabyte 18D Tape Drive",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "Exabyte 18D Tape Drive",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC EMC Data Manager (EDM)",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "1999-09-30",
+      "datetime": null,
+      "value": "1999-09-30",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Sep. 01, 1997",
+      "datetime": "1997-09-01",
+      "value": "1997-09-01",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2004-12-31",
+      "datetime": null,
+      "value": "2004-12-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/backup/vendor/dell-emc/emc-data-manager-edm/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

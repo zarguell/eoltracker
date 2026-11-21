@@ -1,0 +1,415 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "clamav",
+  "name": "ClamAV",
+  "category": "software",
+  "upstream_category": "app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "clamav"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:clamav:clamav"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:clamav:clamav"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:cisco:clam_antivirus"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:cisco:clam_antivirus"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:cisco:clamav"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:cisco:clamav"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:clam_anti-virus:clamav"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:clam_anti-virus:clamav"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/clamav",
+    "releasePolicy": "https://docs.clamav.net/faq/faq-eol.html"
+  },
+  "releases": [
+    {
+      "id": "1.5",
+      "name": "1.5",
+      "milestones": {
+        "ga": "2025-10-07",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.5",
+        "codename": null,
+        "label": "1.5",
+        "releaseDate": "2025-10-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "1.5.4",
+          "date": "2026-08-07",
+          "link": "https://github.com/Cisco-Talos/clamav/releases/tag/clamav-1.5.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.4",
+      "name": "1.4 (LTS)",
+      "milestones": {
+        "ga": "2024-08-15",
+        "eos": null,
+        "eossec": "2027-08-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.4",
+        "codename": null,
+        "label": "1.4 (LTS)",
+        "releaseDate": "2024-08-15",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-08-15",
+        "isMaintained": true,
+        "latest": {
+          "name": "1.4.6",
+          "date": "2026-08-07",
+          "link": "https://github.com/Cisco-Talos/clamav/releases/tag/clamav-1.4.6"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.3",
+      "name": "1.3",
+      "milestones": {
+        "ga": "2024-02-07",
+        "eos": null,
+        "eossec": "2026-02-07",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.3",
+        "codename": null,
+        "label": "1.3",
+        "releaseDate": "2024-02-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-02-07",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.3.2",
+          "date": "2024-09-04",
+          "link": "https://github.com/Cisco-Talos/clamav/releases/tag/clamav-1.3.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.2",
+      "name": "1.2",
+      "milestones": {
+        "ga": "2023-08-27",
+        "eos": null,
+        "eossec": "2024-12-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.2",
+        "codename": null,
+        "label": "1.2",
+        "releaseDate": "2023-08-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-12-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.2.3",
+          "date": "2024-04-17",
+          "link": "https://github.com/Cisco-Talos/clamav/releases/tag/clamav-1.2.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.1",
+      "name": "1.1",
+      "milestones": {
+        "ga": "2023-05-01",
+        "eos": null,
+        "eossec": "2024-06-07",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.1",
+        "codename": null,
+        "label": "1.1",
+        "releaseDate": "2023-05-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-06-07",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.1.3",
+          "date": "2023-10-25",
+          "link": "https://github.com/Cisco-Talos/clamav/releases/tag/clamav-1.1.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.0",
+      "name": "1.0 (LTS)",
+      "milestones": {
+        "ga": "2022-11-28",
+        "eos": null,
+        "eossec": "2025-11-28",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.0",
+        "codename": null,
+        "label": "1.0 (LTS)",
+        "releaseDate": "2022-11-28",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-11-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.0.9",
+          "date": "2025-06-18",
+          "link": "https://github.com/Cisco-Talos/clamav/releases/tag/clamav-1.0.9"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.105",
+      "name": "0.105",
+      "milestones": {
+        "ga": "2022-05-04",
+        "eos": null,
+        "eossec": "2023-09-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.105",
+        "codename": null,
+        "label": "0.105",
+        "releaseDate": "2022-05-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-09-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "0.105.2",
+          "date": "2023-02-15",
+          "link": "https://github.com/Cisco-Talos/clamav/releases/tag/clamav-0.105.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.104",
+      "name": "0.104",
+      "milestones": {
+        "ga": "2021-09-02",
+        "eos": null,
+        "eossec": "2023-03-28",
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.104",
+        "codename": null,
+        "label": "0.104",
+        "releaseDate": "2021-09-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-03-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "0.104.4",
+          "date": "2022-07-26",
+          "link": "https://github.com/Cisco-Talos/clamav/releases/tag/clamav-0.104.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.103",
+      "name": "0.103 (LTS)",
+      "milestones": {
+        "ga": "2020-09-11",
+        "eos": null,
+        "eossec": "2024-09-14",
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.103",
+        "codename": null,
+        "label": "0.103 (LTS)",
+        "releaseDate": "2020-09-11",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-09-14",
+        "isMaintained": false,
+        "latest": {
+          "name": "0.103.12",
+          "date": "2024-09-04",
+          "link": "https://github.com/Cisco-Talos/clamav/releases/tag/clamav-0.103.12"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.102",
+      "name": "0.102",
+      "milestones": {
+        "ga": "2019-10-02",
+        "eos": null,
+        "eossec": "2022-01-03",
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.102",
+        "codename": null,
+        "label": "0.102",
+        "releaseDate": "2019-10-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-01-03",
+        "isMaintained": false,
+        "latest": {
+          "name": "0.102.4",
+          "date": "2020-07-15",
+          "link": "https://github.com/Cisco-Talos/clamav/releases/tag/clamav-0.102.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.101",
+      "name": "0.101",
+      "milestones": {
+        "ga": "2018-12-02",
+        "eos": null,
+        "eossec": "2022-01-03",
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.101",
+        "codename": null,
+        "label": "0.101",
+        "releaseDate": "2018-12-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-01-03",
+        "isMaintained": false,
+        "latest": {
+          "name": "0.101.5",
+          "date": "2019-11-20",
+          "link": "https://github.com/Cisco-Talos/clamav/releases/tag/clamav-0.101.5"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.100",
+      "name": "0.100",
+      "milestones": {
+        "ga": "2018-04-04",
+        "eos": null,
+        "eossec": "2021-10-29",
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.100",
+        "codename": null,
+        "label": "0.100",
+        "releaseDate": "2018-04-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-10-29",
+        "isMaintained": false,
+        "latest": {
+          "name": "0.100.3",
+          "date": "2019-03-26",
+          "link": "https://github.com/Cisco-Talos/clamav/releases/tag/clamav-0.100.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "0.99",
+      "name": "0.99",
+      "milestones": {
+        "ga": "2015-11-25",
+        "eos": null,
+        "eossec": "2021-03-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "0.99",
+        "codename": null,
+        "label": "0.99",
+        "releaseDate": "2015-11-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-03-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "0.99.4",
+          "date": "2018-03-01",
+          "link": "https://github.com/Cisco-Talos/clamav/releases/tag/clamav-0.99.4"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/clamav/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-08-07T20:48:27+00:00"
+  }
+}

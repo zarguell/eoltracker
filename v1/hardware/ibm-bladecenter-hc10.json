@@ -1,0 +1,61 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "ibm-bladecenter-hc10",
+  "name": "BladeCenter HC10",
+  "category": "hardware",
+  "vendor": "IBM",
+  "product_line": "IBM BladeCenter",
+  "family": "BladeCenter",
+  "model_number": "BladeCenter HC10",
+  "milestones": {
+    "ga": null,
+    "eos": null,
+    "eossec": null,
+    "eol": "2020-12-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "BladeCenter HC10",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "BladeCenter HC10",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "IBM BladeCenter",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Not Announced",
+      "datetime": "TBD",
+      "value": null,
+      "role": "ga",
+      "links": []
+    },
+    "End of Support": {
+      "text": "2020-12-31",
+      "datetime": null,
+      "value": "2020-12-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/servers/vendor/ibm/bladecenter/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

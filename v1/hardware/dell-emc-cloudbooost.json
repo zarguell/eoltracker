@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-cloudbooost",
+  "name": "CLOUDBOOOST",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC CloudBoost Physical Appliance",
+  "family": "CloudBoost Physical Appliance",
+  "model_number": "CLOUDBOOOST",
+  "milestones": {
+    "ga": "2015-11-30",
+    "eos": "2018-02-28",
+    "eossec": null,
+    "eol": "2019-06-30"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "CLOUDBOOOST",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "CLOUDBOOOST",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC CloudBoost Physical Appliance",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2018-02-28",
+      "datetime": null,
+      "value": "2018-02-28",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Nov. 30, 2015",
+      "datetime": "2015-11-30",
+      "value": "2015-11-30",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2019-06-30",
+      "datetime": null,
+      "value": "2019-06-30",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/cloud-storage/vendor/dell-emc/cloudboost-physical-appliance/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

@@ -1,0 +1,475 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "hashicorp-vault",
+  "name": "Hashicorp Vault",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "vault"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:hashicorp:vault"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:hashicorp:vault"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Standard Maintenance",
+    "eoes": "Extended Maintenance"
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/vault.svg",
+    "html": "https://endoflife.date/hashicorp-vault",
+    "releasePolicy": "https://support.hashicorp.com/hc/en-us/articles/360021185113-Support-Period-and-End-of-Life-EOL-Policy"
+  },
+  "releases": [
+    {
+      "id": "2.1",
+      "name": "2.1",
+      "milestones": {
+        "ga": "2026-08-31",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.1",
+        "codename": null,
+        "label": "2.1",
+        "releaseDate": "2026-08-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "2.1.1",
+          "date": "2026-09-15",
+          "link": "https://github.com/hashicorp/vault/releases/tag/v2.1.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.0",
+      "name": "2.0",
+      "milestones": {
+        "ga": "2026-04-13",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.0",
+        "codename": null,
+        "label": "2.0",
+        "releaseDate": "2026-04-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-08-31",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "2.0.4",
+          "date": "2026-08-03",
+          "link": "https://github.com/hashicorp/vault/releases/tag/v2.0.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.21",
+      "name": "1.21",
+      "milestones": {
+        "ga": "2025-10-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.21",
+        "codename": null,
+        "label": "1.21",
+        "releaseDate": "2025-10-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-04-13",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "1.21.4",
+          "date": "2026-03-04",
+          "link": "https://github.com/hashicorp/vault/releases/tag/v1.21.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.20",
+      "name": "1.20",
+      "milestones": {
+        "ga": "2025-06-23",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.20",
+        "codename": null,
+        "label": "1.20",
+        "releaseDate": "2025-06-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-10-21",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "1.20.4",
+          "date": "2025-09-23",
+          "link": "https://github.com/hashicorp/vault/releases/tag/v1.20.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.19",
+      "name": "1.19 (LTS)",
+      "milestones": {
+        "ga": "2025-03-04",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.19",
+        "codename": null,
+        "label": "1.19 (LTS)",
+        "releaseDate": "2025-03-04",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-06-23",
+        "isEoes": false,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "1.19.5",
+          "date": "2025-05-29",
+          "link": "https://github.com/hashicorp/vault/releases/tag/v1.19.5"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.18",
+      "name": "1.18",
+      "milestones": {
+        "ga": "2024-10-08",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.18",
+        "codename": null,
+        "label": "1.18",
+        "releaseDate": "2024-10-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-03-04",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "1.18.5",
+          "date": "2025-02-24",
+          "link": "https://github.com/hashicorp/vault/releases/tag/v1.18.5"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.17",
+      "name": "1.17",
+      "milestones": {
+        "ga": "2024-06-10",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.17",
+        "codename": null,
+        "label": "1.17",
+        "releaseDate": "2024-06-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-10-09",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "1.17.6",
+          "date": "2024-09-24",
+          "link": "https://github.com/hashicorp/vault/releases/tag/v1.17.6"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.16",
+      "name": "1.16 (LTS)",
+      "milestones": {
+        "ga": "2024-03-25",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.16",
+        "codename": null,
+        "label": "1.16 (LTS)",
+        "releaseDate": "2024-03-25",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-06-10",
+        "isEoes": false,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "1.16.3",
+          "date": "2024-05-29",
+          "link": "https://github.com/hashicorp/vault/releases/tag/v1.16.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.15",
+      "name": "1.15",
+      "milestones": {
+        "ga": "2023-09-22",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.15",
+        "codename": null,
+        "label": "1.15",
+        "releaseDate": "2023-09-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-10-08",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "1.15.6",
+          "date": "2024-02-28",
+          "link": "https://github.com/hashicorp/vault/releases/tag/v1.15.6"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.14",
+      "name": "1.14",
+      "milestones": {
+        "ga": "2023-06-19",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.14",
+        "codename": null,
+        "label": "1.14",
+        "releaseDate": "2023-06-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-06-10",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "1.14.10",
+          "date": "2024-02-28",
+          "link": "https://github.com/hashicorp/vault/releases/tag/v1.14.10"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.13",
+      "name": "1.13",
+      "milestones": {
+        "ga": "2023-03-01",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.13",
+        "codename": null,
+        "label": "1.13",
+        "releaseDate": "2023-03-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-03-25",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "1.13.13",
+          "date": "2024-01-29",
+          "link": "https://github.com/hashicorp/vault/releases/tag/v1.13.13"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.12",
+      "name": "1.12",
+      "milestones": {
+        "ga": "2022-10-10",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.12",
+        "codename": null,
+        "label": "1.12",
+        "releaseDate": "2022-10-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-09-27",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "1.12.11",
+          "date": "2023-09-11",
+          "link": "https://github.com/hashicorp/vault/releases/tag/v1.12.11"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.11",
+      "name": "1.11",
+      "milestones": {
+        "ga": "2022-06-17",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.11",
+        "codename": null,
+        "label": "1.11",
+        "releaseDate": "2022-06-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-06-21",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "1.11.12",
+          "date": "2023-06-19",
+          "link": "https://github.com/hashicorp/vault/releases/tag/v1.11.12"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.10",
+      "name": "1.10",
+      "milestones": {
+        "ga": "2022-03-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.10",
+        "codename": null,
+        "label": "1.10",
+        "releaseDate": "2022-03-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-03-01",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "1.10.11",
+          "date": "2023-02-24",
+          "link": "https://github.com/hashicorp/vault/releases/tag/v1.10.11"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.9",
+      "name": "1.9",
+      "milestones": {
+        "ga": "2021-11-16",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.9",
+        "codename": null,
+        "label": "1.9",
+        "releaseDate": "2021-11-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-10-10",
+        "isEoes": null,
+        "eoesFrom": null,
+        "isMaintained": false,
+        "latest": {
+          "name": "1.9.10",
+          "date": "2022-09-15",
+          "link": "https://github.com/hashicorp/vault/releases/tag/v1.9.10"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/hashicorp-vault/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-17T00:08:37+00:00"
+  }
+}

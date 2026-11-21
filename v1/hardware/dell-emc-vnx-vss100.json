@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-vnx-vss100",
+  "name": "VNX-VSS100",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC VNXe",
+  "family": "VNXe",
+  "model_number": "VNX-VSS100",
+  "milestones": {
+    "ga": "2014-11-03",
+    "eos": "2016-12-31",
+    "eossec": null,
+    "eol": "2020-12-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "VNX-VSS100",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "VNX-VSS100",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC VNXe",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2016-12-31",
+      "datetime": null,
+      "value": "2016-12-31",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Nov. 03, 2014",
+      "datetime": "2014-11-03",
+      "value": "2014-11-03",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2020-12-31",
+      "datetime": null,
+      "value": "2020-12-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/san-storage/vendor/dell-emc/vnxe/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

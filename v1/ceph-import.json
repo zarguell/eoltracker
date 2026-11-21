@@ -1,0 +1,288 @@
+{
+  "source_url": "https://raw.githubusercontent.com/ceph/ceph/main/doc/releases/releases.yml",
+  "page_url": "https://docs.ceph.com/en/latest/releases/",
+  "index_url": "https://raw.githubusercontent.com/ceph/ceph/main/doc/releases/index.rst",
+  "verifier": "deterministic-ceph",
+  "checked_at": "2026-09-17T19:59:56Z",
+  "record_scope": "Ceph community release branches: one software record with one release per stable series (x.2), current and historical, from the Ceph project's own release metadata at day precision",
+  "rows": {
+    "seen": 78,
+    "published": 17,
+    "active": 2,
+    "archived": 15,
+    "retained": 0,
+    "excluded": 61
+  },
+  "excluded": [
+    {
+      "row": "15.1.1",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "15.1.0",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "15.0.0",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "14.1.1",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "14.1.0",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "14.0.1",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "14.0.0",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "13.1.0",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "13.0.2",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "13.0.1",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "13.0.0",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "12.1.4",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "12.1.3",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "12.1.2",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "12.1.1",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "12.1.0",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "12.0.3",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "12.0.2",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "12.0.1",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "12.0.0",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "11.1.1",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "11.1.0",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "11.0.2",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "11.0.1",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "11.0.0",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "10.1.2",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "10.1.1",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "10.1.0",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "10.0.5",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "10.0.4",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "10.0.3",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "10.0.2",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "10.0.1",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "10.0.0",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "9.1.0",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "9.0.3",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "9.0.2",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "9.0.1",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "9.0.0",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "0.93",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "0.92",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "0.91",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "0.90",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "0.89",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "0.88",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "0.86",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "0.85",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "0.84",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "0.83",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "0.82",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "0.81",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "0.79",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "0.78",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "0.77",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "0.76",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "0.75",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "0.74",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "0.73",
+      "reason": "development version (x.0.z / x.1.z) or release candidate, not a stable release branch; the project's release-cycle document keeps these separate"
+    },
+    {
+      "row": "Cuttlefish (0.61)",
+      "reason": "named in the release page's branch index (https://raw.githubusercontent.com/ceph/ceph/main/doc/releases/index.rst) but the release metadata states no lifecycle record for it, so it publishes no date"
+    },
+    {
+      "row": "Bobtail (0.56)",
+      "reason": "named in the release page's branch index (https://raw.githubusercontent.com/ceph/ceph/main/doc/releases/index.rst) but the release metadata states no lifecycle record for it, so it publishes no date"
+    },
+    {
+      "row": "Argonaut (0.48)",
+      "reason": "named in the release page's branch index (https://raw.githubusercontent.com/ceph/ceph/main/doc/releases/index.rst) but the release metadata states no lifecycle record for it, so it publishes no date"
+    }
+  ],
+  "retained": [],
+  "estimated_only": [
+    {
+      "id": "20.2",
+      "name": "Tentacle",
+      "estimated_eol": "2027-06-01",
+      "reason": "the source states this branch's end of life as an estimate only; it is retained as the vendor's own cell and is not normalized into milestones.eol, and it produces no feed event"
+    },
+    {
+      "id": "19.2",
+      "name": "Squid",
+      "estimated_eol": "2026-10-31",
+      "reason": "the source states this branch's end of life as an estimate only; it is retained as the vendor's own cell and is not normalized into milestones.eol, and it produces no feed event"
+    }
+  ],
+  "total_records": 1,
+  "limitations": [
+    "The source distinguishes an estimated end of life (target_eol, the page's 'End of life (estimated)' column) from a realized one (actual_eol, its 'End of life' column). Only actual_eol is normalized into milestones.eol; an estimate is republished as the vendor's own cell and is never a deadline, so a current branch publishes eol: null and produces no feed event.",
+    "No date is derived from Ceph's release cadence or from the 'approximately 24 months' lifetime its release-cycle document states; that document calls the lifetime an approximation that 'may vary', so it is prose and not modelled.",
+    "eos and eossec are always null: Ceph publishes no end-of-sale and no separate security-support-end date for a branch.",
+    "milestones.ga is the branch's initial stable release, the oldest point release the metadata states, which is the value the vendor's own table shows in its 'Initial release' column.",
+    "Point releases are not records: one release per stable series so a permalink survives the next patch release. The latest point release is carried as a cell.",
+    "The three branches the page's index names but the metadata states no lifecycle for (Argonaut, Bobtail, Cuttlefish) publish no date and are accounted as exclusions; they each have release notes but no end-of-life statement.",
+    "Commercial downstream distributions (Red Hat Ceph Storage, SUSE Enterprise Storage, Canonical's Ceph offering, IBM Storage Ceph) are separate products with their own support-contract lifecycles and are deliberately not covered here.",
+    "The source is the documentation tree of ceph/ceph at main, not a versioned API; the project publishes no rate limit for it."
+  ]
+}

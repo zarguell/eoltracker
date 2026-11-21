@@ -1,0 +1,392 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "kyverno",
+  "name": "Kyverno",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "purl",
+      "id": "pkg:github/kyverno/kyverno"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/nirmata/kyverno"
+    },
+    {
+      "type": "repology",
+      "id": "kyverno"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:oci/kyverno?repository_url=cgr.dev/chainguard"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/kyverno",
+    "releasePolicy": "https://kyverno.io/docs/installation/#compatibility-matrix"
+  },
+  "releases": [
+    {
+      "id": "1.19",
+      "name": "1.19",
+      "milestones": {
+        "ga": "2026-08-20",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.19",
+        "codename": null,
+        "label": "1.19",
+        "releaseDate": "2026-08-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "1.19.1",
+          "date": "2026-09-10",
+          "link": "https://github.com/kyverno/kyverno/releases/tag/v1.19.1"
+        },
+        "custom": {
+          "supportedK8sVersions": "1.33 - 1.35"
+        }
+      }
+    },
+    {
+      "id": "1.18",
+      "name": "1.18",
+      "milestones": {
+        "ga": "2026-04-29",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.18",
+        "codename": null,
+        "label": "1.18",
+        "releaseDate": "2026-04-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "1.18.2",
+          "date": "2026-07-10",
+          "link": "https://github.com/kyverno/kyverno/releases/tag/v1.18.2"
+        },
+        "custom": {
+          "supportedK8sVersions": "1.33 - 1.35"
+        }
+      }
+    },
+    {
+      "id": "1.17",
+      "name": "1.17",
+      "milestones": {
+        "ga": "2026-02-02",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "1.17",
+        "codename": null,
+        "label": "1.17",
+        "releaseDate": "2026-02-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "1.17.2",
+          "date": "2026-04-23",
+          "link": "https://github.com/kyverno/kyverno/releases/tag/v1.17.2"
+        },
+        "custom": {
+          "supportedK8sVersions": "1.32 - 1.35"
+        }
+      }
+    },
+    {
+      "id": "1.16",
+      "name": "1.16",
+      "milestones": {
+        "ga": "2025-11-10",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-08-20"
+      },
+      "upstream": {
+        "name": "1.16",
+        "codename": null,
+        "label": "1.16",
+        "releaseDate": "2025-11-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-08-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.16.4",
+          "date": "2026-04-23",
+          "link": "https://github.com/kyverno/kyverno/releases/tag/v1.16.4"
+        },
+        "custom": {
+          "supportedK8sVersions": "1.31 - 1.34"
+        }
+      }
+    },
+    {
+      "id": "1.15",
+      "name": "1.15",
+      "milestones": {
+        "ga": "2025-07-31",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-04-29"
+      },
+      "upstream": {
+        "name": "1.15",
+        "codename": null,
+        "label": "1.15",
+        "releaseDate": "2025-07-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-04-29",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.15.20",
+          "date": "2025-11-05",
+          "link": "https://github.com/kyverno/kyverno/releases/tag/v1.15.20"
+        },
+        "custom": {
+          "supportedK8sVersions": "1.30 - 1.33"
+        }
+      }
+    },
+    {
+      "id": "1.14",
+      "name": "1.14",
+      "milestones": {
+        "ga": "2025-04-24",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-02-02"
+      },
+      "upstream": {
+        "name": "1.14",
+        "codename": null,
+        "label": "1.14",
+        "releaseDate": "2025-04-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-02-02",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.14.5",
+          "date": "2025-11-05",
+          "link": "https://github.com/kyverno/kyverno/releases/tag/v1.14.5"
+        },
+        "custom": {
+          "supportedK8sVersions": "1.29 - 1.32"
+        }
+      }
+    },
+    {
+      "id": "1.13",
+      "name": "1.13",
+      "milestones": {
+        "ga": "2024-10-29",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-11-10"
+      },
+      "upstream": {
+        "name": "1.13",
+        "codename": null,
+        "label": "1.13",
+        "releaseDate": "2024-10-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-11-10",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.13.6",
+          "date": "2025-05-08",
+          "link": "https://github.com/kyverno/kyverno/releases/tag/v1.13.6"
+        },
+        "custom": {
+          "supportedK8sVersions": "1.28 - 1.31"
+        }
+      }
+    },
+    {
+      "id": "1.12",
+      "name": "1.12",
+      "milestones": {
+        "ga": "2024-04-26",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-07-31"
+      },
+      "upstream": {
+        "name": "1.12",
+        "codename": null,
+        "label": "1.12",
+        "releaseDate": "2024-04-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-07-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.12.7",
+          "date": "2025-01-16",
+          "link": "https://github.com/kyverno/kyverno/releases/tag/v1.12.7"
+        },
+        "custom": {
+          "supportedK8sVersions": "1.26 - 1.29"
+        }
+      }
+    },
+    {
+      "id": "1.11",
+      "name": "1.11",
+      "milestones": {
+        "ga": "2023-11-10",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-04-25"
+      },
+      "upstream": {
+        "name": "1.11",
+        "codename": null,
+        "label": "1.11",
+        "releaseDate": "2023-11-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-04-25",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.11.5",
+          "date": "2024-05-09",
+          "link": "https://github.com/kyverno/kyverno/releases/tag/v1.11.5"
+        },
+        "custom": {
+          "supportedK8sVersions": "1.25 - 1.28"
+        }
+      }
+    },
+    {
+      "id": "1.10",
+      "name": "1.10",
+      "milestones": {
+        "ga": "2023-05-30",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-10-29"
+      },
+      "upstream": {
+        "name": "1.10",
+        "codename": null,
+        "label": "1.10",
+        "releaseDate": "2023-05-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-10-29",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.10.7",
+          "date": "2023-12-20",
+          "link": "https://github.com/kyverno/kyverno/releases/tag/v1.10.7"
+        },
+        "custom": {
+          "supportedK8sVersions": "1.24 - 1.26"
+        }
+      }
+    },
+    {
+      "id": "1.9",
+      "name": "1.9",
+      "milestones": {
+        "ga": "2023-02-01",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-04-26"
+      },
+      "upstream": {
+        "name": "1.9",
+        "codename": null,
+        "label": "1.9",
+        "releaseDate": "2023-02-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-04-26",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.9.5",
+          "date": "2023-05-29",
+          "link": "https://github.com/kyverno/kyverno/releases/tag/v1.9.5"
+        },
+        "custom": {
+          "supportedK8sVersions": "1.24 - 1.26"
+        }
+      }
+    },
+    {
+      "id": "1.8",
+      "name": "1.8",
+      "milestones": {
+        "ga": "2022-10-10",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-11-10"
+      },
+      "upstream": {
+        "name": "1.8",
+        "codename": null,
+        "label": "1.8",
+        "releaseDate": "2022-10-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-11-10",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.8.5",
+          "date": "2022-12-20",
+          "link": "https://github.com/kyverno/kyverno/releases/tag/v1.8.5"
+        },
+        "custom": {
+          "supportedK8sVersions": "1.23.3 - 1.25"
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/kyverno/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-11T00:07:31+00:00"
+  }
+}

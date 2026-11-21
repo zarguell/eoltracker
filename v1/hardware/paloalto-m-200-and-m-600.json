@@ -1,0 +1,84 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "paloalto-m-200-and-m-600",
+  "name": "M-200 and M-600",
+  "category": "hardware",
+  "vendor": "Palo Alto Networks",
+  "product_line": "M-200 and M-600",
+  "family": "Palo Alto Networks hardware",
+  "model_number": "M-200 and M-600",
+  "milestones": {
+    "ga": null,
+    "eos": "2024-02-15",
+    "eossec": null,
+    "eol": "2029-02-15"
+  },
+  "status": "expiring",
+  "upstream": {
+    "End-of-Sale Product": {
+      "text": "M-200 and M-600",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "End-of-Sale Date": {
+      "text": "Feb 15, 2024",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "End-of-Life Date": {
+      "text": "Feb 15, 2029",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "Resources": {
+      "text": "M-200 and M-600 Appliance Overview Panorama Datasheet",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "Last Supported OS ^": {
+      "text": "PAN-OS 11.2 Standard Support: Until May 2, 2027 Extended Support: Until Hardware EOL Feb 15, 2029",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "Recommended Replacement": {
+      "text": "M-300 and M-700",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": []
+    },
+    "products": {
+      "text": "M-200 and M-600",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": [],
+      "note": "the product line the vendor heads this row with, and the SKUs it lists under it; one row is one line, not one SKU"
+    },
+    "Last Supported OS note": {
+      "text": "PAN-OS 11.2 Standard Support: Until May 2, 2027 Extended Support: Until Hardware EOL Feb 15, 2029",
+      "value": null,
+      "datetime": null,
+      "role": null,
+      "links": [],
+      "note": "this row's OS support window names a year later than the row's own End-of-Life Date. Both are the vendor's own statements and both are published; neither is recomputed from the other."
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates"
+    ],
+    "verifier": "deterministic-paloalto",
+    "last_checked": "2026-09-26T18:53:25Z"
+  }
+}

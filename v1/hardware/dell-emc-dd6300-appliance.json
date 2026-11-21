@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-dd6300-appliance",
+  "name": "DD6300 Appliance",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Data Domain",
+  "family": "Data Domain",
+  "model_number": "DD6300 Appliance",
+  "milestones": {
+    "ga": "2016-10-19",
+    "eos": "2022-08-13",
+    "eossec": null,
+    "eol": "2027-08-31"
+  },
+  "status": "supported",
+  "upstream": {
+    "Product": {
+      "text": "DD6300 Appliance",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "DD6300 Appliance",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Data Domain",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2022-08-13",
+      "datetime": null,
+      "value": "2022-08-13",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Oct. 19, 2016",
+      "datetime": "2016-10-19",
+      "value": "2016-10-19",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2027-08-31",
+      "datetime": null,
+      "value": "2027-08-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/backup/vendor/dell-emc/data-domain/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

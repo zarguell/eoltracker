@@ -1,0 +1,330 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "powershell",
+  "name": "Microsoft PowerShell",
+  "category": "software",
+  "upstream_category": "lang",
+  "identifiers": [
+    {
+      "type": "purl",
+      "id": "pkg:github/powershell/powershell"
+    },
+    {
+      "type": "repology",
+      "id": "powershell"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:microsoft:powershell"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Support Status",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/powershell.svg",
+    "html": "https://endoflife.date/powershell",
+    "releasePolicy": "https://learn.microsoft.com/powershell/scripting/install/powershell-support-lifecycle"
+  },
+  "releases": [
+    {
+      "id": "7.6",
+      "name": "7.6 (LTS)",
+      "milestones": {
+        "ga": "2026-03-18",
+        "eos": null,
+        "eossec": null,
+        "eol": "2028-11-14"
+      },
+      "upstream": {
+        "name": "7.6",
+        "codename": null,
+        "label": "7.6 (LTS)",
+        "releaseDate": "2026-03-18",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2028-11-14",
+        "isMaintained": true,
+        "latest": {
+          "name": "7.6.6",
+          "date": "2026-09-08",
+          "link": "https://github.com/PowerShell/PowerShell/releases/tag/v7.6.6"
+        },
+        "custom": {
+          "dotnetVersion": ".NET 10.0"
+        }
+      }
+    },
+    {
+      "id": "7.5",
+      "name": "7.5",
+      "milestones": {
+        "ga": "2025-01-23",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-11-10"
+      },
+      "upstream": {
+        "name": "7.5",
+        "codename": null,
+        "label": "7.5",
+        "releaseDate": "2025-01-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2026-11-10",
+        "isMaintained": true,
+        "latest": {
+          "name": "7.5.11",
+          "date": "2026-09-08",
+          "link": "https://github.com/PowerShell/PowerShell/releases/tag/v7.5.11"
+        },
+        "custom": {
+          "dotnetVersion": ".NET 9.0"
+        }
+      }
+    },
+    {
+      "id": "7.4",
+      "name": "7.4 (LTS)",
+      "milestones": {
+        "ga": "2023-11-16",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-11-10"
+      },
+      "upstream": {
+        "name": "7.4",
+        "codename": null,
+        "label": "7.4 (LTS)",
+        "releaseDate": "2023-11-16",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2026-11-10",
+        "isMaintained": true,
+        "latest": {
+          "name": "7.4.20",
+          "date": "2026-09-08",
+          "link": "https://github.com/PowerShell/PowerShell/releases/tag/v7.4.20"
+        },
+        "custom": {
+          "dotnetVersion": ".NET 8.0"
+        }
+      }
+    },
+    {
+      "id": "7.3",
+      "name": "7.3",
+      "milestones": {
+        "ga": "2022-11-09",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-05-08"
+      },
+      "upstream": {
+        "name": "7.3",
+        "codename": null,
+        "label": "7.3",
+        "releaseDate": "2022-11-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-05-08",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.3.12",
+          "date": "2024-04-11",
+          "link": "https://github.com/PowerShell/PowerShell/releases/tag/v7.3.12"
+        },
+        "custom": {
+          "dotnetVersion": ".NET 7.0"
+        }
+      }
+    },
+    {
+      "id": "7.2",
+      "name": "7.2 (LTS)",
+      "milestones": {
+        "ga": "2021-11-08",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-11-08"
+      },
+      "upstream": {
+        "name": "7.2",
+        "codename": null,
+        "label": "7.2 (LTS)",
+        "releaseDate": "2021-11-08",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-11-08",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.2.24",
+          "date": "2024-10-22",
+          "link": "https://github.com/PowerShell/PowerShell/releases/tag/v7.2.24"
+        },
+        "custom": {
+          "dotnetVersion": ".NET 6.0"
+        }
+      }
+    },
+    {
+      "id": "7.1",
+      "name": "7.1",
+      "milestones": {
+        "ga": "2020-11-11",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-05-08"
+      },
+      "upstream": {
+        "name": "7.1",
+        "codename": null,
+        "label": "7.1",
+        "releaseDate": "2020-11-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-05-08",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.1.7",
+          "date": "2022-04-26",
+          "link": "https://github.com/PowerShell/PowerShell/releases/tag/v7.1.7"
+        },
+        "custom": {
+          "dotnetVersion": ".NET 5.0"
+        }
+      }
+    },
+    {
+      "id": "7.0",
+      "name": "7.0 (LTS)",
+      "milestones": {
+        "ga": "2020-03-04",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-12-03"
+      },
+      "upstream": {
+        "name": "7.0",
+        "codename": null,
+        "label": "7.0 (LTS)",
+        "releaseDate": "2020-03-04",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-12-03",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.0.13",
+          "date": "2022-10-20",
+          "link": "https://github.com/PowerShell/PowerShell/releases/tag/v7.0.13"
+        },
+        "custom": {
+          "dotnetVersion": ".NET Core 3.1"
+        }
+      }
+    },
+    {
+      "id": "6.2",
+      "name": "6.2",
+      "milestones": {
+        "ga": "2019-03-29",
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-09-04"
+      },
+      "upstream": {
+        "name": "6.2",
+        "codename": null,
+        "label": "6.2",
+        "releaseDate": "2019-03-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-09-04",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.2.7",
+          "date": "2020-07-16",
+          "link": "https://github.com/PowerShell/PowerShell/releases/tag/v6.2.7"
+        },
+        "custom": {
+          "dotnetVersion": ".NET Core 2.1"
+        }
+      }
+    },
+    {
+      "id": "6.1",
+      "name": "6.1",
+      "milestones": {
+        "ga": "2018-09-13",
+        "eos": null,
+        "eossec": null,
+        "eol": "2019-09-28"
+      },
+      "upstream": {
+        "name": "6.1",
+        "codename": null,
+        "label": "6.1",
+        "releaseDate": "2018-09-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-09-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.1.6",
+          "date": "2019-09-12",
+          "link": "https://github.com/PowerShell/PowerShell/releases/tag/v6.1.6"
+        },
+        "custom": {
+          "dotnetVersion": ".NET Core 2.1"
+        }
+      }
+    },
+    {
+      "id": "6.0",
+      "name": "6.0",
+      "milestones": {
+        "ga": "2018-01-20",
+        "eos": null,
+        "eossec": null,
+        "eol": "2019-02-13"
+      },
+      "upstream": {
+        "name": "6.0",
+        "codename": null,
+        "label": "6.0",
+        "releaseDate": "2018-01-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2019-02-13",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.0.5",
+          "date": "2018-11-13",
+          "link": "https://github.com/PowerShell/PowerShell/releases/tag/v6.0.5"
+        },
+        "custom": {
+          "dotnetVersion": ".NET Core 2.0"
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/powershell/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-09T00:07:20+00:00"
+  }
+}

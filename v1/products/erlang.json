@@ -1,0 +1,413 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "erlang",
+  "name": "Erlang",
+  "category": "software",
+  "upstream_category": "lang",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "erlang"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:erlang:erlang\\/otp"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/erlang.svg",
+    "html": "https://endoflife.date/erlang",
+    "releasePolicy": "https://www.erlang.org/doc/system_principles/misc.html"
+  },
+  "releases": [
+    {
+      "id": "29",
+      "name": "29",
+      "milestones": {
+        "ga": "2026-05-11",
+        "eos": null,
+        "eossec": "2029-05-11",
+        "eol": null
+      },
+      "upstream": {
+        "name": "29",
+        "codename": null,
+        "label": "29",
+        "releaseDate": "2026-05-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": "2029-05-11",
+        "isMaintained": true,
+        "latest": {
+          "name": "29.1",
+          "date": "2026-09-15",
+          "link": "https://github.com/erlang/otp/releases/tag/OTP-29.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "28",
+      "name": "28",
+      "milestones": {
+        "ga": "2025-05-20",
+        "eos": null,
+        "eossec": "2028-05-20",
+        "eol": null
+      },
+      "upstream": {
+        "name": "28",
+        "codename": null,
+        "label": "28",
+        "releaseDate": "2025-05-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-05-11",
+        "isEol": false,
+        "eolFrom": "2028-05-20",
+        "isMaintained": true,
+        "latest": {
+          "name": "28.5.0.6",
+          "date": "2026-09-01",
+          "link": "https://github.com/erlang/otp/releases/tag/OTP-28.5.0.6"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "27",
+      "name": "27",
+      "milestones": {
+        "ga": "2024-05-17",
+        "eos": null,
+        "eossec": "2027-05-20",
+        "eol": null
+      },
+      "upstream": {
+        "name": "27",
+        "codename": null,
+        "label": "27",
+        "releaseDate": "2024-05-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-05-20",
+        "isEol": false,
+        "eolFrom": "2027-05-20",
+        "isMaintained": true,
+        "latest": {
+          "name": "27.3.4.17",
+          "date": "2026-09-01",
+          "link": "https://github.com/erlang/otp/releases/tag/OTP-27.3.4.17"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "26",
+      "name": "26",
+      "milestones": {
+        "ga": "2023-05-15",
+        "eos": null,
+        "eossec": "2026-05-26",
+        "eol": null
+      },
+      "upstream": {
+        "name": "26",
+        "codename": null,
+        "label": "26",
+        "releaseDate": "2023-05-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-05-17",
+        "isEol": true,
+        "eolFrom": "2026-05-26",
+        "isMaintained": false,
+        "latest": {
+          "name": "26.2.5.21",
+          "date": "2026-05-26",
+          "link": "https://github.com/erlang/otp/releases/tag/OTP-26.2.5.21"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "25",
+      "name": "25",
+      "milestones": {
+        "ga": "2022-05-17",
+        "eos": null,
+        "eossec": "2025-05-17",
+        "eol": null
+      },
+      "upstream": {
+        "name": "25",
+        "codename": null,
+        "label": "25",
+        "releaseDate": "2022-05-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-05-15",
+        "isEol": true,
+        "eolFrom": "2025-05-17",
+        "isMaintained": false,
+        "latest": {
+          "name": "25.3.2.21",
+          "date": "2025-05-08",
+          "link": "https://github.com/erlang/otp/releases/tag/OTP-25.3.2.21"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "24",
+      "name": "24",
+      "milestones": {
+        "ga": "2021-05-10",
+        "eos": null,
+        "eossec": "2024-05-10",
+        "eol": null
+      },
+      "upstream": {
+        "name": "24",
+        "codename": null,
+        "label": "24",
+        "releaseDate": "2021-05-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-05-17",
+        "isEol": true,
+        "eolFrom": "2024-05-10",
+        "isMaintained": false,
+        "latest": {
+          "name": "24.3.4.17",
+          "date": "2024-04-08",
+          "link": "https://github.com/erlang/otp/releases/tag/OTP-24.3.4.17"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "23",
+      "name": "23",
+      "milestones": {
+        "ga": "2020-05-11",
+        "eos": null,
+        "eossec": "2024-03-14",
+        "eol": null
+      },
+      "upstream": {
+        "name": "23",
+        "codename": null,
+        "label": "23",
+        "releaseDate": "2020-05-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-05-10",
+        "isEol": true,
+        "eolFrom": "2024-03-14",
+        "isMaintained": false,
+        "latest": {
+          "name": "23.3.4.20",
+          "date": "2024-03-14",
+          "link": "https://github.com/erlang/otp/releases/tag/OTP-23.3.4.20"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "22",
+      "name": "22",
+      "milestones": {
+        "ga": "2019-05-10",
+        "eos": null,
+        "eossec": "2024-03-18",
+        "eol": null
+      },
+      "upstream": {
+        "name": "22",
+        "codename": null,
+        "label": "22",
+        "releaseDate": "2019-05-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-05-11",
+        "isEol": true,
+        "eolFrom": "2024-03-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "22.3.4.27",
+          "date": "2024-03-18",
+          "link": "https://github.com/erlang/otp/releases/tag/OTP-22.3.4.27"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "21",
+      "name": "21",
+      "milestones": {
+        "ga": "2018-06-19",
+        "eos": null,
+        "eossec": "2021-06-19",
+        "eol": null
+      },
+      "upstream": {
+        "name": "21",
+        "codename": null,
+        "label": "21",
+        "releaseDate": "2018-06-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2019-05-10",
+        "isEol": true,
+        "eolFrom": "2021-06-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "21.3.8.24",
+          "date": "2021-05-31",
+          "link": "https://github.com/erlang/otp/releases/tag/OTP-21.3.8.24"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "20",
+      "name": "20",
+      "milestones": {
+        "ga": "2017-06-21",
+        "eos": null,
+        "eossec": "2020-06-21",
+        "eol": null
+      },
+      "upstream": {
+        "name": "20",
+        "codename": null,
+        "label": "20",
+        "releaseDate": "2017-06-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2018-06-19",
+        "isEol": true,
+        "eolFrom": "2020-06-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "20.3.8.26",
+          "date": "2020-02-27",
+          "link": "https://github.com/erlang/otp/releases/tag/OTP-20.3.8.26"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "19",
+      "name": "19",
+      "milestones": {
+        "ga": "2016-06-21",
+        "eos": null,
+        "eossec": "2019-06-21",
+        "eol": null
+      },
+      "upstream": {
+        "name": "19",
+        "codename": null,
+        "label": "19",
+        "releaseDate": "2016-06-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2017-06-21",
+        "isEol": true,
+        "eolFrom": "2019-06-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "19.3.6.13",
+          "date": "2019-01-08",
+          "link": "https://github.com/erlang/otp/releases/tag/OTP-19.3.6.13"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18",
+      "name": "18",
+      "milestones": {
+        "ga": "2015-06-23",
+        "eos": null,
+        "eossec": "2018-11-09",
+        "eol": null
+      },
+      "upstream": {
+        "name": "18",
+        "codename": null,
+        "label": "18",
+        "releaseDate": "2015-06-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2016-06-21",
+        "isEol": true,
+        "eolFrom": "2018-11-09",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.3.4.11",
+          "date": "2018-11-09",
+          "link": "https://github.com/erlang/otp/releases/tag/OTP-18.3.4.11"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "17",
+      "name": "17",
+      "milestones": {
+        "ga": "2014-04-07",
+        "eos": null,
+        "eossec": "2018-10-11",
+        "eol": null
+      },
+      "upstream": {
+        "name": "17",
+        "codename": null,
+        "label": "17",
+        "releaseDate": "2014-04-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2015-06-23",
+        "isEol": true,
+        "eolFrom": "2018-10-11",
+        "isMaintained": false,
+        "latest": {
+          "name": "17.5.6.10",
+          "date": "2018-10-11",
+          "link": "https://github.com/erlang/otp/releases/tag/OTP-17.5.6.10"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/erlang/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-17T00:08:37+00:00"
+  }
+}

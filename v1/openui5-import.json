@@ -1,0 +1,150 @@
+{
+  "source_url": "https://sdk.openui5.org/versionoverview.json",
+  "verifier": "deterministic-openui5",
+  "checked_at": "2026-09-23T18:27:53Z",
+  "record_scope": "OpenUI5 numbered release branches: one software record with one release per published numbered branch, carrying the project's own eom/eomm/eocp cells and every patch row verbatim, general availability only where a stated release date dates the branch's own .0 release, and no normalized end milestone",
+  "rows": {
+    "branches": {
+      "seen": 113,
+      "published": 110,
+      "excluded": 3
+    },
+    "patches": {
+      "seen": 1038,
+      "published": 1038,
+      "branches": 108,
+      "branches_without": 2
+    },
+    "current": {
+      "seen": 9,
+      "used": 7,
+      "excluded": 2
+    },
+    "feed": {
+      "seen": 7,
+      "used": 7,
+      "excluded": 0
+    },
+    "excluded": [
+      {
+        "page": "https://sdk.openui5.org/versionoverview.json",
+        "row": "1.137.*",
+        "reason": "the project marks this branch Skipped: no release was published for it, so it carries neither a patch nor a lifecycle of its own"
+      },
+      {
+        "page": "https://sdk.openui5.org/versionoverview.json",
+        "row": "1.83.*",
+        "reason": "the project marks this branch Skipped: no release was published for it, so it carries neither a patch nor a lifecycle of its own"
+      },
+      {
+        "page": "https://sdk.openui5.org/versionoverview.json",
+        "row": "*",
+        "reason": "the version overview's wildcard default row: it carries the loader's fallback maintenance metadata rather than a published release branch"
+      }
+    ],
+    "current_excluded": [
+      {
+        "page": "https://sdk.openui5.org/version.json",
+        "row": "latest",
+        "reason": "a pointer to the newest maintained branch rather than a branch row of its own; the branch it names is published from that branch's own row"
+      },
+      {
+        "page": "https://sdk.openui5.org/version.json",
+        "row": "active",
+        "reason": "a pointer to the newest maintained branch rather than a branch row of its own; the branch it names is published from that branch's own row"
+      }
+    ],
+    "retained": 0
+  },
+  "total_records": 1,
+  "milestones_published": {
+    "ga": 2,
+    "eos": 0,
+    "eossec": 0,
+    "eol": 0
+  },
+  "lifecycle_cells_retained": {
+    "eom": 30,
+    "eomm": 30,
+    "eocp": 107,
+    "patches": 1038
+  },
+  "policy": {
+    "url": "https://ui5.github.io/docs/02_Read-Me-First/versioning-and-maintenance-of-openui5-91f0214.md",
+    "rules": [
+      {
+        "key": "security",
+        "quote": "All OpenUI5 versions receive critical security fixes until the version’s end of life (EOL) date."
+      },
+      {
+        "key": "eom",
+        "quote": "Mid-term and long-term maintenance releases also receive bug fixes until their end of maintenance (EOM) date (for standard releases, bug fixes are included in the next OpenUI5 version)."
+      },
+      {
+        "key": "eol_rule",
+        "quote": "After the EOM date, only critical security patches are offered for a year, after which these versions reach their EOL date."
+      },
+      {
+        "key": "eocp",
+        "quote": "OpenUI5 versions reach End of Cloud Provisioning (EOCP) and are removed from the Akamai content delivery network approximately one year after becoming outdated."
+      }
+    ],
+    "periods": [
+      {
+        "release_type": "Standard",
+        "support_period": "6 weeks",
+        "cycle": "Monthly"
+      },
+      {
+        "release_type": "Mid-Term Support \\(MTS\\)",
+        "support_period": "9 months",
+        "cycle": "Anually \\(6 months after LTS release\\)"
+      },
+      {
+        "release_type": "Long-Term Support \\(LTS\\)",
+        "support_period": "15 months",
+        "cycle": "Anually"
+      }
+    ],
+    "rows": {
+      "seen": 3,
+      "dated": 0,
+      "not_dated": [
+        {
+          "row": "Standard",
+          "reason": "a support-period duration, not a date: the branch catalog does not label which non-LTS branch is MTS or Standard, the project's own rows carry explicit extensions a generic duration contradicts, and the policy's EOL rule runs through EOM, which the normalized schema does not carry"
+        },
+        {
+          "row": "Mid-Term Support \\(MTS\\)",
+          "reason": "a support-period duration, not a date: the branch catalog does not label which non-LTS branch is MTS or Standard, the project's own rows carry explicit extensions a generic duration contradicts, and the policy's EOL rule runs through EOM, which the normalized schema does not carry"
+        },
+        {
+          "row": "Long-Term Support \\(LTS\\)",
+          "reason": "a support-period duration, not a date: the branch catalog does not label which non-LTS branch is MTS or Standard, the project's own rows carry explicit extensions a generic duration contradicts, and the policy's EOL rule runs through EOM, which the normalized schema does not carry"
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "No end milestone is published: the project's eom, eomm and eocp cells are retained verbatim in every branch's upstream.cells and none of them is this catalog's eos, eossec or eol. The policy states that bug fixes run to EOM, that critical security patches then run for one more year, and that EOCP is removal from the CDN.",
+    "Quarter precision is not normalized: every eom/eomm/eocp value the project states is a quarter (Q3/2026), and the normalized milestones carry a day or a month only, so no quarter is converted to either and every quarter stays the project's own text.",
+    "General availability is published for 2 branches only, where the release feed's stated date dates the branch's own .0 release (1.152 and 1.150). Every other feed row dates a patch, and is preserved under that branch's upstream.current rather than promoted to the branch.",
+    "Patch metadata is retained, not normalized: 1038 patch rows are stored verbatim under the branch they belong to, including their eocp quarters, their removed and hidden flags and 1.48.6's extended_eocp cell. No patch row becomes a release.",
+    "The two sources disagree for 1.142 in the live snapshot: versionoverview.json states eom 'Q3/2026' while the release feed states an empty eom for that branch. Both cells are kept verbatim as the rows that state them, and branch lifecycle is read from versionoverview.json rather than reconciled from either.",
+    "No duration is derived from the policy's support periods (Standard 6 weeks, MTS 9 months, LTS 15 months): a stated quarter such as 1.71's and 1.108's Q4/2030 contradicts a generic LTS duration, the branch catalog does not label which non-LTS branch is MTS and which is Standard, and the policy's two-step EOM then one year rule cannot be expressed as one calculation from a stated day.",
+    "Branch maintenance status (Maintenance/Out of Maintenance) and the LTS flag are the project's current state, not deadlines, so neither becomes a milestone.",
+    "1.137 and 1.83 are excluded: the project marks both Skipped and published no release for them. The wildcard default row is excluded as the loader's fallback metadata rather than a release branch. Odd-numbered legacy branches the overview does not state are not synthesized.",
+    "Branches 1.24 and 1.22 are published from their branch rows and state no patch row at all; a branch with no published patch keeps a null ga and an empty patch list."
+  ],
+  "release_page": {
+    "url": "https://openui5.org/releases.html",
+    "columns": [
+      "Version",
+      "Download",
+      "Documentation",
+      "Release Date"
+    ],
+    "rows": 1,
+    "label_mapped": "Release Date"
+  }
+}

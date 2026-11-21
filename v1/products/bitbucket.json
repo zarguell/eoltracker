@@ -1,0 +1,738 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "bitbucket",
+  "name": "Bitbucket",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "cpe",
+      "id": "cpe:/a:atlassian:bitbucket"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:atlassian:bitbucket"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/bitbucket.svg",
+    "html": "https://endoflife.date/bitbucket",
+    "releasePolicy": "https://confluence.atlassian.com/enterprise/atlassian-enterprise-releases-948227420.html"
+  },
+  "releases": [
+    {
+      "id": "10.4",
+      "name": "10.4",
+      "milestones": {
+        "ga": "2026-05-12",
+        "eos": null,
+        "eossec": null,
+        "eol": "2028-07-21"
+      },
+      "upstream": {
+        "name": "10.4",
+        "codename": null,
+        "label": "10.4",
+        "releaseDate": "2026-05-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2028-07-21",
+        "isMaintained": true,
+        "latest": {
+          "name": "10.4.3",
+          "date": "2026-09-07",
+          "link": "https://confluence.atlassian.com/display/BitbucketServer/Bitbucket+Data+Center+10.4+release+notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "10.3",
+      "name": "10.3",
+      "milestones": {
+        "ga": "2026-05-12",
+        "eos": null,
+        "eossec": null,
+        "eol": "2028-05-12"
+      },
+      "upstream": {
+        "name": "10.3",
+        "codename": null,
+        "label": "10.3",
+        "releaseDate": "2026-05-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2028-05-12",
+        "isMaintained": true,
+        "latest": {
+          "name": "10.3.2",
+          "date": "2026-07-14",
+          "link": "https://confluence.atlassian.com/display/BitbucketServer/Bitbucket+Data+Center+10.3+release+notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "10.2",
+      "name": "10.2 (LTS)",
+      "milestones": {
+        "ga": "2026-03-03",
+        "eos": null,
+        "eossec": null,
+        "eol": "2028-03-03"
+      },
+      "upstream": {
+        "name": "10.2",
+        "codename": null,
+        "label": "10.2 (LTS)",
+        "releaseDate": "2026-03-03",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2028-03-03",
+        "isMaintained": true,
+        "latest": {
+          "name": "10.2.7",
+          "date": "2026-09-06",
+          "link": "https://confluence.atlassian.com/display/BitbucketServer/Bitbucket+Data+Center+10.2+release+notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "10.1",
+      "name": "10.1",
+      "milestones": {
+        "ga": "2025-11-20",
+        "eos": null,
+        "eossec": null,
+        "eol": "2027-11-20"
+      },
+      "upstream": {
+        "name": "10.1",
+        "codename": null,
+        "label": "10.1",
+        "releaseDate": "2025-11-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-11-20",
+        "isMaintained": true,
+        "latest": {
+          "name": "10.1.5",
+          "date": "2026-02-10",
+          "link": "https://confluence.atlassian.com/display/BitbucketServer/Bitbucket+Data+Center+10.1+release+notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "10.0",
+      "name": "10.0",
+      "milestones": {
+        "ga": "2025-09-07",
+        "eos": null,
+        "eossec": null,
+        "eol": "2027-09-08"
+      },
+      "upstream": {
+        "name": "10.0",
+        "codename": null,
+        "label": "10.0",
+        "releaseDate": "2025-09-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-09-08",
+        "isMaintained": true,
+        "latest": {
+          "name": "10.0.2",
+          "date": "2025-11-11",
+          "link": "https://confluence.atlassian.com/display/BitbucketServer/Bitbucket+Data+Center+10.0+release+notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.6",
+      "name": "9.6",
+      "milestones": {
+        "ga": "2025-03-17",
+        "eos": null,
+        "eossec": null,
+        "eol": "2027-01-18"
+      },
+      "upstream": {
+        "name": "9.6",
+        "codename": null,
+        "label": "9.6",
+        "releaseDate": "2025-03-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-01-18",
+        "isMaintained": true,
+        "latest": {
+          "name": "9.6.5",
+          "date": "2025-08-12",
+          "link": "https://confluence.atlassian.com/display/BitbucketServer/Bitbucket+Data+Center+9.6+release+notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.5",
+      "name": "9.5",
+      "milestones": {
+        "ga": "2025-01-07",
+        "eos": null,
+        "eossec": null,
+        "eol": "2027-01-07"
+      },
+      "upstream": {
+        "name": "9.5",
+        "codename": null,
+        "label": "9.5",
+        "releaseDate": "2025-01-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-01-07",
+        "isMaintained": true,
+        "latest": {
+          "name": "9.5.2",
+          "date": "2025-03-06",
+          "link": "https://confluence.atlassian.com/display/BitbucketServer/Bitbucket+Data+Center+9.5+release+notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.4",
+      "name": "9.4 (LTS)",
+      "milestones": {
+        "ga": "2024-12-02",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-12-03"
+      },
+      "upstream": {
+        "name": "9.4",
+        "codename": null,
+        "label": "9.4 (LTS)",
+        "releaseDate": "2024-12-02",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2026-12-03",
+        "isMaintained": true,
+        "latest": {
+          "name": "9.4.24",
+          "date": "2026-09-06",
+          "link": "https://confluence.atlassian.com/display/BitbucketServer/Bitbucket+Data+Center+9.4+release+notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.3",
+      "name": "9.3",
+      "milestones": {
+        "ga": "2024-10-29",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-10-29"
+      },
+      "upstream": {
+        "name": "9.3",
+        "codename": null,
+        "label": "9.3",
+        "releaseDate": "2024-10-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2026-10-29",
+        "isMaintained": true,
+        "latest": {
+          "name": "9.3.2",
+          "date": "2024-11-18",
+          "link": "https://confluence.atlassian.com/display/BitbucketServer/Bitbucket+Data+Center+9.3+release+notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.2",
+      "name": "9.2",
+      "milestones": {
+        "ga": "2024-09-24",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-09-24"
+      },
+      "upstream": {
+        "name": "9.2",
+        "codename": null,
+        "label": "9.2",
+        "releaseDate": "2024-09-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2026-09-24",
+        "isMaintained": true,
+        "latest": {
+          "name": "9.2.1",
+          "date": "2024-10-09",
+          "link": "https://confluence.atlassian.com/display/BitbucketServer/Bitbucket+Data+Center+9.2+release+notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.1",
+      "name": "9.1",
+      "milestones": {
+        "ga": "2024-08-27",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-08-27"
+      },
+      "upstream": {
+        "name": "9.1",
+        "codename": null,
+        "label": "9.1",
+        "releaseDate": "2024-08-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-08-27",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.1.1",
+          "date": "2024-09-09",
+          "link": "https://confluence.atlassian.com/display/BitbucketServer/Bitbucket+Data+Center+9.1+release+notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.0",
+      "name": "9.0",
+      "milestones": {
+        "ga": "2024-07-23",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-07-23"
+      },
+      "upstream": {
+        "name": "9.0",
+        "codename": null,
+        "label": "9.0",
+        "releaseDate": "2024-07-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-07-23",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.0.1",
+          "date": "2024-08-12",
+          "link": "https://confluence.atlassian.com/display/BitbucketServer/Bitbucket+Data+Center+9.0+release+notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.19",
+      "name": "8.19 (LTS)",
+      "milestones": {
+        "ga": "2024-03-12",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-03-12"
+      },
+      "upstream": {
+        "name": "8.19",
+        "codename": null,
+        "label": "8.19 (LTS)",
+        "releaseDate": "2024-03-12",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-03-12",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.19.29",
+          "date": "2026-03-10",
+          "link": "https://confluence.atlassian.com/display/BitbucketServer/Bitbucket+Data+Center+8.19+release+notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.18",
+      "name": "8.18",
+      "milestones": {
+        "ga": "2024-02-06",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-02-06"
+      },
+      "upstream": {
+        "name": "8.18",
+        "codename": null,
+        "label": "8.18",
+        "releaseDate": "2024-02-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-02-06",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.18.1",
+          "date": "2024-03-08",
+          "link": "https://confluence.atlassian.com/display/BitbucketServer/Bitbucket+Data+Center+8.18+release+notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.17",
+      "name": "8.17",
+      "milestones": {
+        "ga": "2024-01-09",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-01-09"
+      },
+      "upstream": {
+        "name": "8.17",
+        "codename": null,
+        "label": "8.17",
+        "releaseDate": "2024-01-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-01-09",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.17.2",
+          "date": "2024-03-08",
+          "link": "https://confluence.atlassian.com/display/BitbucketServer/Bitbucket+Data+Center+8.17+release+notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.16",
+      "name": "8.16",
+      "milestones": {
+        "ga": "2023-11-28",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-11-28"
+      },
+      "upstream": {
+        "name": "8.16",
+        "codename": null,
+        "label": "8.16",
+        "releaseDate": "2023-11-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-11-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.16.4",
+          "date": "2024-03-08",
+          "link": "https://confluence.atlassian.com/display/BitbucketServer/Bitbucket+Data+Center+8.16+release+notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.15",
+      "name": "8.15",
+      "milestones": {
+        "ga": "2023-10-23",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-10-24"
+      },
+      "upstream": {
+        "name": "8.15",
+        "codename": null,
+        "label": "8.15",
+        "releaseDate": "2023-10-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-10-24",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.15.5",
+          "date": "2024-03-08",
+          "link": "https://confluence.atlassian.com/display/BitbucketServer/Bitbucket+Data+Center+8.15+release+notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.14",
+      "name": "8.14",
+      "milestones": {
+        "ga": "2023-09-19",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-09-19"
+      },
+      "upstream": {
+        "name": "8.14",
+        "codename": null,
+        "label": "8.14",
+        "releaseDate": "2023-09-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-09-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.14.6",
+          "date": "2024-03-08",
+          "link": "https://confluence.atlassian.com/display/BitbucketServer/Bitbucket+Data+Center+and+Server+8.14+release+notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.13",
+      "name": "8.13",
+      "milestones": {
+        "ga": "2023-08-14",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-08-15"
+      },
+      "upstream": {
+        "name": "8.13",
+        "codename": null,
+        "label": "8.13",
+        "releaseDate": "2023-08-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-08-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.13.6",
+          "date": "2024-02-07",
+          "link": "https://confluence.atlassian.com/display/BitbucketServer/Bitbucket+Data+Center+and+Server+8.13+release+notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.12",
+      "name": "8.12",
+      "milestones": {
+        "ga": "2023-07-11",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-07-11"
+      },
+      "upstream": {
+        "name": "8.12",
+        "codename": null,
+        "label": "8.12",
+        "releaseDate": "2023-07-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-07-11",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.12.6",
+          "date": "2024-01-08",
+          "link": "https://confluence.atlassian.com/display/BitbucketServer/Bitbucket+Data+Center+and+Server+8.12+release+notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.11",
+      "name": "8.11",
+      "milestones": {
+        "ga": "2023-06-06",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-06-06"
+      },
+      "upstream": {
+        "name": "8.11",
+        "codename": null,
+        "label": "8.11",
+        "releaseDate": "2023-06-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-06-06",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.11.6",
+          "date": "2023-11-13",
+          "link": "https://confluence.atlassian.com/display/BitbucketServer/Bitbucket+Data+Center+and+Server+8.11+release+notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.10",
+      "name": "8.10",
+      "milestones": {
+        "ga": "2023-05-01",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-05-02"
+      },
+      "upstream": {
+        "name": "8.10",
+        "codename": null,
+        "label": "8.10",
+        "releaseDate": "2023-05-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-05-02",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.10.6",
+          "date": "2023-10-09",
+          "link": "https://confluence.atlassian.com/display/BitbucketServer/Bitbucket+Data+Center+and+Server+8.10+release+notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.9",
+      "name": "8.9 (LTS)",
+      "milestones": {
+        "ga": "2023-04-12",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-04-12"
+      },
+      "upstream": {
+        "name": "8.9",
+        "codename": null,
+        "label": "8.9 (LTS)",
+        "releaseDate": "2023-04-12",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-04-12",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.9.27",
+          "date": "2025-04-08",
+          "link": "https://confluence.atlassian.com/display/BitbucketServer/Bitbucket+Data+Center+and+Server+8.9+release+notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.8",
+      "name": "8.8",
+      "milestones": {
+        "ga": "2023-02-06",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-02-07"
+      },
+      "upstream": {
+        "name": "8.8",
+        "codename": null,
+        "label": "8.8",
+        "releaseDate": "2023-02-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-02-07",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.8.7",
+          "date": "2023-08-07",
+          "link": "https://confluence.atlassian.com/display/BitbucketServer/Bitbucket+Data+Center+and+Server+8.8+release+notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.7",
+      "name": "8.7",
+      "milestones": {
+        "ga": "2023-01-10",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-01-10"
+      },
+      "upstream": {
+        "name": "8.7",
+        "codename": null,
+        "label": "8.7",
+        "releaseDate": "2023-01-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-01-10",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.7.5",
+          "date": "2023-07-04",
+          "link": "https://confluence.atlassian.com/display/BitbucketServer/Bitbucket+Data+Center+and+Server+8.7+release+notes"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7.21",
+      "name": "7.21 (LTS)",
+      "milestones": {
+        "ga": "2022-02-28",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-02-28"
+      },
+      "upstream": {
+        "name": "7.21",
+        "codename": null,
+        "label": "7.21 (LTS)",
+        "releaseDate": "2022-02-28",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-02-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.21.23",
+          "date": "2024-03-08",
+          "link": "https://confluence.atlassian.com/display/BitbucketServer/Bitbucket+Data+Center+and+Server+7.21+release+notes"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/bitbucket/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-08T00:07:27+00:00"
+  }
+}

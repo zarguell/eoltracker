@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-recoverpoint-gen5-server",
+  "name": "RecoverPoint Gen5 Server",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC RecoverPoint",
+  "family": "RecoverPoint",
+  "model_number": "RecoverPoint Gen5 Server",
+  "milestones": {
+    "ga": "2012-10-22",
+    "eos": "2017-01-15",
+    "eossec": null,
+    "eol": "2022-09-30"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "RecoverPoint Gen5 Server",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "RecoverPoint Gen5 Server",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC RecoverPoint",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2017-01-15",
+      "datetime": null,
+      "value": "2017-01-15",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Oct. 22, 2012",
+      "datetime": "2012-10-22",
+      "value": "2012-10-22",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2022-09-30",
+      "datetime": null,
+      "value": "2022-09-30",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/data-replication/vendor/dell-emc/recoverpoint/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

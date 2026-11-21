@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-gen3-expansion-storage-nodes",
+  "name": "Gen3 Expansion Storage nodes",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Avamar",
+  "family": "Avamar",
+  "model_number": "Gen3 Expansion Storage nodes",
+  "milestones": {
+    "ga": "2009-11-16",
+    "eos": "2012-12-31",
+    "eossec": null,
+    "eol": "2016-10-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "Gen3 Expansion Storage nodes",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "Gen3 Expansion Storage nodes",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Avamar",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2012-12-31",
+      "datetime": null,
+      "value": "2012-12-31",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Nov. 16, 2009",
+      "datetime": "2009-11-16",
+      "value": "2009-11-16",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2016-10-31",
+      "datetime": null,
+      "value": "2016-10-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/backup/vendor/dell-emc/avamar/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

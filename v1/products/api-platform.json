@@ -1,0 +1,537 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "api-platform",
+  "name": "API Platform",
+  "category": "software",
+  "upstream_category": "framework",
+  "identifiers": [
+    {
+      "type": "purl",
+      "id": "pkg:composer/api-platform/core"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/api-platform/core"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:api-platform:core"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:api-platform:core"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/api-platform",
+    "releasePolicy": "https://api-platform.com/docs/extra/releases/"
+  },
+  "releases": [
+    {
+      "id": "4.3",
+      "name": "4.3",
+      "milestones": {
+        "ga": "2026-03-13",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.3",
+        "codename": null,
+        "label": "4.3",
+        "releaseDate": "2026-03-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "4.3.19",
+          "date": "2026-09-12",
+          "link": "https://github.com/api-platform/core/releases/tag/v4.3.19"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.2",
+      "name": "4.2",
+      "milestones": {
+        "ga": "2025-09-18",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.2",
+        "codename": null,
+        "label": "4.2",
+        "releaseDate": "2025-09-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-03-13",
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "4.2.26",
+          "date": "2026-06-13",
+          "link": "https://github.com/api-platform/core/releases/tag/v4.2.26"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.1",
+      "name": "4.1",
+      "milestones": {
+        "ga": "2025-02-28",
+        "eos": null,
+        "eossec": "2026-03-13",
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.1",
+        "codename": null,
+        "label": "4.1",
+        "releaseDate": "2025-02-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-09-18",
+        "isEol": true,
+        "eolFrom": "2026-03-13",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.1.30",
+          "date": "2026-06-13",
+          "link": "https://github.com/api-platform/core/releases/tag/v4.1.30"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "4.0",
+      "name": "4.0",
+      "milestones": {
+        "ga": "2024-09-18",
+        "eos": null,
+        "eossec": "2025-09-18",
+        "eol": null
+      },
+      "upstream": {
+        "name": "4.0",
+        "codename": null,
+        "label": "4.0",
+        "releaseDate": "2024-09-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-02-28",
+        "isEol": true,
+        "eolFrom": "2025-09-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "4.0.22",
+          "date": "2025-04-03",
+          "link": "https://github.com/api-platform/core/releases/tag/v4.0.22"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.4",
+      "name": "3.4",
+      "milestones": {
+        "ga": "2024-09-18",
+        "eos": null,
+        "eossec": "2025-02-28",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.4",
+        "codename": null,
+        "label": "3.4",
+        "releaseDate": "2024-09-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-09-18",
+        "isEol": true,
+        "eolFrom": "2025-02-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.4.17",
+          "date": "2025-04-07",
+          "link": "https://github.com/api-platform/core/releases/tag/v3.4.17"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.3",
+      "name": "3.3",
+      "milestones": {
+        "ga": "2024-04-29",
+        "eos": null,
+        "eossec": "2025-02-28",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.3",
+        "codename": null,
+        "label": "3.3",
+        "releaseDate": "2024-04-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-09-18",
+        "isEol": true,
+        "eolFrom": "2025-02-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.3.15",
+          "date": "2025-01-17",
+          "link": "https://github.com/api-platform/core/releases/tag/v3.3.15"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.2",
+      "name": "3.2",
+      "milestones": {
+        "ga": "2023-10-12",
+        "eos": null,
+        "eossec": "2024-09-18",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.2",
+        "codename": null,
+        "label": "3.2",
+        "releaseDate": "2023-10-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-04-29",
+        "isEol": true,
+        "eolFrom": "2024-09-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.2.26",
+          "date": "2024-07-19",
+          "link": "https://github.com/api-platform/core/releases/tag/v3.2.26"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.1",
+      "name": "3.1",
+      "milestones": {
+        "ga": "2023-01-23",
+        "eos": null,
+        "eossec": "2024-04-29",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.1",
+        "codename": null,
+        "label": "3.1",
+        "releaseDate": "2023-01-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-10-12",
+        "isEol": true,
+        "eolFrom": "2024-04-29",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.1.29",
+          "date": "2024-04-29",
+          "link": "https://github.com/api-platform/core/releases/tag/v3.1.29"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "3.0",
+      "name": "3.0",
+      "milestones": {
+        "ga": "2022-09-15",
+        "eos": null,
+        "eossec": "2023-10-12",
+        "eol": null
+      },
+      "upstream": {
+        "name": "3.0",
+        "codename": null,
+        "label": "3.0",
+        "releaseDate": "2022-09-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-01-23",
+        "isEol": true,
+        "eolFrom": "2023-10-12",
+        "isMaintained": false,
+        "latest": {
+          "name": "3.0.12",
+          "date": "2023-02-28",
+          "link": "https://github.com/api-platform/core/releases/tag/v3.0.12"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.7",
+      "name": "2.7",
+      "milestones": {
+        "ga": "2022-09-15",
+        "eos": null,
+        "eossec": "2023-01-27",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.7",
+        "codename": null,
+        "label": "2.7",
+        "releaseDate": "2022-09-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-01-27",
+        "isEol": true,
+        "eolFrom": "2023-01-27",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.7.18",
+          "date": "2024-03-19",
+          "link": "https://github.com/api-platform/core/releases/tag/v2.7.18"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.6",
+      "name": "2.6",
+      "milestones": {
+        "ga": "2021-01-22",
+        "eos": null,
+        "eossec": "2022-09-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.6",
+        "codename": null,
+        "label": "2.6",
+        "releaseDate": "2021-01-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-09-15",
+        "isEol": true,
+        "eolFrom": "2022-09-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.6.8",
+          "date": "2022-01-11",
+          "link": "https://github.com/api-platform/core/releases/tag/v2.6.8"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.5",
+      "name": "2.5",
+      "milestones": {
+        "ga": "2019-09-30",
+        "eos": null,
+        "eossec": "2022-09-15",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.5",
+        "codename": null,
+        "label": "2.5",
+        "releaseDate": "2019-09-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-01-22",
+        "isEol": true,
+        "eolFrom": "2022-09-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.5.10",
+          "date": "2021-01-22",
+          "link": "https://github.com/api-platform/core/releases/tag/v2.5.10"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.4",
+      "name": "2.4",
+      "milestones": {
+        "ga": "2019-03-22",
+        "eos": null,
+        "eossec": "2021-01-22",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.4",
+        "codename": null,
+        "label": "2.4",
+        "releaseDate": "2019-03-22",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2019-09-30",
+        "isEol": true,
+        "eolFrom": "2021-01-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.4.7",
+          "date": "2019-09-17",
+          "link": "https://github.com/api-platform/core/releases/tag/v2.4.7"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.3",
+      "name": "2.3",
+      "milestones": {
+        "ga": "2018-07-06",
+        "eos": null,
+        "eossec": "2019-09-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.3",
+        "codename": null,
+        "label": "2.3",
+        "releaseDate": "2018-07-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2019-03-22",
+        "isEol": true,
+        "eolFrom": "2019-09-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.3.6",
+          "date": "2019-01-15",
+          "link": "https://github.com/api-platform/core/releases/tag/v2.3.6"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.2",
+      "name": "2.2",
+      "milestones": {
+        "ga": "2018-02-16",
+        "eos": null,
+        "eossec": "2019-03-22",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.2",
+        "codename": null,
+        "label": "2.2",
+        "releaseDate": "2018-02-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2018-07-06",
+        "isEol": true,
+        "eolFrom": "2019-03-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.2.10",
+          "date": "2019-01-15",
+          "link": "https://github.com/api-platform/core/releases/tag/v2.2.10"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.1",
+      "name": "2.1",
+      "milestones": {
+        "ga": "2017-09-08",
+        "eos": null,
+        "eossec": "2018-07-06",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.1",
+        "codename": null,
+        "label": "2.1",
+        "releaseDate": "2017-09-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2018-02-16",
+        "isEol": true,
+        "eolFrom": "2018-07-06",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.1.6",
+          "date": "2018-02-12",
+          "link": "https://github.com/api-platform/core/releases/tag/v2.1.6"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.0",
+      "name": "2.0",
+      "milestones": {
+        "ga": "2016-11-24",
+        "eos": null,
+        "eossec": "2018-02-16",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.0",
+        "codename": null,
+        "label": "2.0",
+        "releaseDate": "2016-11-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2017-09-08",
+        "isEol": true,
+        "eolFrom": "2018-02-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.0.11",
+          "date": "2017-09-08",
+          "link": "https://github.com/api-platform/core/releases/tag/v2.0.11"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/api-platform/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-13T00:07:17+00:00"
+  }
+}

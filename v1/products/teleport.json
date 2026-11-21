@@ -1,0 +1,127 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "teleport",
+  "name": "Teleport",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "purl",
+      "id": "pkg:github/gravitational/teleport"
+    },
+    {
+      "type": "repology",
+      "id": "teleport"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:goteleport:teleport"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": null,
+    "html": "https://endoflife.date/teleport",
+    "releasePolicy": "https://goteleport.com/docs/upcoming-releases/"
+  },
+  "releases": [
+    {
+      "id": "18",
+      "name": "18",
+      "milestones": {
+        "ga": "2025-07-04",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "18",
+        "codename": null,
+        "label": "18",
+        "releaseDate": "2025-07-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "18.11.1",
+          "date": "2026-09-16",
+          "link": "https://github.com/gravitational/teleport/releases/tag/v18.11.1"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "17",
+      "name": "17",
+      "milestones": {
+        "ga": "2024-11-15",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "17",
+        "codename": null,
+        "label": "17",
+        "releaseDate": "2024-11-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-07-04",
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "17.7.29",
+          "date": "2026-09-09",
+          "link": "https://github.com/gravitational/teleport/releases/tag/v17.7.29"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "16",
+      "name": "16",
+      "milestones": {
+        "ga": "2024-06-13",
+        "eos": null,
+        "eossec": "2025-10-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "16",
+        "codename": null,
+        "label": "16",
+        "releaseDate": "2024-06-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-11-15",
+        "isEol": true,
+        "eolFrom": "2025-10-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "16.5.18",
+          "date": "2025-09-29",
+          "link": "https://github.com/gravitational/teleport/releases/tag/v16.5.18"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/teleport/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-17T00:08:37+00:00"
+  }
+}

@@ -1,0 +1,438 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "sonarqube-server",
+  "name": "SonarQube Server",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "sonarqube"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/sonarqubeserver.svg",
+    "html": "https://endoflife.date/sonarqube-server",
+    "releasePolicy": "https://docs.sonarsource.com/sonarqube-server/latest/server-upgrade-and-maintenance/upgrade/release-cycle-model/"
+  },
+  "releases": [
+    {
+      "id": "2026.4",
+      "name": "2026.4",
+      "milestones": {
+        "ga": "2026-07-23",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2026.4",
+        "codename": null,
+        "label": "2026.4",
+        "releaseDate": "2026-07-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "2026.4.1",
+          "date": "2026-08-07",
+          "link": "https://community.sonarsource.com/t/sonarqube-server-2026-release-4/186483"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2026.3",
+      "name": "2026.3",
+      "milestones": {
+        "ga": "2026-05-21",
+        "eos": null,
+        "eossec": "2026-07-23",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2026.3",
+        "codename": null,
+        "label": "2026.3",
+        "releaseDate": "2026-05-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-07-23",
+        "isEol": true,
+        "eolFrom": "2026-07-23",
+        "isMaintained": false,
+        "latest": {
+          "name": "2026.3.1",
+          "date": "2026-06-02",
+          "link": "https://community.sonarsource.com/t/sonarqube-server-2026-release-3-1/183153"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2026.2",
+      "name": "2026.2",
+      "milestones": {
+        "ga": "2026-03-24",
+        "eos": null,
+        "eossec": "2026-05-21",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2026.2",
+        "codename": null,
+        "label": "2026.2",
+        "releaseDate": "2026-03-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-05-21",
+        "isEol": true,
+        "eolFrom": "2026-05-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "2026.2.1",
+          "date": "2026-03-30",
+          "link": "https://community.sonarsource.com/t/sonarqube-server-2026-release-2-1/180528"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2026.1",
+      "name": "2026.1 (LTS)",
+      "milestones": {
+        "ga": "2026-01-30",
+        "eos": null,
+        "eossec": "2027-08-02",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2026.1",
+        "codename": null,
+        "label": "2026.1 (LTS)",
+        "releaseDate": "2026-01-30",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": "2027-01-30",
+        "isEol": false,
+        "eolFrom": "2027-08-02",
+        "isMaintained": true,
+        "latest": {
+          "name": "2026.1.5",
+          "date": "2026-08-07",
+          "link": "https://community.sonarsource.com/t/sonarqube-server-2026-release-1-4-lta/186558"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2025.6",
+      "name": "2025.6",
+      "milestones": {
+        "ga": "2025-12-12",
+        "eos": null,
+        "eossec": "2026-01-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2025.6",
+        "codename": null,
+        "label": "2025.6",
+        "releaseDate": "2025-12-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-01-30",
+        "isEol": true,
+        "eolFrom": "2026-01-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "2025.6.1",
+          "date": "2025-12-24",
+          "link": "https://community.sonarsource.com/t/sonarqube-server-2025-release-6/153802"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2025.5",
+      "name": "2025.5",
+      "milestones": {
+        "ga": "2025-09-26",
+        "eos": null,
+        "eossec": "2025-12-12",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2025.5",
+        "codename": null,
+        "label": "2025.5",
+        "releaseDate": "2025-09-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-12-12",
+        "isEol": true,
+        "eolFrom": "2025-12-12",
+        "isMaintained": false,
+        "latest": {
+          "name": "2025.5",
+          "date": "2025-09-26",
+          "link": "https://community.sonarsource.com/t/sonarqube-server-2025-release-4-2/146252"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2025.4",
+      "name": "2025.4 (LTS)",
+      "milestones": {
+        "ga": "2025-07-30",
+        "eos": null,
+        "eossec": "2027-01-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2025.4",
+        "codename": null,
+        "label": "2025.4 (LTS)",
+        "releaseDate": "2025-07-30",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-07-30",
+        "isEol": false,
+        "eolFrom": "2027-01-30",
+        "isMaintained": true,
+        "latest": {
+          "name": "2025.4.8",
+          "date": "2026-07-26",
+          "link": "https://community.sonarsource.com/t/sonarqube-server-2025-release-4-8-lta/186559"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2025.3",
+      "name": "2025.3",
+      "milestones": {
+        "ga": "2025-05-30",
+        "eos": null,
+        "eossec": "2025-07-29",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2025.3",
+        "codename": null,
+        "label": "2025.3",
+        "releaseDate": "2025-05-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-07-29",
+        "isEol": true,
+        "eolFrom": "2025-07-29",
+        "isMaintained": false,
+        "latest": {
+          "name": "2025.3.1",
+          "date": "2025-06-20",
+          "link": "https://community.sonarsource.com/t/sonarqube-server-2025-release-3-1/143131"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2025.2",
+      "name": "2025.2",
+      "milestones": {
+        "ga": "2025-03-27",
+        "eos": null,
+        "eossec": "2025-05-26",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2025.2",
+        "codename": null,
+        "label": "2025.2",
+        "releaseDate": "2025-03-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-05-26",
+        "isEol": true,
+        "eolFrom": "2025-05-26",
+        "isMaintained": false,
+        "latest": {
+          "name": "2025.2.0",
+          "date": "2025-03-27",
+          "link": "https://community.sonarsource.com/t/sonarqube-server-2025-release-2-released/137906"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2025.1",
+      "name": "2025.1 (LTS)",
+      "milestones": {
+        "ga": "2025-01-23",
+        "eos": null,
+        "eossec": "2026-07-01",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2025.1",
+        "codename": null,
+        "label": "2025.1 (LTS)",
+        "releaseDate": "2025-01-23",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-01-23",
+        "isEol": true,
+        "eolFrom": "2026-07-01",
+        "isMaintained": false,
+        "latest": {
+          "name": "2025.1.8",
+          "date": "2026-05-29",
+          "link": "https://community.sonarsource.com/t/sonarqube-server-2025-release-1-8-lta/182977"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "10",
+      "name": "10",
+      "milestones": {
+        "ga": "2023-03-30",
+        "eos": null,
+        "eossec": "2025-03-26",
+        "eol": null
+      },
+      "upstream": {
+        "name": "10",
+        "codename": null,
+        "label": "10",
+        "releaseDate": "2023-03-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-01-20",
+        "isEol": true,
+        "eolFrom": "2025-03-26",
+        "isMaintained": false,
+        "latest": {
+          "name": "10.8.0",
+          "date": "2024-12-04",
+          "link": "https://www.sonarsource.com/products/sonarqube/whats-new/sonarqube-server-10-8/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9",
+      "name": "9 (LTS)",
+      "milestones": {
+        "ga": "2021-07-05",
+        "eos": null,
+        "eossec": "2025-01-20",
+        "eol": null
+      },
+      "upstream": {
+        "name": "9",
+        "codename": null,
+        "label": "9 (LTS)",
+        "releaseDate": "2021-07-05",
+        "isLts": true,
+        "ltsFrom": "2023-02-07",
+        "isEoas": true,
+        "eoasFrom": "2023-03-30",
+        "isEol": true,
+        "eolFrom": "2025-01-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.9.8",
+          "date": "2024-11-25",
+          "link": "https://www.sonarsource.com/products/sonarqube/downloads/lts/9-9-lts/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8",
+      "name": "8 (LTS)",
+      "milestones": {
+        "ga": "2019-10-15",
+        "eos": null,
+        "eossec": "2023-02-07",
+        "eol": null
+      },
+      "upstream": {
+        "name": "8",
+        "codename": null,
+        "label": "8 (LTS)",
+        "releaseDate": "2019-10-15",
+        "isLts": true,
+        "ltsFrom": "2021-05-04",
+        "isEoas": true,
+        "eoasFrom": "2021-07-05",
+        "isEol": true,
+        "eolFrom": "2023-02-07",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.9.10",
+          "date": "2022-10-14",
+          "link": "https://www.sonarsource.com/products/sonarqube/downloads/lts/8-9-lts/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7",
+      "name": "7 (LTS)",
+      "milestones": {
+        "ga": "2018-02-02",
+        "eos": null,
+        "eossec": "2021-05-04",
+        "eol": null
+      },
+      "upstream": {
+        "name": "7",
+        "codename": null,
+        "label": "7 (LTS)",
+        "releaseDate": "2018-02-02",
+        "isLts": true,
+        "ltsFrom": "2019-07-01",
+        "isEoas": true,
+        "eoasFrom": "2019-10-16",
+        "isEol": true,
+        "eolFrom": "2021-05-04",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.9.6",
+          "date": "2021-03-01",
+          "link": "https://web.archive.org/web/20220707010454/https://www.sonarqube.org/sonarqube-7-9-lts/"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/sonarqube-server/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-08-07T20:48:27+00:00"
+  }
+}

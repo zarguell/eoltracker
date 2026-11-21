@@ -1,0 +1,193 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "oracle-linux",
+  "name": "Oracle Linux",
+  "category": "software",
+  "upstream_category": "os",
+  "identifiers": [
+    {
+      "type": "cpe",
+      "id": "cpe:/o:oracle:linux"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:o:oracle:linux"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:oci/oraclelinux?repository_url=container-registry.oracle.com/ords/ocr/ba/os"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:oci/oraclelinux?repository_url=ghcr.io/oracle"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/library/oraclelinux"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Basic/Premier Support",
+    "eoes": "Extended Support"
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/oracle.svg",
+    "html": "https://endoflife.date/oracle-linux",
+    "releasePolicy": "https://www.oracle.com/a/ocom/docs/elsp-lifetime-069338.pdf"
+  },
+  "releases": [
+    {
+      "id": "10",
+      "name": "10",
+      "milestones": {
+        "ga": "2025-06-26",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "10",
+        "codename": null,
+        "label": "10",
+        "releaseDate": "2025-06-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isEoes": false,
+        "eoesFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "10.1",
+          "date": "2025-12-06",
+          "link": "https://docs.oracle.com/en/operating-systems/oracle-linux/10/relnotes10.1/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9",
+      "name": "9",
+      "milestones": {
+        "ga": "2022-07-06",
+        "eos": null,
+        "eossec": null,
+        "eol": "2035-06-30"
+      },
+      "upstream": {
+        "name": "9",
+        "codename": null,
+        "label": "9",
+        "releaseDate": "2022-07-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2032-06-30",
+        "isEoes": false,
+        "eoesFrom": "2035-06-30",
+        "isMaintained": true,
+        "latest": {
+          "name": "9.8",
+          "date": "2026-06-23",
+          "link": "https://docs.oracle.com/en/operating-systems/oracle-linux/9/relnotes9.8/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8",
+      "name": "8",
+      "milestones": {
+        "ga": "2019-07-19",
+        "eos": null,
+        "eossec": null,
+        "eol": "2032-07-31"
+      },
+      "upstream": {
+        "name": "8",
+        "codename": null,
+        "label": "8",
+        "releaseDate": "2019-07-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2029-07-31",
+        "isEoes": false,
+        "eoesFrom": "2032-07-31",
+        "isMaintained": true,
+        "latest": {
+          "name": "8.10",
+          "date": "2024-05-28",
+          "link": "https://docs.oracle.com/en/operating-systems/oracle-linux/8/relnotes8.10/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "7",
+      "name": "7",
+      "milestones": {
+        "ga": "2014-07-23",
+        "eos": null,
+        "eossec": null,
+        "eol": "2028-06-30"
+      },
+      "upstream": {
+        "name": "7",
+        "codename": null,
+        "label": "7",
+        "releaseDate": "2014-07-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-12-31",
+        "isEoes": false,
+        "eoesFrom": "2028-06-30",
+        "isMaintained": true,
+        "latest": {
+          "name": "7.9",
+          "date": "2020-10-08",
+          "link": "https://docs.oracle.com/en/operating-systems/oracle-linux/7/relnotes7.9/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "6",
+      "name": "6",
+      "milestones": {
+        "ga": "2011-02-12",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-12-31"
+      },
+      "upstream": {
+        "name": "6",
+        "codename": null,
+        "label": "6",
+        "releaseDate": "2011-02-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-03-31",
+        "isEoes": true,
+        "eoesFrom": "2024-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.10",
+          "date": "2018-07-02",
+          "link": "https://docs.oracle.com/en/operating-systems/oracle-linux/6/relnotes6.10/"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/oracle-linux/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-07-17T18:13:54+00:00"
+  }
+}

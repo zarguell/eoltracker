@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-clariion-cx500i",
+  "name": "CLARiiON CX500i",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC CLARiiON CX",
+  "family": "CLARiiON CX",
+  "model_number": "CLARiiON CX500i",
+  "milestones": {
+    "ga": "2005-02-01",
+    "eos": "2006-12-31",
+    "eossec": null,
+    "eol": "2011-12-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "CLARiiON CX500i",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "CLARiiON CX500i",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC CLARiiON CX",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2006-12-31",
+      "datetime": null,
+      "value": "2006-12-31",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Feb. 01, 2005",
+      "datetime": "2005-02-01",
+      "value": "2005-02-01",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2011-12-31",
+      "datetime": null,
+      "value": "2011-12-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/san-storage/vendor/dell-emc/clariion-cx/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

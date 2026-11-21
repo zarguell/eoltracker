@@ -1,0 +1,958 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "plesk",
+  "name": "Plesk",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "purl",
+      "id": "pkg:docker/plesk/plesk"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/a:plesk:plesk"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:plesk:plesk"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/plesk.svg",
+    "html": "https://endoflife.date/plesk",
+    "releasePolicy": "https://www.plesk.com/lifecycle-policy/"
+  },
+  "releases": [
+    {
+      "id": "18.0.81",
+      "name": "18.0.81",
+      "milestones": {
+        "ga": "2026-09-15",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-12-08"
+      },
+      "upstream": {
+        "name": "18.0.81",
+        "codename": null,
+        "label": "18.0.81",
+        "releaseDate": "2026-09-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2026-12-08",
+        "isMaintained": true,
+        "latest": {
+          "name": "18.0.81",
+          "date": "2026-09-15",
+          "link": "https://docs.plesk.com/release-notes/obsidian/change-log/#plesk-18081"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.0.80",
+      "name": "18.0.80",
+      "milestones": {
+        "ga": "2026-08-04",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-10-27"
+      },
+      "upstream": {
+        "name": "18.0.80",
+        "codename": null,
+        "label": "18.0.80",
+        "releaseDate": "2026-08-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2026-10-27",
+        "isMaintained": true,
+        "latest": {
+          "name": "18.0.80.7",
+          "date": "2026-09-10",
+          "link": "https://docs.plesk.com/release-notes/obsidian/change-log/#plesk-18080"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.0.79",
+      "name": "18.0.79",
+      "milestones": {
+        "ga": "2026-06-23",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-09-23"
+      },
+      "upstream": {
+        "name": "18.0.79",
+        "codename": null,
+        "label": "18.0.79",
+        "releaseDate": "2026-06-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2026-09-23",
+        "isMaintained": true,
+        "latest": {
+          "name": "18.0.79.11",
+          "date": "2026-09-10",
+          "link": "https://docs.plesk.com/release-notes/obsidian/change-log/#plesk-18079"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.0.78",
+      "name": "18.0.78",
+      "milestones": {
+        "ga": "2026-05-12",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-08-04"
+      },
+      "upstream": {
+        "name": "18.0.78",
+        "codename": null,
+        "label": "18.0.78",
+        "releaseDate": "2026-05-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-08-04",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.0.78.5",
+          "date": "2026-07-22",
+          "link": "https://docs.plesk.com/release-notes/obsidian/change-log/#plesk-18078"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.0.77",
+      "name": "18.0.77",
+      "milestones": {
+        "ga": "2026-03-31",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-06-23"
+      },
+      "upstream": {
+        "name": "18.0.77",
+        "codename": null,
+        "label": "18.0.77",
+        "releaseDate": "2026-03-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-06-23",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.0.77.5",
+          "date": "2026-06-02",
+          "link": "https://docs.plesk.com/release-notes/obsidian/change-log/#plesk-18077"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.0.76",
+      "name": "18.0.76",
+      "milestones": {
+        "ga": "2026-02-16",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-05-11"
+      },
+      "upstream": {
+        "name": "18.0.76",
+        "codename": null,
+        "label": "18.0.76",
+        "releaseDate": "2026-02-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-05-11",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.0.76.6",
+          "date": "2026-04-21",
+          "link": "https://docs.plesk.com/release-notes/obsidian/change-log/#plesk-18076"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.0.75",
+      "name": "18.0.75",
+      "milestones": {
+        "ga": "2026-01-06",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-03-31"
+      },
+      "upstream": {
+        "name": "18.0.75",
+        "codename": null,
+        "label": "18.0.75",
+        "releaseDate": "2026-01-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-03-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.0.75.1",
+          "date": "2026-02-25",
+          "link": "https://docs.plesk.com/release-notes/obsidian/change-log/#plesk-18075"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.0.74",
+      "name": "18.0.74",
+      "milestones": {
+        "ga": "2025-11-11",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-02-03"
+      },
+      "upstream": {
+        "name": "18.0.74",
+        "codename": null,
+        "label": "18.0.74",
+        "releaseDate": "2025-11-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-02-03",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.0.74.3",
+          "date": "2025-12-08",
+          "link": "https://docs.plesk.com/release-notes/obsidian/change-log/#plesk-18074"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.0.73",
+      "name": "18.0.73",
+      "milestones": {
+        "ga": "2025-09-30",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-12-23"
+      },
+      "upstream": {
+        "name": "18.0.73",
+        "codename": null,
+        "label": "18.0.73",
+        "releaseDate": "2025-09-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-12-23",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.0.73.5",
+          "date": "2025-11-25",
+          "link": "https://docs.plesk.com/release-notes/obsidian/change-log/#plesk-18073"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.0.72",
+      "name": "18.0.72",
+      "milestones": {
+        "ga": "2025-08-19",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-11-11"
+      },
+      "upstream": {
+        "name": "18.0.72",
+        "codename": null,
+        "label": "18.0.72",
+        "releaseDate": "2025-08-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-11-11",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.0.72.3",
+          "date": "2025-09-16",
+          "link": "https://docs.plesk.com/release-notes/obsidian/change-log/#plesk-18072"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.0.71",
+      "name": "18.0.71",
+      "milestones": {
+        "ga": "2025-07-08",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-09-30"
+      },
+      "upstream": {
+        "name": "18.0.71",
+        "codename": null,
+        "label": "18.0.71",
+        "releaseDate": "2025-07-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-09-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.0.71.2",
+          "date": "2025-07-30",
+          "link": "https://docs.plesk.com/release-notes/obsidian/change-log/#plesk-18071"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.0.70",
+      "name": "18.0.70",
+      "milestones": {
+        "ga": "2025-05-27",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-08-19"
+      },
+      "upstream": {
+        "name": "18.0.70",
+        "codename": null,
+        "label": "18.0.70",
+        "releaseDate": "2025-05-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-08-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.0.70.4",
+          "date": "2025-07-30",
+          "link": "https://docs.plesk.com/release-notes/obsidian/change-log/#plesk-18070"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.0.69",
+      "name": "18.0.69",
+      "milestones": {
+        "ga": "2025-04-15",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-07-08"
+      },
+      "upstream": {
+        "name": "18.0.69",
+        "codename": null,
+        "label": "18.0.69",
+        "releaseDate": "2025-04-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-07-08",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.0.69.4",
+          "date": "2025-06-04",
+          "link": "https://docs.plesk.com/release-notes/obsidian/change-log/#plesk-18069"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.0.68",
+      "name": "18.0.68",
+      "milestones": {
+        "ga": "2025-03-04",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-05-27"
+      },
+      "upstream": {
+        "name": "18.0.68",
+        "codename": null,
+        "label": "18.0.68",
+        "releaseDate": "2025-03-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-05-27",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.0.68.2",
+          "date": "2025-03-20",
+          "link": "https://docs.plesk.com/release-notes/obsidian/change-log/#plesk-18068"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.0.67",
+      "name": "18.0.67",
+      "milestones": {
+        "ga": "2025-01-21",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-04-15"
+      },
+      "upstream": {
+        "name": "18.0.67",
+        "codename": null,
+        "label": "18.0.67",
+        "releaseDate": "2025-01-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-04-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.0.67.3",
+          "date": "2025-02-19",
+          "link": "https://docs.plesk.com/release-notes/obsidian/change-log/#plesk-18067"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.0.66",
+      "name": "18.0.66",
+      "milestones": {
+        "ga": "2024-12-10",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-03-04"
+      },
+      "upstream": {
+        "name": "18.0.66",
+        "codename": null,
+        "label": "18.0.66",
+        "releaseDate": "2024-12-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-03-04",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.0.66.2",
+          "date": "2025-01-09",
+          "link": "https://docs.plesk.com/release-notes/obsidian/change-log/#plesk-18066"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.0.65",
+      "name": "18.0.65",
+      "milestones": {
+        "ga": "2024-10-29",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-01-21"
+      },
+      "upstream": {
+        "name": "18.0.65",
+        "codename": null,
+        "label": "18.0.65",
+        "releaseDate": "2024-10-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-01-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.0.65.2",
+          "date": "2024-11-26",
+          "link": "https://docs.plesk.com/release-notes/obsidian/change-log/#plesk-18065"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.0.64",
+      "name": "18.0.64",
+      "milestones": {
+        "ga": "2024-09-17",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-12-10"
+      },
+      "upstream": {
+        "name": "18.0.64",
+        "codename": null,
+        "label": "18.0.64",
+        "releaseDate": "2024-09-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-12-10",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.0.64.1",
+          "date": "2024-10-09",
+          "link": "https://docs.plesk.com/release-notes/obsidian/change-log/#plesk-18064"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.0.63",
+      "name": "18.0.63",
+      "milestones": {
+        "ga": "2024-08-06",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-10-29"
+      },
+      "upstream": {
+        "name": "18.0.63",
+        "codename": null,
+        "label": "18.0.63",
+        "releaseDate": "2024-08-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-10-29",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.0.63.4",
+          "date": "2024-09-03",
+          "link": "https://docs.plesk.com/release-notes/obsidian/change-log/#plesk-18063"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.0.62",
+      "name": "18.0.62",
+      "milestones": {
+        "ga": "2024-06-25",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-09-17"
+      },
+      "upstream": {
+        "name": "18.0.62",
+        "codename": null,
+        "label": "18.0.62",
+        "releaseDate": "2024-06-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-09-17",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.0.62.2",
+          "date": "2024-07-24",
+          "link": "https://docs.plesk.com/release-notes/obsidian/change-log/#plesk-18062"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.0.61",
+      "name": "18.0.61",
+      "milestones": {
+        "ga": "2024-05-14",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-08-06"
+      },
+      "upstream": {
+        "name": "18.0.61",
+        "codename": null,
+        "label": "18.0.61",
+        "releaseDate": "2024-05-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-08-06",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.0.61.6",
+          "date": "2024-07-04",
+          "link": "https://docs.plesk.com/release-notes/obsidian/change-log/#plesk-18061"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.0.60",
+      "name": "18.0.60",
+      "milestones": {
+        "ga": "2024-04-02",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-06-25"
+      },
+      "upstream": {
+        "name": "18.0.60",
+        "codename": null,
+        "label": "18.0.60",
+        "releaseDate": "2024-04-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-06-25",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.0.60.1",
+          "date": "2024-04-24",
+          "link": "https://docs.plesk.com/release-notes/obsidian/change-log/#plesk-18060"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.0.59",
+      "name": "18.0.59",
+      "milestones": {
+        "ga": "2024-02-20",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-05-15"
+      },
+      "upstream": {
+        "name": "18.0.59",
+        "codename": null,
+        "label": "18.0.59",
+        "releaseDate": "2024-02-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-05-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.0.59.2",
+          "date": "2024-03-05",
+          "link": "https://docs.plesk.com/release-notes/obsidian/change-log/#plesk-18059"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.0.58",
+      "name": "18.0.58",
+      "milestones": {
+        "ga": "2024-01-09",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-04-02"
+      },
+      "upstream": {
+        "name": "18.0.58",
+        "codename": null,
+        "label": "18.0.58",
+        "releaseDate": "2024-01-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-04-02",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.0.58.2",
+          "date": "2024-01-25",
+          "link": "https://docs.plesk.com/release-notes/obsidian/change-log/#plesk-18058"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.0.57",
+      "name": "18.0.57",
+      "milestones": {
+        "ga": "2023-11-21",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-02-13"
+      },
+      "upstream": {
+        "name": "18.0.57",
+        "codename": null,
+        "label": "18.0.57",
+        "releaseDate": "2023-11-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-02-13",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.0.57.5",
+          "date": "2023-12-19",
+          "link": "https://docs.plesk.com/release-notes/obsidian/change-log/#plesk-18057"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.0.56",
+      "name": "18.0.56",
+      "milestones": {
+        "ga": "2023-10-10",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-01-02"
+      },
+      "upstream": {
+        "name": "18.0.56",
+        "codename": null,
+        "label": "18.0.56",
+        "releaseDate": "2023-10-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-01-02",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.0.56.4",
+          "date": "2023-11-07",
+          "link": "https://docs.plesk.com/release-notes/obsidian/change-log/#plesk-18056"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.0.55",
+      "name": "18.0.55",
+      "milestones": {
+        "ga": "2023-08-29",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-11-21"
+      },
+      "upstream": {
+        "name": "18.0.55",
+        "codename": null,
+        "label": "18.0.55",
+        "releaseDate": "2023-08-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-11-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.0.55.2",
+          "date": "2023-09-27",
+          "link": "https://docs.plesk.com/release-notes/obsidian/change-log/#plesk-18055"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.0.54",
+      "name": "18.0.54",
+      "milestones": {
+        "ga": "2023-07-18",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-10-10"
+      },
+      "upstream": {
+        "name": "18.0.54",
+        "codename": null,
+        "label": "18.0.54",
+        "releaseDate": "2023-07-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-10-10",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.0.54.4",
+          "date": "2023-08-24",
+          "link": "https://docs.plesk.com/release-notes/obsidian/change-log/#plesk-18054"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.0.53",
+      "name": "18.0.53",
+      "milestones": {
+        "ga": "2023-06-06",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-09-04"
+      },
+      "upstream": {
+        "name": "18.0.53",
+        "codename": null,
+        "label": "18.0.53",
+        "releaseDate": "2023-06-06",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-09-04",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.0.53.2",
+          "date": "2023-06-20",
+          "link": "https://docs.plesk.com/release-notes/obsidian/change-log/#plesk-18053"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.0.52",
+      "name": "18.0.52",
+      "milestones": {
+        "ga": "2023-04-25",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-07-18"
+      },
+      "upstream": {
+        "name": "18.0.52",
+        "codename": null,
+        "label": "18.0.52",
+        "releaseDate": "2023-04-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-07-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.0.52.3",
+          "date": "2023-05-17",
+          "link": "https://docs.plesk.com/release-notes/obsidian/change-log/#plesk-18052"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.0.51",
+      "name": "18.0.51",
+      "milestones": {
+        "ga": "2023-03-14",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-06-06"
+      },
+      "upstream": {
+        "name": "18.0.51",
+        "codename": null,
+        "label": "18.0.51",
+        "releaseDate": "2023-03-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-06-06",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.0.51.1",
+          "date": "2023-04-05",
+          "link": "https://docs.plesk.com/release-notes/obsidian/change-log/#plesk-18051"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.0.50",
+      "name": "18.0.50",
+      "milestones": {
+        "ga": "2023-01-31",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-04-23"
+      },
+      "upstream": {
+        "name": "18.0.50",
+        "codename": null,
+        "label": "18.0.50",
+        "releaseDate": "2023-01-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-04-23",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.0.50.2",
+          "date": "2023-02-14",
+          "link": "https://docs.plesk.com/release-notes/obsidian/change-log/#plesk-18050"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "18.0.49",
+      "name": "18.0.49",
+      "milestones": {
+        "ga": "2022-12-20",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-03-12"
+      },
+      "upstream": {
+        "name": "18.0.49",
+        "codename": null,
+        "label": "18.0.49",
+        "releaseDate": "2022-12-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-03-12",
+        "isMaintained": false,
+        "latest": {
+          "name": "18.0.49.2",
+          "date": "2023-01-11",
+          "link": "https://docs.plesk.com/release-notes/obsidian/change-log/#plesk-18049"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "17",
+      "name": "17",
+      "milestones": {
+        "ga": "2016-10-11",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-04-20"
+      },
+      "upstream": {
+        "name": "17",
+        "codename": null,
+        "label": "17",
+        "releaseDate": "2016-10-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-04-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "17.8.11.95",
+          "date": "2021-01-25",
+          "link": "https://docs.plesk.com/release-notes/onyx/change-log/"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/plesk/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-17T06:48:49+00:00"
+  }
+}

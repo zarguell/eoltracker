@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-xtremio-x2-t",
+  "name": "XtremIO X2-T",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC XtremIO",
+  "family": "XtremIO",
+  "model_number": "XtremIO X2-T",
+  "milestones": {
+    "ga": "2018-03-27",
+    "eos": "2022-01-28",
+    "eossec": null,
+    "eol": "2027-01-31"
+  },
+  "status": "expiring",
+  "upstream": {
+    "Product": {
+      "text": "XtremIO X2-T",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "XtremIO X2-T",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC XtremIO",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2022-01-28",
+      "datetime": null,
+      "value": "2022-01-28",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Mar. 27, 2018",
+      "datetime": "2018-03-27",
+      "value": "2018-03-27",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2027-01-31",
+      "datetime": null,
+      "value": "2027-01-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/san-storage/vendor/dell-emc/xtremio/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

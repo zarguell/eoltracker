@@ -1,0 +1,622 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "harbor",
+  "name": "Harbor",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "purl",
+      "id": "pkg:github/goharbor/harbor"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/goharbor/harbor-core"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/goharbor/harbor-exporter"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/goharbor/harbor-jobservice"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/goharbor/harbor-portal"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/goharbor/harbor-registryctl"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/goharbor/registry-photon"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/bitnami/harbor-registry"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/bitnami/harbor-core"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/bitnami/harbor-exporter"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/bitnami/harbor-jobservice"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/bitnami/harbor-portal"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/bitnami/harbor-registryctl"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:oci/harbor-core?repository_url=cgr.dev/chainguard"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:oci/harbor-jobservice?repository_url=cgr.dev/chainguard"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:oci/harbor-portal?repository_url=cgr.dev/chainguard"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:oci/harbor-registry?repository_url=cgr.dev/chainguard"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:oci/harbor-registryctl?repository_url=cgr.dev/chainguard"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:oci/harbor-core-fips?repository_url=cgr.dev/chainguard"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:oci/harbor-jobservice-fips?repository_url=cgr.dev/chainguard"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:oci/harbor-portal-fips?repository_url=cgr.dev/chainguard"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:oci/harbor-registry-fips?repository_url=cgr.dev/chainguard"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:oci/harbor-registryctl-fips?repository_url=cgr.dev/chainguard"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:oci/harbor-core?repository_url=quay.io/goharbor"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:oci/harbor-portal?repository_url=quay.io/goharbor"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:oci/harbor-jobservice?repository_url=quay.io/goharbor"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:linuxfoundation:harbor"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/harbor.svg",
+    "html": "https://endoflife.date/harbor",
+    "releasePolicy": "https://github.com/goharbor/harbor/blob/main/RELEASES.md"
+  },
+  "releases": [
+    {
+      "id": "2.15",
+      "name": "2.15",
+      "milestones": {
+        "ga": "2026-03-20",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.15",
+        "codename": null,
+        "label": "2.15",
+        "releaseDate": "2026-03-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "2.15.2",
+          "date": "2026-07-02",
+          "link": "https://github.com/goharbor/harbor/releases/tag/v2.15.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.14",
+      "name": "2.14",
+      "milestones": {
+        "ga": "2025-09-17",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.14",
+        "codename": null,
+        "label": "2.14",
+        "releaseDate": "2025-09-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "2.14.4",
+          "date": "2026-05-11",
+          "link": "https://github.com/goharbor/harbor/releases/tag/v2.14.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.13",
+      "name": "2.13",
+      "milestones": {
+        "ga": "2025-04-09",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.13",
+        "codename": null,
+        "label": "2.13",
+        "releaseDate": "2025-04-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "2.13.5",
+          "date": "2026-03-10",
+          "link": "https://github.com/goharbor/harbor/releases/tag/v2.13.5"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.12",
+      "name": "2.12",
+      "milestones": {
+        "ga": "2024-11-05",
+        "eos": null,
+        "eossec": null,
+        "eol": "2026-03-20"
+      },
+      "upstream": {
+        "name": "2.12",
+        "codename": null,
+        "label": "2.12",
+        "releaseDate": "2024-11-05",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-03-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.12.4",
+          "date": "2025-05-23",
+          "link": "https://github.com/goharbor/harbor/releases/tag/v2.12.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.11",
+      "name": "2.11",
+      "milestones": {
+        "ga": "2024-06-04",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-09-17"
+      },
+      "upstream": {
+        "name": "2.11",
+        "codename": null,
+        "label": "2.11",
+        "releaseDate": "2024-06-04",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-09-17",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.11.2",
+          "date": "2024-11-19",
+          "link": "https://github.com/goharbor/harbor/releases/tag/v2.11.2"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.10",
+      "name": "2.10",
+      "milestones": {
+        "ga": "2023-12-14",
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-04-09"
+      },
+      "upstream": {
+        "name": "2.10",
+        "codename": null,
+        "label": "2.10",
+        "releaseDate": "2023-12-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-04-09",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.10.3",
+          "date": "2024-07-04",
+          "link": "https://github.com/goharbor/harbor/releases/tag/v2.10.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.9",
+      "name": "2.9",
+      "milestones": {
+        "ga": "2023-08-31",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-11-08"
+      },
+      "upstream": {
+        "name": "2.9",
+        "codename": null,
+        "label": "2.9",
+        "releaseDate": "2023-08-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-11-08",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.9.5",
+          "date": "2024-07-01",
+          "link": "https://github.com/goharbor/harbor/releases/tag/v2.9.5"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.8",
+      "name": "2.8",
+      "milestones": {
+        "ga": "2023-04-13",
+        "eos": null,
+        "eossec": null,
+        "eol": "2024-06-04"
+      },
+      "upstream": {
+        "name": "2.8",
+        "codename": null,
+        "label": "2.8",
+        "releaseDate": "2023-04-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-06-04",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.8.6",
+          "date": "2024-04-22",
+          "link": "https://github.com/goharbor/harbor/releases/tag/v2.8.6"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.7",
+      "name": "2.7",
+      "milestones": {
+        "ga": "2022-12-16",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-12-14"
+      },
+      "upstream": {
+        "name": "2.7",
+        "codename": null,
+        "label": "2.7",
+        "releaseDate": "2022-12-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-12-14",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.7.4",
+          "date": "2023-11-30",
+          "link": "https://github.com/goharbor/harbor/releases/tag/v2.7.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.6",
+      "name": "2.6",
+      "milestones": {
+        "ga": "2022-08-28",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-08-31"
+      },
+      "upstream": {
+        "name": "2.6",
+        "codename": null,
+        "label": "2.6",
+        "releaseDate": "2022-08-28",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-08-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.6.4",
+          "date": "2023-02-22",
+          "link": "https://github.com/goharbor/harbor/releases/tag/v2.6.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.5",
+      "name": "2.5",
+      "milestones": {
+        "ga": "2022-04-07",
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-04-13"
+      },
+      "upstream": {
+        "name": "2.5",
+        "codename": null,
+        "label": "2.5",
+        "releaseDate": "2022-04-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2023-04-13",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.5.6",
+          "date": "2023-02-23",
+          "link": "https://github.com/goharbor/harbor/releases/tag/v2.5.6"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.4",
+      "name": "2.4",
+      "milestones": {
+        "ga": "2021-10-25",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-12-16"
+      },
+      "upstream": {
+        "name": "2.4",
+        "codename": null,
+        "label": "2.4",
+        "releaseDate": "2021-10-25",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-12-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.4.3",
+          "date": "2022-08-03",
+          "link": "https://github.com/goharbor/harbor/releases/tag/v2.4.3"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.3",
+      "name": "2.3",
+      "milestones": {
+        "ga": "2021-06-17",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-08-28"
+      },
+      "upstream": {
+        "name": "2.3",
+        "codename": null,
+        "label": "2.3",
+        "releaseDate": "2021-06-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-08-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.3.5",
+          "date": "2021-12-15",
+          "link": "https://github.com/goharbor/harbor/releases/tag/v2.3.5"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.2",
+      "name": "2.2",
+      "milestones": {
+        "ga": "2021-02-23",
+        "eos": null,
+        "eossec": null,
+        "eol": "2022-04-07"
+      },
+      "upstream": {
+        "name": "2.2",
+        "codename": null,
+        "label": "2.2",
+        "releaseDate": "2021-02-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-04-07",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.2.4",
+          "date": "2021-10-25",
+          "link": "https://github.com/goharbor/harbor/releases/tag/v2.2.4"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.1",
+      "name": "2.1",
+      "milestones": {
+        "ga": "2020-09-18",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-10-25"
+      },
+      "upstream": {
+        "name": "2.1",
+        "codename": null,
+        "label": "2.1",
+        "releaseDate": "2020-09-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-10-25",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.1.6",
+          "date": "2021-07-09",
+          "link": "https://github.com/goharbor/harbor/releases/tag/v2.1.6"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.0",
+      "name": "2.0",
+      "milestones": {
+        "ga": "2020-05-13",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-06-17"
+      },
+      "upstream": {
+        "name": "2.0",
+        "codename": null,
+        "label": "2.0",
+        "releaseDate": "2020-05-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-06-17",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.0.6",
+          "date": "2021-02-05",
+          "link": "https://github.com/goharbor/harbor/releases/tag/v2.0.6"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.10",
+      "name": "1.10",
+      "milestones": {
+        "ga": "2019-12-12",
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-02-23"
+      },
+      "upstream": {
+        "name": "1.10",
+        "codename": null,
+        "label": "1.10",
+        "releaseDate": "2019-12-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2021-02-23",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.10.19",
+          "date": "2024-09-20",
+          "link": "https://github.com/goharbor/harbor/releases/tag/v1.10.19"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1.9",
+      "name": "1.9",
+      "milestones": {
+        "ga": "2019-09-17",
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-09-18"
+      },
+      "upstream": {
+        "name": "1.9",
+        "codename": null,
+        "label": "1.9",
+        "releaseDate": "2019-09-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-09-18",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.9.4",
+          "date": "2019-12-31",
+          "link": "https://github.com/goharbor/harbor/releases/tag/v1.9.4"
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/harbor/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-07-03T00:09:22+00:00"
+  }
+}

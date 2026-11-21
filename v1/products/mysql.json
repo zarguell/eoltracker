@@ -1,0 +1,516 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "mysql",
+  "name": "MySQL",
+  "category": "software",
+  "upstream_category": "database",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "mysql"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:generic/mysql"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/library/mysql"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:deb/ubuntu/mysql-server"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:deb/debian/mysql"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:oracle:mysql"
+    }
+  ],
+  "labels": {
+    "eoas": "Premier Support",
+    "discontinued": null,
+    "eol": "Extended Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/mysql.svg",
+    "html": "https://endoflife.date/mysql",
+    "releasePolicy": "https://www.oracle.com/us/support/library/lifetime-support-technology-069183.pdf"
+  },
+  "releases": [
+    {
+      "id": "9.7",
+      "name": "9.7 (LTS)",
+      "milestones": {
+        "ga": "2026-04-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.7",
+        "codename": null,
+        "label": "9.7 (LTS)",
+        "releaseDate": "2026-04-21",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": "2034-04-21",
+        "isMaintained": true,
+        "latest": {
+          "name": "9.7.2",
+          "date": "2026-07-28",
+          "link": "https://dev.mysql.com/doc/relnotes/mysql/9.7/en/news-9-7-0.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.6",
+      "name": "9.6",
+      "milestones": {
+        "ga": "2026-01-20",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.6",
+        "codename": null,
+        "label": "9.6",
+        "releaseDate": "2026-01-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-04-21",
+        "isEol": true,
+        "eolFrom": "2026-04-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.6.1",
+          "date": "2026-01-16",
+          "link": "https://dev.mysql.com/doc/relnotes/mysql/9.6/en/news-9-6-0.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.5",
+      "name": "9.5",
+      "milestones": {
+        "ga": "2025-10-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.5",
+        "codename": null,
+        "label": "9.5",
+        "releaseDate": "2025-10-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-01-20",
+        "isEol": true,
+        "eolFrom": "2026-01-20",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.5.2",
+          "date": "2025-11-20",
+          "link": "https://dev.mysql.com/doc/relnotes/mysql/9.6/en/news-9-5-0.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.4",
+      "name": "9.4",
+      "milestones": {
+        "ga": "2025-07-09",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.4",
+        "codename": null,
+        "label": "9.4",
+        "releaseDate": "2025-07-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-10-21",
+        "isEol": true,
+        "eolFrom": "2025-10-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.4.2",
+          "date": "2025-09-04",
+          "link": "https://dev.mysql.com/doc/relnotes/mysql/9.6/en/news-9-4-0.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.3",
+      "name": "9.3",
+      "milestones": {
+        "ga": "2025-03-31",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.3",
+        "codename": null,
+        "label": "9.3",
+        "releaseDate": "2025-03-31",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-07-22",
+        "isEol": true,
+        "eolFrom": "2025-07-22",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.3.2",
+          "date": "2025-06-10",
+          "link": "https://dev.mysql.com/doc/relnotes/mysql/9.6/en/news-9-3-0.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.2",
+      "name": "9.2",
+      "milestones": {
+        "ga": "2024-12-15",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.2",
+        "codename": null,
+        "label": "9.2",
+        "releaseDate": "2024-12-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-04-15",
+        "isEol": true,
+        "eolFrom": "2025-04-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.2.2",
+          "date": "2025-02-21",
+          "link": "https://dev.mysql.com/doc/relnotes/mysql/9.6/en/news-9-2-0.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.1",
+      "name": "9.1",
+      "milestones": {
+        "ga": "2024-09-24",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.1",
+        "codename": null,
+        "label": "9.1",
+        "releaseDate": "2024-09-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2025-01-21",
+        "isEol": true,
+        "eolFrom": "2025-01-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.1.2",
+          "date": "2024-11-26",
+          "link": "https://dev.mysql.com/doc/relnotes/mysql/9.6/en/news-9-1-0.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "9.0",
+      "name": "9.0",
+      "milestones": {
+        "ga": "2024-06-07",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.0",
+        "codename": null,
+        "label": "9.0",
+        "releaseDate": "2024-06-07",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-10-15",
+        "isEol": true,
+        "eolFrom": "2024-10-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "9.0.1",
+          "date": "2024-07-12",
+          "link": "https://dev.mysql.com/doc/relnotes/mysql/9.0/en/news-9-0-1.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.4",
+      "name": "8.4 (LTS)",
+      "milestones": {
+        "ga": "2024-04-10",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "8.4",
+        "codename": null,
+        "label": "8.4 (LTS)",
+        "releaseDate": "2024-04-10",
+        "isLts": true,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": "2029-04-30",
+        "isEol": false,
+        "eolFrom": "2032-04-30",
+        "isMaintained": true,
+        "latest": {
+          "name": "8.4.11",
+          "date": "2026-06-30",
+          "link": "https://dev.mysql.com/doc/relnotes/mysql/8.4/en/news-8-4-11.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.3",
+      "name": "8.3",
+      "milestones": {
+        "ga": "2023-12-14",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "8.3",
+        "codename": null,
+        "label": "8.3",
+        "releaseDate": "2023-12-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2024-04-10",
+        "isEol": true,
+        "eolFrom": "2024-04-10",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.3.0",
+          "date": "2023-12-14",
+          "link": "https://dev.mysql.com/doc/relnotes/mysql/8.3/en/news-8-3-0.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.2",
+      "name": "8.2",
+      "milestones": {
+        "ga": "2023-10-12",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "8.2",
+        "codename": null,
+        "label": "8.2",
+        "releaseDate": "2023-10-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-12-14",
+        "isEol": true,
+        "eolFrom": "2023-12-14",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.2.0",
+          "date": "2023-10-12",
+          "link": "https://dev.mysql.com/doc/relnotes/mysql/8.2/en/news-8-2-0.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.1",
+      "name": "8.1",
+      "milestones": {
+        "ga": "2023-06-21",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "8.1",
+        "codename": null,
+        "label": "8.1",
+        "releaseDate": "2023-06-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-10-25",
+        "isEol": true,
+        "eolFrom": "2023-10-25",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.1.0",
+          "date": "2023-06-21",
+          "link": "https://dev.mysql.com/doc/relnotes/mysql/8.1/en/news-8-1-0.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "8.0",
+      "name": "8.0 (LTS)",
+      "milestones": {
+        "ga": "2018-04-08",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "8.0",
+        "codename": null,
+        "label": "8.0 (LTS)",
+        "releaseDate": "2018-04-08",
+        "isLts": true,
+        "ltsFrom": "2023-07-18",
+        "isEoas": true,
+        "eoasFrom": "2025-04-30",
+        "isEol": true,
+        "eolFrom": "2026-04-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "8.0.46",
+          "date": "2026-04-07",
+          "link": "https://dev.mysql.com/doc/relnotes/mysql/8.0/en/news-8-0-46.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.7",
+      "name": "5.7",
+      "milestones": {
+        "ga": "2015-10-09",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.7",
+        "codename": null,
+        "label": "5.7",
+        "releaseDate": "2015-10-09",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-10-31",
+        "isEol": true,
+        "eolFrom": "2023-10-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.7.44",
+          "date": "2023-09-20",
+          "link": "https://dev.mysql.com/doc/relnotes/mysql/5.7/en/news-5-7-44.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.6",
+      "name": "5.6",
+      "milestones": {
+        "ga": "2013-02-01",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.6",
+        "codename": null,
+        "label": "5.6",
+        "releaseDate": "2013-02-01",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2018-02-28",
+        "isEol": true,
+        "eolFrom": "2021-02-28",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.6.51",
+          "date": "2021-01-05",
+          "link": "https://web.archive.org/web/20211229071247/https://dev.mysql.com/doc/relnotes/mysql/5.6/en/news-5-6-51.html"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "5.5",
+      "name": "5.5",
+      "milestones": {
+        "ga": "2010-12-03",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.5",
+        "codename": null,
+        "label": "5.5",
+        "releaseDate": "2010-12-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2015-12-31",
+        "isEol": true,
+        "eolFrom": "2018-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.5.63",
+          "date": "2018-12-21",
+          "link": null
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/mysql/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-07-29T00:07:06+00:00"
+  }
+}

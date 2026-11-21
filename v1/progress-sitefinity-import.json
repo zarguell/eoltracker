@@ -1,0 +1,63 @@
+{
+  "source_url": "https://www.progress.com/support/sitefinity-lifecycle-policy",
+  "verifier": "deterministic-progress-sitefinity",
+  "checked_at": "2026-09-26T14:36:40Z",
+  "record_scope": "Progress Sitefinity release versions stated by the vendor's Supported and Retired Versions Schedule: one software record, one release per version, at the month precision the table states",
+  "rows": {
+    "seen": 24,
+    "published": 23,
+    "retained": 0,
+    "excluded": 1
+  },
+  "table": {
+    "table": "Supported and Retired Versions Schedule",
+    "rows": 19,
+    "published": 23,
+    "grouped_rows": 2,
+    "control": 1,
+    "not_representable": [
+      {
+        "row": 7,
+        "column": "(GA)",
+        "cell": "March-Nov 2022",
+        "shape": "month window",
+        "reason": "the vendor states one Active date spanning several months for the versions grouped in this row; a window is not a milestone, and narrowing it to either end would invent a date the vendor does not state"
+      },
+      {
+        "row": 10,
+        "column": "(GA)",
+        "cell": "2020",
+        "shape": "year",
+        "reason": "the vendor states a year with no month; the schema holds a day or a month, and choosing a month would state a date the vendor does not give"
+      }
+    ]
+  },
+  "grouping_rule": "a row whose Version cell names several versions states one Active (GA), one backport window, one Sunset and one Retired date for all of them, so the row is expanded into one release per version, each carrying the row's shared cells and the row's own version cell under upstream.group",
+  "excluded": [
+    {
+      "table": "Supported and Retired Versions Schedule",
+      "context": "control",
+      "rows": 1,
+      "text": "Show all versions",
+      "reason": "the page's 'Show all versions' control row toggles the rendered schedule; it states no version or date"
+    }
+  ],
+  "retained": [],
+  "total_records": 1,
+  "derivation_decision": {
+    "owner": "Main (issue #132)",
+    "published": "stated months only",
+    "helper": "engine.progress.sitefinity_first_of_month",
+    "quote": "Sunset and Retired phases start on the first day of the month indicated in the table",
+    "reason": "the vendor states that Sunset and Retired start on the first day of the month indicated, so those cells could be published as derived day milestones with milestone_provenance; this collector publishes the stated months and the helper performs the derivation, leaving the decision to publish derived dates (and their feed/OpenEoX exclusions) to #132",
+    "floor_not_derived": "At this point, the expected retirement date for Sitefinity 15.4 LTS is open and may be extended further past Jan 2030 depending on business conditions"
+  },
+  "limitations": [
+    "The issue that asked for this collector counted 17 rows expanding to 21 versions; the saved page states 19 data rows and the grouping rule yields 23 versions. The fixture is the authority and the difference is reported rather than reconciled by inventing rows.",
+    "The vendor states the version table's dates at month precision only; no day is padded into any milestone.",
+    "'No earlier than Jan 2030***' is a floor the vendor says may be extended, not a deadline, so 15.4 (LTS)'s eol is null.",
+    "'Limited Backport Requests Through*' states an entitlement window, not a lifecycle end; it is retained verbatim and never mapped to a milestone.",
+    "Sunset is the vendor's own critical-updates-only phase (at Progress's discretion), never eossec; eos is absent because the page states none.",
+    "The table ends at 4.x and presents a 'Show all versions' control; the page's server-rendered table states no row older than 4.x, and any tail behind that control is not retrievable from the fetched document, so it is named here and nothing is inferred from the control's existence."
+  ]
+}

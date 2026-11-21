@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-dd2200-appliance",
+  "name": "DD2200 Appliance",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Data Domain",
+  "family": "Data Domain",
+  "model_number": "DD2200 Appliance",
+  "milestones": {
+    "ga": "2014-05-09",
+    "eos": "2018-08-11",
+    "eossec": null,
+    "eol": "2023-12-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "DD2200 Appliance",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "DD2200 Appliance",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Data Domain",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2018-08-11",
+      "datetime": null,
+      "value": "2018-08-11",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "May. 09, 2014",
+      "datetime": "2014-05-09",
+      "value": "2014-05-09",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2023-12-31",
+      "datetime": null,
+      "value": "2023-12-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/backup/vendor/dell-emc/data-domain/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

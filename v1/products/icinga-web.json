@@ -1,0 +1,512 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "icinga-web",
+  "name": "Icinga Web",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [
+    {
+      "type": "repology",
+      "id": "icingaweb2"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:docker/icinga/icingaweb2"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/Icinga/icingaweb2"
+    },
+    {
+      "type": "purl",
+      "id": "pkg:github/Icinga/icinga-web"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:a:icinga:icinga_web_2"
+    }
+  ],
+  "labels": {
+    "eoas": "Active Support",
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/icinga.svg",
+    "html": "https://endoflife.date/icinga-web",
+    "releasePolicy": "https://icinga.com/subscriptions/support-matrix/"
+  },
+  "releases": [
+    {
+      "id": "2.14",
+      "name": "2.14",
+      "milestones": {
+        "ga": "2026-07-03",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.14",
+        "codename": null,
+        "label": "2.14",
+        "releaseDate": "2026-07-03",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": false,
+        "eoasFrom": null,
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "2.14.0",
+          "date": "2026-07-03",
+          "link": "https://github.com/Icinga/icingaweb2/releases/tag/v2.14.0/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.13",
+      "name": "2.13",
+      "milestones": {
+        "ga": "2026-03-27",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.13",
+        "codename": null,
+        "label": "2.13",
+        "releaseDate": "2026-03-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-07-03",
+        "isEol": false,
+        "eolFrom": null,
+        "isMaintained": true,
+        "latest": {
+          "name": "2.13.1",
+          "date": "2026-07-02",
+          "link": "https://github.com/Icinga/icingaweb2/releases/tag/v2.13.1/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.12",
+      "name": "2.12",
+      "milestones": {
+        "ga": "2023-09-21",
+        "eos": null,
+        "eossec": "2026-07-03",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.12",
+        "codename": null,
+        "label": "2.12",
+        "releaseDate": "2023-09-21",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2026-03-27",
+        "isEol": true,
+        "eolFrom": "2026-07-03",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.12.7",
+          "date": "2026-07-02",
+          "link": "https://github.com/Icinga/icingaweb2/releases/tag/v2.12.7/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.11",
+      "name": "2.11",
+      "milestones": {
+        "ga": "2022-06-30",
+        "eos": null,
+        "eossec": "2026-03-27",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.11",
+        "codename": null,
+        "label": "2.11",
+        "releaseDate": "2022-06-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2023-09-21",
+        "isEol": true,
+        "eolFrom": "2026-03-27",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.11.6",
+          "date": "2025-03-26",
+          "link": "https://github.com/Icinga/icingaweb2/releases/tag/v2.11.6/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.10",
+      "name": "2.10",
+      "milestones": {
+        "ga": "2022-03-23",
+        "eos": null,
+        "eossec": "2023-09-21",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.10",
+        "codename": null,
+        "label": "2.10",
+        "releaseDate": "2022-03-23",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-06-30",
+        "isEol": true,
+        "eolFrom": "2023-09-21",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.10.5",
+          "date": "2023-01-26",
+          "link": "https://github.com/Icinga/icingaweb2/releases/tag/v2.10.5/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.9",
+      "name": "2.9",
+      "milestones": {
+        "ga": "2021-07-12",
+        "eos": null,
+        "eossec": "2022-06-30",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.9",
+        "codename": null,
+        "label": "2.9",
+        "releaseDate": "2021-07-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2022-03-23",
+        "isEol": true,
+        "eolFrom": "2022-06-30",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.9.9",
+          "date": "2023-01-26",
+          "link": "https://github.com/Icinga/icingaweb2/releases/tag/v2.9.9/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.8",
+      "name": "2.8",
+      "milestones": {
+        "ga": "2020-06-08",
+        "eos": null,
+        "eossec": "2022-03-23",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.8",
+        "codename": null,
+        "label": "2.8",
+        "releaseDate": "2020-06-08",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2021-07-12",
+        "isEol": true,
+        "eolFrom": "2022-03-23",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.8.6",
+          "date": "2022-03-08",
+          "link": "https://github.com/Icinga/icingaweb2/releases/tag/v2.8.6/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.7",
+      "name": "2.7",
+      "milestones": {
+        "ga": "2019-07-30",
+        "eos": null,
+        "eossec": "2021-07-12",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.7",
+        "codename": null,
+        "label": "2.7",
+        "releaseDate": "2019-07-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2020-06-08",
+        "isEol": true,
+        "eolFrom": "2021-07-12",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.7.6",
+          "date": "2021-07-27",
+          "link": "https://github.com/Icinga/icingaweb2/releases/tag/v2.7.6/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.6",
+      "name": "2.6",
+      "milestones": {
+        "ga": "2018-07-19",
+        "eos": null,
+        "eossec": "2020-06-08",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.6",
+        "codename": null,
+        "label": "2.6",
+        "releaseDate": "2018-07-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2019-07-30",
+        "isEol": true,
+        "eolFrom": "2020-06-08",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.6.4",
+          "date": "2020-08-18",
+          "link": "https://github.com/Icinga/icingaweb2/releases/tag/v2.6.4/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.5",
+      "name": "2.5",
+      "milestones": {
+        "ga": "2017-11-27",
+        "eos": null,
+        "eossec": "2018-07-19",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.5",
+        "codename": null,
+        "label": "2.5",
+        "releaseDate": "2017-11-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2018-07-19",
+        "isEol": true,
+        "eolFrom": "2018-07-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.5.3",
+          "date": "2018-04-27",
+          "link": "https://github.com/Icinga/icingaweb2/releases/tag/v2.5.3/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.4",
+      "name": "2.4",
+      "milestones": {
+        "ga": "2016-12-13",
+        "eos": null,
+        "eossec": "2017-11-27",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.4",
+        "codename": null,
+        "label": "2.4",
+        "releaseDate": "2016-12-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2017-11-27",
+        "isEol": true,
+        "eolFrom": "2017-11-27",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.4.2",
+          "date": "2017-09-28",
+          "link": "https://github.com/Icinga/icingaweb2/releases/tag/v2.4.2/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.3",
+      "name": "2.3",
+      "milestones": {
+        "ga": "2016-04-13",
+        "eos": null,
+        "eossec": "2016-12-13",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.3",
+        "codename": null,
+        "label": "2.3",
+        "releaseDate": "2016-04-13",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2016-12-13",
+        "isEol": true,
+        "eolFrom": "2016-12-13",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.3.4",
+          "date": "2016-06-23",
+          "link": "https://github.com/Icinga/icingaweb2/releases/tag/v2.3.4/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.2",
+      "name": "2.2",
+      "milestones": {
+        "ga": "2016-02-29",
+        "eos": null,
+        "eossec": "2016-04-13",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.2",
+        "codename": null,
+        "label": "2.2",
+        "releaseDate": "2016-02-29",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2016-04-13",
+        "isEol": true,
+        "eolFrom": "2016-04-13",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.2.2",
+          "date": "2016-06-09",
+          "link": "https://github.com/Icinga/icingaweb2/releases/tag/v2.2.2/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.1",
+      "name": "2.1",
+      "milestones": {
+        "ga": "2015-11-16",
+        "eos": null,
+        "eossec": "2016-02-29",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.1",
+        "codename": null,
+        "label": "2.1",
+        "releaseDate": "2015-11-16",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2016-02-29",
+        "isEol": true,
+        "eolFrom": "2016-02-29",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.1.4",
+          "date": "2016-06-09",
+          "link": "https://github.com/Icinga/icingaweb2/releases/tag/v2.1.4/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "2.0",
+      "name": "2.0",
+      "milestones": {
+        "ga": "2015-10-02",
+        "eos": null,
+        "eossec": "2015-11-16",
+        "eol": null
+      },
+      "upstream": {
+        "name": "2.0",
+        "codename": null,
+        "label": "2.0",
+        "releaseDate": "2015-10-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2015-11-16",
+        "isEol": true,
+        "eolFrom": "2015-11-16",
+        "isMaintained": false,
+        "latest": {
+          "name": "2.0.0",
+          "date": "2015-10-02",
+          "link": "https://github.com/Icinga/icingaweb2/releases/tag/v2.0.0/"
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "1",
+      "name": "1",
+      "milestones": {
+        "ga": "2010-06-30",
+        "eos": null,
+        "eossec": "2018-12-31",
+        "eol": null
+      },
+      "upstream": {
+        "name": "1",
+        "codename": null,
+        "label": "1",
+        "releaseDate": "2010-06-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEoas": true,
+        "eoasFrom": "2015-10-02",
+        "isEol": true,
+        "eolFrom": "2018-12-31",
+        "isMaintained": false,
+        "latest": {
+          "name": "1.14.1",
+          "date": "2017-12-19",
+          "link": null
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/icinga-web/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-07-06T14:46:53+00:00"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-ds60-8tb-sas",
+  "name": "DS60-8TB SAS",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Data Domain",
+  "family": "Data Domain",
+  "model_number": "DS60-8TB SAS",
+  "milestones": {
+    "ga": "2019-09-30",
+    "eos": null,
+    "eossec": null,
+    "eol": null
+  },
+  "status": "supported",
+  "upstream": {
+    "Product": {
+      "text": "DS60-8TB SAS",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "DS60-8TB SAS",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Data Domain",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "TBD",
+      "datetime": null,
+      "value": null,
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Sep. 30, 2019",
+      "datetime": "2019-09-30",
+      "value": "2019-09-30",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "TBD",
+      "datetime": null,
+      "value": null,
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/backup/vendor/dell-emc/data-domain/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

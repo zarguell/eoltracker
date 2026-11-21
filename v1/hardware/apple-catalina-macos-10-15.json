@@ -1,0 +1,70 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "apple-catalina-macos-10-15",
+  "name": "Catalina (macOS 10.15)",
+  "category": "hardware",
+  "vendor": "Apple",
+  "product_line": "Apple",
+  "family": "macOS",
+  "model_number": "Catalina (macOS 10.15)",
+  "milestones": {
+    "ga": "2019-10-07",
+    "eos": null,
+    "eossec": null,
+    "eol": "2022-09-12"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Build Number": {
+      "text": "19H2026",
+      "datetime": null,
+      "value": null,
+      "role": "build",
+      "links": []
+    },
+    "Version Number": {
+      "text": "Catalina (macOS 10.15)",
+      "datetime": null,
+      "value": null,
+      "role": "version",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Oct. 07, 2019",
+      "datetime": "2019-10-07",
+      "value": "2019-10-07",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support": {
+      "text": "2022-09-12",
+      "datetime": null,
+      "value": "2022-09-12",
+      "role": "eol",
+      "links": []
+    },
+    "Most Recent Version": {
+      "text": "10.15.7 (September 24, 2020)",
+      "datetime": null,
+      "value": null,
+      "role": null,
+      "links": [
+        "https://developer.apple.com/documentation/macos-release-notes/macos-catalina-10_15-release-notes"
+      ]
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/operating-system/vendor/apple/macos/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

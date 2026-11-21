@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-dd2500-appliance",
+  "name": "DD2500 Appliance",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Data Domain",
+  "family": "Data Domain",
+  "model_number": "DD2500 Appliance",
+  "milestones": {
+    "ga": "2013-11-15",
+    "eos": "2017-07-31",
+    "eossec": null,
+    "eol": "2022-10-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "DD2500 Appliance",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "DD2500 Appliance",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Data Domain",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2017-07-31",
+      "datetime": null,
+      "value": "2017-07-31",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Nov. 15, 2013",
+      "datetime": "2013-11-15",
+      "value": "2013-11-15",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2022-10-31",
+      "datetime": null,
+      "value": "2022-10-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/backup/vendor/dell-emc/data-domain/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

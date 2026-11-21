@@ -1,0 +1,326 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "esxi",
+  "name": "VMware ESXi",
+  "category": "software",
+  "upstream_category": "os",
+  "identifiers": [
+    {
+      "type": "cpe",
+      "id": "cpe:2.3:o:vmware:esxi"
+    },
+    {
+      "type": "cpe",
+      "id": "cpe:/o:vmware:esxi"
+    }
+  ],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "General Support",
+    "eoes": null
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/vmware.svg",
+    "html": "https://endoflife.date/esxi",
+    "releasePolicy": "https://support.broadcom.com/group/ecx/productlifecycle"
+  },
+  "releases": [
+    {
+      "id": "9.1",
+      "name": "9.1",
+      "milestones": {
+        "ga": "2026-05-12",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.1",
+        "codename": null,
+        "label": "9.1",
+        "releaseDate": "2026-05-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2028-08-12",
+        "isMaintained": true,
+        "latest": {
+          "name": "9.1.1.0",
+          "date": "2026-09-03",
+          "link": "https://techdocs.broadcom.com/us/en/vmware-cis/vcf/vcf-9-0-and-later/9-1/release-notes/vmware-cloud-foundation-9-1-1-0-release-notes/esx-9-1-1-0-release-notes.html"
+        },
+        "custom": {
+          "technicalGuidance": "2029-08-12"
+        }
+      }
+    },
+    {
+      "id": "9.0",
+      "name": "9.0",
+      "milestones": {
+        "ga": "2025-06-17",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "9.0",
+        "codename": null,
+        "label": "9.0",
+        "releaseDate": "2025-06-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-09-17",
+        "isMaintained": true,
+        "latest": {
+          "name": "9.0.2.0100",
+          "date": "2026-07-29",
+          "link": "https://techdocs.broadcom.com/us/en/vmware-cis/vcf/vcf-9-0-and-later/9-0/release-notes/patch-releases-9-0-0-x/vsphere/esx/esx-9-0-2-0100-release-notes.html"
+        },
+        "custom": {
+          "technicalGuidance": "2028-09-17"
+        }
+      }
+    },
+    {
+      "id": "8.0",
+      "name": "8.0",
+      "milestones": {
+        "ga": "2022-10-11",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "8.0",
+        "codename": null,
+        "label": "8.0",
+        "releaseDate": "2022-10-11",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-10-11",
+        "isMaintained": true,
+        "latest": {
+          "name": "8.0 Update 3k",
+          "date": "2026-07-29",
+          "link": "https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/release-notes/esxi-update-and-patch-release-notes/vsphere-esxi-80u3k-release-notes.html"
+        },
+        "custom": {
+          "technicalGuidance": "2029-10-11"
+        }
+      }
+    },
+    {
+      "id": "7.0",
+      "name": "7.0",
+      "milestones": {
+        "ga": "2020-04-02",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "7.0",
+        "codename": null,
+        "label": "7.0",
+        "releaseDate": "2020-04-02",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-10-02",
+        "isMaintained": false,
+        "latest": {
+          "name": "7.0 Update 3w",
+          "date": "2025-07-15",
+          "link": "https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/release-notes/esxi-update-and-patch-release-notes/vsphere-esxi-70u3w-release-notes.html"
+        },
+        "custom": {
+          "technicalGuidance": "2027-04-02"
+        }
+      }
+    },
+    {
+      "id": "6.7",
+      "name": "6.7",
+      "milestones": {
+        "ga": "2018-04-17",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.7",
+        "codename": null,
+        "label": "6.7",
+        "releaseDate": "2018-04-17",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-10-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.7 Update 3w",
+          "date": "2024-10-28",
+          "link": "https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/6-7/release-notes/vcenter-server-update-and-patch-releases.html"
+        },
+        "custom": {
+          "technicalGuidance": "2023-11-15"
+        }
+      }
+    },
+    {
+      "id": "6.5",
+      "name": "6.5",
+      "milestones": {
+        "ga": "2016-11-15",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.5",
+        "codename": null,
+        "label": "6.5",
+        "releaseDate": "2016-11-15",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2022-10-15",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.5 ESXi650-202403001",
+          "date": "2024-03-05",
+          "link": "https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/6-5/release-notes.html"
+        },
+        "custom": {
+          "technicalGuidance": "2023-11-15"
+        }
+      }
+    },
+    {
+      "id": "6.0",
+      "name": "6.0",
+      "milestones": {
+        "ga": "2015-03-12",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "6.0",
+        "codename": null,
+        "label": "6.0",
+        "releaseDate": "2015-03-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2020-03-12",
+        "isMaintained": false,
+        "latest": {
+          "name": "6.0 EP 25",
+          "date": "2020-02-20",
+          "link": "https://web.archive.org/web/20220710112255/https://docs.vmware.com/en/VMware-vSphere/6.0/rn/esxi600-202002001.html"
+        },
+        "custom": {
+          "technicalGuidance": "2022-03-12"
+        }
+      }
+    },
+    {
+      "id": "5.5",
+      "name": "5.5",
+      "milestones": {
+        "ga": "2013-09-19",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.5",
+        "codename": null,
+        "label": "5.5",
+        "releaseDate": "2013-09-19",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2018-09-19",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.5 Update 3k",
+          "date": "2018-09-14",
+          "link": "https://www.findbugzero.com/operational-defect-database/vendors/vmware/defects/57478"
+        },
+        "custom": {
+          "technicalGuidance": "2020-09-19"
+        }
+      }
+    },
+    {
+      "id": "5.1",
+      "name": "5.1",
+      "milestones": {
+        "ga": "2012-08-27",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.1",
+        "codename": null,
+        "label": "5.1",
+        "releaseDate": "2012-08-27",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2016-08-24",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.1 Update 3d",
+          "date": "2016-05-24",
+          "link": "https://web.archive.org/web/20190923124908/http://pubs.vmware.com/Release_Notes/en/vsphere/51/vsphere-vcenter-server-51u3d-release-notes.html"
+        },
+        "custom": {
+          "technicalGuidance": "2018-08-24"
+        }
+      }
+    },
+    {
+      "id": "5.0",
+      "name": "5.0",
+      "milestones": {
+        "ga": "2011-07-12",
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "5.0",
+        "codename": null,
+        "label": "5.0",
+        "releaseDate": "2011-07-12",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2016-08-24",
+        "isMaintained": false,
+        "latest": {
+          "name": "5.0 Update 3g",
+          "date": "2016-06-14",
+          "link": "https://web.archive.org/web/20190923125449/https://pubs.vmware.com/Release_Notes/en/vsphere/50/vsp_vc50_u3g_rel_notes.html"
+        },
+        "custom": {
+          "technicalGuidance": "2018-08-24"
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/esxi/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-09-05T09:13:51+00:00"
+  }
+}

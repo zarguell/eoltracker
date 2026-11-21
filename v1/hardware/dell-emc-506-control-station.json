@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-506-control-station",
+  "name": "506 Control Station",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Celerra File Server",
+  "family": "Celerra File Server",
+  "model_number": "506 Control Station",
+  "milestones": {
+    "ga": "1999-08-01",
+    "eos": "2000-07-31",
+    "eossec": null,
+    "eol": "2005-12-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "506 Control Station",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "506 Control Station",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Celerra File Server",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2000-07-31",
+      "datetime": null,
+      "value": "2000-07-31",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Aug. 01, 1999",
+      "datetime": "1999-08-01",
+      "value": "1999-08-01",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2005-12-31",
+      "datetime": null,
+      "value": "2005-12-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/nas-storage/vendor/dell-emc/celerra-file-server/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

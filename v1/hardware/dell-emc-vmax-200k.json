@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-vmax-200k",
+  "name": "VMAX 200K",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Symmetrix",
+  "family": "Symmetrix",
+  "model_number": "VMAX 200K",
+  "milestones": {
+    "ga": "2014-09-26",
+    "eos": "2019-09-30",
+    "eossec": null,
+    "eol": "2024-09-30"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "VMAX 200K",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "VMAX 200K",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Symmetrix",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2019-09-30",
+      "datetime": null,
+      "value": "2019-09-30",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Sep. 26, 2014",
+      "datetime": "2014-09-26",
+      "value": "2014-09-26",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2024-09-30",
+      "datetime": null,
+      "value": "2024-09-30",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/san-storage/vendor/dell-emc/symmetrix/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

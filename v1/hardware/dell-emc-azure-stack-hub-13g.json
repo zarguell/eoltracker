@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-azure-stack-hub-13g",
+  "name": "Azure Stack Hub 13G",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Azure stack",
+  "family": "Azure stack",
+  "model_number": "Azure Stack Hub 13G",
+  "milestones": {
+    "ga": "2017-11-17",
+    "eos": null,
+    "eossec": null,
+    "eol": "2023-05-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "Azure Stack Hub 13G",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "Azure Stack Hub 13G",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Azure stack",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "TBD",
+      "datetime": null,
+      "value": null,
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Nov. 17, 2017",
+      "datetime": "2017-11-17",
+      "value": "2017-11-17",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2023-05-31",
+      "datetime": null,
+      "value": "2023-05-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/hyper-converged/vendor/dell-emc/azure-stack/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

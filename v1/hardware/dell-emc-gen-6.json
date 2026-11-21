@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-gen-6",
+  "name": "Gen 6",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC File Management Appliance",
+  "family": "File Management Appliance",
+  "model_number": "Gen 6",
+  "milestones": {
+    "ga": "2008-07-01",
+    "eos": "2010-07-10",
+    "eossec": null,
+    "eol": "2015-07-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "Gen 6",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "Gen 6",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC File Management Appliance",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2010-07-10",
+      "datetime": null,
+      "value": "2010-07-10",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Jul. 01, 2008",
+      "datetime": "2008-07-01",
+      "value": "2008-07-01",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2015-07-31",
+      "datetime": null,
+      "value": "2015-07-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/nas-storage/vendor/dell-emc/file-management-appliance/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

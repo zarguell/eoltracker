@@ -1,0 +1,71 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "researched-accellion-fta",
+  "name": "Accellion FTA",
+  "category": "software",
+  "upstream_category": "app",
+  "identifiers": [],
+  "labels": {},
+  "links": {
+    "about": "https://www.kiteworks.com/company/security-updates/accellion-announces-end-of-life-eol-for-its-legacy-fta-product/",
+    "endOfLifeNotice": "https://www.kiteworks.com/company/security-updates/accellion-announces-end-of-life-eol-for-its-legacy-fta-product/",
+    "endOfLifePdf": "https://www.kiteworks.com/sites/default/files/resources/fta-eol.pdf"
+  },
+  "releases": [
+    {
+      "id": "accellion-fta",
+      "name": "accellion-fta",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2021-04-30"
+      },
+      "upstream": {
+        "name": "accellion-fta",
+        "Contribution": {
+          "text": "Accellion USA, LLC is announcing End of Life for its legacy FTA software effective April 30, 2021. Accellion will continue to provide support and honor its FTA contracts for the duration of its existing License Terms. If your renewal date for your FTA software is after April 30, 2021, you will not be allowed to renew and your FTA license will end.",
+          "value": null,
+          "datetime": null,
+          "role": null,
+          "links": [
+            "https://www.kiteworks.com/company/security-updates/accellion-announces-end-of-life-eol-for-its-legacy-fta-product/"
+          ]
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "verifier": "researched-eoltracker-agent",
+    "last_checked": "2026-09-26T14:05:22Z",
+    "research": {
+      "quote": "Accellion USA, LLC is announcing End of Life for its legacy FTA software effective April 30, 2021. Accellion will continue to provide support and honor its FTA contracts for the duration of its existing License Terms. If your renewal date for your FTA software is after April 30, 2021, you will not be allowed to renew and your FTA license will end.",
+      "source_url": "https://www.kiteworks.com/company/security-updates/accellion-announces-end-of-life-eol-for-its-legacy-fta-product/",
+      "retrieved_at": "2026-09-26",
+      "contributor": "eoltracker-agent",
+      "method": "agent",
+      "verified_at": "2026-09-26T14:05:22Z",
+      "stale_after": "2027-03-25",
+      "evidence": [
+        {
+          "quote": "Accellion USA, LLC is announcing End of Life for its legacy FTA software effective April 30, 2021. Accellion will continue to provide support and honor its FTA contracts for the duration of its existing License Terms.",
+          "source_url": "https://www.kiteworks.com/company/security-updates/accellion-announces-end-of-life-eol-for-its-legacy-fta-product/",
+          "retrieved_at": "2026-09-26",
+          "milestones": [
+            "eol"
+          ]
+        },
+        {
+          "quote": "If your renewal date for your FTA software is after April 30, 2021, you will not be allowed to renew and your FTA license will end.",
+          "source_url": "https://www.kiteworks.com/company/security-updates/accellion-announces-end-of-life-eol-for-its-legacy-fta-product/",
+          "retrieved_at": "2026-09-26"
+        }
+      ],
+      "vendor": "Accellion",
+      "summary": "Accellion FTA (File Transfer Appliance) is the retired legacy secure file-transfer product that Kiteworks (formerly Accellion) replaced with its Content Firewall platform. The vendor publishes no lifecycle table, no support matrix and no machine-readable lifecycle feed for it; the only lifecycle fact is a prose end-of-life notice that states one day-precision terminal date. This record covers the legacy FTA software only, not the current Kiteworks platform or any Kiteworks subsidiary brand.",
+      "notes": "Tier: researched (AGENTS.md rule 8b). No deterministic source covers Accellion FTA: endoflife.date's listing carries no accellion/fta slug and data/products/ holds no record, so this contribution neither overwrites nor shadows a pipeline. The notice labels the milestone \"End of Life\", so the date fills eol only; ga, eos and eossec stay absent because the notice states no GA day, no end of sale and no separately dated end of security support. The same document's renewal cutoff (\"If your renewal date ... is after April 30, 2021, you will not be allowed to renew\") is a licensing renewal rule, not an end-of-sale label, and is deliberately NOT mapped to eos. CORROBORATION: the vendor's own PDF (SO-DS-CN-022018), https://www.kiteworks.com/sites/default/files/resources/fta-eol.pdf, carries the same sentence verbatim -- \"Accellion USA, LLC is announcing End of Life for its legacy FTA software effective April 30, 2021. Accellion will continue to provide support and honor its FTA contracts for the duration of its existing License Terms. If your renewal date for your FTA software is after April 30, 2021, you will not be allowed to renew and your FTA license will end.\" It is stored as a link and quoted here rather than as an evidence entry because the fetcher reads raw bytes for application/pdf, so a PDF source_url cannot be re-read by the admission check; the HTML notice carries the identical sentence and is the refetchable primary evidence. Kiteworks (formerly Accellion) published no end date for the replacement platform in the same notice."
+    },
+    "source_url": "https://www.kiteworks.com/company/security-updates/accellion-announces-end-of-life-eol-for-its-legacy-fta-product/",
+    "upstream_modified": null
+  }
+}

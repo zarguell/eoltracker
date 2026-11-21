@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-u2800-gen-2",
+  "name": "U2800 Gen 2",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Elastic Cloud Storage (ECS)",
+  "family": "Elastic Cloud Storage (ECS)",
+  "model_number": "U2800 Gen 2",
+  "milestones": {
+    "ga": "2015-11-04",
+    "eos": "2020-05-31",
+    "eossec": null,
+    "eol": "2025-05-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "U2800 Gen 2",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "U2800 Gen 2",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Elastic Cloud Storage (ECS)",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2020-05-31",
+      "datetime": null,
+      "value": "2020-05-31",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Nov. 04, 2015",
+      "datetime": "2015-11-04",
+      "value": "2015-11-04",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2025-05-31",
+      "datetime": null,
+      "value": "2025-05-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/cloud-storage/vendor/dell-emc/elastic-cloud-storage-ecs/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

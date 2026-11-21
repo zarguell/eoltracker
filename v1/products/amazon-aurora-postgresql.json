@@ -1,0 +1,259 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "amazon-aurora-postgresql",
+  "name": "Amazon Aurora PostgreSQL",
+  "category": "software",
+  "upstream_category": "service",
+  "identifiers": [],
+  "labels": {
+    "eoas": null,
+    "discontinued": null,
+    "eol": "Security Support",
+    "eoes": "Extended Support"
+  },
+  "links": {
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons/icons/amazonrds.svg",
+    "html": "https://endoflife.date/amazon-aurora-postgresql",
+    "releasePolicy": "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraPostgreSQLReleaseNotes/aurorapostgresql-release-calendar.html"
+  },
+  "releases": [
+    {
+      "id": "18",
+      "name": "18",
+      "milestones": {
+        "ga": "2026-02-26",
+        "eos": null,
+        "eossec": "2031-02-28",
+        "eol": "2034-02-28"
+      },
+      "upstream": {
+        "name": "18",
+        "codename": null,
+        "label": "18",
+        "releaseDate": "2026-02-26",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2031-02-28",
+        "isEoes": false,
+        "eoesFrom": "2034-02-28",
+        "isMaintained": true,
+        "latest": {
+          "name": "18.4",
+          "date": "2026-08-21",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "17",
+      "name": "17",
+      "milestones": {
+        "ga": "2025-02-20",
+        "eos": null,
+        "eossec": "2030-02-28",
+        "eol": "2033-02-28"
+      },
+      "upstream": {
+        "name": "17",
+        "codename": null,
+        "label": "17",
+        "releaseDate": "2025-02-20",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2030-02-28",
+        "isEoes": false,
+        "eoesFrom": "2033-02-28",
+        "isMaintained": true,
+        "latest": {
+          "name": "17.10",
+          "date": "2026-08-21",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "16",
+      "name": "16",
+      "milestones": {
+        "ga": "2023-09-14",
+        "eos": null,
+        "eossec": "2029-02-28",
+        "eol": "2032-02-28"
+      },
+      "upstream": {
+        "name": "16",
+        "codename": null,
+        "label": "16",
+        "releaseDate": "2023-09-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2029-02-28",
+        "isEoes": false,
+        "eoesFrom": "2032-02-28",
+        "isMaintained": true,
+        "latest": {
+          "name": "16.14",
+          "date": "2026-08-21",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "15",
+      "name": "15",
+      "milestones": {
+        "ga": "2022-11-10",
+        "eos": null,
+        "eossec": "2028-02-29",
+        "eol": "2031-02-28"
+      },
+      "upstream": {
+        "name": "15",
+        "codename": null,
+        "label": "15",
+        "releaseDate": "2022-11-10",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2028-02-29",
+        "isEoes": false,
+        "eoesFrom": "2031-02-28",
+        "isMaintained": true,
+        "latest": {
+          "name": "15.18",
+          "date": "2026-08-21",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "14",
+      "name": "14",
+      "milestones": {
+        "ga": "2021-09-30",
+        "eos": null,
+        "eossec": "2027-02-28",
+        "eol": "2030-02-28"
+      },
+      "upstream": {
+        "name": "14",
+        "codename": null,
+        "label": "14",
+        "releaseDate": "2021-09-30",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": false,
+        "eolFrom": "2027-02-28",
+        "isEoes": false,
+        "eoesFrom": "2030-02-28",
+        "isMaintained": true,
+        "latest": {
+          "name": "14.23",
+          "date": "2026-08-21",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "13",
+      "name": "13",
+      "milestones": {
+        "ga": "2020-09-24",
+        "eos": null,
+        "eossec": "2026-02-28",
+        "eol": "2029-02-28"
+      },
+      "upstream": {
+        "name": "13",
+        "codename": null,
+        "label": "13",
+        "releaseDate": "2020-09-24",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2026-02-28",
+        "isEoes": false,
+        "eoesFrom": "2029-02-28",
+        "isMaintained": true,
+        "latest": {
+          "name": "13.23",
+          "date": "2025-12-18",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "12",
+      "name": "12",
+      "milestones": {
+        "ga": "2019-11-14",
+        "eos": null,
+        "eossec": "2025-02-28",
+        "eol": "2028-02-29"
+      },
+      "upstream": {
+        "name": "12",
+        "codename": null,
+        "label": "12",
+        "releaseDate": "2019-11-14",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2025-02-28",
+        "isEoes": false,
+        "eoesFrom": "2028-02-29",
+        "isMaintained": true,
+        "latest": {
+          "name": "12.22",
+          "date": "2024-12-13",
+          "link": null
+        },
+        "custom": null
+      }
+    },
+    {
+      "id": "11",
+      "name": "11",
+      "milestones": {
+        "ga": "2018-10-18",
+        "eos": null,
+        "eossec": "2024-02-29",
+        "eol": "2027-03-31"
+      },
+      "upstream": {
+        "name": "11",
+        "codename": null,
+        "label": "11",
+        "releaseDate": "2018-10-18",
+        "isLts": false,
+        "ltsFrom": null,
+        "isEol": true,
+        "eolFrom": "2024-02-29",
+        "isEoes": false,
+        "eoesFrom": "2027-03-31",
+        "isMaintained": true,
+        "latest": {
+          "name": "11.21",
+          "date": "2023-09-07",
+          "link": null
+        },
+        "custom": null
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://endoflife.date/api/v1/products/amazon-aurora-postgresql/",
+    "verifier": "deterministic-endoflife-date-v1",
+    "last_checked": "2026-09-17T11:51:01Z",
+    "upstream_modified": "2026-08-29T10:01:52+00:00"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-dd200",
+  "name": "DD200",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC Data Domain",
+  "family": "Data Domain",
+  "model_number": "DD200",
+  "milestones": {
+    "ga": "2006-11-20",
+    "eos": "2006-11-20",
+    "eossec": null,
+    "eol": "2009-02-28"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "DD200",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "DD200",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC Data Domain",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2006-11-20",
+      "datetime": null,
+      "value": "2006-11-20",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Nov. 20, 2006",
+      "datetime": "2006-11-20",
+      "value": "2006-11-20",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2009-02-28",
+      "datetime": null,
+      "value": "2009-02-28",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/backup/vendor/dell-emc/data-domain/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

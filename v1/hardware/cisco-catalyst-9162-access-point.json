@@ -1,0 +1,61 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "cisco-catalyst-9162-access-point",
+  "name": "Catalyst 9162 Access Point",
+  "category": "hardware",
+  "vendor": "Cisco",
+  "product_line": "Cisco Wireless",
+  "family": "AIRONET",
+  "model_number": "Catalyst 9162 Access Point",
+  "milestones": {
+    "ga": "2022-11-01",
+    "eos": null,
+    "eossec": null,
+    "eol": null
+  },
+  "status": "supported",
+  "upstream": {
+    "Product": {
+      "text": "Catalyst 9162 Access Point",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "Catalyst 9162 Access Point",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Cisco Wireless",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Nov. 01, 2022",
+      "datetime": "2022-11-01",
+      "value": "2022-11-01",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support": {
+      "text": "",
+      "datetime": null,
+      "value": null,
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/network/wireless-networking/vendor/cisco/aironet/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

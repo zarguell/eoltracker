@@ -1,0 +1,68 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/hardware.json",
+  "id": "dell-emc-sio-ready-1007",
+  "name": "SIO-Ready-1007",
+  "category": "hardware",
+  "vendor": "Dell EMC",
+  "product_line": "Dell EMC ScaleIO Ready Node",
+  "family": "ScaleIO Ready Node",
+  "model_number": "SIO-Ready-1007",
+  "milestones": {
+    "ga": "2016-09-15",
+    "eos": "2018-06-30",
+    "eossec": null,
+    "eol": "2022-12-31"
+  },
+  "status": "eol",
+  "upstream": {
+    "Product": {
+      "text": "SIO-Ready-1007",
+      "datetime": null,
+      "value": null,
+      "role": "product",
+      "links": []
+    },
+    "Model Number": {
+      "text": "SIO-Ready-1007",
+      "datetime": null,
+      "value": null,
+      "role": "model",
+      "links": []
+    },
+    "Product Line": {
+      "text": "Dell EMC ScaleIO Ready Node",
+      "datetime": null,
+      "value": null,
+      "role": "line",
+      "links": []
+    },
+    "End of Life Date": {
+      "text": "2018-06-30",
+      "datetime": null,
+      "value": "2018-06-30",
+      "role": "eos",
+      "links": []
+    },
+    "Release Date": {
+      "text": "Sep. 15, 2016",
+      "datetime": "2016-09-15",
+      "value": "2016-09-15",
+      "role": "ga",
+      "links": []
+    },
+    "End of Support Date": {
+      "text": "2022-12-31",
+      "datetime": null,
+      "value": "2022-12-31",
+      "role": "eol",
+      "links": []
+    }
+  },
+  "provenance": {
+    "source_urls": [
+      "https://eosl.date/storage/san-storage/vendor/dell-emc/scaleio-ready-node/"
+    ],
+    "verifier": "deterministic-eosl-date",
+    "last_checked": "2026-09-17T12:53:12Z"
+  }
+}

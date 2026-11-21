@@ -1,0 +1,437 @@
+{
+  "$schema": "https://zarguell.github.io/eoltracker/v1/schema/product.json",
+  "id": "iis",
+  "name": "Internet Information Services (IIS)",
+  "category": "software",
+  "upstream_category": "server-app",
+  "identifiers": [],
+  "labels": {
+    "eol": "End Date"
+  },
+  "links": {
+    "html": "https://learn.microsoft.com/en-us/lifecycle/products/internet-information-services-iis",
+    "releasePolicy": "https://learn.microsoft.com/en-us/lifecycle/faq/fixed-policy"
+  },
+  "releases": [
+    {
+      "id": "web-server-iis-windows-server-2025",
+      "name": "Web Server (IIS) on Windows Server 2025",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2034-11-14"
+      },
+      "upstream": {
+        "name": "Web Server (IIS) on Windows Server 2025",
+        "cells": {
+          "Listing": "Windows Server 2025",
+          "Start Date": "11/1/2024 8:00:00 AM",
+          "Mainstream End Date": "11/14/2029 6:59:59 AM",
+          "Extended End Date": "11/15/2034 6:59:59 AM"
+        },
+        "table": "Support Dates",
+        "parent": {
+          "page": "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2025",
+          "listing": "Windows Server 2025",
+          "end_column": "Extended End Date",
+          "end_cell": "11/15/2034 6:59:59 AM",
+          "cells": {
+            "Listing": "Windows Server 2025",
+            "Start Date": "11/1/2024 8:00:00 AM",
+            "Mainstream End Date": "11/14/2029 6:59:59 AM",
+            "Extended End Date": "11/15/2034 6:59:59 AM"
+          },
+          "milestone": "eol",
+          "policy": "Fixed Lifecycle Policy"
+        },
+        "scope": {
+          "page": "https://learn.microsoft.com/en-us/powershell/module/servermanager/install-windowsfeature?view=windowsserver2025-ps",
+          "label": "Web Server (IIS) role on Windows Server 2025",
+          "quote": "This example shows what is installed with Web Server (IIS), including all role services, on a computer named Server1."
+        }
+      },
+      "milestone_provenance": {
+        "eol": {
+          "kind": "derived",
+          "method": "support-inheritance",
+          "source_url": "https://learn.microsoft.com/en-us/lifecycle/faq/fixed-policy",
+          "quote": "A component receives the same support as its parent product or platform. When a parent product or platform is in Mainstream, or Extended Support, so is the component. When a parent product or platform reaches the end of support, so does the component.",
+          "base_date": "2034-11-14",
+          "base_label": "Windows Server 2025 Extended End Date",
+          "parent": {
+            "product_id": "windows-server",
+            "release_id": "2025",
+            "release_name": "Windows Server 2025",
+            "milestone": "eol",
+            "date": "2034-11-14",
+            "source_url": "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2025"
+          }
+        }
+      }
+    },
+    {
+      "id": "iis-10-windows-server-2022",
+      "name": "IIS 10 on Windows Server 2022",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2031-10-14"
+      },
+      "upstream": {
+        "name": "IIS 10 on Windows Server 2022",
+        "cells": {
+          "Listing": "Windows Server 2022",
+          "Start Date": "8/18/2021 8:00:00 AM",
+          "Mainstream End Date": "10/14/2026 6:59:59 AM",
+          "Extended End Date": "10/15/2031 6:59:59 AM"
+        },
+        "table": "Support Dates",
+        "parent": {
+          "page": "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2022",
+          "listing": "Windows Server 2022",
+          "end_column": "Extended End Date",
+          "end_cell": "10/15/2031 6:59:59 AM",
+          "cells": {
+            "Listing": "Windows Server 2022",
+            "Start Date": "8/18/2021 8:00:00 AM",
+            "Mainstream End Date": "10/14/2026 6:59:59 AM",
+            "Extended End Date": "10/15/2031 6:59:59 AM"
+          },
+          "milestone": "eol",
+          "policy": "Fixed Lifecycle Policy"
+        },
+        "scope": {
+          "page": "https://learn.microsoft.com/en-us/windows-server/administration/performance-tuning/role/web-server/tuning-iis-10",
+          "label": "IIS 10.0 on Windows Server 2022",
+          "quote": "Internet Information Services (IIS) 10.0 is included with Windows Server 2022."
+        }
+      },
+      "milestone_provenance": {
+        "eol": {
+          "kind": "derived",
+          "method": "support-inheritance",
+          "source_url": "https://learn.microsoft.com/en-us/lifecycle/faq/fixed-policy",
+          "quote": "A component receives the same support as its parent product or platform. When a parent product or platform is in Mainstream, or Extended Support, so is the component. When a parent product or platform reaches the end of support, so does the component.",
+          "base_date": "2031-10-14",
+          "base_label": "Windows Server 2022 Extended End Date",
+          "parent": {
+            "product_id": "windows-server",
+            "release_id": "2022",
+            "release_name": "Windows Server 2022",
+            "milestone": "eol",
+            "date": "2031-10-14",
+            "source_url": "https://learn.microsoft.com/en-us/lifecycle/products/windows-server-2022"
+          }
+        }
+      }
+    },
+    {
+      "id": "iis-10-windows-server-2019",
+      "name": "IIS 10 on Windows Server 2019",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2029-01-09"
+      },
+      "upstream": {
+        "name": "IIS 10 on Windows Server 2019",
+        "cells": {
+          "Version": "IIS 10 on Windows Server 2019",
+          "Start Date": "11/13/2018 8:00:00 AM",
+          "End Date": "1/10/2029 6:59:59 AM"
+        },
+        "table": "Releases"
+      }
+    },
+    {
+      "id": "iis-10-windows-server-semi-annual-channel",
+      "name": "IIS 10 on Windows Server (Semi-Annual Channel)",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": null
+      },
+      "upstream": {
+        "name": "IIS 10 on Windows Server (Semi-Annual Channel)",
+        "cells": {
+          "Version": "IIS 10 on Windows Server (Semi-Annual Channel)",
+          "Start Date": "10/17/2017 8:00:00 AM",
+          "End Date": ""
+        },
+        "table": "Releases"
+      }
+    },
+    {
+      "id": "iis-10-windows-server-2016",
+      "name": "IIS 10 on Windows Server 2016",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2027-01-12"
+      },
+      "upstream": {
+        "name": "IIS 10 on Windows Server 2016",
+        "cells": {
+          "Version": "IIS 10 on Windows Server 2016",
+          "Start Date": "10/15/2016 8:00:00 AM",
+          "End Date": "1/13/2027 6:59:59 AM"
+        },
+        "table": "Releases"
+      }
+    },
+    {
+      "id": "iis-10-windows-10-pro",
+      "name": "IIS 10 on Windows 10 Pro",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-10-14"
+      },
+      "upstream": {
+        "name": "IIS 10 on Windows 10 Pro",
+        "cells": {
+          "Version": "IIS 10 on Windows 10 Pro",
+          "Start Date": "7/29/2015 8:00:00 AM",
+          "End Date": ""
+        },
+        "table": "Releases",
+        "scope": {
+          "page": "https://learn.microsoft.com/en-us/lifecycle/products/internet-information-services-iis",
+          "label": "Microsoft Lifecycle: IIS",
+          "quote": "Internet Information Services (IIS) is a component of the Windows operating system and follows the same lifecycle."
+        },
+        "parent": {
+          "page": "https://learn.microsoft.com/en-us/lifecycle/products/windows-10-home-and-pro",
+          "listing": "Windows 10 Home and Pro",
+          "end_column": "Retirement Date",
+          "end_cell": "10/15/2025 6:59:59 AM",
+          "cells": {
+            "Listing": "Windows 10 Home and Pro",
+            "Start Date": "7/29/2015 8:00:00 AM",
+            "Retirement Date": "10/15/2025 6:59:59 AM"
+          },
+          "milestone": "eol",
+          "policy": "Modern Lifecycle Policy"
+        }
+      },
+      "milestone_provenance": {
+        "eol": {
+          "kind": "derived",
+          "method": "support-inheritance",
+          "source_url": "https://learn.microsoft.com/en-us/lifecycle/products/internet-information-services-iis",
+          "quote": "Internet Information Services (IIS) is a component of the Windows operating system and follows the same lifecycle.",
+          "base_date": "2025-10-14",
+          "base_label": "Windows 10 Home and Pro Retirement Date",
+          "parent": {
+            "product_id": "windows-10-home-and-pro",
+            "release_id": "windows-10-home-and-pro",
+            "release_name": "Windows 10 Home and Pro",
+            "milestone": "eol",
+            "date": "2025-10-14",
+            "source_url": "https://learn.microsoft.com/en-us/lifecycle/products/windows-10-home-and-pro"
+          }
+        }
+      }
+    },
+    {
+      "id": "iis-10-windows-10-enterprise-and-education",
+      "name": "IIS 10 on Windows 10, Enterprise and Education",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2025-10-14"
+      },
+      "upstream": {
+        "name": "IIS 10 on Windows 10, Enterprise and Education",
+        "cells": {
+          "Version": "IIS 10 on Windows 10, Enterprise and Education",
+          "Start Date": "7/29/2015 8:00:00 AM",
+          "End Date": ""
+        },
+        "table": "Releases",
+        "scope": {
+          "page": "https://learn.microsoft.com/en-us/lifecycle/products/internet-information-services-iis",
+          "label": "Microsoft Lifecycle: IIS",
+          "quote": "Internet Information Services (IIS) is a component of the Windows operating system and follows the same lifecycle."
+        },
+        "parent": {
+          "page": "https://learn.microsoft.com/en-us/lifecycle/products/windows-10-enterprise-and-education",
+          "listing": "Windows 10 Enterprise and Education",
+          "end_column": "Retirement Date",
+          "end_cell": "10/15/2025 6:59:59 AM",
+          "cells": {
+            "Listing": "Windows 10 Enterprise and Education",
+            "Start Date": "7/29/2015 8:00:00 AM",
+            "Retirement Date": "10/15/2025 6:59:59 AM"
+          },
+          "milestone": "eol",
+          "policy": "Modern Lifecycle Policy"
+        }
+      },
+      "milestone_provenance": {
+        "eol": {
+          "kind": "derived",
+          "method": "support-inheritance",
+          "source_url": "https://learn.microsoft.com/en-us/lifecycle/products/internet-information-services-iis",
+          "quote": "Internet Information Services (IIS) is a component of the Windows operating system and follows the same lifecycle.",
+          "base_date": "2025-10-14",
+          "base_label": "Windows 10 Enterprise and Education Retirement Date",
+          "parent": {
+            "product_id": "windows-10-enterprise-and-education",
+            "release_id": "windows-10-enterprise-and-education",
+            "release_name": "Windows 10 Enterprise and Education",
+            "milestone": "eol",
+            "date": "2025-10-14",
+            "source_url": "https://learn.microsoft.com/en-us/lifecycle/products/windows-10-enterprise-and-education"
+          }
+        }
+      }
+    },
+    {
+      "id": "iis-8-5-windows-server-2012-r2",
+      "name": "IIS 8.5 on Windows Server 2012 R2",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-10-10"
+      },
+      "upstream": {
+        "name": "IIS 8.5 on Windows Server 2012 R2",
+        "cells": {
+          "Version": "IIS 8.5 on Windows Server 2012 R2",
+          "Start Date": "11/25/2013 8:00:00 AM",
+          "End Date": "10/11/2023 6:59:59 AM"
+        },
+        "table": "Releases"
+      }
+    },
+    {
+      "id": "iis-8-5-windows-8-1",
+      "name": "IIS 8.5 on Windows 8.1",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-01-10"
+      },
+      "upstream": {
+        "name": "IIS 8.5 on Windows 8.1",
+        "cells": {
+          "Version": "IIS 8.5 on Windows 8.1",
+          "Start Date": "11/13/2013 8:00:00 AM",
+          "End Date": "1/11/2023 6:59:59 AM"
+        },
+        "table": "Releases"
+      }
+    },
+    {
+      "id": "iis-8-windows-server-2012",
+      "name": "IIS 8 on Windows Server 2012",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2023-10-10"
+      },
+      "upstream": {
+        "name": "IIS 8 on Windows Server 2012",
+        "cells": {
+          "Version": "IIS 8 on Windows Server 2012",
+          "Start Date": "10/30/2012 8:00:00 AM",
+          "End Date": "10/11/2023 6:59:59 AM"
+        },
+        "table": "Releases"
+      }
+    },
+    {
+      "id": "iis-7-5-windows-server-2008-r2",
+      "name": "IIS 7.5 on Windows Server 2008 R2",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-01-14"
+      },
+      "upstream": {
+        "name": "IIS 7.5 on Windows Server 2008 R2*",
+        "cells": {
+          "Version": "IIS 7.5 on Windows Server 2008 R2*",
+          "Start Date": "10/22/2009 8:00:00 AM",
+          "End Date": "1/15/2020 6:59:59 AM"
+        },
+        "table": "Releases"
+      }
+    },
+    {
+      "id": "iis-7-5-windows-7",
+      "name": "IIS 7.5 on Windows 7",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-01-14"
+      },
+      "upstream": {
+        "name": "IIS 7.5 on Windows 7*",
+        "cells": {
+          "Version": "IIS 7.5 on Windows 7*",
+          "Start Date": "10/22/2009 8:00:00 AM",
+          "End Date": "1/15/2020 6:59:59 AM"
+        },
+        "table": "Releases"
+      }
+    },
+    {
+      "id": "iis-7-0-windows-server-2008",
+      "name": "IIS 7.0 on Windows Server 2008",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2020-01-14"
+      },
+      "upstream": {
+        "name": "IIS 7.0 on Windows Server 2008*",
+        "cells": {
+          "Version": "IIS 7.0 on Windows Server 2008*",
+          "Start Date": "5/6/2008 8:00:00 AM",
+          "End Date": "1/15/2020 6:59:59 AM"
+        },
+        "table": "Releases"
+      }
+    },
+    {
+      "id": "iis-6-0-windows-server-2003",
+      "name": "IIS 6.0 on Windows Server 2003",
+      "milestones": {
+        "ga": null,
+        "eos": null,
+        "eossec": null,
+        "eol": "2015-07-14"
+      },
+      "upstream": {
+        "name": "IIS 6.0 on Windows Server 2003",
+        "cells": {
+          "Version": "IIS 6.0 on Windows Server 2003",
+          "Start Date": "5/28/2003 8:00:00 AM",
+          "End Date": "7/15/2015 6:59:59 AM"
+        },
+        "table": "Releases"
+      }
+    }
+  ],
+  "provenance": {
+    "source_url": "https://learn.microsoft.com/en-us/lifecycle/products/internet-information-services-iis",
+    "verifier": "deterministic-microsoft-iis",
+    "last_checked": "2026-09-23T17:39:11Z",
+    "upstream_modified": null
+  }
+}
